@@ -195,21 +195,26 @@
             <div class="count" id="result-count">—</div>
             <div class="rh-right">
               <a href="#deals" class="saved-tab" id="saved-tab">♥ Saved <span class="saved-count" id="saved-count" style="display:none;">0</span></a>
+              <div class="view-wrap" id="view-wrap" role="tablist" aria-label="View">
+                <button class="view-btn active" data-view="list" title="Simple list">☰ List</button>
+                <button class="view-btn" data-view="cards" title="Photo cards">▦ Cards</button>
+              </div>
               <div class="sort-wrap">
                 <label for="f-sort">Sort</label>
                 <select id="f-sort">
+                  <option value="ending">⏳ Closing soonest</option>
+                  <option value="ending-late">Closing latest</option>
+                  <option value="city">City (A–Z)</option>
                   <option value="deal">🔥 Best deals</option>
-                  <option value="equity">Most equity</option>
                   <option value="price-asc">Lowest price</option>
                   <option value="price-desc">Highest price</option>
-                  <option value="yield">Best rent yield</option>
-                  <option value="ending">Ending soonest</option>
+                  <option value="equity">Most equity</option>
                   <option value="newest">Newest listed</option>
                 </select>
               </div>
             </div>
           </div>
-          <div class="cards" id="cards"></div>
+          <div class="cards list-view" id="cards"></div>
         </div>
       </div>
     </div>

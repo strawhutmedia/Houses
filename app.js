@@ -153,7 +153,8 @@
   // two markets the buyer actually cares about.
   var state = {
     q: "", state: "ALL", source: "ALL", type: "ALL",
-    maxPrice: 800000, minEquityPct: 0, sort: "deal", savedOnly: false, scope: "focus",
+    maxPrice: 800000, minEquityPct: 0, sort: "ending", savedOnly: false, scope: "focus",
+    view: "list",
   };
 
   // Which listings count as "Los Angeles + Portland". normalize.js tags these
@@ -176,6 +177,17 @@
       state.minEquityPct = +e.target.value; $("f-equity-val").textContent = state.minEquityPct + "%"; render();
     });
     $("f-sort").addEventListener("change", function (e) { state.sort = e.target.value; render(); });
+
+    // List / Cards view toggle
+    document.querySelectorAll("#view-wrap .view-btn").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        state.view = btn.getAttribute("data-view");
+        document.querySelectorAll("#view-wrap .view-btn").forEach(function (b) {
+          b.classList.toggle("active", b.getAttribute("data-view") === state.view);
+        });
+        render();
+      });
+    });
 
     // Big three-way scope switch (LA+PDX / CA+OR / All USA)
     document.querySelectorAll("#scope-seg .scope-btn").forEach(function (btn) {
@@ -214,11 +226,11 @@
   }
 
   function resetFilters() {
-    state = { q: "", state: "ALL", source: "ALL", type: "ALL", maxPrice: 800000, minEquityPct: 0, sort: "deal", savedOnly: false, scope: "focus" };
+    state = { q: "", state: "ALL", source: "ALL", type: "ALL", maxPrice: 800000, minEquityPct: 0, sort: "ending", savedOnly: false, scope: "focus", view: state.view };
     $("f-q").value = ""; $("f-source").value = "ALL";
     $("f-price").value = 800000; $("f-price-val").textContent = fmtK(800000);
     $("f-equity").value = 0; $("f-equity-val").textContent = "0%";
-    $("f-sort").value = "deal";
+    $("f-sort").value = "ending";
     var fs = $("f-state"); if (fs) fs.value = "ALL";
     syncScope(); syncMetroChips();
     var st = $("saved-tab"); if (st) st.classList.remove("active");
@@ -257,6 +269,12 @@
         case "price-desc": return (bp == null ? -Infinity : bp) - (ap == null ? -Infinity : ap);
         case "yield": return (b.grossYield || 0) - (a.grossYield || 0);
         case "ending": return (new Date(a.deadline || "2999-01-01")) - (new Date(b.deadline || "2999-01-01"));
+        case "ending-late": return (new Date(b.deadline || "1970-01-01")) - (new Date(a.deadline || "1970-01-01"));
+        case "city": {
+          var ca = (a.city || "~") + a.state, cb = (b.city || "~") + b.state;
+          if (ca !== cb) return ca.localeCompare(cb);
+          return (new Date(a.deadline || "2999-01-01")) - (new Date(b.deadline || "2999-01-01"));
+        }
         case "newest": return (new Date(b.postedDate || "1970-01-01")) - (new Date(a.postedDate || "1970-01-01"));
         default: return (be == null ? -1 : be) - (ae == null ? -1 : ae);
       }
@@ -321,21 +339,24 @@
         '<span class="thin-actions"><button class="btn btn-ghost btn-sm" data-widen="region">+ California &amp; Oregon</button>' +
         '<button class="btn btn-ghost btn-sm" data-widen="all">+ All 50 states</button></span></div>';
     }
-    // Cap rendered cards for performance (esp. mobile); nationwide can be 900+.
-    var CAP = 90;
+    // Cap rendered rows for performance (esp. mobile); nationwide can be 900+.
+    var CAP = state.view === "list" ? 200 : 90;
     var shown = rows.slice(0, CAP);
+    var isList = state.view === "list";
+    host.className = "cards " + (isList ? "list-view" : "cards-view");
     var moreNote = rows.length > CAP
       ? '<div class="empty" style="grid-column:1/-1;padding:24px;"><strong>Showing ' + CAP +
         ' of ' + rows.length + '.</strong><br>Pick a state, search a city or ZIP, or tighten the price to narrow it down.</div>'
       : "";
-    host.innerHTML = thinNote + shown.map(cardHTML).join("") + moreNote;
-    rows = shown; // only wire the cards actually rendered
+    var head = isList ? listHeadHTML() : "";
+    var body = shown.map(isList ? listRowHTML : cardHTML).join("");
+    host.innerHTML = thinNote + head + body + moreNote;
+    rows = shown; // only wire the rows actually rendered
     wireWiden(host);
 
-    // wire per-card controls + register tickers.
-    // The whole card is clickable (simplest for a first-time user) — only the
-    // save heart swallows its own click.
-    host.querySelectorAll(".card").forEach(function (el) {
+    // wire per-row controls + register tickers. The whole row/card is clickable
+    // (simplest for a first-time user) — only the save heart swallows its click.
+    host.querySelectorAll("[data-id]").forEach(function (el) {
       var id = el.getAttribute("data-id");
       el.addEventListener("click", function () { openModal(id); });
       var sv = el.querySelector("[data-save]"); if (sv) sv.addEventListener("click", function (e) { e.stopPropagation(); toggleSave(id); });
@@ -343,6 +364,40 @@
       var d = rows.find(function (r) { return r.id === id; });
       if (cd && d) { TICKERS.push({ id: id, deadline: d.deadline, el: cd, fired: false }); var c = countdownText(d.deadline); cd.textContent = c.txt; cd.className = "countdown" + (c.urgent ? " urgent" : "") + (c.ended ? " ended" : ""); }
     });
+  }
+
+  // Clean list row — the default view: closing time leads, then city, price,
+  // the basics, and the source. Whole row opens the exact listing.
+  function listHeadHTML() {
+    return '<div class="lhead">' +
+      '<span class="lh-close">Closes</span>' +
+      '<span class="lh-loc">City</span>' +
+      '<span class="lh-price">Opening price</span>' +
+      '<span class="lh-meta">Home</span>' +
+      '<span class="lh-src">Source</span>' +
+      '<span class="lh-go"></span>' +
+    '</div>';
+  }
+  function listRowHTML(d) {
+    var loc = [d.city, d.state].filter(Boolean).join(", ") || "Location at source";
+    var beds = d.type === "Land"
+      ? (d.lotAcres ? d.lotAcres + " ac" : "Land")
+      : (d.beds || d.baths)
+        ? d.beds + "bd/" + d.baths + "ba" + (d.sqft ? " · " + d.sqft.toLocaleString() + "sf" : "")
+        : "See source";
+    var saved = !!SAVED[d.id];
+    return '' +
+      '<article class="lrow" data-id="' + esc(d.id) + '">' +
+        '<span class="l-close"><span class="countdown">…</span>' +
+          '<span class="l-date">' + (d.auctionDate ? fmtDate(d.auctionDate) : "date at source") + '</span></span>' +
+        '<span class="l-loc"><b>' + esc(d.city || "—") + '</b><span class="l-st">' + esc(d.state || "") +
+          (d.zip ? " " + esc(d.zip) : "") + '</span></span>' +
+        '<span class="l-price">' + (d.price != null ? fmt(d.price) : "See source") + '</span>' +
+        '<span class="l-meta">' + esc(d.type) + '<span class="l-bd">' + esc(beds) + '</span></span>' +
+        '<span class="l-src">' + esc(d.source) + '</span>' +
+        '<span class="l-go"><button class="save-btn' + (saved ? " on" : "") + '" data-save title="' +
+          (saved ? "Saved" : "Save") + '">' + (saved ? "♥" : "♡") + '</button><span class="l-view">View →</span></span>' +
+      '</article>';
   }
 
   function cardHTML(d) {
