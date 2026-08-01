@@ -4,15 +4,35 @@
 (function () {
   "use strict";
 
-  var DATA = (window.LISTINGS || []).map(enrich);
+  var DATA = [];
+  var DATA_IS_LIVE = false;
 
   function enrich(l) {
-    var equity = Math.max(0, (l.marketValue || 0) - (l.price || 0));
-    var pct = l.marketValue ? Math.round((equity / l.marketValue) * 100) : 0;
+    var hasMV = l.marketValue != null && l.marketValue > 0;
+    var equity = hasMV ? Math.max(0, l.marketValue - (l.price || 0)) : null;
+    var pct = (equity != null) ? Math.round((equity / l.marketValue) * 100) : null;
     var grossYield = (l.rentEstimate && l.price)
       ? +(((l.rentEstimate * 12) / l.price) * 100).toFixed(1)
       : 0;
-    return Object.assign({}, l, { equity: equity, equityPct: pct, grossYield: grossYield });
+    // keep precomputed values from the scraper if already present
+    return Object.assign({ equity: equity, equityPct: pct, grossYield: grossYield }, l,
+      (l.equity === undefined ? { equity: equity } : {}),
+      (l.equityPct === undefined ? { equityPct: pct } : {}),
+      (l.grossYield === undefined ? { grossYield: grossYield } : {}));
+  }
+
+  // Try the live scraper output first; fall back to the curated sample set.
+  function loadData() {
+    return fetch("listings.json", { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (j) {
+        if (j && j.listings && j.listings.length) {
+          DATA_IS_LIVE = true;
+          return j.listings.map(enrich);
+        }
+        return (window.LISTINGS || []).map(enrich);
+      })
+      .catch(function () { return (window.LISTINGS || []).map(enrich); });
   }
 
   var fmt = function (n) {
@@ -140,12 +160,14 @@
       }
       return true;
     }).sort(function (a, b) {
+      var ap = a.price, bp = b.price, ae = a.equity, be = b.equity;
       switch (state.sort) {
-        case "price-asc": return a.price - b.price;
-        case "price-desc": return b.price - a.price;
-        case "yield": return b.grossYield - a.grossYield;
-        case "auction": return new Date(a.auctionDate) - new Date(b.auctionDate);
-        default: return b.equity - a.equity; // equity
+        case "price-asc": return (ap == null ? Infinity : ap) - (bp == null ? Infinity : bp);
+        case "price-desc": return (bp == null ? -Infinity : bp) - (ap == null ? -Infinity : ap);
+        case "yield": return (b.grossYield || 0) - (a.grossYield || 0);
+        case "auction":
+          return (new Date(a.auctionDate || "2999-01-01")) - (new Date(b.auctionDate || "2999-01-01"));
+        default: return (be == null ? -1 : be) - (ae == null ? -1 : ae); // equity
       }
     });
   }
@@ -153,7 +175,10 @@
   function render() {
     var rows = apply();
     var host = $("cards");
-    $("result-count").innerHTML = "<b>" + rows.length + "</b> deal" + (rows.length === 1 ? "" : "s") + " match your filters";
+    var note = DATA_IS_LIVE
+      ? ' <span class="src-note live">● live data</span>'
+      : ' <span class="src-note">● sample data</span>';
+    $("result-count").innerHTML = "<b>" + rows.length + "</b> deal" + (rows.length === 1 ? "" : "s") + " match your filters" + note;
     if (!rows.length) {
       host.innerHTML = '<div class="empty"><strong>No deals match yet.</strong><br>Try widening your price range or clearing a filter.</div>';
       return;
@@ -167,33 +192,39 @@
   function cardHTML(d) {
     var beds = d.type === "Land"
       ? (d.lotAcres ? d.lotAcres + " ac lot" : "Land parcel")
-      : d.beds + " bd · " + d.baths + " ba · " + (d.sqft ? d.sqft.toLocaleString() + " sqft" : "—");
+      : (d.beds || d.baths || d.sqft)
+        ? d.beds + " bd · " + d.baths + " ba · " + (d.sqft ? d.sqft.toLocaleString() + " sqft" : "—")
+        : "Details at source";
+    var hasEq = d.equityPct != null;
+    var locBits = [d.city, d.state].filter(Boolean).join(", ") + (d.metro ? " · " + d.metro + " metro" : "");
     return '' +
       '<article class="card" data-open="' + d.id + '">' +
         '<div class="media" style="background-image:' + artFor(d) + '">' +
           '<span class="badge src">' + esc(d.source) + '</span>' +
-          '<span class="badge equity">' + d.equityPct + '% equity</span>' +
+          (hasEq ? '<span class="badge equity">' + d.equityPct + '% equity</span>' : '') +
         '</div>' +
         '<div class="body">' +
           '<div class="price-row">' +
-            '<div class="price">' + fmt(d.price) + '</div>' +
-            '<div class="mv">Est. value<br><b>' + fmt(d.marketValue) + '</b></div>' +
+            '<div class="price">' + (d.price != null ? fmt(d.price) : 'See source') + '</div>' +
+            '<div class="mv">Est. value<br><b>' + (d.marketValue != null ? fmt(d.marketValue) : '—') + '</b></div>' +
           '</div>' +
           '<div>' +
-            '<div class="addr">' + esc(streetOf(d.address)) + '</div>' +
-            '<div class="loc">' + esc(d.city) + ', ' + d.state + ' · ' + esc(d.metro) + ' metro</div>' +
+            '<div class="addr">' + esc(streetOf(d.address) || d.source) + '</div>' +
+            '<div class="loc">' + esc(locBits || "Location at source") + '</div>' +
           '</div>' +
           '<div class="meta">' +
             '<span>🏠 ' + esc(d.type) + '</span>' +
             '<span>📐 ' + esc(beds) + '</span>' +
             (d.rentEstimate ? '<span>💵 ' + fmt(d.rentEstimate) + '/mo rent</span>' : '') +
           '</div>' +
-          '<div class="equity-bar">' +
-            '<div class="track"><div class="fill" style="width:' + Math.min(100, d.equityPct) + '%"></div></div>' +
-            '<div class="cap"><span>Built-in equity</span><b>' + fmt(d.equity) + '</b></div>' +
-          '</div>' +
+          (hasEq
+            ? '<div class="equity-bar">' +
+                '<div class="track"><div class="fill" style="width:' + Math.min(100, d.equityPct) + '%"></div></div>' +
+                '<div class="cap"><span>Built-in equity</span><b>' + fmt(d.equity) + '</b></div>' +
+              '</div>'
+            : '') +
           '<div class="foot">' +
-            '<span class="auc">Auction <b>' + fmtDate(d.auctionDate) + '</b></span>' +
+            '<span class="auc">Auction <b>' + (d.auctionDate ? fmtDate(d.auctionDate) : 'TBD') + '</b></span>' +
             '<span class="view">View deal →</span>' +
           '</div>' +
         '</div>' +
@@ -212,17 +243,21 @@
     if (!d) return;
     var m = $("modal");
     m.querySelector(".m-media").style.backgroundImage = artFor(d);
-    m.querySelector("#m-title").textContent = streetOf(d.address);
-    m.querySelector("#m-sub").textContent = d.city + ", " + d.state + " " + d.address.split(" ").pop() + " · " + d.metro + " metro";
+    m.querySelector("#m-title").textContent = streetOf(d.address) || d.source;
+    m.querySelector("#m-sub").textContent =
+      ([d.city, d.state].filter(Boolean).join(", ") + (d.metro ? " · " + d.metro + " metro" : "")) || "Location at source";
     m.querySelector("#m-source").textContent = d.source;
     m.querySelector("#m-type").textContent = d.type + (d.year ? " · built " + d.year : "");
-    m.querySelector("#m-price").textContent = fmt(d.price);
-    m.querySelector("#m-value").textContent = fmt(d.marketValue);
-    m.querySelector("#m-equity").textContent = fmt(d.equity) + " (" + d.equityPct + "%)";
+    m.querySelector("#m-price").textContent = d.price != null ? fmt(d.price) : "See source";
+    m.querySelector("#m-value").textContent = d.marketValue != null ? fmt(d.marketValue) : "—";
+    m.querySelector("#m-equity").textContent = d.equity != null ? fmt(d.equity) + " (" + d.equityPct + "%)" : "—";
     m.querySelector("#m-rent").textContent = d.rentEstimate ? fmt(d.rentEstimate) + "/mo" : "—";
     m.querySelector("#m-yield").textContent = d.grossYield ? d.grossYield + "% gross" : "—";
-    m.querySelector("#m-auction").textContent = new Date(d.auctionDate + "T00:00:00")
-      .toLocaleDateString("en-US", { weekday: "short", month: "long", day: "numeric", year: "numeric" });
+    m.querySelector("#m-auction").textContent = d.auctionDate
+      ? new Date(d.auctionDate + "T00:00:00").toLocaleDateString("en-US", { weekday: "short", month: "long", day: "numeric", year: "numeric" })
+      : "TBD — see source";
+    var link = m.querySelector("#m-link");
+    if (link) { if (d.url) { link.href = d.url; link.style.display = ""; } else { link.style.display = "none"; } }
     $("modal-back").classList.add("open");
     document.body.style.overflow = "hidden";
   }
@@ -233,13 +268,17 @@
 
   /* ---------------- hero stats ---------------- */
   function renderHeroStats() {
-    var totalEquity = DATA.reduce(function (s, d) { return s + d.equity; }, 0);
-    var avgPct = Math.round(DATA.reduce(function (s, d) { return s + d.equityPct; }, 0) / DATA.length);
-    var cheapest = DATA.reduce(function (m, d) { return Math.min(m, d.price); }, Infinity);
+    var withEq = DATA.filter(function (d) { return d.equity != null; });
+    var withPrice = DATA.filter(function (d) { return d.price != null; });
+    var totalEquity = withEq.reduce(function (s, d) { return s + d.equity; }, 0);
+    var avgPct = withEq.length
+      ? Math.round(withEq.reduce(function (s, d) { return s + d.equityPct; }, 0) / withEq.length) : 0;
+    var cheapest = withPrice.length
+      ? withPrice.reduce(function (m, d) { return Math.min(m, d.price); }, Infinity) : 0;
     $("stat-deals").textContent = DATA.length;
-    $("stat-equity").textContent = fmtK(totalEquity);
-    $("stat-avg").textContent = avgPct + "%";
-    $("stat-min").textContent = fmtK(cheapest);
+    $("stat-equity").textContent = totalEquity ? fmtK(totalEquity) : "—";
+    $("stat-avg").textContent = avgPct ? avgPct + "%" : "—";
+    $("stat-min").textContent = cheapest ? fmtK(cheapest) : "—";
   }
 
   /* ---------------- helpers ---------------- */
@@ -252,7 +291,10 @@
 
   /* ---------------- wire up ---------------- */
   document.addEventListener("DOMContentLoaded", function () {
-    build();
+    loadData().then(function (rows) {
+      DATA = rows;
+      build();
+    });
     $("modal-close").addEventListener("click", closeModal);
     $("modal-back").addEventListener("click", function (e) { if (e.target === $("modal-back")) closeModal(); });
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeModal(); });

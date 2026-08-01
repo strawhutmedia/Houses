@@ -181,6 +181,8 @@ input[type="range"] { width: 100%; accent-color: var(--brand); }
 }
 .results-head .count { font-weight: 800; font-size: 15px; }
 .results-head .count b { color: var(--brand); }
+.src-note { font-weight: 700; font-size: 11.5px; color: var(--muted-2); margin-left: 8px; }
+.src-note.live { color: var(--brand); }
 .sort-wrap { display: flex; align-items: center; gap: 8px; }
 .sort-wrap label { color: var(--muted); font-size: 13px; }
 .sort-wrap select { width: auto; padding: 8px 10px; }
