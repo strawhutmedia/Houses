@@ -42,33 +42,54 @@ async function scrape() {
     await page.goto(LIST_URL, { waitUntil: "networkidle", timeout: 45000 });
     await page.waitForTimeout(3000);
 
-    // 1) Try to pull lots out of captured JSON.
+    // Find the real-estate auction catalogs, then open each and drill into the
+    // individual property lots. The listing page only links to auction *events*
+    // (e.g. "US Treasury Real Estate Auction"), NOT to homes — so we must go one
+    // level deeper to the lots inside each catalog.
+    let catalogs = await page.$$eval("a[href*='/auctions/catalog/']", (els) =>
+      Array.from(new Set(els
+        .filter((e) => /real\s*estate|home|residential|property/i.test(e.textContent || ""))
+        .map((e) => e.href)))).catch(() => []);
+    if (!catalogs.length) {
+      catalogs = await page.$$eval("a[href*='/auctions/catalog/']", (els) =>
+        Array.from(new Set(els.map((e) => e.href)))).catch(() => []);
+    }
+
     let lots = [];
     for (const blob of jsonBlobs) collectLots(blob, lots);
 
-    // 2) Fallback: parse rendered lot cards for a real-estate auction.
-    if (!lots.length) {
-      lots = await page.$$eval("a[href*='/auctions/catalog/']", (els) =>
-        els.map((e) => ({ title: (e.textContent || "").trim(), url: e.href }))).catch(() => []);
+    // Visit each catalog and capture the JSON its lot grid loads.
+    for (const cat of catalogs.slice(0, 8)) {
+      try {
+        await page.goto(cat, { waitUntil: "networkidle", timeout: 45000 });
+        await page.waitForTimeout(2500);
+        for (const blob of jsonBlobs) collectLots(blob, lots);
+      } catch (e) { /* skip this catalog */ }
     }
 
     await browser.close();
+
+    // Emit ONLY rows that look like a real property: a street-number address and
+    // a 2-letter state. If parsing didn't yield structured lots, we emit nothing
+    // rather than dumping catalog fragments into the feed.
+    const seen = {};
     return lots
-      .filter((l) => l.title && !RES_NEG.test(l.title))
+      .filter((l) => l && l.address && /\d/.test(String(l.address)) && /^[A-Z]{2}$/.test(String(l.state || "").toUpperCase()))
+      .filter((l) => !RES_NEG.test(String(l.title || "") + " " + String(l.address || "")))
       .map((l, i) => ({
         id: "cws-" + (l.id || i),
-        source: l.agency || "US Treasury / Marshals",
-        state: l.state || "",
+        source: "US Treasury / Marshals",
+        state: String(l.state).toUpperCase(),
         city: l.city || "",
-        address: l.address || l.title || "",
+        address: l.address,
         type: "Single Family",
-        price: l.price != null ? l.price : (l.currentBid != null ? l.currentBid : null),
+        price: l.price != null ? l.price : null,
         marketValue: null,
         auctionDate: l.closeDate || null,
-        url: l.url || LIST_URL,
+        url: l.url || cat0(catalogs) || LIST_URL,
         live: true,
       }))
-      .filter((l) => l.price != null || l.address);
+      .filter((l) => { if (seen[l.id]) return false; seen[l.id] = 1; return true; });
   } catch (e) {
     try { if (browser) await browser.close(); } catch (e2) {}
     console.error("  [cws] headless scrape failed: " + e.message);
@@ -96,5 +117,6 @@ function collectLots(node, out, depth) {
   }
 }
 function num(v) { const n = parseFloat(String(v == null ? "" : v).replace(/[^0-9.]/g, "")); return isFinite(n) ? n : null; }
+function cat0(cats) { return cats && cats.length ? cats[0] : null; }
 
 module.exports = { scrape, id: "cws", label: "CWS (Treasury + US Marshals)", status: "headless-experimental" };

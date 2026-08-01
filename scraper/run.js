@@ -40,6 +40,15 @@ function parseArgs(argv) {
   return a;
 }
 
+const US_STATES = new Set(("AL AK AZ AR CA CO CT DE DC FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN " +
+  "MS MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY").split(" "));
+// A row is publishable only if it has a real US state and something a buyer can
+// evaluate (an opening price or an estimated market value).
+function isUsable(r) {
+  if (!US_STATES.has(r.state)) return false;
+  return r.price != null || r.marketValue != null;
+}
+
 function condClass(label) {
   return { "Move-in Ready": "good", "Light Rehab": "ok", "Moderate Rehab": "warn",
     "Heavy Rehab": "bad", "Uninhabitable": "bad" }[label] || "warn";
@@ -102,8 +111,13 @@ async function main() {
     console.log("\n(AI enrichment skipped — set ANTHROPIC_API_KEY to enable real equity + photo condition.)");
   }
 
-  let listings = raw.map(normalizeListing).filter((r) => r.price != null || r.marketValue != null || r.address);
+  // Quality gate: only publish rows a buyer can actually act on — a real US
+  // state AND a price or estimated value. This is what keeps half-parsed junk
+  // (e.g. auction-catalog fragments with no location/price) out of the feed.
+  let listings = raw.map(normalizeListing).filter(isUsable);
   if (args.states) listings = listings.filter((l) => args.states.includes(l.state));
+  const dropped = raw.length - listings.length;
+  if (dropped > 0) console.log(`  (quality gate dropped ${dropped} row(s) with no US state or no price)`);
 
   const payload = {
     generatedAt: new Date().toISOString(),
