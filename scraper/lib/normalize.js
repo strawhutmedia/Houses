@@ -88,6 +88,8 @@ function normalizeListing(raw) {
     lng: raw.lng ?? null,
     url: raw.url || "",
     photoUrls: raw.photoUrls || [],
+    condition: raw.condition || null,   // AI vision rating {label,damage,pct,cls}
+    photoCount: raw.photoCount != null ? raw.photoCount : (raw.photoUrls ? raw.photoUrls.length : 0),
     live: raw.live !== false, // real-scraped unless explicitly marked sample
   };
 }

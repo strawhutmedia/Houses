@@ -20,13 +20,22 @@ No npm install required — the only runtime dependency is the `curl` binary
 
 | Source | Adapter | Status | Notes |
 |---|---|---|---|
-| **Bid4Assets — county tax deeds** | `bid4assets.js` | ✅ **Live (primary)** | The real home of cheap residential auction houses. Live-parses every upcoming **CA/OR/WA county** tax-defaulted auction (29 found in testing: Ventura, Imperial, Alameda, Monterey, San Joaquin…). Per-parcel detail (address, min bid, photos) publishes ~2–4 wks pre-sale and is enriched via the parcel endpoint / a headless render in CI. Residential-only; land & commercial filtered out. |
-| **GSA Real Property** | `gsa.js` | ✅ Live | `realestatesales.gov`, server-rendered. Parses type/sqft/year/lot/dates/lat-lng. Inventory skews commercial/land and is small — secondary source. |
-| County tax-deed (other platforms) | `countyTaxDeed.js` | 🔨 Stub | GovEase / RealAuction / SRI for counties not on Bid4Assets. |
-| U.S. Treasury | `treasury.js` | 🔨 Stub | Real property runs through **CWS Marketing** (`bid.cwsmarketing.com`). Low volume, session-gated SPA — needs the API or a headless render. |
-| FDIC ORE | `fdic.js` | 🔨 Stub | Only populated after bank failures; often empty. |
-| U.S. Marshals | `usmarshals.js` | ⛔ Stub (blocked) | `usmarshals.gov` returns 403; also flows through CWS. Use a headless browser / the CWS platform. |
-| GovDeals | `govdeals.js` | ⛔ Stub (blocked) | `govdeals.com` returns 403. SPA with an internal JSON API — mostly non-real-estate. |
+| **HUD Home Store** | `hud.js` | ✅ **Live** | Real FHA-foreclosure homes, **all 50 states** (one GET per state, parallel batches). ~930 homes/run. Best breadth of cheap residential. `HUD_STATES=CA,OR` to narrow. |
+| **Bid4Assets** | `bid4assets.js` | ✅ **Live** | County tax-deed / sheriff-sale **houses** via the live real-estate channel (`POST /channel/auctions/get` + detail pages). The rock-bottom prices ($1–$2K). Also lists upcoming CA/OR/WA county tax sales (`listAuctions()`) for when those windows open. |
+| **PublicSurplus** | `publicsurplus.js` | ✅ Live (thin) | Gov surplus real estate (`catid=15`). Curl-scrapable but low volume and land-heavy; residential-only keeps mobile/manufactured homes. |
+| **CWS (Treasury + US Marshals)** | `cws.js` | 🧪 Experimental (headless) | Contractor platform for **both** agencies' forfeiture homes. Returns HTTP 202 bot-challenge to curl → needs a real browser (Playwright). No-ops in the dev sandbox; runs in CI. Selectors need one live-verification pass. |
+| GSA Real Property | `gsa.js` | ⚪ Live but excluded | `realestatesales.gov` parses fine but is commercial/land — kept out of the default run per the houses-only spec. |
+| FDIC ORE | `fdic.js` | 🔨 Stub | ORE listing app is empty/offline right now (few bank failures). |
+| GovDeals | `govdeals.js` | ⛔ Stub (blocked) | `govdeals.com` 403s; mostly non-real-estate. |
+
+### AI enrichment (`lib/aiExtract.js`, wired in `run.js`)
+When `ANTHROPIC_API_KEY` is set, the runner enriches the cheapest
+`ES_ENRICH_LIMIT` (default 40) listings: **market-value + rent estimate** (real
+built-in equity / discount, powering the "Best deals" sort) and **photo-based
+condition ratings** (vision). No key → enrichment is skipped and the scrape
+still runs. Model via `ES_EXTRACT_MODEL` (default `claude-opus-5`; use
+`claude-haiku-4-5` for cheap high-volume). Set the key as a repo Actions secret
+to activate it in the scheduled deploy.
 
 ### Reality check (what actually has cheap houses)
 The $10K-house volume in the pitch is overwhelmingly **county tax-deed sales** — so `bid4assets.js` is the engine. The four purely-federal sources (Marshals/Treasury/FDIC/GSA) are real but low-volume and skew non-residential; treat them as supplementary.

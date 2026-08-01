@@ -61,6 +61,17 @@ const LISTING_SCHEMA = {
   required: ["listings"],
 };
 
+const VALUE_SCHEMA = {
+  type: "object",
+  additionalProperties: false,
+  properties: {
+    marketValue: { type: "integer" },
+    rentEstimate: { type: "integer" },
+    confidence: { type: "string", enum: ["low", "medium", "high"] },
+  },
+  required: ["marketValue", "confidence"],
+};
+
 const CONDITION_SCHEMA = {
   type: "object",
   additionalProperties: false,
@@ -150,6 +161,27 @@ async function assessConditionFromPhotos(base64Images, ctx) {
   return callClaude(content, CONDITION_SCHEMA, 1024);
 }
 
+// Rough market-value + rent estimate from the property facts (a free "AVM"
+// using the model instead of a paid comps API). Powers real equity/discount.
+async function estimateValue(listing) {
+  if (!hasCreds()) return null;
+  var facts = [
+    "Address: " + (listing.address || ""),
+    "City/State/ZIP: " + [listing.city, listing.state, listing.zip].filter(Boolean).join(" "),
+    "Type: " + (listing.type || ""),
+    "Beds: " + (listing.beds || "?") + ", Baths: " + (listing.baths || "?") + ", Sqft: " + (listing.sqft || "?"),
+    "Year built: " + (listing.year || "?"),
+    "Auction opening price: $" + (listing.price != null ? listing.price : "?"),
+  ].join("\n");
+  return callClaude([{
+    type: "text",
+    text: "Estimate the current retail market value (what it would sell for on the open MLS in decent condition) " +
+      "and a realistic monthly market rent for this U.S. home, based on the location and specs. Use your knowledge " +
+      "of that area's price levels. Give whole-dollar integers and a confidence level. If you truly cannot estimate, " +
+      "use confidence 'low'.\n\n" + facts,
+  }], VALUE_SCHEMA, 512);
+}
+
 function normalizeExtracted(out, ctx) {
   if (!out || !out.listings) return [];
   return out.listings
@@ -172,10 +204,36 @@ function normalizeExtracted(out, ctx) {
     });
 }
 
+// Fetch an image URL and return base64 (best-effort; null on failure).
+function fetchImageB64(url) {
+  return new Promise(function (resolve) {
+    execFile("curl", ["-sSL", "-m", "25", "--output", "-", url],
+      { maxBuffer: 1024 * 1024 * 15, encoding: "buffer" },
+      function (err, stdout) {
+        if (err || !stdout || !stdout.length) return resolve(null);
+        resolve(Buffer.from(stdout).toString("base64"));
+      });
+  });
+}
+
+// Condition from a list of photo URLs (downloads up to 4, then runs vision).
+async function assessConditionFromUrls(urls) {
+  if (!hasCreds() || !urls || !urls.length) return null;
+  var b64s = [];
+  for (var i = 0; i < urls.length && b64s.length < 4; i++) {
+    var b = await fetchImageB64(urls[i]);
+    if (b) b64s.push(b);
+  }
+  if (!b64s.length) return null;
+  return assessConditionFromPhotos(b64s);
+}
+
 module.exports = {
   hasCreds,
   extractListingsFromHtml,
   extractListingsFromImage,
   assessConditionFromPhotos,
+  assessConditionFromUrls,
+  estimateValue,
   MODEL,
 };

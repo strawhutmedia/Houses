@@ -38,14 +38,24 @@ jobs:
         with:
           node-version: "22"
 
-      # A real browser is available here (no sandbox proxy), so parcel-detail
-      # enrichment that needs JS rendering can run in this environment.
-      - name: Install Playwright Chromium
-        run: npx --yes playwright install --with-deps chromium
+      # A real browser is available here (no sandbox proxy), so the headless
+      # CWS adapter (Treasury + US Marshals) can render. Installing the
+      # playwright npm package makes require("playwright") resolve in the scraper.
+      - name: Install Playwright
+        run: |
+          npm init -y >/dev/null 2>&1 || true
+          npm install playwright >/dev/null 2>&1
+          npx --yes playwright install --with-deps chromium
 
       - name: Scrape sources -> listings.json
         run: node scraper/run.js
         continue-on-error: true   # never block a deploy on one flaky source
+        env:
+          # Set this repo secret to turn on AI equity estimates + photo-condition
+          # ratings (Settings -> Secrets and variables -> Actions -> New secret).
+          # Left unset, the scraper simply skips enrichment.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ES_ENRICH_LIMIT: "40"
 
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
