@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EquityScout — Every government home auction. One searchable feed.</title>
-  <meta name="description" content="EquityScout scrapes US Marshals, Treasury, FDIC, GSA, GovDeals, and county tax-deed sales into one clean, filterable feed of below-market government homes — focused on California and Oregon." />
+  <meta name="description" content="EquityScout pulls below-market government homes (HUD foreclosures + county tax-deed &amp; sheriff-sale auctions) from across the U.S. into one clean, filterable feed." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314b87a'/%3E%3Cpath d='M16 7l8 7h-2.5v9h-11v-9H8z' fill='%2304140d'/%3E%3C/svg%3E" />
@@ -38,7 +38,7 @@
   <!-- ================= HERO ================= -->
   <section class="hero">
     <div class="wrap">
-      <span class="eyebrow"><span class="dot"></span> Updated daily · California &amp; Oregon</span>
+      <span class="eyebrow"><span class="dot"></span> Refreshed every few hours · Nationwide</span>
       <h1>Every government home auction, in <span class="hl">one searchable feed.</span></h1>
       <p class="lead">
         The U.S. government seizes and resells thousands of homes a year — tax liens, IRS actions,
@@ -104,7 +104,7 @@
       <div class="section-head">
         <div class="kicker">Live deal feed</div>
         <h2>Below-market government homes</h2>
-        <p>Live government homes across California and Oregon, refreshed automatically. Filter it like any listing site — but every property here starts at a government price. (Falls back to a sample set if the live feed is unavailable.)</p>
+        <p>Live government homes from all 50 states, refreshed automatically. Pick a state, search a city or ZIP, and filter like any listing site — but every property here starts at a government price. (Falls back to a sample set if the live feed is unavailable.)</p>
       </div>
 
       <div class="app-grid">
@@ -121,12 +121,12 @@
 
           <div class="filter-group">
             <div class="field">
-              <label class="fl">Market</label>
-              <div class="chip-row">
-                <span class="chip active" data-state="ALL">All</span>
-                <span class="chip" data-state="CA">California · LA</span>
-                <span class="chip" data-state="OR">Oregon · Portland</span>
-              </div>
+              <label class="fl" for="f-state">State</label>
+              <select id="f-state"><option value="ALL">All states</option></select>
+            </div>
+            <div class="field">
+              <label class="fl">Quick markets</label>
+              <div class="chip-row" id="metro-chips"></div>
             </div>
           </div>
 
@@ -153,8 +153,8 @@
 
           <div class="filter-group">
             <div class="field">
-              <label class="fl" for="f-price">Max opening price · <span id="f-price-val">$250K</span></label>
-              <input type="range" id="f-price" min="40000" max="250000" step="1000" value="250000" />
+              <label class="fl" for="f-price">Max opening price · <span id="f-price-val">$300K</span></label>
+              <input type="range" id="f-price" min="20000" max="800000" step="5000" value="300000" />
             </div>
             <div class="field">
               <label class="fl" for="f-equity">Min equity vs. market · <span id="f-equity-val">0%</span></label>
@@ -196,10 +196,10 @@
       <div class="callout">
         <div>
           <div class="kicker">Built to win your markets</div>
-          <h3>Dialed in on California &amp; Oregon</h3>
-          <p>We prioritize the Los Angeles and Portland metros — the exact areas where government auction prices and real market values are furthest apart. More states are added as the crawler expands.</p>
+          <h3>Nationwide coverage</h3>
+          <p>Real government homes across all 50 states — filter to any state, or search any city or ZIP. HUD foreclosures give broad nationwide inventory; county tax-deed &amp; sheriff-sale auctions surface the rock-bottom prices.</p>
         </div>
-        <a class="btn btn-primary" href="#deals">Explore LA &amp; Portland deals</a>
+        <a class="btn btn-primary" href="#deals">Browse homes in your state</a>
       </div>
     </div>
   </section>
@@ -241,7 +241,7 @@
             <span class="mark"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 6l10 9h-3v11h-14v-11h-3z"/></svg></span>
             Equity<b>Scout</b>
           </a>
-          <p class="muted">Every government home auction, pulled into one searchable feed. Focused on California and Oregon.</p>
+          <p class="muted">Every government home auction, pulled into one searchable feed — nationwide.</p>
         </div>
         <div class="nav-links" style="display:flex;gap:26px;">
           <a href="#how">How it works</a>

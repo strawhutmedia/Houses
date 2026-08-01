@@ -14,7 +14,11 @@
 const { fetchText } = require("../lib/http");
 
 const BASE = "https://www.hudhomestore.gov";
-const STATES = ["CA", "OR"]; // extend to expand coverage nationwide
+// Nationwide coverage. Override with env HUD_STATES="CA,OR,TX" to narrow.
+const ALL_STATES = ("AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN " +
+  "MS MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY DC").split(" ");
+const STATES = (process.env.HUD_STATES ? process.env.HUD_STATES.split(",") : ALL_STATES)
+  .map(function (s) { return s.trim().toUpperCase(); }).filter(Boolean);
 
 function unescapeHtml(s) {
   return String(s || "")
@@ -64,16 +68,22 @@ function toListing(p) {
   };
 }
 
-async function scrape() {
+async function fetchState(st) {
+  try {
+    var html = await fetchText(`${BASE}/searchresult?citystate=${st}`, { timeout: 45 });
+    return parseBlob(html).map(toListing).filter(function (l) { return l.price != null && l.address; });
+  } catch (e) {
+    console.error(`  [hud] ${st} failed: ${e.message}`);
+    return [];
+  }
+}
+
+async function scrape({ concurrency = 8 } = {}) {
   var out = [];
-  for (var i = 0; i < STATES.length; i++) {
-    try {
-      var html = await fetchText(`${BASE}/searchresult?citystate=${STATES[i]}`, { timeout: 45 });
-      var rows = parseBlob(html).map(toListing).filter(function (l) { return l.price != null && l.address; });
-      out.push.apply(out, rows);
-    } catch (e) {
-      console.error(`  [hud] ${STATES[i]} failed: ${e.message}`);
-    }
+  for (var i = 0; i < STATES.length; i += concurrency) {
+    var batch = STATES.slice(i, i + concurrency);
+    var results = await Promise.all(batch.map(fetchState));
+    results.forEach(function (r) { out.push.apply(out, r); });
   }
   return out;
 }

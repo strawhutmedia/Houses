@@ -150,7 +150,7 @@
   /* ---------------- filter state ---------------- */
   var state = {
     q: "", state: "ALL", source: "ALL", type: "ALL",
-    maxPrice: 250000, minEquityPct: 0, sort: "equity", savedOnly: false,
+    maxPrice: 300000, minEquityPct: 0, sort: "equity", savedOnly: false,
   };
 
   function $(id) { return document.getElementById(id); }
@@ -169,12 +169,12 @@
     });
     $("f-sort").addEventListener("change", function (e) { state.sort = e.target.value; render(); });
 
-    document.querySelectorAll("[data-state]").forEach(function (c) {
-      c.addEventListener("click", function () {
-        document.querySelectorAll("[data-state]").forEach(function (x) { x.classList.remove("active"); });
-        c.classList.add("active"); state.state = c.getAttribute("data-state"); render();
-      });
+    // State dropdown (populated from whatever states are in the live data)
+    populateStates();
+    $("f-state").addEventListener("change", function (e) {
+      state.state = e.target.value; syncMetroChips(); render();
     });
+    populateMetroChips();
     document.querySelectorAll("[data-type]").forEach(function (c) {
       c.addEventListener("click", function () {
         document.querySelectorAll("[data-type]").forEach(function (x) { x.classList.remove("active"); });
@@ -196,14 +196,16 @@
   }
 
   function resetFilters() {
-    state = { q: "", state: "ALL", source: "ALL", type: "ALL", maxPrice: 250000, minEquityPct: 0, sort: "equity", savedOnly: false };
+    state = { q: "", state: "ALL", source: "ALL", type: "ALL", maxPrice: 300000, minEquityPct: 0, sort: "equity", savedOnly: false };
     $("f-q").value = ""; $("f-source").value = "ALL";
-    $("f-price").value = 250000; $("f-price-val").textContent = fmtK(250000);
+    $("f-price").value = 300000; $("f-price-val").textContent = fmtK(300000);
     $("f-equity").value = 0; $("f-equity-val").textContent = "0%";
     $("f-sort").value = "equity";
+    var fs = $("f-state"); if (fs) fs.value = "ALL";
+    syncMetroChips();
     var st = $("saved-tab"); if (st) st.classList.remove("active");
-    document.querySelectorAll("[data-state],[data-type]").forEach(function (x) {
-      x.classList.toggle("active", x.getAttribute("data-state") === "ALL" || x.getAttribute("data-type") === "ALL");
+    document.querySelectorAll("[data-type]").forEach(function (x) {
+      x.classList.toggle("active", x.getAttribute("data-type") === "ALL");
     });
     render();
   }
@@ -272,7 +274,15 @@
         : '<div class="empty"><strong>No deals match yet.</strong><br>Try widening your price range or clearing a filter.</div>';
       return;
     }
-    host.innerHTML = rows.map(cardHTML).join("");
+    // Cap rendered cards for performance (esp. mobile); nationwide can be 900+.
+    var CAP = 90;
+    var shown = rows.slice(0, CAP);
+    var moreNote = rows.length > CAP
+      ? '<div class="empty" style="grid-column:1/-1;padding:24px;"><strong>Showing ' + CAP +
+        ' of ' + rows.length + '.</strong><br>Pick a state, search a city or ZIP, or tighten the price to narrow it down.</div>'
+      : "";
+    host.innerHTML = shown.map(cardHTML).join("") + moreNote;
+    rows = shown; // only wire the cards actually rendered
 
     // wire per-card controls + register tickers
     host.querySelectorAll(".card").forEach(function (el) {
@@ -396,6 +406,57 @@
     $("stat-equity").textContent = totalEquity ? fmtK(totalEquity) : "—";
     $("stat-avg").textContent = avgPct ? avgPct + "%" : "—";
     $("stat-min").textContent = cheapest ? fmtK(cheapest) : "—";
+  }
+
+  /* ---------------- state / market filters ---------------- */
+  var STATE_NAMES = {
+    AL: "Alabama", AK: "Alaska", AZ: "Arizona", AR: "Arkansas", CA: "California", CO: "Colorado",
+    CT: "Connecticut", DE: "Delaware", DC: "Washington DC", FL: "Florida", GA: "Georgia", HI: "Hawaii",
+    ID: "Idaho", IL: "Illinois", IN: "Indiana", IA: "Iowa", KS: "Kansas", KY: "Kentucky", LA: "Louisiana",
+    ME: "Maine", MD: "Maryland", MA: "Massachusetts", MI: "Michigan", MN: "Minnesota", MS: "Mississippi",
+    MO: "Missouri", MT: "Montana", NE: "Nebraska", NV: "Nevada", NH: "New Hampshire", NJ: "New Jersey",
+    NM: "New Mexico", NY: "New York", NC: "North Carolina", ND: "North Dakota", OH: "Ohio", OK: "Oklahoma",
+    OR: "Oregon", PA: "Pennsylvania", RI: "Rhode Island", SC: "South Carolina", SD: "South Dakota",
+    TN: "Tennessee", TX: "Texas", UT: "Utah", VT: "Vermont", VA: "Virginia", WA: "Washington",
+    WV: "West Virginia", WI: "Wisconsin", WY: "Wyoming",
+  };
+  function stateCounts() {
+    var c = {};
+    DATA.forEach(function (d) { if (d.state) c[d.state] = (c[d.state] || 0) + 1; });
+    return c;
+  }
+  function populateStates() {
+    var c = stateCounts();
+    var states = Object.keys(c).sort(function (a, b) {
+      return (STATE_NAMES[a] || a).localeCompare(STATE_NAMES[b] || b);
+    });
+    var html = '<option value="ALL">All states (' + DATA.length + ')</option>';
+    states.forEach(function (s) {
+      html += '<option value="' + s + '">' + esc(STATE_NAMES[s] || s) + " (" + c[s] + ")</option>";
+    });
+    $("f-state").innerHTML = html;
+  }
+  // Quick-market chips = the states with the most listings (one-tap jump).
+  function populateMetroChips() {
+    var c = stateCounts();
+    var top = Object.keys(c).sort(function (a, b) { return c[b] - c[a]; }).slice(0, 6);
+    var host = $("metro-chips");
+    if (!host) return;
+    host.innerHTML = top.map(function (s) {
+      return '<span class="chip" data-qstate="' + s + '">' + esc(STATE_NAMES[s] || s) + "</span>";
+    }).join("");
+    host.querySelectorAll("[data-qstate]").forEach(function (chip) {
+      chip.addEventListener("click", function () {
+        state.state = chip.getAttribute("data-qstate");
+        $("f-state").value = state.state;
+        syncMetroChips(); render();
+      });
+    });
+  }
+  function syncMetroChips() {
+    document.querySelectorAll("#metro-chips [data-qstate]").forEach(function (chip) {
+      chip.classList.toggle("active", chip.getAttribute("data-qstate") === state.state);
+    });
   }
 
   /* ---------------- helpers ---------------- */
