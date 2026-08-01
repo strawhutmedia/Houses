@@ -82,10 +82,12 @@ function normalizeListing(raw) {
     equityPct,
     grossYield,
     auctionDate: toISODate(raw.auctionDate),
+    postedDate: toISODate(raw.postedDate),
     status: raw.status || "Live",
     lat: raw.lat ?? null,
     lng: raw.lng ?? null,
     url: raw.url || "",
+    photoUrls: raw.photoUrls || [],
     live: raw.live !== false, // real-scraped unless explicitly marked sample
   };
 }

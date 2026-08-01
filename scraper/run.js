@@ -15,7 +15,8 @@ const path = require("path");
 const { normalizeListing } = require("./lib/normalize");
 
 const ADAPTERS = [
-  require("./adapters/bid4assets"), // primary: cheap residential county tax-deed houses
+  require("./adapters/hud"),        // LIVE: cheap government (FHA) foreclosure homes
+  require("./adapters/bid4assets"), // county tax-deed houses (parcels publish pre-sale)
   require("./adapters/gsa"),
   require("./adapters/treasury"),
   require("./adapters/fdic"),
