@@ -23,7 +23,10 @@
     { label: "Moderate Rehab", damage: "Moderate", pct: 52, cls: "warn" },
     { label: "Heavy Rehab", damage: "Significant", pct: 78, cls: "bad" },
   ];
-  function zipOf(addr) { var m = String(addr || "").match(/\b(\d{5})(?:-\d{4})?\b/); return m ? m[1] : ""; }
+  // US addresses put the ZIP last, but street numbers can also be 5 digits
+  // (e.g. "12345 Sunset Blvd, Los Angeles, CA 90026"). Take the LAST 5-digit
+  // group so we read the ZIP, not the house number.
+  function zipOf(addr) { var all = String(addr || "").match(/\b\d{5}\b/g); return all && all.length ? all[all.length - 1] : ""; }
 
   function enrich(l) {
     var hasMV = l.marketValue != null && l.marketValue > 0;
@@ -240,8 +243,22 @@
     render();
   }
 
+  // ZIP-aware search. A bare 5-digit query is treated as "near this ZIP":
+  // exact ZIP first, then the same 3-digit ZIP region (roughly your metro area).
+  var LAST_ZIP = null;      // the ZIP the user searched, if any
+  var ZIP_EXACT = 0;        // how many exact-ZIP matches in the last apply()
+  function zipMatch(d, zipQ) {
+    var z = d.zip || zipOf(d.address);
+    if (!z) return 0;
+    if (z === zipQ) return 2;                     // exact ZIP
+    if (z.slice(0, 3) === zipQ.slice(0, 3)) return 1; // same region (nearby)
+    return 0;
+  }
+
   function apply() {
-    return DATA.filter(function (d) {
+    var zipQ = /^\d{5}$/.test(state.q) ? state.q : null;
+    LAST_ZIP = zipQ; ZIP_EXACT = 0;
+    var out = DATA.filter(function (d) {
       if (state.savedOnly && !SAVED[d.id]) return false;
       if (state.scope === "focus" && !inFocus(d)) return false;
       if (state.scope === "region" && !inRegion(d)) return false;
@@ -250,12 +267,23 @@
       if (state.type !== "ALL" && d.type !== state.type) return false;
       if (d.price != null && d.price > state.maxPrice) return false;
       if (state.minEquityPct && (d.equityPct == null || d.equityPct < state.minEquityPct)) return false;
-      if (state.q) {
+      if (zipQ) {
+        var m = zipMatch(d, zipQ);
+        if (!m) return false;
+        if (m === 2) ZIP_EXACT++;
+      } else if (state.q) {
         var hay = (d.address + " " + d.city + " " + d.state + " " + d.zip + " " + d.metro + " " + d.source + " " + d.type).toLowerCase();
         if (hay.indexOf(state.q) === -1) return false;
       }
       return true;
-    }).sort(function (a, b) {
+    });
+    return out.sort(function (a, b) {
+      // When searching a ZIP, always float the nearest ones to the top.
+      if (zipQ) {
+        var za = +((a.zip || zipOf(a.address)) || 0), zb = +((b.zip || zipOf(b.address)) || 0);
+        var da = Math.abs(za - +zipQ), db = Math.abs(zb - +zipQ);
+        if (da !== db) return da - db;
+      }
       var ap = a.price, bp = b.price, ae = a.equity, be = b.equity;
       switch (state.sort) {
         case "deal": {
@@ -314,7 +342,17 @@
       (state.savedOnly ? "" : " match your filters") + note;
 
     if (!rows.length) {
-      if (state.savedOnly) {
+      if (LAST_ZIP) {
+        host.innerHTML = '<div class="empty"><strong>No government homes in or near ZIP ' + esc(LAST_ZIP) + ' right now.</strong>' +
+          '<br>Cheap federal &amp; county homes are sparse — most ZIP codes have none on any given day, and they turn over every few hours. Try a wider area:' +
+          '<div class="empty-actions">' +
+            '<button class="btn btn-primary" data-clearq="1">Clear the ZIP &amp; show all homes</button>' +
+            (state.scope !== "all" ? '<button class="btn btn-ghost" data-widen="all">Search all 50 states</button>' : '') +
+          '</div></div>';
+        wireWiden(host);
+        var cq = host.querySelector("[data-clearq]");
+        if (cq) cq.addEventListener("click", function () { state.q = ""; $("f-q").value = ""; render(); });
+      } else if (state.savedOnly) {
         host.innerHTML = '<div class="empty"><strong>No saved deals yet.</strong><br>Tap the ♥ on any listing to save it here.</div>';
       } else if (state.scope === "focus") {
         host.innerHTML = '<div class="empty"><strong>No cheap government homes in the LA + Portland metros right now.</strong>' +
@@ -330,10 +368,20 @@
       return;
     }
 
+    // ZIP search feedback: tell them plainly whether we found their exact ZIP
+    // or broadened to the surrounding area.
+    var thinNote = "";
+    if (LAST_ZIP) {
+      thinNote += ZIP_EXACT > 0
+        ? '<div class="thin-note"><span><b>' + ZIP_EXACT + '</b> home' + (ZIP_EXACT === 1 ? "" : "s") +
+          ' in ZIP <b>' + esc(LAST_ZIP) + '</b>, then the nearest around it.</span></div>'
+        : '<div class="thin-note"><span>No homes in <b>' + esc(LAST_ZIP) + '</b> exactly — showing the <b>' +
+          rows.length + '</b> nearest in the ' + esc(LAST_ZIP.slice(0, 3)) + 'xx area, closest first.</span></div>';
+    }
+
     // Thin-inventory nudge: when the LA+Portland view has only a handful,
     // gently offer to widen without hiding the homes that ARE there.
-    var thinNote = "";
-    if (state.scope === "focus" && rows.length < 12) {
+    if (!LAST_ZIP && state.scope === "focus" && rows.length < 12) {
       thinNote = '<div class="thin-note"><span>Only <b>' + rows.length + '</b> cheap government home' + (rows.length === 1 ? "" : "s") +
         ' in the LA + Portland metros right now.</span>' +
         '<span class="thin-actions"><button class="btn btn-ghost btn-sm" data-widen="region">+ California &amp; Oregon</button>' +
