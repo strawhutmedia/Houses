@@ -302,7 +302,8 @@ input[type="range"] { width: 100%; accent-color: var(--brand); }
 .scope-btn:hover { border-color: var(--brand); color: var(--text); transform: translateY(-1px); }
 .scope-btn .s-em { font-size: 20px; line-height: 1; }
 .scope-btn .s-t { font-size: 14.5px; font-weight: 800; color: var(--text); }
-.scope-btn .s-c { font-size: 12px; font-weight: 700; color: var(--muted-2); }
+.scope-btn .s-sub { font-size: 12px; font-weight: 600; color: var(--muted); }
+.scope-btn .s-c { font-size: 12px; font-weight: 700; color: var(--muted-2); margin-top: 1px; }
 .scope-btn.active {
   border-color: var(--brand); background: rgba(20,184,122,.12);
   box-shadow: 0 0 0 3px rgba(20,184,122,.14);
