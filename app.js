@@ -171,7 +171,12 @@
     var sources = uniq(DATA.map(function (d) { return d.source; })).sort();
     fillSelect($("f-source"), sources, "All sources");
 
-    $("f-q").addEventListener("input", function (e) { state.q = e.target.value.trim().toLowerCase(); render(); });
+    $("f-q").addEventListener("input", function (e) {
+      state.q = e.target.value.trim().toLowerCase();
+      // Typing a ZIP → load the ZIP-location table (once) and re-rank by distance.
+      if (/^\d{5}$/.test(state.q) && !ZIP_GEO) { loadZipGeo().then(render); }
+      render();
+    });
     $("f-source").addEventListener("change", function (e) { state.source = e.target.value; render(); });
     $("f-price").addEventListener("input", function (e) {
       state.maxPrice = +e.target.value; $("f-price-val").textContent = fmtK(state.maxPrice); render();
@@ -243,34 +248,70 @@
     render();
   }
 
-  // ZIP-aware search. A bare 5-digit query is treated as "near this ZIP":
-  // exact ZIP first, then the same 3-digit ZIP region (roughly your metro area).
+  // ZIP-aware search. A bare 5-digit query becomes a "homes near this ZIP"
+  // search: every home is ranked by real distance from the ZIP and the nearest
+  // ones are shown — so it's never blank as long as any homes are in view.
   var LAST_ZIP = null;      // the ZIP the user searched, if any
-  var ZIP_EXACT = 0;        // how many exact-ZIP matches in the last apply()
-  function zipMatch(d, zipQ) {
-    var z = d.zip || zipOf(d.address);
-    if (!z) return 0;
-    if (z === zipQ) return 2;                     // exact ZIP
-    if (z.slice(0, 3) === zipQ.slice(0, 3)) return 1; // same region (nearby)
-    return 0;
+  var ZIP_EXACT = 0;        // exact-ZIP matches in the last apply()
+  var ZIP_ORIGIN = null;    // {lat,lng} of the searched ZIP (once zipgeo loads)
+  var ZIP_GEO = null, ZIP_GEO_LOADING = null;
+
+  function loadZipGeo() {
+    if (window.ZIPGEO) { ZIP_GEO = window.ZIPGEO; return Promise.resolve(ZIP_GEO); }
+    if (ZIP_GEO_LOADING) return ZIP_GEO_LOADING;
+    ZIP_GEO_LOADING = new Promise(function (res) {
+      var s = document.createElement("script");
+      s.src = "zipgeo.js"; s.async = true;
+      s.onload = function () { ZIP_GEO = window.ZIPGEO || {}; res(ZIP_GEO); };
+      s.onerror = function () { ZIP_GEO = {}; res(ZIP_GEO); };
+      document.head.appendChild(s);
+    });
+    return ZIP_GEO_LOADING;
+  }
+  function zipLatLng(zip) {
+    var g = ZIP_GEO && ZIP_GEO[zip];
+    return g ? { lat: g[0] / 100, lng: Math.abs(g[1] / 100) } : null; // lng stored west; use magnitude
+  }
+  function milesBetween(la1, lo1, la2, lo2) {
+    var R = 3958.8, rad = Math.PI / 180;
+    var dLa = (la2 - la1) * rad, dLo = (lo2 - lo1) * rad;
+    var a = Math.sin(dLa / 2) * Math.sin(dLa / 2) +
+      Math.cos(la1 * rad) * Math.cos(la2 * rad) * Math.sin(dLo / 2) * Math.sin(dLo / 2);
+    return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  }
+  function homeMilesFrom(d, origin) {
+    if (!origin || d.lat == null || d.lng == null) return Infinity;
+    return milesBetween(origin.lat, origin.lng, d.lat, Math.abs(d.lng)); // homes store lng as magnitude
   }
 
   function apply() {
     var zipQ = /^\d{5}$/.test(state.q) ? state.q : null;
+    ZIP_ORIGIN = zipQ ? zipLatLng(zipQ) : null;
     LAST_ZIP = zipQ; ZIP_EXACT = 0;
     var out = DATA.filter(function (d) {
       if (state.savedOnly && !SAVED[d.id]) return false;
-      if (state.scope === "focus" && !inFocus(d)) return false;
-      if (state.scope === "region" && !inRegion(d)) return false;
-      if (state.state !== "ALL" && d.state !== state.state) return false;
+      // A ZIP search is a precise "near here" intent — it looks across the whole
+      // country by distance, ignoring the scope tab and state picker so the
+      // genuinely closest homes always show.
+      if (!zipQ) {
+        if (state.scope === "focus" && !inFocus(d)) return false;
+        if (state.scope === "region" && !inRegion(d)) return false;
+        if (state.state !== "ALL" && d.state !== state.state) return false;
+      }
       if (state.source !== "ALL" && d.source !== state.source) return false;
       if (state.type !== "ALL" && d.type !== state.type) return false;
       if (d.price != null && d.price > state.maxPrice) return false;
       if (state.minEquityPct && (d.equityPct == null || d.equityPct < state.minEquityPct)) return false;
       if (zipQ) {
-        var m = zipMatch(d, zipQ);
-        if (!m) return false;
-        if (m === 2) ZIP_EXACT++;
+        // Distance search: keep every in-scope home; ranking (below) surfaces the
+        // nearest. Only exclude if we genuinely can't place the home on a map.
+        if ((d.zip || zipOf(d.address)) === zipQ) ZIP_EXACT++;
+        if (ZIP_ORIGIN) { d._mi = homeMilesFrom(d, ZIP_ORIGIN); }
+        else {
+          // zipgeo not loaded yet / unknown ZIP → temporary numeric-proximity fallback
+          var z = +((d.zip || zipOf(d.address)) || 0);
+          d._mi = z ? Math.abs(z - +zipQ) : Infinity;
+        }
       } else if (state.q) {
         var hay = (d.address + " " + d.city + " " + d.state + " " + d.zip + " " + d.metro + " " + d.source + " " + d.type).toLowerCase();
         if (hay.indexOf(state.q) === -1) return false;
@@ -278,10 +319,9 @@
       return true;
     });
     return out.sort(function (a, b) {
-      // When searching a ZIP, always float the nearest ones to the top.
+      // ZIP search always ranks nearest-first, overriding the sort dropdown.
       if (zipQ) {
-        var za = +((a.zip || zipOf(a.address)) || 0), zb = +((b.zip || zipOf(b.address)) || 0);
-        var da = Math.abs(za - +zipQ), db = Math.abs(zb - +zipQ);
+        var da = a._mi == null ? Infinity : a._mi, db = b._mi == null ? Infinity : b._mi;
         if (da !== db) return da - db;
       }
       var ap = a.price, bp = b.price, ae = a.equity, be = b.equity;
@@ -375,15 +415,21 @@
       return;
     }
 
-    // ZIP search feedback: tell them plainly whether we found their exact ZIP
-    // or broadened to the surrounding area.
+    // ZIP search feedback: nearest-first, with the distance to the closest home.
     var thinNote = "";
     if (LAST_ZIP) {
-      thinNote += ZIP_EXACT > 0
-        ? '<div class="thin-note"><span><b>' + ZIP_EXACT + '</b> home' + (ZIP_EXACT === 1 ? "" : "s") +
-          ' in ZIP <b>' + esc(LAST_ZIP) + '</b>, then the nearest around it.</span></div>'
-        : '<div class="thin-note"><span>No homes in <b>' + esc(LAST_ZIP) + '</b> exactly — showing the <b>' +
-          rows.length + '</b> nearest in the ' + esc(LAST_ZIP.slice(0, 3)) + 'xx area, closest first.</span></div>';
+      var near = rows[0];
+      var nearMi = (near && near._mi != null && isFinite(near._mi)) ? Math.round(near._mi) : null;
+      var nearWhere = near ? [near.city, near.state].filter(Boolean).join(", ") : "";
+      if (ZIP_EXACT > 0) {
+        thinNote += '<div class="thin-note"><span><b>' + ZIP_EXACT + '</b> home' + (ZIP_EXACT === 1 ? "" : "s") +
+          ' right in ZIP <b>' + esc(LAST_ZIP) + '</b>, then the nearest around it.</span></div>';
+      } else if (ZIP_ORIGIN && nearMi != null) {
+        thinNote += '<div class="thin-note"><span>No homes in <b>' + esc(LAST_ZIP) + '</b> itself — showing the closest, nearest first. ' +
+          'Closest is <b>~' + nearMi + ' mi</b> away' + (nearWhere ? ' in ' + esc(nearWhere) : "") + '.</span></div>';
+      } else {
+        thinNote += '<div class="thin-note"><span>Finding the closest homes to <b>' + esc(LAST_ZIP) + '</b>…</span></div>';
+      }
     }
 
     // Thin-inventory nudge: when the LA+Portland view has only a handful,
@@ -446,7 +492,9 @@
         '<span class="l-close"><span class="countdown">…</span>' +
           '<span class="l-date">' + (d.auctionDate ? fmtDate(d.auctionDate) : "date at source") + '</span></span>' +
         '<span class="l-loc"><b>' + esc(d.city || "—") + '</b><span class="l-st">' + esc(d.state || "") +
-          (d.zip ? " " + esc(d.zip) : "") + '</span></span>' +
+          (d.zip ? " " + esc(d.zip) : "") +
+          (LAST_ZIP && d._mi != null && isFinite(d._mi) ? ' <span class="l-mi">~' + Math.round(d._mi) + ' mi</span>' : "") +
+          '</span></span>' +
         '<span class="l-price">' + (d.price != null ? fmt(d.price) : "See source") + '</span>' +
         '<span class="l-meta">' + esc(d.type) + '<span class="l-bd">' + esc(beds) + '</span></span>' +
         '<span class="l-src">' + esc(d.source) + '</span>' +
