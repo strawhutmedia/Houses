@@ -55,6 +55,10 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    # Tolerate "Pages not enabled yet" so runs don't spam failure emails before
+    # the one-time setup (Settings -> Pages -> Source: GitHub Actions). Once
+    # Pages is enabled this step publishes for real; you can drop this line then.
+    continue-on-error: true
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
