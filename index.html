@@ -169,15 +169,19 @@
         <div>
           <div class="results-head">
             <div class="count" id="result-count">—</div>
-            <div class="sort-wrap">
-              <label for="f-sort">Sort by</label>
-              <select id="f-sort">
-                <option value="equity">Most equity</option>
-                <option value="price-asc">Lowest price</option>
-                <option value="price-desc">Highest price</option>
-                <option value="yield">Best rent yield</option>
-                <option value="auction">Soonest auction</option>
-              </select>
+            <div class="rh-right">
+              <a href="#deals" class="saved-tab" id="saved-tab">♥ Saved <span class="saved-count" id="saved-count" style="display:none;">0</span></a>
+              <div class="sort-wrap">
+                <label for="f-sort">Sort</label>
+                <select id="f-sort">
+                  <option value="equity">Most equity</option>
+                  <option value="price-asc">Lowest price</option>
+                  <option value="price-desc">Highest price</option>
+                  <option value="yield">Best rent yield</option>
+                  <option value="ending">Ending soonest</option>
+                  <option value="newest">Newest listed</option>
+                </select>
+              </div>
             </div>
           </div>
           <div class="cards" id="cards"></div>
@@ -274,14 +278,21 @@
           <div class="cell"><div class="k">Est. market value</div><div class="v" id="m-value">—</div></div>
           <div class="cell"><div class="k">Built-in equity</div><div class="v e" id="m-equity">—</div></div>
           <div class="cell"><div class="k">Est. rent</div><div class="v" id="m-rent">—</div></div>
-          <div class="cell"><div class="k">Gross yield</div><div class="v" id="m-yield">—</div></div>
-          <div class="cell"><div class="k">Auction date</div><div class="v" id="m-auction" style="font-size:14px;">—</div></div>
+          <div class="cell"><div class="k">Listed on</div><div class="v" id="m-posted" style="font-size:14px;">—</div></div>
+          <div class="cell"><div class="k">Auction closes</div><div class="v" id="m-auction" style="font-size:14px;">—</div></div>
         </div>
 
-        <a class="btn btn-primary" id="m-link" href="#" target="_blank" rel="noopener" style="width:100%;justify-content:center;">Go to auction source →</a>
+        <div class="m-cond" id="m-condition"></div>
+
+        <div class="m-actions">
+          <button class="btn btn-ghost" id="m-save">♡ Save this deal</button>
+          <button class="btn btn-ghost" id="m-notify">🔕 Alert me when it ends</button>
+        </div>
+
+        <a class="btn btn-primary" id="m-link" href="#" target="_blank" rel="noopener" style="width:100%;justify-content:center;margin-top:12px;">Go to auction source →</a>
         <p class="m-note">
-          This is a sample record for demonstration. In the live product this button links directly to the official
-          government listing so you can register and bid. Always verify condition, liens, and title before bidding.
+          In the live product this button links directly to the official auction listing so you can register and bid.
+          The condition rating is an AI estimate from the listing photos — always verify condition, liens, and title in person before bidding.
         </p>
       </div>
     </div>
