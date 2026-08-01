@@ -43,9 +43,11 @@ for cheap residential deals is a **Bid4Assets** county tax-deed adapter.
 
 - [x] Marketing site + filterable feed (search, market, type, source, price, equity; sortable)
 - [x] Equity + rent-yield scoring, deal-detail modal, mobile-responsive
+- [x] Save/favorites, live auction countdowns, condition/damage rating, ZIP + dates
 - [x] Scraper framework + normalizer + **live GSA adapter**
-- [ ] Bid4Assets county tax-deed adapter (LA / San Bernardino / Riverside / Kern)
-- [ ] Treasury / FDIC adapters
-- [ ] Headless-browser path for GovDeals + US Marshals (both bot-blocked)
-- [ ] Market-value / rent enrichment (AVM) for sources without it
-- [ ] Deploy + email deal alerts
+- [x] **Live Bid4Assets county-tax-sale adapter** (parses upcoming CA/OR/WA county auctions)
+- [x] Scheduled refresh + Pages deploy workflow (every 3h)
+- [ ] Parcel-detail enrichment for Bid4Assets (address/min-bid/photos via headless render in CI)
+- [ ] Market-value + rent enrichment (AVM API) → real equity/yield on live rows
+- [ ] AI photo condition scoring (vision) wired to live listing photos
+- [ ] CWS adapter for Treasury/US Marshals; server-side email/SMS deadline alerts

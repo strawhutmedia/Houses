@@ -1,0 +1,61 @@
+name: Refresh listings & deploy
+
+# Pulls fresh government-auction data on a schedule and publishes the site
+# (with the generated listings.json) to GitHub Pages.
+#
+# Cadence: every 3 hours. County tax sales don't change minute-to-minute, so
+# every few hours keeps the feed current without hammering the sources. Adjust
+# the cron below if you want it faster/slower. You can also trigger it by hand
+# from the Actions tab (workflow_dispatch).
+#
+# Setup once: repo Settings -> Pages -> Source = "GitHub Actions".
+
+on:
+  schedule:
+    - cron: "0 */3 * * *"   # every 3 hours (UTC)
+  workflow_dispatch: {}      # manual "Run workflow" button
+  push:
+    branches: [ main ]       # redeploy on site changes
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      # A real browser is available here (no sandbox proxy), so parcel-detail
+      # enrichment that needs JS rendering can run in this environment.
+      - name: Install Playwright Chromium
+        run: npx --yes playwright install --with-deps chromium
+
+      - name: Scrape sources -> listings.json
+        run: node scraper/run.js
+        continue-on-error: true   # never block a deploy on one flaky source
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
