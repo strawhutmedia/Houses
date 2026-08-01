@@ -156,7 +156,7 @@
   // two markets the buyer actually cares about.
   var state = {
     q: "", state: "ALL", source: "ALL", type: "ALL",
-    maxPrice: 800000, minEquityPct: 0, sort: "ending", savedOnly: false, scope: "focus",
+    maxPrice: 800000, minEquityPct: 0, sort: "price-time", savedOnly: false, scope: "focus",
     view: "list",
   };
 
@@ -229,11 +229,11 @@
   }
 
   function resetFilters() {
-    state = { q: "", state: "ALL", source: "ALL", type: "ALL", maxPrice: 800000, minEquityPct: 0, sort: "ending", savedOnly: false, scope: "focus", view: state.view };
+    state = { q: "", state: "ALL", source: "ALL", type: "ALL", maxPrice: 800000, minEquityPct: 0, sort: "price-time", savedOnly: false, scope: "focus", view: state.view };
     $("f-q").value = ""; $("f-source").value = "ALL";
     $("f-price").value = 800000; $("f-price-val").textContent = fmtK(800000);
     $("f-equity").value = 0; $("f-equity-val").textContent = "0%";
-    $("f-sort").value = "ending";
+    $("f-sort").value = "price-time";
     var fs = $("f-state"); if (fs) fs.value = "ALL";
     syncScope(); syncMetroChips();
     var st = $("saved-tab"); if (st) st.classList.remove("active");
@@ -292,6 +292,13 @@
           var ea = a.equityPct == null ? -1 : a.equityPct, eb = b.equityPct == null ? -1 : b.equityPct;
           if (eb !== ea) return eb - ea;
           return (ap == null ? Infinity : ap) - (bp == null ? Infinity : bp);
+        }
+        case "price-time": {
+          // What the buyer asked for: cheapest first, and among same-priced
+          // homes, the one whose auction ends soonest.
+          var pa = ap == null ? Infinity : ap, pb = bp == null ? Infinity : bp;
+          if (pa !== pb) return pa - pb;
+          return (new Date(a.deadline || "2999-01-01")) - (new Date(b.deadline || "2999-01-01"));
         }
         case "price-asc": return (ap == null ? Infinity : ap) - (bp == null ? Infinity : bp);
         case "price-desc": return (bp == null ? -Infinity : bp) - (ap == null ? -Infinity : ap);
@@ -656,7 +663,15 @@
 
   /* ---------------- boot ---------------- */
   document.addEventListener("DOMContentLoaded", function () {
-    loadData().then(function (rows) { DATA = rows; build(); });
+    loadData().then(function (rows) {
+      DATA = rows; build();
+      // This is a tool, not a brochure — land straight on the homes list unless
+      // the visitor deep-linked to a specific section.
+      var deals = document.getElementById("deals");
+      if (deals && (!location.hash || location.hash === "#deals")) {
+        try { deals.scrollIntoView({ block: "start" }); } catch (e) {}
+      }
+    });
     $("modal-close").addEventListener("click", closeModal);
     $("modal-back").addEventListener("click", function (e) { if (e.target === $("modal-back")) closeModal(); });
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeModal(); });

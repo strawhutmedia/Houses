@@ -441,7 +441,10 @@ footer .muted { color: var(--muted); font-size: 13.5px; max-width: 46ch; }
 /* ---------------- Responsive ---------------- */
 @media (max-width: 900px) {
   .app-grid { grid-template-columns: 1fr; }
-  .filters { position: relative; top: 0; }
+  /* On phones, show the homes FIRST — push the filters panel below the list
+     so you land on listings, not on a screen full of dropdowns. */
+  .app-grid > div { order: 1; }
+  .filters { order: 2; position: relative; top: 0; margin-top: 8px; }
   .stats { grid-template-columns: repeat(2, 1fr); }
   .steps { grid-template-columns: 1fr; }
   .nav-links { display: none; }
