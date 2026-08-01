@@ -150,7 +150,7 @@
   /* ---------------- filter state ---------------- */
   var state = {
     q: "", state: "ALL", source: "ALL", type: "ALL",
-    maxPrice: 300000, minEquityPct: 0, sort: "deal", savedOnly: false,
+    maxPrice: 300000, minEquityPct: 0, sort: "deal", savedOnly: false, fav: false,
   };
 
   function $(id) { return document.getElementById(id); }
@@ -196,7 +196,7 @@
   }
 
   function resetFilters() {
-    state = { q: "", state: "ALL", source: "ALL", type: "ALL", maxPrice: 300000, minEquityPct: 0, sort: "deal", savedOnly: false };
+    state = { q: "", state: "ALL", source: "ALL", type: "ALL", maxPrice: 300000, minEquityPct: 0, sort: "deal", savedOnly: false, fav: false };
     $("f-q").value = ""; $("f-source").value = "ALL";
     $("f-price").value = 300000; $("f-price-val").textContent = fmtK(300000);
     $("f-equity").value = 0; $("f-equity-val").textContent = "0%";
@@ -213,6 +213,7 @@
   function apply() {
     return DATA.filter(function (d) {
       if (state.savedOnly && !SAVED[d.id]) return false;
+      if (state.fav && FAV_STATES.indexOf(d.state) === -1) return false;
       if (state.state !== "ALL" && d.state !== state.state) return false;
       if (state.source !== "ALL" && d.source !== state.source) return false;
       if (state.type !== "ALL" && d.type !== state.type) return false;
@@ -443,27 +444,39 @@
     });
     $("f-state").innerHTML = html;
   }
-  // Quick-market chips = the states with the most listings (one-tap jump).
+  // Cities/states you favor — one tap to see just your markets.
+  var FAV_STATES = ["CA", "OR"];   // California + Oregon (LA & Portland)
+  var FAV_LABEL = "⭐ My markets (CA + OR)";
+
+  // Quick-market chips = your favorites first, then the states with the most deals.
   function populateMetroChips() {
     var c = stateCounts();
     var top = Object.keys(c).sort(function (a, b) { return c[b] - c[a]; }).slice(0, 6);
     var host = $("metro-chips");
     if (!host) return;
-    host.innerHTML = top.map(function (s) {
+    var html = '<span class="chip fav" data-fav="1">' + FAV_LABEL + "</span>";
+    html += top.map(function (s) {
       return '<span class="chip" data-qstate="' + s + '">' + esc(STATE_NAMES[s] || s) + "</span>";
     }).join("");
+    host.innerHTML = html;
     host.querySelectorAll("[data-qstate]").forEach(function (chip) {
       chip.addEventListener("click", function () {
-        state.state = chip.getAttribute("data-qstate");
-        $("f-state").value = state.state;
-        syncMetroChips(); render();
+        state.fav = false; state.state = chip.getAttribute("data-qstate");
+        $("f-state").value = state.state; syncMetroChips(); render();
       });
+    });
+    var favChip = host.querySelector("[data-fav]");
+    if (favChip) favChip.addEventListener("click", function () {
+      state.fav = !state.fav; state.state = "ALL"; $("f-state").value = "ALL";
+      syncMetroChips(); render();
     });
   }
   function syncMetroChips() {
     document.querySelectorAll("#metro-chips [data-qstate]").forEach(function (chip) {
-      chip.classList.toggle("active", chip.getAttribute("data-qstate") === state.state);
+      chip.classList.toggle("active", !state.fav && chip.getAttribute("data-qstate") === state.state);
     });
+    var favChip = document.querySelector("#metro-chips [data-fav]");
+    if (favChip) favChip.classList.toggle("active", !!state.fav);
   }
 
   /* ---------------- helpers ---------------- */

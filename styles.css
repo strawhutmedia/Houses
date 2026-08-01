@@ -363,3 +363,7 @@ footer .muted { color: var(--muted); font-size: 13.5px; max-width: 46ch; }
   .m-grid { grid-template-columns: 1fr; }
   section { padding: 48px 0; }
 }
+
+/* favorite-markets quick chip */
+.chip.fav { border-color: var(--gold); color: var(--gold); background: rgba(244,185,66,.06); }
+.chip.fav.active { background: rgba(244,185,66,.16); }
