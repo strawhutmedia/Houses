@@ -14,10 +14,12 @@ const fs = require("fs");
 const path = require("path");
 const { normalizeListing } = require("./lib/normalize");
 
+// Residential-only live feed (no commercial/land, per spec).
+// GSA is intentionally omitted from the default run: its inventory is
+// commercial/land. Treasury/FDIC/US Marshals/GovDeals are documented stubs.
 const ADAPTERS = [
-  require("./adapters/hud"),        // LIVE: cheap government (FHA) foreclosure homes
-  require("./adapters/bid4assets"), // county tax-deed houses (parcels publish pre-sale)
-  require("./adapters/gsa"),
+  require("./adapters/hud"),        // LIVE: cheap government (FHA) foreclosure homes (CA/OR)
+  require("./adapters/bid4assets"), // LIVE: cheap county tax-deed / sheriff-sale houses
   require("./adapters/treasury"),
   require("./adapters/fdic"),
   require("./adapters/usmarshals"),

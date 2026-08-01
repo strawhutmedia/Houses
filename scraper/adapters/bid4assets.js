@@ -1,162 +1,154 @@
 "use strict";
 /*
- * Bid4Assets — County Tax-Defaulted Property Auctions
- * https://www.bid4assets.com/county-tax-sales
+ * Bid4Assets — County Tax-Deed & Foreclosure Auctions
+ * https://www.bid4assets.com
  *
- * THIS IS THE PRIMARY SOURCE for the cheap residential houses in the pitch.
- * Most California county tax-deed sales (Los Angeles, San Bernardino, Riverside,
- * Kern, Alameda, Butte, and dozens more) run their auctions here, plus WA/OR
- * and other states. It is the "county tax deed sales" bucket Marc lists — and
- * unlike US Marshals/GovDeals it does NOT hard-block plain requests.
+ * The real home of Marc's "$1 / $10K houses." Two live systems, both curl-only:
  *
- * STATUS: LIVE (auction index) + parcel step.
- *   1. GET /county-tax-sales -> parse every upcoming county auction, keep CA/OR.
- *      Each row gives: county, state, auction title, storefront slug.  [WORKS via curl]
- *   2. GET /storefront/<slug> -> read StorefrontId + StorefrontCollectionId(s).
- *   3. GET /storefront/taxsales/getauctiondisplay/<StorefrontId>?storefrontCollectionId=<cid>
- *      -> parcels, once the county publishes them (usually ~2-4 weeks pre-sale).
- *      Per-parcel detail (APN, situs address, minimum bid, photos) is filled from
- *      the item pages/API; where a browser is available in the deploy environment,
- *      render the item page to capture the JS-loaded fields. In this locked-down
- *      sandbox the browser can't egress, so parcel enrichment runs in CI/prod.
+ *  (A) LIVE real-estate channel — always has individually-priced properties:
+ *        POST /channel/auctions/get  (channelCode=22)  -> rows {auctionId, title}
+ *        GET  /auction/index/<id>    -> item-specifics table (address, beds,
+ *             baths, sqft, county, APN) + current bid + close date.
+ *      This is the primary path and yields real tax-deed/sheriff-sale HOUSES
+ *      with current bids often in the hundreds/low-thousands.
  *
- * We keep ONLY residential auction property (no commercial/personal), per spec.
+ *  (B) County tax-sale storefronts (CA/OR/WA) — the scheduled county auctions.
+ *      Parcels are published only while a given county sale is OPEN, via
+ *        POST /api/storefront/auctions/index  {storefrontId, storefrontCollectionId}
+ *      Exposed as listAuctions()/listOpenParcels() so the runner can pull them
+ *      when a target-county sale opens (LA / San Bernardino / Riverside / Ventura).
+ *
+ * Residential only: land, lots, acreage, timeshares and commercial are dropped.
  */
-const { fetchText } = require("../lib/http");
+const { fetchText, fetchPost } = require("../lib/http");
 
 const BASE = "https://www.bid4assets.com";
-const KEEP_STATES = ["CA", "OR", "WA"]; // WA included for the Portland-metro (Vancouver/Clark Co.) overlap
+const KEEP_STATES = null; // null = keep all states (channel is national; tag from detail). Set e.g. ["CA","OR","WA"] to restrict.
 
-// LA-metro counties get scraped first (user priority). Lower number = higher priority.
+const RES_POS = /house|home|condo|town\s?home|townhouse|duplex|triplex|fourplex|bungalow|cottage|\b\d\s*bed/i;
+const RES_NEG = /\bland\b|\blot\b|acre|vacant|timeshare|parking|commercial|billboard|storage/i;
+
+function clean(s) {
+  return String(s || "").replace(/<br\s*\/?>/gi, ", ").replace(/<[^>]+>/g, " ")
+    .replace(/&amp;/g, "&").replace(/&#39;/g, "'").replace(/&quot;/g, '"').replace(/&nbsp;/g, " ")
+    .replace(/\s+/g, " ").replace(/,\s*,/g, ",").trim().replace(/,\s*$/, "");
+}
+function num(v) { var n = parseFloat(String(v == null ? "" : v).replace(/[^0-9.]/g, "")); return isFinite(n) ? n : null; }
+
+// ---- channel listing rows ----
+async function channelRows(page, state) {
+  var form = "channelCode=22&categoryCode=&currentPage=" + page +
+    "&pageSize=100&lev3=&sortOrderColumn=&sortOrderDirection=&specialtyChannel=&locatedState=" + (state || "");
+  var html = await fetchPost(`${BASE}/channel/auctions/get`, { form: form });
+  var out = [], seen = {};
+  var re = /href="\/auction\/(\d+)"[^>]*>([\s\S]{3,140}?)<\/a>/gi, m;
+  while ((m = re.exec(html))) {
+    var id = m[1]; if (seen[id]) continue; seen[id] = 1;
+    var title = clean(m[2]);
+    if (!title) continue;
+    if (RES_NEG.test(title)) continue;         // drop land/commercial early
+    if (!RES_POS.test(title)) continue;         // keep residential-signal titles
+    out.push({ id: id, title: title });
+  }
+  return out;
+}
+
+// ---- detail page ----
+function specVal(html, label) {
+  var re = new RegExp(">" + label + "<\\/strong>\\s*<\\/td>\\s*<td[^>]*>([\\s\\S]*?)<\\/td>", "i");
+  var m = html.match(re);
+  return m ? clean(m[1]) : "";
+}
+function mapType(title) {
+  var t = (title || "").toLowerCase();
+  if (/condo/.test(t)) return "Condo";
+  if (/town\s?house|town\s?home/.test(t)) return "Townhouse";
+  if (/duplex|triplex|fourplex|multi/.test(t)) return "Multi-Family";
+  return "Single Family";
+}
+function parseCloseDate(html) {
+  var m = html.match(/actual-close-time-block"[^>]*>\s*(\d{2})-(\d{2})-(\d{2})/i);
+  if (!m) return null;
+  return m[1] + "/" + m[2] + "/20" + m[3]; // MM/DD/YYYY
+}
+function parseAddress(addr) {
+  // "10 Louise Ln, Sauget, IL 62206, United States"
+  var parts = addr.split(",").map(function (s) { return s.trim(); }).filter(Boolean);
+  var out = { street: parts[0] || "", city: "", state: "", zip: "" };
+  var sz = addr.match(/,\s*([A-Za-z .'-]+),\s*([A-Z]{2})\s*(\d{5})/);
+  if (sz) { out.city = sz[1].trim(); out.state = sz[2]; out.zip = sz[3]; }
+  return out;
+}
+
+async function fetchDetail(id, title) {
+  var html = await fetchText(`${BASE}/auction/index/${id}`, { timeout: 35 });
+  var addrRaw = specVal(html, "Address");
+  var a = parseAddress(addrRaw);
+  var bid = (html.match(/current-bid-span"[^>]*>\s*\$([\d,]+)/i) || [])[1];
+  var minBid = (html.match(/Minimum Bid[^$]{0,30}\$([\d,]+)/i) || [])[1];
+  var type = mapType(title + " " + specVal(html, "Property Type"));
+  if (RES_NEG.test(addrRaw + " " + title)) return null;
+  return {
+    id: "b4a-" + id,
+    source: "County Tax Deed",
+    state: a.state, city: a.city,
+    address: addrRaw || title,
+    type: type,
+    beds: num(specVal(html, "Number Of Bedrooms")) || 0,
+    baths: num(specVal(html, "Number Of Bathrooms")) || 0,
+    sqft: num(specVal(html, "Living Space")) || 0,
+    year: num(specVal(html, "Year Built")) || null,
+    price: num(bid) != null ? num(bid) : num(minBid),
+    marketValue: null,
+    auctionDate: parseCloseDate(html),
+    url: `${BASE}/auction/index/${id}`,
+    live: true,
+  };
+}
+
+async function scrape({ limit = 24, pages = 3 } = {}) {
+  var candidates = [];
+  for (var p = 1; p <= pages; p++) {
+    try { candidates.push.apply(candidates, await channelRows(p, "")); }
+    catch (e) { console.error(`  [bid4assets] channel page ${p} failed: ${e.message}`); }
+  }
+  // de-dupe, cap detail fetches
+  var seen = {}, picks = [];
+  for (var i = 0; i < candidates.length && picks.length < limit; i++) {
+    if (seen[candidates[i].id]) continue; seen[candidates[i].id] = 1; picks.push(candidates[i]);
+  }
+  var out = [];
+  for (var j = 0; j < picks.length; j++) {
+    try {
+      var l = await fetchDetail(picks[j].id, picks[j].title);
+      if (l && l.price != null) {
+        if (!KEEP_STATES || KEEP_STATES.indexOf(l.state) !== -1) out.push(l);
+      }
+    } catch (e) { /* skip bad detail */ }
+  }
+  return out;
+}
+
+// ---- county tax-sale index (secondary; parcels publish when a sale opens) ----
 const COUNTY_PRIORITY = {
   "los angeles": 1, "san bernardino": 1, "riverside": 1, "kern": 1, "ventura": 1, "orange": 1,
-  "imperial": 2, "san diego": 2,
-  // Portland metro (secondary)
-  "clark": 3, "multnomah": 3, "washington": 3, "clackamas": 3,
+  "imperial": 2, "san diego": 2, "clark": 3, "multnomah": 3, "washington": 3, "clackamas": 3,
 };
-function countyKey(title) {
-  var m = String(title).match(/^([A-Za-z .'-]+?)\s+County/i);
-  return m ? m[1].trim().toLowerCase() : "";
-}
-function priorityOf(title) {
-  return COUNTY_PRIORITY[countyKey(title)] || 9;
-}
-
-function decode(s) {
-  return (s || "").replace(/&amp;/g, "&").replace(/&#39;/g, "'").replace(/&quot;/g, '"')
-    .replace(/&nbsp;/g, " ").replace(/\s+/g, " ").trim();
-}
-
-// The index lists auctions as: "<Place> County, <ST> Tax Defaulted Properties Auction"
-// alongside a storefront link. Pair titles with their storefront slugs by proximity.
-function parseIndex(html) {
-  const out = [];
-  // capture "<a href="/storefront/SLUG">...TITLE with , ST ...</a>" and nearby text
+function countyKey(t) { var m = String(t).match(/^([A-Za-z .'-]+?)\s+County/i); return m ? m[1].trim().toLowerCase() : ""; }
+async function listAuctions() {
+  const index = await fetchText(`${BASE}/county-tax-sales`);
+  const out = [], seen = {};
   const re = /href="\/storefront\/([A-Za-z0-9]+)"[^>]*>([\s\S]{0,160}?)<\/a>/gi;
   let m;
-  const seen = new Set();
-  while ((m = re.exec(html))) {
-    const slug = m[1];
-    if (seen.has(slug)) continue;
-    seen.add(slug);
-    const text = decode(m[2].replace(/<[^>]+>/g, " "));
+  while ((m = re.exec(index))) {
+    const slug = m[1]; if (seen[slug]) continue; seen[slug] = 1;
+    const text = clean(m[2].replace(/<[^>]+>/g, " "));
     const st = (text.match(/,\s*([A-Z]{2})\b/) || [])[1];
-    if (!st || !KEEP_STATES.includes(st)) continue;
-    // only keep tax-defaulted *property* auctions (skip timeshares/personal)
+    if (!st || ["CA", "OR", "WA"].indexOf(st) === -1) continue;
     if (/timeshare|personal|vehicle/i.test(text)) continue;
-    out.push({ slug, state: st, title: text, county: countyKey(text), priority: priorityOf(text), url: `${BASE}/storefront/${slug}` });
+    out.push({ slug, state: st, title: text, county: countyKey(text), priority: COUNTY_PRIORITY[countyKey(text)] || 9, url: `${BASE}/storefront/${slug}` });
   }
-  // LA-metro counties first, then the rest (stable within a tier).
   return out.sort(function (a, b) { return a.priority - b.priority; });
 }
 
-async function getStorefrontMeta(slug) {
-  const html = await fetchText(`${BASE}/storefront/${slug}`);
-  const storefrontId = (html.match(/StorefrontId["'\s:]+(\d+)/) || [])[1];
-  const collectionIds = [...new Set(
-    (html.match(/StorefrontCollectionId["'\s:]+(\d+)/g) || []).map((s) => s.replace(/\D/g, ""))
-  )];
-  const title = decode((html.match(/<title>([^<]+)<\/title>/i) || [])[1] || slug);
-  return { storefrontId, collectionIds, title };
-}
-
-const RESIDENTIAL = /single family|residential|duplex|triplex|fourplex|multi|condo|townhome|townhouse|manufactured|mobile|home|house|sfr/i;
-
-function mapType(t) {
-  t = (t || "").toLowerCase();
-  if (/duplex|triplex|fourplex|multi/.test(t)) return "Multi-Family";
-  if (/condo/.test(t)) return "Condo";
-  if (/town/.test(t)) return "Townhouse";
-  return "Single Family";
-}
-
-// Parse parcels from a getauctiondisplay fragment. Bid4Assets markup varies by
-// county template, so this is intentionally defensive and returns [] when the
-// county hasn't published parcels yet (very common for future sales).
-function parseParcels(html, ctx) {
-  const out = [];
-  const blocks = html.split(/(?=href="\/\d{4,}")/i);
-  for (const blk of blocks) {
-    const idm = blk.match(/href="\/(\d{4,})"/);
-    if (!idm) continue;
-    const minBid = (blk.match(/(?:minimum bid|min bid|starting)[^$]{0,20}\$([0-9,]{3,})/i) || [])[1];
-    const loc = blk.match(/([A-Z][A-Za-z .'-]+),\s*([A-Z]{2})\s*(\d{5})/);
-    const typeTxt = (blk.match(/(single family|residential|duplex|triplex|fourplex|condo|townhouse|manufactured|mobile home|vacant|land|commercial)/i) || [])[1];
-    if (typeTxt && !RESIDENTIAL.test(typeTxt)) continue; // drop land/commercial per spec
-
-    // FREE equity basis: use the county assessed value when the listing exposes it.
-    // Assessed value is a rough, no-cost proxy for market value (not an AVM) — the
-    // UI labels equity as an estimate. Swap in a paid AVM later for precision.
-    const assessed = (blk.match(/(?:assessed value|total assessed|assessment)[^$]{0,20}\$([0-9,]{4,})/i) || [])[1];
-    out.push({
-      id: "b4a-" + idm[1],
-      source: "County Tax Deed",
-      state: loc ? loc[2] : ctx.state,
-      city: loc ? decode(loc[1]) : "",
-      address: loc ? `${decode(loc[1])}, ${loc[2]} ${loc[3]}` : "",
-      type: mapType(typeTxt),
-      price: minBid || null,
-      marketValue: assessed || null,   // free assessed-value proxy; null until published
-      valueBasis: assessed ? "assessed" : null,
-      rentEstimate: 0,
-      auctionDate: ctx.auctionDate || null,
-      url: `${BASE}/${idm[1]}`,
-      live: true,
-    });
-  }
-  return out;
-}
-
-async function scrape({ limit = 25 } = {}) {
-  const index = await fetchText(`${BASE}/county-tax-sales`);
-  const auctions = parseIndex(index).slice(0, limit);
-  const out = [];
-
-  for (const a of auctions) {
-    try {
-      const meta = await getStorefrontMeta(a.slug);
-      if (!meta.storefrontId || !meta.collectionIds.length) continue;
-      for (const cid of meta.collectionIds.slice(0, 6)) {
-        try {
-          const frag = await fetchText(
-            `${BASE}/storefront/taxsales/getauctiondisplay/${meta.storefrontId}?storefrontCollectionId=${cid}`,
-            { headers: ["X-Requested-With: XMLHttpRequest", `Referer: ${a.url}`] }
-          );
-          out.push(...parseParcels(frag, { state: a.state }));
-        } catch (e) { /* collection not published yet */ }
-      }
-    } catch (e) {
-      console.error(`  [bid4assets] ${a.slug} failed: ${e.message}`);
-    }
-  }
-  return out;
-}
-
-// Exposed so the runner / a CI job can log what CA/OR auctions are upcoming even
-// before parcels publish — useful signal that the source is live.
-async function listAuctions() {
-  const index = await fetchText(`${BASE}/county-tax-sales`);
-  return parseIndex(index);
-}
-
-module.exports = { scrape, listAuctions, id: "bid4assets", label: "Bid4Assets County Tax Sales", status: "live" };
+module.exports = { scrape, listAuctions, id: "bid4assets", label: "Bid4Assets Tax/Foreclosure Auctions", status: "live" };

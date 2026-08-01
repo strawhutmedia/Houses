@@ -38,4 +38,32 @@ async function fetchText(url, opts = {}) {
   throw lastErr;
 }
 
-module.exports = { fetchText, DEFAULT_UA };
+/** POST helper. Pass `form` (urlencoded string) or `json` (object). */
+function curlPost(url, { ua = DEFAULT_UA, timeout = 45, headers = [], form, json } = {}) {
+  const args = ["-sS", "-m", String(timeout), "-A", ua, "-X", "POST"];
+  const hdrs = headers.slice();
+  let data = "";
+  if (json != null) { hdrs.push("Content-Type: application/json"); data = JSON.stringify(json); }
+  else if (form != null) { hdrs.push("Content-Type: application/x-www-form-urlencoded"); data = form; }
+  hdrs.push("X-Requested-With: XMLHttpRequest");
+  for (const h of hdrs) args.push("-H", h);
+  args.push("--data", data, url);
+  return new Promise((resolve, reject) => {
+    execFile("curl", args, { maxBuffer: 1024 * 1024 * 20 }, (err, stdout, stderr) => {
+      if (err) return reject(new Error("curl POST failed for " + url + ": " + (stderr || err.message)));
+      resolve(stdout);
+    });
+  });
+}
+
+async function fetchPost(url, opts = {}) {
+  const tries = opts.retries || 2;
+  let lastErr;
+  for (let i = 0; i < tries; i++) {
+    try { return await curlPost(url, opts); }
+    catch (e) { lastErr = e; await new Promise((r) => setTimeout(r, 800 * Math.pow(2, i))); }
+  }
+  throw lastErr;
+}
+
+module.exports = { fetchText, fetchPost, DEFAULT_UA };
