@@ -31,6 +31,22 @@ No npm install required — the only runtime dependency is the `curl` binary
 ### Reality check (what actually has cheap houses)
 The $10K-house volume in the pitch is overwhelmingly **county tax-deed sales** — so `bid4assets.js` is the engine. The four purely-federal sources (Marshals/Treasury/FDIC/GSA) are real but low-volume and skew non-residential; treat them as supplementary.
 
+### AI extraction stage (`lib/aiExtract.js`)
+"The AI that scrapes every source." Every county/agency formats listings
+differently, so instead of a brittle parser per site, this stage hands a raw
+page — **or a screenshot** — to Claude and gets back clean, structured
+residential listings that match our schema. It also does **photo condition
+assessment** (vision → Move-in Ready … Heavy Rehab).
+
+- `extractListingsFromHtml(html, ctx)` — messy HTML → structured homes
+- `extractListingsFromImage(b64, media, ctx)` — a screenshot of a listing page → homes (the "just screenshot the site" idea, automated)
+- `assessConditionFromPhotos([b64...], ctx)` — listing photos → condition/damage rating
+
+Auth: set `ANTHROPIC_API_KEY` (or use an `ant auth login` profile). With no key
+it no-ops (returns `[]`/`null`) so the scraper still runs. Model defaults to
+`claude-opus-5`; set `ES_EXTRACT_MODEL=claude-haiku-4-5` for cheap high-volume
+extraction. Residential-only is enforced in the prompt and schema.
+
 ### Automated refresh
 `.github/workflows/refresh.yml` runs the scraper every 3 hours and redeploys the
 site to GitHub Pages. A real Chromium is available in Actions (unlike the dev
