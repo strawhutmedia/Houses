@@ -311,6 +311,19 @@ input[type="range"] { width: 100%; accent-color: var(--brand); }
 .scope-btn.active .s-t { color: var(--brand); }
 .scope-btn.active .s-c { color: var(--brand); }
 
+/* ---- "show the cheapest" quick price jumps ---- */
+.quick-price {
+  display: flex; align-items: center; flex-wrap: wrap; gap: 8px 10px; margin-top: 12px;
+}
+.qp-label { font-weight: 800; font-size: 13.5px; color: var(--text); }
+.qp-btn {
+  cursor: pointer; font-size: 13px; font-weight: 700; padding: 7px 13px; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--panel); color: var(--muted); transition: .12s;
+}
+.qp-btn:hover { border-color: var(--gold); color: var(--text); }
+.qp-btn.active { background: rgba(244,185,66,.16); border-color: var(--gold); color: var(--gold); }
+.qp-hint { flex-basis: 100%; font-size: 12px; color: var(--muted-2); }
+
 /* ---- thin-inventory nudge above the cards ---- */
 .thin-note {
   grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between;

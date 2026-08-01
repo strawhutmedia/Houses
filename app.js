@@ -203,6 +203,11 @@
     });
     updateScopeCounts();
 
+    // "Show the cheapest" quick price jumps — go nationwide + cheapest-first.
+    document.querySelectorAll("#quick-price .qp-btn").forEach(function (btn) {
+      btn.addEventListener("click", function () { setCheapView(+btn.getAttribute("data-max")); });
+    });
+
     // State dropdown (populated from whatever states are in the live data).
     // Picking a specific state means "show me the whole country's states," so
     // widen the scope to All USA and let the dropdown do the narrowing.
@@ -667,6 +672,22 @@
     document.querySelectorAll("#scope-seg .scope-btn").forEach(function (b) {
       b.classList.toggle("active", b.getAttribute("data-scope") === state.scope);
     });
+  }
+  // One tap → the genuinely cheapest homes: nationwide, price-capped, cheapest first.
+  function setCheapView(max) {
+    state.scope = "all"; state.state = "ALL"; state.q = ""; state.savedOnly = false;
+    state.maxPrice = max; state.sort = "price-time";
+    $("f-q").value = "";
+    var fs = $("f-state"); if (fs) fs.value = "ALL";
+    $("f-price").value = max; $("f-price-val").textContent = fmtK(max);
+    $("f-sort").value = "price-time";
+    var st = $("saved-tab"); if (st) st.classList.remove("active");
+    syncScope(); syncMetroChips();
+    document.querySelectorAll("#quick-price .qp-btn").forEach(function (b) {
+      b.classList.toggle("active", +b.getAttribute("data-max") === max);
+    });
+    render();
+    var deals = document.getElementById("deals"); if (deals) { try { deals.scrollIntoView({ block: "start" }); } catch (e) {} }
   }
   // "Widen the search" buttons in the empty / thin-inventory notices.
   function wireWiden(host) {
