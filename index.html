@@ -38,16 +38,16 @@
   <!-- ================= HERO ================= -->
   <section class="hero">
     <div class="wrap">
-      <span class="eyebrow"><span class="dot"></span> Refreshed every few hours · Nationwide</span>
-      <h1>Every government home auction, in <span class="hl">one searchable feed.</span></h1>
+      <span class="eyebrow"><span class="dot"></span> Refreshed every few hours · Los Angeles &amp; Portland first</span>
+      <h1>Cheap government homes near <span class="hl">Los Angeles &amp; Portland.</span></h1>
       <p class="lead">
         The U.S. government seizes and resells thousands of homes a year — tax liens, IRS actions,
         bank failures, federal forfeiture. The deals are real. They're just buried across six ugly
-        government sites. EquityScout pulls the best below-market deals into one place you can
-        actually filter.
+        government sites. EquityScout pulls them into one clean feed — <b>your two markets first</b>,
+        then the rest of the country when you want to widen the net.
       </p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="#deals">See today's deals</a>
+        <a class="btn btn-primary" href="#deals">See LA &amp; Portland deals</a>
         <a class="btn btn-ghost" href="#how">How it works</a>
       </div>
 
@@ -104,7 +104,28 @@
       <div class="section-head">
         <div class="kicker">Live deal feed</div>
         <h2>Below-market government homes</h2>
-        <p>Live government homes from all 50 states, refreshed automatically. Pick a state, search a city or ZIP, and filter like any listing site — but every property here starts at a government price. (Falls back to a sample set if the live feed is unavailable.)</p>
+        <p>Refreshed automatically. Start in your two markets — Los Angeles &amp; Portland — then widen out whenever you want. Click any home to see the details and go straight to the official listing to bid or contact the seller.</p>
+      </div>
+
+      <!-- Big, simple scope switch — defaults to the two markets you care about -->
+      <div class="scope-bar">
+        <div class="scope-seg" id="scope-seg" role="tablist" aria-label="Where to look">
+          <button class="scope-btn active" data-scope="focus" role="tab">
+            <span class="s-em">🌴🌲</span>
+            <span class="s-t">Los Angeles + Portland</span>
+            <span class="s-c" id="scope-c-focus"></span>
+          </button>
+          <button class="scope-btn" data-scope="region" role="tab">
+            <span class="s-em">🗺️</span>
+            <span class="s-t">California + Oregon</span>
+            <span class="s-c" id="scope-c-region"></span>
+          </button>
+          <button class="scope-btn" data-scope="all" role="tab">
+            <span class="s-em">🇺🇸</span>
+            <span class="s-t">All USA</span>
+            <span class="s-c" id="scope-c-all"></span>
+          </button>
+        </div>
       </div>
 
       <div class="app-grid">
@@ -125,7 +146,7 @@
               <select id="f-state"><option value="ALL">All states</option></select>
             </div>
             <div class="field">
-              <label class="fl">Quick markets</label>
+              <label class="fl">Jump to a state</label>
               <div class="chip-row" id="metro-chips"></div>
             </div>
           </div>
@@ -153,8 +174,8 @@
 
           <div class="filter-group">
             <div class="field">
-              <label class="fl" for="f-price">Max opening price · <span id="f-price-val">$300K</span></label>
-              <input type="range" id="f-price" min="20000" max="800000" step="5000" value="300000" />
+              <label class="fl" for="f-price">Max opening price · <span id="f-price-val">$800K</span></label>
+              <input type="range" id="f-price" min="20000" max="800000" step="5000" value="800000" />
             </div>
             <div class="field">
               <label class="fl" for="f-equity">Min equity vs. market · <span id="f-equity-val">0%</span></label>
@@ -196,11 +217,11 @@
     <div class="wrap">
       <div class="callout">
         <div>
-          <div class="kicker">Built to win your markets</div>
-          <h3>Nationwide coverage</h3>
-          <p>Real government homes across all 50 states — filter to any state, or search any city or ZIP. HUD foreclosures give broad nationwide inventory; county tax-deed &amp; sheriff-sale auctions surface the rock-bottom prices.</p>
+          <div class="kicker">Built around your two markets</div>
+          <h3>Los Angeles &amp; Portland first — the whole country when you want it</h3>
+          <p>The feed opens on the Los Angeles and Portland metros because that's where you're buying. One tap widens it to all of California &amp; Oregon, and another opens all 50 states. HUD foreclosures give the broad inventory; county tax-deed &amp; sheriff-sale auctions surface the rock-bottom prices.</p>
         </div>
-        <a class="btn btn-primary" href="#deals">Browse homes in your state</a>
+        <a class="btn btn-primary" href="#deals">Browse LA &amp; Portland homes</a>
       </div>
     </div>
   </section>
@@ -290,9 +311,9 @@
           <button class="btn btn-ghost" id="m-notify">🔕 Alert me when it ends</button>
         </div>
 
-        <a class="btn btn-primary" id="m-link" href="#" target="_blank" rel="noopener" style="width:100%;justify-content:center;margin-top:12px;">Go to auction source →</a>
+        <a class="btn btn-primary" id="m-link" href="#" target="_blank" rel="noopener" style="width:100%;justify-content:center;margin-top:12px;">View full listing &amp; contact the seller →</a>
         <p class="m-note">
-          In the live product this button links directly to the official auction listing so you can register and bid.
+          This opens the official government auction page for this exact home — where you register, place a bid, or contact the agency/seller.
           The condition rating is an AI estimate from the listing photos — always verify condition, liens, and title in person before bidding.
         </p>
       </div>

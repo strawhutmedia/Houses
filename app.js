@@ -148,10 +148,18 @@
   }
 
   /* ---------------- filter state ---------------- */
+  // scope drives the big three-way switch: "focus" = LA + Portland metros,
+  // "region" = all California + Oregon, "all" = every state. Defaults to the
+  // two markets the buyer actually cares about.
   var state = {
     q: "", state: "ALL", source: "ALL", type: "ALL",
-    maxPrice: 300000, minEquityPct: 0, sort: "deal", savedOnly: false, fav: false,
+    maxPrice: 800000, minEquityPct: 0, sort: "deal", savedOnly: false, scope: "focus",
   };
+
+  // Which listings count as "Los Angeles + Portland". normalize.js tags these
+  // metros for the right cities, so we just read d.metro.
+  function inFocus(d) { return d.metro === "Los Angeles" || d.metro === "Portland"; }
+  function inRegion(d) { return d.state === "CA" || d.state === "OR"; }
 
   function $(id) { return document.getElementById(id); }
 
@@ -169,10 +177,20 @@
     });
     $("f-sort").addEventListener("change", function (e) { state.sort = e.target.value; render(); });
 
-    // State dropdown (populated from whatever states are in the live data)
+    // Big three-way scope switch (LA+PDX / CA+OR / All USA)
+    document.querySelectorAll("#scope-seg .scope-btn").forEach(function (btn) {
+      btn.addEventListener("click", function () { setScope(btn.getAttribute("data-scope")); });
+    });
+    updateScopeCounts();
+
+    // State dropdown (populated from whatever states are in the live data).
+    // Picking a specific state means "show me the whole country's states," so
+    // widen the scope to All USA and let the dropdown do the narrowing.
     populateStates();
     $("f-state").addEventListener("change", function (e) {
-      state.state = e.target.value; syncMetroChips(); render();
+      state.state = e.target.value;
+      if (state.state !== "ALL") { state.scope = "all"; syncScope(); }
+      syncMetroChips(); render();
     });
     populateMetroChips();
     document.querySelectorAll("[data-type]").forEach(function (c) {
@@ -196,13 +214,13 @@
   }
 
   function resetFilters() {
-    state = { q: "", state: "ALL", source: "ALL", type: "ALL", maxPrice: 300000, minEquityPct: 0, sort: "deal", savedOnly: false, fav: false };
+    state = { q: "", state: "ALL", source: "ALL", type: "ALL", maxPrice: 800000, minEquityPct: 0, sort: "deal", savedOnly: false, scope: "focus" };
     $("f-q").value = ""; $("f-source").value = "ALL";
-    $("f-price").value = 300000; $("f-price-val").textContent = fmtK(300000);
+    $("f-price").value = 800000; $("f-price-val").textContent = fmtK(800000);
     $("f-equity").value = 0; $("f-equity-val").textContent = "0%";
     $("f-sort").value = "deal";
     var fs = $("f-state"); if (fs) fs.value = "ALL";
-    syncMetroChips();
+    syncScope(); syncMetroChips();
     var st = $("saved-tab"); if (st) st.classList.remove("active");
     document.querySelectorAll("[data-type]").forEach(function (x) {
       x.classList.toggle("active", x.getAttribute("data-type") === "ALL");
@@ -213,7 +231,8 @@
   function apply() {
     return DATA.filter(function (d) {
       if (state.savedOnly && !SAVED[d.id]) return false;
-      if (state.fav && FAV_STATES.indexOf(d.state) === -1) return false;
+      if (state.scope === "focus" && !inFocus(d)) return false;
+      if (state.scope === "region" && !inRegion(d)) return false;
       if (state.state !== "ALL" && d.state !== state.state) return false;
       if (state.source !== "ALL" && d.source !== state.source) return false;
       if (state.type !== "ALL" && d.type !== state.type) return false;
@@ -277,10 +296,30 @@
       (state.savedOnly ? "" : " match your filters") + note;
 
     if (!rows.length) {
-      host.innerHTML = state.savedOnly
-        ? '<div class="empty"><strong>No saved deals yet.</strong><br>Tap the ♥ on any listing to save it here.</div>'
-        : '<div class="empty"><strong>No deals match yet.</strong><br>Try widening your price range or clearing a filter.</div>';
+      if (state.savedOnly) {
+        host.innerHTML = '<div class="empty"><strong>No saved deals yet.</strong><br>Tap the ♥ on any listing to save it here.</div>';
+      } else if (state.scope === "focus") {
+        host.innerHTML = '<div class="empty"><strong>No cheap government homes in the LA + Portland metros right now.</strong>' +
+          '<br>Cheap federal/county homes in these two metros are scarce and come and go — new ones land every few hours. Widen the search:' +
+          '<div class="empty-actions">' +
+            '<button class="btn btn-primary" data-widen="region">See all California + Oregon</button>' +
+            '<button class="btn btn-ghost" data-widen="all">See all 50 states</button>' +
+          '</div></div>';
+        wireWiden(host);
+      } else {
+        host.innerHTML = '<div class="empty"><strong>No deals match yet.</strong><br>Try widening your price range or clearing a filter.</div>';
+      }
       return;
+    }
+
+    // Thin-inventory nudge: when the LA+Portland view has only a handful,
+    // gently offer to widen without hiding the homes that ARE there.
+    var thinNote = "";
+    if (state.scope === "focus" && rows.length < 12) {
+      thinNote = '<div class="thin-note"><span>Only <b>' + rows.length + '</b> cheap government home' + (rows.length === 1 ? "" : "s") +
+        ' in the LA + Portland metros right now.</span>' +
+        '<span class="thin-actions"><button class="btn btn-ghost btn-sm" data-widen="region">+ California &amp; Oregon</button>' +
+        '<button class="btn btn-ghost btn-sm" data-widen="all">+ All 50 states</button></span></div>';
     }
     // Cap rendered cards for performance (esp. mobile); nationwide can be 900+.
     var CAP = 90;
@@ -289,13 +328,16 @@
       ? '<div class="empty" style="grid-column:1/-1;padding:24px;"><strong>Showing ' + CAP +
         ' of ' + rows.length + '.</strong><br>Pick a state, search a city or ZIP, or tighten the price to narrow it down.</div>'
       : "";
-    host.innerHTML = shown.map(cardHTML).join("") + moreNote;
+    host.innerHTML = thinNote + shown.map(cardHTML).join("") + moreNote;
     rows = shown; // only wire the cards actually rendered
+    wireWiden(host);
 
-    // wire per-card controls + register tickers
+    // wire per-card controls + register tickers.
+    // The whole card is clickable (simplest for a first-time user) — only the
+    // save heart swallows its own click.
     host.querySelectorAll(".card").forEach(function (el) {
       var id = el.getAttribute("data-id");
-      el.querySelector("[data-open]").addEventListener("click", function () { openModal(id); });
+      el.addEventListener("click", function () { openModal(id); });
       var sv = el.querySelector("[data-save]"); if (sv) sv.addEventListener("click", function (e) { e.stopPropagation(); toggleSave(id); });
       var cd = el.querySelector(".countdown");
       var d = rows.find(function (r) { return r.id === id; });
@@ -444,39 +486,61 @@
     });
     $("f-state").innerHTML = html;
   }
-  // Cities/states you favor — one tap to see just your markets.
-  var FAV_STATES = ["CA", "OR"];   // California + Oregon (LA & Portland)
-  var FAV_LABEL = "⭐ My markets (CA + OR)";
+  /* ---------------- scope switch (LA+PDX / CA+OR / All USA) ---------------- */
+  function scopeCounts() {
+    var f = 0, r = 0;
+    DATA.forEach(function (d) { if (inFocus(d)) f++; if (inRegion(d)) r++; });
+    return { focus: f, region: r, all: DATA.length };
+  }
+  function updateScopeCounts() {
+    var c = scopeCounts();
+    var set = function (id, n) { var el = $(id); if (el) el.textContent = n + " home" + (n === 1 ? "" : "s"); };
+    set("scope-c-focus", c.focus); set("scope-c-region", c.region); set("scope-c-all", c.all);
+  }
+  function setScope(sc) {
+    state.scope = sc;
+    // A scope pick is the primary, simple control — clear the fiddly filters so
+    // the buyer always sees a full, un-narrowed view of the market they chose.
+    state.state = "ALL"; var fs = $("f-state"); if (fs) fs.value = "ALL";
+    state.savedOnly = false; var st = $("saved-tab"); if (st) st.classList.remove("active");
+    syncScope(); syncMetroChips(); render();
+  }
+  function syncScope() {
+    document.querySelectorAll("#scope-seg .scope-btn").forEach(function (b) {
+      b.classList.toggle("active", b.getAttribute("data-scope") === state.scope);
+    });
+  }
+  // "Widen the search" buttons in the empty / thin-inventory notices.
+  function wireWiden(host) {
+    host.querySelectorAll("[data-widen]").forEach(function (b) {
+      b.addEventListener("click", function (e) {
+        e.stopPropagation(); setScope(b.getAttribute("data-widen"));
+        var deals = document.getElementById("deals"); if (deals) deals.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+  }
 
-  // Quick-market chips = your favorites first, then the states with the most deals.
+  // Quick-market chips = the states with the most deals (handy shortcuts under
+  // the "All USA" scope). Tapping one widens scope to All USA + filters to it.
   function populateMetroChips() {
     var c = stateCounts();
     var top = Object.keys(c).sort(function (a, b) { return c[b] - c[a]; }).slice(0, 6);
     var host = $("metro-chips");
     if (!host) return;
-    var html = '<span class="chip fav" data-fav="1">' + FAV_LABEL + "</span>";
-    html += top.map(function (s) {
+    host.innerHTML = top.map(function (s) {
       return '<span class="chip" data-qstate="' + s + '">' + esc(STATE_NAMES[s] || s) + "</span>";
     }).join("");
-    host.innerHTML = html;
     host.querySelectorAll("[data-qstate]").forEach(function (chip) {
       chip.addEventListener("click", function () {
-        state.fav = false; state.state = chip.getAttribute("data-qstate");
-        $("f-state").value = state.state; syncMetroChips(); render();
+        state.scope = "all"; state.state = chip.getAttribute("data-qstate");
+        $("f-state").value = state.state; syncScope(); syncMetroChips(); render();
       });
-    });
-    var favChip = host.querySelector("[data-fav]");
-    if (favChip) favChip.addEventListener("click", function () {
-      state.fav = !state.fav; state.state = "ALL"; $("f-state").value = "ALL";
-      syncMetroChips(); render();
     });
   }
   function syncMetroChips() {
     document.querySelectorAll("#metro-chips [data-qstate]").forEach(function (chip) {
-      chip.classList.toggle("active", !state.fav && chip.getAttribute("data-qstate") === state.state);
+      chip.classList.toggle("active", state.scope === "all" && chip.getAttribute("data-qstate") === state.state);
     });
-    var favChip = document.querySelector("#metro-chips [data-fav]");
-    if (favChip) favChip.classList.toggle("active", !!state.fav);
   }
 
   /* ---------------- helpers ---------------- */

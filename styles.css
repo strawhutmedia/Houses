@@ -245,9 +245,9 @@ input[type="range"] { width: 100%; accent-color: var(--brand); }
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 18px; }
 .card {
   background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
-  overflow: hidden; display: flex; flex-direction: column; transition: .16s ease;
+  overflow: hidden; display: flex; flex-direction: column; transition: .16s ease; cursor: pointer;
 }
-.card:hover { transform: translateY(-3px); border-color: #33465b; box-shadow: var(--shadow); }
+.card:hover { transform: translateY(-3px); border-color: var(--brand); box-shadow: var(--shadow); }
 .card .media {
   position: relative; height: 158px;
   background-size: cover; background-position: center;
@@ -286,6 +286,44 @@ input[type="range"] { width: 100%; accent-color: var(--brand); }
 .empty {
   grid-column: 1 / -1; text-align: center; padding: 60px 20px; color: var(--muted);
   border: 1px dashed var(--line); border-radius: var(--radius);
+}
+.empty-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-top: 18px; }
+
+/* ---- scope switch: the big three-way market selector ---- */
+.scope-bar { margin: 0 0 22px; }
+.scope-seg {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+}
+.scope-btn {
+  display: flex; flex-direction: column; align-items: center; gap: 3px; cursor: pointer;
+  padding: 14px 12px; border-radius: 14px; border: 1.5px solid var(--line);
+  background: var(--panel); color: var(--muted); transition: .14s; text-align: center;
+}
+.scope-btn:hover { border-color: var(--brand); color: var(--text); transform: translateY(-1px); }
+.scope-btn .s-em { font-size: 20px; line-height: 1; }
+.scope-btn .s-t { font-size: 14.5px; font-weight: 800; color: var(--text); }
+.scope-btn .s-c { font-size: 12px; font-weight: 700; color: var(--muted-2); }
+.scope-btn.active {
+  border-color: var(--brand); background: rgba(20,184,122,.12);
+  box-shadow: 0 0 0 3px rgba(20,184,122,.14);
+}
+.scope-btn.active .s-t { color: var(--brand); }
+.scope-btn.active .s-c { color: var(--brand); }
+
+/* ---- thin-inventory nudge above the cards ---- */
+.thin-note {
+  grid-column: 1 / -1; display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 10px; padding: 12px 15px; border-radius: 12px;
+  background: rgba(244,185,66,.08); border: 1px solid rgba(244,185,66,.28); color: var(--muted);
+  font-size: 13.5px;
+}
+.thin-note b { color: var(--gold); }
+.thin-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.btn-sm { padding: 7px 12px; font-size: 12.5px; }
+
+@media (max-width: 560px) {
+  .scope-seg { grid-template-columns: 1fr; }
+  .scope-btn { flex-direction: row; justify-content: center; gap: 8px; padding: 12px; }
 }
 
 /* ---------------- Coverage / callout ---------------- */
@@ -363,7 +401,3 @@ footer .muted { color: var(--muted); font-size: 13.5px; max-width: 46ch; }
   .m-grid { grid-template-columns: 1fr; }
   section { padding: 48px 0; }
 }
-
-/* favorite-markets quick chip */
-.chip.fav { border-color: var(--gold); color: var(--gold); background: rgba(244,185,66,.06); }
-.chip.fav.active { background: rgba(244,185,66,.16); }
