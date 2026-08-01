@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EquityScout — Every government home auction. One searchable feed.</title>
+  <meta name="description" content="EquityScout scrapes US Marshals, Treasury, FDIC, GSA, GovDeals, and county tax-deed sales into one clean, filterable feed of below-market government homes — focused on California and Oregon." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314b87a'/%3E%3Cpath d='M16 7l8 7h-2.5v9h-11v-9H8z' fill='%2304140d'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <!-- ================= NAV ================= -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="logo" href="#top">
+        <span class="mark">
+          <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 6l10 9h-3v11h-14v-11h-3z"/></svg>
+        </span>
+        Equity<b>Scout</b>
+      </a>
+      <nav class="nav-links" id="nav-links">
+        <a href="#how">How it works</a>
+        <a href="#deals">Live deals</a>
+        <a href="#coverage">Coverage</a>
+        <a href="#faq">FAQ</a>
+        <a class="btn btn-primary" href="#deals">Browse deals</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <a id="top"></a>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow"><span class="dot"></span> Updated daily · California &amp; Oregon</span>
+      <h1>Every government home auction, in <span class="hl">one searchable feed.</span></h1>
+      <p class="lead">
+        The U.S. government seizes and resells thousands of homes a year — tax liens, IRS actions,
+        bank failures, federal forfeiture. The deals are real. They're just buried across six ugly
+        government sites. EquityScout pulls the best below-market deals into one place you can
+        actually filter.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#deals">See today's deals</a>
+        <a class="btn btn-ghost" href="#how">How it works</a>
+      </div>
+
+      <div class="trust-row">
+        <span style="color:var(--muted);font-weight:600;">Sources we watch:</span>
+        <span class="src"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg> US Marshals</span>
+        <span class="src"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg> US Treasury</span>
+        <span class="src"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg> FDIC</span>
+        <span class="src"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg> GSA Auctions</span>
+        <span class="src"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg> GovDeals</span>
+        <span class="src"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg> County Tax Deeds</span>
+      </div>
+
+      <div class="stats">
+        <div class="stat"><div class="num e" id="stat-deals">—</div><div class="lbl">Live deals tracked</div></div>
+        <div class="stat"><div class="num g" id="stat-equity">—</div><div class="lbl">Total built-in equity</div></div>
+        <div class="stat"><div class="num" id="stat-avg">—</div><div class="lbl">Avg. equity vs. market</div></div>
+        <div class="stat"><div class="num g" id="stat-min">—</div><div class="lbl">Lowest opening price</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HOW IT WORKS ================= -->
+  <section class="how" id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">The problem was always finding them</div>
+        <h2>Six government sites. One feed.</h2>
+        <p>Nobody has time to check USMarshals.gov, Treasury.gov, FDIC listings, GSA auctions, GovDeals.com and county tax-deed sales every day. EquityScout does it for you.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="n">1</div>
+          <h3>We scrape every source</h3>
+          <p>Our crawlers hit all six government auction channels continuously and normalize every listing into one clean format.</p>
+        </div>
+        <div class="step">
+          <div class="n">2</div>
+          <h3>We score the equity</h3>
+          <p>Each property is matched to an estimated market value and rent, so you instantly see the built-in equity and cash-flow — not just an opening bid.</p>
+        </div>
+        <div class="step">
+          <div class="n">3</div>
+          <h3>You filter &amp; bid</h3>
+          <p>Filter by price, market, property type and equity. Open a deal to see the auction date and where to place your bid.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= APP / DEALS ================= -->
+  <section class="app" id="deals">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Live deal feed</div>
+        <h2>Below-market government homes</h2>
+        <p>Sample feed focused on the Los Angeles and Portland metros. Filter it like any listing site — but every property here starts at a government price.</p>
+      </div>
+
+      <div class="app-grid">
+        <!-- Filters -->
+        <aside class="filters">
+          <h4>Filters</h4>
+
+          <div class="filter-group">
+            <div class="field">
+              <label class="fl" for="f-q">Search</label>
+              <input type="search" id="f-q" placeholder="City, address, source…" />
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <div class="field">
+              <label class="fl">Market</label>
+              <div class="chip-row">
+                <span class="chip active" data-state="ALL">All</span>
+                <span class="chip" data-state="CA">California · LA</span>
+                <span class="chip" data-state="OR">Oregon · Portland</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <div class="field">
+              <label class="fl">Property type</label>
+              <div class="chip-row">
+                <span class="chip active" data-type="ALL">All</span>
+                <span class="chip" data-type="Single Family">Single family</span>
+                <span class="chip" data-type="Multi-Family">Multi-family</span>
+                <span class="chip" data-type="Townhouse">Townhouse</span>
+                <span class="chip" data-type="Condo">Condo</span>
+                <span class="chip" data-type="Land">Land</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <div class="field">
+              <label class="fl" for="f-source">Source</label>
+              <select id="f-source"></select>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <div class="field">
+              <label class="fl" for="f-price">Max opening price · <span id="f-price-val">$250K</span></label>
+              <input type="range" id="f-price" min="40000" max="250000" step="1000" value="250000" />
+            </div>
+            <div class="field">
+              <label class="fl" for="f-equity">Min equity vs. market · <span id="f-equity-val">0%</span></label>
+              <input type="range" id="f-equity" min="0" max="80" step="5" value="0" />
+            </div>
+          </div>
+
+          <button class="btn btn-ghost reset" id="f-reset">Reset filters</button>
+        </aside>
+
+        <!-- Results -->
+        <div>
+          <div class="results-head">
+            <div class="count" id="result-count">—</div>
+            <div class="sort-wrap">
+              <label for="f-sort">Sort by</label>
+              <select id="f-sort">
+                <option value="equity">Most equity</option>
+                <option value="price-asc">Lowest price</option>
+                <option value="price-desc">Highest price</option>
+                <option value="yield">Best rent yield</option>
+                <option value="auction">Soonest auction</option>
+              </select>
+            </div>
+          </div>
+          <div class="cards" id="cards"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COVERAGE CALLOUT ================= -->
+  <section id="coverage">
+    <div class="wrap">
+      <div class="callout">
+        <div>
+          <div class="kicker">Built to win your markets</div>
+          <h3>Dialed in on California &amp; Oregon</h3>
+          <p>We prioritize the Los Angeles and Portland metros — the exact areas where government auction prices and real market values are furthest apart. More states are added as the crawler expands.</p>
+        </div>
+        <a class="btn btn-primary" href="#deals">Explore LA &amp; Portland deals</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section id="faq" class="how">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Good to know</div>
+        <h2>Questions</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq" open>
+          <summary>Are these deals real? <span class="ic">+</span></summary>
+          <p>The <em>sources</em> are 100% real — the federal government and counties genuinely auction seized and forfeited property below market value every week. The listings shown on this demo are representative samples that mirror those sources so you can see how the product works. Wiring the live crawler into this same feed is the next build step.</p>
+        </details>
+        <details class="faq">
+          <summary>Where does the data come from? <span class="ic">+</span></summary>
+          <p>US Marshals, US Treasury, FDIC owned real-estate listings, GSA Auctions, GovDeals.com, and county tax-deed sales. EquityScout normalizes all of them into one schema and scores the equity.</p>
+        </details>
+        <details class="faq">
+          <summary>What does "built-in equity" mean? <span class="ic">+</span></summary>
+          <p>The gap between the government's opening/auction price and the property's estimated market value. A $90K opening price on a home worth $400K is $310K of built-in equity — before any repairs or resale.</p>
+        </details>
+        <details class="faq">
+          <summary>How do I actually bid? <span class="ic">+</span></summary>
+          <p>Open any deal to see the auction date and the source it came from. Each government source has its own registration and bidding process; EquityScout points you straight to the right one instead of making you hunt.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <a class="logo" href="#top" style="margin-bottom:10px;">
+            <span class="mark"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 6l10 9h-3v11h-14v-11h-3z"/></svg></span>
+            Equity<b>Scout</b>
+          </a>
+          <p class="muted">Every government home auction, pulled into one searchable feed. Focused on California and Oregon.</p>
+        </div>
+        <div class="nav-links" style="display:flex;gap:26px;">
+          <a href="#how">How it works</a>
+          <a href="#deals">Live deals</a>
+          <a href="#coverage">Coverage</a>
+          <a href="#faq">FAQ</a>
+        </div>
+      </div>
+      <p class="disclaimer">
+        EquityScout is an independent deal-aggregation tool and is not affiliated with, endorsed by, or sponsored by the U.S. Marshals Service,
+        U.S. Department of the Treasury, FDIC, GSA, GovDeals, or any county government. Listings on this page are illustrative sample data for
+        demonstration and do not represent currently available properties. Property values and rent estimates are approximations. Government
+        auctions carry risk — always perform your own due diligence and confirm details with the official source before bidding.
+        © 2026 EquityScout.
+      </p>
+    </div>
+  </footer>
+
+  <!-- ================= MODAL ================= -->
+  <div class="modal-back" id="modal-back">
+    <div class="modal" id="modal" role="dialog" aria-modal="true">
+      <button class="m-close" id="modal-close" aria-label="Close">×</button>
+      <div class="m-media"></div>
+      <div class="m-body">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+          <span class="badge equity" id="m-source" style="position:static;">Source</span>
+        </div>
+        <h3 id="m-title" style="margin:6px 0 2px;font-size:22px;">Address</h3>
+        <div class="loc" id="m-sub" style="color:var(--muted);"></div>
+        <div style="color:var(--muted);font-size:13.5px;margin-top:6px;" id="m-type"></div>
+
+        <div class="m-grid">
+          <div class="cell"><div class="k">Opening price</div><div class="v g" id="m-price">—</div></div>
+          <div class="cell"><div class="k">Est. market value</div><div class="v" id="m-value">—</div></div>
+          <div class="cell"><div class="k">Built-in equity</div><div class="v e" id="m-equity">—</div></div>
+          <div class="cell"><div class="k">Est. rent</div><div class="v" id="m-rent">—</div></div>
+          <div class="cell"><div class="k">Gross yield</div><div class="v" id="m-yield">—</div></div>
+          <div class="cell"><div class="k">Auction date</div><div class="v" id="m-auction" style="font-size:14px;">—</div></div>
+        </div>
+
+        <a class="btn btn-primary" href="#" style="width:100%;justify-content:center;" onclick="return false;">Go to auction source →</a>
+        <p class="m-note">
+          This is a sample record for demonstration. In the live product this button links directly to the official
+          government listing so you can register and bid. Always verify condition, liens, and title before bidding.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
