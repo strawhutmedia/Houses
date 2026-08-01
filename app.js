@@ -150,7 +150,7 @@
   /* ---------------- filter state ---------------- */
   var state = {
     q: "", state: "ALL", source: "ALL", type: "ALL",
-    maxPrice: 300000, minEquityPct: 0, sort: "equity", savedOnly: false,
+    maxPrice: 300000, minEquityPct: 0, sort: "deal", savedOnly: false,
   };
 
   function $(id) { return document.getElementById(id); }
@@ -196,11 +196,11 @@
   }
 
   function resetFilters() {
-    state = { q: "", state: "ALL", source: "ALL", type: "ALL", maxPrice: 300000, minEquityPct: 0, sort: "equity", savedOnly: false };
+    state = { q: "", state: "ALL", source: "ALL", type: "ALL", maxPrice: 300000, minEquityPct: 0, sort: "deal", savedOnly: false };
     $("f-q").value = ""; $("f-source").value = "ALL";
     $("f-price").value = 300000; $("f-price-val").textContent = fmtK(300000);
     $("f-equity").value = 0; $("f-equity-val").textContent = "0%";
-    $("f-sort").value = "equity";
+    $("f-sort").value = "deal";
     var fs = $("f-state"); if (fs) fs.value = "ALL";
     syncMetroChips();
     var st = $("saved-tab"); if (st) st.classList.remove("active");
@@ -226,6 +226,13 @@
     }).sort(function (a, b) {
       var ap = a.price, bp = b.price, ae = a.equity, be = b.equity;
       switch (state.sort) {
+        case "deal": {
+          // Best deals: biggest built-in equity first; where equity is unknown
+          // (most live rows), fall back to cheapest opening price.
+          var ea = a.equityPct == null ? -1 : a.equityPct, eb = b.equityPct == null ? -1 : b.equityPct;
+          if (eb !== ea) return eb - ea;
+          return (ap == null ? Infinity : ap) - (bp == null ? Infinity : bp);
+        }
         case "price-asc": return (ap == null ? Infinity : ap) - (bp == null ? Infinity : bp);
         case "price-desc": return (bp == null ? -Infinity : bp) - (ap == null ? -Infinity : ap);
         case "yield": return (b.grossYield || 0) - (a.grossYield || 0);
