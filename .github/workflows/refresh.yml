@@ -13,9 +13,11 @@ name: Refresh listings & deploy
 on:
   schedule:
     - cron: "0 */3 * * *"   # every 3 hours (UTC)
-  workflow_dispatch: {}      # manual "Run workflow" button
+  workflow_dispatch: {}      # manual "Run workflow" button (Actions tab)
   push:
-    branches: [ main ]       # redeploy on site changes
+    branches:                # redeploy on site changes
+      - main
+      - claude/website-from-screenshots-iz682e
 
 permissions:
   contents: read

@@ -342,7 +342,8 @@
       (d.year ? " · built " + d.year : "") +
       (d.type !== "Land" && (d.beds || d.baths || d.sqft) ? " · " + d.beds + " bd / " + d.baths + " ba / " + (d.sqft ? d.sqft.toLocaleString() + " sqft" : "—") : "");
     m.querySelector("#m-price").textContent = d.price != null ? fmt(d.price) : "See source";
-    m.querySelector("#m-value").textContent = d.marketValue != null ? fmt(d.marketValue) : "—";
+    m.querySelector("#m-value").textContent = d.marketValue != null
+      ? fmt(d.marketValue) + (d.valueBasis === "assessed" ? " (assessed est.)" : "") : "—";
     m.querySelector("#m-equity").textContent = d.equity != null ? fmt(d.equity) + " (" + d.equityPct + "%)" : "—";
     m.querySelector("#m-rent").textContent = d.rentEstimate ? fmt(d.rentEstimate) + "/mo" : "—";
     m.querySelector("#m-posted").textContent = d.postedDate
