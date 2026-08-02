@@ -34,7 +34,7 @@
       <button class="chip2" data-area="all">🇺🇸 All USA</button>
     </div>
 
-    <!-- Price + Sort -->
+    <!-- Price + Hotspots -->
     <div class="ctrl-row">
       <div class="chips" id="price-chips">
         <button class="chip2 active" data-max="100000000">Any price</button>
@@ -42,6 +42,7 @@
         <button class="chip2" data-max="100000">Under $100K</button>
         <button class="chip2" data-max="300000">Under $300K</button>
       </div>
+      <button class="chip2 hot" id="hot-btn" title="Homes near the coast, lakes, fun downtowns, mountains &amp; parks">✨ Hotspots</button>
     </div>
     <div class="ctrl-row">
       <label class="sort-lbl" for="f-sort">Sort</label>
@@ -75,6 +76,7 @@
         <h3 id="m-title" style="margin:6px 0 2px;font-size:22px;">Address</h3>
         <div class="loc" id="m-sub" style="color:var(--muted);"></div>
         <div style="color:var(--muted);font-size:13.5px;margin-top:6px;" id="m-type"></div>
+        <div class="m-hot" id="m-hot" style="display:none;"></div>
 
         <div class="m-grid">
           <div class="cell"><div class="k">Opening price</div><div class="v g" id="m-price">—</div></div>
@@ -115,6 +117,7 @@
   </footer>
 
   <script src="data.js"></script>
+  <script src="hotspots.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

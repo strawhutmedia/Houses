@@ -116,9 +116,35 @@
   }
   function homeMiles(d, o) { if (!o || d.lat == null || d.lng == null) return Infinity; return milesBetween(o.lat, o.lng, d.lat, Math.abs(d.lng)); }
 
+  /* ---------------- hotspots (near coast / lake / downtown / mtns / park) ---------------- */
+  var HOT_META = {
+    ocean:    { icon: "🌊", label: "Near the coast", rad: 16 },
+    lake:     { icon: "🏞️", label: "Near a lake", rad: 12 },
+    downtown: { icon: "🏙️", label: "Fun downtown", rad: 16 },
+    mtn:      { icon: "🏔️", label: "Mountains", rad: 25 },
+    park:     { icon: "🌲", label: "National park", rad: 30 },
+  };
+  function hotspotOf(d) {
+    if (d._hot !== undefined) return d._hot;
+    var reasons = [], HS = window.HOTSPOTS || [];
+    if (d.lat != null && d.lng != null && HS.length) {
+      var hlat = d.lat, hlng = Math.abs(d.lng), best = null;
+      for (var i = 0; i < HS.length; i++) {
+        var p = HS[i], meta = HOT_META[p.k]; if (!meta) continue;
+        var mi = milesBetween(hlat, hlng, p.lat, Math.abs(p.lng));
+        if (mi <= meta.rad && (!best || mi < best.mi)) best = { p: p, mi: mi, meta: meta };
+      }
+      if (best) reasons.push({ icon: best.meta.icon, text: best.meta.label + " — " + best.p.n + " (~" + Math.round(best.mi) + " mi)" });
+    }
+    if (d.price != null && d.sqft && d.sqft >= 1500 && d.price / d.sqft < 55)
+      reasons.push({ icon: "🏡", text: "Big house for the money — " + d.sqft.toLocaleString() + " sqft" });
+    d._hot = reasons;
+    return reasons;
+  }
+
   /* ---------------- state ---------------- */
   var FOCUS_STATES = { CA: 1, OR: 1 };
-  var state = { q: "", area: "focus", maxPrice: 100000000, sort: "price", savedOnly: false };
+  var state = { q: "", area: "focus", maxPrice: 100000000, sort: "price", savedOnly: false, hotspots: false };
   var LAST_ZIP = null, ZIP_ORIGIN = null;
 
   /* ---------------- filter + sort ---------------- */
@@ -133,6 +159,7 @@
     var out = DATA.filter(function (d) {
       if (state.savedOnly) return !!SAVED[d.id]; // saved view ignores other filters
       if (d.price != null && d.price > state.maxPrice) return false;
+      if (state.hotspots && !hotspotOf(d).length) return false;
       if (zipQ) {
         // "near a ZIP" — keep everything, rank by distance below. Never blank.
         if (ZIP_ORIGIN) d._mi = homeMiles(d, ZIP_ORIGIN);
@@ -143,6 +170,7 @@
         var hay = (d.address + " " + d.city + " " + d.state + " " + d.zip + " " + d.source + " " + d.type).toLowerCase();
         return hay.indexOf(q) !== -1;
       }
+      if (state.hotspots) return true; // hotspots = discover nationwide
       if (state.area === "focus" && !FOCUS_STATES[d.state]) return false;
       return true;
     });
@@ -172,6 +200,7 @@
         ? "closest to your place — nearest first"
         : "finding homes near your place…";
     } else if (state.savedOnly) head = "your saved homes";
+    else if (state.hotspots) head = "in hotspot locations 🌊🏞️🏙️ (coast, lakes, fun downtowns…)";
     else if (state.q) head = "matching “" + esc(state.q) + "”";
     else head = state.area === "focus" ? "in California & Oregon" : "across all 50 states";
 
@@ -207,12 +236,15 @@
       : "Details at source";
     var saved = !!SAVED[d.id];
     var miChip = LAST_ZIP && d._mi != null && isFinite(d._mi) ? '<span class="l-mi">~' + Math.round(d._mi) + ' mi away</span>' : '';
+    var hs = hotspotOf(d);
+    var hsBadge = hs.length ? '<div class="hot-badge">' + hs[0].icon + ' ' + esc(hs[0].text) + '</div>' : '';
     return '' +
       '<article class="home" data-id="' + esc(d.id) + '">' +
         '<div class="home-main">' +
           '<div class="home-price">' + (d.price != null ? fmt(d.price) : "See source") + '</div>' +
           '<div class="home-loc"><b>' + esc(d.city || streetOf(d.address) || "Home") + '</b>, ' + esc(d.state || "") + (d.zip ? " " + esc(d.zip) : "") + ' ' + miChip + '</div>' +
           '<div class="home-meta">' + esc(beds) + '</div>' +
+          hsBadge +
           '<div class="home-sub">' + esc(d.source) + ' &middot; <span class="countdown">…</span></div>' +
         '</div>' +
         '<div class="home-side">' +
@@ -232,6 +264,12 @@
     m.querySelector("#m-source").textContent = d.source;
     m.querySelector("#m-type").textContent = d.type + (d.year ? " · built " + d.year : "") +
       ((d.beds || d.baths || d.sqft) ? " · " + d.beds + " bd / " + d.baths + " ba / " + (d.sqft ? d.sqft.toLocaleString() + " sqft" : "—") : "");
+    var mhot = m.querySelector("#m-hot");
+    if (mhot) {
+      var hs = hotspotOf(d);
+      mhot.innerHTML = hs.map(function (r) { return '<span class="hot-badge">' + r.icon + ' ' + esc(r.text) + '</span>'; }).join("");
+      mhot.style.display = hs.length ? "" : "none";
+    }
     // Only show a field if we actually have it — no more rows of blank "—".
     function cell(id, val) {
       var el = m.querySelector(id); el.textContent = val == null ? "" : val;
@@ -324,6 +362,12 @@
     document.querySelectorAll("#price-chips .chip2").forEach(function (b) { b.classList.toggle("active", +b.getAttribute("data-max") === max); });
     render();
   }
+  function setHotspots(on) {
+    state.hotspots = on;
+    var b = $("hot-btn"); if (b) b.classList.toggle("active", on);
+    if (on) { state.savedOnly = false; $("saved-toggle").classList.remove("active"); }
+    render();
+  }
 
   function build() {
     var q = $("f-q");
@@ -338,6 +382,7 @@
 
     document.querySelectorAll("#area-chips .chip2").forEach(function (b) { b.addEventListener("click", function () { setArea(b.getAttribute("data-area")); }); });
     document.querySelectorAll("#price-chips .chip2").forEach(function (b) { b.addEventListener("click", function () { setPrice(+b.getAttribute("data-max")); }); });
+    var hb = $("hot-btn"); if (hb) hb.addEventListener("click", function () { setHotspots(!state.hotspots); });
     $("f-sort").addEventListener("change", function (e) { state.sort = e.target.value; render(); });
 
     var st = $("saved-toggle");

@@ -589,3 +589,15 @@ footer .muted { color: var(--muted); font-size: 13.5px; max-width: 46ch; }
 .dd-link:hover { border-color: var(--brand); color: var(--brand); }
 .dd-link .a { margin-left: auto; color: var(--muted-2); }
 .m-dd-more { font-size: 13px; font-weight: 800; color: var(--brand); }
+
+/* ---- hotspots ---- */
+.chip2.hot { border-color: rgba(147,112,219,.5); color: #c9b6ff; background: rgba(147,112,219,.08); }
+.chip2.hot:hover { border-color: #9370db; color: #dcd0ff; }
+.chip2.hot.active { background: rgba(147,112,219,.22); border-color: #9370db; color: #e6dcff; }
+.hot-badge {
+  display: inline-block; margin-top: 6px; font-size: 12px; font-weight: 700;
+  padding: 3px 9px; border-radius: 999px; line-height: 1.4;
+  background: rgba(147,112,219,.14); border: 1px solid rgba(147,112,219,.4); color: #cbb8ff;
+}
+.m-hot { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.m-hot .hot-badge { margin-top: 0; font-size: 12.5px; }
