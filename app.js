@@ -123,7 +123,9 @@
 
   /* ---------------- filter + sort ---------------- */
   function apply() {
-    var zipQ = /^\d{5}$/.test(state.q) ? state.q : null;
+    // Pull a ZIP out of whatever they typed — a bare ZIP, or a pasted address
+    // like "3742 Sunburst Ave, Signal Hill, CA 90755" → measure from that ZIP.
+    var zipQ = (state.q.match(/\b\d{5}\b/) || [])[0] || null;
     ZIP_ORIGIN = zipQ ? zipLatLng(zipQ) : null;
     LAST_ZIP = zipQ;
     var q = state.q;
@@ -166,9 +168,9 @@
     var head;
     if (LAST_ZIP) {
       var near = rows[0], mi = (near && near._mi != null && isFinite(near._mi)) ? Math.round(near._mi) : null;
-      head = mi != null
-        ? "closest to " + esc(LAST_ZIP) + " — nearest first"
-        : "finding homes near " + esc(LAST_ZIP) + "…";
+      head = (ZIP_ORIGIN && mi != null)
+        ? "closest to your place — nearest first"
+        : "finding homes near your place…";
     } else if (state.savedOnly) head = "your saved homes";
     else if (state.q) head = "matching “" + esc(state.q) + "”";
     else head = state.area === "focus" ? "in California & Oregon" : "across all 50 states";
@@ -230,15 +232,20 @@
     m.querySelector("#m-source").textContent = d.source;
     m.querySelector("#m-type").textContent = d.type + (d.year ? " · built " + d.year : "") +
       ((d.beds || d.baths || d.sqft) ? " · " + d.beds + " bd / " + d.baths + " ba / " + (d.sqft ? d.sqft.toLocaleString() + " sqft" : "—") : "");
-    m.querySelector("#m-price").textContent = d.price != null ? fmt(d.price) : "See source";
-    m.querySelector("#m-value").textContent = d.marketValue != null ? fmt(d.marketValue) : "—";
-    m.querySelector("#m-equity").textContent = d.equity != null ? fmt(d.equity) + " (" + d.equityPct + "%)" : "—";
-    m.querySelector("#m-rent").textContent = d.rentEstimate ? fmt(d.rentEstimate) + "/mo" : "—";
-    m.querySelector("#m-posted").textContent = d.postedDate
-      ? new Date(d.postedDate + "T00:00:00").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" }) : "—";
-    m.querySelector("#m-auction").textContent = d.auctionDate
+    // Only show a field if we actually have it — no more rows of blank "—".
+    function cell(id, val) {
+      var el = m.querySelector(id); el.textContent = val == null ? "" : val;
+      var c = el.closest(".cell"); if (c) c.style.display = (val == null) ? "none" : "";
+    }
+    cell("#m-price", d.price != null ? fmt(d.price) : "See source");
+    cell("#m-value", d.marketValue != null ? fmt(d.marketValue) : null);
+    cell("#m-equity", d.equity != null ? fmt(d.equity) + " (" + d.equityPct + "%)" : null);
+    cell("#m-rent", d.rentEstimate ? fmt(d.rentEstimate) + "/mo" : null);
+    cell("#m-posted", d.postedDate
+      ? new Date(d.postedDate + "T00:00:00").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" }) : null);
+    cell("#m-auction", d.auctionDate
       ? new Date(d.auctionDate + "T00:00:00").toLocaleDateString("en-US", { weekday: "short", month: "long", day: "numeric", year: "numeric" }) + " (closes 6pm)"
-      : "See source";
+      : null);
 
     var cb = m.querySelector("#m-condition");
     if (d.condition) {
@@ -301,7 +308,8 @@
     q.addEventListener("input", function (e) {
       state.q = e.target.value.trim().toLowerCase();
       $("f-clear").hidden = !state.q;
-      if (/^\d{5}$/.test(state.q)) { $("f-sort").value = "near"; state.sort = "near"; if (!ZIP_GEO) { loadZipGeo().then(render); } }
+      // Any ZIP in the box (a bare ZIP or a full pasted address) = "measure from here".
+      if (/\b\d{5}\b/.test(state.q)) { $("f-sort").value = "near"; state.sort = "near"; if (!ZIP_GEO) { loadZipGeo().then(render); } }
       render();
     });
     $("f-clear").addEventListener("click", function () { q.value = ""; state.q = ""; $("f-clear").hidden = true; render(); q.focus(); });

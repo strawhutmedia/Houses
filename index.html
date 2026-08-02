@@ -23,9 +23,10 @@
     <!-- Search -->
     <div class="search-wrap">
       <svg class="search-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-      <input id="f-q" type="search" inputmode="search" placeholder="Type a ZIP code or city…" autocomplete="off" />
+      <input id="f-q" type="search" inputmode="search" placeholder="ZIP, an address, or a city…" autocomplete="off" />
       <button class="search-clear" id="f-clear" aria-label="Clear" hidden>×</button>
     </div>
+    <p class="search-hint">📍 Paste any address (e.g. your dad's house) and each home shows how far it is — nearest first.</p>
 
     <!-- Area -->
     <div class="chips" id="area-chips">
@@ -90,6 +91,7 @@
           <button class="btn btn-ghost" id="m-save">♡ Save this home</button>
           <button class="btn btn-ghost" id="m-notify">🔕 Alert me when it ends</button>
         </div>
+        <p class="save-hint">💾 Saving keeps this home on <b>this phone/browser</b> — no account or login needed. (Clearing your browser data would remove your saved list.)</p>
 
         <a class="btn btn-primary" id="m-link" href="#" target="_blank" rel="noopener" style="width:100%;justify-content:center;margin-top:12px;">View full listing &amp; contact the seller →</a>
         <p class="m-note">
