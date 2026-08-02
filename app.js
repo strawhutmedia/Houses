@@ -270,6 +270,9 @@
     notifyBtn.className = "btn " + (NOTIFY[id] ? "btn-primary" : "btn-ghost");
     notifyBtn.onclick = function () { toggleNotify(id); openModal(id); };
 
+    // "Before you bid" — lookup links tailored to this property's city/state.
+    fillDueDiligence(d);
+
     var link = m.querySelector("#m-link");
     if (d.url) { link.href = d.url; link.style.display = ""; } else { link.style.display = "none"; }
 
@@ -277,6 +280,25 @@
     document.body.style.overflow = "hidden";
   }
   function closeModal() { $("modal-back").classList.remove("open"); document.body.style.overflow = ""; }
+
+  /* ---------------- "before you bid" lookup links ---------------- */
+  function fillDueDiligence(d) {
+    var place = [d.city, d.state].filter(Boolean).join(", ");
+    var pn = $("dd-place"); if (pn) pn.textContent = place || "this property";
+    var g = function (q) { return "https://www.google.com/search?q=" + encodeURIComponent(q); };
+    var addr = streetOf(d.address) + " " + place;
+    var links = [
+      { t: "🏛️ County property tax & liens", q: (d.city || "") + " " + (d.state || "") + " county treasurer property tax lookup" },
+      { t: "🚧 City code violations", q: (d.city || "") + " " + (d.state || "") + " code enforcement violations lookup" },
+      { t: "📜 Deed & title history", q: (d.city || "") + " " + (d.state || "") + " county recorder deed search " + (d.zip || "") },
+      { t: "🏠 What it's worth (comps)", q: addr + " home value zillow" },
+    ];
+    var host = $("m-dd-links"); if (!host) return;
+    host.innerHTML = links.map(function (l) {
+      return '<a class="dd-link" href="' + g(l.q) + '" target="_blank" rel="noopener">' + l.t + '<span class="a">↗</span></a>';
+    }).join("");
+    var dd = $("m-dd"); if (dd) dd.open = false; // collapsed by default each open
+  }
 
   /* ---------------- tile artwork (modal header) ---------------- */
   var PALETTES = { "Single Family": ["#1f6f54", "#123f30"], "Multi-Family": ["#3a4a63", "#1c2636"], "Townhouse": ["#5a4a2c", "#2c2415"], "Condo": ["#2c4a5a", "#152a33"], "Land": ["#4a5a2c", "#232c15"] };

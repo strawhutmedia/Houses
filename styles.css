@@ -537,3 +537,55 @@ footer .muted { color: var(--muted); font-size: 13.5px; max-width: 46ch; }
 .search-hint { margin: -6px 2px 14px; font-size: 12.5px; color: var(--muted-2); line-height: 1.4; }
 .save-hint { margin: 10px 0 0; font-size: 12px; color: var(--muted-2); line-height: 1.45; }
 .save-hint b { color: var(--muted); }
+
+/* ==========================================================
+   Buyer's guide page + in-listing "before you bid"
+   ========================================================== */
+.guide { max-width: 720px; }
+.g-h1 { font-size: clamp(24px, 5vw, 32px); font-weight: 900; letter-spacing: -.02em; margin: 6px 0 12px; }
+.g-lead { color: var(--muted); font-size: 15.5px; line-height: 1.6; margin: 0 0 18px; }
+.g-lead b { color: var(--text); }
+.g-muted { color: var(--muted-2); }
+.g-h2 { font-size: 19px; font-weight: 800; margin: 30px 0 12px; }
+.g-call {
+  background: rgba(20,184,122,.10); border: 1px solid rgba(20,184,122,.35);
+  border-radius: 12px; padding: 14px 16px; font-size: 14.5px; color: var(--text); line-height: 1.55;
+}
+.g-call.g-warn { background: rgba(244,185,66,.10); border-color: rgba(244,185,66,.4); }
+.g-list { display: flex; flex-direction: column; gap: 8px; }
+.dd {
+  display: flex; gap: 12px; align-items: flex-start; padding: 13px 14px;
+  border: 1px solid var(--line); border-radius: 12px; background: var(--panel); cursor: pointer;
+  font-size: 14.5px; line-height: 1.5; color: var(--muted);
+}
+.dd input { margin-top: 3px; width: 20px; height: 20px; accent-color: var(--brand); flex: none; cursor: pointer; }
+.dd span b { color: var(--text); }
+.dd:has(input:checked) { border-color: var(--brand); background: rgba(20,184,122,.07); }
+.dd:has(input:checked) span { color: var(--muted-2); }
+.g-note { font-size: 13px; color: var(--muted-2); margin: 12px 2px 0; line-height: 1.5; }
+.g-risk { border-left: 3px solid var(--line); padding: 2px 0 2px 14px; margin: 14px 0; }
+.g-risk h3 { font-size: 15.5px; margin: 0 0 4px; color: var(--text); }
+.g-risk p { margin: 0; font-size: 14px; color: var(--muted); line-height: 1.6; }
+.g-risk p b { color: var(--text); }
+.g-ul { padding-left: 20px; margin: 6px 0; }
+.g-ul li { font-size: 14.5px; color: var(--muted); line-height: 1.7; }
+.g-ul li b { color: var(--text); }
+.g-back { margin: 26px 0 0; }
+.g-disc { font-size: 11.5px; color: var(--muted-2); line-height: 1.5; margin: 22px 0 0; }
+
+/* in-listing "before you bid" block */
+.m-dd { margin-top: 14px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.m-dd summary { cursor: pointer; padding: 12px 14px; font-weight: 800; font-size: 14.5px; color: var(--text); list-style: none; display: flex; align-items: center; justify-content: space-between; background: var(--bg-soft); }
+.m-dd summary::-webkit-details-marker { display: none; }
+.m-dd summary .chev { color: var(--muted); font-weight: 700; }
+.m-dd[open] summary .chev { transform: rotate(90deg); }
+.m-dd-body { padding: 12px 14px; }
+.m-dd-body p { margin: 0 0 10px; font-size: 13.5px; color: var(--muted); line-height: 1.55; }
+.dd-links { display: flex; flex-direction: column; gap: 8px; margin: 4px 0 10px; }
+.dd-link {
+  display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-radius: 10px;
+  border: 1px solid var(--line); background: var(--panel); color: var(--text); font-size: 13.5px; font-weight: 700;
+}
+.dd-link:hover { border-color: var(--brand); color: var(--brand); }
+.dd-link .a { margin-left: auto; color: var(--muted-2); }
+.m-dd-more { font-size: 13px; font-weight: 800; color: var(--brand); }
