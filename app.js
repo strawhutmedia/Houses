@@ -128,13 +128,16 @@
   function homeMiles(d, o) { if (!o || d.lat == null || d.lng == null) return Infinity; return milesBetween(o.lat, o.lng, d.lat, Math.abs(d.lng)); }
 
   /* ---------------- hotspots (near coast / lake / downtown / mtns / park) ---------------- */
+  // Radii tuned so a badge actually means "close" — not a 15-mile suburb.
   var HOT_META = {
-    ocean:    { icon: "🌊", label: "Near the coast", rad: 16 },
-    lake:     { icon: "🏞️", label: "Near a lake", rad: 12 },
-    downtown: { icon: "🏙️", label: "Fun downtown", rad: 16 },
-    mtn:      { icon: "🏔️", label: "Mountains", rad: 25 },
-    park:     { icon: "🌲", label: "National park", rad: 30 },
+    ocean:    { icon: "🌊", label: "Near the coast", rad: 9 },
+    lake:     { icon: "🏞️", label: "Near a lake", rad: 8 },
+    downtown: { icon: "🏙️", label: "Close to downtown", rad: 6 },
+    mtn:      { icon: "🏔️", label: "Near the mountains", rad: 20 },
+    park:     { icon: "🌲", label: "Near a national park", rad: 28 },
   };
+  var WALK_MI = 1.6; // within a mile and a half of a city center = walkable
+  function miLabel(mi) { return mi < 1 ? "under 1 mi" : "~" + Math.round(mi) + " mi"; }
   function hotspotOf(d) {
     if (d._hot !== undefined) return d._hot;
     var reasons = [], HS = window.HOTSPOTS || [];
@@ -145,7 +148,11 @@
         var mi = milesBetween(hlat, hlng, p.lat, Math.abs(p.lng));
         if (mi <= meta.rad && (!best || mi < best.mi)) best = { p: p, mi: mi, meta: meta };
       }
-      if (best) reasons.push({ icon: best.meta.icon, text: best.meta.label + " — " + best.p.n + " (~" + Math.round(best.mi) + " mi)" });
+      if (best) {
+        var icon = best.meta.icon, label = best.meta.label;
+        if (best.p.k === "downtown" && best.mi <= WALK_MI) { icon = "🚶"; label = "Walkable to downtown"; }
+        reasons.push({ icon: icon, text: label + " — " + best.p.n + " (" + miLabel(best.mi) + ")" });
+      }
     }
     if (d.price != null && d.sqft && d.sqft >= 1500 && d.price / d.sqft < 55)
       reasons.push({ icon: "🏡", text: "Big house for the money — " + d.sqft.toLocaleString() + " sqft" });
