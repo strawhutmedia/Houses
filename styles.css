@@ -633,3 +633,4 @@ footer .muted { color: var(--muted); font-size: 13.5px; max-width: 46ch; }
 
 /* spaces: unknown/placeholder price */
 .mo-unk { font-size: 14px; font-weight: 800; color: var(--muted); }
+.sqft-chip { display:inline-block; font-size:11.5px; font-weight:800; color:var(--brand); background:rgba(20,184,122,.12); border:1px solid rgba(20,184,122,.3); border-radius:999px; padding:1px 8px; }

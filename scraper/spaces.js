@@ -2,38 +2,39 @@
 /*
  * Commercial / studio space scraper (separate vertical from the houses feed).
  *
- * Pulls LA-area commercial + office listings FOR LEASE from Craigslist's public
- * jsonsearch endpoint and writes ../spaces.json, which spaces.html loads.
+ * Pulls LA-area commercial + office listings FOR LEASE from Craigslist, then
+ * OPENS EACH POST to read the true rent period (daily/weekly/monthly), the real
+ * price, and square footage — because the search feed lies (placeholder $1
+ * prices, and daily rates that look monthly). Only genuinely MONTHLY spaces with
+ * a real price are kept. Writes ../spaces.json, which spaces.html loads.
  *
  *   node scraper/spaces.js
  *
- * Only runtime dep is curl. Craigslist blocks datacenter IPs aggressively, so
- * this can 403 from some CI runners; when it does, the last good spaces.json
- * stays in place (the page always has data).
+ * Only runtime dep is curl. Craigslist blocks datacenter IPs, so this can 403
+ * from CI; when it does, the last good spaces.json stays in place.
  */
-const { execFileSync } = require("child_process");
+const { execFile } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 
 const UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36";
+const REGIONS = [{ sub: "losangeles", label: "Los Angeles" }];
 
-// Craigslist regions to pull (subdomain -> label). LA first; add more later.
-const REGIONS = [
-  { sub: "losangeles", label: "Los Angeles" },
-];
-// "off" = office & commercial (lease). Grab the cheapest first.
-function fetchRegion(sub) {
-  const url = `https://${sub}.craigslist.org/jsonsearch/off?sort=priceasc`;
-  try {
-    const out = execFileSync("curl", ["-sS", "-m", "40", "-A", UA, url], { maxBuffer: 1024 * 1024 * 40 }).toString();
-    return JSON.parse(out);
-  } catch (e) { console.error(`  [craigslist ${sub}] failed: ${e.message}`); return null; }
-}
-// Not a real, move-in monthly space: virtual/mail-only addresses and
-// hourly/daily rentals (their "price" isn't a real monthly rent).
+// Not a real, move-in monthly space (virtual/mail-only, hourly/daily services).
 const NOT_SPACE = /virtual office|business address|mailing address|office address|mail plan|mailbox|po box|by the hour|per hour|\/\s?hr\b|hourly|by the day|day rate|\/\s?day\b|per day/i;
 
-// Find the array of postings inside Craigslist's nested json.
+function curl(url) {
+  return new Promise((resolve) => {
+    execFile("curl", ["-sS", "-m", "30", "-A", UA, url], { maxBuffer: 1024 * 1024 * 20 },
+      (err, stdout) => resolve(err ? null : stdout));
+  });
+}
+async function mapLimit(items, limit, fn) {
+  const out = new Array(items.length); let i = 0;
+  async function worker() { while (i < items.length) { const idx = i++; out[idx] = await fn(items[idx], idx); } }
+  await Promise.all(Array.from({ length: limit }, worker));
+  return out;
+}
 function findPostings(o) {
   if (Array.isArray(o)) {
     if (o.length && o[0] && o[0].PostingTitle !== undefined) return o;
@@ -42,62 +43,72 @@ function findPostings(o) {
   return null;
 }
 
-// Craigslist commercial posts are full of placeholder prices ($1, $0, and spam
-// like 1234/12345) — the real monthly rent lives in the post body. Trust the
-// CL price only when it's a normal monthly figure; otherwise try to read a real
-// price out of the title; otherwise leave it null ("price in listing").
-function realMonthly(clPrice, title) {
-  const cl = clPrice != null ? +String(clPrice).replace(/[^0-9.]/g, "") : null;
-  const SPAM = { 1234: 1, 2345: 1, 3456: 1, 4567: 1, 12345: 1, 11111: 1, 22222: 1, 99999: 1, 1111: 1, 2222: 1 };
-  if (cl != null && cl >= 50 && cl <= 60000 && !SPAM[cl]) return Math.round(cl);
-  const nums = (String(title).match(/\$\s?[\d,]{2,7}/g) || [])
-    .map((x) => +x.replace(/[^0-9]/g, "")).filter((n) => n >= 100 && n <= 60000 && !SPAM[n]);
-  return nums.length ? Math.min.apply(null, nums) : null;
-}
-
-function toSpace(p, region) {
-  const title = (p.PostingTitle || "").trim();
+// Read the truth off the actual post page.
+function parseDetail(html) {
+  if (!html) return {};
+  let rp = (html.match(/rent_period=\d">\s*(daily|weekly|monthly)\s*<\/a>/i) || [])[1];
+  if (!rp) { const m = html.match(/rent period:<\/span>[\s\S]{0,200}?>(daily|weekly|monthly)</i); rp = m ? m[1] : null; }
+  const pr = (html.match(/class="price">\s*\$?([\d,]+)/i) || [])[1];
+  const sf = (html.match(/([\d,]{2,6})\s*ft2/i) || [])[1] || (html.match(/(\d[\d,]{2,5})\s*(?:sq\.?\s?ft|sqft|square\s?feet)/i) || [])[1];
   return {
-    id: "cl-" + p.PostingID,
-    source: "Craigslist",
-    region: region,
-    title: title,
-    price: realMonthly(p.price, title),   // validated monthly lease $, or null
-    lat: p.Latitude != null ? +p.Latitude : null,
-    lng: p.Longitude != null ? +p.Longitude : null,
-    postedDate: p.PostedDate || null,
-    url: p.PostingURL || "",
-    thumb: p.ImageThumb || "",
+    rentPeriod: rp ? rp.toLowerCase() : null,
+    price: pr ? +pr.replace(/[^0-9]/g, "") : null,
+    sqft: sf ? +sf.replace(/[^0-9]/g, "") : null,
   };
 }
 
-function main() {
-  const all = [];
-  const seen = {};
-  for (const r of REGIONS) {
-    const j = fetchRegion(r.sub);
-    const posts = j ? (findPostings(j) || []) : [];
-    let kept = 0;
-    for (const p of posts) {
-      if (!p.PostingID || seen[p.PostingID]) continue;
-      seen[p.PostingID] = 1;
-      const s = toSpace(p, r.label);
-      if (!s.title || !s.url) continue;
-      if (NOT_SPACE.test(s.title)) continue;            // drop virtual/mail/hourly
-      if (s.price == null && s.lat == null) continue;    // nothing to show
-      all.push(s); kept++;
-    }
-    console.log(`  ${r.label}: ${kept} space(s)`);
-  }
+async function scrapeRegion(r) {
+  const j = await curl(`https://${r.sub}.craigslist.org/jsonsearch/off?sort=priceasc`).then((t) => { try { return JSON.parse(t); } catch (e) { return null; } });
+  let posts = j ? (findPostings(j) || []) : [];
+  // de-dupe + drop obvious non-spaces before spending fetches on them
+  const seen = {}; posts = posts.filter((p) => p && p.PostingID && p.PostingURL && p.PostingTitle &&
+    !seen[p.PostingID] && (seen[p.PostingID] = 1) && !NOT_SPACE.test(p.PostingTitle));
+  const cap = +(process.env.ES_SPACE_LIMIT || 400);
+  posts = posts.slice(0, cap);
+  console.log(`  ${r.label}: ${posts.length} candidate post(s), reading each for the true rent period…`);
 
+  const spaces = [];
+  await mapLimit(posts, 8, async (p) => {
+    const d = parseDetail(await curl(p.PostingURL));
+    // MONTHLY only. Daily/weekly rates are not a monthly lease -> drop.
+    if (d.rentPeriod === "daily" || d.rentPeriod === "weekly") return;
+    const price = (d.price && d.price >= 50 && d.price <= 60000) ? d.price : null;
+    if (price == null && p.Latitude == null) return; // nothing usable
+    spaces.push({
+      id: "cl-" + p.PostingID,
+      source: "Craigslist",
+      region: r.label,
+      title: (p.PostingTitle || "").trim(),
+      price: price,                                  // verified MONTHLY rent, or null
+      period: d.rentPeriod || "monthly",
+      sqft: d.sqft || null,
+      lat: p.Latitude != null ? +p.Latitude : null,
+      lng: p.Longitude != null ? +p.Longitude : null,
+      postedDate: p.PostedDate || null,
+      url: p.PostingURL || "",
+      thumb: p.ImageThumb || "",
+    });
+  });
+  return spaces;
+}
+
+async function main() {
+  let all = [];
+  for (const r of REGIONS) {
+    try { all = all.concat(await scrapeRegion(r)); }
+    catch (e) { console.error(`  [${r.label}] failed: ${e.message}`); }
+  }
   const outPath = path.join(__dirname, "..", "spaces.json");
-  if (!all.length) {
-    console.log("No spaces pulled (likely IP-blocked) — keeping existing spaces.json.");
+  if (!all.length) { console.log("No spaces pulled (likely IP-blocked) — keeping existing spaces.json."); return; }
+  const priced = all.filter((s) => s.price != null).length;
+  // If almost nothing came back with a verified price, the detail fetches were
+  // likely IP-blocked (common in CI) — don't overwrite good data with blanks.
+  if (priced < all.length * 0.3) {
+    console.log(`Only ${priced}/${all.length} verified — likely blocked; keeping existing spaces.json.`);
     return;
   }
-  const payload = { generatedAt: new Date().toISOString(), count: all.length, spaces: all };
-  fs.writeFileSync(outPath, JSON.stringify(payload, null, 2));
-  console.log(`\n✓ Wrote ${all.length} space(s) -> ${outPath}`);
+  fs.writeFileSync(outPath, JSON.stringify({ generatedAt: new Date().toISOString(), count: all.length, spaces: all }, null, 2));
+  console.log(`\n✓ Wrote ${all.length} monthly space(s) (${priced} with a verified price) -> ${outPath}`);
 }
 
 main();

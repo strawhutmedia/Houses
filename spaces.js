@@ -112,7 +112,8 @@
   }
 
   function rowHTML(s) {
-    var loc = (s._hood ? esc(s._hood) : "LA") + (isFinite(s._mi) ? ' <span class="l-mi">~' + Math.round(s._mi) + ' mi from ' + esc(REF_NAME) + '</span>' : "");
+    var sqft = s.sqft ? '<span class="sqft-chip">' + s.sqft.toLocaleString() + ' sqft</span> ' : "";
+    var loc = sqft + (s._hood ? esc(s._hood) : "LA") + (isFinite(s._mi) ? ' <span class="l-mi">~' + Math.round(s._mi) + ' mi from ' + esc(REF_NAME) + '</span>' : "");
     var save = s._save > 0 ? '<span class="save-badge">saves ~' + fmt(Math.round(s._save)) + '/mo</span>' : "";
     return '' +
       '<article class="home" data-url="' + esc(s.url) + '">' +
