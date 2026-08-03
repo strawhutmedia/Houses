@@ -601,3 +601,7 @@ footer .muted { color: var(--muted); font-size: 13.5px; max-width: 46ch; }
 }
 .m-hot { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
 .m-hot .hot-badge { margin-top: 0; font-size: 12.5px; }
+
+/* compact beds/baths selects */
+.mini-sel { flex: 1; min-width: 84px; padding: 10px 12px; border-radius: 10px; border: 1.5px solid var(--line); background: var(--panel); color: var(--text); font-size: 14px; font-weight: 600; }
+.mini-sel:focus { outline: none; border-color: var(--brand); }

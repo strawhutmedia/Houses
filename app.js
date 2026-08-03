@@ -144,7 +144,7 @@
 
   /* ---------------- state ---------------- */
   var FOCUS_STATES = { CA: 1, OR: 1 };
-  var state = { q: "", area: "focus", maxPrice: 100000000, sort: "price", savedOnly: false, hotspots: false };
+  var state = { q: "", area: "focus", maxPrice: 100000000, sort: "price", savedOnly: false, hotspots: false, minBeds: 0, minBaths: 0 };
   var LAST_ZIP = null, ZIP_ORIGIN = null;
 
   /* ---------------- filter + sort ---------------- */
@@ -159,6 +159,8 @@
     var out = DATA.filter(function (d) {
       if (state.savedOnly) return !!SAVED[d.id]; // saved view ignores other filters
       if (d.price != null && d.price > state.maxPrice) return false;
+      if (state.minBeds && (d.beds || 0) < state.minBeds) return false;
+      if (state.minBaths && (d.baths || 0) < state.minBaths) return false;
       if (state.hotspots && !hotspotOf(d).length) return false;
       if (zipQ) {
         // "near a ZIP" — keep everything, rank by distance below. Never blank.
@@ -383,6 +385,8 @@
     document.querySelectorAll("#area-chips .chip2").forEach(function (b) { b.addEventListener("click", function () { setArea(b.getAttribute("data-area")); }); });
     document.querySelectorAll("#price-chips .chip2").forEach(function (b) { b.addEventListener("click", function () { setPrice(+b.getAttribute("data-max")); }); });
     var hb = $("hot-btn"); if (hb) hb.addEventListener("click", function () { setHotspots(!state.hotspots); });
+    $("f-beds").addEventListener("change", function (e) { state.minBeds = +e.target.value; render(); });
+    $("f-baths").addEventListener("change", function (e) { state.minBaths = +e.target.value; render(); });
     $("f-sort").addEventListener("change", function (e) { state.sort = e.target.value; render(); });
 
     var st = $("saved-toggle");
