@@ -227,7 +227,7 @@
         var hay = (d.address + " " + d.city + " " + d.state + " " + d.zip + " " + d.source + " " + d.type).toLowerCase();
         return hay.indexOf(q) !== -1;
       }
-      if (state.hotspots) return true; // hotspots = discover nationwide
+      // Area toggle always applies — Hotspots is a filter ON TOP of it, not an override.
       if (state.area === "focus" && !FOCUS_STATES[d.state]) return false;
       return true;
     });
@@ -261,7 +261,7 @@
         ? "closest to your place — nearest first"
         : "finding homes near your place…";
     } else if (state.savedOnly) head = "your saved homes";
-    else if (state.hotspots) head = "in hotspot locations 🌊🏞️🏙️ (coast, lakes, fun downtowns…)";
+    else if (state.hotspots) head = "in " + (state.area === "focus" ? "CA & OR " : "") + "hotspot locations 🌊🏞️🏙️ (coast, lakes, fun downtowns…)";
     else if (state.q) head = "matching “" + esc(state.q) + "”";
     else head = state.area === "focus" ? "in California & Oregon" : "across all 50 states";
 
