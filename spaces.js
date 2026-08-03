@@ -6,7 +6,8 @@
 
   var DATA = [];
   var YOUR_RENT = 3400;                 // what the user pays now, for savings math
-  var WEHO = { lat: 34.090, lng: 118.361 };  // reference point: West Hollywood
+  // Reference point: the user's current studio — 7201 Melrose Ave (Melrose & Formosa).
+  var STUDIO = { lat: 34.0838, lng: 118.3455 };
 
   // A few LA neighborhoods to label listings by nearest.
   var HOODS = [
@@ -43,7 +44,7 @@
 
   function enrich(s) {
     if (s.lat != null && s.lng != null) {
-      s._mi = miBetween(WEHO.lat, WEHO.lng, s.lat, Math.abs(s.lng));
+      s._mi = miBetween(STUDIO.lat, STUDIO.lng, s.lat, Math.abs(s.lng));
       var h = nearestHood(s.lat, s.lng); s._hood = h ? h.name : "";
     } else { s._mi = Infinity; s._hood = ""; }
     s._save = (s.price != null && s.price < YOUR_RENT) ? YOUR_RENT - s.price : 0;
@@ -94,7 +95,7 @@
   }
 
   function rowHTML(s) {
-    var loc = (s._hood ? esc(s._hood) : "LA") + (isFinite(s._mi) ? ' <span class="l-mi">~' + Math.round(s._mi) + ' mi from WeHo</span>' : "");
+    var loc = (s._hood ? esc(s._hood) : "LA") + (isFinite(s._mi) ? ' <span class="l-mi">~' + Math.round(s._mi) + ' mi from your studio</span>' : "");
     var save = s._save > 0 ? '<span class="save-badge">saves ~' + fmt(Math.round(s._save)) + '/mo</span>' : "";
     return '' +
       '<article class="home" data-url="' + esc(s.url) + '">' +
