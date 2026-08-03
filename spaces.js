@@ -73,8 +73,10 @@
     var t = state.area && TARGETS[state.area];
     var ref = t ? { lat: t[0], lng: t[1] } : STUDIO;
     REF_NAME = state.area || "your studio";
+    var capped = state.maxPrice < 100000000;
     var out = DATA.filter(function (s) {
-      if (state.maxPrice && s.price != null && s.price > state.maxPrice) return false;
+      // With a price cap on, only show spaces whose real price we know and verify.
+      if (capped) { if (s.price == null || s.price > state.maxPrice) return false; }
       s._mi = (s.lat != null) ? miBetween(ref.lat, ref.lng, s.lat, Math.abs(s.lng)) : Infinity;
       if (t && s._mi > AREA_RADIUS) return false;   // keep it to the chosen neighborhood
       if (state.q) {
@@ -115,7 +117,7 @@
     return '' +
       '<article class="home" data-url="' + esc(s.url) + '">' +
         '<div class="home-main">' +
-          '<div class="home-price">' + (s.price != null ? fmt(s.price) + '<span class="mo">/mo</span>' : "Call") + ' ' + save + '</div>' +
+          '<div class="home-price">' + (s.price != null ? fmt(s.price) + '<span class="mo">/mo</span>' : '<span class="mo-unk">Price in listing</span>') + ' ' + save + '</div>' +
           '<div class="home-loc"><b>' + esc(s.title || "Commercial space") + '</b></div>' +
           '<div class="home-meta">' + loc + '</div>' +
           '<div class="home-sub">Craigslist' + (s.postedDate ? ' · posted ' + fmtDate(s.postedDate) : '') + '</div>' +

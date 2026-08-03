@@ -630,3 +630,6 @@ footer .muted { color: var(--muted); font-size: 13.5px; max-width: 46ch; }
 .tb-links { margin-left: auto; display: flex; gap: 16px; align-items: center; }
 .tb-links a { font-size: 13px; font-weight: 700; color: var(--muted); }
 .tb-links a:hover { color: var(--brand); }
+
+/* spaces: unknown/placeholder price */
+.mo-unk { font-size: 14px; font-weight: 800; color: var(--muted); }

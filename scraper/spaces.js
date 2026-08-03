@@ -29,6 +29,10 @@ function fetchRegion(sub) {
     return JSON.parse(out);
   } catch (e) { console.error(`  [craigslist ${sub}] failed: ${e.message}`); return null; }
 }
+// Not a real, move-in monthly space: virtual/mail-only addresses and
+// hourly/daily rentals (their "price" isn't a real monthly rent).
+const NOT_SPACE = /virtual office|business address|mailing address|office address|mail plan|mailbox|po box|by the hour|per hour|\/\s?hr\b|hourly|by the day|day rate|\/\s?day\b|per day/i;
+
 // Find the array of postings inside Craigslist's nested json.
 function findPostings(o) {
   if (Array.isArray(o)) {
@@ -38,14 +42,27 @@ function findPostings(o) {
   return null;
 }
 
+// Craigslist commercial posts are full of placeholder prices ($1, $0, and spam
+// like 1234/12345) — the real monthly rent lives in the post body. Trust the
+// CL price only when it's a normal monthly figure; otherwise try to read a real
+// price out of the title; otherwise leave it null ("price in listing").
+function realMonthly(clPrice, title) {
+  const cl = clPrice != null ? +String(clPrice).replace(/[^0-9.]/g, "") : null;
+  const SPAM = { 1234: 1, 2345: 1, 3456: 1, 4567: 1, 12345: 1, 11111: 1, 22222: 1, 99999: 1, 1111: 1, 2222: 1 };
+  if (cl != null && cl >= 50 && cl <= 60000 && !SPAM[cl]) return Math.round(cl);
+  const nums = (String(title).match(/\$\s?[\d,]{2,7}/g) || [])
+    .map((x) => +x.replace(/[^0-9]/g, "")).filter((n) => n >= 100 && n <= 60000 && !SPAM[n]);
+  return nums.length ? Math.min.apply(null, nums) : null;
+}
+
 function toSpace(p, region) {
-  const price = p.price != null ? +String(p.price).replace(/[^0-9.]/g, "") : null;
+  const title = (p.PostingTitle || "").trim();
   return {
     id: "cl-" + p.PostingID,
     source: "Craigslist",
     region: region,
-    title: (p.PostingTitle || "").trim(),
-    price: (price && price > 0) ? price : null,   // monthly lease $
+    title: title,
+    price: realMonthly(p.price, title),   // validated monthly lease $, or null
     lat: p.Latitude != null ? +p.Latitude : null,
     lng: p.Longitude != null ? +p.Longitude : null,
     postedDate: p.PostedDate || null,
@@ -65,8 +82,10 @@ function main() {
       if (!p.PostingID || seen[p.PostingID]) continue;
       seen[p.PostingID] = 1;
       const s = toSpace(p, r.label);
-      // keep only rows a buyer can act on: a title + a link, and a real geo or price
-      if (s.title && s.url && (s.price != null || s.lat != null)) { all.push(s); kept++; }
+      if (!s.title || !s.url) continue;
+      if (NOT_SPACE.test(s.title)) continue;            // drop virtual/mail/hourly
+      if (s.price == null && s.lat == null) continue;    // nothing to show
+      all.push(s); kept++;
     }
     console.log(`  ${r.label}: ${kept} space(s)`);
   }
