@@ -19,6 +19,16 @@
     { label: "Heavy Rehab", damage: "Significant", pct: 78, cls: "bad" },
   ];
   function zipOf(a) { var all = String(a || "").match(/\b\d{5}\b/g); return all && all.length ? all[all.length - 1] : ""; }
+  // HUD encodes baths as "full.half" (e.g. 1.1 = 1 full + 1 half = 1.5 baths,
+  // 3.2 = 3 full + 2 half = 4). Convert that shorthand to a real bath count;
+  // leave true decimals (1.5, 2.5) alone.
+  function normBaths(b) {
+    if (b == null) return 0;
+    b = +b; if (!isFinite(b)) return 0;
+    var full = Math.floor(b), frac = +(b - full).toFixed(2);
+    if (frac >= 0.1 && frac <= 0.45 && Math.round(frac * 10) === frac * 10) return full + Math.round(frac * 10) * 0.5;
+    return b;
+  }
   function shiftDays(iso, days) { var d = new Date(iso + "T00:00:00"); d.setDate(d.getDate() + days); return d.toISOString().slice(0, 10); }
 
   function enrich(l) {
@@ -32,6 +42,7 @@
     return Object.assign({}, l, {
       equity: (l.equity !== undefined ? l.equity : equity),
       equityPct: (l.equityPct !== undefined ? l.equityPct : pct),
+      baths: normBaths(l.baths),
       zip: l.zip || zipOf(l.address),
       postedDate: posted, condition: condition, photoCount: photoCount,
       deadline: l.auctionDate ? l.auctionDate + "T18:00:00" : null,
