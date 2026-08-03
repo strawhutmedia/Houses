@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio Spaces — cheaper commercial space in LA</title>
+  <meta name="description" content="Commercial and studio spaces for lease in Los Angeles, ranked by price and distance from West Hollywood." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23f4b942'/%3E%3Cpath d='M9 25V10h14v15M13 25v-5h6v5' fill='none' stroke='%2304140d' stroke-width='2'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="tb-inner">
+      <a class="logo" href="index.html"><span class="mark"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 6l10 9h-3v11h-14v-11h-3z"/></svg></span> Equity<b>Scout</b></a>
+      <a class="tb-tag" href="index.html">🏠 Homes</a>
+    </div>
+  </header>
+
+  <main class="app2">
+    <h1 class="sp-h1">Studio &amp; commercial spaces — Los Angeles</h1>
+    <p class="sp-lead">
+      Spaces for lease near you, cheapest first. You're paying <b>$3,400/mo</b> now in West Hollywood —
+      anything below that shows how much it'd <b>save you every month</b>. Distances are measured from WeHo.
+    </p>
+
+    <div class="search-wrap">
+      <svg class="search-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <input id="f-q" type="search" inputmode="search" placeholder="Search — e.g. studio, Hollywood, creative, kitchen…" autocomplete="off" />
+      <button class="search-clear" id="f-clear" aria-label="Clear" hidden>×</button>
+    </div>
+
+    <div class="ctrl-row">
+      <div class="chips" id="price-chips">
+        <button class="chip2" data-max="1000">Under $1K</button>
+        <button class="chip2" data-max="2000">Under $2K</button>
+        <button class="chip2 active" data-max="3400">Under $3,400 (your rent)</button>
+        <button class="chip2" data-max="100000000">Any price</button>
+      </div>
+    </div>
+    <div class="ctrl-row">
+      <label class="sort-lbl" for="f-sort">Sort</label>
+      <select id="f-sort" class="sort2">
+        <option value="price">Cheapest first</option>
+        <option value="near">Closest to West Hollywood</option>
+        <option value="newest">Newest posted</option>
+      </select>
+    </div>
+
+    <div class="result-count" id="result-count">Loading spaces…</div>
+    <div class="list-view" id="list"></div>
+
+    <p class="mini-note">
+      Live commercial/office listings from Craigslist Los Angeles (leases). Tapping a space opens the original Craigslist post to contact the lister.
+      Always tour in person and verify the terms, square footage, and permitted use before signing. Refreshed periodically.
+    </p>
+  </main>
+
+  <footer class="foot2">
+    <p>EquityScout aggregates public listings and is not a party to any lease. © 2026 EquityScout.</p>
+  </footer>
+
+  <script src="spaces.js"></script>
+</body>
+</html>

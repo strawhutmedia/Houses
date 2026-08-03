@@ -57,6 +57,10 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           ES_ENRICH_LIMIT: "40"
 
+      - name: Scrape LA studio/commercial spaces -> spaces.json
+        run: node scraper/spaces.js
+        continue-on-error: true   # Craigslist can IP-block CI; last good spaces.json stays
+
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
