@@ -132,27 +132,62 @@
   var HOT_META = {
     ocean:    { icon: "🌊", label: "Near the coast", rad: 9 },
     lake:     { icon: "🏞️", label: "Near a lake", rad: 8 },
-    downtown: { icon: "🏙️", label: "Close to downtown", rad: 6 },
+    downtown: { icon: "🏙️", label: "Popular downtown", rad: 6 },
     mtn:      { icon: "🏔️", label: "Near the mountains", rad: 20 },
     park:     { icon: "🌲", label: "Near a national park", rad: 28 },
   };
-  var WALK_MI = 1.6; // within a mile and a half of a city center = walkable
+  var WALK_MI = 1.25;   // within ~1.25 mi of ANY town center = in a walkable core
   function miLabel(mi) { return mi < 1 ? "under 1 mi" : "~" + Math.round(mi) + " mi"; }
+
+  // Real town centers (GeoNames, 12k+ US towns) — loaded in the background so
+  // "walkable" works for any small town, not just my handful of big downtowns.
+  var PLACE_GRID = null;
+  function buildPlaceGrid() {
+    var P = window.PLACES; if (!P) return;
+    var grid = {};
+    for (var i = 0; i < P.length; i++) {
+      var lat = P[i][0] / 100, lng = Math.abs(P[i][1] / 100), pop = P[i][2];
+      var key = Math.floor(lat) + "," + Math.floor(lng);
+      (grid[key] || (grid[key] = [])).push([lat, lng, pop]);
+    }
+    PLACE_GRID = grid;
+  }
+  function nearestPlace(hlat, hlng) {
+    if (!PLACE_GRID) return null;
+    var li = Math.floor(hlat), gi = Math.floor(hlng), best = null;
+    for (var a = -1; a <= 1; a++) for (var b = -1; b <= 1; b++) {
+      var cell = PLACE_GRID[(li + a) + "," + (gi + b)]; if (!cell) continue;
+      for (var j = 0; j < cell.length; j++) {
+        var mi = milesBetween(hlat, hlng, cell[j][0], cell[j][1]);
+        if (!best || mi < best.mi) best = { mi: mi, pop: cell[j][2] };
+      }
+    }
+    return best;
+  }
+  function loadPlaces() {
+    if (window.PLACES) { buildPlaceGrid(); return; }
+    var s = document.createElement("script"); s.src = "places.js"; s.async = true;
+    s.onload = function () { buildPlaceGrid(); DATA.forEach(function (d) { delete d._hot; }); render(); };
+    document.head.appendChild(s);
+  }
+
   function hotspotOf(d) {
     if (d._hot !== undefined) return d._hot;
     var reasons = [], HS = window.HOTSPOTS || [];
-    if (d.lat != null && d.lng != null && HS.length) {
-      var hlat = d.lat, hlng = Math.abs(d.lng), best = null;
+    if (d.lat != null && d.lng != null) {
+      var hlat = d.lat, hlng = Math.abs(d.lng);
+      // Walkable: in the core of any real town/city (data-driven, nationwide).
+      var np = nearestPlace(hlat, hlng);
+      if (np && np.mi <= WALK_MI)
+        reasons.push({ icon: "🚶", text: "Walkable — in " + (d.city || "town") + " (" + miLabel(np.mi) + " to center)" });
+      // Curated nearby draw (coast / lake / mountains / park / notable downtown).
+      var best = null;
       for (var i = 0; i < HS.length; i++) {
         var p = HS[i], meta = HOT_META[p.k]; if (!meta) continue;
         var mi = milesBetween(hlat, hlng, p.lat, Math.abs(p.lng));
         if (mi <= meta.rad && (!best || mi < best.mi)) best = { p: p, mi: mi, meta: meta };
       }
-      if (best) {
-        var icon = best.meta.icon, label = best.meta.label;
-        if (best.p.k === "downtown" && best.mi <= WALK_MI) { icon = "🚶"; label = "Walkable to downtown"; }
-        reasons.push({ icon: icon, text: label + " — " + best.p.n + " (" + miLabel(best.mi) + ")" });
-      }
+      if (best) reasons.push({ icon: best.meta.icon, text: best.meta.label + " — " + best.p.n + " (" + miLabel(best.mi) + ")" });
     }
     if (d.price != null && d.sqft && d.sqft >= 1500 && d.price / d.sqft < 55)
       reasons.push({ icon: "🏡", text: "Big house for the money — " + d.sqft.toLocaleString() + " sqft" });
@@ -417,7 +452,7 @@
 
   /* ---------------- boot ---------------- */
   document.addEventListener("DOMContentLoaded", function () {
-    loadData().then(function (rows) { DATA = rows; build(); });
+    loadData().then(function (rows) { DATA = rows; build(); loadPlaces(); });
     $("modal-close").addEventListener("click", closeModal);
     $("modal-back").addEventListener("click", function (e) { if (e.target === $("modal-back")) closeModal(); });
     document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeModal(); });
