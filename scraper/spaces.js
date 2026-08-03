@@ -22,6 +22,9 @@ const REGIONS = [{ sub: "losangeles", label: "Los Angeles" }];
 
 // Not a real, move-in monthly space (virtual/mail-only, hourly/daily services).
 const NOT_SPACE = /virtual office|business address|mailing address|office address|mail plan|mailbox|po box|by the hour|per hour|\/\s?hr\b|hourly|by the day|day rate|\/\s?day\b|per day/i;
+// Coworking / shared-desk / membership — a seat, not a space you lease. Its cheap
+// "monthly" price is per-desk and misleading for someone renting an actual studio.
+const COWORK = /coworking|co-working|hot\s?desks?|dedicated desks?|shared desks?|desks?\s+(are\s+)?(shared|not assigned)|not assigned|any available seat|day\s?pass|on-?demand|hybrid schedule|\bmemberships?\b|work anywhere|reserve your access/i;
 
 function curl(url) {
   return new Promise((resolve) => {
@@ -44,16 +47,22 @@ function findPostings(o) {
 }
 
 // Read the truth off the actual post page.
-function parseDetail(html) {
+function parseDetail(html, title) {
   if (!html) return {};
   let rp = (html.match(/rent_period=\d">\s*(daily|weekly|monthly)\s*<\/a>/i) || [])[1];
   if (!rp) { const m = html.match(/rent period:<\/span>[\s\S]{0,200}?>(daily|weekly|monthly)</i); rp = m ? m[1] : null; }
   const pr = (html.match(/class="price">\s*\$?([\d,]+)/i) || [])[1];
   const sf = (html.match(/([\d,]{2,6})\s*ft2/i) || [])[1] || (html.match(/(\d[\d,]{2,5})\s*(?:sq\.?\s?ft|sqft|square\s?feet)/i) || [])[1];
+  const bodyM = html.match(/id="postingbody"[^>]*>([\s\S]*?)<\/section>/i);
+  const body = bodyM ? bodyM[1].replace(/<[^>]+>/g, " ") : "";
+  // Real city from the CL breadcrumb / URL area, for honest location labels.
+  const hood = (html.match(/<small>\s*\(([^)]{2,40})\)\s*<\/small>/i) || [])[1] || null;
   return {
     rentPeriod: rp ? rp.toLowerCase() : null,
     price: pr ? +pr.replace(/[^0-9]/g, "") : null,
     sqft: sf ? +sf.replace(/[^0-9]/g, "") : null,
+    cowork: COWORK.test(title || "") || COWORK.test(body),
+    hood: hood ? hood.trim() : null,
   };
 }
 
@@ -69,9 +78,10 @@ async function scrapeRegion(r) {
 
   const spaces = [];
   await mapLimit(posts, 8, async (p) => {
-    const d = parseDetail(await curl(p.PostingURL));
+    const d = parseDetail(await curl(p.PostingURL), p.PostingTitle);
     // MONTHLY only. Daily/weekly rates are not a monthly lease -> drop.
     if (d.rentPeriod === "daily" || d.rentPeriod === "weekly") return;
+    if (d.cowork) return;                            // shared desk / coworking, not a leasable space
     const price = (d.price && d.price >= 50 && d.price <= 60000) ? d.price : null;
     if (price == null && p.Latitude == null) return; // nothing usable
     spaces.push({
@@ -79,6 +89,7 @@ async function scrapeRegion(r) {
       source: "Craigslist",
       region: r.label,
       title: (p.PostingTitle || "").trim(),
+      hood: d.hood || null,                          // real CL neighborhood, if the post gives one
       price: price,                                  // verified MONTHLY rent, or null
       period: d.rentPeriod || "monthly",
       sqft: d.sqft || null,

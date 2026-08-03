@@ -54,7 +54,10 @@
   function enrich(s) {
     if (s.lat != null && s.lng != null) {
       s._mi = miBetween(STUDIO.lat, STUDIO.lng, s.lat, Math.abs(s.lng));
-      var h = nearestHood(s.lat, s.lng); s._hood = h ? h.name : "";
+      var h = nearestHood(s.lat, s.lng);
+      // Prefer the real neighborhood from the post; only guess a nearby one if
+      // the space is genuinely within ~4 mi of it — never mislabel a far city.
+      s._hood = s.hood || (h && h.mi < 4 ? h.name : "");
     } else { s._mi = Infinity; s._hood = ""; }
     s._save = (s.price != null && s.price < YOUR_RENT) ? YOUR_RENT - s.price : 0;
     return s;
@@ -113,7 +116,8 @@
 
   function rowHTML(s) {
     var sqft = s.sqft ? '<span class="sqft-chip">' + s.sqft.toLocaleString() + ' sqft</span> ' : "";
-    var loc = sqft + (s._hood ? esc(s._hood) : "LA") + (isFinite(s._mi) ? ' <span class="l-mi">~' + Math.round(s._mi) + ' mi from ' + esc(REF_NAME) + '</span>' : "");
+    var place = s._hood ? esc(s._hood) + " " : "";
+    var loc = sqft + place + (isFinite(s._mi) ? '<span class="l-mi">~' + Math.round(s._mi) + ' mi from ' + esc(REF_NAME) + '</span>' : "");
     var save = s._save > 0 ? '<span class="save-badge">saves ~' + fmt(Math.round(s._save)) + '/mo</span>' : "";
     return '' +
       '<article class="home" data-url="' + esc(s.url) + '">' +
