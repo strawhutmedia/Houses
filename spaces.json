@@ -1,35 +1,7 @@
 {
   "generatedAt": "2026-08-03T01:56:52.944Z",
-  "count": 314,
+  "count": 267,
   "spaces": [
-    {
-      "id": "cl-7947608807",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Private Treatment Rooms Now Available in Valencia",
-      "price": null,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.451211,
-      "lng": -118.57707,
-      "postedDate": 1784228215,
-      "url": "https://www.craigslist.org/view/d/valencia-private-treatment-rooms-now/ess8SfemtaBoDTjc67Vu3g",
-      "thumb": "https://images.craigslist.org/00V0V_juiJGwDxjBZ_0t20CI_50x50c.jpg"
-    },
-    {
-      "id": "cl-7947609754",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Prime Treatment Room for Rent – Valencia",
-      "price": null,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.4502,
-      "lng": -118.575826,
-      "postedDate": 1784228432,
-      "url": "https://www.craigslist.org/view/d/valencia-prime-treatment-room-for-rent/3TfK9vacTuDvJvVYB66vmS",
-      "thumb": "https://images.craigslist.org/01717_4AcMBn2NBGn_0MM132_50x50c.jpg"
-    },
     {
       "id": "cl-7950940844",
       "source": "Craigslist",
@@ -42,7 +14,8 @@
       "lng": -118.307304,
       "postedDate": 1785614603,
       "url": "https://www.craigslist.org/view/d/los-angeles-private-warehouse-with-high/8mE1K7yHXs3Xr5ARyXQFAF",
-      "thumb": "https://images.craigslist.org/00l0l_1sBD2D0RaQU_0t20CI_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00l0l_1sBD2D0RaQU_0t20CI_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945132792",
@@ -56,7 +29,8 @@
       "lng": -118.390305,
       "postedDate": 1783191607,
       "url": "https://www.craigslist.org/view/d/los-angeles-production-post-studios/mE9pwMrhFJmkMgcRBCKkAW",
-      "thumb": "https://images.craigslist.org/00P0P_4Sf0XmGMgKm_0CI0pO_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00P0P_4Sf0XmGMgKm_0CI0pO_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950561138",
@@ -70,21 +44,8 @@
       "lng": -118.46612,
       "postedDate": 1785456627,
       "url": "https://www.craigslist.org/view/d/santa-monica-creative-industrial-space/8UxgskqYXjqa9nadzSEazj",
-      "thumb": "https://images.craigslist.org/00b0b_jMF1yaQxpYl_0wf0oV_50x50c.jpg"
-    },
-    {
-      "id": "cl-7948179690",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Office space for rent - for Therapists",
-      "price": 250,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.696995,
-      "lng": -118.148338,
-      "postedDate": 1784481157,
-      "url": "https://www.craigslist.org/view/d/lancaster-office-space-for-rent-for/1XPcwJR75WM4S4NiPo7Uup",
-      "thumb": ""
+      "thumb": "https://images.craigslist.org/00b0b_jMF1yaQxpYl_0wf0oV_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947375690",
@@ -98,35 +59,8 @@
       "lng": -118.441491,
       "postedDate": 1784136964,
       "url": "https://www.craigslist.org/view/d/sherman-oaks-work-space-for-attorney-or/mjivbLcdJQYadWT221cvfe",
-      "thumb": "https://images.craigslist.org/01515_kwNzqChmGia_0pO0jm_50x50c.jpg"
-    },
-    {
-      "id": "cl-7947847251",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Wellness Professionals - Carthay Circle furnished offices",
-      "price": 299,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.060859,
-      "lng": -118.367424,
-      "postedDate": 1784320672,
-      "url": "https://www.craigslist.org/view/d/beverly-hills-wellness-professionals/pV5JBZ3GYPAdGVzrqJFkKP",
-      "thumb": "https://images.craigslist.org/00z0z_gNF8ckC1s4s_0ee09u_50x50c.jpg"
-    },
-    {
-      "id": "cl-7948319159",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Peaceful Treatment Room for Rent on Ventura Blvd",
-      "price": 300,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.158335,
-      "lng": -118.502593,
-      "postedDate": 1784557403,
-      "url": "https://www.craigslist.org/view/d/encino-peaceful-treatment-room-for-rent/4XbDwoJPfCv47beX8gkbAm",
-      "thumb": "https://images.craigslist.org/00c0c_5O4n2iogzcW_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/01515_kwNzqChmGia_0pO0jm_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948440632",
@@ -140,21 +74,8 @@
       "lng": -118.020138,
       "postedDate": 1784585298,
       "url": "https://www.craigslist.org/view/d/private-office-for-rent/5u8prLByEzAZqBqRRbeJsi",
-      "thumb": "https://images.craigslist.org/00A0A_1sdyu58f8fo_0CI0t2_50x50c.jpg"
-    },
-    {
-      "id": "cl-7945435962",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "DTLA: private studio spaces for artists",
-      "price": 350,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.03141,
-      "lng": -118.232199,
-      "postedDate": 1783353731,
-      "url": "https://www.craigslist.org/view/d/los-angeles-dtla-private-studio-spaces/5SfQxToHycP8jLVQ7wz5Sf",
-      "thumb": "https://images.craigslist.org/00z0z_aMviVpmOGUi_0t20CI_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00A0A_1sdyu58f8fo_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947226755",
@@ -168,7 +89,8 @@
       "lng": -118.425907,
       "postedDate": 1784067191,
       "url": "https://www.craigslist.org/view/d/los-angeles-fully-furnished/vVGTSLhMesC7XioKfhTJx5",
-      "thumb": "https://images.craigslist.org/00202_3CdjzSCf10R_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00202_3CdjzSCf10R_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948179397",
@@ -182,7 +104,8 @@
       "lng": -118.592765,
       "postedDate": 1784481076,
       "url": "https://www.craigslist.org/view/d/woodland-hills-furnished-psychotherapy/uJ3U7UrDS8HChsYLjh4mWA",
-      "thumb": ""
+      "thumb": "",
+      "hood": null
     },
     {
       "id": "cl-7945653317",
@@ -196,7 +119,8 @@
       "lng": -118.381961,
       "postedDate": 1783439850,
       "url": "https://www.craigslist.org/view/d/north-hollywood-private-office-suite/eux278Zyj26MKr7tTJkMb6",
-      "thumb": "https://images.craigslist.org/01616_REcNcIFONf_0gw0co_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/01616_REcNcIFONf_0gw0co_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945627838",
@@ -210,21 +134,8 @@
       "lng": -118.370238,
       "postedDate": 1783433116,
       "url": "https://www.craigslist.org/view/d/north-hollywood-basement-office-space/dWE1UR3WjXu5WUvznqD7Qz",
-      "thumb": "https://images.craigslist.org/01717_gywKnBAzDfF_0CI0t2_50x50c.jpg"
-    },
-    {
-      "id": "cl-7949296705",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Individual office rooms for rent in Agoura Hills",
-      "price": 450,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.142356,
-      "lng": -118.744655,
-      "postedDate": 1784929277,
-      "url": "https://www.craigslist.org/view/d/agoura-hills-individual-office-rooms/fHd7SnJrZQ1jtoh5rDDfMm",
-      "thumb": "https://images.craigslist.org/00909_4qGQb1y9mDv_09z07a_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/01717_gywKnBAzDfF_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945353912",
@@ -238,7 +149,8 @@
       "lng": -118.154611,
       "postedDate": 1783303662,
       "url": "https://www.craigslist.org/view/d/los-angeles-price-reduced-monthly/waBpJPG1AWohc9Mjjtf9U9",
-      "thumb": "https://images.craigslist.org/01010_6vtgl6BNpCf_0js0pW_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/01010_6vtgl6BNpCf_0js0pW_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7946326240",
@@ -252,7 +164,8 @@
       "lng": -118.249972,
       "postedDate": 1783703072,
       "url": "https://www.craigslist.org/view/d/glendale-furnished-office-for-rent-with/2fSn5mH79K33AXYbFyYgnf",
-      "thumb": "https://images.craigslist.org/00j0j_1aPTIRMj63P_0aA07V_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00j0j_1aPTIRMj63P_0aA07V_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949683631",
@@ -266,21 +179,8 @@
       "lng": -118.260207,
       "postedDate": 1785102308,
       "url": "https://www.craigslist.org/view/d/los-angeles-art-studios-creative-spaces/xfBddwgGG7Tg83A2FFq6bx",
-      "thumb": "https://images.craigslist.org/00D0D_4d3bnC6uTgX_0CI0t2_50x50c.jpg"
-    },
-    {
-      "id": "cl-7950956581",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Prof. Office Space",
-      "price": 500,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 33.88201,
-      "lng": -118.130146,
-      "postedDate": 1785619191,
-      "url": "https://www.craigslist.org/view/d/bellflower-prof-office-space/tF9ZuJrGErem7Jy1j2MinT",
-      "thumb": "https://images.craigslist.org/00L0L_5cPI0YL9LAb_0AE0ru_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00D0D_4d3bnC6uTgX_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945765378",
@@ -294,35 +194,8 @@
       "lng": -118.140607,
       "postedDate": 1783467516,
       "url": "https://www.craigslist.org/view/d/los-angeles-two-months-free-rent-office/eEAuWrBDUZQCH9gH1NRq5g",
-      "thumb": "https://images.craigslist.org/00N0N_dbFAY7VUbp5_1320MM_50x50c.jpg"
-    },
-    {
-      "id": "cl-7946582431",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "treatment room for rent",
-      "price": 500,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.124301,
-      "lng": -118.0515,
-      "postedDate": 1783798389,
-      "url": "https://www.craigslist.org/view/d/arcadia-treatment-room-for-rent/rUw6WtGNUKBokvf1fn9L7t",
-      "thumb": "https://images.craigslist.org/00D0D_57YzYw4LQWi_0x20m0_50x50c.jpg"
-    },
-    {
-      "id": "cl-7949278285",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Dealer Office for Rent in Otay Mesa – Parking & Utilities Included",
-      "price": 485,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 32.556769,
-      "lng": -116.937783,
-      "postedDate": 1784924440,
-      "url": "https://www.craigslist.org/view/d/san-diego-dealer-office-for-rent-in/i7mTwMmPQwnZkCApn1FMoG",
-      "thumb": "https://images.craigslist.org/00T0T_LAIWug64Gw_0aT0ew_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00N0N_dbFAY7VUbp5_1320MM_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949888287",
@@ -336,7 +209,8 @@
       "lng": -118.258202,
       "postedDate": 1785187130,
       "url": "https://www.craigslist.org/view/d/los-angeles-start-your-own-small/t3KEKpiFjyLynHjArNL1xp",
-      "thumb": "https://images.craigslist.org/00J0J_2pKLU0tH7qh_0gw0oM_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00J0J_2pKLU0tH7qh_0gw0oM_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950000204",
@@ -350,7 +224,8 @@
       "lng": -118.148393,
       "postedDate": 1785249680,
       "url": "https://www.craigslist.org/view/d/lancaster-200-sqft-office-for-business/enqaehxDiMhQENBeEw399z",
-      "thumb": "https://images.craigslist.org/01515_1DN2NfQHPsc_0lM0CI_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/01515_1DN2NfQHPsc_0lM0CI_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950305748",
@@ -364,7 +239,8 @@
       "lng": -118.496774,
       "postedDate": 1785356807,
       "url": "https://www.craigslist.org/view/d/van-nuys-month-to-month-fabrication/gCP9cAvJZVyckjTPZzUoCJ",
-      "thumb": "https://images.craigslist.org/00V0V_i3MNX8IG8eH_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00V0V_i3MNX8IG8eH_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949683548",
@@ -378,7 +254,8 @@
       "lng": -118.260299,
       "postedDate": 1785102274,
       "url": "https://www.craigslist.org/view/d/los-angeles-art-studio-office-or/7CGdmPWtiBTVhCW4UWro9c",
-      "thumb": "https://images.craigslist.org/00X0X_hIiwI6BHZgF_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00X0X_hIiwI6BHZgF_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950475047",
@@ -392,7 +269,8 @@
       "lng": -118.324011,
       "postedDate": 1785433581,
       "url": "https://www.craigslist.org/view/d/los-angeles-great-offices-best-deal-in/jVkaKvW7UagFXu1ujDa1e5",
-      "thumb": "https://images.craigslist.org/00i0i_jUPFdLq1qdd_0CI0p6_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00i0i_jUPFdLq1qdd_0CI0p6_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950483079",
@@ -406,7 +284,8 @@
       "lng": -118.493045,
       "postedDate": 1785435583,
       "url": "https://www.craigslist.org/view/d/van-nuys-month-to-month-private-office/fcaf5BzTjfJN48zakYDMtk",
-      "thumb": "https://images.craigslist.org/00C0C_iFNSGZyM4l1_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00C0C_iFNSGZyM4l1_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948853179",
@@ -420,35 +299,8 @@
       "lng": -118.23056,
       "postedDate": 1784751384,
       "url": "https://www.craigslist.org/view/d/los-angeles-artist-studio-painters/hy4PN16Hr7WqS53Q872sxK",
-      "thumb": "https://images.craigslist.org/00T0T_6gvaaJbmgYr_0MM132_50x50c.jpg"
-    },
-    {
-      "id": "cl-7949940142",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "West LA Wellness Treatment Room to Sublet",
-      "price": 500,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.03711,
-      "lng": -118.4502,
-      "postedDate": 1785205303,
-      "url": "https://www.craigslist.org/view/d/los-angeles-west-la-wellness-treatment/n6oYmmAxHYpUApyrgkKtUS",
-      "thumb": "https://images.craigslist.org/01313_9If39URQCwi_0uY0ne_50x50c.jpg"
-    },
-    {
-      "id": "cl-7949357622",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Low Price: BEAUTIFUL CLAREMONT Office/ Retail Spaces Rent Lease",
-      "price": 575,
-      "period": "monthly",
-      "sqft": 180,
-      "lat": 34.107719,
-      "lng": -117.739347,
-      "postedDate": 1784955734,
-      "url": "https://www.craigslist.org/view/d/pomona-low-price-beautiful-claremont/aWfZNduraSoaf4qj7scyHy",
-      "thumb": "https://images.craigslist.org/01313_l7xlQVZ34gHz_0CI0lM_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00T0T_6gvaaJbmgYr_0MM132_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950945364",
@@ -462,7 +314,8 @@
       "lng": -118.292236,
       "postedDate": 1785615653,
       "url": "https://www.craigslist.org/view/d/glendale-creative-fine-art-studios/bRJmTKTv9RBWB8HiRUauRV",
-      "thumb": "https://images.craigslist.org/00303_h7JFLcYycB3_0mh0ew_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00303_h7JFLcYycB3_0mh0ew_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950911399",
@@ -476,21 +329,8 @@
       "lng": -118.289199,
       "postedDate": 1785606945,
       "url": "https://www.craigslist.org/view/d/los-angeles-office-space-with-parking/pgycYJ9zhhgQ25S2uBe64p",
-      "thumb": ""
-    },
-    {
-      "id": "cl-7946984872",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Office Space at Arden for RENT",
-      "price": 600,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.158407,
-      "lng": -118.261938,
-      "postedDate": 1783974861,
-      "url": "https://www.craigslist.org/view/d/glendale-office-space-at-arden-for-rent/6cHDYJfHUHEwsu4wuH29B3",
-      "thumb": ""
+      "thumb": "",
+      "hood": null
     },
     {
       "id": "cl-7945768642",
@@ -504,7 +344,8 @@
       "lng": -118.163206,
       "postedDate": 1783468717,
       "url": "https://www.craigslist.org/view/d/paramount-600-downtown-paramount-office/4xw7yr1v5o98BiJ4D2CK98",
-      "thumb": "https://images.craigslist.org/00Q0Q_bmNtCp28YrY_0kI0rf_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00Q0Q_bmNtCp28YrY_0kI0rf_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947299777",
@@ -518,7 +359,8 @@
       "lng": -118.394108,
       "postedDate": 1784114822,
       "url": "https://www.craigslist.org/view/d/los-angeles-sublease-of-office-in/3Pz6GZXhyekXA6VuhtycSs",
-      "thumb": ""
+      "thumb": "",
+      "hood": null
     },
     {
       "id": "cl-7947775491",
@@ -532,7 +374,8 @@
       "lng": -117.806351,
       "postedDate": 1784304589,
       "url": "https://www.craigslist.org/view/d/san-dimas-office-creative-space-studio/uhqVDVq6uPMXUAeUaytJ5x",
-      "thumb": "https://images.craigslist.org/00909_8Wc501E9BBX_0CI0lM_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00909_8Wc501E9BBX_0CI0lM_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948024237",
@@ -546,7 +389,8 @@
       "lng": -118.068603,
       "postedDate": 1784400247,
       "url": "https://www.craigslist.org/view/d/cerritos-esthetician-massage-eyelash/siKaRi23yywLFWGXrFKuVK",
-      "thumb": "https://images.craigslist.org/00j0j_2SLb2PKHALt_0t20CI_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00j0j_2SLb2PKHALt_0t20CI_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949492743",
@@ -560,7 +404,8 @@
       "lng": -118.221353,
       "postedDate": 1785013135,
       "url": "https://www.craigslist.org/view/d/los-angeles-eagle-rock-office-space-for/ePnC561uuduuSkFn4yyoU8",
-      "thumb": ""
+      "thumb": "",
+      "hood": null
     },
     {
       "id": "cl-7948279929",
@@ -574,21 +419,8 @@
       "lng": -117.912479,
       "postedDate": 1784527426,
       "url": "https://www.craigslist.org/view/d/covina-office-for-rent/kPSfb2nVitgRmzdERLS2Zg",
-      "thumb": "https://images.craigslist.org/00H0H_hLrk9PM5CLM_0CI0lN_50x50c.jpg"
-    },
-    {
-      "id": "cl-7947567864",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "July Move-In: Desk Space - Corporate Point - CALL TODAY!📞",
-      "price": 675,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.140276,
-      "lng": -118.707731,
-      "postedDate": 1784219291,
-      "url": "https://www.craigslist.org/view/d/calabasas-july-move-in-desk-space/ogjPW3ZiDbSt8EJNjScQTH",
-      "thumb": "https://images.craigslist.org/00S0S_ew81YkDcKj_0gw0b2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00H0H_hLrk9PM5CLM_0CI0lN_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948897979",
@@ -602,7 +434,8 @@
       "lng": -117.880773,
       "postedDate": 1784765079,
       "url": "https://www.craigslist.org/view/d/covina-covina-ca-office-space-for-rent/8vD4MSJVZWUWZH32DUg2C9",
-      "thumb": "https://images.craigslist.org/01111_1a1msvgNGV1_0lM0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/01111_1a1msvgNGV1_0lM0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950104700",
@@ -616,7 +449,8 @@
       "lng": -118.185207,
       "postedDate": 1785273853,
       "url": "https://www.craigslist.org/view/d/long-beach-professional-2nd-floor/sR7rMPocvfuiBxrCWVWnNb",
-      "thumb": "https://images.craigslist.org/00A0A_jUGklkPSGyD_0ew0aT_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00A0A_jUGklkPSGyD_0ew0aT_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7946107437",
@@ -630,35 +464,8 @@
       "lng": -118.494902,
       "postedDate": 1783616310,
       "url": "https://www.craigslist.org/view/d/santa-monica-santa-monica-office-for/irvNUyzvuBiGeBAEe16kSk",
-      "thumb": "https://images.craigslist.org/00h0h_68uQ9mns5Dw_0CI0lT_50x50c.jpg"
-    },
-    {
-      "id": "cl-7946981217",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Temporary office space in Santa Monica Pico Neighbourhood",
-      "price": 650,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.018518,
-      "lng": -118.471311,
-      "postedDate": 1783973902,
-      "url": "https://www.craigslist.org/view/d/santa-monica-temporary-office-space-in/vWYzpFTGSVdw9wRPEzy9Cv",
-      "thumb": "https://images.craigslist.org/00G0G_4BVm0z06fQ2_0t20CI_50x50c.jpg"
-    },
-    {
-      "id": "cl-7944983648",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Wellness spa private treatment room",
-      "price": 700,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.0531,
-      "lng": -118.380606,
-      "postedDate": 1783112332,
-      "url": "https://www.craigslist.org/view/d/los-angeles-wellness-spa-private/83GmEiX4CZqAUa9wDKkDtE",
-      "thumb": "https://images.craigslist.org/00707_4ubmWSaXbUW_0do0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00h0h_68uQ9mns5Dw_0CI0lT_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945613240",
@@ -672,7 +479,8 @@
       "lng": -118.355594,
       "postedDate": 1783427598,
       "url": "https://www.craigslist.org/view/d/inglewood-two-small-day-office-rooms/791WANqopbapJroUmkKC88",
-      "thumb": "https://images.craigslist.org/00k0k_iEIA4SNBjN7_0t20CI_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00k0k_iEIA4SNBjN7_0t20CI_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950273087",
@@ -686,21 +494,8 @@
       "lng": -118.011707,
       "postedDate": 1785349363,
       "url": "https://www.craigslist.org/view/d/whittier-salon-beauty-suites-for-rent/4BMoCytSrg34V1rsr9AvKq",
-      "thumb": "https://images.craigslist.org/00808_hE9P1IF4QmH_0r30li_50x50c.jpg"
-    },
-    {
-      "id": "cl-7949934877",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Hair Station for rent-Torrance, Redondo Beach",
-      "price": 700,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 33.870699,
-      "lng": -118.371495,
-      "postedDate": 1785202517,
-      "url": "https://www.craigslist.org/view/d/redondo-beach-hair-station-for-rent/gXG7LuhySqooHMLsVwZT12",
-      "thumb": "https://images.craigslist.org/00909_5CEYhgZBaGq_0t20CI_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00808_hE9P1IF4QmH_0r30li_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948064013",
@@ -714,7 +509,8 @@
       "lng": -118.125104,
       "postedDate": 1784411484,
       "url": "https://www.craigslist.org/view/d/bellflower-office-space-for-rent/nW8PZJbhX1TKYmNtnojSTv",
-      "thumb": ""
+      "thumb": "",
+      "hood": null
     },
     {
       "id": "cl-7950083727",
@@ -728,7 +524,8 @@
       "lng": -118.466202,
       "postedDate": 1785268519,
       "url": "https://www.craigslist.org/view/d/van-nuys-office-in-north-hollywood-adj/njmT5uyh82yZQDyFb29App",
-      "thumb": "https://images.craigslist.org/01313_7xzmqRq0s25_0mJ0fb_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/01313_7xzmqRq0s25_0mJ0fb_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950494947",
@@ -742,7 +539,8 @@
       "lng": -118.53602,
       "postedDate": 1785438519,
       "url": "https://www.craigslist.org/view/d/tarzana-tarzana-commerce-court/niqajRwevVzcYRSZA1d9mq",
-      "thumb": "https://images.craigslist.org/00b0b_egCgA5TVrQo_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00b0b_egCgA5TVrQo_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950530288",
@@ -756,7 +554,8 @@
       "lng": -118.189402,
       "postedDate": 1785447099,
       "url": "https://www.craigslist.org/view/d/long-beach-professional-office-long/xqjs2rKBfuVMhM67sowm54",
-      "thumb": "https://images.craigslist.org/00S0S_96DWpRxPCtp_0ak07K_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00S0S_96DWpRxPCtp_0ak07K_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949056155",
@@ -770,21 +569,8 @@
       "lng": -118.440794,
       "postedDate": 1784835381,
       "url": "https://www.craigslist.org/view/d/los-angeles-two-person-office-westwood/e2oSEWmpxTye1V4h3ad39K",
-      "thumb": "https://images.craigslist.org/00w0w_8HEG50kJVlk_07T0ac_50x50c.jpg"
-    },
-    {
-      "id": "cl-7947114144",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "July Move-In: Executive Office Suite - Olympic Plaza - CALL TODAY!📞",
-      "price": 750,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.036007,
-      "lng": -118.4444,
-      "postedDate": 1784041106,
-      "url": "https://www.craigslist.org/view/d/los-angeles-july-move-in-executive/2Hj332cayVQu6CWoNsB8K5",
-      "thumb": "https://images.craigslist.org/00p0p_lWtNZdwdvng_0oM0iy_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00w0w_8HEG50kJVlk_07T0ac_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945443789",
@@ -798,7 +584,8 @@
       "lng": -118.3542,
       "postedDate": 1783355068,
       "url": "https://www.craigslist.org/view/d/torrance-torrance-office-space/fJu2A4bdEN6kNavpsw6vg7",
-      "thumb": "https://images.craigslist.org/00u0u_hlYlDHhl6kR_0ef09u_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00u0u_hlYlDHhl6kR_0ef09u_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949266726",
@@ -812,7 +599,8 @@
       "lng": -118.230997,
       "postedDate": 1784921711,
       "url": "https://www.craigslist.org/view/d/palmdale-palmdale-industrial-warehouse/tyXCjdDxeu7HLm77gKkw7B",
-      "thumb": "https://images.craigslist.org/00K0K_j1cMjXX6brP_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00K0K_j1cMjXX6brP_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948756346",
@@ -826,7 +614,8 @@
       "lng": -118.148803,
       "postedDate": 1784729019,
       "url": "https://www.craigslist.org/view/d/pasadena-professional-office-space/nPhCoUutoCkNLNGPAzKMVp",
-      "thumb": "https://images.craigslist.org/01717_5jY6mUUqojV_0t20CI_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/01717_5jY6mUUqojV_0t20CI_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950553570",
@@ -840,7 +629,8 @@
       "lng": -118.092495,
       "postedDate": 1785454120,
       "url": "https://www.craigslist.org/view/d/pasadena-quiet-and-scenic-office-space/iQpkyUkQku1krrFFRggAhi",
-      "thumb": "https://images.craigslist.org/00h0h_eaPs0dKdP7n_0l90cU_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00h0h_eaPs0dKdP7n_0l90cU_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945725170",
@@ -854,7 +644,8 @@
       "lng": -118.541816,
       "postedDate": 1783455912,
       "url": "https://www.craigslist.org/view/d/reseda-professional-offices-in-heart-of/6TitWyMRBCWwr5qY4qV1F7",
-      "thumb": "https://images.craigslist.org/00a0a_lCrcWGfbsQX_0uY0hq_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00a0a_lCrcWGfbsQX_0uY0hq_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945723589",
@@ -868,7 +659,8 @@
       "lng": -118.437652,
       "postedDate": 1783455488,
       "url": "https://www.craigslist.org/view/d/panorama-city-total-remodeled-office/r6xYVMtWFnpm2LnV7gF9ZY",
-      "thumb": "https://images.craigslist.org/00w0w_aEkcIJDzoKj_0cE09u_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00w0w_aEkcIJDzoKj_0cE09u_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7946099450",
@@ -882,7 +674,8 @@
       "lng": -118.105254,
       "postedDate": 1783614582,
       "url": "https://www.craigslist.org/view/d/pasadena-pasadena-office-suite-for-lease/n2Nuiu3NvAUwFk5QgrdeXc",
-      "thumb": "https://images.craigslist.org/00T0T_l1c2pPeIhOP_0aA04Q_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00T0T_l1c2pPeIhOP_0aA04Q_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950238185",
@@ -896,21 +689,8 @@
       "lng": -118.485395,
       "postedDate": 1785341696,
       "url": "https://www.craigslist.org/view/d/santa-monica-sweet-suite-cant-be-beat/qayc1pF9qCjp6gB54XKZeX",
-      "thumb": "https://images.craigslist.org/00V0V_8CX6H0UlEmm_0CI0sp_50x50c.jpg"
-    },
-    {
-      "id": "cl-7947268612",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "ROOM FOR RENT – Esthetician Only – East Whittier",
-      "price": 800,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 33.943198,
-      "lng": -117.992706,
-      "postedDate": 1784083212,
-      "url": "https://www.craigslist.org/view/d/whittier-room-for-rent-esthetician-only/1KbDJfGtkxzNC5stmhHJTn",
-      "thumb": ""
+      "thumb": "https://images.craigslist.org/00V0V_8CX6H0UlEmm_0CI0sp_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7951017396",
@@ -924,21 +704,8 @@
       "lng": -118.326269,
       "postedDate": 1785652090,
       "url": "https://www.craigslist.org/view/d/torrance-commercia-space-available/bVLwQTRpiH2U2d6jurQi2B",
-      "thumb": "https://images.craigslist.org/00W0W_hRYKdhlDWi6_0t20CI_50x50c.jpg"
-    },
-    {
-      "id": "cl-7950336953",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Cafe & Kitchen Sub Lease Hollywood Blvd (No Hood)",
-      "price": 800,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.006839,
-      "lng": -118.214944,
-      "postedDate": 1785365380,
-      "url": "https://www.craigslist.org/view/d/los-angeles-cafe-kitchen-sub-lease/5HCbNfgDsnkwuzfdB79vE8",
-      "thumb": "https://images.craigslist.org/01515_iSbPXud6Oqw_0t20CI_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00W0W_hRYKdhlDWi6_0t20CI_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945905883",
@@ -952,7 +719,8 @@
       "lng": -118.238492,
       "postedDate": 1783533828,
       "url": "https://www.craigslist.org/view/d/los-angeles-private-office-in-creative/p3RiRMM2SnLHpYhMLARPMi",
-      "thumb": "https://images.craigslist.org/00A0A_e9GixniqfCy_0lM0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00A0A_e9GixniqfCy_0lM0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7946056069",
@@ -966,7 +734,8 @@
       "lng": -118.148298,
       "postedDate": 1783603278,
       "url": "https://www.craigslist.org/view/d/alhambra-private-office-suite-alhambra/i8KZ7xpfmW5vaku9Zccwue",
-      "thumb": "https://images.craigslist.org/00b0b_eCckln88DOmz_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00b0b_eCckln88DOmz_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950501786",
@@ -980,7 +749,8 @@
       "lng": -118.812957,
       "postedDate": 1785439833,
       "url": "https://www.craigslist.org/view/d/westlake-village-executive-workspace/rCc8SFTLrAXPYTKGcsyr9h",
-      "thumb": "https://images.craigslist.org/00U0U_cPy2xMT64fM_0jm0cW_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00U0U_cPy2xMT64fM_0jm0cW_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949738222",
@@ -994,7 +764,8 @@
       "lng": -118.1506,
       "postedDate": 1785133511,
       "url": "https://www.craigslist.org/view/d/pasadena-furnished-room-office/mGCVEPYqZ4MAZ2Dwykignz",
-      "thumb": "https://images.craigslist.org/01212_kL5QWqzJzC9_09S06A_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/01212_kL5QWqzJzC9_09S06A_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7946180131",
@@ -1008,7 +779,8 @@
       "lng": -118.26855,
       "postedDate": 1783633051,
       "url": "https://www.craigslist.org/view/d/los-angeles-quiet-therapy-office-rowena/8YQXNF1TFPKMD4mJAFzJwg",
-      "thumb": "https://images.craigslist.org/00101_54olQwkgaAl_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00101_54olQwkgaAl_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949509428",
@@ -1022,7 +794,8 @@
       "lng": -118.363325,
       "postedDate": 1785018239,
       "url": "https://www.craigslist.org/view/d/los-angeles-prime-office-space/reMYkov2K62cVd7Zg1dtZM",
-      "thumb": "https://images.craigslist.org/00Z0Z_6TU9EwiRe8j_0CI0t1_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00Z0Z_6TU9EwiRe8j_0CI0t1_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948871440",
@@ -1036,7 +809,8 @@
       "lng": -117.816897,
       "postedDate": 1784756293,
       "url": "https://www.craigslist.org/view/d/san-dimas-treatment-studio-for-rent/eDM9vwv1Cgp3kjDnb1nQ99",
-      "thumb": "https://images.craigslist.org/00x0x_lzgakl5fNiF_0lL0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00x0x_lzgakl5fNiF_0lL0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7944950429",
@@ -1050,7 +824,8 @@
       "lng": -118.370934,
       "postedDate": 1783103318,
       "url": "https://www.craigslist.org/view/d/inglewood-office-room-by-lax/erJ5JRMKDUw6f8BLbJFzPL",
-      "thumb": "https://images.craigslist.org/00Z0Z_ibqT2VN131u_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00Z0Z_ibqT2VN131u_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7946106938",
@@ -1064,7 +839,8 @@
       "lng": -118.574704,
       "postedDate": 1783616188,
       "url": "https://www.craigslist.org/view/d/santa-clarita-professional-office-space/5rVXSze1DYME7t97enCcxh",
-      "thumb": "https://images.craigslist.org/00101_f5QnNfXPe3P_0t20CI_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00101_f5QnNfXPe3P_0t20CI_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945349001",
@@ -1078,21 +854,8 @@
       "lng": -118.406506,
       "postedDate": 1783300739,
       "url": "https://www.craigslist.org/view/d/beverly-hills-psychologist-sub-leasing/cRzEBVwkc8Lt6qvWQQkAVa",
-      "thumb": ""
-    },
-    {
-      "id": "cl-7948640873",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "ARTIST STUDIO",
-      "price": 900,
-      "period": "monthly",
-      "sqft": 200,
-      "lat": 34.068638,
-      "lng": -118.221941,
-      "postedDate": 1784666248,
-      "url": "https://www.craigslist.org/view/d/los-angeles-artist-studio/1CjjuPNKKcqi2iz567KGE2",
-      "thumb": ""
+      "thumb": "",
+      "hood": null
     },
     {
       "id": "cl-7948972718",
@@ -1106,21 +869,8 @@
       "lng": -118.192598,
       "postedDate": 1784816130,
       "url": "https://www.craigslist.org/view/d/long-beach-downtown-long-beach-pine-ave/aEwjbti6EMFXEANHHfMhk2",
-      "thumb": ""
-    },
-    {
-      "id": "cl-7946295097",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "July Move-In: Interior Office Suite - Valencia - CALL TODAY!📞",
-      "price": 940,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.420987,
-      "lng": -118.577439,
-      "postedDate": 1783696402,
-      "url": "https://www.craigslist.org/view/d/santa-clarita-july-move-in-interior/h2mTmhB3P9GjZ1g3N7oFx6",
-      "thumb": "https://images.craigslist.org/00r0r_jqZhA0lhGV0_0gw0at_50x50c.jpg"
+      "thumb": "",
+      "hood": null
     },
     {
       "id": "cl-7950486711",
@@ -1134,7 +884,8 @@
       "lng": -118.251106,
       "postedDate": 1785436503,
       "url": "https://www.craigslist.org/view/d/los-angeles-private-artist-studio/7DnEzUJhUDZ6MoaQYgivc2",
-      "thumb": ""
+      "thumb": "",
+      "hood": null
     },
     {
       "id": "cl-7950261649",
@@ -1148,49 +899,8 @@
       "lng": -118.469713,
       "postedDate": 1785346535,
       "url": "https://www.craigslist.org/view/d/venice-200-sq-ft-retail-office-yoga/aEAcKmkZ3YM5oa6ZfPKbTD",
-      "thumb": "https://images.craigslist.org/00S0S_hFjnDvrCZ0h_0ak071_50x50c.jpg"
-    },
-    {
-      "id": "cl-7945730644",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Flexible Sewing Stations & Shop Space – Canvas/Upholstery",
-      "price": 1000,
-      "period": "monthly",
-      "sqft": 2000,
-      "lat": 33.991081,
-      "lng": -118.444714,
-      "postedDate": 1783457397,
-      "url": "https://www.craigslist.org/view/d/marina-del-rey-flexible-sewing-stations/spcjmFbeg3oPj33o9wdedz",
-      "thumb": "https://images.craigslist.org/00i0i_4DgsGHHSqbR_0CI0t2_50x50c.jpg"
-    },
-    {
-      "id": "cl-7945974589",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Spacious Window Office in Brentwood-Glen! Move-In Ready!",
-      "price": 1000,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.066104,
-      "lng": -118.460123,
-      "postedDate": 1783550517,
-      "url": "https://www.craigslist.org/view/d/los-angeles-spacious-window-office-in/dN9M7PoZ8pxeuQvLQUXnCx",
-      "thumb": "https://images.craigslist.org/00V0V_bYJwt9TyNwQ_0gw0b1_50x50c.jpg"
-    },
-    {
-      "id": "cl-7946842441",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Beautiful Treatment Room For Rent",
-      "price": 1000,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 33.778215,
-      "lng": -118.152396,
-      "postedDate": 1783923510,
-      "url": "https://www.craigslist.org/view/d/long-beach-beautiful-treatment-room-for/2sCDHwrj7iwPVFH6n6HLFW",
-      "thumb": "https://images.craigslist.org/00Z0Z_1mKQiwvbM8i_0t20CI_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00S0S_hFjnDvrCZ0h_0ak071_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947688661",
@@ -1204,21 +914,8 @@
       "lng": -118.279802,
       "postedDate": 1784251238,
       "url": "https://www.craigslist.org/view/d/los-angeles-256-sf-flower-shop/j4LjQKbktF7xARNQxt3kR3",
-      "thumb": "https://images.craigslist.org/00B0B_6cV71ZiFxRi_0CI0t2_50x50c.jpg"
-    },
-    {
-      "id": "cl-7948695979",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Holistic Practitioner Office Share",
-      "price": 1000,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 33.841029,
-      "lng": -118.388174,
-      "postedDate": 1784684037,
-      "url": "https://www.craigslist.org/view/d/redondo-beach-holistic-practitioner/4RSMKXmapPRtSqymkdNGoN",
-      "thumb": ""
+      "thumb": "https://images.craigslist.org/00B0B_6cV71ZiFxRi_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949513104",
@@ -1232,7 +929,8 @@
       "lng": -118.49396,
       "postedDate": 1785019402,
       "url": "https://www.craigslist.org/view/d/santa-monica-wellness-creative-office/qZe9UtXNTPvwJU8erHkugT",
-      "thumb": "https://images.craigslist.org/00t0t_b7pscEP0NWK_0kE0fu_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00t0t_b7pscEP0NWK_0kE0fu_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948033075",
@@ -1246,35 +944,8 @@
       "lng": -118.151494,
       "postedDate": 1784402469,
       "url": "https://www.craigslist.org/view/d/bell-studio-for-rent/6X1xot4pbwrn1TpEt2ePHH",
-      "thumb": "https://images.craigslist.org/00n0n_hUOJbvKW6LR_1u8176_50x50c.jpg"
-    },
-    {
-      "id": "cl-7950444876",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "July Move-In: Office Space - Encino Gateway - CALL TODAY!📞",
-      "price": 1085,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.154979,
-      "lng": -118.476693,
-      "postedDate": 1785427008,
-      "url": "https://www.craigslist.org/view/d/sherman-oaks-july-move-in-office-space/iKE3UbYTS6PhN86a7kLp4Z",
-      "thumb": "https://images.craigslist.org/00505_72GA7Fk1G5u_0gw0cB_50x50c.jpg"
-    },
-    {
-      "id": "cl-7946075641",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "July Move-In: Office Space - Warner Corporate Center - CALL TODAY!📞",
-      "price": 1100,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.187875,
-      "lng": -118.596508,
-      "postedDate": 1783609316,
-      "url": "https://www.craigslist.org/view/d/canoga-park-july-move-in-office-space/sQ2BXFBWB6ADmxhqWb9KSp",
-      "thumb": "https://images.craigslist.org/00z0z_jlVl2DJrQOH_0gw0b1_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00n0n_hUOJbvKW6LR_1u8176_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947022848",
@@ -1288,7 +959,8 @@
       "lng": -118.401998,
       "postedDate": 1783985568,
       "url": "https://www.craigslist.org/view/d/beverly-hills-private-work-room-in/77BLHquMDPtkFvAQc8bDcs",
-      "thumb": ""
+      "thumb": "",
+      "hood": null
     },
     {
       "id": "cl-7947073576",
@@ -1302,7 +974,8 @@
       "lng": -117.876383,
       "postedDate": 1784017529,
       "url": "https://www.craigslist.org/view/d/glendora-small-quiet-office-space/wmxAEnbfzwLCL1VZNiNwfQ",
-      "thumb": "https://images.craigslist.org/00L0L_kqGQAP9gtsK_0t20CI_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00L0L_kqGQAP9gtsK_0t20CI_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947709785",
@@ -1316,21 +989,8 @@
       "lng": -118.454898,
       "postedDate": 1784266331,
       "url": "https://www.craigslist.org/view/d/santa-monica-healthcare-office-for-rent/27Ad1HM8GTyTVLQNiiZwmL",
-      "thumb": ""
-    },
-    {
-      "id": "cl-7950033790",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "July Move-In: Executive Office Suite - CALL TODAY!📞",
-      "price": 1100,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 33.945411,
-      "lng": -118.385291,
-      "postedDate": 1785257305,
-      "url": "https://www.craigslist.org/view/d/los-angeles-july-move-in-executive/ikRAYxWmkTTwt5Dbxdau7r",
-      "thumb": "https://images.craigslist.org/00X0X_2h8ukedxKEw_0g80aL_50x50c.jpg"
+      "thumb": "",
+      "hood": null
     },
     {
       "id": "cl-7945762548",
@@ -1344,7 +1004,8 @@
       "lng": -118.372,
       "postedDate": 1783466469,
       "url": "https://www.craigslist.org/view/d/los-angeles-private-office-space/qGx6GkDZrrEgQzjQpEwkEF",
-      "thumb": "https://images.craigslist.org/00b0b_cVckdFoYmMJ_0lM0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00b0b_cVckdFoYmMJ_0lM0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948594205",
@@ -1358,7 +1019,8 @@
       "lng": -118.32455,
       "postedDate": 1784655595,
       "url": "https://www.craigslist.org/view/d/los-angeles-office-space-retail-store/smK47U6Ly4asT2GEF4K23n",
-      "thumb": "https://images.craigslist.org/00B0B_20CfLQHdyCV_0t20CI_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00B0B_20CfLQHdyCV_0t20CI_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945991339",
@@ -1372,7 +1034,8 @@
       "lng": -118.152396,
       "postedDate": 1783556111,
       "url": "https://www.craigslist.org/view/d/long-beach-remodeled-office-store-space/oRrG5AVkiyh5dZrREs2REq",
-      "thumb": "https://images.craigslist.org/00U0U_5Ku5ir8Go3A_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00U0U_5Ku5ir8Go3A_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950439188",
@@ -1386,7 +1049,8 @@
       "lng": -118.2478,
       "postedDate": 1785425676,
       "url": "https://www.craigslist.org/view/d/los-angeles-300-sqft-commercial-space/v3GEoz8esSMfSvYiHWRyJJ",
-      "thumb": "https://images.craigslist.org/00v0v_3aYKnYIDInS_0MM132_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00v0v_3aYKnYIDInS_0MM132_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945783978",
@@ -1400,7 +1064,8 @@
       "lng": -118.211354,
       "postedDate": 1783474458,
       "url": "https://www.craigslist.org/view/d/huntington-park-south-gate-space-for/vZxsJMRX69L2TF69NSifwM",
-      "thumb": "https://images.craigslist.org/01010_9O0UIBOEyZ1_0o80t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/01010_9O0UIBOEyZ1_0o80t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945516551",
@@ -1414,7 +1079,8 @@
       "lng": -118.259602,
       "postedDate": 1783371195,
       "url": "https://www.craigslist.org/view/d/los-angeles-creative-loft-studio/qis3DFexyndeNiWA7aT7Us",
-      "thumb": "https://images.craigslist.org/00s0s_5x9Te2oUzsX_0lM0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00s0s_5x9Te2oUzsX_0lM0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945963608",
@@ -1428,7 +1094,8 @@
       "lng": -117.968418,
       "postedDate": 1783547247,
       "url": "https://www.craigslist.org/view/d/hacienda-heights-office-space-for-rent/96pHnEyiUPcvmWuhZYWvhi",
-      "thumb": "https://images.craigslist.org/00b0b_ePttr1sSqhU_05a03S_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00b0b_ePttr1sSqhU_05a03S_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950486859",
@@ -1442,7 +1109,8 @@
       "lng": -118.127998,
       "postedDate": 1785436539,
       "url": "https://www.craigslist.org/view/d/downey-office-suite-for-rent/nLahFQ7DWc9sW9zi4ta18w",
-      "thumb": "https://images.craigslist.org/00N0N_fNoEciOZAuh_0uY0ne_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00N0N_fNoEciOZAuh_0uY0ne_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950314445",
@@ -1456,7 +1124,8 @@
       "lng": -118.426218,
       "postedDate": 1785359189,
       "url": "https://www.craigslist.org/view/d/sherman-oaks-sherman-oaks-office-space/cpSBnNgY4uVXKMaJCXH1bS",
-      "thumb": "https://images.craigslist.org/00K0K_gYeYOPSQ4ky_0gw078_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00K0K_gYeYOPSQ4ky_0gw078_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948811517",
@@ -1470,7 +1139,8 @@
       "lng": -118.3152,
       "postedDate": 1784741701,
       "url": "https://www.craigslist.org/view/d/los-angeles-creative-office-artist/roZTS5jJtajQ83CkAnBEgi",
-      "thumb": "https://images.craigslist.org/00808_lnScN1qTuqU_0t20CI_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00808_lnScN1qTuqU_0t20CI_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949321332",
@@ -1484,7 +1154,8 @@
       "lng": -118.463511,
       "postedDate": 1784937069,
       "url": "https://www.craigslist.org/view/d/venice-studio-garage-in-great-venice/n8uEzXySMFArJgKrKEJ8FD",
-      "thumb": "https://images.craigslist.org/00a0a_5sJ08EFOVDM_0MM132_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00a0a_5sJ08EFOVDM_0MM132_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7946625268",
@@ -1498,7 +1169,8 @@
       "lng": -118.065402,
       "postedDate": 1783811320,
       "url": "https://www.craigslist.org/view/d/rosemead-for-lease-lucrative-mall-space/hUwFXzMiPTAjh2MFusF9Gd",
-      "thumb": "https://images.craigslist.org/00r0r_8tMFUl6KiaP_06c048_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00r0r_8tMFUl6KiaP_06c048_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948818973",
@@ -1512,7 +1184,8 @@
       "lng": -118.302195,
       "postedDate": 1784743374,
       "url": "https://www.craigslist.org/view/d/los-angeles-church-for-rent-church/rHMe4pChFZPnhwwhmjHyAU",
-      "thumb": "https://images.craigslist.org/00R0R_crjsNpr5J9C_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00R0R_crjsNpr5J9C_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945940366",
@@ -1526,21 +1199,8 @@
       "lng": -118.665002,
       "postedDate": 1783541535,
       "url": "https://www.craigslist.org/view/d/calabasas-office-for-rent/fvtD7E3n6romNAdpFvAVUH",
-      "thumb": ""
-    },
-    {
-      "id": "cl-7947196197",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Spacious Office for RENT",
-      "price": 1300,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.14558,
-      "lng": -118.250204,
-      "postedDate": 1784059272,
-      "url": "https://www.craigslist.org/view/d/glendale-spacious-office-for-rent/fh8SiHkhW2r5my3od8ASpE",
-      "thumb": "https://images.craigslist.org/00101_eNxpAw2hYYS_0h30ev_50x50c.jpg"
+      "thumb": "",
+      "hood": null
     },
     {
       "id": "cl-7947832907",
@@ -1554,7 +1214,8 @@
       "lng": -118.204893,
       "postedDate": 1784317129,
       "url": "https://www.craigslist.org/view/d/los-angeles-650-grand-st-los-angeles/hLnsdBVmFkwZGDPv8F3hwm",
-      "thumb": "https://images.craigslist.org/00i0i_aplmUXuK4cS_0t20CI_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00i0i_aplmUXuK4cS_0t20CI_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949593087",
@@ -1568,7 +1229,8 @@
       "lng": -118.218703,
       "postedDate": 1785075264,
       "url": "https://www.craigslist.org/view/d/acton-commercial-office-or-business/8RfSsaUwHU85wVxd9FBLXe",
-      "thumb": "https://images.craigslist.org/00p0p_3K3jjfuISeZ_0zF0kd_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00p0p_3K3jjfuISeZ_0zF0kd_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948823943",
@@ -1582,7 +1244,8 @@
       "lng": -118.316102,
       "postedDate": 1784744579,
       "url": "https://www.craigslist.org/view/d/burbank-sqft-burbank-office-space/eZjnzK3obxNW6At8SpPzHm",
-      "thumb": "https://images.craigslist.org/00t0t_8bjZ7Fe13ij_09q03U_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00t0t_8bjZ7Fe13ij_09q03U_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945522134",
@@ -1596,7 +1259,8 @@
       "lng": -118.216067,
       "postedDate": 1783372661,
       "url": "https://www.craigslist.org/view/d/los-angeles-800-sf-boyle-heights/3ntDaqsFhJDg58cjPxybLm",
-      "thumb": ""
+      "thumb": "",
+      "hood": null
     },
     {
       "id": "cl-7950824218",
@@ -1610,7 +1274,8 @@
       "lng": -118.264302,
       "postedDate": 1785574285,
       "url": "https://www.craigslist.org/view/d/los-angeles-music-art-studio-space-for/t92VcmjZwKYpRpSVg1J774",
-      "thumb": "https://images.craigslist.org/00c0c_cJLujQBkE0i_0lM0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00c0c_cJLujQBkE0i_0lM0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7946986124",
@@ -1624,21 +1289,8 @@
       "lng": -118.458593,
       "postedDate": 1783975232,
       "url": "https://www.craigslist.org/view/d/sherman-oaks-spacious-private-office/5iwf8SY8CghjpnnwA9WmcP",
-      "thumb": ""
-    },
-    {
-      "id": "cl-7947345275",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "July Move-In: Office Space - MBS Media Campus - CALL TODAY!📞",
-      "price": 1350,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 33.901616,
-      "lng": -118.384103,
-      "postedDate": 1784130644,
-      "url": "https://www.craigslist.org/view/d/lawndale-july-move-in-office-space-mbs/iPNNbyomaRamBovbczuoFJ",
-      "thumb": "https://images.craigslist.org/00707_lnXqY38NF1X_0x20m1_50x50c.jpg"
+      "thumb": "",
+      "hood": null
     },
     {
       "id": "cl-7947743584",
@@ -1652,7 +1304,8 @@
       "lng": -118.117384,
       "postedDate": 1784296263,
       "url": "https://www.craigslist.org/view/d/palmdale-1200-sq-foot-industrial-shop/fTexK9zmjZofJCsZTrpJmt",
-      "thumb": "https://images.craigslist.org/00R0R_20KPa14at2B_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00R0R_20KPa14at2B_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948834003",
@@ -1666,7 +1319,8 @@
       "lng": -118.532892,
       "postedDate": 1784746721,
       "url": "https://www.craigslist.org/view/d/newhall-office-retail-personal-service/aJJRRBS1pwA12N4PFmgYnc",
-      "thumb": "https://images.craigslist.org/00303_26CXRuszB4z_0CI0cq_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00303_26CXRuszB4z_0CI0cq_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947656667",
@@ -1680,7 +1334,8 @@
       "lng": -118.410113,
       "postedDate": 1784240042,
       "url": "https://www.craigslist.org/view/d/beverly-hills-fully-furnished-office/sDFvow9SwpNEuEgkgPtJot",
-      "thumb": ""
+      "thumb": "",
+      "hood": null
     },
     {
       "id": "cl-7945690292",
@@ -1694,7 +1349,8 @@
       "lng": -118.25601,
       "postedDate": 1783448130,
       "url": "https://www.craigslist.org/view/d/los-angeles-1045-santee-st-los-angeles/9BRZ8TSUvNWPzVHkHskUCG",
-      "thumb": "https://images.craigslist.org/00t0t_5m3qPXPtZdN_0gf0df_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00t0t_5m3qPXPtZdN_0gf0df_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949338090",
@@ -1708,21 +1364,8 @@
       "lng": -118.302906,
       "postedDate": 1784943302,
       "url": "https://www.craigslist.org/view/d/los-angeles-commercial-spaces-for-lease/cMMDiZ4JoGBo5wGRJ4exbY",
-      "thumb": "https://images.craigslist.org/00p0p_hnX49wpOBgX_0CI0t2_50x50c.jpg"
-    },
-    {
-      "id": "cl-7948986787",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "July Move-In: Executive Office Suite - CALL TODAY!📞",
-      "price": 1465,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 33.831019,
-      "lng": -118.355433,
-      "postedDate": 1784820066,
-      "url": "https://www.craigslist.org/view/d/torrance-july-move-in-executive-office/c3z78o3EchjjSJs2xo7Vgm",
-      "thumb": "https://images.craigslist.org/00j0j_a7zR1SLrGSR_0gw0b1_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00p0p_hnX49wpOBgX_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947007761",
@@ -1736,7 +1379,8 @@
       "lng": -118.348408,
       "postedDate": 1783980842,
       "url": "https://www.craigslist.org/view/d/los-angeles-office-space-available-for/s3NPd6gghERZa6Kgrd1gkp",
-      "thumb": "https://images.craigslist.org/01616_Iwp5ycuBU3_07K0ak_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/01616_Iwp5ycuBU3_07K0ak_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947599929",
@@ -1750,21 +1394,8 @@
       "lng": -118.080146,
       "postedDate": 1784226351,
       "url": "https://www.craigslist.org/view/d/palmdale-lowest-price-prime-location/xe8Gib8gDjLiPWaEY6vbCH",
-      "thumb": "https://images.craigslist.org/00F0F_bPBR6ybXCzy_0gl0t2_50x50c.jpg"
-    },
-    {
-      "id": "cl-7950659535",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "August Move-in: Private Office Suite - The Torrance – CALL TODAY!📞",
-      "price": 1490,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 33.837361,
-      "lng": -118.353039,
-      "postedDate": 1785514476,
-      "url": "https://www.craigslist.org/view/d/torrance-august-move-in-private-office/bgWjXzhfY7gopnUUa4UGy9",
-      "thumb": "https://images.craigslist.org/00Q0Q_izIQ9n6JMgJ_0CI0pO_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00F0F_bPBR6ybXCzy_0gl0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945478878",
@@ -1778,21 +1409,8 @@
       "lng": -118.411847,
       "postedDate": 1783362583,
       "url": "https://www.craigslist.org/view/d/san-fernando-office-space-for-lease/unbCaU3PsveoZEJ7t9pYho",
-      "thumb": "https://images.craigslist.org/01313_1iLie82EGjl_0CI0t2_50x50c.jpg"
-    },
-    {
-      "id": "cl-7949323268",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "MONTANA AVE Private Office - Creative Executive Suite",
-      "price": 1499,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.029081,
-      "lng": -118.499055,
-      "postedDate": 1784937791,
-      "url": "https://www.craigslist.org/view/d/santa-monica-montana-ave-private-office/mR59QT9gtM5vKdQQQRU1Pw",
-      "thumb": "https://images.craigslist.org/00y0y_eLJmUXkIfoi_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/01313_1iLie82EGjl_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945679497",
@@ -1806,7 +1424,8 @@
       "lng": -118.260627,
       "postedDate": 1783445470,
       "url": "https://www.craigslist.org/view/d/los-angeles-1326-main-st-alley-grnd-flr/nSD49fw8cjuvh2baE7esLA",
-      "thumb": "https://images.craigslist.org/00w0w_cWLi741r8oz_0pO0jm_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00w0w_cWLi741r8oz_0pO0jm_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950747415",
@@ -1820,7 +1439,8 @@
       "lng": -118.291513,
       "postedDate": 1785535136,
       "url": "https://www.craigslist.org/view/d/los-angeles-flexible-creative-space-for/rpJTXmyn1uHDbdtuo4Gx2H",
-      "thumb": "https://images.craigslist.org/00o0o_4qAGkuqCBDU_0gk0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00o0o_4qAGkuqCBDU_0gk0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947690099",
@@ -1834,7 +1454,8 @@
       "lng": -118.222405,
       "postedDate": 1784251947,
       "url": "https://www.craigslist.org/view/d/huntington-park-huntington-park-dental/q5L5XCRdtMRPdxJsmRT6pK",
-      "thumb": "https://images.craigslist.org/00v0v_kUVMMxbFn42_0do0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00v0v_kUVMMxbFn42_0do0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947487727",
@@ -1848,7 +1469,8 @@
       "lng": -118.37646,
       "postedDate": 1784171972,
       "url": "https://www.craigslist.org/view/d/los-angeles-creative-studio-office/vtx1Y4QuvcrB4q3R8ACqfk",
-      "thumb": "https://images.craigslist.org/00808_cuBjgIwuqpK_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00808_cuBjgIwuqpK_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948809562",
@@ -1862,7 +1484,8 @@
       "lng": -118.057757,
       "postedDate": 1784741326,
       "url": "https://www.craigslist.org/view/d/santa-fe-springs-no-contract-short-long/nzakUmq8fLuwBXEUrci8eB",
-      "thumb": ""
+      "thumb": "",
+      "hood": null
     },
     {
       "id": "cl-7948412550",
@@ -1876,7 +1499,8 @@
       "lng": -118.205097,
       "postedDate": 1784578197,
       "url": "https://www.craigslist.org/view/d/la-canada-flintridge-day-office-in/n1nXGHii2haxALq59MeAEW",
-      "thumb": ""
+      "thumb": "",
+      "hood": null
     },
     {
       "id": "cl-7950095427",
@@ -1890,7 +1514,8 @@
       "lng": -118.33121,
       "postedDate": 1785271304,
       "url": "https://www.craigslist.org/view/d/los-angeles-hwood-grnd-flr-office-space/v3sfoogB2yRafb9SnuzJNF",
-      "thumb": "https://images.craigslist.org/00h0h_lhl3Lr0jwap_0jw0eD_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00h0h_lhl3Lr0jwap_0jw0eD_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947643553",
@@ -1904,7 +1529,8 @@
       "lng": -118.765296,
       "postedDate": 1784236622,
       "url": "https://www.craigslist.org/view/d/simi-valley-760-sqft-available-retail/tpFCxbiNCTGLi12fkz77wt",
-      "thumb": ""
+      "thumb": "",
+      "hood": null
     },
     {
       "id": "cl-7947498600",
@@ -1918,7 +1544,8 @@
       "lng": -118.287893,
       "postedDate": 1784181385,
       "url": "https://www.craigslist.org/view/d/san-pedro-small-retail-shop-on-pacific/jKmwqBbGQ7BEQHpTgkiJYi",
-      "thumb": "https://images.craigslist.org/00v0v_iMkkpUNu8Hl_0t20CI_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00v0v_iMkkpUNu8Hl_0t20CI_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947988092",
@@ -1932,7 +1559,8 @@
       "lng": -117.732448,
       "postedDate": 1784391603,
       "url": "https://www.craigslist.org/view/d/pomona-retail-unit-available/6fdLnWzb7tJxHj8bZmp9ir",
-      "thumb": "https://images.craigslist.org/00P0P_3Rm7gEJ0h9y_0CI0hp_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00P0P_3Rm7gEJ0h9y_0CI0hp_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945762330",
@@ -1946,7 +1574,8 @@
       "lng": -118.364186,
       "postedDate": 1783466401,
       "url": "https://www.craigslist.org/view/d/los-angeles-private-office-space/wvkW1NNn3FLU118vL87L2S",
-      "thumb": "https://images.craigslist.org/00z0z_gM2UNtQbjFS_0t20CI_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00z0z_gM2UNtQbjFS_0t20CI_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949954242",
@@ -1960,7 +1589,8 @@
       "lng": -118.397668,
       "postedDate": 1785215351,
       "url": "https://www.craigslist.org/view/d/culver-city-join-our-collective-private/6G1qgsJJtW7Y3rsNPJK83j",
-      "thumb": "https://images.craigslist.org/00u0u_fD1qsChuxdT_0kO0es_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00u0u_fD1qsChuxdT_0kO0es_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950071178",
@@ -1974,21 +1604,8 @@
       "lng": -118.167805,
       "postedDate": 1785265408,
       "url": "https://www.craigslist.org/view/d/long-beach-fantastic-commercial-retail/kLACJziZhWUnQAv53qVCrd",
-      "thumb": "https://images.craigslist.org/00404_8k23es6zQH9_0ew0aT_50x50c.jpg"
-    },
-    {
-      "id": "cl-7948628222",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Treatment room available in beautiful office space",
-      "price": 1600,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.035607,
-      "lng": -118.471514,
-      "postedDate": 1784663357,
-      "url": "https://www.craigslist.org/view/d/santa-monica-treatment-room-available/5rqKviHaZnvH8u1rqQaq4j",
-      "thumb": "https://images.craigslist.org/00404_hOwurKM0Evo_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00404_8k23es6zQH9_0ew0aT_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950345566",
@@ -2002,21 +1619,8 @@
       "lng": -118.300028,
       "postedDate": 1785368135,
       "url": "https://www.craigslist.org/view/d/los-angeles-commercial-office-space-for/mGpoLDmM4rKp94EHyywvdb",
-      "thumb": "https://images.craigslist.org/00A0A_hspUaocG7j8_0ew08b_50x50c.jpg"
-    },
-    {
-      "id": "cl-7948779344",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "July Move-In: Office Suite - Encino Financial Center - CALL TODAY!📞",
-      "price": 1625,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.15713,
-      "lng": -118.48448,
-      "postedDate": 1784735121,
-      "url": "https://www.craigslist.org/view/d/encino-july-move-in-office-suite-encino/rMTBGGtfGxDXqkBKPAeFph",
-      "thumb": "https://images.craigslist.org/00w0w_aI32KZ6e1Hu_0k00dk_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00A0A_hspUaocG7j8_0ew08b_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945474638",
@@ -2030,7 +1634,8 @@
       "lng": -118.48727,
       "postedDate": 1783361592,
       "url": "https://www.craigslist.org/view/d/encino-office-space-for-rent/6YidQL8CBvDVaDKmLxqSUv",
-      "thumb": "https://images.craigslist.org/00000_81ZSX0Md6lG_0t20CI_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00000_81ZSX0Md6lG_0t20CI_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948173276",
@@ -2044,7 +1649,8 @@
       "lng": -118.255313,
       "postedDate": 1784479198,
       "url": "https://www.craigslist.org/view/d/los-angeles-for-lease-mini-warehouse-sf/37EHvuwgKP7pwQTicEw9Ed",
-      "thumb": "https://images.craigslist.org/00909_dcUlMqOJTM1_0oo0ww_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00909_dcUlMqOJTM1_0oo0ww_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945905963",
@@ -2058,7 +1664,8 @@
       "lng": -118.221695,
       "postedDate": 1783533845,
       "url": "https://www.craigslist.org/view/d/los-angeles-artist-studio-cypress-park/pWM2q22uA8NKUSZxb9SYSK",
-      "thumb": "https://images.craigslist.org/00l0l_euE7WvJiYS7_0x20iA_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00l0l_euE7WvJiYS7_0x20iA_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947320236",
@@ -2072,21 +1679,8 @@
       "lng": -118.200808,
       "postedDate": 1784124007,
       "url": "https://www.craigslist.org/view/d/south-gate-office-space-for-lease/hcuuoTFnvYAfAUpYMAMAbL",
-      "thumb": "https://images.craigslist.org/00z0z_jVG040w1z80_0lM0t2_50x50c.jpg"
-    },
-    {
-      "id": "cl-7948079304",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Executive Offices in Encino/Near Van Nuys, 1 MONTH FREE, Move-In Ready",
-      "price": 1701,
-      "period": "monthly",
-      "sqft": 667,
-      "lat": 34.159046,
-      "lng": -118.501193,
-      "postedDate": 1784417318,
-      "url": "https://www.craigslist.org/view/d/encino-executive-offices-in-encino-near/xBtXQdVTdVp4ifBtUaD8fo",
-      "thumb": "https://images.craigslist.org/00Z0Z_2DaJ57wYp7xz_0nw0fG_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00z0z_jVG040w1z80_0lM0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950704181",
@@ -2100,7 +1694,8 @@
       "lng": -118.388734,
       "postedDate": 1785524256,
       "url": "https://www.craigslist.org/view/d/beverly-hills-sublease-prime-medical/djqCftzTXNMB2YgyQmmdHh",
-      "thumb": "https://images.craigslist.org/00t0t_9F857oO8vPT_0k00dl_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00t0t_9F857oO8vPT_0k00dl_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7946528828",
@@ -2114,7 +1709,8 @@
       "lng": -118.448962,
       "postedDate": 1783786151,
       "url": "https://www.craigslist.org/view/d/van-nuys-ground-floor-retail-office/tqFNFFeMkb5VHVgbFGZTWC",
-      "thumb": "https://images.craigslist.org/00Z0Z_8be1rrnqGQJ_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00Z0Z_8be1rrnqGQJ_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949051441",
@@ -2128,7 +1724,8 @@
       "lng": -118.486214,
       "postedDate": 1784834179,
       "url": "https://www.craigslist.org/view/d/van-nuys-prime-industrial-flex-space/r5xgSmyBKvtBUMCYaYZsHV",
-      "thumb": "https://images.craigslist.org/00V0V_1UHY9qCr9Pp_0lR0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00V0V_1UHY9qCr9Pp_0lR0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949827084",
@@ -2142,7 +1739,8 @@
       "lng": -118.010096,
       "postedDate": 1785172933,
       "url": "https://www.craigslist.org/view/d/la-mirada-armstrong-la-county-sq-ft/rmk4WLH88nVCevf2hvfFBe",
-      "thumb": "https://images.craigslist.org/01717_2lAA35VM5Zy_03S05a_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/01717_2lAA35VM5Zy_03S05a_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945922072",
@@ -2156,7 +1754,8 @@
       "lng": -118.363121,
       "postedDate": 1783537306,
       "url": "https://www.craigslist.org/view/d/los-angeles-month-sublet-900-sf-west/vr7BEv79i5ruEirWQujzP1",
-      "thumb": "https://images.craigslist.org/00606_leK5cX5cMT2_0MM132_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00606_leK5cX5cMT2_0MM132_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947443199",
@@ -2170,7 +1769,8 @@
       "lng": -118.346469,
       "postedDate": 1784153724,
       "url": "https://www.craigslist.org/view/d/burbank-prime-office-for-lease-1700-in/ufAgq7mDkKQVzNzMZrhBDV",
-      "thumb": "https://images.craigslist.org/00M0M_46ynPgrOyJq_1320MM_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00M0M_46ynPgrOyJq_1320MM_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950337570",
@@ -2184,7 +1784,8 @@
       "lng": -118.361304,
       "postedDate": 1785365587,
       "url": "https://www.craigslist.org/view/d/inglewood-corner-building-great-foot/kRbfit4x2aGQEyxjKxjyjQ",
-      "thumb": "https://images.craigslist.org/00D0D_gHgO6R1rdHQ_0CI0t1_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00D0D_gHgO6R1rdHQ_0CI0t1_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950333243",
@@ -2198,7 +1799,8 @@
       "lng": -117.836595,
       "postedDate": 1785364187,
       "url": "https://www.craigslist.org/view/d/glendora-retail-space-available-prime/7tKCPoLgdMP7BpFrFqvhJ1",
-      "thumb": "https://images.craigslist.org/00U0U_jaMa9FzGNrc_1u8176_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00U0U_jaMa9FzGNrc_1u8176_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945314041",
@@ -2212,7 +1814,8 @@
       "lng": -118.257785,
       "postedDate": 1783286098,
       "url": "https://www.craigslist.org/view/d/los-angeles-office-retail-gallery-flex/mLGQQnFeueAeWjNBcGVmTX",
-      "thumb": "https://images.craigslist.org/00I0I_iFfhn78HyfM_0jm08W_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00I0I_iFfhn78HyfM_0jm08W_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945475402",
@@ -2226,7 +1829,8 @@
       "lng": -118.112212,
       "postedDate": 1783361766,
       "url": "https://www.craigslist.org/view/d/downey-semi-industrial-commercial-space/cKr84YvQQhRTbJo94c8Fxn",
-      "thumb": "https://images.craigslist.org/00f0f_ep4OJhP7O5D_0oz09Z_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00f0f_ep4OJhP7O5D_0oz09Z_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949091186",
@@ -2240,7 +1844,8 @@
       "lng": -118.286295,
       "postedDate": 1784844644,
       "url": "https://www.craigslist.org/view/d/los-angeles-commercial-creative-office/3ynQJhDtag1WTcVZciGReZ",
-      "thumb": "https://images.craigslist.org/00X0X_6rGw3OmYjED_1u8176_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00X0X_6rGw3OmYjED_1u8176_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945697456",
@@ -2254,7 +1859,8 @@
       "lng": -118.307304,
       "postedDate": 1783449716,
       "url": "https://www.craigslist.org/view/d/los-angeles-commercial-unit-for-lease/dAq6ffMvFMMe2saxtBcypV",
-      "thumb": "https://images.craigslist.org/00E0E_fujRpwYGeUv_1320MM_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00E0E_fujRpwYGeUv_1320MM_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945913017",
@@ -2268,7 +1874,8 @@
       "lng": -118.300228,
       "postedDate": 1783535405,
       "url": "https://www.craigslist.org/view/d/gardena-1900-for-lease-111o-sq-ft/aGd55TLnf1ke4nDzCa2Rfs",
-      "thumb": "https://images.craigslist.org/01010_4G2hYZNyNXU_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/01010_4G2hYZNyNXU_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949831992",
@@ -2282,7 +1889,8 @@
       "lng": -118.404306,
       "postedDate": 1785173826,
       "url": "https://www.craigslist.org/view/d/beverly-hills-beautiful-office-suite-in/i5GkeLaXJjMckZ1AJg2C77",
-      "thumb": "https://images.craigslist.org/00G0G_eGMBGhq8LsI_0CI0qb_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00G0G_eGMBGhq8LsI_0CI0qb_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948546818",
@@ -2296,7 +1904,8 @@
       "lng": -118.271405,
       "postedDate": 1784645358,
       "url": "https://www.craigslist.org/view/d/los-angeles-great-small-warehouse/6619Sxfuy2AajApJRt7r4p",
-      "thumb": "https://images.craigslist.org/00V0V_ecIh17aPS0d_0t20CI_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00V0V_ecIh17aPS0d_0t20CI_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948699823",
@@ -2310,21 +1919,8 @@
       "lng": -118.246201,
       "postedDate": 1784686014,
       "url": "https://www.craigslist.org/view/d/los-angeles-treated-mix-room-for-rent/szpB425jmPRcNEyfeEu2YQ",
-      "thumb": "https://images.craigslist.org/00r0r_6DxdJlug8k7_1320MM_50x50c.jpg"
-    },
-    {
-      "id": "cl-7947764835",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "July Move-In: Executive Office Suite - CALL TODAY!📞",
-      "price": 1960,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.146666,
-      "lng": -118.132506,
-      "postedDate": 1784302168,
-      "url": "https://www.craigslist.org/view/d/pasadena-july-move-in-executive-office/ev3R5oUkhheWnZin5u7p5J",
-      "thumb": "https://images.craigslist.org/00000_5mSt9UsOfJ1_0gw0b1_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00r0r_6DxdJlug8k7_1320MM_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945910864",
@@ -2338,7 +1934,8 @@
       "lng": -118.2252,
       "postedDate": 1783534926,
       "url": "https://www.craigslist.org/view/d/huntington-park-2618-saturn-ave/c9rqEVGmrQzmF23jW4NYHA",
-      "thumb": "https://images.craigslist.org/00505_jZPgOyRgT38_0kO0e0_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00505_jZPgOyRgT38_0kO0e0_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7946170553",
@@ -2352,7 +1949,8 @@
       "lng": -118.114332,
       "postedDate": 1783630828,
       "url": "https://www.craigslist.org/view/d/downey-car-auto-dealer-suites-office/1PMrWDznGAqydWbuWBUfsj",
-      "thumb": "https://images.craigslist.org/00m0m_hfHnrmPpFR1_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00m0m_hfHnrmPpFR1_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7946988045",
@@ -2366,7 +1964,8 @@
       "lng": -118.267976,
       "postedDate": 1783975775,
       "url": "https://www.craigslist.org/view/d/los-angeles-amazing-creative-workspace/d1nJYaMdmFgTPB65phnCCY",
-      "thumb": "https://images.craigslist.org/00X0X_hQJkKLSEudQ_0uY0kF_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00X0X_hQJkKLSEudQ_0uY0kF_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945805502",
@@ -2380,7 +1979,8 @@
       "lng": -118.429803,
       "postedDate": 1783489061,
       "url": "https://www.craigslist.org/view/d/los-angeles-creative-studio-office-with/nmFtQ1kBkWx1t1B99Yhj8r",
-      "thumb": "https://images.craigslist.org/00p0p_78t9TFmvzfY_0oM0gw_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00p0p_78t9TFmvzfY_0oM0gw_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945770149",
@@ -2394,7 +1994,8 @@
       "lng": -118.454823,
       "postedDate": 1783469146,
       "url": "https://www.craigslist.org/view/d/panorama-city-1078-sqft-industrial-space/iiTPM9GnKmw1wYAQwauzZT",
-      "thumb": "https://images.craigslist.org/00k0k_1AvWRAGze9_0ww0oo_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00k0k_1AvWRAGze9_0ww0oo_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7946167826",
@@ -2408,7 +2009,8 @@
       "lng": -118.255012,
       "postedDate": 1783630061,
       "url": "https://www.craigslist.org/view/d/glendale-private-office-studio-flex/tPhBdkJ9TUoracJ6snU5wL",
-      "thumb": "https://images.craigslist.org/00s0s_fnFi1AIXITM_1320MM_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00s0s_fnFi1AIXITM_1320MM_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947458974",
@@ -2422,7 +2024,8 @@
       "lng": -118.040067,
       "postedDate": 1784158754,
       "url": "https://www.craigslist.org/view/d/el-monte-office-retail-light/mZZdTmBpooPyzL5HA1cPqh",
-      "thumb": "https://images.craigslist.org/01717_9VUnlwb7H0X_09G09G_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/01717_9VUnlwb7H0X_09G09G_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7946627088",
@@ -2436,7 +2039,8 @@
       "lng": -118.265203,
       "postedDate": 1783812036,
       "url": "https://www.craigslist.org/view/d/los-angeles-creative-work-studio-for/wyd3mM3tFxMEBCwZ1ap1BM",
-      "thumb": "https://images.craigslist.org/00E0E_7hqc2IN7pjw_0nm0hw_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00E0E_7hqc2IN7pjw_0nm0hw_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948360634",
@@ -2450,7 +2054,8 @@
       "lng": -118.259398,
       "postedDate": 1784566892,
       "url": "https://www.craigslist.org/view/d/los-angeles-retailworkshop-creative/gG5pQkp1Yypj67JabL9sfx",
-      "thumb": "https://images.craigslist.org/00808_qLunnxg6JS_0x20oM_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00808_qLunnxg6JS_0x20oM_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949864933",
@@ -2464,7 +2069,8 @@
       "lng": -118.379008,
       "postedDate": 1785181378,
       "url": "https://www.craigslist.org/view/d/studio-city-studio-city-garden-office/2zXgzSbuc5U4v4vuL5EKBC",
-      "thumb": "https://images.craigslist.org/00s0s_fYen2iWuBgp_0g80c6_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00s0s_fYen2iWuBgp_0g80c6_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949050500",
@@ -2478,21 +2084,8 @@
       "lng": -118.189935,
       "postedDate": 1784833956,
       "url": "https://www.craigslist.org/view/d/long-beach-free-salon-assets-included/n34ymDEXiucBmTY5SjcsqA",
-      "thumb": "https://images.craigslist.org/00B0B_8jrROwoI9Wb_0jh0aF_50x50c.jpg"
-    },
-    {
-      "id": "cl-7947060323",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "THRIFT STORE /PARTY SUPPLY/SHOSE/CLOTHING STORE",
-      "price": 2195,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 33.905755,
-      "lng": -118.328068,
-      "postedDate": 1784003120,
-      "url": "https://www.craigslist.org/view/d/thrift-store-party-supply-shose/sGUByrWBNNNLr7B1JESX2B",
-      "thumb": ""
+      "thumb": "https://images.craigslist.org/00B0B_8jrROwoI9Wb_0jh0aF_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949877163",
@@ -2506,7 +2099,8 @@
       "lng": -118.448908,
       "postedDate": 1785184181,
       "url": "https://www.craigslist.org/view/d/sherman-oaks-1200-sf-office-space-for/dFNEwvCPBU9VdJFnVTPDpr",
-      "thumb": "https://images.craigslist.org/01616_3amS8zSB3Uo_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/01616_3amS8zSB3Uo_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950326568",
@@ -2520,21 +2114,8 @@
       "lng": -118.108488,
       "postedDate": 1785362151,
       "url": "https://www.craigslist.org/view/d/monterey-park-retail-space-available/2AXquM9mMg3VgmsJShtmAN",
-      "thumb": "https://images.craigslist.org/00G0G_hA4IQlnRIUh_0g80c6_50x50c.jpg"
-    },
-    {
-      "id": "cl-7945586990",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Retail Storefront Store Shop for Lease in Busy Eastern Columbia Build.",
-      "price": 2200,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.04311,
-      "lng": -118.257102,
-      "postedDate": 1783397889,
-      "url": "https://www.craigslist.org/view/d/los-angeles-retail-storefront-store/xmq6HPay5TorCY2RU6KYao",
-      "thumb": "https://images.craigslist.org/01616_dvVZZPTDK2F_0zu0qC_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00G0G_hA4IQlnRIUh_0g80c6_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949300655",
@@ -2548,7 +2129,8 @@
       "lng": -118.60424,
       "postedDate": 1784930474,
       "url": "https://www.craigslist.org/view/d/chatsworth-1200-sq-ft-industrial/8RJWayjg3FXLrW7WsR4SmG",
-      "thumb": "https://images.craigslist.org/00g0g_egeUTCLZF0X_0ky0dG_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00g0g_egeUTCLZF0X_0ky0dG_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947842199",
@@ -2562,7 +2144,8 @@
       "lng": -118.309108,
       "postedDate": 1784319357,
       "url": "https://www.craigslist.org/view/d/torrance-1200-sf-industrial-commercial/hCQYWmYPWUPSx7DtcQNLmM",
-      "thumb": "https://images.craigslist.org/00i0i_5LsyxvQOGm1_0CI0lM_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00i0i_5LsyxvQOGm1_0CI0lM_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947223284",
@@ -2576,7 +2159,8 @@
       "lng": -118.272068,
       "postedDate": 1784066215,
       "url": "https://www.craigslist.org/view/d/los-angeles-retail-office-ready-now/jdaeAiCdwdfnR5veQVRzQD",
-      "thumb": "https://images.craigslist.org/00303_8UbdnloL6tW_0gw0b0_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00303_8UbdnloL6tW_0gw0b0_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945799052",
@@ -2590,7 +2174,8 @@
       "lng": -118.486802,
       "postedDate": 1783483259,
       "url": "https://www.craigslist.org/view/d/van-nuys-flex-space-retail-office-etc/cycatWFnQGiS3dVgzqaw7o",
-      "thumb": "https://images.craigslist.org/00J0J_du2mOXGOaTj_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00J0J_du2mOXGOaTj_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7946349851",
@@ -2604,7 +2189,8 @@
       "lng": -118.278208,
       "postedDate": 1783708063,
       "url": "https://www.craigslist.org/view/d/los-angeles-commercial-workshop-with/7kbonP2mN9pQ6ViFpb7ME4",
-      "thumb": ""
+      "thumb": "",
+      "hood": null
     },
     {
       "id": "cl-7946838473",
@@ -2618,7 +2204,8 @@
       "lng": -118.124898,
       "postedDate": 1783919224,
       "url": "https://www.craigslist.org/view/d/san-marino-beautiful-charming-quiet/iVAwArY5FgtWsKDnj8MUA2",
-      "thumb": "https://images.craigslist.org/00g0g_jSbgSHlVtJx_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00g0g_jSbgSHlVtJx_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949306337",
@@ -2632,7 +2219,8 @@
       "lng": -117.978197,
       "postedDate": 1784932122,
       "url": "https://www.craigslist.org/view/d/la-puente-retail-space-available/fe2XZPLp2jA7cEdx5ivuoy",
-      "thumb": "https://images.craigslist.org/00s0s_kOQw4Jhx4dg_0ld0aa_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00s0s_kOQw4Jhx4dg_0ld0aa_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7946746587",
@@ -2646,7 +2234,8 @@
       "lng": -118.605825,
       "postedDate": 1783880883,
       "url": "https://www.craigslist.org/view/d/canoga-park-spacious-office-for-rent/sZDi1HpUbd1PKNCqmQqmiB",
-      "thumb": ""
+      "thumb": "",
+      "hood": null
     },
     {
       "id": "cl-7948448523",
@@ -2660,7 +2249,8 @@
       "lng": -118.099598,
       "postedDate": 1784587674,
       "url": "https://www.craigslist.org/view/d/rosemead-commercial-building-for-lease/mbHZRhFg17yuENXepACNhV",
-      "thumb": ""
+      "thumb": "",
+      "hood": null
     },
     {
       "id": "cl-7950468632",
@@ -2674,7 +2264,8 @@
       "lng": -118.134099,
       "postedDate": 1785432003,
       "url": "https://www.craigslist.org/view/d/bellflower-fantastic-opportunity-retail/f5yepT6fZPaKyGc4sKCsBc",
-      "thumb": "https://images.craigslist.org/00M0M_h5u7OFg1vaI_0ew0aT_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00M0M_h5u7OFg1vaI_0ew0aT_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947223481",
@@ -2688,7 +2279,8 @@
       "lng": -118.242609,
       "postedDate": 1784066271,
       "url": "https://www.craigslist.org/view/d/los-angeles-frogtown-creative-office/vGjddLQCyze28hodykfgCC",
-      "thumb": ""
+      "thumb": "",
+      "hood": null
     },
     {
       "id": "cl-7945478598",
@@ -2702,7 +2294,8 @@
       "lng": -118.408514,
       "postedDate": 1783362522,
       "url": "https://www.craigslist.org/view/d/san-fernando-industrial-warehouse-space/8jXrQWZJQBXaA1oLHF6XXy",
-      "thumb": "https://images.craigslist.org/01313_1iLie82EGjl_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/01313_1iLie82EGjl_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945668311",
@@ -2716,7 +2309,8 @@
       "lng": -118.353354,
       "postedDate": 1783442978,
       "url": "https://www.craigslist.org/view/d/los-angeles-710-sf-retail-showroom-for/aHzDjcWoLkY3wVervSKYSE",
-      "thumb": "https://images.craigslist.org/00909_1RfDS78pHlt_0t20CI_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00909_1RfDS78pHlt_0t20CI_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947651593",
@@ -2730,7 +2324,8 @@
       "lng": -118.351619,
       "postedDate": 1784238561,
       "url": "https://www.craigslist.org/view/d/inglewood-music-podcast-studio/sJsH4n36heKzvbSsDiH2Qx",
-      "thumb": "https://images.craigslist.org/00K0K_48JXS219QxE_0CI0lM_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00K0K_48JXS219QxE_0CI0lM_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950297552",
@@ -2744,7 +2339,8 @@
       "lng": -118.59312,
       "postedDate": 1785355027,
       "url": "https://www.craigslist.org/view/d/chatsworth-flex-office-workspace/1dK8atKBRhf8Aad8N8M1A4",
-      "thumb": "https://images.craigslist.org/00k0k_iEfsFR8ByPb_0gl0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00k0k_iEfsFR8ByPb_0gl0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948024419",
@@ -2758,21 +2354,8 @@
       "lng": -118.203313,
       "postedDate": 1784400281,
       "url": "https://www.craigslist.org/view/d/los-angeles-coffee-shop-yoga-studio/gzxbg3xza92qU2KNT8ntSa",
-      "thumb": ""
-    },
-    {
-      "id": "cl-7950429342",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Prime Long Beach/Belmont commercial space/storefront with great visibility and c",
-      "price": 2550,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 33.7695,
-      "lng": -118.152505,
-      "postedDate": 1785428922,
-      "url": "https://www.craigslist.org/view/d/long-beach-prime-long-beach-belmont/6AS4VuWYvwreEzhbo8JNZw",
-      "thumb": "https://images.craigslist.org/00808_gsQseefyPpT_0AG0CI_50x50c.jpg"
+      "thumb": "",
+      "hood": null
     },
     {
       "id": "cl-7947684156",
@@ -2786,7 +2369,8 @@
       "lng": -118.188931,
       "postedDate": 1784249232,
       "url": "https://www.craigslist.org/view/d/los-angeles-900sf-commercial-retail/pMZniiYk6Z5L3cJvV9hQSh",
-      "thumb": "https://images.craigslist.org/00w0w_4xs1X8KrUn8_0lM0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00w0w_4xs1X8KrUn8_0lM0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950622987",
@@ -2800,7 +2384,8 @@
       "lng": -118.345703,
       "postedDate": 1785504432,
       "url": "https://www.craigslist.org/view/d/burbank-monthly-recording-rehearsal-and/n9UjRG6TuujqV1vCRDxzmt",
-      "thumb": "https://images.craigslist.org/00V0V_fQ6fa9ht6m0_0gw0oM_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00V0V_fQ6fa9ht6m0_0gw0oM_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945757310",
@@ -2814,7 +2399,8 @@
       "lng": -117.979277,
       "postedDate": 1783464862,
       "url": "https://www.craigslist.org/view/d/la-puente-retail-space-for-lease/qkwPbxYRvd9GKRs8bfJW7V",
-      "thumb": "https://images.craigslist.org/00X0X_5R3dIXiEz2t_12w0Mo_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00X0X_5R3dIXiEz2t_12w0Mo_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7946996065",
@@ -2828,21 +2414,8 @@
       "lng": -118.081799,
       "postedDate": 1783977802,
       "url": "https://www.craigslist.org/view/d/norwalk-260-sqft-warehouse-space-1181/i1wtxQKq8uGq7BkBMgPGz5",
-      "thumb": "https://images.craigslist.org/00909_asXZjNm8517_07K0ak_50x50c.jpg"
-    },
-    {
-      "id": "cl-7949852611",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Private Recording Studio Lockout – Highland Park – $2,500/Month",
-      "price": 2500,
-      "period": "monthly",
-      "sqft": 350,
-      "lat": 34.1145,
-      "lng": -118.192898,
-      "postedDate": 1785178336,
-      "url": "https://www.craigslist.org/view/d/los-angeles-private-recording-studio/op8theyFMCxtmmeW1kVNhh",
-      "thumb": "https://images.craigslist.org/00A0A_i2Kmetw2Pcz_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00909_asXZjNm8517_07K0ak_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949935268",
@@ -2856,21 +2429,8 @@
       "lng": -118.596385,
       "postedDate": 1785202688,
       "url": "https://www.craigslist.org/view/d/chatsworth-commercial-unit-roll-up/b7bCuqvbHNkbeUn4ZFnw5a",
-      "thumb": "https://images.craigslist.org/00u0u_jkjpTmhVBv2_0CI0t2_50x50c.jpg"
-    },
-    {
-      "id": "cl-7949879444",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "660- Torrance | 2,000-54,000 sq ft | Flexible Term (Torrance) #660",
-      "price": 2600,
-      "period": "monthly",
-      "sqft": 54000,
-      "lat": 33.828598,
-      "lng": -118.292006,
-      "postedDate": 1785184766,
-      "url": "https://www.craigslist.org/view/d/torrance-660-torrance-sq-ft-flexible/4PKHG9P5bB7sECK3q5Yn63",
-      "thumb": "https://images.craigslist.org/00404_d3QYXUBUh9W_0ak07K_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00u0u_jkjpTmhVBv2_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950487049",
@@ -2884,7 +2444,8 @@
       "lng": -118.245163,
       "postedDate": 1785436584,
       "url": "https://www.craigslist.org/view/d/los-angeles-signalized-corner-of-third/wd8WaFY3ctZJ7GjbgUyE3K",
-      "thumb": "https://images.craigslist.org/00x0x_cUg1N95nCTJ_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00x0x_cUg1N95nCTJ_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945476337",
@@ -2898,7 +2459,8 @@
       "lng": -118.0917,
       "postedDate": 1783361972,
       "url": "https://www.craigslist.org/view/d/palmdale-flex-semi-industrial-warehouse/pwnpVejg6xRxQiq9wriZjt",
-      "thumb": "https://images.craigslist.org/00909_Sd1RfJ8tHW_0gw075_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00909_Sd1RfJ8tHW_0gw075_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947226765",
@@ -2912,7 +2474,8 @@
       "lng": -118.221312,
       "postedDate": 1784067192,
       "url": "https://www.craigslist.org/view/d/los-angeles-dream-artist-studio-private/drTQFK6vQvwap8BxjPm37c",
-      "thumb": "https://images.craigslist.org/00u0u_9EoPAv3TVAb_0CI0pO_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00u0u_9EoPAv3TVAb_0CI0pO_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948891592",
@@ -2926,7 +2489,8 @@
       "lng": -118.185017,
       "postedDate": 1784762737,
       "url": "https://www.craigslist.org/view/d/los-angeles-live-work-standalone-home/wCCchZyg4mAZxva7owHFEU",
-      "thumb": "https://images.craigslist.org/00w0w_fh40v9GibOJ_0CI0pO_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00w0w_fh40v9GibOJ_0CI0pO_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950805554",
@@ -2940,7 +2504,8 @@
       "lng": -117.865254,
       "postedDate": 1785561190,
       "url": "https://www.craigslist.org/view/d/walnut-professional-office-space/iLbxipekeKDRrA97dYbr9Z",
-      "thumb": "https://images.craigslist.org/00707_ftYMYJ12Jq4_0sy0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00707_ftYMYJ12Jq4_0sy0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947361781",
@@ -2954,7 +2519,8 @@
       "lng": -118.181697,
       "postedDate": 1784134020,
       "url": "https://www.craigslist.org/view/d/bell-gardens-medical-clinic-building/ejVVRqmoiRa5fWuXM9s8k6",
-      "thumb": "https://images.craigslist.org/00t0t_ft32aly5KVj_0ak07K_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00t0t_ft32aly5KVj_0ak07K_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950488739",
@@ -2968,7 +2534,8 @@
       "lng": -118.125849,
       "postedDate": 1785437008,
       "url": "https://www.craigslist.org/view/d/downey-office-suite-for-rent/vMYRWUCyHiuYWiG77m8nQ9",
-      "thumb": "https://images.craigslist.org/01111_5RjhB2JYnmq_0zo0ph_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/01111_5RjhB2JYnmq_0zo0ph_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7946954461",
@@ -2982,7 +2549,8 @@
       "lng": -118.40555,
       "postedDate": 1783967989,
       "url": "https://www.craigslist.org/view/d/pacoima-commercial-unit-for-lease/xxSWfmRDfxeKLPsYjWkJD8",
-      "thumb": "https://images.craigslist.org/00F0F_4I9kRNXQI92_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00F0F_4I9kRNXQI92_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947766245",
@@ -2996,7 +2564,8 @@
       "lng": -118.416396,
       "postedDate": 1784302546,
       "url": "https://www.craigslist.org/view/d/los-angeles-private-creative-office/t5HdTfS3UnbTGzpt5brqVT",
-      "thumb": "https://images.craigslist.org/00I0I_ieUZQvN50TO_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00I0I_ieUZQvN50TO_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950476262",
@@ -3010,7 +2579,8 @@
       "lng": -118.28261,
       "postedDate": 1785433892,
       "url": "https://www.craigslist.org/view/d/los-angeles-prime-beverly-blvd/tRx3jdScxn2K3q4aegzpiN",
-      "thumb": "https://images.craigslist.org/00o0o_ck4SawyNigA_0kE0fu_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00o0o_ck4SawyNigA_0kE0fu_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7944929822",
@@ -3024,7 +2594,8 @@
       "lng": -118.219099,
       "postedDate": 1783098380,
       "url": "https://www.craigslist.org/view/d/los-angeles-used-car-dealer/bZr1GkTMB1GufRgDc2RxEy",
-      "thumb": ""
+      "thumb": "",
+      "hood": null
     },
     {
       "id": "cl-7948450912",
@@ -3038,7 +2609,8 @@
       "lng": -118.738341,
       "postedDate": 1784588471,
       "url": "https://www.craigslist.org/view/d/agoura-hills-beautifully-remodeled/aLp7xitxSYu4ZJJkeu5zBj",
-      "thumb": "https://images.craigslist.org/00H0H_20E619hGwqy_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00H0H_20E619hGwqy_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945975729",
@@ -3052,7 +2624,8 @@
       "lng": -118.16708,
       "postedDate": 1783550882,
       "url": "https://www.craigslist.org/view/d/long-beach-water-store-mini-mart-for/o1jGBG1CRNmPy9Aiikjw2W",
-      "thumb": "https://images.craigslist.org/00g0g_gdfrUh2OVov_0sG0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00g0g_gdfrUh2OVov_0sG0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7946118385",
@@ -3066,7 +2639,8 @@
       "lng": -118.055203,
       "postedDate": 1783618470,
       "url": "https://www.craigslist.org/view/d/santa-fe-springs-1960sf-indl-unit-ofc/xqHJJp6obUJJF28g46VDpJ",
-      "thumb": "https://images.craigslist.org/00404_j1V70ZErGHc_0lM0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00404_j1V70ZErGHc_0lM0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947419809",
@@ -3080,7 +2654,8 @@
       "lng": -118.223767,
       "postedDate": 1784147299,
       "url": "https://www.craigslist.org/view/d/los-angeles-creative-studio-office-open/hYc5t8hDDyuVPZRGPAuJez",
-      "thumb": "https://images.craigslist.org/00Z0Z_fk5104EihKP_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00Z0Z_fk5104EihKP_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945798804",
@@ -3094,7 +2669,8 @@
       "lng": -118.50094,
       "postedDate": 1783483099,
       "url": "https://www.craigslist.org/view/d/van-nuys-1500-industrial-unit/rriLitEQHDW3Qt9Uyi91Bn",
-      "thumb": "https://images.craigslist.org/00M0M_cFvK03q0JPl_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00M0M_cFvK03q0JPl_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945757504",
@@ -3108,7 +2684,8 @@
       "lng": -118.475811,
       "postedDate": 1783464939,
       "url": "https://www.craigslist.org/view/d/north-hills-rare-second-generation/r9PWXLTkAT7nNA2Fm7J1hh",
-      "thumb": "https://images.craigslist.org/01414_l8VvuYc0uKY_0CI0pO_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/01414_l8VvuYc0uKY_0CI0pO_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949064052",
@@ -3122,7 +2699,8 @@
       "lng": -118.343491,
       "postedDate": 1784837389,
       "url": "https://www.craigslist.org/view/d/los-angeles-studio-space-first-floor/bf5oVV1bUUFdyMyQyGmvhw",
-      "thumb": "https://images.craigslist.org/00L0L_fi82JPGXsdU_0t20CI_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00L0L_fi82JPGXsdU_0t20CI_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948671195",
@@ -3136,7 +2714,8 @@
       "lng": -118.60103,
       "postedDate": 1784674927,
       "url": "https://www.craigslist.org/view/d/chatsworth-1500sf-sf-retail-office/3L6KcGJQx9YENLvZcECudy",
-      "thumb": "https://images.craigslist.org/00S0S_ic0RKkofBWg_0ak07K_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00S0S_ic0RKkofBWg_0ak07K_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945977678",
@@ -3150,21 +2729,8 @@
       "lng": -118.604254,
       "postedDate": 1783551580,
       "url": "https://www.craigslist.org/view/d/chatsworth-1700-sq-ft-industrial/saJpBiWbJUPciQpjBt63f9",
-      "thumb": "https://images.craigslist.org/00g0g_egeUTCLZF0X_0ky0dG_50x50c.jpg"
-    },
-    {
-      "id": "cl-7948233898",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "1,500' + LOFT, TORRANCE (SOUTH BAY) INDUSTRIAL & STORAGE WAREHOUSE",
-      "price": 3075,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 33.823814,
-      "lng": -118.299176,
-      "postedDate": 1784499475,
-      "url": "https://www.craigslist.org/view/d/torrance-loft-torrance-south-bay/etf7h4Dt9cNrQmE6izvrg2",
-      "thumb": "https://images.craigslist.org/00M0M_kw9y2PP1L6v_0CI0e3_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00g0g_egeUTCLZF0X_0ky0dG_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950012345",
@@ -3178,7 +2744,8 @@
       "lng": -118.32632,
       "postedDate": 1785252882,
       "url": "https://www.craigslist.org/view/d/torrance-turnkey-office-for-call-center/7Tywn2QZfgLZDSv5NNTpNX",
-      "thumb": "https://images.craigslist.org/00v0v_lT18o4ariJp_08905J_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00v0v_lT18o4ariJp_08905J_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948925073",
@@ -3192,7 +2759,8 @@
       "lng": -118.014057,
       "postedDate": 1784778420,
       "url": "https://www.craigslist.org/view/d/el-monte-2100-sf-warehouse-office-roll/gukQME99r88uFJd2Mmooza",
-      "thumb": "https://images.craigslist.org/00l0l_7Spez4CmECJ_0rw0kE_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00l0l_7Spez4CmECJ_0rw0kE_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7946661197",
@@ -3206,7 +2774,8 @@
       "lng": -118.592629,
       "postedDate": 1783831443,
       "url": "https://www.craigslist.org/view/d/woodland-hills-1540-sf-warehouse-studio/9WThAyum6q5ancs4u59PWd",
-      "thumb": "https://images.craigslist.org/01717_4t2DJ0ISFEQ_0lM0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/01717_4t2DJ0ISFEQ_0lM0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950134021",
@@ -3220,7 +2789,8 @@
       "lng": -118.291605,
       "postedDate": 1785282939,
       "url": "https://www.craigslist.org/view/d/los-angeles-1273-sqft-commercial-space/qZ8r9Ppzk8NDX1opzJeEVW",
-      "thumb": "https://images.craigslist.org/00I0I_b1kJvENgyyT_0mC0i6_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00I0I_b1kJvENgyyT_0mC0i6_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947603413",
@@ -3234,7 +2804,8 @@
       "lng": -118.494711,
       "postedDate": 1784227087,
       "url": "https://www.craigslist.org/view/d/van-nuys-professional-office-space/mP1chJbzvW6Khw3Nu8ML4Y",
-      "thumb": "https://images.craigslist.org/00l0l_aq3pubuo42i_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00l0l_aq3pubuo42i_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948407389",
@@ -3248,7 +2819,8 @@
       "lng": -117.805805,
       "postedDate": 1784577015,
       "url": "https://www.craigslist.org/view/d/san-dimas-offices-showroom-restroom/i9tbLDbxwAFqpiyCfxyMJH",
-      "thumb": "https://images.craigslist.org/00p0p_1J3FVRA0Res_0oM0dI_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00p0p_1J3FVRA0Res_0oM0dI_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950460326",
@@ -3262,7 +2834,8 @@
       "lng": -118.374705,
       "postedDate": 1785430096,
       "url": "https://www.craigslist.org/view/d/los-angeles-salon-or-other-retail-store/d7Qo1gLWzErtSY94AUy4j6",
-      "thumb": "https://images.craigslist.org/00909_iVRjUzfr88T_0fA09u_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00909_iVRjUzfr88T_0fA09u_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945204884",
@@ -3276,7 +2849,8 @@
       "lng": -118.351892,
       "postedDate": 1783233099,
       "url": "https://www.craigslist.org/view/d/inglewood-loft-for-meetings-workshops/9Ufmy6NAiEz6XR3ENs1ozY",
-      "thumb": "https://images.craigslist.org/00101_hJjLs5LzKWZ_0qY0fb_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00101_hJjLs5LzKWZ_0qY0fb_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947030168",
@@ -3290,7 +2864,8 @@
       "lng": -118.261239,
       "postedDate": 1783988000,
       "url": "https://www.craigslist.org/view/d/glendale-spacious-office-space-for-lease/whyRFUKEXh9ehHJNvwwYn2",
-      "thumb": "https://images.craigslist.org/00808_4Mbc6hV9fU8_0t20CI_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00808_4Mbc6hV9fU8_0t20CI_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945368645",
@@ -3304,7 +2879,8 @@
       "lng": -118.263263,
       "postedDate": 1783315419,
       "url": "https://www.craigslist.org/view/d/wilmington-commercial-building-storage/2xKZsn6z9yqsoWvvEYjioD",
-      "thumb": "https://images.craigslist.org/00l0l_6dpXsTaLbbq_0x20oM_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00l0l_6dpXsTaLbbq_0x20oM_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7946346139",
@@ -3318,21 +2894,8 @@
       "lng": -118.306034,
       "postedDate": 1783707241,
       "url": "https://www.craigslist.org/view/d/los-angeles-commercial-space-fronting/nB4wKVihSndxf1gGCQytba",
-      "thumb": "https://images.craigslist.org/00303_iKkaaBMnPXu_0kE0dL_50x50c.jpg"
-    },
-    {
-      "id": "cl-7950729632",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Fully equipped restaurant for sale - still open and ready to operate",
-      "price": 3200,
-      "period": "monthly",
-      "sqft": 1530,
-      "lat": 34.047472,
-      "lng": -118.247745,
-      "postedDate": 1785530350,
-      "url": "https://www.craigslist.org/view/d/los-angeles-fully-equipped-restaurant/ng67ePbaVoSmaQekXPRLHB",
-      "thumb": "https://images.craigslist.org/00B0B_29Si7HfQvtg_0t20t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00303_iKkaaBMnPXu_0kE0dL_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7946410970",
@@ -3346,7 +2909,8 @@
       "lng": -117.547145,
       "postedDate": 1783722642,
       "url": "https://www.craigslist.org/view/d/phelan-auto-bay-for-rent/bqMPmPhuaT2gWMpuMUZj1N",
-      "thumb": "https://images.craigslist.org/00Q0Q_ivP9QVQYqnB_0t20CI_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00Q0Q_ivP9QVQYqnB_0t20CI_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7946621818",
@@ -3360,7 +2924,8 @@
       "lng": -118.209271,
       "postedDate": 1783809929,
       "url": "https://www.craigslist.org/view/d/los-angeles-boyle-heights-grocery/iTTYHVXoaFYfBDCbNZnAao",
-      "thumb": "https://images.craigslist.org/00g0g_3V4KJG20Ef_0CI0nn_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00g0g_3V4KJG20Ef_0CI0nn_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947646777",
@@ -3374,7 +2939,8 @@
       "lng": -118.272698,
       "postedDate": 1784237275,
       "url": "https://www.craigslist.org/view/d/los-angeles-retail-office-8522-broadway/oP29fT9UiFSVZTz1Euz2ug",
-      "thumb": ""
+      "thumb": "",
+      "hood": null
     },
     {
       "id": "cl-7947869890",
@@ -3388,7 +2954,8 @@
       "lng": -118.589173,
       "postedDate": 1784326733,
       "url": "https://www.craigslist.org/view/d/chatsworth-retail-office-restaurant/jAMdtzwipCAoSH92fHjQjy",
-      "thumb": "https://images.craigslist.org/00O0O_4qPpfnB7qZC_0t20CI_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00O0O_4qPpfnB7qZC_0t20CI_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7946307754",
@@ -3402,7 +2969,8 @@
       "lng": -118.313807,
       "postedDate": 1783699399,
       "url": "https://www.craigslist.org/view/d/los-angeles-creative-office-space-in/9iochsBywt7hY7wt8c3tpY",
-      "thumb": "https://images.craigslist.org/00W0W_3077czJsYFb_0CI0pK_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00W0W_3077czJsYFb_0CI0pK_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948313069",
@@ -3416,7 +2984,8 @@
       "lng": -118.349911,
       "postedDate": 1784555673,
       "url": "https://www.craigslist.org/view/d/inglewood-medical-practice-clinic/eZ3gkEu1Jz9tSCpjEyQUYR",
-      "thumb": "https://images.craigslist.org/00J0J_ffcvetCkAin_0wF0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00J0J_ffcvetCkAin_0wF0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948976001",
@@ -3430,7 +2999,8 @@
       "lng": -118.535556,
       "postedDate": 1784817145,
       "url": "https://www.craigslist.org/view/d/reseda-automotive-body-shop-or-mechanic/omDvovwRC2Gaf67HpZ8oFb",
-      "thumb": ""
+      "thumb": "",
+      "hood": null
     },
     {
       "id": "cl-7950253848",
@@ -3444,7 +3014,8 @@
       "lng": -117.872495,
       "postedDate": 1785344969,
       "url": "https://www.craigslist.org/view/d/walnut-warehouse-storage-office-for/6D27UHJrdfpNFjCXh7VdsV",
-      "thumb": "https://images.craigslist.org/00Y0Y_eGpymUNO0rq_0CI0ku_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00Y0Y_eGpymUNO0rq_0CI0ku_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945466904",
@@ -3458,7 +3029,8 @@
       "lng": -118.592064,
       "postedDate": 1783359955,
       "url": "https://www.craigslist.org/view/d/chatsworth-sqft-flex-space-office/1UNCGr1zm9U8rbqpgY2efy",
-      "thumb": "https://images.craigslist.org/00t0t_do1yAR95y9v_0CI0lN_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00t0t_do1yAR95y9v_0CI0lN_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945298950",
@@ -3472,7 +3044,8 @@
       "lng": -118.383612,
       "postedDate": 1783281098,
       "url": "https://www.craigslist.org/view/d/beverly-hills-premium-office-retail/58H6fDpcVpBkEZNPRwe1L2",
-      "thumb": "https://images.craigslist.org/00p0p_geRIBmk3f2S_0x20oM_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00p0p_geRIBmk3f2S_0x20oM_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950534570",
@@ -3486,7 +3059,8 @@
       "lng": -117.989728,
       "postedDate": 1785448262,
       "url": "https://www.craigslist.org/view/d/duarte-storage-space-parking-cars-trucks/7GS9MTUEVg97Ps9u4uuCET",
-      "thumb": "https://images.craigslist.org/00T0T_1AXbvrL7LEY_0dx0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00T0T_1AXbvrL7LEY_0dx0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7946976639",
@@ -3500,7 +3074,8 @@
       "lng": -118.311799,
       "postedDate": 1783973042,
       "url": "https://www.craigslist.org/view/d/torrance-commercial-yard-lot-for-rent/jEb1PT2yDY7fbGzrqR1tV6",
-      "thumb": "https://images.craigslist.org/00h0h_a18bpl5cDfc_0t20CI_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00h0h_a18bpl5cDfc_0t20CI_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950720570",
@@ -3514,7 +3089,8 @@
       "lng": -118.339202,
       "postedDate": 1785528314,
       "url": "https://www.craigslist.org/view/d/los-angeles-live-in-recording-studio/79JxWLqBXAZtZGakWfVmzP",
-      "thumb": "https://images.craigslist.org/00s0s_ks5ecqfawNV_0CI0t1_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00s0s_ks5ecqfawNV_0CI0t1_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950072347",
@@ -3528,7 +3104,8 @@
       "lng": -118.174402,
       "postedDate": 1785265681,
       "url": "https://www.craigslist.org/view/d/long-beach-modern-signal-hill/7Wau2UT26QwHtqbQ8SvUL2",
-      "thumb": "https://images.craigslist.org/00m0m_dNyNURBA0QA_0ew0aT_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00m0m_dNyNURBA0QA_0ew0aT_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948421512",
@@ -3542,7 +3119,8 @@
       "lng": -118.152396,
       "postedDate": 1784580303,
       "url": "https://www.craigslist.org/view/d/long-beach-corner-storefront-retail/fn1XQNojhQ8DiQFcoCsoaG",
-      "thumb": "https://images.craigslist.org/00A0A_1MKl3A6CVAt_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00A0A_1MKl3A6CVAt_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949121305",
@@ -3556,7 +3134,8 @@
       "lng": -118.283699,
       "postedDate": 1784855173,
       "url": "https://www.craigslist.org/view/d/los-angeles-commercial-warehouse-2500/aHKTeM8KYkpmmFZg1wRvGp",
-      "thumb": "https://images.craigslist.org/00707_1MykEa2fUji_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00707_1MykEa2fUji_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949808604",
@@ -3570,21 +3149,8 @@
       "lng": -118.055994,
       "postedDate": 1785169200,
       "url": "https://www.craigslist.org/view/d/south-el-monte-150-sqft-el-monte/8FM7d7ccmBf9N7J7tmeaXV",
-      "thumb": "https://images.craigslist.org/01010_iSF5iY8mZrk_0CI0lM_50x50c.jpg"
-    },
-    {
-      "id": "cl-7945737863",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Recording & Production Studio Space – Long-Term Rental",
-      "price": 3800,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.172092,
-      "lng": -118.360675,
-      "postedDate": 1783459295,
-      "url": "https://www.craigslist.org/view/d/north-hollywood-recording-production/1RuMitrkwiEhcBDuaLEPYW",
-      "thumb": "https://images.craigslist.org/01212_dCDQWnZYsxC_0k00dm_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/01010_iSF5iY8mZrk_0CI0lM_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947454435",
@@ -3598,7 +3164,8 @@
       "lng": -118.421177,
       "postedDate": 1784157214,
       "url": "https://www.craigslist.org/view/d/van-nuys-industrial-space/o1eSfMsBVTrszqT574RWZu",
-      "thumb": "https://images.craigslist.org/00a0a_c1ghY6egf4v_0t20CI_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00a0a_c1ghY6egf4v_0t20CI_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948538503",
@@ -3612,7 +3179,8 @@
       "lng": -118.346059,
       "postedDate": 1784643015,
       "url": "https://www.craigslist.org/view/d/los-angeles-creative-studio-space/tXeob2KQ1UNc7e2o4ghYob",
-      "thumb": "https://images.craigslist.org/00303_98mvvKwNleV_1320MM_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00303_98mvvKwNleV_1320MM_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949271055",
@@ -3626,7 +3194,8 @@
       "lng": -118.517497,
       "postedDate": 1784922928,
       "url": "https://www.craigslist.org/view/d/encino-modern-915-sq-ft-office-suite/pEUtTF3m4RmEfifEuXFMYw",
-      "thumb": "https://images.craigslist.org/00X0X_dEa7fS5J4vN_05s07g_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00X0X_dEa7fS5J4vN_05s07g_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948452335",
@@ -3640,7 +3209,8 @@
       "lng": -118.232009,
       "postedDate": 1784588897,
       "url": "https://www.craigslist.org/view/d/los-angeles-4000-month-sq-ft-warehouse/dA6b5DqdQqpa99mhnNHy81",
-      "thumb": "https://images.craigslist.org/00u0u_eyWASnUuZSF_0wg0oc_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00u0u_eyWASnUuZSF_0wg0oc_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948879458",
@@ -3654,7 +3224,8 @@
       "lng": -118.361714,
       "postedDate": 1784758699,
       "url": "https://www.craigslist.org/view/d/west-hollywood-1019-fairfax-ave-west/1eCG3dSYJBqY2QAYdE3ff5",
-      "thumb": "https://images.craigslist.org/00l0l_3SPXBAwpa2K_0oM0gw_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00l0l_3SPXBAwpa2K_0oM0gw_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7946626706",
@@ -3668,7 +3239,8 @@
       "lng": -118.382668,
       "postedDate": 1783811864,
       "url": "https://www.craigslist.org/view/d/culver-city-creative-studio-space/txGH1zN67EtRd2fL81vVfj",
-      "thumb": "https://images.craigslist.org/01717_2Hwwy2udZKe_1320MM_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/01717_2Hwwy2udZKe_1320MM_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949322531",
@@ -3682,7 +3254,8 @@
       "lng": -118.424188,
       "postedDate": 1784937511,
       "url": "https://www.craigslist.org/view/d/los-angeles-750-sf-commercial-space-for/rDbAFmsXMBXk1f52KTyBb8",
-      "thumb": "https://images.craigslist.org/01212_lAjk7hTTyuh_0mA0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/01212_lAjk7hTTyuh_0mA0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948480402",
@@ -3696,7 +3269,8 @@
       "lng": -118.935805,
       "postedDate": 1784600054,
       "url": "https://www.craigslist.org/view/d/newbury-park-commercial-kitchen/1mwmEfGZpx257QfcTBv3UH",
-      "thumb": "https://images.craigslist.org/00D0D_45CDE0LcFdZ_0ww0oo_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00D0D_45CDE0LcFdZ_0ww0oo_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948418220",
@@ -3710,7 +3284,8 @@
       "lng": -118.2353,
       "postedDate": 1784579409,
       "url": "https://www.craigslist.org/view/d/los-angeles-remodeled-commercial-space/d3p8Gh9gwpeiAXrjDjmnYt",
-      "thumb": "https://images.craigslist.org/00T0T_j80zHOBiLaa_0hq0d4_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00T0T_j80zHOBiLaa_0hq0d4_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949340176",
@@ -3724,7 +3299,8 @@
       "lng": -118.283658,
       "postedDate": 1784944307,
       "url": "https://www.craigslist.org/view/d/gardena-warehouse-space-available-sqft/uNL8soo3FNnZeJQzTiw3tw",
-      "thumb": ""
+      "thumb": "",
+      "hood": null
     },
     {
       "id": "cl-7949009965",
@@ -3738,7 +3314,8 @@
       "lng": -118.259405,
       "postedDate": 1784825101,
       "url": "https://www.craigslist.org/view/d/los-angeles-gorgeous-light-filled-two/etrpfyDZsDxFT3o9RznWCP",
-      "thumb": "https://images.craigslist.org/00M0M_lyDkrbKXVEj_0gv0cd_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00M0M_lyDkrbKXVEj_0gv0cd_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947110607",
@@ -3752,7 +3329,8 @@
       "lng": -117.867235,
       "postedDate": 1784040109,
       "url": "https://www.craigslist.org/view/d/valyermo-3000-sq-ft-industrial/fN9ZatpLnirGiJweTsTo3R",
-      "thumb": "https://images.craigslist.org/00V0V_4QHjXvlEY1i_1u8176_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00V0V_4QHjXvlEY1i_1u8176_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950366301",
@@ -3766,7 +3344,8 @@
       "lng": -118.298481,
       "postedDate": 1785376643,
       "url": "https://www.craigslist.org/view/d/glendale-glendale-flex-commercial-space/bdpbtnaYXDMssL8vTV3bnJ",
-      "thumb": "https://images.craigslist.org/00404_cwRaEa1Qe7y_0jm0pO_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00404_cwRaEa1Qe7y_0jm0pO_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947462525",
@@ -3780,7 +3359,8 @@
       "lng": -118.202912,
       "postedDate": 1784160087,
       "url": "https://www.craigslist.org/view/d/los-angeles-3532-broadway-2160-sf-of/wdduto8k96GUT8JFaoKxoV",
-      "thumb": "https://images.craigslist.org/00m0m_3zui7Dr5eVu_0hw0nm_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00m0m_3zui7Dr5eVu_0hw0nm_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947584336",
@@ -3794,7 +3374,8 @@
       "lng": -118.477158,
       "postedDate": 1784222768,
       "url": "https://www.craigslist.org/view/d/santa-monica-creative-loft-office-sf/vNwSYFXjZC4dhByjXHJ8De",
-      "thumb": "https://images.craigslist.org/00p0p_eflpkVuJrMx_0gJ0b9_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00p0p_eflpkVuJrMx_0gJ0b9_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948834356",
@@ -3808,7 +3389,8 @@
       "lng": -118.499055,
       "postedDate": 1784746795,
       "url": "https://www.craigslist.org/view/d/santa-clarita-mechanic-shop-automotive/3zFHzDTtZZ36qoT2WbQqRg",
-      "thumb": ""
+      "thumb": "",
+      "hood": null
     },
     {
       "id": "cl-7948091844",
@@ -3822,7 +3404,8 @@
       "lng": -118.265203,
       "postedDate": 1784422609,
       "url": "https://www.craigslist.org/view/d/los-angeles-salon-for-rent/v8qvjuPhDJeZaicDXSqoQd",
-      "thumb": "https://images.craigslist.org/00g0g_jwTkeHGDtQp_0MM132_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00g0g_jwTkeHGDtQp_0MM132_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948874398",
@@ -3836,7 +3419,8 @@
       "lng": -118.184577,
       "postedDate": 1784757239,
       "url": "https://www.craigslist.org/view/d/los-angeles-auto-repair-auto-sales-bay/hoqH2KzpKn9yeohSev7XrU",
-      "thumb": "https://images.craigslist.org/00z0z_yQFAabcP5L_0oN0gC_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00z0z_yQFAabcP5L_0oN0gC_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949951560",
@@ -3850,7 +3434,8 @@
       "lng": -118.272457,
       "postedDate": 1785212794,
       "url": "https://www.craigslist.org/view/d/los-angeles-silverlake-retail-space/oRw7bBqifhQtjeP9mUsmui",
-      "thumb": "https://images.craigslist.org/00I0I_aAcUMxmjOA6_084084_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00I0I_aAcUMxmjOA6_084084_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950765838",
@@ -3864,7 +3449,8 @@
       "lng": -118.287906,
       "postedDate": 1785541153,
       "url": "https://www.craigslist.org/view/d/san-pedro-commercial-space-with-high/6bM1xU6CiNBoPKJnryqbQQ",
-      "thumb": "https://images.craigslist.org/00R0R_b6CpRtsrzcj_0ew0aT_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00R0R_b6CpRtsrzcj_0ew0aT_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950347535",
@@ -3878,21 +3464,8 @@
       "lng": -118.391529,
       "postedDate": 1785368857,
       "url": "https://www.craigslist.org/view/d/los-angeles-music-studios-available-for/tA8MZ6iipkqgQfbxe2gJsR",
-      "thumb": "https://images.craigslist.org/01717_5QJDdKX287L_0t20CI_50x50c.jpg"
-    },
-    {
-      "id": "cl-7945790145",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Mid-Century Office to Rent (Single Unit or Whole Building)",
-      "price": 5000,
-      "period": "monthly",
-      "sqft": 1590,
-      "lat": 34.02846,
-      "lng": -118.410551,
-      "postedDate": 1783477732,
-      "url": "https://www.craigslist.org/view/d/los-angeles-mid-century-office-to-rent/4Xt1dF2oAmNFXKdLrqJUge",
-      "thumb": "https://images.craigslist.org/00b0b_j4yLaI6iaRA_0CI0ot_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/01717_5QJDdKX287L_0t20CI_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947284382",
@@ -3906,7 +3479,8 @@
       "lng": -118.141672,
       "postedDate": 1784095115,
       "url": "https://www.craigslist.org/view/d/los-angeles-commercial-office-space-for/3Fo7qq1DSFUQqGeq73yghw",
-      "thumb": "https://images.craigslist.org/00V0V_jWSKyyGWiVo_0hw0nm_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00V0V_jWSKyyGWiVo_0hw0nm_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948612989",
@@ -3920,7 +3494,8 @@
       "lng": -118.441763,
       "postedDate": 1784659665,
       "url": "https://www.craigslist.org/view/d/los-angeles-light-bright-versatile/5pWp3k4rwCBKWzpRSorw2X",
-      "thumb": "https://images.craigslist.org/00404_1PoAzPJu8nY_0CH0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00404_1PoAzPJu8nY_0CH0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950693904",
@@ -3934,7 +3509,8 @@
       "lng": -118.463142,
       "postedDate": 1785522116,
       "url": "https://www.craigslist.org/view/d/santa-monica-prime-creative-office-flex/ffvV3tsn24xCSvCFJhrEqp",
-      "thumb": "https://images.craigslist.org/00A0A_gRgW9sd6cI6_0gw0co_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00A0A_gRgW9sd6cI6_0gw0co_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947141395",
@@ -3948,7 +3524,8 @@
       "lng": -118.465464,
       "postedDate": 1784046928,
       "url": "https://www.craigslist.org/view/d/venice-900-sqft-live-work-available-on/2XHSXm5Rrf1NwpMhK9Qxri",
-      "thumb": "https://images.craigslist.org/00404_aNO9cgBEPI2_0nt0nI_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00404_aNO9cgBEPI2_0nt0nI_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949201922",
@@ -3962,7 +3539,8 @@
       "lng": -117.95555,
       "postedDate": 1784907462,
       "url": "https://www.craigslist.org/view/d/baldwin-park-4400-sq-ft-industrial/uW8vrLcVMgL6ZU7jV2gKNE",
-      "thumb": "https://images.craigslist.org/01212_65YreWcZTO5_0CI0lM_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/01212_65YreWcZTO5_0CI0lM_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948375079",
@@ -3976,7 +3554,8 @@
       "lng": -117.764828,
       "postedDate": 1784569820,
       "url": "https://www.craigslist.org/view/d/la-verne-3400-sqft-retail-space/rNmkc4Wj6WzLxs9udaKrCL",
-      "thumb": ""
+      "thumb": "",
+      "hood": null
     },
     {
       "id": "cl-7950719003",
@@ -3990,7 +3569,8 @@
       "lng": -118.121093,
       "postedDate": 1785527959,
       "url": "https://www.craigslist.org/view/d/downey-indl-condogated-parkm2sprklr18/5NstgiDWN28rBnQ9ZgaKAq",
-      "thumb": "https://images.craigslist.org/01111_3r2x4KZPicd_0lM0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/01111_3r2x4KZPicd_0lM0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947227610",
@@ -4004,7 +3584,8 @@
       "lng": -118.500899,
       "postedDate": 1784067425,
       "url": "https://www.craigslist.org/view/d/van-nuys-ft2-managers-special-shop/94Rj8jwuFkdYMHFQ4irUhp",
-      "thumb": "https://images.craigslist.org/00f0f_76WUydwUPpe_0ak07K_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00f0f_76WUydwUPpe_0ak07K_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950304543",
@@ -4018,7 +3599,8 @@
       "lng": -118.262098,
       "postedDate": 1785356477,
       "url": "https://www.craigslist.org/view/d/los-angeles-body-shop-for-lease-in-la/2g5PKKdKfzZqbssuHMNqNC",
-      "thumb": "https://images.craigslist.org/00909_hDBGNURgRO7_0bi07K_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00909_hDBGNURgRO7_0bi07K_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945963642",
@@ -4032,7 +3614,8 @@
       "lng": -118.444929,
       "postedDate": 1783547257,
       "url": "https://www.craigslist.org/view/d/marina-del-rey-marina-del-rey-recording/3G6BY6gUeYeQ1vwthVy5sb",
-      "thumb": "https://images.craigslist.org/00k0k_2CdyM9BCUuU_0x20m1_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00k0k_2CdyM9BCUuU_0x20m1_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945680810",
@@ -4046,7 +3629,8 @@
       "lng": -118.440547,
       "postedDate": 1783445750,
       "url": "https://www.craigslist.org/view/d/canyon-country-mechanic-shop-body-shop/nfLNYNHo5vnB3p3CPVU2G9",
-      "thumb": "https://images.craigslist.org/00C0C_cRPqWkozK9A_0oH0cO_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00C0C_cRPqWkozK9A_0oH0cO_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949951488",
@@ -4060,7 +3644,8 @@
       "lng": -118.374609,
       "postedDate": 1785212709,
       "url": "https://www.craigslist.org/view/d/north-hollywood-noho-district-retail/ujsbpo8Qfs3jkXA7nP8bZr",
-      "thumb": "https://images.craigslist.org/01111_3r9p8FotrUq_0ak07K_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/01111_3r9p8FotrUq_0ak07K_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949510592",
@@ -4074,7 +3659,8 @@
       "lng": -118.137752,
       "postedDate": 1785018632,
       "url": "https://www.craigslist.org/view/d/long-beach-retail-space-available-for/m7SKG1dPUeGdanXfmBtqgT",
-      "thumb": "https://images.craigslist.org/00E0E_761ZM0eQ1Xe_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00E0E_761ZM0eQ1Xe_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7946947804",
@@ -4088,7 +3674,8 @@
       "lng": -118.388761,
       "postedDate": 1783966695,
       "url": "https://www.craigslist.org/view/d/culver-city-2216-sf-creative-office/hxCgj7n8qqL58ffpHrCkAm",
-      "thumb": "https://images.craigslist.org/00b0b_esbYeIMmmB5_0wg0lS_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00b0b_esbYeIMmmB5_0wg0lS_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7946927875",
@@ -4102,7 +3689,8 @@
       "lng": -118.351113,
       "postedDate": 1783962635,
       "url": "https://www.craigslist.org/view/d/hawthorne-commercial-lease-opportunity/cZW8XAL3mGWsxiAVzLxkZG",
-      "thumb": "https://images.craigslist.org/00J0J_ilQI5iHuL2d_0CI0lM_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00J0J_ilQI5iHuL2d_0CI0lM_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949285034",
@@ -4116,7 +3704,8 @@
       "lng": -118.260245,
       "postedDate": 1784926269,
       "url": "https://www.craigslist.org/view/d/los-angeles-atwater-village-prime/rFbnNhiMNCkzkvnfF1XAGM",
-      "thumb": "https://images.craigslist.org/00c0c_lPdb7Z7ttb8_0t20CI_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00c0c_lPdb7Z7ttb8_0t20CI_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947227427",
@@ -4130,7 +3719,8 @@
       "lng": -118.501091,
       "postedDate": 1784067370,
       "url": "https://www.craigslist.org/view/d/van-nuys-balboa-blvd-west-van-nuys/4AtjEdvrocXPQAuxYwbUyY",
-      "thumb": "https://images.craigslist.org/01010_5ormfUkLdYm_07K0ak_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/01010_5ormfUkLdYm_07K0ak_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945977770",
@@ -4144,7 +3734,8 @@
       "lng": -118.59114,
       "postedDate": 1783551612,
       "url": "https://www.craigslist.org/view/d/chatsworth-5308-sq-ft-warehouse-heavy/sAAtHWaSxySJzboyowGkRi",
-      "thumb": "https://images.craigslist.org/00A0A_49m91RdrWwb_0ky0dG_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00A0A_49m91RdrWwb_0ky0dG_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947536158",
@@ -4158,7 +3749,8 @@
       "lng": -118.135704,
       "postedDate": 1784211753,
       "url": "https://www.craigslist.org/view/d/long-beach-auto-dealership-used-car-lot/fgNKmMbauTS1Eyh2pQxuWK",
-      "thumb": "https://images.craigslist.org/00X0X_kQOqQrPFFV1_0ak07K_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00X0X_kQOqQrPFFV1_0ak07K_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949081150",
@@ -4172,7 +3764,8 @@
       "lng": -118.227705,
       "postedDate": 1784841780,
       "url": "https://www.craigslist.org/view/d/los-angeles-5450-to-sf-warehouse-for/4uhBpQg22NRWDEq8s9doHn",
-      "thumb": "https://images.craigslist.org/00y0y_5DVxt39NBFK_0ww0oo_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00y0y_5DVxt39NBFK_0ww0oo_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949275205",
@@ -4186,7 +3779,8 @@
       "lng": -117.906495,
       "postedDate": 1784923815,
       "url": "https://www.craigslist.org/view/d/covina-covina-warehouse-sq-ft-flexible/jechcSq2faaHQMy66Lep4J",
-      "thumb": "https://images.craigslist.org/00v0v_fMRqkZj53cr_0cU09G_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00v0v_fMRqkZj53cr_0cU09G_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950517420",
@@ -4200,7 +3794,8 @@
       "lng": -118.3591,
       "postedDate": 1785443672,
       "url": "https://www.craigslist.org/view/d/los-angeles-sf-auto-repair-shop-for/roo4zq7cmR2s8gQqAqNojQ",
-      "thumb": "https://images.craigslist.org/00000_17j0aGVvq0o_0hP0CI_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00000_17j0aGVvq0o_0hP0CI_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949264599",
@@ -4214,7 +3809,8 @@
       "lng": -118.374742,
       "postedDate": 1784921138,
       "url": "https://www.craigslist.org/view/d/los-angeles-store-front-along-pico-blvd/t7azoAwcyAhZzFWsB6LYWX",
-      "thumb": ""
+      "thumb": "",
+      "hood": null
     },
     {
       "id": "cl-7945685518",
@@ -4228,7 +3824,8 @@
       "lng": -118.376317,
       "postedDate": 1783446909,
       "url": "https://www.craigslist.org/view/d/beverly-hills-office-space-in-beverly/4jYG3uGbxQrgrPFzDRo4hx",
-      "thumb": "https://images.craigslist.org/00r0r_aqrEyjk8vRJ_0CI0t2_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00r0r_aqrEyjk8vRJ_0CI0t2_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948431916",
@@ -4242,7 +3839,8 @@
       "lng": -118.211299,
       "postedDate": 1784582976,
       "url": "https://www.craigslist.org/view/d/huntington-park-huge-warehouse-retail/tmgBXdkd1zFiZFLvCvzsKP",
-      "thumb": "https://images.craigslist.org/00u0u_Oi3ajDliuk_0ew0aT_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00u0u_Oi3ajDliuk_0ew0aT_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7949887353",
@@ -4256,7 +3854,8 @@
       "lng": -118.217392,
       "postedDate": 1785186856,
       "url": "https://www.craigslist.org/view/d/los-angeles-studio-near-mt-washingtion/5SYk2rK37edCe4fKRVW89n",
-      "thumb": "https://images.craigslist.org/00202_f9OedzUzGcO_0CI0lM_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00202_f9OedzUzGcO_0CI0lM_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948198667",
@@ -4270,7 +3869,8 @@
       "lng": -118.258168,
       "postedDate": 1784486684,
       "url": "https://www.craigslist.org/view/d/los-angeles-retail-showroom-creative/bowsDuH26Zj8R2zSQeSapF",
-      "thumb": "https://images.craigslist.org/01111_a2Vr8TgtyyA_0gw0b1_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/01111_a2Vr8TgtyyA_0gw0b1_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945670074",
@@ -4284,7 +3884,8 @@
       "lng": -118.193623,
       "postedDate": 1783443437,
       "url": "https://www.craigslist.org/view/d/los-angeles-creative-office-studio/116e8NiLDKeXPp1BKjLT8T",
-      "thumb": "https://images.craigslist.org/00S0S_5IoPzhYzNNO_0CI0pO_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00S0S_5IoPzhYzNNO_0CI0pO_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947879969",
@@ -4298,7 +3899,8 @@
       "lng": -118.249467,
       "postedDate": 1784330060,
       "url": "https://www.craigslist.org/view/d/los-angeles-sound-stage-available-for/5wqYaxMLK5buwXyArWVNaL",
-      "thumb": "https://images.craigslist.org/00U0U_4QbCS54vmT8_1sA0Yo_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00U0U_4QbCS54vmT8_1sA0Yo_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950345415",
@@ -4312,7 +3914,8 @@
       "lng": -118.369896,
       "postedDate": 1785368631,
       "url": "https://www.craigslist.org/view/d/sun-valley-sun-valley-creative-space-sq/5MyKqrbXtmr6qrHLBzheL2",
-      "thumb": "https://images.craigslist.org/00o0o_hskvJ1lsdPj_05f03v_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00o0o_hskvJ1lsdPj_05f03v_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7950474442",
@@ -4326,7 +3929,8 @@
       "lng": -118.246055,
       "postedDate": 1785433427,
       "url": "https://www.craigslist.org/view/d/los-angeles-820-gladys-ave-los-angeles/1sQLAUG2kE5HLHEXVLDcWd",
-      "thumb": "https://images.craigslist.org/00404_aOrve0rcVhR_0rG0ck_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00404_aOrve0rcVhR_0rG0ck_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947864051",
@@ -4340,7 +3944,8 @@
       "lng": -117.934089,
       "postedDate": 1784325069,
       "url": "https://www.craigslist.org/view/d/azusa-contractor-yard-with-warehouses/uHvaDbAZ9TFYBHLnugEDa7",
-      "thumb": "https://images.craigslist.org/00X0X_5gTFV5RQtki_0bQ07Z_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00X0X_5gTFV5RQtki_0bQ07Z_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7945757393",
@@ -4354,7 +3959,8 @@
       "lng": -118.387026,
       "postedDate": 1783464890,
       "url": "https://www.craigslist.org/view/d/pacoima-rare-small-industrial-warehouse/vNyWkT5VAddTenb9iGq8mJ",
-      "thumb": "https://images.craigslist.org/00S0S_cgpG7UeFNX5_0CI0pO_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00S0S_cgpG7UeFNX5_0CI0pO_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7947676428",
@@ -4368,7 +3974,8 @@
       "lng": -118.242102,
       "postedDate": 1784246616,
       "url": "https://www.craigslist.org/view/d/los-angeles-small-recording-studio-for/m2zPA1XtdnmDeVBWwoRErA",
-      "thumb": "https://images.craigslist.org/00I0I_34Zr6SAvQt2_0kE0bi_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00I0I_34Zr6SAvQt2_0kE0bi_50x50c.jpg",
+      "hood": null
     },
     {
       "id": "cl-7948795032",
@@ -4382,7 +3989,8 @@
       "lng": -118.242363,
       "postedDate": 1784738380,
       "url": "https://www.craigslist.org/view/d/los-angeles-commercial-kitchen/sXeGjmhmxiY4iZX7KdhtYU",
-      "thumb": ""
+      "thumb": "",
+      "hood": null
     },
     {
       "id": "cl-7945977089",
@@ -4391,12 +3999,14 @@
       "title": "3300 SF INDUSTRIAL WAREHOUSE +  2 OFFICES",
       "price": null,
       "period": "monthly",
-      "sqft": null,
+      "sqft": 300,
       "lat": 34.249751,
       "lng": -118.603524,
       "postedDate": 1783551381,
       "url": "https://www.craigslist.org/view/d/chatsworth-3300-sf-industrial-warehouse/5dNB1T8sbmNdEuEAJUskBM",
-      "thumb": "https://images.craigslist.org/00k0k_ePTwCRLDWPj_0ky0dG_50x50c.jpg"
+      "thumb": "https://images.craigslist.org/00k0k_ePTwCRLDWPj_0ky0dG_50x50c.jpg",
+      "hood": null
     }
-  ]
+  ],
+  "verifiedAt": "body-checked"
 }

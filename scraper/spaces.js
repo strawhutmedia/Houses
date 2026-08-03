@@ -22,9 +22,10 @@ const REGIONS = [{ sub: "losangeles", label: "Los Angeles" }];
 
 // Not a real, move-in monthly space (virtual/mail-only, hourly/daily services).
 const NOT_SPACE = /virtual office|business address|mailing address|office address|mail plan|mailbox|po box|by the hour|per hour|\/\s?hr\b|hourly|by the day|day rate|\/\s?day\b|per day/i;
-// Coworking / shared-desk / membership — a seat, not a space you lease. Its cheap
-// "monthly" price is per-desk and misleading for someone renting an actual studio.
-const COWORK = /coworking|co-working|hot\s?desks?|dedicated desks?|shared desks?|desks?\s+(are\s+)?(shared|not assigned)|not assigned|any available seat|day\s?pass|on-?demand|hybrid schedule|\bmemberships?\b|work anywhere|reserve your access/i;
+// Anything that is NOT a private, move-in space of your own — coworking, shared
+// desks, memberships, part-time/hourly, virtual offices, treatment rooms, salon
+// chairs, office-shares. Its cheap "monthly" price is per-seat and misleading.
+const COWORK = /coworking|co-?working|hot\s?desks?|dedicated desks?|shared\s?(desk|office|space|work|suite)|desks?\s+(are\s+)?(shared|not assigned)|not assigned|any available seat|day\s?pass|drop-?in|on-?demand|hybrid schedule|\bmemberships?\b|work anywhere|reserve your access|\bp-?t\b|part[- ]?time|by the (hour|day)|per hour|per\s?day|\/\s?(hr|day)\b|hourly|virtual office|mailing address|business address|office to share|share (an |your |my |a )?(office|space|desk|suite|room)|sublet a desk|salon (chair|station|suite)|(chair|booth|station)\s+(for )?rent|treatment room/i;
 
 function curl(url) {
   return new Promise((resolve) => {
