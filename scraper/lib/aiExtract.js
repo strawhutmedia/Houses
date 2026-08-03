@@ -228,6 +228,44 @@ async function assessConditionFromUrls(urls) {
   return assessConditionFromPhotos(b64s);
 }
 
+// ---- Town "vibe" reads (private home-search tool, not a public listing service) ----
+var TOWN_SCHEMA = {
+  type: "object", additionalProperties: false, properties: {
+    towns: {
+      type: "array", items: {
+        type: "object", additionalProperties: false,
+        properties: {
+          key: { type: "string" },                 // echo back "City, ST"
+          s: { type: "integer" },                    // cool/desirability 1-5
+          v: { type: "string" },                     // one-sentence vibe
+          t: { type: "array", items: { type: "string" } }, // 2-4 tags
+        },
+        required: ["key", "s", "v", "t"],
+      },
+    },
+  }, required: ["towns"],
+};
+// Assess a batch of "City, ST" strings. Private tool for one family's home hunt,
+// so the read can be candid about character/energy/trajectory (up-and-coming,
+// artsy, family, retiree, outdoorsy). Returns { "City, ST": {s,v,t} }.
+async function assessTowns(keys) {
+  if (!hasCreds() || !keys || !keys.length) return {};
+  var instr =
+    "You are helping ONE family privately decide where to buy a home (this is not a public real-estate service). " +
+    "For each US town given as \"City, ST\", return a candid lifestyle read:\n" +
+    "- s: overall desirability/cool score 1-5 (5 = very desirable).\n" +
+    "- v: one plain-English sentence on what it's actually like and what's around it — mention coast/lake/mountains/" +
+    "wine/college/nightlife/downtown, the general energy (young & artsy, family, quiet/retiree, outdoorsy), and whether " +
+    "it's up-and-coming/gentrifying or sleepy.\n" +
+    "- t: 2-4 short lowercase tags.\n" +
+    "Use general knowledge of the place. If you don't know it, give a neutral read with s=2. Echo the exact key you were given.";
+  var content = [{ type: "text", text: instr + "\n\nTowns:\n" + keys.join("\n") }];
+  var out = await callClaude(content, TOWN_SCHEMA, 8192);
+  var map = {};
+  if (out && out.towns) out.towns.forEach(function (t) { if (t.key && t.s) map[t.key] = { s: t.s, v: t.v, t: t.t || [] }; });
+  return map;
+}
+
 module.exports = {
   hasCreds,
   extractListingsFromHtml,
@@ -235,5 +273,6 @@ module.exports = {
   assessConditionFromPhotos,
   assessConditionFromUrls,
   estimateValue,
+  assessTowns,
   MODEL,
 };

@@ -171,6 +171,8 @@
     document.head.appendChild(s);
   }
 
+  function vibeOf(d) { var V = window.VIBES; return (V && d.city && d.state) ? V[d.city + ", " + d.state] : null; }
+
   function hotspotOf(d) {
     if (d._hot !== undefined) return d._hot;
     var reasons = [], HS = window.HOTSPOTS || [];
@@ -214,7 +216,7 @@
       if (d.price != null && d.price > state.maxPrice) return false;
       if (state.minBeds && (d.beds || 0) < state.minBeds) return false;
       if (state.minBaths && (d.baths || 0) < state.minBaths) return false;
-      if (state.hotspots && !hotspotOf(d).length) return false;
+      if (state.hotspots) { var vb = vibeOf(d); if (!hotspotOf(d).length && !(vb && vb.s >= 4)) return false; }
       if (zipQ) {
         // "near a ZIP" — keep everything, rank by distance below. Never blank.
         if (ZIP_ORIGIN) d._mi = homeMiles(d, ZIP_ORIGIN);
@@ -234,6 +236,10 @@
     out.sort(function (a, b) {
       if (mode === "near") { var da = a._mi == null ? Infinity : a._mi, db = b._mi == null ? Infinity : b._mi; if (da !== db) return da - db; }
       if (mode === "ending") return (new Date(a.deadline || "2999-01-01")) - (new Date(b.deadline || "2999-01-01"));
+      if (mode === "cool") {
+        var va = (vibeOf(a) || {}).s || 0, vbb = (vibeOf(b) || {}).s || 0;
+        if (va !== vbb) return vbb - va;
+      }
       var pa = a.price == null ? Infinity : a.price, pb = b.price == null ? Infinity : b.price;
       if (pa !== pb) return pa - pb;
       return (new Date(a.deadline || "2999-01-01")) - (new Date(b.deadline || "2999-01-01"));
@@ -292,7 +298,9 @@
     var saved = !!SAVED[d.id];
     var miChip = LAST_ZIP && d._mi != null && isFinite(d._mi) ? '<span class="l-mi">~' + Math.round(d._mi) + ' mi away</span>' : '';
     var hs = hotspotOf(d);
-    var hsBadge = hs.length ? '<div class="hot-badge">' + hs[0].icon + ' ' + esc(hs[0].text) + '</div>' : '';
+    var vb = vibeOf(d);
+    var vibeChip = (vb && vb.s >= 4) ? '<span class="vibe-chip">✨ Cool town · ' + esc(vb.t[0]) + '</span>' : '';
+    var hsBadge = (hs.length || vibeChip) ? '<div class="hot-badge-row">' + vibeChip + (hs.length ? '<span class="hot-badge">' + hs[0].icon + ' ' + esc(hs[0].text) + '</span>' : '') + '</div>' : '';
     return '' +
       '<article class="home" data-id="' + esc(d.id) + '">' +
         '<div class="home-main">' +
@@ -324,6 +332,16 @@
       var hs = hotspotOf(d);
       mhot.innerHTML = hs.map(function (r) { return '<span class="hot-badge">' + r.icon + ' ' + esc(r.text) + '</span>'; }).join("");
       mhot.style.display = hs.length ? "" : "none";
+    }
+    var mv = m.querySelector("#m-vibe"), vb = vibeOf(d);
+    if (mv) {
+      if (vb) {
+        mv.style.display = "";
+        mv.innerHTML = '<div class="mv-head">✨ Town vibe <span class="mv-score">' + vb.s + '/5</span></div>' +
+          '<div class="mv-blurb">' + esc(vb.v) + '</div>' +
+          '<div class="mv-tags">' + vb.t.map(function (t) { return '<span>' + esc(t) + '</span>'; }).join("") +
+          '</div><div class="mv-src">AI vibe estimate — do your own homework on the specific block.</div>';
+      } else { mv.style.display = "none"; }
     }
     // Only show a field if we actually have it — no more rows of blank "—".
     function cell(id, val) {

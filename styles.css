@@ -605,3 +605,17 @@ footer .muted { color: var(--muted); font-size: 13.5px; max-width: 46ch; }
 /* compact beds/baths selects */
 .mini-sel { flex: 1; min-width: 84px; padding: 10px 12px; border-radius: 10px; border: 1.5px solid var(--line); background: var(--panel); color: var(--text); font-size: 14px; font-weight: 600; }
 .mini-sel:focus { outline: none; border-color: var(--brand); }
+
+/* ---- town vibe (AI) ---- */
+.hot-badge-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.vibe-chip {
+  display: inline-block; font-size: 12px; font-weight: 800; padding: 3px 9px; border-radius: 999px; line-height: 1.4;
+  background: rgba(244,185,66,.16); border: 1px solid rgba(244,185,66,.45); color: var(--gold);
+}
+.m-vibe { margin-top: 12px; border: 1px solid rgba(244,185,66,.35); background: rgba(244,185,66,.07); border-radius: 12px; padding: 12px 14px; }
+.mv-head { font-weight: 800; font-size: 14px; color: var(--gold); display: flex; align-items: center; gap: 8px; }
+.mv-score { font-size: 12px; background: rgba(244,185,66,.2); border-radius: 999px; padding: 1px 8px; }
+.mv-blurb { font-size: 14px; color: var(--text); margin-top: 6px; line-height: 1.5; }
+.mv-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.mv-tags span { font-size: 11.5px; font-weight: 700; color: var(--muted); background: var(--bg-soft); border: 1px solid var(--line); border-radius: 999px; padding: 3px 9px; }
+.mv-src { font-size: 11px; color: var(--muted-2); margin-top: 8px; }

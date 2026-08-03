@@ -83,6 +83,43 @@ async function enrich(rawRows) {
   console.log(`  values estimated: ${vOk} | conditions assessed: ${cOk}`);
 }
 
+// Read the existing window.VIBES = {...} object out of ../vibes.js (or {}).
+function loadVibes(vibesPath) {
+  try {
+    var txt = fs.readFileSync(vibesPath, "utf8");
+    var m = txt.match(/window\.VIBES\s*=\s*(\{[\s\S]*\});?\s*$/);
+    return m ? JSON.parse(m[1]) : {};
+  } catch (e) { return {}; }
+}
+// Assess every town in this run's listings that we don't have a vibe for yet,
+// in batches, and merge into vibes.js.
+async function refreshVibes(listings) {
+  const vibesPath = path.join(__dirname, "..", "vibes.js");
+  const have = loadVibes(vibesPath);
+  const seen = {};
+  listings.forEach(function (l) {
+    if (l.city && l.state) { var k = l.city + ", " + l.state; if (!have[k]) seen[k] = 1; }
+  });
+  const missing = Object.keys(seen);
+  if (!missing.length) { console.log("  vibes: all towns already assessed."); return; }
+  const limit = +(process.env.ES_VIBE_LIMIT || 300); // cap per run to bound cost
+  const todo = missing.slice(0, limit);
+  console.log(`\nAI town vibes: ${todo.length} new town(s) (model ${ai.MODEL})…`);
+  let added = 0;
+  for (let i = 0; i < todo.length; i += 40) {
+    const batch = todo.slice(i, i + 40);
+    try {
+      const map = await ai.assessTowns(batch);
+      Object.keys(map).forEach(function (k) { have[k] = map[k]; added++; });
+    } catch (e) { console.log("  vibe batch failed: " + e.message); }
+  }
+  const header = "/* AI-generated town \"vibe\" reads for a private family home search. " +
+    "s = cool score 1-5, v = blurb, t = tags. Auto-extended by the scraper as new towns appear. Estimates. */\n";
+  fs.writeFileSync(vibesPath, header + "window.VIBES=" + JSON.stringify(have) + ";\n");
+  console.log(`  vibes: added ${added}, total ${Object.keys(have).length}.` +
+    (missing.length > todo.length ? ` (${missing.length - todo.length} left for next run)` : ""));
+}
+
 async function main() {
   const args = parseArgs(process.argv);
   const targets = args.only ? ADAPTERS.filter((a) => a.id === args.only) : ADAPTERS;
@@ -129,6 +166,13 @@ async function main() {
 
   const outPath = path.join(__dirname, "..", "listings.json");
   fs.writeFileSync(outPath, JSON.stringify(payload, null, 2));
+
+  // AI "town vibe" reads: assess any NEW town that showed up this run and cache
+  // it into ../vibes.js so it's a one-time cost per town. No key -> keep the
+  // hand-seeded set as-is.
+  if (ai.hasCreds() && !args.noai) {
+    try { await refreshVibes(listings); } catch (e) { console.log("  vibe refresh error: " + e.message); }
+  }
 
   console.log(`\n✓ Wrote ${listings.length} listing(s) -> ${outPath}`);
   console.log("  Source status:");
