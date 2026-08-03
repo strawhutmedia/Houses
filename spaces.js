@@ -8,6 +8,15 @@
   var YOUR_RENT = 3400;                 // what the user pays now, for savings math
   // Reference point: the user's current studio — 7201 Melrose Ave (Melrose & Formosa).
   var STUDIO = { lat: 34.0838, lng: 118.3455 };
+  // Neighborhoods the user actually wants to be in — one-tap area filters.
+  var TARGETS = {
+    "Burbank": [34.1808, 118.3090],
+    "Los Feliz": [34.1063, 118.2854],
+    "Silver Lake": [34.0869, 118.2702],
+    "East Hollywood": [34.0900, 118.2951],
+  };
+  var AREA_RADIUS = 3.0;   // miles — "in this area"
+  var REF_NAME = "your studio";
 
   // A few LA neighborhoods to label listings by nearest.
   var HOODS = [
@@ -58,11 +67,16 @@
       .catch(function () { return []; });
   }
 
-  var state = { q: "", maxPrice: YOUR_RENT, sort: "price" };
+  var state = { q: "", maxPrice: YOUR_RENT, sort: "price", area: "" };
 
   function apply() {
+    var t = state.area && TARGETS[state.area];
+    var ref = t ? { lat: t[0], lng: t[1] } : STUDIO;
+    REF_NAME = state.area || "your studio";
     var out = DATA.filter(function (s) {
       if (state.maxPrice && s.price != null && s.price > state.maxPrice) return false;
+      s._mi = (s.lat != null) ? miBetween(ref.lat, ref.lng, s.lat, Math.abs(s.lng)) : Infinity;
+      if (t && s._mi > AREA_RADIUS) return false;   // keep it to the chosen neighborhood
       if (state.q) {
         var hay = (s.title + " " + (s._hood || "")).toLowerCase();
         if (hay.indexOf(state.q) === -1) return false;
@@ -82,6 +96,7 @@
   function render() {
     var rows = apply(), host = $("list");
     $("result-count").innerHTML = "<b>" + rows.length + "</b> space" + (rows.length === 1 ? "" : "s") +
+      (state.area ? " in " + esc(state.area) : "") +
       (state.maxPrice < 100000000 ? " under " + fmt(state.maxPrice) + "/mo" : "") +
       ' <span class="src-note live">● live · Craigslist LA</span>';
     if (!rows.length) {
@@ -95,7 +110,7 @@
   }
 
   function rowHTML(s) {
-    var loc = (s._hood ? esc(s._hood) : "LA") + (isFinite(s._mi) ? ' <span class="l-mi">~' + Math.round(s._mi) + ' mi from your studio</span>' : "");
+    var loc = (s._hood ? esc(s._hood) : "LA") + (isFinite(s._mi) ? ' <span class="l-mi">~' + Math.round(s._mi) + ' mi from ' + esc(REF_NAME) + '</span>' : "");
     var save = s._save > 0 ? '<span class="save-badge">saves ~' + fmt(Math.round(s._save)) + '/mo</span>' : "";
     return '' +
       '<article class="home" data-url="' + esc(s.url) + '">' +
@@ -121,6 +136,13 @@
       $("f-q").addEventListener("input", function (e) { state.q = e.target.value.trim().toLowerCase(); $("f-clear").hidden = !state.q; render(); });
       $("f-clear").addEventListener("click", function () { $("f-q").value = ""; state.q = ""; $("f-clear").hidden = true; render(); });
       document.querySelectorAll("#price-chips .chip2").forEach(function (b) { b.addEventListener("click", function () { setPrice(+b.getAttribute("data-max")); }); });
+      document.querySelectorAll("#area-chips .chip2").forEach(function (b) {
+        b.addEventListener("click", function () {
+          state.area = b.getAttribute("data-area");
+          document.querySelectorAll("#area-chips .chip2").forEach(function (x) { x.classList.toggle("active", x === b); });
+          render();
+        });
+      });
       $("f-sort").addEventListener("change", function (e) { state.sort = e.target.value; render(); });
       render();
     });
