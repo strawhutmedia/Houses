@@ -191,8 +191,16 @@
       }
       if (best) reasons.push({ icon: best.meta.icon, text: best.meta.label + " — " + best.p.n + " (" + miLabel(best.mi) + ")" });
     }
-    if (d.price != null && d.sqft && d.sqft >= 1500 && d.price / d.sqft < 55)
-      reasons.push({ icon: "🏡", text: "Big house for the money — " + d.sqft.toLocaleString() + " sqft" });
+    if (d.price != null && d.sqft && d.sqft >= 1500 && d.price / d.sqft < 55) {
+      // Only call it a "big house" when the bedroom count backs it up (county
+      // tax-deed records often placeholder beds at 0-1). Otherwise just state
+      // the honest fact: lots of square footage for the money.
+      var bigHouse = (d.beds || 0) >= 3;
+      reasons.push({
+        icon: bigHouse ? "🏡" : "📐",
+        text: (bigHouse ? "Big house for the money — " : "Lots of square footage for the price — ") + d.sqft.toLocaleString() + " sqft",
+      });
+    }
     d._hot = reasons;
     return reasons;
   }
