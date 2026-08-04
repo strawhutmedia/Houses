@@ -25,6 +25,7 @@ const ADAPTERS = [
   require("./adapters/bid4assets"),   // LIVE: cheap county tax-deed / sheriff-sale houses
   require("./adapters/gsa"),          // LIVE: federal real property (GSA) — priced from listing grid
   require("./adapters/irsAuctions"),  // LIVE: IRS seized real property (federal tax seizures)
+  require("./adapters/vrmVA"),        // LIVE: VA foreclosure REO (VRM) — nationwide, incl. CA/OR
   require("./adapters/stlouisLandBank"),// LIVE: ~1,000 cheap city land-bank houses (price on inquiry)
   require("./adapters/geneseeLandBank"),// LIVE: Flint, MI land-bank houses (many with real prices)
   require("./adapters/publicsurplus"),// LIVE: gov surplus real estate (thin, land-heavy)
