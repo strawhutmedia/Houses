@@ -76,6 +76,7 @@ function normalizeListing(raw) {
     lotAcres: raw.lotAcres || null,
     price,
     marketValue,
+    priceOnInquiry: raw.priceOnInquiry === true,
     valueBasis: raw.valueBasis || (marketValue != null ? "listed" : null),
     rentEstimate,
     equity,

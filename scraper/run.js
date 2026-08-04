@@ -24,6 +24,7 @@ const ADAPTERS = [
   require("./adapters/hud"),          // LIVE: cheap FHA foreclosure homes (nationwide)
   require("./adapters/bid4assets"),   // LIVE: cheap county tax-deed / sheriff-sale houses
   require("./adapters/gsa"),          // LIVE: federal real property (GSA) — priced from listing grid
+  require("./adapters/stlouisLandBank"),// LIVE: ~1,000 cheap city land-bank houses (price on inquiry)
   require("./adapters/publicsurplus"),// LIVE: gov surplus real estate (thin, land-heavy)
   require("./adapters/cws"),          // Treasury + US Marshals forfeiture (headless; CI only)
   require("./adapters/fdic"),
@@ -44,10 +45,11 @@ function parseArgs(argv) {
 const US_STATES = new Set(("AL AK AZ AR CA CO CT DE DC FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN " +
   "MS MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY").split(" "));
 // A row is publishable only if it has a real US state and something a buyer can
-// evaluate (an opening price or an estimated market value).
+// evaluate — an opening price, an estimated market value, OR a land-bank parcel
+// whose price is set on inquiry (shown honestly as "Price on inquiry").
 function isUsable(r) {
   if (!US_STATES.has(r.state)) return false;
-  return r.price != null || r.marketValue != null;
+  return r.price != null || r.marketValue != null || r.priceOnInquiry === true;
 }
 
 function condClass(label) {

@@ -248,7 +248,11 @@
         var va = (vibeOf(a) || {}).s || 0, vbb = (vibeOf(b) || {}).s || 0;
         if (va !== vbb) return vbb - va;
       }
-      var pa = a.price == null ? Infinity : a.price, pb = b.price == null ? Infinity : b.price;
+      // Land-bank "price on inquiry" homes are the LRA's ~$1k–$25k stock — sort
+      // them among the cheap homes (using the program ceiling as a hidden key,
+      // never shown as a real price) instead of dumping them at the bottom.
+      var pa = a.price != null ? a.price : (a.priceOnInquiry ? 25000 : Infinity);
+      var pb = b.price != null ? b.price : (b.priceOnInquiry ? 25000 : Infinity);
       if (pa !== pb) return pa - pb;
       return (new Date(a.deadline || "2999-01-01")) - (new Date(b.deadline || "2999-01-01"));
     });
@@ -312,7 +316,7 @@
     return '' +
       '<article class="home" data-id="' + esc(d.id) + '">' +
         '<div class="home-main">' +
-          '<div class="home-price">' + (d.price != null ? fmt(d.price) : "See source") + '</div>' +
+          '<div class="home-price">' + (d.price != null ? fmt(d.price) : (d.priceOnInquiry ? '<span class="mo-unk">Price on inquiry</span>' : "See source")) + '</div>' +
           '<div class="home-loc"><b>' + esc(d.city || streetOf(d.address) || "Home") + '</b>, ' + esc(d.state || "") + (d.zip ? " " + esc(d.zip) : "") + ' ' + miChip + '</div>' +
           '<div class="home-meta">' + esc(beds) + '</div>' +
           hsBadge +
@@ -356,7 +360,7 @@
       var el = m.querySelector(id); el.textContent = val == null ? "" : val;
       var c = el.closest(".cell"); if (c) c.style.display = (val == null) ? "none" : "";
     }
-    cell("#m-price", d.price != null ? fmt(d.price) : "See source");
+    cell("#m-price", d.price != null ? fmt(d.price) : (d.priceOnInquiry ? "Price on inquiry" : "See source"));
     cell("#m-value", d.marketValue != null ? fmt(d.marketValue) : null);
     cell("#m-equity", d.equity != null ? fmt(d.equity) + " (" + d.equityPct + "%)" : null);
     cell("#m-rent", d.rentEstimate ? fmt(d.rentEstimate) + "/mo" : null);
@@ -394,6 +398,11 @@
 
     var link = m.querySelector("#m-link");
     if (d.url) { link.href = d.url; link.style.display = ""; } else { link.style.display = "none"; }
+    // Land-bank homes: explain the "price on inquiry" model and retarget the CTA.
+    var inq = m.querySelector("#m-inquiry-note");
+    if (inq) inq.hidden = !d.priceOnInquiry;
+    if (d.priceOnInquiry) link.textContent = "Open the parcel page & apply →";
+    else link.innerHTML = "View full listing &amp; contact the seller →";
 
     $("modal-back").classList.add("open");
     document.body.style.overflow = "hidden";
