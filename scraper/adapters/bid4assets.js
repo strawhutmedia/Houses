@@ -129,12 +129,18 @@ async function scrape({ limit = 24, pages = 3 } = {}) {
   return out;
 }
 
-// ---- county tax-sale index (secondary; parcels publish when a sale opens) ----
+// ---- county tax-sale storefronts (the VOLUME source: each county sale posts
+// dozens–hundreds of cheap parcels, but only while that sale is OPEN) ----------
+// Counties we most want to see first if several sales are open at once. Everyone
+// else still gets pulled — this is ranking, not a filter.
 const COUNTY_PRIORITY = {
   "los angeles": 1, "san bernardino": 1, "riverside": 1, "kern": 1, "ventura": 1, "orange": 1,
   "imperial": 2, "san diego": 2, "clark": 3, "multnomah": 3, "washington": 3, "clackamas": 3,
 };
 function countyKey(t) { var m = String(t).match(/^([A-Za-z .'-]+?)\s+County/i); return m ? m[1].trim().toLowerCase() : ""; }
+
+// List every county tax-sale storefront on Bid4Assets, nationwide (the old code
+// threw away everything outside CA/OR/WA — that's most of the cheap houses).
 async function listAuctions() {
   const index = await fetchText(`${BASE}/county-tax-sales`);
   const out = [], seen = {};
@@ -144,11 +150,83 @@ async function listAuctions() {
     const slug = m[1]; if (seen[slug]) continue; seen[slug] = 1;
     const text = clean(m[2].replace(/<[^>]+>/g, " "));
     const st = (text.match(/,\s*([A-Z]{2})\b/) || [])[1];
-    if (!st || ["CA", "OR", "WA"].indexOf(st) === -1) continue;
+    if (!st) continue;                                  // need a US state to place it
     if (/timeshare|personal|vehicle/i.test(text)) continue;
     out.push({ slug, state: st, title: text, county: countyKey(text), priority: COUNTY_PRIORITY[countyKey(text)] || 9, url: `${BASE}/storefront/${slug}` });
   }
   return out.sort(function (a, b) { return a.priority - b.priority; });
 }
 
-module.exports = { scrape, listAuctions, id: "bid4assets", label: "Bid4Assets Tax/Foreclosure Auctions", status: "live" };
+// Pull the parcel (auction) IDs for a single storefront. Returns [] when the
+// sale isn't open — county sales only publish parcels during their sale window.
+async function storefrontParcelIds(slug) {
+  const html = await fetchText(`${BASE}/storefront/${slug}`);
+  const sid = (html.match(/storefrontId["\s:=]+(\d+)/i) || [])[1];
+  const cid = (html.match(/storefrontCollectionId["\s:=]+(\d+)/i) || [])[1];
+  const ids = {};
+  // (1) JSON API — the reliable path for an open sale; paginate until empty.
+  if (sid) {
+    for (let page = 1; page <= 30; page++) {
+      let txt;
+      try {
+        txt = await fetchPost(`${BASE}/api/storefront/auctions/index`, {
+          json: { storefrontId: +sid, storefrontCollectionId: cid ? +cid : undefined, pageSize: 100, currentPage: page },
+        });
+      } catch (e) { break; }
+      let j; try { j = JSON.parse(txt); } catch (e) { break; }
+      const rows = (j && (j.data || j.Data || j.results || j.items)) || [];
+      if (!rows.length) break;
+      for (const r of rows) {
+        const s = JSON.stringify(r);
+        const id = (s.match(/"auctionId"\s*:\s*"?(\d+)/i) ||
+          s.match(/\/auction\/(?:index\/)?(\d+)/) ||
+          s.match(/"(?:itemId|id)"\s*:\s*"?(\d{5,})/i) || [])[1];
+        if (id) ids[id] = 1;
+      }
+      if (rows.length < 100) break;
+    }
+  }
+  // (2) HTML fallback — direct /auction/<id> links printed on an open storefront.
+  let m; const re = /\/auction\/(?:index\/)?(\d+)/g;
+  while ((m = re.exec(html))) ids[m[1]] = 1;
+  return Object.keys(ids);
+}
+
+// Walk the storefronts, pull parcels from any that are OPEN, and parse each with
+// the same detail reader used for the channel. Bounded so a run stays quick even
+// when many sales are open at once.
+async function scrapeStorefronts({ maxCounties = 12, maxParcels = 180 } = {}) {
+  let sales;
+  try { sales = await listAuctions(); } catch (e) { return []; }
+  const out = []; let counties = 0, fetched = 0;
+  for (const sale of sales) {
+    if (counties >= maxCounties || fetched >= maxParcels) break;
+    let pids;
+    try { pids = await storefrontParcelIds(sale.slug); } catch (e) { continue; }
+    if (!pids.length) continue;                          // sale not open right now
+    counties++;
+    for (const id of pids) {
+      if (fetched >= maxParcels) break;
+      fetched++;
+      try {
+        const l = await fetchDetail(id, sale.title);
+        if (l && l.price != null) { l.source = "County Tax Deed"; l.county = sale.county || null; out.push(l); }
+      } catch (e) { /* skip bad parcel */ }
+    }
+  }
+  if (counties) console.log(`  [bid4assets] storefronts: ${out.length} parcel(s) from ${counties} open county sale(s)`);
+  return out;
+}
+
+// The adapter entry point: channel homes + any open county-sale parcels, de-duped.
+async function scrapeAll(opts) {
+  const [channel, store] = await Promise.all([
+    scrape(opts).catch(() => []),
+    scrapeStorefronts(opts).catch(() => []),
+  ]);
+  const seen = {}, out = [];
+  for (const l of channel.concat(store)) { if (l && l.id && !seen[l.id]) { seen[l.id] = 1; out.push(l); } }
+  return out;
+}
+
+module.exports = { scrape: scrapeAll, scrapeChannel: scrape, scrapeStorefronts, listAuctions, storefrontParcelIds, id: "bid4assets", label: "Bid4Assets Tax/Foreclosure Auctions", status: "live" };
