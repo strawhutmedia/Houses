@@ -23,6 +23,7 @@ const ai = require("./lib/aiExtract");
 const ADAPTERS = [
   require("./adapters/hud"),          // LIVE: cheap FHA foreclosure homes (nationwide)
   require("./adapters/bid4assets"),   // LIVE: cheap county tax-deed / sheriff-sale houses
+  require("./adapters/gsa"),          // LIVE: federal real property (GSA) — priced from listing grid
   require("./adapters/publicsurplus"),// LIVE: gov surplus real estate (thin, land-heavy)
   require("./adapters/cws"),          // Treasury + US Marshals forfeiture (headless; CI only)
   require("./adapters/fdic"),

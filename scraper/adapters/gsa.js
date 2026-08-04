@@ -17,6 +17,8 @@ const BASE = "https://realestatesales.gov";
 
 function decode(s) {
   return (s || "")
+    .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCharCode(parseInt(h, 16)))
+    .replace(/&#(\d+);/g, (_, d) => String.fromCharCode(+d))
     .replace(/&amp;/g, "&").replace(/&#39;/g, "'").replace(/&quot;/g, '"')
     .replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&nbsp;/g, " ")
     .replace(/\s+/g, " ").trim();
@@ -104,20 +106,52 @@ async function parseDetail(id) {
   };
 }
 
-async function scrape({ limit = 40 } = {}) {
-  const list = await fetchText(`${BASE}/our-listing/`);
-  const ids = [...new Set((list.match(/property_id=(\d+)/g) || [])
-    .map((s) => s.replace("property_id=", "")))].slice(0, limit);
-
+// Parse the listing grid directly — every card carries the real Current Bid,
+// the address, and the close date (the detail page hides the live bid behind a
+// socket, so the card is the only reliable price). One card = one property.
+function parseCards(html) {
   const out = [];
-  for (const id of ids) {
-    try {
-      out.push(await parseDetail(id));
-    } catch (e) {
-      console.error(`  [gsa] property ${id} failed: ${e.message}`);
-    }
+  const cards = html.split(/<li class="[^"]*"\s*>\s*<div class="itemm">/).slice(1);
+  for (const c of cards) {
+    const id = firstMatch(c, /property_id=(\d+)/);
+    if (!id) continue;
+    const price = firstMatch(c, /property-price[\s\S]*?\$\s*([0-9,]{3,})/i);
+    const title = decode(firstMatch(c, /<h2>\s*([\s\S]*?)\s*<\/h2>/i) || "");
+    const h5 = firstMatch(c, /<h5[^>]*>([\s\S]*?)<\/h5>/i) || "";
+    const loc = h5.replace(/<[^>]+>/g, " ");
+    const cs = loc.match(/([A-Za-z][A-Za-z .'-]+),\s*([A-Z]{2})\s*(\d{5})/);
+    const street = decode((firstMatch(c, /<h5[^>]*title="([^"]+)"/i) || "").trim());
+    const endDate = firstMatch(c, /data-end-date="([^"]+)"/i);
+    out.push({
+      id: "gsa-" + id,
+      source: "GSA Auctions",
+      state: cs ? cs[2] : "",
+      city: cs ? decode(cs[1]) : "",
+      address: street || title || (cs ? decode(cs[1]) : ""),
+      type: mapGsaType(title, ""),
+      sqft: null,
+      year: null,
+      lotAcres: /(\d+(?:\.\d+)?)\s*acre/i.test(title) ? parseFloat(RegExp.$1) : null,
+      price: price ? +price.replace(/[^0-9]/g, "") : null,
+      marketValue: null,
+      rentEstimate: 0,
+      auctionDate: endDate || null,
+      lat: null, lng: null,
+      url: `${BASE}/asset-details/?property_id=${id}`,
+      live: true,
+    });
   }
   return out;
 }
 
-module.exports = { scrape, id: "gsa", label: "GSA Real Property Sales", status: "live" };
+async function scrape({ limit = 60 } = {}) {
+  const list = await fetchText(`${BASE}/our-listing/`);
+  let rows = parseCards(list);
+  if (rows.length > limit) rows = rows.slice(0, limit);
+  // Only publishable rows have a real price; drop the rest (the site quality
+  // gate would anyway). Residential is rare on GSA — we ingest everything and
+  // let the site's type/price filters do the work.
+  return rows.filter((r) => r.price != null);
+}
+
+module.exports = { scrape, parseCards, parseDetail, id: "gsa", label: "GSA Real Property Sales", status: "live" };
