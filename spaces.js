@@ -59,7 +59,8 @@
       // the space is genuinely within ~4 mi of it — never mislabel a far city.
       s._hood = s.hood || (h && h.mi < 4 ? h.name : "");
     } else { s._mi = Infinity; s._hood = ""; }
-    s._save = (s.price != null && s.price < YOUR_RENT) ? YOUR_RENT - s.price : 0;
+    // Only claim savings on a real, non-estimated monthly price.
+    s._save = (s.price != null && !s.priceEstimated && s.price < YOUR_RENT) ? YOUR_RENT - s.price : 0;
     return s;
   }
 
@@ -78,8 +79,10 @@
     REF_NAME = state.area || "your studio";
     var capped = state.maxPrice < 100000000;
     var out = DATA.filter(function (s) {
-      // With a price cap on, only show spaces whose real price we know and verify.
-      if (capped) { if (s.price == null || s.price > state.maxPrice) return false; }
+      // A price cap only rules out spaces whose known price is over it. Broker
+      // "price on inquiry" spaces have no number, so they still show (they might
+      // be cheap) — clearly labeled, sorted after the priced ones.
+      if (capped) { if (s.price != null && s.price > state.maxPrice) return false; }
       s._mi = (s.lat != null) ? miBetween(ref.lat, ref.lng, s.lat, Math.abs(s.lng)) : Infinity;
       if (t && s._mi > AREA_RADIUS) return false;   // keep it to the chosen neighborhood
       if (state.q) {
@@ -103,7 +106,7 @@
     $("result-count").innerHTML = "<b>" + rows.length + "</b> space" + (rows.length === 1 ? "" : "s") +
       (state.area ? " in " + esc(state.area) : "") +
       (state.maxPrice < 100000000 ? " under " + fmt(state.maxPrice) + "/mo" : "") +
-      ' <span class="src-note live">● live · Craigslist LA</span>';
+      ' <span class="src-note live">● live · Craigslist + LA brokers</span>';
     if (!rows.length) {
       host.innerHTML = '<div class="empty"><strong>No spaces match.</strong><br>Raise the price cap or clear the search.</div>';
       return;
@@ -116,16 +119,32 @@
 
   function rowHTML(s) {
     var sqft = s.sqft ? '<span class="sqft-chip">' + s.sqft.toLocaleString() + ' sqft</span> ' : "";
+    var type = s.type && s.type !== "Commercial" ? '<span class="sqft-chip">' + esc(s.type) + '</span> ' : "";
     var place = s._hood ? esc(s._hood) + " " : "";
-    var loc = sqft + place + (isFinite(s._mi) ? '<span class="l-mi">~' + Math.round(s._mi) + ' mi from ' + esc(REF_NAME) + '</span>' : "");
+    var loc = sqft + type + place + (isFinite(s._mi) ? '<span class="l-mi">~' + Math.round(s._mi) + ' mi from ' + esc(REF_NAME) + '</span>' : "");
     var save = s._save > 0 ? '<span class="save-badge">saves ~' + fmt(Math.round(s._save)) + '/mo</span>' : "";
+    // Price cell: a real monthly, an estimate from a $/SF rate, or price-on-inquiry.
+    var priceCell;
+    if (s.price != null && s.priceEstimated) {
+      priceCell = '~' + fmt(s.price) + '<span class="mo">/mo</span>' +
+        '<span class="mo-unk"> est.' + (s.rateNote ? ' (' + esc(s.rateNote) + ')' : '') + '</span>';
+    } else if (s.price != null) {
+      priceCell = fmt(s.price) + '<span class="mo">/mo</span> ' + save;
+    } else {
+      priceCell = '<span class="mo-unk">Price on inquiry</span>';
+    }
+    // Sub-line: source, and for broker listings the name + phone to call.
+    var isBroker = s.source && s.source !== "Craigslist";
+    var sub = isBroker
+      ? esc(s.source) + (s.brokerPhone ? ' · <a class="broker-tel" href="tel:' + esc(s.brokerPhone) + '" onclick="event.stopPropagation()">' + esc(s.brokerPhone) + '</a>' : '')
+      : 'Craigslist' + (s.postedDate ? ' · posted ' + fmtDate(s.postedDate) : '');
     return '' +
       '<article class="home" data-url="' + esc(s.url) + '">' +
         '<div class="home-main">' +
-          '<div class="home-price">' + (s.price != null ? fmt(s.price) + '<span class="mo">/mo</span>' : '<span class="mo-unk">Price in listing</span>') + ' ' + save + '</div>' +
+          '<div class="home-price">' + priceCell + '</div>' +
           '<div class="home-loc"><b>' + esc(s.title || "Commercial space") + '</b></div>' +
           '<div class="home-meta">' + loc + '</div>' +
-          '<div class="home-sub">Craigslist' + (s.postedDate ? ' · posted ' + fmtDate(s.postedDate) : '') + '</div>' +
+          '<div class="home-sub">' + sub + '</div>' +
         '</div>' +
         '<div class="home-side"><span class="home-view">View →</span></div>' +
       '</article>';

@@ -105,22 +105,37 @@ async function scrapeRegion(r) {
 }
 
 async function main() {
-  let all = [];
+  const outPath = path.join(__dirname, "..", "spaces.json");
+  const prior = (() => { try { return JSON.parse(fs.readFileSync(outPath, "utf8")).spaces || []; } catch (e) { return []; } })();
+
+  // Source 1: Craigslist (landlord-posted, real monthly prices — but flaky/IP-blocked).
+  let cl = [];
   for (const r of REGIONS) {
-    try { all = all.concat(await scrapeRegion(r)); }
+    try { cl = cl.concat(await scrapeRegion(r)); }
     catch (e) { console.error(`  [${r.label}] failed: ${e.message}`); }
   }
-  const outPath = path.join(__dirname, "..", "spaces.json");
-  if (!all.length) { console.log("No spaces pulled (likely IP-blocked) — keeping existing spaces.json."); return; }
-  const priced = all.filter((s) => s.price != null).length;
-  // If almost nothing came back with a verified price, the detail fetches were
-  // likely IP-blocked (common in CI) — don't overwrite good data with blanks.
-  if (priced < all.length * 0.3) {
-    console.log(`Only ${priced}/${all.length} verified — likely blocked; keeping existing spaces.json.`);
-    return;
+  const clPriced = cl.filter((s) => s.price != null).length;
+  // If Craigslist came back thin/blocked, keep the last good Craigslist rows
+  // instead of wiping them — CAG below still refreshes on its own.
+  if (!cl.length || clPriced < cl.length * 0.3) {
+    const kept = prior.filter((s) => s.source === "Craigslist");
+    console.log(`Craigslist thin (${clPriced}/${cl.length}) — keeping ${kept.length} prior Craigslist space(s).`);
+    cl = kept;
   }
+
+  // Source 2: Commercial Asset Group broker listings (most never hit Craigslist).
+  let cag = [];
+  try { cag = await require("./spacesCAG").scrape(); console.log(`  CAG: ${cag.length} broker listing(s)`); }
+  catch (e) { console.error(`  [CAG] failed: ${e.message}`); cag = prior.filter((s) => s.source === "Commercial Asset Group"); }
+
+  // Merge + de-dupe.
+  const seen = {}, all = [];
+  for (const s of cl.concat(cag)) { if (s && s.id && !seen[s.id]) { seen[s.id] = 1; all.push(s); } }
+  if (!all.length) { console.log("No spaces from any source — keeping existing spaces.json."); return; }
+
+  const priced = all.filter((s) => s.price != null).length;
   fs.writeFileSync(outPath, JSON.stringify({ generatedAt: new Date().toISOString(), count: all.length, spaces: all }, null, 2));
-  console.log(`\n✓ Wrote ${all.length} monthly space(s) (${priced} with a verified price) -> ${outPath}`);
+  console.log(`\n✓ Wrote ${all.length} space(s) — ${cl.length} Craigslist, ${cag.length} CAG (${priced} priced) -> ${outPath}`);
 }
 
 main();
