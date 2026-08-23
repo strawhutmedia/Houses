@@ -29,6 +29,7 @@ const ADAPTERS = [
   require("./adapters/stlouisLandBank"),// LIVE: ~1,000 cheap city land-bank houses (price on inquiry)
   require("./adapters/geneseeLandBank"),// LIVE: Flint, MI land-bank houses (many with real prices)
   require("./adapters/detroitLandBank"),// LIVE: Detroit $1,000 auctions + Own It Now + Rehabbed & Ready
+  require("./adapters/miTaxSale"),    // LIVE: Michigan county tax auctions — min bid + SEV = real equity
   require("./adapters/publicsurplus"),// LIVE: gov surplus real estate (thin, land-heavy)
   require("./adapters/cws"),          // Treasury + US Marshals forfeiture (headless; CI only)
   require("./adapters/fdic"),

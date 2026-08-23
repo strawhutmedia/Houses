@@ -27,6 +27,7 @@ No npm install required — the only runtime dependency is the `curl` binary
 | **Genesee Land Bank** | `geneseeLandBank.js` | ✅ **Live** | Flint, MI. Realtor-listed rehabs with real prices + structures catalog. |
 | **Detroit Land Bank** | `detroitLandBank.js` | ✅ **Live** | $1,000-start Auctions, fixed-price Own It Now, and Rehabbed & Ready homes via the site's JSON grid (`POST /properties` with `isJson=1`). Beds/baths/sqft, photo, lat/lng, live auction dates; side lots excluded. |
 | **IRS Auctions** | `irsAuctions.js` | ✅ **Live** | IRS seized real property (federal tax seizures) with minimum bids. |
+| **MI Tax Auctions** | `miTaxSale.js` | ✅ **Live** | Statewide Michigan county tax-foreclosure auctions (tax-sale.info). Per-catalog CSV export with min bid, lat/lng, condition write-up **and SEV** — SEV × 2 = assessed market value, so equity is real, not AI-estimated. ~300+ homes in season (Aug–Oct). |
 | **PublicSurplus** | `publicsurplus.js` | ✅ Live (thin) | Gov surplus real estate (`catid=15`). Curl-scrapable but low volume and land-heavy; residential-only keeps mobile/manufactured homes. |
 | **CWS (Treasury + US Marshals)** | `cws.js` | 🧪 Experimental (headless) | Contractor platform for **both** agencies' forfeiture homes. Returns HTTP 202 bot-challenge to curl → needs a real browser (Playwright). No-ops in the dev sandbox; runs in CI. Selectors need one live-verification pass. |
 | GSA Real Property | `gsa.js` | ⚪ Live but excluded | `realestatesales.gov` parses fine but is commercial/land — kept out of the default run per the houses-only spec. |
