@@ -22,6 +22,11 @@ No npm install required — the only runtime dependency is the `curl` binary
 |---|---|---|---|
 | **HUD Home Store** | `hud.js` | ✅ **Live** | Real FHA-foreclosure homes, **all 50 states** (one GET per state, parallel batches). ~930 homes/run. Best breadth of cheap residential. `HUD_STATES=CA,OR` to narrow. |
 | **Bid4Assets** | `bid4assets.js` | ✅ **Live** | County tax-deed / sheriff-sale **houses** via the live real-estate channel (`POST /channel/auctions/get` + detail pages). The rock-bottom prices ($1–$2K). Also lists upcoming CA/OR/WA county tax sales (`listAuctions()`) for when those windows open. |
+| **VA REO (VRM)** | `vrmVA.js` | ✅ **Live** | VA foreclosure homes nationwide via VRM Properties, incl. CA/OR. ~1,100 homes/run with real list prices. |
+| **St. Louis Land Bank** | `stlouisLandBank.js` | ✅ **Live** | ~1,000 cheap city houses (LRA). Price on inquiry. |
+| **Genesee Land Bank** | `geneseeLandBank.js` | ✅ **Live** | Flint, MI. Realtor-listed rehabs with real prices + structures catalog. |
+| **Detroit Land Bank** | `detroitLandBank.js` | ✅ **Live** | $1,000-start Auctions, fixed-price Own It Now, and Rehabbed & Ready homes via the site's JSON grid (`POST /properties` with `isJson=1`). Beds/baths/sqft, photo, lat/lng, live auction dates; side lots excluded. |
+| **IRS Auctions** | `irsAuctions.js` | ✅ **Live** | IRS seized real property (federal tax seizures) with minimum bids. |
 | **PublicSurplus** | `publicsurplus.js` | ✅ Live (thin) | Gov surplus real estate (`catid=15`). Curl-scrapable but low volume and land-heavy; residential-only keeps mobile/manufactured homes. |
 | **CWS (Treasury + US Marshals)** | `cws.js` | 🧪 Experimental (headless) | Contractor platform for **both** agencies' forfeiture homes. Returns HTTP 202 bot-challenge to curl → needs a real browser (Playwright). No-ops in the dev sandbox; runs in CI. Selectors need one live-verification pass. |
 | GSA Real Property | `gsa.js` | ⚪ Live but excluded | `realestatesales.gov` parses fine but is commercial/land — kept out of the default run per the houses-only spec. |
