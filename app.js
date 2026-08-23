@@ -206,7 +206,57 @@
   }
 
   /* ---------------- state ---------------- */
-  var FOCUS_STATES = { CA: 1, OR: 1 };
+  // "Focus" = the two home METROS, not whole states: anything within a
+  // commutable ring of downtown LA or downtown Portland (which also pulls in
+  // Vancouver, WA — genuinely Portland metro). Bakersfield, Fresno, the Bay
+  // Area, Eugene etc. no longer sneak in just for being in CA/OR.
+  var FOCUS_METROS = [
+    { lat: 34.0522, lng: 118.2437, mi: 75 }, // Los Angeles (covers OC, IE, Ventura, Palmdale)
+    { lat: 45.5152, lng: 122.6784, mi: 40 }, // Portland (covers Vancouver WA; Salem via city list)
+  ];
+  // Fallback for listings with no coordinates and no ZIP: match the city name.
+  var FOCUS_CITIES = {
+    CA: ("los angeles|long beach|glendale|burbank|pasadena|pomona|torrance|inglewood|compton|downey|norwalk|whittier|" +
+      "west covina|el monte|santa clarita|palmdale|lancaster|lakewood|bellflower|hawthorne|carson|santa monica|" +
+      "van nuys|north hollywood|reseda|sylmar|pacoima|san pedro|wilmington|gardena|paramount|lynwood|south gate|" +
+      "huntington park|montebello|monterey park|alhambra|azusa|baldwin park|covina|glendora|la puente|pico rivera|" +
+      "san fernando|canoga park|northridge|woodland hills|sun valley|tujunga|altadena|monrovia|duarte|arcadia|" +
+      "rosemead|el segundo|redondo beach|manhattan beach|hermosa beach|culver city|panorama city|granada hills|" +
+      "chatsworth|winnetka|tarzana|encino|sherman oaks|studio city|north hills|mission hills|harbor city|lomita|" +
+      "signal hill|cerritos|artesia|la mirada|santa fe springs|bell|bell gardens|maywood|cudahy|south el monte|" +
+      "temple city|san gabriel|sierra madre|south pasadena|hacienda heights|rowland heights|" +
+      "anaheim|santa ana|irvine|huntington beach|garden grove|orange|fullerton|costa mesa|mission viejo|" +
+      "westminster|newport beach|buena park|tustin|yorba linda|san clemente|laguna niguel|lake forest|placentia|" +
+      "cypress|la habra|fountain valley|brea|stanton|san juan capistrano|dana point|laguna hills|laguna beach|" +
+      "los alamitos|seal beach|" +
+      "riverside|san bernardino|ontario|rancho cucamonga|fontana|moreno valley|corona|victorville|rialto|hesperia|" +
+      "chino|chino hills|upland|apple valley|redlands|colton|yucaipa|montclair|highland|adelanto|perris|menifee|" +
+      "lake elsinore|hemet|san jacinto|beaumont|banning|" +
+      "oxnard|ventura|san buenaventura|thousand oaks|simi valley|camarillo|moorpark|fillmore|santa paula|port hueneme").split("|"),
+    OR: ("portland|gresham|beaverton|hillsboro|tigard|tualatin|lake oswego|oregon city|milwaukie|west linn|" +
+      "wilsonville|happy valley|clackamas|damascus|sandy|troutdale|fairview|wood village|forest grove|cornelius|" +
+      "sherwood|newberg|canby|estacada|molalla|gladstone|king city|scappoose|st helens|st. helens|salem|keizer|" +
+      "woodburn|mcminnville").split("|"),
+    WA: ("vancouver|camas|washougal|battle ground|ridgefield|la center").split("|"),
+  };
+  var FOCUS_CITY_SET = {};
+  Object.keys(FOCUS_CITIES).forEach(function (st) {
+    FOCUS_CITIES[st].forEach(function (c) { FOCUS_CITY_SET[st + "|" + c] = 1; });
+  });
+  function inFocusMetro(d) {
+    // A known metro city always counts (keeps e.g. all of Hemet in even where
+    // one edge of town falls just past the mileage ring)…
+    if (FOCUS_CITY_SET[(d.state || "") + "|" + (d.city || "").trim().toLowerCase()]) return true;
+    // …then geography: real coordinates first, else the listing's ZIP.
+    var pt = (d.lat != null && d.lng != null) ? { lat: d.lat, lng: Math.abs(d.lng) } : null;
+    if (!pt) { var z = d.zip || zipOf(d.address); if (z && ZIP_GEO) pt = zipLatLng(z); }
+    if (!pt) return false;
+    for (var i = 0; i < FOCUS_METROS.length; i++) {
+      var m = FOCUS_METROS[i];
+      if (milesBetween(pt.lat, pt.lng, m.lat, m.lng) <= m.mi) return true;
+    }
+    return false;
+  }
   var state = { q: "", area: "focus", maxPrice: 100000000, sort: "price", savedOnly: false, hotspots: false, minBeds: 0, minBaths: 0 };
   var LAST_ZIP = null, ZIP_ORIGIN = null;
 
@@ -236,7 +286,7 @@
         return hay.indexOf(q) !== -1;
       }
       // Area toggle always applies — Hotspots is a filter ON TOP of it, not an override.
-      if (state.area === "focus" && !FOCUS_STATES[d.state]) return false;
+      if (state.area === "focus" && !inFocusMetro(d)) return false;
       return true;
     });
 
@@ -273,9 +323,9 @@
         ? "closest to your place — nearest first"
         : "finding homes near your place…";
     } else if (state.savedOnly) head = "your saved homes";
-    else if (state.hotspots) head = "in " + (state.area === "focus" ? "CA & OR " : "") + "hotspot locations 🌊🏞️🏙️ (coast, lakes, fun downtowns…)";
+    else if (state.hotspots) head = "in " + (state.area === "focus" ? "LA & Portland " : "") + "hotspot locations 🌊🏞️🏙️ (coast, lakes, fun downtowns…)";
     else if (state.q) head = "matching “" + esc(state.q) + "”";
-    else head = state.area === "focus" ? "in California & Oregon" : "across all 50 states";
+    else head = state.area === "focus" ? "around Los Angeles & Portland" : "across all 50 states";
 
     $("result-count").innerHTML = "<b>" + rows.length + "</b> home" + (rows.length === 1 ? "" : "s") + " " + head + note;
 
@@ -482,6 +532,9 @@
 
     updateSavedBadge();
     render();
+    // The default "LA + Portland" view places ZIP-only listings via zipgeo, so
+    // pull it in right away and refine the list once it lands.
+    if (!ZIP_GEO) loadZipGeo().then(render);
     startTicker();
   }
 
