@@ -26,6 +26,7 @@ const ADAPTERS = [
   require("./adapters/gsa"),          // LIVE: federal real property (GSA) — priced from listing grid
   require("./adapters/irsAuctions"),  // LIVE: IRS seized real property (federal tax seizures)
   require("./adapters/vrmVA"),        // LIVE: VA foreclosure REO (VRM) — nationwide, incl. CA/OR
+  require("./adapters/probateMLS"),   // LIVE: probate/trust/estate sales on the MLS (target areas)
   require("./adapters/stlouisLandBank"),// LIVE: ~1,000 cheap city land-bank houses (price on inquiry)
   require("./adapters/geneseeLandBank"),// LIVE: Flint, MI land-bank houses (many with real prices)
   require("./adapters/detroitLandBank"),// LIVE: Detroit $1,000 auctions + Own It Now + Rehabbed & Ready

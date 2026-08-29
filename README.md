@@ -47,6 +47,7 @@ for cheap residential deals is a **Bid4Assets** county tax-deed adapter.
 - [x] Scraper framework + normalizer + **live GSA adapter**
 - [x] **Live Bid4Assets county-tax-sale adapter** (parses upcoming CA/OR/WA county auctions)
 - [x] Scheduled refresh + Pages deploy workflow (every 3h)
+- [x] **Probate / trust / estate-sale adapter** (MLS remarks scan over target-area tiles)
 - [ ] Parcel-detail enrichment for Bid4Assets (address/min-bid/photos via headless render in CI)
 - [ ] Market-value + rent enrichment (AVM API) → real equity/yield on live rows
 - [ ] AI photo condition scoring (vision) wired to live listing photos
