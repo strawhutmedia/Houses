@@ -65,6 +65,7 @@
     </section>
   </main>
 
+  <script src="boards.js"></script>
   <script>
     (function () {
       function esc(s) { var d = document.createElement("div"); d.textContent = s == null ? "" : String(s); return d.innerHTML; }
@@ -90,6 +91,26 @@
         } else { window.prompt("Copy this link:", t); done(); }
       }
 
+      // Live shared board: one synced ♥ list behind a secret link, no accounts.
+      var BOARD = null;
+      function boardRefresh() {
+        if (!BOARD) return;
+        ESBoards.get(BOARD).then(function (b) {
+          var next = (b && b.items) || {};
+          if (JSON.stringify(next) !== JSON.stringify(SAVED)) {
+            SAVED = next; persistSaved(SAVED); updateShareBtn(); if (DATA) drawList();
+          }
+        }).catch(function () {});
+      }
+      function startBoard(id, seedLocal) {
+        BOARD = id; ESBoards.store(id);
+        var hasLocal = Object.keys(SAVED).some(function (k) { return SAVED[k]; });
+        var go = (seedLocal && hasLocal) ? ESBoards.seed(BOARD, SAVED).catch(function () {}) : Promise.resolve();
+        go.then(boardRefresh);
+        setInterval(boardRefresh, 8000);
+        document.addEventListener("visibilitychange", function () { if (!document.hidden) boardRefresh(); });
+      }
+
       fetch("finds.json", { cache: "no-store" })
         .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
         .then(render)
@@ -110,16 +131,34 @@
         st.onclick = function () { SAVED_ONLY = !SAVED_ONLY; SHARED_VIEW = false; renderShareBanner(); st.classList.toggle("on", SAVED_ONLY); drawList(); };
         var sh = document.getElementById("share-saved");
         sh.onclick = function () {
+          var done = function () {
+            sh.textContent = "✓ Live board link copied!";
+            setTimeout(function () { sh.textContent = "📤 Share my list"; }, 3000);
+          };
+          if (BOARD) return copyText(ESBoards.link("finds.html", BOARD), done);
           var ids = Object.keys(SAVED).filter(function (k) { return SAVED[k]; });
           if (!ids.length) return;
-          var url = location.origin + location.pathname + "#share=" + encodeURIComponent(ids.join(","));
-          copyText(url, function () {
-            sh.textContent = "✓ Link copied!";
-            setTimeout(function () { sh.textContent = "📤 Share my list"; }, 2500);
-          });
+          startBoard(ESBoards.newId(), true);
+          copyText(ESBoards.link("finds.html", BOARD), done);
         };
         updateShareBtn();
         renderShareBanner();
+        // Join a board from a ?board= link, or resume one saved earlier.
+        // (After renderShareBanner, so the join notice isn't wiped by it.)
+        var joinId = ESBoards.idFromUrl();
+        if (joinId) {
+          var isNew = joinId !== ESBoards.stored();
+          startBoard(joinId, false);
+          if (isNew) {
+            var bh = document.getElementById("share-banner");
+            bh.hidden = false;
+            bh.innerHTML = '🔗 <b>You joined a shared live board.</b> Hearts here sync with everyone on it, on all their devices. ' +
+              '<button class="saved-toggle" id="board-ok" style="margin-left:6px;">OK</button>';
+            document.getElementById("board-ok").onclick = function () { bh.hidden = true; bh.innerHTML = ""; };
+          }
+        } else if (ESBoards.stored()) {
+          startBoard(ESBoards.stored(), false);
+        }
         drawList();
         var corrOnce = data.corrections || [];
         if (corrOnce.length) {
@@ -196,6 +235,7 @@
             var id = b.getAttribute("data-id");
             if (SAVED[id]) delete SAVED[id]; else SAVED[id] = 1;
             persistSaved(SAVED);
+            if (BOARD) ESBoards.set(BOARD, id, !!SAVED[id]).catch(function () {});
             updateShareBtn();
             drawList();
           });

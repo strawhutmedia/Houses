@@ -88,7 +88,32 @@
   function loadNotify() { try { return JSON.parse(localStorage.getItem("es_notify") || "{}"); } catch (e) { return {}; } }
   function persistNotify() { try { localStorage.setItem("es_notify", JSON.stringify(NOTIFY)); } catch (e) {} }
   function savedCount() { return Object.keys(SAVED).filter(function (k) { return SAVED[k]; }).length; }
-  function toggleSave(id) { SAVED[id] = !SAVED[id]; if (!SAVED[id]) delete SAVED[id]; persistSaved(); updateSavedBadge(); render(); }
+  function toggleSave(id) {
+    SAVED[id] = !SAVED[id]; if (!SAVED[id]) delete SAVED[id];
+    persistSaved(); updateSavedBadge(); render();
+    if (BOARD) ESBoards.set(BOARD, id, !!SAVED[id]).catch(function () {});
+  }
+
+  /* ---------------- live shared board (synced ♥ list, secret link) ---------------- */
+  var BOARD = null;
+  function boardRefresh() {
+    if (!BOARD) return;
+    ESBoards.get(BOARD).then(function (b) {
+      var next = (b && b.items) || {};
+      if (JSON.stringify(next) !== JSON.stringify(SAVED)) {
+        SAVED = next; persistSaved(); updateSavedBadge(); render();
+      }
+    }).catch(function () {});
+  }
+  function startBoard(id, seedLocal) {
+    BOARD = id; ESBoards.store(id);
+    var go = seedLocal && savedCount()
+      ? ESBoards.seed(BOARD, SAVED).catch(function () {})
+      : Promise.resolve();
+    go.then(boardRefresh);
+    setInterval(boardRefresh, 8000);
+    document.addEventListener("visibilitychange", function () { if (!document.hidden) boardRefresh(); });
+  }
 
   /* ---------------- shared favorites (share your ♥ list by link) ---------------- */
   var SHARED_IDS = null; // ids from a #share= link someone sent
@@ -570,20 +595,44 @@
     var st = $("saved-toggle");
     st.addEventListener("click", function () { state.savedOnly = !state.savedOnly; state.sharedView = false; renderShareBanner(); st.classList.toggle("active", state.savedOnly); render(); });
 
-    // Share your ♥ list: copies a link like index.html#share=id1,id2 — anyone
-    // opening it sees your picks and can merge them into their own saved list.
+    // Share = a LIVE board link. First tap creates the board (seeded with your
+    // current ♥s) and copies its link; everyone who opens it shares ONE synced
+    // list — hearts made anywhere show up everywhere within seconds.
     var shBtn = $("share-saved");
     shBtn.addEventListener("click", function () {
-      var ids = Object.keys(SAVED).filter(function (k) { return SAVED[k]; });
-      if (!ids.length) return;
-      var url = location.origin + location.pathname + "#share=" + encodeURIComponent(ids.join(","));
-      copyText(url, function () {
-        shBtn.textContent = "✓ Link copied!";
-        setTimeout(function () { shBtn.textContent = "📤 Share"; }, 2500);
-      });
+      var done = function () {
+        shBtn.textContent = "✓ Live board link copied!";
+        setTimeout(function () { shBtn.textContent = "📤 Share"; }, 3000);
+      };
+      if (BOARD) return copyText(ESBoards.link("index.html", BOARD), done);
+      if (!savedCount()) return;
+      startBoard(ESBoards.newId(), true);
+      copyText(ESBoards.link("index.html", BOARD), done);
     });
 
-    // Arrived via a shared ♥ list link? Show their picks + the adopt banner.
+    // Joining/resuming a live board: from a ?board= link, or one saved earlier.
+    var joinId = ESBoards.idFromUrl();
+    if (joinId) {
+      var isNew = joinId !== ESBoards.stored();
+      startBoard(joinId, false);
+      if (isNew) {
+        var host = $("share-banner");
+        host.hidden = false;
+        host.innerHTML = '<div class="share-banner">🔗 <b>You joined a shared live board.</b> Hearts here sync with everyone on it, on all their devices.' +
+          (savedCount() ? ' <button class="btn-mini" id="board-seed">♥ Add my ' + savedCount() + ' saved home' + (savedCount() === 1 ? "" : "s") + '</button>' : "") +
+          ' <button class="btn-mini ghost" id="board-ok">OK</button></div>';
+        var seedBtn = $("board-seed");
+        if (seedBtn) seedBtn.addEventListener("click", function () {
+          ESBoards.seed(BOARD, loadSaved()).then(boardRefresh).catch(function () {});
+          seedBtn.textContent = "✓ Added"; seedBtn.disabled = true;
+        });
+        $("board-ok").addEventListener("click", function () { host.hidden = true; host.innerHTML = ""; });
+      }
+    } else if (ESBoards.stored()) {
+      startBoard(ESBoards.stored(), false);
+    }
+
+    // Legacy snapshot links (#share=id1,id2) still work: show + adopt.
     SHARED_IDS = sharedFromHash();
     if (SHARED_IDS) { state.sharedView = true; renderShareBanner(); }
 
