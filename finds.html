@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scout Finds — EquityScout</title>
+  <meta name="description" content="Hand-verified house finds in Ryan's LA neighborhoods — every listing checked against a live source before it's published." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314b87a'/%3E%3Cpath d='M16 7l8 7h-2.5v9h-11v-9H8z' fill='%2304140d'/%3E%3C/svg%3E" />
+  <style>
+    .finds-wrap { max-width: 760px; margin: 0 auto; padding: 22px 16px 60px; }
+    .finds-head h1 { font-size: 26px; margin: 10px 0 4px; }
+    .finds-rule { color: var(--muted); font-size: 13px; line-height: 1.6; }
+    .finds-rule b { color: var(--text); }
+    .finds-updated { color: var(--muted); font-size: 12px; margin: 8px 0 18px; }
+    .find-card { background: var(--card, #121a23); border: 1px solid var(--line, #2a3644); border-radius: 14px; padding: 18px 20px; margin-bottom: 14px; }
+    .find-card.top { border-left: 4px solid #f5c542; }
+    .find-tag { font-size: 12px; font-weight: 700; letter-spacing: 1px; color: #7ee2a8; }
+    .find-price { font-size: 24px; font-weight: 800; color: #f5c542; margin-top: 4px; }
+    .find-addr { font-size: 17px; font-weight: 700; margin-top: 2px; }
+    .find-hood { color: var(--muted); font-weight: 500; }
+    .find-specs { font-size: 13px; color: var(--muted); margin-top: 6px; }
+    .find-verified { display: inline-block; margin-top: 8px; font-size: 11.5px; font-weight: 700; color: #7ee2a8; background: rgba(34,160,107,.12); border: 1px solid rgba(34,160,107,.4); border-radius: 6px; padding: 3px 8px; }
+    .find-why { font-size: 13.5px; line-height: 1.55; margin-top: 10px; }
+    .find-ask { font-size: 12.5px; line-height: 1.5; color: var(--muted); margin-top: 8px; }
+    .find-ask b { color: var(--text); }
+    .find-links { margin-top: 12px; }
+    .find-links a { display: inline-block; background: #22a06b; color: #fff; font-size: 12.5px; font-weight: 700; text-decoration: none; padding: 8px 14px; border-radius: 8px; margin: 0 8px 8px 0; }
+    .find-links a.alt { background: transparent; border: 1px solid var(--line, #2a3644); color: var(--text, #e7edf3); }
+    .corrections { margin-top: 34px; border-top: 1px solid var(--line, #2a3644); padding-top: 18px; }
+    .corrections h2 { font-size: 15px; margin: 0 0 10px; }
+    .corrections p { font-size: 12.5px; color: var(--muted); line-height: 1.6; margin: 0 0 10px; }
+    .corrections .cdate { color: #f5c542; font-weight: 700; }
+    .finds-empty { color: var(--muted); font-size: 14px; padding: 30px 0; }
+  </style>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="tb-inner">
+      <span class="logo"><span class="mark"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 6l10 9h-3v11h-14v-11h-3z"/></svg></span> Equity<b>Scout</b></span>
+      <span class="tb-links"><a href="index.html">🏠 Deal feed</a><a href="spaces.html">🏢 Studio spaces</a><a href="guide.html">🛡️ Before you buy</a></span>
+    </div>
+  </header>
+
+  <main class="finds-wrap">
+    <div class="finds-head">
+      <h1>🔎 Scout Finds</h1>
+      <p class="finds-rule" id="finds-rule">Hand-verified houses matching the standing search rule. Every entry was checked against a live listing source on the date shown — nothing here comes from an unverified search snippet.</p>
+      <p class="finds-updated" id="finds-updated"></p>
+    </div>
+
+    <div id="finds-list"><p class="finds-empty">Loading finds…</p></div>
+
+    <section class="corrections" id="corrections" hidden>
+      <h2>📋 Corrections &amp; retractions</h2>
+      <div id="corrections-list"></div>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      function esc(s) { var d = document.createElement("div"); d.textContent = s == null ? "" : String(s); return d.innerHTML; }
+      var fmt = function (n) { return "$" + (n || 0).toLocaleString("en-US"); };
+
+      fetch("finds.json", { cache: "no-store" })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(render)
+        .catch(function () {
+          document.getElementById("finds-list").innerHTML =
+            '<p class="finds-empty">Couldn’t load finds.json — if you opened this file directly, serve the folder (python3 -m http.server) or view the live site.</p>';
+        });
+
+      function render(data) {
+        var up = document.getElementById("finds-updated");
+        if (data.updatedAt) {
+          up.textContent = "Rule: " + (data.rule || "") + "  ·  Last verified sweep: " +
+            new Date(data.updatedAt).toLocaleString("en-US", { month: "short", day: "numeric", year: "numeric" });
+        }
+        var host = document.getElementById("finds-list");
+        var finds = data.finds || [];
+        if (!finds.length) { host.innerHTML = '<p class="finds-empty">No verified finds on the board right now.</p>'; }
+        else {
+          host.innerHTML = finds.map(function (f) {
+            var top = /top pick/i.test(f.tag || "");
+            return '<article class="find-card' + (top ? " top" : "") + '">' +
+              (f.tag ? '<div class="find-tag">' + esc(f.tag.toUpperCase()) + "</div>" : "") +
+              '<div class="find-price">' + fmt(f.price) + "</div>" +
+              '<div class="find-addr">' + esc(f.address) + ' <span class="find-hood">— ' + esc(f.hood) + "</span></div>" +
+              '<div class="find-specs">' + esc(f.beds) + " bd · " + esc(f.baths) + " ba" +
+                (f.sqft ? " · " + Number(f.sqft).toLocaleString() + " sqft" : "") +
+                (f.dom ? " · " + esc(f.dom) : "") + "</div>" +
+              '<span class="find-verified">✓ ' + esc(f.status || "Active") + " — verified " + esc(f.verified) +
+                (f.verifiedHow ? " · " + esc(f.verifiedHow) : "") + "</span>" +
+              (f.why ? '<p class="find-why">' + esc(f.why) + "</p>" : "") +
+              (f.ask ? '<p class="find-ask"><b>Ask before offering:</b> ' + esc(f.ask) + "</p>" : "") +
+              '<div class="find-links">' + (f.links || []).map(function (l, i) {
+                return '<a href="' + esc(l.url) + '" target="_blank" rel="noopener"' + (i ? ' class="alt"' : "") + ">" + esc(l.label) + " →</a>";
+              }).join("") + "</div>" +
+            "</article>";
+          }).join("");
+        }
+        var corr = data.corrections || [];
+        if (corr.length) {
+          document.getElementById("corrections").hidden = false;
+          document.getElementById("corrections-list").innerHTML = corr.map(function (c) {
+            return '<p><span class="cdate">' + esc(c.date) + "</span> — " + esc(c.text) + "</p>";
+          }).join("");
+        }
+      }
+    })();
+  </script>
+</body>
+</html>

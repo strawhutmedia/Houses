@@ -1,0 +1,130 @@
+{
+  "updatedAt": "2026-09-05T19:45:00-07:00",
+  "rule": "Single-family house · 1.5+ baths · under $1.5M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz",
+  "finds": [
+    {
+      "id": "miriam-5140",
+      "tag": "⭐ Top pick",
+      "address": "5140 Miriam St",
+      "hood": "Highland Park",
+      "price": 899000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1370,
+      "status": "Active",
+      "verified": "2026-09-05",
+      "verifiedHow": "Listing page opened directly (Coldwell Banker, MLS #26856717)",
+      "dom": "~59 days on market",
+      "why": "The Instagram house. Guest apartment with its own entrance + full bath, renovated kitchen (sage cabinets, butcher block), shaded patio, producing avocado tree. 12-minute walk to Hermosillo. Two months on market in a hot neighborhood = real negotiating room.",
+      "ask": "Why has it sat ~59 days? Is the guest apartment permitted as habitable space? Any offers so far? Plan a sewer scope.",
+      "links": [
+        { "label": "Redfin", "url": "https://www.redfin.com/CA/Los-Angeles/5140-Miriam-St-90042/home/7077421" },
+        { "label": "Coldwell Banker", "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/5140-miriam-st/pid_72392965/" }
+      ]
+    },
+    {
+      "id": "dillon-117",
+      "tag": "🏠 Your street",
+      "address": "117 N Dillon St",
+      "hood": "Silver Lake",
+      "price": 1499000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1562,
+      "status": "Active",
+      "verified": "2026-09-05",
+      "verifiedHow": "Redfin listing data confirmed same day",
+      "dom": "~115 days on market, already price-cut",
+      "why": "On N Dillon itself. 1912 single-family on a 6,000 sqft lot. Sat 115 days and already cut to $1.499M — squeaks under the $1.5M cap with obvious room below ask.",
+      "ask": "Why the long sit? What did the last price cut respond to?",
+      "links": [
+        { "label": "Redfin", "url": "https://www.redfin.com/CA/Los-Angeles/117-N-Dillon-St-90026/home/6935507" }
+      ]
+    },
+    {
+      "id": "gatewood-2250",
+      "tag": "🐸 Frogtown",
+      "address": "2250 Gatewood St",
+      "hood": "Frogtown (Elysian Valley)",
+      "price": 549000,
+      "beds": 2,
+      "baths": 2,
+      "sqft": 701,
+      "status": "Active",
+      "verified": "2026-09-05",
+      "verifiedHow": "Live on Compass's Frogtown inventory the day of publishing",
+      "dom": null,
+      "why": "A 2-bath house in Frogtown for $549K — the cheapest qualifying find on the entire board. Small (701 sqft), but at $783/sqft in a neighborhood with ~20 active listings total.",
+      "ask": "Small-lot home or standard fee-simple parcel? HOA or shared-drive arrangements? Confirm it's a detached house.",
+      "links": [
+        { "label": "Compass — Frogtown listings", "url": "https://www.compass.com/homes-for-sale/frogtown-los-angeles-ca/" },
+        { "label": "Zillow lookup", "url": "https://www.zillow.com/homes/2250-Gatewood-St,-Los-Angeles,-CA_rb/" }
+      ]
+    },
+    {
+      "id": "gatewood-2248h",
+      "tag": "🐸 Frogtown",
+      "address": "2248 ½ Gatewood St",
+      "hood": "Frogtown (Elysian Valley)",
+      "price": 665000,
+      "beds": 2,
+      "baths": 3,
+      "sqft": 1000,
+      "status": "Active",
+      "verified": "2026-09-05",
+      "verifiedHow": "Live on Compass's Frogtown inventory the day of publishing",
+      "dom": null,
+      "why": "2bd/3ba, 1,000 sqft at $665K. The ½ address suggests a small-lot / rear home — worth confirming what you'd own.",
+      "ask": "Fee-simple small-lot or TIC? Shared walls or fully detached?",
+      "links": [
+        { "label": "Compass — Frogtown listings", "url": "https://www.compass.com/homes-for-sale/frogtown-los-angeles-ca/" },
+        { "label": "Zillow lookup", "url": "https://www.zillow.com/homes/2248-Gatewood-St,-Los-Angeles,-CA_rb/" }
+      ]
+    },
+    {
+      "id": "dorris-2222h",
+      "tag": "🐸 Frogtown",
+      "address": "2222 ½ Dorris Pl",
+      "hood": "Frogtown (Elysian Valley)",
+      "price": 695000,
+      "beds": 2,
+      "baths": 3,
+      "sqft": 1034,
+      "status": "Active",
+      "verified": "2026-09-05",
+      "verifiedHow": "Live on Compass's Frogtown inventory the day of publishing",
+      "dom": null,
+      "why": "2bd/3ba, 1,034 sqft at $695K, blocks from the LA River path. Same caveat as the other ½ address: confirm the ownership structure.",
+      "ask": "Fee-simple or TIC? Parking situation?",
+      "links": [
+        { "label": "Compass — Frogtown listings", "url": "https://www.compass.com/homes-for-sale/frogtown-los-angeles-ca/" },
+        { "label": "Zillow lookup", "url": "https://www.zillow.com/homes/2222-Dorris-Pl,-Los-Angeles,-CA_rb/" }
+      ]
+    },
+    {
+      "id": "rich-2651",
+      "tag": "🐸 Frogtown",
+      "address": "2651 Rich St",
+      "hood": "Frogtown (Elysian Valley)",
+      "price": 1349000,
+      "beds": 4,
+      "baths": 3,
+      "sqft": 2235,
+      "status": "Active",
+      "verified": "2026-09-05",
+      "verifiedHow": "Live on Compass's Frogtown inventory the day of publishing",
+      "dom": null,
+      "why": "The big-family option: 4bd/3ba, 2,235 sqft at $604/sqft — cheap per foot for the neighborhood, and comfortably under the $1.5M cap.",
+      "ask": "Condition and year built; why priced under the neighborhood $/sqft?",
+      "links": [
+        { "label": "Compass — Frogtown listings", "url": "https://www.compass.com/homes-for-sale/frogtown-los-angeles-ca/" },
+        { "label": "Zillow lookup", "url": "https://www.zillow.com/homes/2651-Rich-St,-Los-Angeles,-CA_rb/" }
+      ]
+    }
+  ],
+  "corrections": [
+    { "date": "2026-09-05", "text": "3041 Atwater Ave was emailed as a $999K active listing — WRONG. It SOLD in March 2026 for $1,230,000. It came from a stale search snippet and was not verified before sending. Retracted." },
+    { "date": "2026-09-05", "text": "5314 Buchanan St (Highland Park) and 4511 Brunswick Ave (Atwater) — no active listing could be verified for either. Both retracted." },
+    { "date": "2026-09-05", "text": "The 'Frogtown probate, two houses one lot, $995K' (2232 Meadowvale Ave) could not be confirmed on live inventory. Treated as gone until verified." }
+  ]
+}
