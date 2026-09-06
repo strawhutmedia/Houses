@@ -89,6 +89,43 @@
   function persistNotify() { try { localStorage.setItem("es_notify", JSON.stringify(NOTIFY)); } catch (e) {} }
   function savedCount() { return Object.keys(SAVED).filter(function (k) { return SAVED[k]; }).length; }
   function toggleSave(id) { SAVED[id] = !SAVED[id]; if (!SAVED[id]) delete SAVED[id]; persistSaved(); updateSavedBadge(); render(); }
+
+  /* ---------------- shared favorites (share your ♥ list by link) ---------------- */
+  var SHARED_IDS = null; // ids from a #share= link someone sent
+  function sharedFromHash() {
+    var m = (location.hash || "").match(/share=([^&]+)/);
+    if (!m) return null;
+    var ids = decodeURIComponent(m[1]).split(",").filter(Boolean);
+    return ids.length ? ids : null;
+  }
+  function copyText(t, done) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(t).then(done, function () { window.prompt("Copy this link:", t); done(); });
+    } else { window.prompt("Copy this link:", t); done(); }
+  }
+  function renderShareBanner() {
+    var host = $("share-banner");
+    if (!SHARED_IDS || !state.sharedView) { host.hidden = true; host.innerHTML = ""; return; }
+    var live = DATA.filter(function (d) { return SHARED_IDS.indexOf(d.id) !== -1; }).length;
+    var gone = SHARED_IDS.length - live;
+    host.hidden = false;
+    host.innerHTML =
+      '<div class="share-banner">📤 <b>Someone shared ' + SHARED_IDS.length + " saved home" + (SHARED_IDS.length === 1 ? "" : "s") + " with you</b>" +
+      (gone > 0 ? " — " + live + " still in the feed (" + gone + " may have sold or expired)." : ".") +
+      ' <button class="btn-mini" id="share-adopt">♥ Add to my saved</button>' +
+      ' <button class="btn-mini ghost" id="share-dismiss">✕ Dismiss</button></div>';
+    $("share-adopt").addEventListener("click", function () {
+      SHARED_IDS.forEach(function (id) { SAVED[id] = true; });
+      persistSaved(); updateSavedBadge();
+      $("share-adopt").textContent = "✓ Added to your ♥ list";
+      $("share-adopt").disabled = true;
+    });
+    $("share-dismiss").addEventListener("click", function () {
+      state.sharedView = false;
+      try { history.replaceState(null, "", location.pathname); } catch (e) {}
+      renderShareBanner(); render();
+    });
+  }
   function toggleNotify(id) {
     NOTIFY[id] = !NOTIFY[id];
     if (!NOTIFY[id]) { delete NOTIFY[id]; persistNotify(); render(); return; }
@@ -104,6 +141,7 @@
   function updateSavedBadge() {
     var n = savedCount(); var b = $("saved-toggle");
     if (b) b.innerHTML = "♥ Saved" + (n ? " (" + n + ")" : "");
+    var sh = $("share-saved"); if (sh) sh.hidden = n === 0;
   }
 
   /* ---------------- ZIP -> location (loaded on demand) ---------------- */
@@ -257,7 +295,7 @@
     }
     return false;
   }
-  var state = { q: "", area: "focus", maxPrice: 100000000, sort: "price", savedOnly: false, hotspots: false, minBeds: 0, minBaths: 0 };
+  var state = { q: "", area: "focus", maxPrice: 100000000, sort: "price", savedOnly: false, sharedView: false, hotspots: false, minBeds: 0, minBaths: 0 };
   var LAST_ZIP = null, ZIP_ORIGIN = null;
 
   /* ---------------- filter + sort ---------------- */
@@ -270,6 +308,7 @@
     var q = state.q;
 
     var out = DATA.filter(function (d) {
+      if (state.sharedView && SHARED_IDS) return SHARED_IDS.indexOf(d.id) !== -1; // a shared ♥ list link
       if (state.savedOnly) return !!SAVED[d.id]; // saved view ignores other filters
       if (d.price != null && d.price > state.maxPrice) return false;
       if (state.minBeds && (d.beds || 0) < state.minBeds) return false;
@@ -322,7 +361,8 @@
       head = (ZIP_ORIGIN && mi != null)
         ? "closest to your place — nearest first"
         : "finding homes near your place…";
-    } else if (state.savedOnly) head = "your saved homes";
+    } else if (state.sharedView) head = "shared with you 📤";
+    else if (state.savedOnly) head = "your saved homes";
     else if (state.hotspots) head = "in " + (state.area === "focus" ? "LA & Portland " : "") + "hotspot locations 🌊🏞️🏙️ (coast, lakes, fun downtowns…)";
     else if (state.q) head = "matching “" + esc(state.q) + "”";
     else head = state.area === "focus" ? "around Los Angeles & Portland" : "across all 50 states";
@@ -492,7 +532,7 @@
 
   /* ---------------- wiring ---------------- */
   function setArea(a) {
-    state.area = a; state.savedOnly = false;
+    state.area = a; state.savedOnly = false; state.sharedView = false; renderShareBanner();
     document.querySelectorAll("#area-chips .chip2").forEach(function (b) { b.classList.toggle("active", b.getAttribute("data-area") === a); });
     $("saved-toggle").classList.remove("active");
     render();
@@ -528,7 +568,24 @@
     $("f-sort").addEventListener("change", function (e) { state.sort = e.target.value; render(); });
 
     var st = $("saved-toggle");
-    st.addEventListener("click", function () { state.savedOnly = !state.savedOnly; st.classList.toggle("active", state.savedOnly); render(); });
+    st.addEventListener("click", function () { state.savedOnly = !state.savedOnly; state.sharedView = false; renderShareBanner(); st.classList.toggle("active", state.savedOnly); render(); });
+
+    // Share your ♥ list: copies a link like index.html#share=id1,id2 — anyone
+    // opening it sees your picks and can merge them into their own saved list.
+    var shBtn = $("share-saved");
+    shBtn.addEventListener("click", function () {
+      var ids = Object.keys(SAVED).filter(function (k) { return SAVED[k]; });
+      if (!ids.length) return;
+      var url = location.origin + location.pathname + "#share=" + encodeURIComponent(ids.join(","));
+      copyText(url, function () {
+        shBtn.textContent = "✓ Link copied!";
+        setTimeout(function () { shBtn.textContent = "📤 Share"; }, 2500);
+      });
+    });
+
+    // Arrived via a shared ♥ list link? Show their picks + the adopt banner.
+    SHARED_IDS = sharedFromHash();
+    if (SHARED_IDS) { state.sharedView = true; renderShareBanner(); }
 
     updateSavedBadge();
     render();

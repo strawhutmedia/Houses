@@ -53,6 +53,8 @@
       <p class="finds-rule" id="finds-rule">Hand-verified houses matching the standing search rule. Every entry was checked against a live listing source on the date shown — nothing here comes from an unverified search snippet.</p>
       <p class="finds-updated" id="finds-updated"></p>
       <button class="saved-toggle" id="saved-toggle" hidden>♥ Saved only</button>
+      <button class="saved-toggle" id="share-saved" hidden title="Copy a link that shares your saved finds">📤 Share my list</button>
+      <div id="share-banner" hidden style="background:rgba(245,197,66,.08);border:1px solid #f5c542;border-radius:12px;padding:12px 14px;margin-top:12px;font-size:13px;line-height:1.7;"></div>
     </div>
 
     <div id="finds-list"><p class="finds-empty">Loading finds…</p></div>
@@ -73,6 +75,21 @@
       function persistSaved(s) { try { localStorage.setItem("es_finds_saved", JSON.stringify(s)); } catch (e) {} }
       var SAVED = loadSaved(), SAVED_ONLY = false, DATA = null;
 
+      // Share-by-link: finds.html#share=id1,id2 — the recipient sees your picks
+      // and can merge them into their own ♥ list. No accounts needed.
+      var SHARED_IDS = (function () {
+        var m = (location.hash || "").match(/share=([^&]+)/);
+        if (!m) return null;
+        var ids = decodeURIComponent(m[1]).split(",").filter(Boolean);
+        return ids.length ? ids : null;
+      })();
+      var SHARED_VIEW = !!SHARED_IDS;
+      function copyText(t, done) {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(t).then(done, function () { window.prompt("Copy this link:", t); done(); });
+        } else { window.prompt("Copy this link:", t); done(); }
+      }
+
       fetch("finds.json", { cache: "no-store" })
         .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
         .then(render)
@@ -90,7 +107,19 @@
         }
         var st = document.getElementById("saved-toggle");
         st.hidden = false;
-        st.onclick = function () { SAVED_ONLY = !SAVED_ONLY; st.classList.toggle("on", SAVED_ONLY); drawList(); };
+        st.onclick = function () { SAVED_ONLY = !SAVED_ONLY; SHARED_VIEW = false; renderShareBanner(); st.classList.toggle("on", SAVED_ONLY); drawList(); };
+        var sh = document.getElementById("share-saved");
+        sh.onclick = function () {
+          var ids = Object.keys(SAVED).filter(function (k) { return SAVED[k]; });
+          if (!ids.length) return;
+          var url = location.origin + location.pathname + "#share=" + encodeURIComponent(ids.join(","));
+          copyText(url, function () {
+            sh.textContent = "✓ Link copied!";
+            setTimeout(function () { sh.textContent = "📤 Share my list"; }, 2500);
+          });
+        };
+        updateShareBtn();
+        renderShareBanner();
         drawList();
         var corrOnce = data.corrections || [];
         if (corrOnce.length) {
@@ -101,9 +130,40 @@
         }
       }
 
+      function updateShareBtn() {
+        var sh = document.getElementById("share-saved");
+        if (sh) sh.hidden = !Object.keys(SAVED).some(function (k) { return SAVED[k]; });
+      }
+
+      function renderShareBanner() {
+        var host = document.getElementById("share-banner");
+        if (!SHARED_IDS || !SHARED_VIEW) { host.hidden = true; host.innerHTML = ""; return; }
+        var live = (DATA.finds || []).filter(function (f) { return SHARED_IDS.indexOf(f.id) !== -1; }).length;
+        var gone = SHARED_IDS.length - live;
+        host.hidden = false;
+        host.innerHTML = "📤 <b>Someone shared " + SHARED_IDS.length + " saved find" + (SHARED_IDS.length === 1 ? "" : "s") + " with you</b>" +
+          (gone > 0 ? " — " + live + " still on the board (" + gone + " may have sold since)." : ".") +
+          ' <button class="saved-toggle" id="share-adopt" style="margin-left:6px;">♥ Add to my list</button>' +
+          ' <button class="saved-toggle" id="share-dismiss">✕ Dismiss</button>';
+        document.getElementById("share-adopt").onclick = function () {
+          SHARED_IDS.forEach(function (id) { SAVED[id] = 1; });
+          persistSaved(SAVED); updateShareBtn();
+          this.textContent = "✓ Added"; this.disabled = true;
+          drawList();
+        };
+        document.getElementById("share-dismiss").onclick = function () {
+          SHARED_VIEW = false;
+          try { history.replaceState(null, "", location.pathname); } catch (e) {}
+          renderShareBanner(); drawList();
+        };
+      }
+
       function drawList() {
         var host = document.getElementById("finds-list");
-        var finds = (DATA.finds || []).filter(function (f) { return !SAVED_ONLY || SAVED[f.id]; });
+        var finds = (DATA.finds || []).filter(function (f) {
+          if (SHARED_VIEW && SHARED_IDS) return SHARED_IDS.indexOf(f.id) !== -1;
+          return !SAVED_ONLY || SAVED[f.id];
+        });
         if (!finds.length) {
           host.innerHTML = '<p class="finds-empty">' + (SAVED_ONLY
             ? "No saved finds yet — tap the ♥ on any card to save it."
@@ -136,6 +196,7 @@
             var id = b.getAttribute("data-id");
             if (SAVED[id]) delete SAVED[id]; else SAVED[id] = 1;
             persistSaved(SAVED);
+            updateShareBtn();
             drawList();
           });
         });
