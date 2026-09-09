@@ -1,7 +1,27 @@
 {
-  "updatedAt": "2026-09-05T19:45:00-07:00",
-  "rule": "Single-family house · 1.5+ baths · under $1.5M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz",
+  "updatedAt": "2026-09-09T10:00:00-07:00",
+  "rule": "LA: house · 1.5+ baths · under $1.5M · Highland Park, Atwater, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M",
   "finds": [
+    {
+      "id": "malcolm-3210-pdx",
+      "tag": "🌲 Portland",
+      "address": "3210 SW Malcolm Ct",
+      "hood": "West Hills, Portland OR",
+      "price": 649000,
+      "beds": 4,
+      "baths": 3,
+      "sqft": 2988,
+      "status": "Active",
+      "verified": "2026-09-09",
+      "verifiedHow": "Live on listing brokerage Vetiver Street's featured listings the same day",
+      "dom": null,
+      "why": "The Instagram find: a 1940 architect-owned timber house expanded over decades — steep rooflines, walls of glass, stone fireplace, rooftop terrace — on 0.71 wooded acres off Canyon Road. Nearly 3,000 sqft for $649K ($217/sqft — LA equivalents run $650+). Local lore says the site was once a way station for travelers between Portland and Hillsboro.",
+      "ask": "Decades of owner-architect additions — which were permitted? Roof and drainage condition (wooded hillside lot). Why priced at $217/sqft?",
+      "links": [
+        { "label": "Vetiver Street (listing brokerage)", "url": "https://vetiverstreet.com/featured-listings/architecture-in-balance-living-at-the-edge-of-design-and-nature" },
+        { "label": "Zillow lookup", "url": "https://www.zillow.com/homes/3210-SW-Malcolm-Ct,-Portland,-OR_rb/" }
+      ]
+    },
     {
       "id": "miriam-5140",
       "tag": "⭐ Top pick",
