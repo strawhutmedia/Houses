@@ -1,7 +1,7 @@
 # EquityScout — project handoff & state
 
 Read this first. It is the source of truth for where the project stands and how
-Ryan (the owner) works. Last full update: **2026-09-17**.
+Ryan (the owner) works. Last full update: **2026-09-26**.
 
 ## What this is
 
@@ -56,12 +56,18 @@ podcast company).
 
 ## The daily house-alert Routine (CRITICAL — this is live automation)
 
-Trigger `trig_01YSm8iXCHGyntzjiZSQFbwP` ("House alert — LA (NELA) + Portland"),
-cron `0 15 * * *` (8 AM PT), fresh session per run, **email-only notification**
+Trigger `trig_01DSFmTc3Mw891sxqUgTcL27` ("House alert — LA (NELA) + Portland"),
+cron `CRON_TZ=America/Los_Angeles 52 7 * * *` (7:52 AM PT), fresh session per run, **email-only notification**
 (push off — Ryan's phone doesn't receive Claude pushes). Manage with
 `list_triggers` / `update_trigger` (claude-code-remote MCP).
 
-Its rules (full prompt lives in the trigger itself):
+**History:** the original trigger (`trig_01YSm8iX…`) was found DELETED on 9/26 —
+no alerts had run since ~9/17. Recreated 9/26 from the rules below. The canonical
+prompt is now versioned at `routines/house-alert.md`; if the trigger vanishes
+again, recreate it from that file. Periodically confirm it still exists
+(`list_triggers recurring=true`).
+
+Its rules (full prompt in `routines/house-alert.md`):
 - **LA**: house, 1.5+ baths, **under $1.5M**, in Highland Park (top pick),
   Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park,
   Silver Lake, Echo Park, Los Feliz.
