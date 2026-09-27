@@ -12,5 +12,9 @@ DISCOVERY
 IRON RULE: nothing is published or emailed unless confirmed ACTIVE on a live listing or brokerage page TODAY. Search snippets are never enough. Drop anything pending/under contract/sold/lease.
 
 OUTPUT
-- Matches: add each to finds.json (address, price, beds/baths, sqft, neighborhood, live URL, verified date, 1-line why), commit, push to main (Pages auto-deploys). Move any existing find that is now pending/sold into the corrections log. Then end your reply with a short plain summary per house (address, price, bd/ba, why, link) — that reply is Ryan's email.
-- No matches: reply exactly "No new matches today". No digest, no filler.
+- Matches: add each to finds.json (address, price, beds/baths, sqft, neighborhood, live URL, verified date, 1-line why), commit, push to main (Pages auto-deploys). Move any existing find that is now pending/sold into the corrections log.
+- Then EMAIL Ryan (arrives from houses@strawhutmedia.com via the site's AWS SES). Write /tmp/alert.json = {"subject":"🏡 <N> new house(s) — <top address>, $<price>","body":"<per house: 🏡 Address — $price / bd/ba · sqft · neighborhood / Why: one line / Live listing: url, blank line between houses>\n\nBoard: https://strawhutmedia.github.io/Houses/finds.html"} then run:
+  curl -sS -X POST "https://www.strawhutmedia.com/api/houses/alert" -H "Content-Type: application/json" -H "X-Newsletter-Token: <TOKEN — NOT stored here (public repo); copy from the live Routine or the Calendar-prep Routine>" -d @/tmp/alert.json
+  It must return {"ok":true}; if not, retry once, then say so in your final reply (the notification email is the fallback).
+- End your reply with the same short summary.
+- No matches: send NO email; reply exactly "No new matches today". No digest, no filler.

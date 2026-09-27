@@ -117,12 +117,13 @@ Its rules (full prompt in `routines/house-alert.md`):
   that's why.
 - No working AWS credentials exist in this session environment (env vars are
   sandbox placeholders). SES work needs real keys from Ryan.
-- **Pending (9/26):** Ryan wants house alerts as real inbox emails. Working pipe
-  exists: strawhutmedia.com `/api/crm/prep-email` (sends as leads@strawhutmedia.com,
-  used by the Calendar-prep Routine). Reusing its token in the house-alert
-  Routine was blocked by the permission classifier; it needs Ryan's explicit OK
-  (or a dedicated token/endpoint). Until then the Routine's alerts come by
-  Claude's email notification.
+- **House-alert emails (9/27):** the Routine emails Ryan real inbox mail from
+  **houses@strawhutmedia.com** via `POST https://www.strawhutmedia.com/api/houses/alert`
+  (strawhutmedia-site PR #122; SES, strawhutmedia.com domain identity verified;
+  replies go to Ryan). Auth = the site's `X-Newsletter-Token` (same one the
+  Calendar-prep Routine uses; Ryan explicitly approved reuse). **The token lives
+  ONLY in the Routine prompt — never commit it; this repo is PUBLIC.** Claude's
+  notification email stays on as fallback.
 - EquityScout emails Ryan manually via **his Gmail** (branded dark HTML,
   EquityScout style — see sent examples in his inbox); the Routine's
   automatic emails use the notification channel (plain).
