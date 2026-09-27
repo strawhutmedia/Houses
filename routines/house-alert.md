@@ -1,7 +1,7 @@
 HOUSE ALERT — LA (NELA) + Portland. Daily MLS scout for Ryan. Repo: strawhutmedia/Houses (clone it if not already in the working directory; read CLAUDE.md first).
 
 CRITERIA
-- LA: single-family house, 1.5+ baths, under $1.5M, in Highland Park (top pick), Atwater Village, Frogtown (Elysian Valley), Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz.
+- LA: single-family house, 1.5+ baths, under $1.25M, in Highland Park (top pick), Atwater Village, Frogtown (Elysian Valley), Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz.
 - Portland: house, 1.5+ baths, under $1M, in West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst.
 - ADU/guest unit is a strong plus, but treat any "guest apartment/ADU" claim as UNVERIFIED unless permits or sqft back it (5140 Miriam's "guest apartment" was a shed).
 

@@ -68,7 +68,7 @@ again, recreate it from that file. Periodically confirm it still exists
 (`list_triggers recurring=true`).
 
 Its rules (full prompt in `routines/house-alert.md`):
-- **LA**: house, 1.5+ baths, **under $1.5M**, in Highland Park (top pick),
+- **LA**: house, 1.5+ baths, **under $1.25M** (lowered from $1.5M 9/27 — Ryan: "can't afford 1.5"), in Highland Park (top pick),
   Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park,
   Silver Lake, Echo Park, Los Feliz.
 - **Portland**: house, 1.5+ baths, **under $1M**, West Hills/SW + Alberta,
