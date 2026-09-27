@@ -13,8 +13,11 @@ IRON RULE: nothing is published or emailed unless confirmed ACTIVE on a live lis
 
 OUTPUT
 - Matches: add each to finds.json (address, price, beds/baths, sqft, neighborhood, live URL, verified date, 1-line why), commit, push to main (Pages auto-deploys). Move any existing find that is now pending/sold into the corrections log.
-- Then EMAIL Ryan (arrives from houses@strawhutmedia.com via the site's AWS SES). Write /tmp/alert.json = {"subject":"🏡 <N> new house(s) — <top address>, $<price>","body":"<per house: 🏡 Address — $price / bd/ba · sqft · neighborhood / Why: one line / Live listing: url, blank line between houses>\n\nBoard: https://strawhutmedia.github.io/Houses/finds.html"} then run:
+- Then EMAIL Ryan (arrives from houses@strawhutmedia.com via the site's AWS SES; the site renders it with photo thumbnails, grouped Los Angeles → Portland → neighborhood, cheapest first — do NOT sort or format it yourself). For each house, open its live listing page and take the photo URL from its <meta property="og:image" content="..."> tag. Write /tmp/alert.json =
+  {"intro":"<optional 1-3 lines: biggest news first, e.g. a price cut on a board house; if the git push above failed, end with: ⚠️ Board not updated today (push failed).>",
+   "houses":[{"address":"4820 Buchanan St","price":1249000,"wasPrice":null,"beds":3,"baths":3,"sqft":1704,"city":"Los Angeles","hood":"Highland Park","why":"one line","url":"<live listing url>","photo":"<og:image url>"}]}
+  city is exactly "Los Angeles" or "Portland"; hood is the plain neighborhood name (e.g. "Silver Lake", "West Hills"); wasPrice only for price cuts. Then run:
   curl -sS -X POST "https://www.strawhutmedia.com/api/houses/alert" -H "Content-Type: application/json" -H "X-Newsletter-Token: <TOKEN — NOT stored here (public repo); copy from the live Routine or the Calendar-prep Routine>" -d @/tmp/alert.json
   It must return {"ok":true}; if not, retry once, then say so in your final reply (the notification email is the fallback).
-- End your reply with the same short summary.
+- End your reply with a short plain summary.
 - No matches: send NO email; reply exactly "No new matches today". No digest, no filler.

@@ -124,6 +124,14 @@ Its rules (full prompt in `routines/house-alert.md`):
   Calendar-prep Routine uses; Ryan explicitly approved reuse). **The token lives
   ONLY in the Routine prompt — never commit it; this repo is PUBLIC.** Claude's
   notification email stays on as fallback.
+  Format (9/27, site PR #131, `src/houseAlert.js`): Routine posts
+  `{intro, houses:[{address,price,wasPrice,beds,baths,sqft,city,hood,why,url,photo}]}`;
+  the site renders photo thumbnails (listing og:image), grouped LA → Portland →
+  neighborhood (Silver Lake, Highland Park first), cheapest first. Ryan asked for this.
+- **KNOWN GAP (9/27):** first run (9/27, 32 houses emailed) did NOT push to
+  finds.json — the Routine was created via MCP with no repo source, so it can't
+  push. Fix needs Ryan: add strawhutmedia/Houses to the Routine in the claude.ai
+  Routines UI. Until then the email is the record; the board lags.
 - EquityScout emails Ryan manually via **his Gmail** (branded dark HTML,
   EquityScout style — see sent examples in his inbox); the Routine's
   automatic emails use the notification channel (plain).
