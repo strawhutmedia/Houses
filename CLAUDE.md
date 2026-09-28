@@ -145,6 +145,12 @@ Management, offices from $599/mo utilities included, call April
 818-577-9088). No online footprint; assessed as good cheap edit-suite,
 bad recording room (wall ACs, 2-hr street parking, thin walls). Next step is
 his: call April / get the cross street so we can pull assessor data.
+- 9/28: **1728 & 1730 Silver Lake Blvd** (Figure 8 Realty; Nick Fichera
+  630-460-0820, Cael Kirkland 323-842-2536). Broker page: 1958 split-level,
+  ~1,800 sf total, 4 offices w/ separate entrances + baths, kitchen, parking;
+  page says "Leased" but sign still up (Ryan: listed a long time). No asking
+  rent published; estimate ~$1.3–1.8K/mo per office, ~$5–7K whole (unverified
+  market guess). Busy street = recording noise risk. Next: Ryan calls Cael.
 
 ## Backlog (in rough priority)
 
