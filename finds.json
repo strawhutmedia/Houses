@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-17T09:00:00-07:00",
-  "rule": "LA: house · 1.5+ baths · under $1.5M · Highland Park, Atwater, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M",
+  "updatedAt": "2026-09-28T07:59:00-07:00",
+  "rule": "LA: house \u00b7 1.5+ baths \u00b7 under $1.25M \u00b7 Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz \u2014 plus Portland, OR: house \u00b7 1.5+ baths \u00b7 under $1M \u00b7 West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
       "id": "malcolm-3210-pdx",
-      "tag": "🌲 Portland",
+      "tag": "\ud83c\udf32 Portland",
       "address": "3210 SW Malcolm Ct",
       "hood": "West Hills, Portland OR",
       "price": 649000,
@@ -12,11 +12,11 @@
       "baths": 3,
       "sqft": 2988,
       "status": "Active",
-      "verified": "2026-09-09",
-      "verifiedHow": "Live on listing brokerage Vetiver Street's featured listings the same day",
+      "verified": "2026-09-28",
+      "verifiedHow": "Still live on Vetiver Street's featured listings + confirmed via live MLS aggregator search today; price unchanged at $649,000",
       "dom": null,
-      "why": "The Instagram find: a 1940 architect-owned timber house expanded over decades — steep rooflines, walls of glass, stone fireplace, rooftop terrace — on 0.71 wooded acres off Canyon Road. Nearly 3,000 sqft for $649K ($217/sqft — LA equivalents run $650+). Local lore says the site was once a way station for travelers between Portland and Hillsboro.",
-      "ask": "Decades of owner-architect additions — which were permitted? Roof and drainage condition (wooded hillside lot). Why priced at $217/sqft?",
+      "why": "The Instagram find: a 1940 architect-owned timber house expanded over decades \u2014 steep rooflines, walls of glass, stone fireplace, rooftop terrace \u2014 on 0.71 wooded acres off Canyon Road. Nearly 3,000 sqft for $649K ($217/sqft \u2014 LA equivalents run $650+). Local lore says the site was once a way station for travelers between Portland and Hillsboro.",
+      "ask": "Decades of owner-architect additions \u2014 which were permitted? Roof and drainage condition (wooded hillside lot). Why priced at $217/sqft?",
       "links": [
         {
           "label": "Vetiver Street (listing brokerage)",
@@ -29,144 +29,310 @@
       ]
     },
     {
-      "id": "dillon-117",
-      "tag": "🏠 Your street",
-      "address": "117 N Dillon St",
-      "hood": "Silver Lake",
-      "price": 1499000,
+      "id": "eldred-4880",
+      "tag": "\ud83c\udfd4\ufe0f Highland Park",
+      "address": "4880 Eldred St",
+      "hood": "Highland Park",
+      "price": 950000,
       "beds": 3,
       "baths": 2,
-      "sqft": 1562,
+      "sqft": 1168,
       "status": "Active",
-      "verified": "2026-09-05",
-      "verifiedHow": "Redfin listing data confirmed same day",
-      "dom": "~115 days on market, already price-cut",
-      "why": "On N Dillon itself. 1912 single-family on a 6,000 sqft lot. Sat 115 days and already cut to $1.499M — squeaks under the $1.5M cap with obvious room below ask.",
-      "ask": "Why the long sit? What did the last price cut respond to?",
+      "verified": "2026-09-28",
+      "verifiedHow": "Live on Compass's Highland Park inventory and on its own Compass listing page today",
+      "dom": "6 days",
+      "why": "Highland Park is Ryan's top pick \u2014 3bd/2ba house at $950K, comfortably under the $1.25M cap, brand new to market.",
+      "ask": "Condition, year built, any deferred maintenance given the fast listing.",
       "links": [
         {
-          "label": "Redfin",
-          "url": "https://www.redfin.com/CA/Los-Angeles/117-N-Dillon-St-90026/home/6935507"
+          "label": "Compass listing",
+          "url": "https://www.compass.com/homedetails/4880-Eldred-St-Los-Angeles-CA-90042/1JE3PF_pid/"
         }
-      ]
+      ],
+      "photo": "https://www.compass.com/m/a53cd73f9255b7ae100152355850b28a4333a8ce5989fefa076bbe47e3015591/640x480.jpg"
     },
     {
-      "id": "gatewood-2250",
-      "tag": "🐸 Frogtown",
-      "address": "2250 Gatewood St",
-      "hood": "Frogtown (Elysian Valley)",
-      "price": 549000,
+      "id": "museum-387",
+      "tag": "\ud83c\udf32 Glassell Park",
+      "address": "387 Museum Dr",
+      "hood": "Glassell Park",
+      "price": 1008900,
       "beds": 2,
       "baths": 2,
-      "sqft": 701,
+      "sqft": 1261,
       "status": "Active",
-      "verified": "2026-09-05",
-      "verifiedHow": "Live on Compass's Frogtown inventory the day of publishing",
-      "dom": null,
-      "why": "A 2-bath house in Frogtown for $549K — the cheapest qualifying find on the entire board. Small (701 sqft), but at $783/sqft in a neighborhood with ~20 active listings total.",
-      "ask": "Small-lot home or standard fee-simple parcel? HOA or shared-drive arrangements? Confirm it's a detached house.",
+      "verified": "2026-09-28",
+      "verifiedHow": "Live on Compass's Glassell Park inventory and its own Compass listing page today",
+      "dom": "11 days",
+      "why": "2bd/2ba, 1,261 sqft just over $1M \u2014 under the LA cap with room to spare.",
+      "ask": "Condition and any views (Museum Dr sits on the hillside).",
       "links": [
         {
-          "label": "Compass — Frogtown listings",
-          "url": "https://www.compass.com/homes-for-sale/frogtown-los-angeles-ca/"
-        },
-        {
-          "label": "Zillow lookup",
-          "url": "https://www.zillow.com/homes/2250-Gatewood-St,-Los-Angeles,-CA_rb/"
+          "label": "Compass listing",
+          "url": "https://www.compass.com/homedetails/387-Museum-Dr-Los-Angeles-CA-90065/1JAY3R_pid/"
         }
-      ]
+      ],
+      "photo": "https://www.compass.com/m/432e5413d6b0d871756b96e52a2e792ae41362bcab39d999137e31700ce380f6/640x480.jpg"
     },
     {
-      "id": "gatewood-2248h",
-      "tag": "🐸 Frogtown",
-      "address": "2248 ½ Gatewood St",
-      "hood": "Frogtown (Elysian Valley)",
-      "price": 665000,
+      "id": "ave37-338w",
+      "tag": "\ud83c\udf32 Glassell Park",
+      "address": "338 West Ave 37",
+      "hood": "Glassell Park",
+      "price": 750000,
       "beds": 2,
-      "baths": 3,
-      "sqft": 1000,
+      "baths": 2,
+      "sqft": 682,
       "status": "Active",
-      "verified": "2026-09-05",
-      "verifiedHow": "Live on Compass's Frogtown inventory the day of publishing",
-      "dom": null,
-      "why": "2bd/3ba, 1,000 sqft at $665K. The ½ address suggests a small-lot / rear home — worth confirming what you'd own.",
-      "ask": "Fee-simple small-lot or TIC? Shared walls or fully detached?",
+      "verified": "2026-09-28",
+      "verifiedHow": "Live on Compass's Glassell Park inventory and its own Compass listing page today",
+      "dom": "48 days",
+      "why": "Small (682 sqft) but detached 2bd/2ba at $750K \u2014 cheapest new match today. 48 DOM suggests negotiating room.",
+      "ask": "Why the long sit \u2014 condition, lot, or pricing?",
       "links": [
         {
-          "label": "Compass — Frogtown listings",
-          "url": "https://www.compass.com/homes-for-sale/frogtown-los-angeles-ca/"
-        },
-        {
-          "label": "Zillow lookup",
-          "url": "https://www.zillow.com/homes/2248-Gatewood-St,-Los-Angeles,-CA_rb/"
+          "label": "Compass listing",
+          "url": "https://www.compass.com/homedetails/338-W-Ave-37-Los-Angeles-CA-90065/1L4KAI_pid/"
         }
-      ]
+      ],
+      "photo": "https://www.compass.com/m/5658b1fe71fb625953810aab87310c89073b58d30bbe25d3ecfa6f524e2ffe0d/640x480.jpg"
     },
     {
-      "id": "dorris-2222h",
-      "tag": "🐸 Frogtown",
-      "address": "2222 ½ Dorris Pl",
-      "hood": "Frogtown (Elysian Valley)",
-      "price": 695000,
+      "id": "cazador-3507",
+      "tag": "\u26f0\ufe0f Mt. Washington",
+      "address": "3507 Cazador St",
+      "hood": "Mt. Washington",
+      "price": 1190000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1318,
+      "status": "Active",
+      "verified": "2026-09-28",
+      "verifiedHow": "Live on Compass's Mt. Washington inventory and its own Compass listing page today",
+      "dom": "6 days",
+      "why": "3bd/2ba, 1,318 sqft at $1.19M \u2014 brand new to market, just under the $1.25M cap.",
+      "ask": "Confirm condition and whether the price has room given it's day 6.",
+      "links": [
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/homedetails/3507-Cazador-St-Los-Angeles-CA-90065/1JBB3I_pid/"
+        }
+      ],
+      "photo": "https://www.compass.com/m/fda1e312dc78732adca4e241c4a8005fb97801db0b4039eb1ed6ed93a8ec772b/640x480.jpg"
+    },
+    {
+      "id": "crestmoore-2537",
+      "tag": "\u26f0\ufe0f Mt. Washington",
+      "address": "2537 Crestmoore Pl",
+      "hood": "Mt. Washington",
+      "price": 1200000,
       "beds": 2,
-      "baths": 3,
-      "sqft": 1034,
+      "baths": 2,
+      "sqft": 2080,
       "status": "Active",
-      "verified": "2026-09-05",
-      "verifiedHow": "Live on Compass's Frogtown inventory the day of publishing",
-      "dom": null,
-      "why": "2bd/3ba, 1,034 sqft at $695K, blocks from the LA River path. Same caveat as the other ½ address: confirm the ownership structure.",
-      "ask": "Fee-simple or TIC? Parking situation?",
+      "verified": "2026-09-28",
+      "verifiedHow": "Live on Compass's Mt. Washington inventory and its own Compass listing page today",
+      "dom": "10 days",
+      "why": "Biggest of today's LA batch: 2,080 sqft for $1.2M ($577/sqft \u2014 cheap for the neighborhood), just under the cap.",
+      "ask": "Why only 2bd for the sqft \u2014 converted rooms? Confirm layout.",
       "links": [
         {
-          "label": "Compass — Frogtown listings",
-          "url": "https://www.compass.com/homes-for-sale/frogtown-los-angeles-ca/"
-        },
-        {
-          "label": "Zillow lookup",
-          "url": "https://www.zillow.com/homes/2222-Dorris-Pl,-Los-Angeles,-CA_rb/"
+          "label": "Compass listing",
+          "url": "https://www.compass.com/homedetails/2537-Crestmoore-Pl-Los-Angeles-CA-90065/1KIO8I_pid/"
         }
-      ]
+      ],
+      "photo": "https://www.compass.com/m/ad2996566b1ea1faf0ffe00bab282af8055adf7cef82aa8b34bc0e51a15f9237/640x480.jpg"
     },
     {
-      "id": "rich-2651",
-      "tag": "🐸 Frogtown",
-      "address": "2651 Rich St",
-      "hood": "Frogtown (Elysian Valley)",
-      "price": 1349000,
+      "id": "cunard-2720",
+      "tag": "\u26f0\ufe0f Mt. Washington",
+      "address": "2720 Cunard St",
+      "hood": "Mt. Washington",
+      "price": 824600,
+      "beds": 2,
+      "baths": 2,
+      "sqft": 838,
+      "status": "Active",
+      "verified": "2026-09-28",
+      "verifiedHow": "Live on Compass's Mt. Washington inventory and its own Compass listing page today",
+      "dom": "11 days",
+      "why": "2bd/2ba starter at $824,600, well under cap, good $/sqft cushion for negotiation.",
+      "ask": "Lot size and parking situation.",
+      "links": [
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/homedetails/2720-Cunard-St-Los-Angeles-CA-90065/1IQ3SF_pid/"
+        }
+      ],
+      "photo": "https://www.compass.com/m/eafc723e5cc41eb9faece3c320d884b161db886404729dffc9efe118c11aa65c/640x480.jpg"
+    },
+    {
+      "id": "7th-2608-irvington-pdx",
+      "tag": "\ud83c\udf32 Irvington, Portland",
+      "address": "2608 NE 7th Ave",
+      "hood": "Irvington, Portland OR",
+      "price": 725000,
+      "beds": 4,
+      "baths": 2,
+      "sqft": 2440,
+      "status": "Active",
+      "verified": "2026-09-28",
+      "verifiedHow": "Live on Compass's Irvington inventory and its own Compass listing page today",
+      "dom": "103 days",
+      "why": "1925 Craftsman, 4bd/2ba, 2,440 sqft at $725K \u2014 new roof (2025) and HVAC (2023). 103 DOM (previously sold $713K in 2023) means real room to negotiate.",
+      "ask": "Why the long sit at this price given the recent capex \u2014 condition issue or just overpriced for the block?",
+      "links": [
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/homedetails/2608-NE-7th-Ave-Portland-OR-97212/1NIDZ_pid/"
+        }
+      ],
+      "photo": "https://www.compass.com/m/6b2087304f1b8aa77805da73c89b4e02d3a70bd7a10e702bfefbda3834473589/640x480.jpg"
+    },
+    {
+      "id": "humboldt-2225-overlook-pdx",
+      "tag": "\ud83c\udf32 Overlook, Portland",
+      "address": "2225 N Humboldt St",
+      "hood": "Overlook, Portland OR",
+      "price": 649000,
       "beds": 4,
       "baths": 3,
-      "sqft": 2235,
+      "sqft": 2417,
       "status": "Active",
-      "verified": "2026-09-05",
-      "verifiedHow": "Live on Compass's Frogtown inventory the day of publishing",
+      "verified": "2026-09-28",
+      "verifiedHow": "Live on Compass's Overlook inventory and its own Compass listing page today",
       "dom": null,
-      "why": "The big-family option: 4bd/3ba, 2,235 sqft at $604/sqft — cheap per foot for the neighborhood, and comfortably under the $1.5M cap.",
-      "ask": "Condition and year built; why priced under the neighborhood $/sqft?",
+      "why": "1921 Foursquare, 4bd/3ba, 2,417 sqft at $649K. Has a genuinely permitted ADU above the garage \u2014 listing specifically says \"mechanically permitted, second living space,\" the kind of paper trail Miriam St's shed did NOT have.",
+      "ask": "Pull the actual permit record before trusting the ADU claim, per house rules.",
       "links": [
         {
-          "label": "Compass — Frogtown listings",
-          "url": "https://www.compass.com/homes-for-sale/frogtown-los-angeles-ca/"
-        },
-        {
-          "label": "Zillow lookup",
-          "url": "https://www.zillow.com/homes/2651-Rich-St,-Los-Angeles,-CA_rb/"
+          "label": "Compass listing",
+          "url": "https://www.compass.com/homedetails/2225-N-Humboldt-St-Portland-OR-97217/2196742186223607017_lid/"
         }
-      ]
+      ],
+      "photo": "https://www.compass.com/m/b2ced77412f13722e7e525281563c6765065a7c68d1292b9918aabcc4ebf6b9e/640x480.jpg"
+    },
+    {
+      "id": "51st-2371-mttabor-pdx",
+      "tag": "\ud83c\udf32 Mt. Tabor, Portland",
+      "address": "2371 SE 51st Ave",
+      "hood": "Mt. Tabor, Portland OR",
+      "price": 780000,
+      "beds": 3,
+      "baths": 3,
+      "sqft": 2004,
+      "status": "Active",
+      "verified": "2026-09-28",
+      "verifiedHow": "Live on Compass's Mt. Tabor inventory and its own Compass listing page today",
+      "dom": "31 days",
+      "why": "3bd/3ba, 2,004 sqft at $780K. Finished basement has a 4th non-conforming bedroom + separate entrance + kitchenette \u2014 ADU-adjacent, but unpermitted per the listing itself (flagged, not oversold).",
+      "ask": "Whether the basement space could be permitted as a legal ADU.",
+      "links": [
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/homedetails/2371-SE-51st-Ave-Portland-OR-97215/1EERD_pid/"
+        }
+      ],
+      "photo": "https://www.compass.com/m/254861b59fdce04759810e683709df5c035589d974211a7093e73af6cb8c41ec/640x480.jpg"
+    },
+    {
+      "id": "stark-3543-hawthorne-pdx",
+      "tag": "\ud83c\udf32 Hawthorne/Division, Portland",
+      "address": "3543 SE Stark St",
+      "hood": "Hawthorne/Division, Portland OR",
+      "price": 699900,
+      "beds": 3,
+      "baths": 3,
+      "sqft": 2638,
+      "status": "Active",
+      "verified": "2026-09-28",
+      "verifiedHow": "Live on Compass's Hawthorne/Division-area inventory and its own Compass listing page today",
+      "dom": null,
+      "why": "Classic Portland Bungalow, 3bd/3ba, 2,638 sqft at $699,900 \u2014 biggest sqft-per-dollar of today's Portland batch. Move-in ready with a hot tub and fruit trees.",
+      "ask": "Confirm the extra half-bath count and any bungalow-era deferred maintenance.",
+      "links": [
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/homedetails/3543-SE-Stark-St-Portland-OR-97214/1ABTS_pid/"
+        }
+      ],
+      "photo": "https://www.compass.com/m/8100d8179780bf85fb192332afe6c28b93014d030944854fccad7f1e8e377bef/640x480.jpg"
+    },
+    {
+      "id": "10th-4845-alberta-pdx",
+      "tag": "\ud83c\udf32 Alberta, Portland",
+      "address": "4845 NE 10th Ave",
+      "hood": "Alberta, Portland OR",
+      "price": 749900,
+      "beds": 3,
+      "baths": 3,
+      "sqft": 2200,
+      "status": "Active",
+      "verified": "2026-09-28",
+      "verifiedHow": "Live on Compass's Alberta Arts District inventory and its own Compass listing page today",
+      "dom": "102 days",
+      "why": "3bd/3ba, 2,200 sqft at $749,900 with a private-entry lower level (separate entrance). 102 DOM \u2014 real negotiating room in Alberta.",
+      "ask": "Whether the lower level is permitted as a separate unit or just a finished basement.",
+      "links": [
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/homedetails/4845-NE-10th-Ave-Portland-OR-97211/1ZPDU_pid/"
+        }
+      ],
+      "photo": "https://www.compass.com/m/7a21f4394e88afaa9463307bb61e4939934af5dba0cd47a48fb1e761e759a394/640x480.jpg"
+    },
+    {
+      "id": "18th-5225-sellwood-pdx",
+      "tag": "\ud83c\udf32 Sellwood, Portland",
+      "address": "5225 SE 18th Ave",
+      "hood": "Sellwood, Portland OR",
+      "price": 799900,
+      "beds": 5,
+      "baths": 3,
+      "sqft": 2439,
+      "status": "Active",
+      "verified": "2026-09-28",
+      "verifiedHow": "Live on Compass's Sellwood-Moreland inventory and its own Compass listing page today",
+      "dom": "29 days",
+      "why": "1928 house, 5bd/3ba, 2,439 sqft at $799,900, with a genuinely \"fully permitted, private-entry ADU for short-term rentals\" per the listing \u2014 worth chasing down the permit record to confirm, but a stronger claim than Miriam St's.",
+      "ask": "Pull the ADU permit record before trusting it. Confirm main-house bed/bath split vs ADU's.",
+      "links": [
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/homedetails/5225-SE-18th-Ave-Portland-OR-97202/154OL_pid/"
+        }
+      ],
+      "photo": "https://www.compass.com/m/0ddc9b5fc9c8d41ddd58a709374b86a32e3d10081f39f5156302804accfe5b84/640x480.jpg"
     }
   ],
   "corrections": [
     {
+      "date": "2026-09-28",
+      "text": "117 N Dillon St re-verified today: now listed at $1,299,999 with 1 bath (was $1.499M/2ba on this board, likely relisted). That's over the current $1.25M LA cap and under the 1.5-bath minimum, so it no longer qualifies \u2014 removed from active matches. Still active on the market, just not a match under current rules."
+    },
+    {
+      "date": "2026-09-28",
+      "text": "2651 Rich St's price rose from $1,349,000 (this board) to $1,450,000 as of today's live Compass listing \u2014 now over the $1.25M LA cap. Removed from active matches; still active on market."
+    },
+    {
+      "date": "2026-09-28",
+      "text": "2250 Gatewood St and 2248 1/2 Gatewood St (the Gatewood TIC pair): the listing brokerage's own TIC subdivision page shows \"no active listings right now.\" Both appear to be off-market (likely sold). Removed from active matches."
+    },
+    {
+      "date": "2026-09-28",
+      "text": "2222 1/2 Dorris Pl: the address now resolves to a $2,198,000 triplex listing (\"2222 Dorris Pl\") that doesn't match the original $695K 2bd/3ba unit, and it no longer appears in Compass's Frogtown inventory. Could not confirm the original unit is still separately for sale today \u2014 removed from active matches until it can be re-verified on a live listing."
+    },
+    {
       "date": "2026-09-13",
-      "text": "5140 Miriam St went UNDER CONTRACT ~Sep 9 (63 days on market, no price cut — seller's June 2023 basis was $865K). Field note from Ryan's visit: the listed 'guest apartment' is in reality a shed — the marketing oversold it, which likely explains the long sit. Removed from the board."
+      "text": "5140 Miriam St went UNDER CONTRACT ~Sep 9 (63 days on market, no price cut \u2014 seller's June 2023 basis was $865K). Field note from Ryan's visit: the listed 'guest apartment' is in reality a shed \u2014 the marketing oversold it, which likely explains the long sit. Removed from the board."
     },
     {
       "date": "2026-09-05",
-      "text": "3041 Atwater Ave was emailed as a $999K active listing — WRONG. It SOLD in March 2026 for $1,230,000. It came from a stale search snippet and was not verified before sending. Retracted."
+      "text": "3041 Atwater Ave was emailed as a $999K active listing \u2014 WRONG. It SOLD in March 2026 for $1,230,000. It came from a stale search snippet and was not verified before sending. Retracted."
     },
     {
       "date": "2026-09-05",
-      "text": "5314 Buchanan St (Highland Park) and 4511 Brunswick Ave (Atwater) — no active listing could be verified for either. Both retracted."
+      "text": "5314 Buchanan St (Highland Park) and 4511 Brunswick Ave (Atwater) \u2014 no active listing could be verified for either. Both retracted."
     },
     {
       "date": "2026-09-05",
