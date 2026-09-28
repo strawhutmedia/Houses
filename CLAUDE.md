@@ -128,10 +128,8 @@ Its rules (full prompt in `routines/house-alert.md`):
   `{intro, houses:[{address,price,wasPrice,beds,baths,sqft,city,hood,why,url,photo}]}`;
   the site renders photo thumbnails (listing og:image), grouped LA → Portland →
   neighborhood (Silver Lake, Highland Park first), cheapest first. Ryan asked for this.
-- **KNOWN GAP (9/27):** first run (9/27, 32 houses emailed) did NOT push to
-  finds.json — the Routine was created via MCP with no repo source, so it can't
-  push. Fix needs Ryan: add strawhutmedia/Houses to the Routine in the claude.ai
-  Routines UI. Until then the email is the record; the board lags.
+- Board push: 9/27 run could not push; **9/28 run pushed finds.json fine**
+  (commit c1e7598, 12 matches). Gap resolved.
 - EquityScout emails Ryan manually via **his Gmail** (branded dark HTML,
   EquityScout style — see sent examples in his inbox); the Routine's
   automatic emails use the notification channel (plain).
