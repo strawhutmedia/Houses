@@ -162,6 +162,12 @@ his: call April / get the cross street so we can pull assessor data.
   page says "Leased" but sign still up (Ryan: listed a long time). No asking
   rent published; estimate ~$1.3–1.8K/mo per office, ~$5–7K whole (unverified
   market guess). Busy street = recording noise risk. Next: Ryan calls Cael.
+- 9/30: **Melrose × Heliotrope corner (Melrose Hill / East Hollywood 90029)** —
+  700–712 N Heliotrope / 4323 Melrose, 1920s brick retail. Per LoopNet/Showcase
+  (search snippets, not verified live): 1,435 sf corner $2.95/sf/mo NNN ≈ $4,233
+  + NNN; 1,815 sf $3.00/sf MG ≈ $5,445; 712 N Heliotrope ~800 sf listed LEASED
+  (Figure 8). All over the $3.5K cap; storefront glass + Melrose traffic = noise.
+  Not in studio-alert areas (Ryan could add East Hollywood/Melrose Hill).
 
 ## Backlog (in rough priority)
 
