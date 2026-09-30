@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-09-28T07:59:00-07:00",
-  "rule": "LA: house \u00b7 1.5+ baths \u00b7 under $1.25M \u00b7 Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz \u2014 plus Portland, OR: house \u00b7 1.5+ baths \u00b7 under $1M \u00b7 West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
+  "updatedAt": "2026-09-30T08:00:00-07:00",
+  "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
       "id": "malcolm-3210-pdx",
-      "tag": "\ud83c\udf32 Portland",
+      "tag": "🌲 Portland",
       "address": "3210 SW Malcolm Ct",
       "hood": "West Hills, Portland OR",
       "price": 649000,
@@ -15,8 +15,8 @@
       "verified": "2026-09-28",
       "verifiedHow": "Still live on Vetiver Street's featured listings + confirmed via live MLS aggregator search today; price unchanged at $649,000",
       "dom": null,
-      "why": "The Instagram find: a 1940 architect-owned timber house expanded over decades \u2014 steep rooflines, walls of glass, stone fireplace, rooftop terrace \u2014 on 0.71 wooded acres off Canyon Road. Nearly 3,000 sqft for $649K ($217/sqft \u2014 LA equivalents run $650+). Local lore says the site was once a way station for travelers between Portland and Hillsboro.",
-      "ask": "Decades of owner-architect additions \u2014 which were permitted? Roof and drainage condition (wooded hillside lot). Why priced at $217/sqft?",
+      "why": "The Instagram find: a 1940 architect-owned timber house expanded over decades — steep rooflines, walls of glass, stone fireplace, rooftop terrace — on 0.71 wooded acres off Canyon Road. Nearly 3,000 sqft for $649K ($217/sqft — LA equivalents run $650+). Local lore says the site was once a way station for travelers between Portland and Hillsboro.",
+      "ask": "Decades of owner-architect additions — which were permitted? Roof and drainage condition (wooded hillside lot). Why priced at $217/sqft?",
       "links": [
         {
           "label": "Vetiver Street (listing brokerage)",
@@ -30,7 +30,7 @@
     },
     {
       "id": "eldred-4880",
-      "tag": "\ud83c\udfd4\ufe0f Highland Park",
+      "tag": "🏔️ Highland Park",
       "address": "4880 Eldred St",
       "hood": "Highland Park",
       "price": 950000,
@@ -41,7 +41,7 @@
       "verified": "2026-09-28",
       "verifiedHow": "Live on Compass's Highland Park inventory and on its own Compass listing page today",
       "dom": "6 days",
-      "why": "Highland Park is Ryan's top pick \u2014 3bd/2ba house at $950K, comfortably under the $1.25M cap, brand new to market.",
+      "why": "Highland Park is Ryan's top pick — 3bd/2ba house at $950K, comfortably under the $1.25M cap, brand new to market.",
       "ask": "Condition, year built, any deferred maintenance given the fast listing.",
       "links": [
         {
@@ -53,7 +53,7 @@
     },
     {
       "id": "museum-387",
-      "tag": "\ud83c\udf32 Glassell Park",
+      "tag": "🌲 Glassell Park",
       "address": "387 Museum Dr",
       "hood": "Glassell Park",
       "price": 1008900,
@@ -64,7 +64,7 @@
       "verified": "2026-09-28",
       "verifiedHow": "Live on Compass's Glassell Park inventory and its own Compass listing page today",
       "dom": "11 days",
-      "why": "2bd/2ba, 1,261 sqft just over $1M \u2014 under the LA cap with room to spare.",
+      "why": "2bd/2ba, 1,261 sqft just over $1M — under the LA cap with room to spare.",
       "ask": "Condition and any views (Museum Dr sits on the hillside).",
       "links": [
         {
@@ -76,7 +76,7 @@
     },
     {
       "id": "ave37-338w",
-      "tag": "\ud83c\udf32 Glassell Park",
+      "tag": "🌲 Glassell Park",
       "address": "338 West Ave 37",
       "hood": "Glassell Park",
       "price": 750000,
@@ -87,8 +87,8 @@
       "verified": "2026-09-28",
       "verifiedHow": "Live on Compass's Glassell Park inventory and its own Compass listing page today",
       "dom": "48 days",
-      "why": "Small (682 sqft) but detached 2bd/2ba at $750K \u2014 cheapest new match today. 48 DOM suggests negotiating room.",
-      "ask": "Why the long sit \u2014 condition, lot, or pricing?",
+      "why": "Small (682 sqft) but detached 2bd/2ba at $750K — cheapest new match today. 48 DOM suggests negotiating room.",
+      "ask": "Why the long sit — condition, lot, or pricing?",
       "links": [
         {
           "label": "Compass listing",
@@ -99,7 +99,7 @@
     },
     {
       "id": "cazador-3507",
-      "tag": "\u26f0\ufe0f Mt. Washington",
+      "tag": "⛰️ Mt. Washington",
       "address": "3507 Cazador St",
       "hood": "Mt. Washington",
       "price": 1190000,
@@ -110,7 +110,7 @@
       "verified": "2026-09-28",
       "verifiedHow": "Live on Compass's Mt. Washington inventory and its own Compass listing page today",
       "dom": "6 days",
-      "why": "3bd/2ba, 1,318 sqft at $1.19M \u2014 brand new to market, just under the $1.25M cap.",
+      "why": "3bd/2ba, 1,318 sqft at $1.19M — brand new to market, just under the $1.25M cap.",
       "ask": "Confirm condition and whether the price has room given it's day 6.",
       "links": [
         {
@@ -122,7 +122,7 @@
     },
     {
       "id": "crestmoore-2537",
-      "tag": "\u26f0\ufe0f Mt. Washington",
+      "tag": "⛰️ Mt. Washington",
       "address": "2537 Crestmoore Pl",
       "hood": "Mt. Washington",
       "price": 1200000,
@@ -133,8 +133,8 @@
       "verified": "2026-09-28",
       "verifiedHow": "Live on Compass's Mt. Washington inventory and its own Compass listing page today",
       "dom": "10 days",
-      "why": "Biggest of today's LA batch: 2,080 sqft for $1.2M ($577/sqft \u2014 cheap for the neighborhood), just under the cap.",
-      "ask": "Why only 2bd for the sqft \u2014 converted rooms? Confirm layout.",
+      "why": "Biggest of today's LA batch: 2,080 sqft for $1.2M ($577/sqft — cheap for the neighborhood), just under the cap.",
+      "ask": "Why only 2bd for the sqft — converted rooms? Confirm layout.",
       "links": [
         {
           "label": "Compass listing",
@@ -145,7 +145,7 @@
     },
     {
       "id": "cunard-2720",
-      "tag": "\u26f0\ufe0f Mt. Washington",
+      "tag": "⛰️ Mt. Washington",
       "address": "2720 Cunard St",
       "hood": "Mt. Washington",
       "price": 824600,
@@ -168,7 +168,7 @@
     },
     {
       "id": "7th-2608-irvington-pdx",
-      "tag": "\ud83c\udf32 Irvington, Portland",
+      "tag": "🌲 Irvington, Portland",
       "address": "2608 NE 7th Ave",
       "hood": "Irvington, Portland OR",
       "price": 725000,
@@ -179,8 +179,8 @@
       "verified": "2026-09-28",
       "verifiedHow": "Live on Compass's Irvington inventory and its own Compass listing page today",
       "dom": "103 days",
-      "why": "1925 Craftsman, 4bd/2ba, 2,440 sqft at $725K \u2014 new roof (2025) and HVAC (2023). 103 DOM (previously sold $713K in 2023) means real room to negotiate.",
-      "ask": "Why the long sit at this price given the recent capex \u2014 condition issue or just overpriced for the block?",
+      "why": "1925 Craftsman, 4bd/2ba, 2,440 sqft at $725K — new roof (2025) and HVAC (2023). 103 DOM (previously sold $713K in 2023) means real room to negotiate.",
+      "ask": "Why the long sit at this price given the recent capex — condition issue or just overpriced for the block?",
       "links": [
         {
           "label": "Compass listing",
@@ -191,7 +191,7 @@
     },
     {
       "id": "humboldt-2225-overlook-pdx",
-      "tag": "\ud83c\udf32 Overlook, Portland",
+      "tag": "🌲 Overlook, Portland",
       "address": "2225 N Humboldt St",
       "hood": "Overlook, Portland OR",
       "price": 649000,
@@ -202,7 +202,7 @@
       "verified": "2026-09-28",
       "verifiedHow": "Live on Compass's Overlook inventory and its own Compass listing page today",
       "dom": null,
-      "why": "1921 Foursquare, 4bd/3ba, 2,417 sqft at $649K. Has a genuinely permitted ADU above the garage \u2014 listing specifically says \"mechanically permitted, second living space,\" the kind of paper trail Miriam St's shed did NOT have.",
+      "why": "1921 Foursquare, 4bd/3ba, 2,417 sqft at $649K. Has a genuinely permitted ADU above the garage — listing specifically says \"mechanically permitted, second living space,\" the kind of paper trail Miriam St's shed did NOT have.",
       "ask": "Pull the actual permit record before trusting the ADU claim, per house rules.",
       "links": [
         {
@@ -214,7 +214,7 @@
     },
     {
       "id": "51st-2371-mttabor-pdx",
-      "tag": "\ud83c\udf32 Mt. Tabor, Portland",
+      "tag": "🌲 Mt. Tabor, Portland",
       "address": "2371 SE 51st Ave",
       "hood": "Mt. Tabor, Portland OR",
       "price": 780000,
@@ -225,7 +225,7 @@
       "verified": "2026-09-28",
       "verifiedHow": "Live on Compass's Mt. Tabor inventory and its own Compass listing page today",
       "dom": "31 days",
-      "why": "3bd/3ba, 2,004 sqft at $780K. Finished basement has a 4th non-conforming bedroom + separate entrance + kitchenette \u2014 ADU-adjacent, but unpermitted per the listing itself (flagged, not oversold).",
+      "why": "3bd/3ba, 2,004 sqft at $780K. Finished basement has a 4th non-conforming bedroom + separate entrance + kitchenette — ADU-adjacent, but unpermitted per the listing itself (flagged, not oversold).",
       "ask": "Whether the basement space could be permitted as a legal ADU.",
       "links": [
         {
@@ -236,54 +236,8 @@
       "photo": "https://www.compass.com/m/254861b59fdce04759810e683709df5c035589d974211a7093e73af6cb8c41ec/640x480.jpg"
     },
     {
-      "id": "stark-3543-hawthorne-pdx",
-      "tag": "\ud83c\udf32 Hawthorne/Division, Portland",
-      "address": "3543 SE Stark St",
-      "hood": "Hawthorne/Division, Portland OR",
-      "price": 699900,
-      "beds": 3,
-      "baths": 3,
-      "sqft": 2638,
-      "status": "Active",
-      "verified": "2026-09-28",
-      "verifiedHow": "Live on Compass's Hawthorne/Division-area inventory and its own Compass listing page today",
-      "dom": null,
-      "why": "Classic Portland Bungalow, 3bd/3ba, 2,638 sqft at $699,900 \u2014 biggest sqft-per-dollar of today's Portland batch. Move-in ready with a hot tub and fruit trees.",
-      "ask": "Confirm the extra half-bath count and any bungalow-era deferred maintenance.",
-      "links": [
-        {
-          "label": "Compass listing",
-          "url": "https://www.compass.com/homedetails/3543-SE-Stark-St-Portland-OR-97214/1ABTS_pid/"
-        }
-      ],
-      "photo": "https://www.compass.com/m/8100d8179780bf85fb192332afe6c28b93014d030944854fccad7f1e8e377bef/640x480.jpg"
-    },
-    {
-      "id": "10th-4845-alberta-pdx",
-      "tag": "\ud83c\udf32 Alberta, Portland",
-      "address": "4845 NE 10th Ave",
-      "hood": "Alberta, Portland OR",
-      "price": 749900,
-      "beds": 3,
-      "baths": 3,
-      "sqft": 2200,
-      "status": "Active",
-      "verified": "2026-09-28",
-      "verifiedHow": "Live on Compass's Alberta Arts District inventory and its own Compass listing page today",
-      "dom": "102 days",
-      "why": "3bd/3ba, 2,200 sqft at $749,900 with a private-entry lower level (separate entrance). 102 DOM \u2014 real negotiating room in Alberta.",
-      "ask": "Whether the lower level is permitted as a separate unit or just a finished basement.",
-      "links": [
-        {
-          "label": "Compass listing",
-          "url": "https://www.compass.com/homedetails/4845-NE-10th-Ave-Portland-OR-97211/1ZPDU_pid/"
-        }
-      ],
-      "photo": "https://www.compass.com/m/7a21f4394e88afaa9463307bb61e4939934af5dba0cd47a48fb1e761e759a394/640x480.jpg"
-    },
-    {
       "id": "18th-5225-sellwood-pdx",
-      "tag": "\ud83c\udf32 Sellwood, Portland",
+      "tag": "🌲 Sellwood, Portland",
       "address": "5225 SE 18th Ave",
       "hood": "Sellwood, Portland OR",
       "price": 799900,
@@ -294,7 +248,7 @@
       "verified": "2026-09-28",
       "verifiedHow": "Live on Compass's Sellwood-Moreland inventory and its own Compass listing page today",
       "dom": "29 days",
-      "why": "1928 house, 5bd/3ba, 2,439 sqft at $799,900, with a genuinely \"fully permitted, private-entry ADU for short-term rentals\" per the listing \u2014 worth chasing down the permit record to confirm, but a stronger claim than Miriam St's.",
+      "why": "1928 house, 5bd/3ba, 2,439 sqft at $799,900, with a genuinely \"fully permitted, private-entry ADU for short-term rentals\" per the listing — worth chasing down the permit record to confirm, but a stronger claim than Miriam St's.",
       "ask": "Pull the ADU permit record before trusting it. Confirm main-house bed/bath split vs ADU's.",
       "links": [
         {
@@ -303,16 +257,162 @@
         }
       ],
       "photo": "https://www.compass.com/m/0ddc9b5fc9c8d41ddd58a709374b86a32e3d10081f39f5156302804accfe5b84/640x480.jpg"
+    },
+    {
+      "id": "buchanan-5001",
+      "tag": "📍 Highland Park",
+      "address": "5001 Buchanan St",
+      "hood": "Highland Park",
+      "price": 1195000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1475,
+      "status": "Active",
+      "verified": "2026-09-30",
+      "verifiedHow": "Live on its own Compass listing page today",
+      "dom": "13 days",
+      "why": "1937 Spanish SFR, 3bd/2ba, renovated (new electrical/HVAC/foundation), detached garage pitched as future ADU (unverified); relisted 9/17 after a $1.099M sale in May.",
+      "ask": "Why it sold in May and came back; ADU claim is only 'future ADU' — needs permits.",
+      "links": [
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/homedetails/5001-Buchanan-St-Los-Angeles-CA-90042/1KUG6B_pid/"
+        }
+      ],
+      "photo": "https://www.compass.com/m/3cc2a07d541a6ac554e04faa95d5d7fe8d29cd033a97ba7167b54e772c8d5ca8/origin.webp"
+    },
+    {
+      "id": "tipton-853",
+      "tag": "📍 Highland Park",
+      "address": "853 Tipton Terrace",
+      "hood": "Highland Park",
+      "price": 995000,
+      "beds": 2,
+      "baths": 2,
+      "sqft": 1241,
+      "status": "Active",
+      "verified": "2026-09-30",
+      "verifiedHow": "Live on its own Compass listing page today",
+      "dom": "12 days",
+      "why": "Highland Park SFR on 0.17 ac at $995K with a bonus studio (own entrance, 2 rooms + half-bath) — permit status unverified.",
+      "ask": "Is the studio permitted? Remember the Miriam shed.",
+      "links": [
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/homedetails/853-Tipton-Ter-Los-Angeles-CA-90042/1ISYFZ_pid/"
+        }
+      ],
+      "photo": "https://www.compass.com/m/9541f1fc24313db38b056d00666b96899c020674bbd5e835aeb801ef8403ceee/origin.webp"
+    },
+    {
+      "id": "gracia-3110",
+      "tag": "📍 Atwater Village",
+      "address": "3110 Gracia St",
+      "hood": "Atwater Village",
+      "price": 1095000,
+      "beds": 2,
+      "baths": 2,
+      "sqft": 1034,
+      "status": "Active",
+      "verified": "2026-09-30",
+      "verifiedHow": "Live on its own Compass listing page today",
+      "dom": "34 days",
+      "why": "Atwater SFR 2bd/2ba at $1.095M; detached garage with 'ADU potential' (buyer to verify).",
+      "ask": "34 DOM — room to negotiate?",
+      "links": [
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/homedetails/3110-Gracia-St-Los-Angeles-CA-90039/1L4C7U_pid/"
+        }
+      ],
+      "photo": "https://www.compass.com/m/716469de41de6bc0a00d5ace28ee19aba018722334036d41707253e53092e62e/origin.webp"
+    },
+    {
+      "id": "alumni-4424",
+      "tag": "📍 Eagle Rock",
+      "address": "4424 Alumni Ave",
+      "hood": "Eagle Rock",
+      "price": 980000,
+      "beds": 4,
+      "baths": 2,
+      "sqft": 1508,
+      "status": "Active",
+      "verified": "2026-09-30",
+      "verifiedHow": "Live on its own Compass listing page today",
+      "dom": "42 days",
+      "why": "Eagle Rock 4bd/2ba SFR at $980K near Occidental/York; no ADU; small 2,521 sf lot.",
+      "ask": "1921 house, renovated 1985 — condition; 42 DOM.",
+      "links": [
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/homedetails/4424-Alumni-Ave-Los-Angeles-CA-90041/1JEAJ3_pid/"
+        }
+      ],
+      "photo": "https://www.compass.com/m/b76aa52ff7c9f0f3d2a290a66780665d1e144312b22971b602ca5e404f390a1d/origin.webp"
+    },
+    {
+      "id": "ridgeview-2338",
+      "tag": "📍 Eagle Rock",
+      "address": "2338 Ridgeview Ave",
+      "hood": "Eagle Rock",
+      "price": 995000,
+      "beds": 4,
+      "baths": 3,
+      "sqft": 1352,
+      "status": "Active",
+      "verified": "2026-09-30",
+      "verifiedHow": "Live on its own Compass listing page today",
+      "dom": "32 days",
+      "why": "Eagle Rock 4bd/3ba on 0.17 ac with pool at $995K; detached storage w/ bath is a possible ADU (subject to permits, unverified). Marketed as a fixer/investor pitch.",
+      "ask": "Condition/renovation scope; permits on detached space.",
+      "links": [
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/homedetails/2338-Ridgeview-Ave-Los-Angeles-CA-90041/1IJOUQ_pid/"
+        }
+      ],
+      "photo": "https://www.compass.com/m/3ef409487810557c0ef4d97d909b300db0506d56f6b2f1422ef94de3db706359/origin.webp"
+    },
+    {
+      "id": "chickasaw-1808",
+      "tag": "📍 Eagle Rock",
+      "address": "1808 Chickasaw Ave",
+      "hood": "Eagle Rock",
+      "price": 899000,
+      "beds": 2,
+      "baths": 2,
+      "sqft": 744,
+      "status": "Active",
+      "verified": "2026-09-30",
+      "verifiedHow": "Live on its own Compass listing page today",
+      "dom": "33 days",
+      "why": "Reimagined 1924 Eagle Rock bungalow 2bd/2ba on 0.13 ac at $899K — small (744 sf), no ADU.",
+      "ask": "Only 744 sf — enough space for three buyers?",
+      "links": [
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/homedetails/1808-Chickasaw-Ave-Los-Angeles-CA-90041/2FD4B1_pid/"
+        }
+      ],
+      "photo": "https://www.compass.com/m/aa7cf09dbdbcf0ffdde3e0dddfd2d1bfebe6a9739ffd735328a38f0dfedcf644/origin.webp"
     }
   ],
   "corrections": [
     {
-      "date": "2026-09-28",
-      "text": "117 N Dillon St re-verified today: now listed at $1,299,999 with 1 bath (was $1.499M/2ba on this board, likely relisted). That's over the current $1.25M LA cap and under the 1.5-bath minimum, so it no longer qualifies \u2014 removed from active matches. Still active on the market, just not a match under current rules."
+      "date": "2026-09-30",
+      "text": "4845 NE 10th Ave (Alberta, $749,900): live Compass page now shows Contract Signed (pending) — removed from active matches."
+    },
+    {
+      "date": "2026-09-30",
+      "text": "3543 SE Stark St (Laurelhurst, $699,900): live Compass page now shows Contract Signed (pending) — removed from active matches."
     },
     {
       "date": "2026-09-28",
-      "text": "2651 Rich St's price rose from $1,349,000 (this board) to $1,450,000 as of today's live Compass listing \u2014 now over the $1.25M LA cap. Removed from active matches; still active on market."
+      "text": "117 N Dillon St re-verified today: now listed at $1,299,999 with 1 bath (was $1.499M/2ba on this board, likely relisted). That's over the current $1.25M LA cap and under the 1.5-bath minimum, so it no longer qualifies — removed from active matches. Still active on the market, just not a match under current rules."
+    },
+    {
+      "date": "2026-09-28",
+      "text": "2651 Rich St's price rose from $1,349,000 (this board) to $1,450,000 as of today's live Compass listing — now over the $1.25M LA cap. Removed from active matches; still active on market."
     },
     {
       "date": "2026-09-28",
@@ -320,19 +420,19 @@
     },
     {
       "date": "2026-09-28",
-      "text": "2222 1/2 Dorris Pl: the address now resolves to a $2,198,000 triplex listing (\"2222 Dorris Pl\") that doesn't match the original $695K 2bd/3ba unit, and it no longer appears in Compass's Frogtown inventory. Could not confirm the original unit is still separately for sale today \u2014 removed from active matches until it can be re-verified on a live listing."
+      "text": "2222 1/2 Dorris Pl: the address now resolves to a $2,198,000 triplex listing (\"2222 Dorris Pl\") that doesn't match the original $695K 2bd/3ba unit, and it no longer appears in Compass's Frogtown inventory. Could not confirm the original unit is still separately for sale today — removed from active matches until it can be re-verified on a live listing."
     },
     {
       "date": "2026-09-13",
-      "text": "5140 Miriam St went UNDER CONTRACT ~Sep 9 (63 days on market, no price cut \u2014 seller's June 2023 basis was $865K). Field note from Ryan's visit: the listed 'guest apartment' is in reality a shed \u2014 the marketing oversold it, which likely explains the long sit. Removed from the board."
+      "text": "5140 Miriam St went UNDER CONTRACT ~Sep 9 (63 days on market, no price cut — seller's June 2023 basis was $865K). Field note from Ryan's visit: the listed 'guest apartment' is in reality a shed — the marketing oversold it, which likely explains the long sit. Removed from the board."
     },
     {
       "date": "2026-09-05",
-      "text": "3041 Atwater Ave was emailed as a $999K active listing \u2014 WRONG. It SOLD in March 2026 for $1,230,000. It came from a stale search snippet and was not verified before sending. Retracted."
+      "text": "3041 Atwater Ave was emailed as a $999K active listing — WRONG. It SOLD in March 2026 for $1,230,000. It came from a stale search snippet and was not verified before sending. Retracted."
     },
     {
       "date": "2026-09-05",
-      "text": "5314 Buchanan St (Highland Park) and 4511 Brunswick Ave (Atwater) \u2014 no active listing could be verified for either. Both retracted."
+      "text": "5314 Buchanan St (Highland Park) and 4511 Brunswick Ave (Atwater) — no active listing could be verified for either. Both retracted."
     },
     {
       "date": "2026-09-05",
