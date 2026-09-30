@@ -168,6 +168,13 @@ his: call April / get the cross street so we can pull assessor data.
   + NNN; 1,815 sf $3.00/sf MG ≈ $5,445; 712 N Heliotrope ~800 sf listed LEASED
   (Figure 8). All over the $3.5K cap; storefront glass + Melrose traffic = noise.
   Not in studio-alert areas (Ryan could add East Hollywood/Melrose Hill).
+  9/30 later: Ryan WANTS the 1,435 sf corner (former tattoo shop, 4323 Melrose).
+  Its LoopNet listing (31511159) now says "no longer advertised" → may be leased;
+  the 1,815 sf listing (37461082) status unknown (sites 403). Building (7,469 sf,
+  1923, APN 5538-023-002) SOLD 6/26/2025 for $3.05M — new owner. No interior
+  photos online (Compass photos are nearby homes). Negotiation view: $3,500 all-in
+  ≈ 30% under ask+NNN — unlikely; $3,500 base + NNN (~17% off) plausible with
+  3–5 yr term. Next: Ryan calls broker (name unknown; LoopNet page lists it).
 
 ## Backlog (in rough priority)
 
