@@ -29,7 +29,7 @@ const COWORK = /coworking|co-?working|hot\s?desks?|dedicated desks?|shared\s?(de
 
 function curl(url) {
   return new Promise((resolve) => {
-    execFile("curl", ["-sS", "-m", "30", "-A", UA, url], { maxBuffer: 1024 * 1024 * 20 },
+    execFile("curl", ["-sSL", "-m", "30", "-A", UA, url], { maxBuffer: 1024 * 1024 * 20 },
       (err, stdout) => resolve(err ? null : stdout));
   });
 }
@@ -53,7 +53,7 @@ function parseDetail(html, title) {
   let rp = (html.match(/rent_period=\d">\s*(daily|weekly|monthly)\s*<\/a>/i) || [])[1];
   if (!rp) { const m = html.match(/rent period:<\/span>[\s\S]{0,200}?>(daily|weekly|monthly)</i); rp = m ? m[1] : null; }
   const pr = (html.match(/class="price">\s*\$?([\d,]+)/i) || [])[1];
-  const sf = (html.match(/([\d,]{2,6})\s*ft2/i) || [])[1] || (html.match(/(\d[\d,]{2,5})\s*(?:sq\.?\s?ft|sqft|square\s?feet)/i) || [])[1];
+  const sf = (html.match(/([\d,]{2,6})\s*ft2/i) || [])[1] || (html.match(/(\d[\d,]{2,5})\s*(?:sq\.?\s?ft|sqft|square\s?f(?:ee|oo)t|s\.?f\.?\b)/i) || [])[1];
   const bodyM = html.match(/id="postingbody"[^>]*>([\s\S]*?)<\/section>/i);
   const body = bodyM ? bodyM[1].replace(/<[^>]+>/g, " ") : "";
   // Real city from the CL breadcrumb / URL area, for honest location labels.
@@ -64,12 +64,40 @@ function parseDetail(html, title) {
     sqft: sf ? +sf.replace(/[^0-9]/g, "") : null,
     cowork: COWORK.test(title || "") || COWORK.test(body),
     hood: hood ? hood.trim() : null,
+    lat: +(html.match(/data-latitude="(-?[\d.]+)"/) || [])[1] || null,
+    lng: +(html.match(/data-longitude="(-?[\d.]+)"/) || [])[1] || null,
+    photo: (html.match(/https:\/\/images\.craigslist\.org\/[^"'\s]+_600x450\.jpg/) || [])[0] || null,
   };
+}
+
+// Craigslist retired /jsonsearch (it now returns the HTML app shell), so fall
+// back to the no-JS static result list. It carries only title/url/price; the
+// detail fetch fills in coords, sqft and photo. The studio-area searches make
+// sure Ryan's studio neighborhoods are always covered (see studio-alert.js).
+const STATIC_SEARCHES = [
+  "search/off?sort=date",
+  "search/off?postal=90039&search_distance=3&max_price=3500&minSqft=800",  // Silver Lake / Atwater / Frogtown
+  "search/off?postal=91505&search_distance=4&max_price=3500&minSqft=800",  // Burbank / Toluca Lake
+];
+async function staticPostings(sub) {
+  const posts = [];
+  for (const q of STATIC_SEARCHES) {
+    const html = await curl(`https://${sub}.craigslist.org/${q}`);
+    if (!html) continue;
+    const re = /<li class="cl-static-search-result" title="([^"]*)">\s*<a href="([^"]+)">[\s\S]*?<\/li>/g;
+    let m;
+    while ((m = re.exec(html))) {
+      const id = (m[2].match(/\/([A-Za-z0-9]{10,})\/?$/) || [])[1];
+      if (id) posts.push({ PostingID: id, PostingURL: m[2], PostingTitle: m[1].replace(/&amp;/g, "&") });
+    }
+  }
+  return posts;
 }
 
 async function scrapeRegion(r) {
   const j = await curl(`https://${r.sub}.craigslist.org/jsonsearch/off?sort=priceasc`).then((t) => { try { return JSON.parse(t); } catch (e) { return null; } });
   let posts = j ? (findPostings(j) || []) : [];
+  if (!posts.length) posts = await staticPostings(r.sub);
   // de-dupe + drop obvious non-spaces before spending fetches on them
   const seen = {}; posts = posts.filter((p) => p && p.PostingID && p.PostingURL && p.PostingTitle &&
     !seen[p.PostingID] && (seen[p.PostingID] = 1) && !NOT_SPACE.test(p.PostingTitle));
@@ -84,7 +112,7 @@ async function scrapeRegion(r) {
     if (d.rentPeriod === "daily" || d.rentPeriod === "weekly") return;
     if (d.cowork) return;                            // shared desk / coworking, not a leasable space
     const price = (d.price && d.price >= 50 && d.price <= 60000) ? d.price : null;
-    if (price == null && p.Latitude == null) return; // nothing usable
+    if (price == null && p.Latitude == null && d.lat == null) return; // nothing usable
     spaces.push({
       id: "cl-" + p.PostingID,
       source: "Craigslist",
@@ -94,11 +122,11 @@ async function scrapeRegion(r) {
       price: price,                                  // verified MONTHLY rent, or null
       period: d.rentPeriod || "monthly",
       sqft: d.sqft || null,
-      lat: p.Latitude != null ? +p.Latitude : null,
-      lng: p.Longitude != null ? +p.Longitude : null,
+      lat: p.Latitude != null ? +p.Latitude : d.lat,
+      lng: p.Longitude != null ? +p.Longitude : d.lng,
       postedDate: p.PostedDate || null,
       url: p.PostingURL || "",
-      thumb: p.ImageThumb || "",
+      thumb: p.ImageThumb || d.photo || "",
     });
   });
   return spaces;

@@ -138,6 +138,19 @@ Its rules (full prompt in `routines/house-alert.md`):
 
 ## Studio-space side quest (open)
 
+**Daily Studio alert Routine (9/30):** `trig_01WJR3NFNxeGT4GWifSQK1s7`, 7:38 AM PT,
+fresh session, email-only. Criteria (Ryan): Silver Lake, Atwater Village,
+Frogtown, Burbank, Toluca Lake; **800+ sq ft, ≤ $3,500/mo**; private move-in
+space (no coworking/hourly/auto/salon). Prompt versioned at
+`routines/studio-alert.md` (token placeholder; real token only in the trigger).
+Pipeline: `node scraper/spaces.js` → `node scraper/studio-alert.js` (geo-filter
++ dedupe vs `studios-seen.json`) → live-verify each post → `POST /api/studios/alert`
+(site PR #139; sends as Studio Scout <studios@strawhutmedia.com>, same renderer
+as houses, rent "/mo") → `--mark` ids → push. 9/30 fix: Craigslist retired
+`/jsonsearch` (returns HTML) and search now redirects, so spaces.js silently got
+0 posts since ~Aug; added `-L` + static-results fallback + area-targeted
+searches + "SF" sqft parsing.
+
 Ryan photographed an Atwater office building ("…l Building", Weber
 Management, offices from $599/mo utilities included, call April
 818-577-9088). No online footprint; assessed as good cheap edit-suite,
