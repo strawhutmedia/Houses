@@ -1,7 +1,7 @@
 # EquityScout — project handoff & state
 
 Read this first. It is the source of truth for where the project stands and how
-Ryan (the owner) works. Last full update: **2026-09-26**.
+Ryan (the owner) works. Last full update: **2026-10-01**.
 
 ## What this is
 
@@ -74,9 +74,15 @@ Its rules (full prompt in `routines/house-alert.md`):
 - **Portland**: house, 1.5+ baths, **under $1M**, West Hills/SW + Alberta,
   Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington,
   Laurelhurst. (Added 9/9 after a West Hills find exposed the gap.)
-- Discovery reads **live brokerage inventory pages** (Compass neighborhood
-  pages fetch reliably; Zillow/Redfin block automation), verifies same-day,
-  publishes matches to `finds.json` (push to main), then emails Ryan.
+- Discovery (rebuilt **10/1** after Compass search pages started bot-blocking
+  with empty HTTP 202): `node scraper/house-discover.js` reads **Coldwell
+  Banker IDX** ZIP pages (`/ca/90042/`, `/or/97212/`, `p_N/` paging; full MLS
+  inventory; Zillow/Redfin/Realtor/Homes/Trulia all block), filters type/
+  status/baths/cap/neighborhood (geo circles), skips board + `houses-seen.json`
+  (pid→price; seeded 10/1 with 197 existing matches so only NEW listings and
+  price drops alert). CB status can lag MLS by days → Routine verifies Active
+  with Updated ≤2 days, else a second live page. Compass *detail* pages still
+  fetch fine. Then publishes to `finds.json` (push to main) and emails Ryan.
   No matches → exactly "No new matches today" → no email. Never a digest.
 - ADU/guest unit is Ryan's favorite feature — but see "shed" lesson below.
 
