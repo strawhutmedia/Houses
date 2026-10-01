@@ -182,6 +182,14 @@ his: call April / get the cross street so we can pull assessor data.
   ≈ 30% under ask+NNN — unlikely; $3,500 base + NNN (~17% off) plausible with
   3–5 yr term. Next: Ryan calls broker (name unknown; LoopNet page lists it).
 
+- 10/2: **Seeley Building, 1800 S Brand Blvd (Atwater/Glendale 5-points), Figure 8 /
+  Cael Kirkland.** Ryan TOURING **Mon 11am**. Cael's asks (MG): 113 (1st fl, 945 sf)
+  $2,500; 118 (1st, 940 sf) $2,500; 121 (1st, 1,400 sf) $3,000; 205 (2nd, 1,300 sf)
+  $4,000. Each unit: private restroom + kitchenette, valet parking, brick/beams/
+  polished concrete. Leverage: a Craigslist post (9/30 studio scrape) advertised a
+  1,400 sf Seeley unit at **$2,495** — likely 121. Unit positions unknown (parcel map
+  ≠ floor plan); ask which face the courtyard vs Brand/San Fernando traffic.
+
 ## Backlog (in rough priority)
 
 1. Watch the Routine's output quality — discovery was rebuilt 9/9 to read
