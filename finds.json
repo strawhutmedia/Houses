@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-30T08:00:00-07:00",
+  "updatedAt": "2026-10-02T08:00:00-07:00",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -395,6 +395,428 @@
         }
       ],
       "photo": "https://www.compass.com/m/aa7cf09dbdbcf0ffdde3e0dddfd2d1bfebe6a9739ffd735328a38f0dfedcf644/origin.webp"
+    },
+    {
+      "id": "826-san-pascual-ave",
+      "tag": "📍 Highland Park",
+      "address": "826 San Pascual Ave",
+      "hood": "Highland Park",
+      "price": 1100000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1430,
+      "status": "Active",
+      "verified": "2026-10-02",
+      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
+      "dom": null,
+      "why": "3bd/2ba, 1,430 sf at $1,100,000 ($769/sf) in Highland Park. No ADU claimed/verified.",
+      "ask": "Verify condition, permits and any extra unit.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/826-san-pascual-ave/pid_74044473/"
+        }
+      ],
+      "photo": "https://m.cbhomes.com/p/510/26995369/c660C17Ce3e64df/m23cc.webp"
+    },
+    {
+      "id": "3621-division",
+      "tag": "📍 Mt. Washington",
+      "address": "3621 Division",
+      "hood": "Mt. Washington",
+      "price": 779000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1248,
+      "status": "Active",
+      "verified": "2026-10-02",
+      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
+      "dom": null,
+      "why": "3bd/2ba, 1,248 sf at $779,000 ($624/sf) in Mt. Washington. Price cut from $819,000. No ADU claimed/verified.",
+      "ask": "Verify condition, permits and any extra unit.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/3621-division/pid_73571171/"
+        }
+      ],
+      "photo": "https://m1.cbhomes.com/p/733/IV26193221/8Cd2cEbd8c084aD/m23cc.webp",
+      "wasPrice": 819000
+    },
+    {
+      "id": "4403-w-burnside-rd-pdx",
+      "tag": "🌲 Portland",
+      "address": "4403 W Burnside Rd",
+      "hood": "West Hills, Portland OR",
+      "price": 895877,
+      "beds": 4,
+      "baths": 2,
+      "sqft": 3383,
+      "status": "Active",
+      "verified": "2026-10-02",
+      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
+      "dom": null,
+      "why": "4bd/2ba, 3,383 sf at $895,877 ($265/sf) in West Hills. No ADU claimed/verified.",
+      "ask": "Verify condition, permits and any extra unit.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/4403-w-burnside-rd/pid_74035539/"
+        }
+      ],
+      "photo": "https://m.cbhomes.com/p/283/773583278/7082C03D3798467/m23cc.webp"
+    },
+    {
+      "id": "3320-sw-44th-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "3320 SW 44th Ave",
+      "hood": "SW Portland, Portland OR",
+      "price": 895000,
+      "beds": 4,
+      "baths": 2,
+      "sqft": 3104,
+      "status": "Active",
+      "verified": "2026-10-02",
+      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
+      "dom": null,
+      "why": "4bd/2ba, 3,104 sf at $895,000 ($288/sf) in SW Portland. Price cut from $935,000. No ADU claimed/verified.",
+      "ask": "Verify condition, permits and any extra unit.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/3320-sw-44th-ave/pid_73731151/"
+        }
+      ],
+      "photo": "https://m1.cbhomes.com/p/283/754955496/bec9a40A5EA94C1/m23cc.webp",
+      "wasPrice": 935000
+    },
+    {
+      "id": "5825-sw-sheridan-ct-pdx",
+      "tag": "🌲 Portland",
+      "address": "5825 SW Sheridan Ct",
+      "hood": "West Hills, Portland OR",
+      "price": 930000,
+      "beds": 5,
+      "baths": 4,
+      "sqft": 2151,
+      "status": "Active",
+      "verified": "2026-10-02",
+      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
+      "dom": null,
+      "why": "5bd/4ba, 2,151 sf at $930,000 ($432/sf) in West Hills. Price cut from $990,000. No ADU claimed/verified.",
+      "ask": "Verify condition, permits and any extra unit.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/5825-sw-sheridan-ct/pid_73671378/"
+        }
+      ],
+      "photo": "https://m.cbhomes.com/p/283/670211688/67B5a8b5873f4d7/m23cc.webp",
+      "wasPrice": 990000
+    },
+    {
+      "id": "4920-sw-31st-dr-pdx",
+      "tag": "🌲 Portland",
+      "address": "4920 SW 31st Dr",
+      "hood": "SW Portland, Portland OR",
+      "price": 715000,
+      "beds": 4,
+      "baths": 2,
+      "sqft": 2290,
+      "status": "Active",
+      "verified": "2026-10-02",
+      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
+      "dom": null,
+      "why": "4bd/2ba, 2,290 sf at $715,000 ($312/sf) in SW Portland. Price cut from $729,000. No ADU claimed/verified.",
+      "ask": "Verify condition, permits and any extra unit.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/4920-sw-31st-dr/pid_72563676/"
+        }
+      ],
+      "photo": "https://m1.cbhomes.com/p/283/567517485/D40511E40f07484/m23cc.webp",
+      "wasPrice": 729000
+    },
+    {
+      "id": "514-ne-going-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "514 NE Going St",
+      "hood": "Alberta, Portland OR",
+      "price": 675000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 2105,
+      "status": "Active",
+      "verified": "2026-10-02",
+      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
+      "dom": null,
+      "why": "3bd/2ba, 2,105 sf at $675,000 ($321/sf) in Alberta. No ADU claimed/verified.",
+      "ask": "Verify condition, permits and any extra unit.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/514-ne-going-st/pid_74056365/"
+        }
+      ],
+      "photo": "https://m1.cbhomes.com/p/283/126214050/3181F3e0bfBB482/m23cc.webp"
+    },
+    {
+      "id": "1740-se-47th-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "1740 SE 47th Ave",
+      "hood": "Hawthorne, Portland OR",
+      "price": 890000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 3119,
+      "status": "Active",
+      "verified": "2026-10-02",
+      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
+      "dom": null,
+      "why": "3bd/2ba, 3,119 sf at $890,000 ($285/sf) in Hawthorne. No ADU claimed/verified.",
+      "ask": "Verify condition, permits and any extra unit.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/1740-se-47th-ave/pid_74056381/"
+        }
+      ],
+      "photo": "https://m.cbhomes.com/p/283/287363748/eA00852611DF419/m23cc.webp"
+    },
+    {
+      "id": "516-se-54th-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "516 SE 54th Ave",
+      "hood": "Mt. Tabor, Portland OR",
+      "price": 765000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 2248,
+      "status": "Active",
+      "verified": "2026-10-02",
+      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
+      "dom": null,
+      "why": "3bd/2ba, 2,248 sf at $765,000 ($340/sf) in Mt. Tabor. No ADU claimed/verified.",
+      "ask": "Verify condition, permits and any extra unit.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/516-se-54th-ave/pid_74059283/"
+        }
+      ],
+      "photo": ""
+    },
+    {
+      "id": "4951-se-salmon-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "4951 SE Salmon St",
+      "hood": "Hawthorne, Portland OR",
+      "price": 729900,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 2692,
+      "status": "Active",
+      "verified": "2026-10-02",
+      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
+      "dom": null,
+      "why": "3bd/2ba, 2,692 sf at $729,900 ($271/sf) in Hawthorne. No ADU claimed/verified.",
+      "ask": "Verify condition, permits and any extra unit.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/4951-se-salmon-st/pid_74044148/"
+        }
+      ],
+      "photo": "https://m1.cbhomes.com/p/283/424311765/e530E99280004B8/m23cc.webp"
+    },
+    {
+      "id": "2240-se-48th-av-pdx",
+      "tag": "🌲 Portland",
+      "address": "2240 SE 48th Av",
+      "hood": "Hawthorne, Portland OR",
+      "price": 759000,
+      "beds": 4,
+      "baths": 4,
+      "sqft": 2374,
+      "status": "Active",
+      "verified": "2026-10-02",
+      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
+      "dom": null,
+      "why": "4bd/4ba, 2,374 sf at $759,000 ($320/sf) in Hawthorne. Price cut from $799,000. No ADU claimed/verified.",
+      "ask": "Verify condition, permits and any extra unit.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/2240-se-48th-ave/pid_73816142/"
+        }
+      ],
+      "photo": "https://m.cbhomes.com/p/283/717933307/2bBfC1A1702D4C9/m23cc.webp",
+      "wasPrice": 799000
+    },
+    {
+      "id": "1324-se-51st-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "1324 SE 51st Ave",
+      "hood": "Hawthorne, Portland OR",
+      "price": 775000,
+      "beds": 5,
+      "baths": 3,
+      "sqft": 2594,
+      "status": "Active",
+      "verified": "2026-10-02",
+      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
+      "dom": null,
+      "why": "5bd/3ba, 2,594 sf at $775,000 ($299/sf) in Hawthorne. Price cut from $789,000. No ADU claimed/verified.",
+      "ask": "Verify condition, permits and any extra unit.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/1324-se-51st-ave/pid_73063316/"
+        }
+      ],
+      "photo": "https://m.cbhomes.com/p/283/416460359/aDA0D472e545401/m23cc.webp",
+      "wasPrice": 789000
+    },
+    {
+      "id": "535-se-70th-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "535 SE 70th Ave",
+      "hood": "Mt. Tabor, Portland OR",
+      "price": 875000,
+      "beds": 4,
+      "baths": 2,
+      "sqft": 2883,
+      "status": "Active",
+      "verified": "2026-10-02",
+      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
+      "dom": null,
+      "why": "4bd/2ba, 2,883 sf at $875,000 ($304/sf) in Mt. Tabor. Price cut from $937,000. No ADU claimed/verified.",
+      "ask": "Verify condition, permits and any extra unit.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/535-se-70th-ave/pid_73023242/"
+        }
+      ],
+      "photo": "https://m1.cbhomes.com/p/283/584750386/48b5d711010541f/m23cc.webp",
+      "wasPrice": 937000
+    },
+    {
+      "id": "2731-se-market-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "2731 SE Market St",
+      "hood": "Division, Portland OR",
+      "price": 969000,
+      "beds": 4,
+      "baths": 3,
+      "sqft": 3130,
+      "status": "Active",
+      "verified": "2026-10-02",
+      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
+      "dom": null,
+      "why": "4bd/3ba, 3,130 sf at $969,000 ($310/sf) in Division. No ADU claimed/verified.",
+      "ask": "Verify condition, permits and any extra unit.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/2731-se-market-st/pid_73906520/"
+        }
+      ],
+      "photo": "https://m1.cbhomes.com/p/283/623897676/019eaA40e82a40f/m23cc.webp"
+    },
+    {
+      "id": "2540-se-clay-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "2540 SE Clay St",
+      "hood": "Division, Portland OR",
+      "price": 910000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 2892,
+      "status": "Active",
+      "verified": "2026-10-02",
+      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
+      "dom": null,
+      "why": "3bd/2ba, 2,892 sf at $910,000 ($315/sf) in Division. Price cut from $975,000. No ADU claimed/verified.",
+      "ask": "Verify condition, permits and any extra unit.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/2540-se-clay-st/pid_73459319/"
+        }
+      ],
+      "photo": "https://m1.cbhomes.com/p/283/430648341/5C59914e1FCA4e2/m23cc.webp",
+      "wasPrice": 975000
+    },
+    {
+      "id": "703-se-tenino-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "703 SE Tenino St",
+      "hood": "Sellwood, Portland OR",
+      "price": 695000,
+      "beds": 2,
+      "baths": 2,
+      "sqft": 2420,
+      "status": "Active",
+      "verified": "2026-10-02",
+      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
+      "dom": null,
+      "why": "2bd/2ba, 2,420 sf at $695,000 ($287/sf) in Sellwood. No ADU claimed/verified.",
+      "ask": "Verify condition, permits and any extra unit.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/703-se-tenino-st/pid_74062932/"
+        }
+      ],
+      "photo": "https://m.cbhomes.com/p/283/608551657/73159EFA24984E4/m23cc.webp"
+    },
+    {
+      "id": "1407-se-knapp-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "1407 SE Knapp St",
+      "hood": "Sellwood, Portland OR",
+      "price": 849900,
+      "beds": 4,
+      "baths": 2,
+      "sqft": 2329,
+      "status": "Active",
+      "verified": "2026-10-02",
+      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
+      "dom": null,
+      "why": "4bd/2ba, 2,329 sf at $849,900 ($365/sf) in Sellwood. No ADU claimed/verified.",
+      "ask": "Verify condition, permits and any extra unit.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/1407-se-knapp-st/pid_74056362/"
+        }
+      ],
+      "photo": "https://m1.cbhomes.com/p/283/100158935/3FD58166a97c4DD/m23cc.webp"
+    },
+    {
+      "id": "2817-ne-weidler-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "2817 NE Weidler St",
+      "hood": "Irvington, Portland OR",
+      "price": 600000,
+      "beds": 4,
+      "baths": 3,
+      "sqft": 1554,
+      "status": "Active",
+      "verified": "2026-10-02",
+      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
+      "dom": null,
+      "why": "4bd/3ba, 1,554 sf at $600,000 ($386/sf) in Irvington. No ADU claimed/verified.",
+      "ask": "Verify condition, permits and any extra unit.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/2817-ne-weidler-st/pid_74048665/"
+        }
+      ],
+      "photo": "https://m1.cbhomes.com/p/283/493296673/6553Df393D644Ad/m23cc.webp"
     }
   ],
   "corrections": [
