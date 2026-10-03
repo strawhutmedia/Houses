@@ -1,7 +1,7 @@
 # EquityScout — project handoff & state
 
 Read this first. It is the source of truth for where the project stands and how
-Ryan (the owner) works. Last full update: **2026-10-01**.
+Ryan (the owner) works. Last full update: **2026-10-03**.
 
 ## What this is
 
@@ -79,8 +79,9 @@ Its rules (full prompt in `routines/house-alert.md`):
   Banker IDX** ZIP pages (`/ca/90042/`, `/or/97212/`, `p_N/` paging; full MLS
   inventory; Zillow/Redfin/Realtor/Homes/Trulia all block), filters type/
   status/baths/cap/neighborhood (geo circles), skips board + `houses-seen.json`
-  (pid→price; seeded 10/1 with 197 existing matches so only NEW listings and
-  price drops alert). CB status can lag MLS by days → Routine verifies Active
+  (pid→price). **RULE: never pre-seed houses-seen.json** — the 10/1 seed hid
+  189 un-emailed matches (incl. 3060 Silver Lake Blvd, Ryan caught it); un-seeded
+  + catch-up run fired 10/3. Only the Routine marks pids, after it emails/rejects. CB status can lag MLS by days → Routine verifies Active
   with Updated ≤2 days, else a second live page. Compass *detail* pages still
   fetch fine. Then publishes to `finds.json` (push to main) and emails Ryan.
   No matches → exactly "No new matches today" → no email. Never a digest.
