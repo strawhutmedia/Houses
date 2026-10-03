@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-02T08:00:00-07:00",
+  "updatedAt": "2026-10-03T02:10:35.555Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -817,6 +817,754 @@
         }
       ],
       "photo": "https://m1.cbhomes.com/p/283/493296673/6553Df393D644Ad/m23cc.webp"
+    },
+    {
+      "id": "309-stowe-terrace-la",
+      "tag": "🌴 Los Angeles",
+      "address": "309 Stowe Terrace",
+      "hood": "Highland Park, Los Angeles",
+      "price": 849000,
+      "beds": 2,
+      "baths": 2,
+      "sqft": 876,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated Today (10/2/2026)",
+      "dom": null,
+      "why": "2bd/2ba, 876 sqft in Highland Park, under the cap; MLS #26990325. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/309-stowe-terrace/pid_74082570/"
+        }
+      ]
+    },
+    {
+      "id": "4820-buchanan-st-la",
+      "tag": "🌴 Los Angeles",
+      "address": "4820 Buchanan St",
+      "hood": "Highland Park, Los Angeles",
+      "price": 1249000,
+      "beds": 3,
+      "baths": 3,
+      "sqft": 1704,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/1/2026",
+      "dom": null,
+      "why": "3bd/3ba, 1,704 sqft in Highland Park, under the cap; MLS #26991423. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/4820-buchanan-st/pid_73938445/"
+        }
+      ]
+    },
+    {
+      "id": "212-s-ave-57-la",
+      "tag": "🌴 Los Angeles",
+      "address": "212 S Ave 57",
+      "hood": "Highland Park, Los Angeles",
+      "price": 1249000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1258,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/2/2026",
+      "dom": null,
+      "why": "3bd/2ba, 1,258 sqft in Highland Park, under the cap; MLS #P1-29040. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/212-s-ave-57/pid_74020467/"
+        }
+      ]
+    },
+    {
+      "id": "6160-york-blvd-la",
+      "tag": "🌴 Los Angeles",
+      "address": "6160 York Blvd",
+      "hood": "Highland Park, Los Angeles",
+      "price": 1199000,
+      "beds": 4,
+      "baths": 3,
+      "sqft": 1596,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/1/2026",
+      "dom": null,
+      "why": "4bd/3ba, 1,596 sqft in Highland Park, under the cap; MLS #OC26198231. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/6160-york-blvd/pid_73628265/"
+        }
+      ]
+    },
+    {
+      "id": "4835-ruth-ave-la",
+      "tag": "🌴 Los Angeles",
+      "address": "4835 Ruth Ave",
+      "hood": "Eagle Rock, Los Angeles",
+      "price": 999998,
+      "beds": 4,
+      "baths": 2,
+      "sqft": 1969,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated Today (10/2/2026)",
+      "dom": null,
+      "why": "4bd/2ba, 1,969 sqft in Eagle Rock, under the cap; MLS #GD26212813. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/4835-ruth-ave/pid_74069341/"
+        }
+      ]
+    },
+    {
+      "id": "2222-dorris-pl-la",
+      "tag": "🌴 Los Angeles",
+      "address": "2222 Dorris Pl",
+      "hood": "Frogtown, Los Angeles",
+      "price": 779000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 911,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/1/2026",
+      "dom": null,
+      "why": "3bd/2ba, 911 sqft in Frogtown, under the cap; MLS #P1-28291. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/2222-dorris-pl/pid_72836347/"
+        }
+      ]
+    },
+    {
+      "id": "349-mt-washington-dr-la",
+      "tag": "🌴 Los Angeles",
+      "address": "349 Mt Washington Dr",
+      "hood": "Mt. Washington, Los Angeles",
+      "price": 799000,
+      "beds": 2,
+      "baths": 2,
+      "sqft": 784,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/1/2026",
+      "dom": null,
+      "why": "2bd/2ba, 784 sqft in Mt. Washington, under the cap; MLS #26752651. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/349-mount-washington-dr/pid_70764394/"
+        }
+      ]
+    },
+    {
+      "id": "4321-sw-terlyn-ct-pdx",
+      "tag": "🌲 Portland",
+      "address": "4321 SW Terlyn Ct",
+      "hood": "SW Portland, Portland OR",
+      "price": 925000,
+      "beds": 4,
+      "baths": 3,
+      "sqft": 3495,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/1/2026",
+      "dom": null,
+      "why": "4bd/3ba, 3,495 sqft in SW Portland, under the cap; MLS #162531855. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/4321-sw-terlyn-ct/pid_72191682/"
+        }
+      ]
+    },
+    {
+      "id": "4535-sw-54th-pl-pdx",
+      "tag": "🌲 Portland",
+      "address": "4535 SW 54th Pl",
+      "hood": "SW Portland, Portland OR",
+      "price": 495000,
+      "beds": 4,
+      "baths": 3,
+      "sqft": 1676,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/2/2026",
+      "dom": null,
+      "why": "4bd/3ba, 1,676 sqft in SW Portland, under the cap; MLS #186725573. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/4535-sw-54th-pl/pid_73644572/"
+        }
+      ]
+    },
+    {
+      "id": "6011-sw-salmon-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "6011 SW Salmon St",
+      "hood": "West Hills, Portland OR",
+      "price": 849900,
+      "beds": 5,
+      "baths": 2,
+      "sqft": 3090,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/1/2026",
+      "dom": null,
+      "why": "5bd/2ba, 3,090 sqft in West Hills, under the cap; MLS #537047584. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/6011-sw-salmon-st/pid_70971363/"
+        }
+      ]
+    },
+    {
+      "id": "5211-sw-19th-dr-pdx",
+      "tag": "🌲 Portland",
+      "address": "5211 SW 19th Dr",
+      "hood": "SW Portland, Portland OR",
+      "price": 699900,
+      "beds": 4,
+      "baths": 3,
+      "sqft": 2557,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/1/2026",
+      "dom": null,
+      "why": "4bd/3ba, 2,557 sqft in SW Portland, under the cap; MLS #549236115. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/5211-sw-19th-dr/pid_73299920/"
+        }
+      ]
+    },
+    {
+      "id": "5844-sw-ralston-dr-pdx",
+      "tag": "🌲 Portland",
+      "address": "5844 SW Ralston Dr",
+      "hood": "SW Portland, Portland OR",
+      "price": 689900,
+      "beds": 4,
+      "baths": 3,
+      "sqft": 2758,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/2/2026",
+      "dom": null,
+      "why": "4bd/3ba, 2,758 sqft in SW Portland, under the cap; MLS #432883610. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/5844-sw-ralston-dr/pid_70645718/"
+        }
+      ]
+    },
+    {
+      "id": "3250-sw-donner-way-ct-pdx",
+      "tag": "🌲 Portland",
+      "address": "3250 SW Donner Way Ct",
+      "hood": "SW Portland, Portland OR",
+      "price": 959000,
+      "beds": 5,
+      "baths": 3,
+      "sqft": 3316,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/2/2026",
+      "dom": null,
+      "why": "5bd/3ba, 3,316 sqft in SW Portland, under the cap; MLS #391891899. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/3250-sw-donner-way-ct/pid_67456867/"
+        }
+      ]
+    },
+    {
+      "id": "2352-sw-market-st-dr-pdx",
+      "tag": "🌲 Portland",
+      "address": "2352 SW Market St Dr",
+      "hood": "West Hills, Portland OR",
+      "price": 799000,
+      "beds": 4,
+      "baths": 2,
+      "sqft": 3232,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/2/2026",
+      "dom": null,
+      "why": "4bd/2ba, 3,232 sqft in West Hills, under the cap; MLS #626477138. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/2352-sw-market-street-dr/pid_73125676/"
+        }
+      ]
+    },
+    {
+      "id": "1240-sw-cardinell-way-pdx",
+      "tag": "🌲 Portland",
+      "address": "1240 SW Cardinell Way",
+      "hood": "West Hills, Portland OR",
+      "price": 899000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 2462,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/2/2026",
+      "dom": null,
+      "why": "3bd/2ba, 2,462 sqft in West Hills, under the cap; MLS #364046214. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/1240-sw-cardinell-way/pid_72462129/"
+        }
+      ]
+    },
+    {
+      "id": "2656-sw-gerald-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "2656 SW Gerald Ave",
+      "hood": "West Hills, Portland OR",
+      "price": 749000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 3010,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/1/2026",
+      "dom": null,
+      "why": "3bd/2ba, 3,010 sqft in West Hills, under the cap; MLS #270964832. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/2656-sw-gerald-ave/pid_71157856/"
+        }
+      ]
+    },
+    {
+      "id": "5617-ne-27th-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "5617 NE 27th Ave",
+      "hood": "Alberta, Portland OR",
+      "price": 665000,
+      "beds": 4,
+      "baths": 2,
+      "sqft": 2134,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/2/2026",
+      "dom": null,
+      "why": "4bd/2ba, 2,134 sqft in Alberta, under the cap; MLS #660462898. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/5617-ne-27th-ave/pid_73305791/"
+        }
+      ]
+    },
+    {
+      "id": "2136-n-webster-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "2136 N Webster St",
+      "hood": "Overlook, Portland OR",
+      "price": 699000,
+      "beds": 5,
+      "baths": 2,
+      "sqft": 2455,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/2/2026",
+      "dom": null,
+      "why": "5bd/2ba, 2,455 sqft in Overlook, under the cap; MLS #149235200. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/2136-n-webster-st/pid_69639837/"
+        }
+      ]
+    },
+    {
+      "id": "4054-n-missouri-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "4054 N Missouri Ave",
+      "hood": "Mississippi, Portland OR",
+      "price": 799000,
+      "beds": 5,
+      "baths": 3,
+      "sqft": 3574,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/1/2026",
+      "dom": null,
+      "why": "5bd/3ba, 3,574 sqft in Mississippi, under the cap; MLS #679503786. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/4054-n-missouri-ave/pid_72434514/"
+        }
+      ]
+    },
+    {
+      "id": "5558-se-stark-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "5558 SE Stark St",
+      "hood": "Mt. Tabor, Portland OR",
+      "price": 665000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 2385,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/2/2026",
+      "dom": null,
+      "why": "3bd/2ba, 2,385 sqft in Mt. Tabor, under the cap; MLS #374921556. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/5558-se-stark-st/pid_73948895/"
+        }
+      ]
+    },
+    {
+      "id": "5357-se-stark-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "5357 SE Stark St",
+      "hood": "Mt. Tabor, Portland OR",
+      "price": 624000,
+      "beds": 3,
+      "baths": 3,
+      "sqft": 1765,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/1/2026",
+      "dom": null,
+      "why": "3bd/3ba, 1,765 sqft in Mt. Tabor, under the cap; MLS #415802609. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/5357-se-stark-st/pid_73997219/"
+        }
+      ]
+    },
+    {
+      "id": "4249-se-stark-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "4249 SE Stark St",
+      "hood": "Laurelhurst, Portland OR",
+      "price": 995000,
+      "beds": 5,
+      "baths": 3,
+      "sqft": 3777,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/1/2026",
+      "dom": null,
+      "why": "5bd/3ba, 3,777 sqft in Laurelhurst, under the cap; MLS #704054326. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/4249-se-stark-st/pid_73993963/"
+        }
+      ]
+    },
+    {
+      "id": "6626-se-stark-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "6626 SE Stark St",
+      "hood": "Mt. Tabor, Portland OR",
+      "price": 950000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 2476,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/1/2026",
+      "dom": null,
+      "why": "3bd/2ba, 2,476 sqft in Mt. Tabor, under the cap; MLS #114488804. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/6626-se-stark-st/pid_73644567/"
+        }
+      ]
+    },
+    {
+      "id": "4222-n-montana-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "4222 N Montana Ave",
+      "hood": "Mississippi, Portland OR",
+      "price": 575000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1914,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/2/2026",
+      "dom": null,
+      "why": "3bd/2ba, 1,914 sqft in Mississippi, under the cap; MLS #396520532. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/4222-n-montana-ave/pid_72792197/"
+        }
+      ]
+    },
+    {
+      "id": "1524-se-24th-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "1524 SE 24th Ave",
+      "hood": "Division, Portland OR",
+      "price": 899000,
+      "beds": 4,
+      "baths": 2,
+      "sqft": 3102,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated Today (10/2/2026)",
+      "dom": null,
+      "why": "4bd/2ba, 3,102 sqft in Division, under the cap; MLS #440851455. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/1524-se-24th-ave/pid_74078713/"
+        }
+      ]
+    },
+    {
+      "id": "532-se-peacock-ln-pdx",
+      "tag": "🌲 Portland",
+      "address": "532 SE Peacock Ln",
+      "hood": "Hawthorne, Portland OR",
+      "price": 595000,
+      "beds": 4,
+      "baths": 3,
+      "sqft": 2847,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/2/2026",
+      "dom": null,
+      "why": "4bd/3ba, 2,847 sqft in Hawthorne, under the cap; MLS #371559944. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/532-se-peacock-ln/pid_72173838/"
+        }
+      ]
+    },
+    {
+      "id": "4128-se-franklin-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "4128 SE Franklin St",
+      "hood": "Division, Portland OR",
+      "price": 625000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 2746,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated Today (10/2/2026)",
+      "dom": null,
+      "why": "3bd/2ba, 2,746 sqft in Division, under the cap; MLS #360904316. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/4128-se-franklin-st/pid_74066613/"
+        }
+      ]
+    },
+    {
+      "id": "2822-se-29th-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "2822 SE 29th Ave",
+      "hood": "Division, Portland OR",
+      "price": 639900,
+      "beds": 4,
+      "baths": 2,
+      "sqft": 1960,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/1/2026",
+      "dom": null,
+      "why": "4bd/2ba, 1,960 sqft in Division, under the cap; MLS #160443822. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/2822-se-29th-ave/pid_71077579/"
+        }
+      ]
+    },
+    {
+      "id": "3217-se-28th-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "3217 SE 28th Ave",
+      "hood": "Division, Portland OR",
+      "price": 379900,
+      "beds": 2,
+      "baths": 2,
+      "sqft": 820,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/2/2026",
+      "dom": null,
+      "why": "2bd/2ba, 820 sqft in Division, under the cap; MLS #434519836. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/3217-se-28th-ave/pid_70671137/"
+        }
+      ]
+    },
+    {
+      "id": "2804-ne-25th-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "2804 NE 25th Ave",
+      "hood": "Irvington, Portland OR",
+      "price": 599000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 2368,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/2/2026",
+      "dom": null,
+      "why": "3bd/2ba, 2,368 sqft in Irvington, under the cap; MLS #120262812. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/2804-ne-25th-ave/pid_73768596/"
+        }
+      ]
+    },
+    {
+      "id": "3219-se-28th-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "3219 SE 28th Ave",
+      "hood": "Division, Portland OR",
+      "price": 347777,
+      "beds": 2,
+      "baths": 2,
+      "sqft": 800,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/2/2026",
+      "dom": null,
+      "why": "2bd/2ba, 800 sqft in Division, under the cap; MLS #703735753. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/3219-se-28th-ave/pid_65109872/"
+        }
+      ]
+    },
+    {
+      "id": "2930-ne-24th-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "2930 NE 24th Ave",
+      "hood": "Irvington, Portland OR",
+      "price": 899000,
+      "beds": 4,
+      "baths": 2,
+      "sqft": 3217,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/2/2026",
+      "dom": null,
+      "why": "4bd/2ba, 3,217 sqft in Irvington, under the cap; MLS #598077072. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/2930-ne-24th-ave/pid_73614453/"
+        }
+      ]
+    },
+    {
+      "id": "2223-ne-16th-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "2223 NE 16th Ave",
+      "hood": "Irvington, Portland OR",
+      "price": 749000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 3355,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/2/2026",
+      "dom": null,
+      "why": "3bd/2ba, 3,355 sqft in Irvington, under the cap; MLS #317544819. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/2223-ne-16th-ave/pid_72831110/"
+        }
+      ]
+    },
+    {
+      "id": "2415-ne-15th-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "2415 NE 15th Ave",
+      "hood": "Irvington, Portland OR",
+      "price": 965000,
+      "beds": 5,
+      "baths": 3,
+      "sqft": 3082,
+      "status": "Active",
+      "verified": "2026-10-03",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/2/2026",
+      "dom": null,
+      "why": "5bd/3ba, 3,082 sqft in Irvington, under the cap; MLS #510367403. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/2415-ne-15th-ave/pid_73066774/"
+        }
+      ]
     }
   ],
   "corrections": [
