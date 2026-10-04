@@ -186,7 +186,7 @@ async function runHouse({ dry, today, state }) {
     const la = verified.filter((v) => v.city !== "Portland").length, pdx = verified.length - la;
     const cutsTxt = verified.filter((v) => v.wasPrice && v.price < v.wasPrice).map((v) => `${v.address} cut to ${money(v.price)}`);
     const intro = [cutsTxt.length ? `Price cut: ${cutsTxt.join("; ")}.` : null,
-      `${verified.length} verified ${verified.length === 1 ? "match" : "matches"} today (${la} Los Angeles, ${pdx} Portland) — each confirmed Active on its live listing page this morning.`,
+      `${verified.length} verified ${verified.length === 1 ? "match" : "matches"} today (${la} Los Angeles, ${pdx} Portland) — each confirmed Active on its live listing page today.`,
       moved.length ? `${moved.length} board ${moved.length === 1 ? "house is" : "houses are"} now pending/sold and moved to corrections.` : null,
     ].filter(Boolean).join(" ");
     const payload = { intro, houses: verified.map((v) => ({
@@ -264,7 +264,7 @@ async function runStudio({ dry, today, state }) {
   let emailed = false, emailError = null;
   if (verified.length) {
     const payload = {
-      intro: `${verified.length} private studio ${verified.length === 1 ? "space" : "spaces"} matched today (800+ sq ft, ≤ $3,500/mo) — each post was open and live this morning.`,
+      intro: `${verified.length} private studio ${verified.length === 1 ? "space" : "spaces"} matched today (800+ sq ft, ≤ $3,500/mo) — each post was open and live today.`,
       spaces: verified.map((v) => ({ address: v.title, price: v.price, sqft: v.sqft, hood: v.area, why: studioWhy(v.title, v.body, v.sqft), url: v.url, photo: v.photo })),
     };
     if (dry) console.log("[dry-run] would email:", JSON.stringify(payload).slice(0, 2000));
