@@ -54,7 +54,29 @@ podcast company).
   synced list behind a secret `?board=<slug>` link; the link is the
   membership; 8 s poll + refresh on tab focus. No accounts, deliberately.
 
-## The daily house-alert Routine (CRITICAL — this is live automation)
+## ⚠️ Daily scouts now run as GitHub Actions — NOT Claude Routines (2026-10-03)
+
+Owner rule: nothing recurring lives in a Claude session. **`.github/workflows/scout-alerts.yml`**
+runs both scouts daily ~7:40 AM PT (three UTC cron slots; `scraper/scout-alerts.js gate`
+runs each once per Pacific day, never before 7 AM). `scraper/scout-alerts.js` does what the
+Routines did by judgment, as code: discovery (`house-discover.js` / `spaces.js` +
+`studio-alert.js`), the IRON RULE (house = live CB page says Status Active AND Updated ≤2
+days; studio = post still up, monthly, ≤$3,500, stated ≥800 sq ft, not coworking; broker
+page not "leased"), board add + pending/sold → corrections, email via strawhutmedia.com,
+mark seen, commit, then re-run the Pages deploy. **No secret:** the site accepts a GitHub
+OIDC token minted for this workflow on main (site `src/githubOidc.js`). A source that reads
+0 (CB city / Craigslist blocked) emails Ryan ONCE until it recovers. Every run's verdict
+(scanned, verified, each reject + reason, email ok) is committed to **`scout-state.json`**
+— read that first. Manual: Actions → "Daily scouts" → Run workflow (dry_run defaults ON).
+Self-test: `node --test test/scout.test.js` (runs in the workflow first).
+Found 10/3: the studio Routine had been failing since 9/30 (email blocked by a classifier,
+push refused) — Ryan got no studio alerts. Also fixed then: Craigslist writes size as
+`1000ft<sup>2</sup>`, which the parser missed (posts read "size unknown").
+Routines trig_01DSFmTc3Mw891sxqUgTcL27 (house) + trig_01WJR3NFNxeGT4GWifSQK1s7 (studio):
+DISABLED once the workflow's first real run was verified. The history below is kept for
+the rules it records; `routines/*.md` are superseded.
+
+## (Superseded 10-03) The daily house-alert Routine
 
 Trigger `trig_01DSFmTc3Mw891sxqUgTcL27` ("House alert — LA (NELA) + Portland"),
 cron `CRON_TZ=America/Los_Angeles 52 7 * * *` (7:52 AM PT), fresh session per run, **email-only notification**

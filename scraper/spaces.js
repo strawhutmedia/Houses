@@ -53,7 +53,8 @@ function parseDetail(html, title) {
   let rp = (html.match(/rent_period=\d">\s*(daily|weekly|monthly)\s*<\/a>/i) || [])[1];
   if (!rp) { const m = html.match(/rent period:<\/span>[\s\S]{0,200}?>(daily|weekly|monthly)</i); rp = m ? m[1] : null; }
   const pr = (html.match(/class="price">\s*\$?([\d,]+)/i) || [])[1];
-  const sf = (html.match(/([\d,]{2,6})\s*ft2/i) || [])[1] || (html.match(/(\d[\d,]{2,5})\s*(?:sq\.?\s?ft|sqft|square\s?f(?:ee|oo)t|s\.?f\.?\b)/i) || [])[1];
+  // Craigslist renders size as "1000ft<sup>2</sup>"; posts also write "ft²" / "ft.²".
+  const sf = (html.match(/([\d,]{2,6})\s*ft\.?\s*(?:<sup>\s*2\s*<\/sup>|²|2\b)/i) || [])[1] || (html.match(/(\d[\d,]{2,5})\s*(?:sq\.?\s?ft|sqft|square\s?f(?:ee|oo)t|s\.?f\.?\b)/i) || [])[1];
   const bodyM = html.match(/id="postingbody"[^>]*>([\s\S]*?)<\/section>/i);
   const body = bodyM ? bodyM[1].replace(/<[^>]+>/g, " ") : "";
   // Real city from the CL breadcrumb / URL area, for honest location labels.
@@ -143,6 +144,7 @@ async function main() {
     catch (e) { console.error(`  [${r.label}] failed: ${e.message}`); }
   }
   const clPriced = cl.filter((s) => s.price != null).length;
+  const clFetched = cl.length;
   // If Craigslist came back thin/blocked, keep the last good Craigslist rows
   // instead of wiping them — CAG below still refreshes on its own.
   if (!cl.length || clPriced < cl.length * 0.3) {
@@ -162,8 +164,11 @@ async function main() {
   if (!all.length) { console.log("No spaces from any source — keeping existing spaces.json."); return; }
 
   const priced = all.filter((s) => s.price != null).length;
-  fs.writeFileSync(outPath, JSON.stringify({ generatedAt: new Date().toISOString(), count: all.length, spaces: all }, null, 2));
+  fs.writeFileSync(outPath, JSON.stringify({ generatedAt: new Date().toISOString(), count: all.length,
+    // How many Craigslist posts THIS run read (0 = blocked; rows above are then kept from a prior run).
+    sources: { craigslistFetched: clFetched, craigslistPriced: clPriced, cag: cag.length }, spaces: all }, null, 2));
   console.log(`\n✓ Wrote ${all.length} space(s) — ${cl.length} Craigslist, ${cag.length} CAG (${priced} priced) -> ${outPath}`);
 }
 
-main();
+if (require.main === module) main();
+module.exports = { parseDetail, curl };

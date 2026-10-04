@@ -1,0 +1,108 @@
+name: Daily scouts (house + studio alerts)
+
+# Replaced the two Claude Routines (House alert, Studio alert) on 2026-10-03.
+# Owner rule: nothing recurring lives in a Claude session. This runs the
+# scrapers, verifies every candidate on its LIVE page the same morning
+# (scraper/scout-alerts.js), updates the board, emails Ryan through
+# strawhutmedia.com (AWS SES) and commits the seen-lists.
+#
+# No secret is needed: the site accepts a GitHub OIDC token minted for THIS
+# workflow file on main of this repo (id-token: write below). The repo is
+# public — never put a token in this file.
+#
+# GitHub cron is UTC with no time zones. Three slots; the script runs each
+# scout once per Pacific day and never before 7 AM PT, so:
+#   PDT: 14:40 UTC = 7:40 AM runs; the later slots skip (already ran today).
+#   PST: 14:40 UTC = 6:40 AM skips; 15:40 UTC = 7:40 AM runs.
+#   17:40 UTC is the safety net if GitHub drops a scheduled run.
+
+on:
+  schedule:
+    - cron: "40 14 * * *"
+    - cron: "40 15 * * *"
+    - cron: "40 17 * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run: read + verify only, no email, no commits"
+        type: boolean
+        default: true
+      force:
+        description: "Run even if it already ran today"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write   # commit finds.json + seen-lists
+  id-token: write   # GitHub OIDC token for strawhutmedia.com
+  actions: write    # re-run the Pages deploy after the board changes
+
+concurrency:
+  group: scouts
+  cancel-in-progress: false
+
+jobs:
+  scout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      FLAGS: ${{ inputs.dry_run && '--dry-run' || '' }} ${{ inputs.force && '--force' || '' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Self-test (parsers + verification rules)
+        run: node --test test/scout.test.js
+
+      - name: Due today?
+        id: gate
+        run: node scraper/scout-alerts.js gate $FLAGS >> "$GITHUB_OUTPUT"
+
+      - name: Scrape studio spaces (Craigslist + brokers)
+        if: steps.gate.outputs.studio == '1'
+        run: node scraper/spaces.js
+        continue-on-error: true   # a blocked source is reported by the scout itself
+
+      - name: Studio scout
+        id: studio
+        if: steps.gate.outputs.studio == '1'
+        run: node scraper/scout-alerts.js studio $FLAGS
+        continue-on-error: true
+
+      - name: House scout
+        id: house
+        if: steps.gate.outputs.house == '1'
+        run: node scraper/scout-alerts.js house $FLAGS
+        continue-on-error: true
+
+      - name: Commit board + seen-lists
+        id: commit
+        if: ${{ !inputs.dry_run && (steps.gate.outputs.house == '1' || steps.gate.outputs.studio == '1') }}
+        run: |
+          git config user.name "scout-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add finds.json houses-seen.json studios-seen.json spaces.json scout-state.json 2>/dev/null || true
+          if git diff --cached --quiet; then echo "pushed=0" >> "$GITHUB_OUTPUT"; exit 0; fi
+          git commit -q -m "scouts: daily run $(TZ=America/Los_Angeles date +%F)"
+          for i in 1 2 3; do
+            if git pull -q --rebase origin main && git push -q origin HEAD:main; then echo "pushed=1" >> "$GITHUB_OUTPUT"; exit 0; fi
+            sleep 5
+          done
+          echo "::error::could not push the board/seen-lists"; exit 1
+
+      # A push made with this workflow's token does not trigger other
+      # workflows, so ask for the Pages deploy explicitly.
+      - name: Redeploy the board
+        if: steps.commit.outputs.pushed == '1'
+        run: gh workflow run refresh.yml --ref main
+        env:
+          GH_TOKEN: ${{ github.token }}
+
+      - name: Fail the run if a scout failed
+        if: steps.studio.outcome == 'failure' || steps.house.outcome == 'failure'
+        run: |
+          echo "::error::a scout failed — see its step log and scout-state.json"
+          exit 1

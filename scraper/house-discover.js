@@ -118,7 +118,7 @@ function boardIndex() {
 const SEEN = path.join(__dirname, "..", "houses-seen.json");
 const readSeen = () => { try { return JSON.parse(fs.readFileSync(SEEN, "utf8")).pids || {}; } catch { return {}; } };
 
-async function main() {
+async function discover() {
   const board = boardIndex();
   const seen = readSeen();
   const out = [];
@@ -145,12 +145,17 @@ async function main() {
     }
     stats[city].matches = out.filter((x) => x.city === city).length;
   }
-  console.error(JSON.stringify(stats));
-  console.log(JSON.stringify(out, null, 2));
+  return { candidates: out, stats };
 }
 
-function mark(file) {
-  const cands = JSON.parse(fs.readFileSync(file, "utf8"));
+async function main() {
+  const { candidates, stats } = await discover();
+  console.error(JSON.stringify(stats));
+  console.log(JSON.stringify(candidates, null, 2));
+}
+
+function mark(file) { markCandidates(JSON.parse(fs.readFileSync(file, "utf8"))); }
+function markCandidates(cands) {
   const pids = readSeen();
   for (const c of cands) if (c.pid) pids[c.pid] = c.price;
   fs.writeFileSync(SEEN, JSON.stringify({ updatedAt: new Date().toISOString(), pids }, null, 0) + "\n");
@@ -161,4 +166,4 @@ if (require.main === module) {
   const i = process.argv.indexOf("--mark");
   if (i !== -1) mark(process.argv[i + 1]); else main();
 }
-module.exports = { parseCards, hoodFor, addrKey, CITIES };
+module.exports = { parseCards, hoodFor, addrKey, CITIES, discover, markCandidates, curl };
