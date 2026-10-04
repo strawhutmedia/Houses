@@ -1,51 +1,41 @@
 {
   "studio": {
-    "lastRun": "2026-10-03",
-    "at": "2026-10-04T00:06:08.360Z",
-    "spacesFile": "2026-10-04T00:06:06.877Z",
-    "craigslistFetched": 221,
-    "candidates": 5,
-    "verified": [
-      "Creative Office/Retail in Historic Seeley Building (Atwater Village) $2,495",
-      "Media production studio (Burbank) $2,500",
-      "Office Space in Residential Area (Silver Lake) $2,800",
-      "Unique Modern Creative Office Space (Burbank) $3,300"
-    ],
-    "emailed": true,
+    "lastRun": "2026-10-04",
+    "at": "2026-10-04T18:21:20.897Z",
+    "spacesFile": "2026-10-04T18:21:20.823Z",
+    "craigslistFetched": 215,
+    "candidates": 0,
+    "verified": [],
+    "emailed": false,
     "emailError": null,
-    "rejected": [
-      "Recording studio residency: size not stated"
-    ],
+    "rejected": [],
     "unreachable": [],
     "brokenSince": null,
     "ok": true
   },
   "house": {
-    "lastRun": "2026-10-03",
-    "at": "2026-10-04T00:09:23.329Z",
+    "lastRun": "2026-10-04",
+    "at": "2026-10-04T18:23:58.908Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 804,
-        "matches": 1
+        "scanned": 803,
+        "matches": 0
       },
       "Portland": {
-        "scanned": 1287,
-        "matches": 1
+        "scanned": 1289,
+        "matches": 0
       }
     },
-    "candidates": 2,
-    "verified": [
-      "6148 Mt Angelus Dr (Highland Park) $1,199,800",
-      "1727 SW Westwood Dr (SW Portland) $999,000"
-    ],
-    "emailed": true,
+    "candidates": 0,
+    "verified": [],
+    "emailed": false,
     "emailError": null,
     "rejected": [],
     "unreachable": [],
-    "boardAdded": 2,
+    "boardAdded": 0,
     "boardPriceCuts": 0,
     "movedToCorrections": [
-      "2540 SE Clay St: Pending"
+      "1407 SE Knapp St: Pending"
     ],
     "brokenSince": null,
     "ok": true

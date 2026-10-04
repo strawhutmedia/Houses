@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T00:09:21.962Z",
+  "updatedAt": "2026-10-04T18:23:58.906Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -747,29 +747,6 @@
         }
       ],
       "photo": "https://m.cbhomes.com/p/283/608551657/73159EFA24984E4/m23cc.webp"
-    },
-    {
-      "id": "1407-se-knapp-st-pdx",
-      "tag": "🌲 Portland",
-      "address": "1407 SE Knapp St",
-      "hood": "Sellwood, Portland OR",
-      "price": 849900,
-      "beds": 4,
-      "baths": 2,
-      "sqft": 2329,
-      "status": "Active",
-      "verified": "2026-10-02",
-      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
-      "dom": null,
-      "why": "4bd/2ba, 2,329 sf at $849,900 ($365/sf) in Sellwood. No ADU claimed/verified.",
-      "ask": "Verify condition, permits and any extra unit.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/1407-se-knapp-st/pid_74056362/"
-        }
-      ],
-      "photo": "https://m1.cbhomes.com/p/283/100158935/3FD58166a97c4DD/m23cc.webp"
     },
     {
       "id": "2817-ne-weidler-st-pdx",
@@ -1631,6 +1608,10 @@
     {
       "date": "2026-10-03",
       "text": "2540 SE Clay St (Division, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-10-04",
+      "text": "1407 SE Knapp St (Sellwood, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
     }
   ]
 }
