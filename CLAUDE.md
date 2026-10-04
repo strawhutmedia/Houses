@@ -218,6 +218,9 @@ his: call April / get the cross street so we can pull assessor data.
   6/1/2026** (Harry's 4/17 email). Square footage NOT in Gmail/Drive (searched 10/4:
   lease emails, 2023 "Straw Hut Studio Hunt" sheet row is blank; Ryan's power
   sketch not found — likely a photo on his phone).
+  10/4 Ryan sent the sketch (inches): 203A ≈ 303" long (152+151), widths read as
+  ~101" / 130" / 170" → **≈ 275 sq ft**. 203B same length, narrower (width TBD) →
+  A+B est. **~450–550 sq ft** ≈ $6–7.50/sf vs Seeley 121 1,400 sf @ $3,000 ($2.14/sf).
 
 ## Backlog (in rough priority)
 
