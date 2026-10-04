@@ -213,6 +213,12 @@ his: call April / get the cross street so we can pull assessor data.
   1,400 sf Seeley unit at **$2,495** — likely 121. Unit positions unknown (parcel map
   ≠ floor plan); ask which face the courtyard vs Brand/San Fernando traffic.
 
+- **Current studio (for comparison):** 7201 Melrose Ave #203A+B (landlord Harry,
+  Macculloch Partners, 310-680-9797). Combined A+B + 1 parking = **$3,400/mo from
+  6/1/2026** (Harry's 4/17 email). Square footage NOT in Gmail/Drive (searched 10/4:
+  lease emails, 2023 "Straw Hut Studio Hunt" sheet row is blank; Ryan's power
+  sketch not found — likely a photo on his phone).
+
 ## Backlog (in rough priority)
 
 1. Watch the Routine's output quality — discovery was rebuilt 9/9 to read
