@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T18:23:58.906Z",
+  "updatedAt": "2026-10-05T21:41:26.920Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -677,53 +677,6 @@
       ],
       "photo": "https://m.cbhomes.com/p/283/416460359/aDA0D472e545401/m23cc.webp",
       "wasPrice": 789000
-    },
-    {
-      "id": "535-se-70th-ave-pdx",
-      "tag": "🌲 Portland",
-      "address": "535 SE 70th Ave",
-      "hood": "Mt. Tabor, Portland OR",
-      "price": 875000,
-      "beds": 4,
-      "baths": 2,
-      "sqft": 2883,
-      "status": "Active",
-      "verified": "2026-10-02",
-      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
-      "dom": null,
-      "why": "4bd/2ba, 2,883 sf at $875,000 ($304/sf) in Mt. Tabor. Price cut from $937,000. No ADU claimed/verified.",
-      "ask": "Verify condition, permits and any extra unit.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/535-se-70th-ave/pid_73023242/"
-        }
-      ],
-      "photo": "https://m1.cbhomes.com/p/283/584750386/48b5d711010541f/m23cc.webp",
-      "wasPrice": 937000
-    },
-    {
-      "id": "2731-se-market-st-pdx",
-      "tag": "🌲 Portland",
-      "address": "2731 SE Market St",
-      "hood": "Division, Portland OR",
-      "price": 969000,
-      "beds": 4,
-      "baths": 3,
-      "sqft": 3130,
-      "status": "Active",
-      "verified": "2026-10-02",
-      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
-      "dom": null,
-      "why": "4bd/3ba, 3,130 sf at $969,000 ($310/sf) in Division. No ADU claimed/verified.",
-      "ask": "Verify condition, permits and any extra unit.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/2731-se-market-st/pid_73906520/"
-        }
-      ],
-      "photo": "https://m1.cbhomes.com/p/283/623897676/019eaA40e82a40f/m23cc.webp"
     },
     {
       "id": "703-se-tenino-st-pdx",
@@ -1562,6 +1515,50 @@
           "url": "https://www.coldwellbankerhomes.com/or/portland/1727-sw-westwood-dr/pid_70835870/"
         }
       ]
+    },
+    {
+      "id": "401-del-norte-st-la",
+      "tag": "🌴 Los Angeles",
+      "address": "401 Del Norte St",
+      "hood": "Mt. Washington, Los Angeles",
+      "price": 899999,
+      "beds": 3,
+      "baths": 3,
+      "sqft": 1504,
+      "status": "Active",
+      "verified": "2026-10-05",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/5/2026",
+      "dom": null,
+      "why": "3bd/3ba, 1,504 sqft in Mt. Washington, under the cap (built 1924, 0.0515 ac lot); MLS #26992437. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/401-del-norte-st/pid_73908582/"
+        }
+      ]
+    },
+    {
+      "id": "1048-dexter-st-la",
+      "tag": "🌴 Los Angeles",
+      "address": "1048 Dexter St",
+      "hood": "Highland Park, Los Angeles",
+      "price": 1100000,
+      "beds": 2,
+      "baths": 2,
+      "sqft": 945,
+      "status": "Active",
+      "verified": "2026-10-05",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/5/2026",
+      "dom": null,
+      "why": "2bd/2ba, 945 sqft in Highland Park, under the cap (built 1972, 0.1295 ac lot); MLS #AR25151483. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/1048-dexter-st/pid_67419181/"
+        }
+      ]
     }
   ],
   "corrections": [
@@ -1612,6 +1609,14 @@
     {
       "date": "2026-10-04",
       "text": "1407 SE Knapp St (Sellwood, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-10-05",
+      "text": "2731 SE Market St (Division, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-10-05",
+      "text": "535 SE 70th Ave (Mt. Tabor, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
     }
   ]
 }

@@ -1,12 +1,17 @@
 {
   "studio": {
-    "lastRun": "2026-10-04",
-    "at": "2026-10-04T18:21:20.897Z",
-    "spacesFile": "2026-10-04T18:21:20.823Z",
-    "craigslistFetched": 215,
-    "candidates": 0,
-    "verified": [],
-    "emailed": false,
+    "lastRun": "2026-10-05",
+    "at": "2026-10-05T21:37:49.025Z",
+    "spacesFile": "2026-10-05T21:37:47.469Z",
+    "craigslistFetched": 142,
+    "candidates": 4,
+    "verified": [
+      "Office Space in Residential Area (Silver Lake) $2,800",
+      "Creative Office/Retail in Historic Seeley Building (Atwater Village) $2,495",
+      "Media production studio (Burbank) $2,500",
+      "Unique Modern Creative Office Space (Burbank) $3,300"
+    ],
+    "emailed": true,
     "emailError": null,
     "rejected": [],
     "unreachable": [],
@@ -14,28 +19,32 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-10-04",
-    "at": "2026-10-04T18:23:58.908Z",
+    "lastRun": "2026-10-05",
+    "at": "2026-10-05T21:41:28.005Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 803,
-        "matches": 0
+        "scanned": 802,
+        "matches": 2
       },
       "Portland": {
-        "scanned": 1289,
+        "scanned": 1280,
         "matches": 0
       }
     },
-    "candidates": 0,
-    "verified": [],
-    "emailed": false,
+    "candidates": 2,
+    "verified": [
+      "401 Del Norte St (Mt. Washington) $899,999",
+      "1048 Dexter St (Highland Park) $1,100,000"
+    ],
+    "emailed": true,
     "emailError": null,
     "rejected": [],
     "unreachable": [],
-    "boardAdded": 0,
+    "boardAdded": 2,
     "boardPriceCuts": 0,
     "movedToCorrections": [
-      "1407 SE Knapp St: Pending"
+      "2731 SE Market St: Pending",
+      "535 SE 70th Ave: Pending"
     ],
     "brokenSince": null,
     "ok": true
