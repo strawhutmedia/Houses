@@ -1,17 +1,12 @@
 {
   "studio": {
-    "lastRun": "2026-10-05",
-    "at": "2026-10-05T21:37:49.025Z",
-    "spacesFile": "2026-10-05T21:37:47.469Z",
-    "craigslistFetched": 142,
-    "candidates": 4,
-    "verified": [
-      "Office Space in Residential Area (Silver Lake) $2,800",
-      "Creative Office/Retail in Historic Seeley Building (Atwater Village) $2,495",
-      "Media production studio (Burbank) $2,500",
-      "Unique Modern Creative Office Space (Burbank) $3,300"
-    ],
-    "emailed": true,
+    "lastRun": "2026-10-06",
+    "at": "2026-10-06T19:49:48.725Z",
+    "spacesFile": "2026-10-06T19:49:48.654Z",
+    "craigslistFetched": 129,
+    "candidates": 0,
+    "verified": [],
+    "emailed": false,
     "emailError": null,
     "rejected": [],
     "unreachable": [],
@@ -19,32 +14,38 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-10-05",
-    "at": "2026-10-05T21:41:28.005Z",
+    "lastRun": "2026-10-06",
+    "at": "2026-10-06T19:53:26.817Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 802,
+        "scanned": 804,
         "matches": 2
       },
       "Portland": {
-        "scanned": 1280,
-        "matches": 0
+        "scanned": 876,
+        "matches": 3
       }
     },
-    "candidates": 2,
+    "candidates": 5,
     "verified": [
-      "401 Del Norte St (Mt. Washington) $899,999",
-      "1048 Dexter St (Highland Park) $1,100,000"
+      "4249 SW Dosch Rd (SW Portland) $699,000",
+      "6626 SE Stark St (Mt. Tabor) $925,000",
+      "3360 SW Fairmount Blvd (SW Portland) $735,000",
+      "6190 Mesa Ave (Highland Park) $999,999"
     ],
     "emailed": true,
     "emailError": null,
-    "rejected": [],
+    "rejected": [
+      "2204 Tom Mix: CB updated Today (10/6/2026) — can't confirm Active today"
+    ],
     "unreachable": [],
-    "boardAdded": 2,
-    "boardPriceCuts": 0,
+    "boardAdded": 3,
+    "boardPriceCuts": 1,
     "movedToCorrections": [
-      "2731 SE Market St: Pending",
-      "535 SE 70th Ave: Pending"
+      "1740 SE 47th Ave: Pending",
+      "703 SE Tenino St: Pending",
+      "2240 SE 48th Av: Pending",
+      "5558 SE Stark St: Pending"
     ],
     "brokenSince": null,
     "ok": true

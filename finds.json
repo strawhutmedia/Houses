@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-05T21:41:26.920Z",
+  "updatedAt": "2026-10-06T19:53:25.661Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -562,29 +562,6 @@
       "photo": "https://m1.cbhomes.com/p/283/126214050/3181F3e0bfBB482/m23cc.webp"
     },
     {
-      "id": "1740-se-47th-ave-pdx",
-      "tag": "🌲 Portland",
-      "address": "1740 SE 47th Ave",
-      "hood": "Hawthorne, Portland OR",
-      "price": 890000,
-      "beds": 3,
-      "baths": 2,
-      "sqft": 3119,
-      "status": "Active",
-      "verified": "2026-10-02",
-      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
-      "dom": null,
-      "why": "3bd/2ba, 3,119 sf at $890,000 ($285/sf) in Hawthorne. No ADU claimed/verified.",
-      "ask": "Verify condition, permits and any extra unit.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/1740-se-47th-ave/pid_74056381/"
-        }
-      ],
-      "photo": "https://m.cbhomes.com/p/283/287363748/eA00852611DF419/m23cc.webp"
-    },
-    {
       "id": "516-se-54th-ave-pdx",
       "tag": "🌲 Portland",
       "address": "516 SE 54th Ave",
@@ -631,30 +608,6 @@
       "photo": "https://m1.cbhomes.com/p/283/424311765/e530E99280004B8/m23cc.webp"
     },
     {
-      "id": "2240-se-48th-av-pdx",
-      "tag": "🌲 Portland",
-      "address": "2240 SE 48th Av",
-      "hood": "Hawthorne, Portland OR",
-      "price": 759000,
-      "beds": 4,
-      "baths": 4,
-      "sqft": 2374,
-      "status": "Active",
-      "verified": "2026-10-02",
-      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
-      "dom": null,
-      "why": "4bd/4ba, 2,374 sf at $759,000 ($320/sf) in Hawthorne. Price cut from $799,000. No ADU claimed/verified.",
-      "ask": "Verify condition, permits and any extra unit.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/2240-se-48th-ave/pid_73816142/"
-        }
-      ],
-      "photo": "https://m.cbhomes.com/p/283/717933307/2bBfC1A1702D4C9/m23cc.webp",
-      "wasPrice": 799000
-    },
-    {
       "id": "1324-se-51st-ave-pdx",
       "tag": "🌲 Portland",
       "address": "1324 SE 51st Ave",
@@ -677,29 +630,6 @@
       ],
       "photo": "https://m.cbhomes.com/p/283/416460359/aDA0D472e545401/m23cc.webp",
       "wasPrice": 789000
-    },
-    {
-      "id": "703-se-tenino-st-pdx",
-      "tag": "🌲 Portland",
-      "address": "703 SE Tenino St",
-      "hood": "Sellwood, Portland OR",
-      "price": 695000,
-      "beds": 2,
-      "baths": 2,
-      "sqft": 2420,
-      "status": "Active",
-      "verified": "2026-10-02",
-      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
-      "dom": null,
-      "why": "2bd/2ba, 2,420 sf at $695,000 ($287/sf) in Sellwood. No ADU claimed/verified.",
-      "ask": "Verify condition, permits and any extra unit.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/703-se-tenino-st/pid_74062932/"
-        }
-      ],
-      "photo": "https://m.cbhomes.com/p/283/608551657/73159EFA24984E4/m23cc.webp"
     },
     {
       "id": "2817-ne-weidler-st-pdx",
@@ -1143,28 +1073,6 @@
       ]
     },
     {
-      "id": "5558-se-stark-st-pdx",
-      "tag": "🌲 Portland",
-      "address": "5558 SE Stark St",
-      "hood": "Mt. Tabor, Portland OR",
-      "price": 665000,
-      "beds": 3,
-      "baths": 2,
-      "sqft": 2385,
-      "status": "Active",
-      "verified": "2026-10-03",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/2/2026",
-      "dom": null,
-      "why": "3bd/2ba, 2,385 sqft in Mt. Tabor, under the cap; MLS #374921556. Any ADU/guest-unit claim unverified.",
-      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/5558-se-stark-st/pid_73948895/"
-        }
-      ]
-    },
-    {
       "id": "5357-se-stark-st-pdx",
       "tag": "🌲 Portland",
       "address": "5357 SE Stark St",
@@ -1213,15 +1121,15 @@
       "tag": "🌲 Portland",
       "address": "6626 SE Stark St",
       "hood": "Mt. Tabor, Portland OR",
-      "price": 950000,
+      "price": 925000,
       "beds": 3,
       "baths": 2,
       "sqft": 2476,
       "status": "Active",
-      "verified": "2026-10-03",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/1/2026",
+      "verified": "2026-10-06",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/6/2026",
       "dom": null,
-      "why": "3bd/2ba, 2,476 sqft in Mt. Tabor, under the cap; MLS #114488804. Any ADU/guest-unit claim unverified.",
+      "why": "PRICE CUT $950,000 → $925,000. 3bd/2ba, 2,476 sqft in Mt. Tabor, under the cap (built 1955, 0.21 ac lot); MLS #114488804. Listing mentions an ADU/guest unit — UNVERIFIED until permits or sqft back it.",
       "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
       "links": [
         {
@@ -1559,6 +1467,72 @@
           "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/1048-dexter-st/pid_67419181/"
         }
       ]
+    },
+    {
+      "id": "4249-sw-dosch-rd-pdx",
+      "tag": "🌲 Portland",
+      "address": "4249 SW Dosch Rd",
+      "hood": "SW Portland, Portland OR",
+      "price": 699000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 2212,
+      "status": "Active",
+      "verified": "2026-10-06",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/5/2026",
+      "dom": null,
+      "why": "3bd/2ba, 2,212 sqft in SW Portland, under the cap (built 2004, 0.26 ac lot); MLS #304454761. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/4249-sw-dosch-rd/pid_74113614/"
+        }
+      ]
+    },
+    {
+      "id": "3360-sw-fairmount-blvd-pdx",
+      "tag": "🌲 Portland",
+      "address": "3360 SW Fairmount Blvd",
+      "hood": "SW Portland, Portland OR",
+      "price": 735000,
+      "beds": 2,
+      "baths": 2,
+      "sqft": 2292,
+      "status": "Active",
+      "verified": "2026-10-06",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/5/2026",
+      "dom": null,
+      "why": "PRICE CUT $775,000 → $735,000. 2bd/2ba, 2,292 sqft in SW Portland, under the cap (built 1923, 0.14 ac lot); MLS #209967903. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/3360-sw-fairmount-blvd/pid_73328383/"
+        }
+      ]
+    },
+    {
+      "id": "6190-mesa-ave-la",
+      "tag": "🌴 Los Angeles",
+      "address": "6190 Mesa Ave",
+      "hood": "Highland Park, Los Angeles",
+      "price": 999999,
+      "beds": 4,
+      "baths": 3,
+      "sqft": 1433,
+      "status": "Active",
+      "verified": "2026-10-06",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/6/2026",
+      "dom": null,
+      "why": "4bd/3ba, 1,433 sqft in Highland Park, under the cap (built 1923, 0.1722 ac lot); MLS #26996787. Listing mentions an ADU/guest unit — UNVERIFIED until permits or sqft back it.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/6190-mesa-ave/pid_74116554/"
+        }
+      ]
     }
   ],
   "corrections": [
@@ -1617,6 +1591,22 @@
     {
       "date": "2026-10-05",
       "text": "535 SE 70th Ave (Mt. Tabor, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-10-06",
+      "text": "1740 SE 47th Ave (Hawthorne, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-10-06",
+      "text": "703 SE Tenino St (Sellwood, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-10-06",
+      "text": "2240 SE 48th Av (Hawthorne, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-10-06",
+      "text": "5558 SE Stark St (Mt. Tabor, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
     }
   ]
 }
