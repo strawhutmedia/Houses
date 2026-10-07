@@ -222,6 +222,12 @@ his: call April / get the cross street so we can pull assessor data.
   ~101" / 130" / 170" → **≈ 275 sq ft**. 203B same length, narrower (width TBD) →
   A+B est. **~450–550 sq ft** ≈ $6–7.50/sf vs Seeley 121 1,400 sf @ $3,000 ($2.14/sf).
 
+- 10/7: **702 N Van Ness Ave (Melrose × Van Ness, ivy building, across from
+  Paramount) — FOR SALE $3,595,000** (Zacuto Group brochure 2026: 7,732 sf bldg /
+  9,836 sf lot, LAC4, 6 parking, exposed brick/beams, roll-up door, $465/sf,
+  APN 5535-002-001; Jake Zacuto 310-469-9012). Sale, not lease — owner-user via
+  SBA 504 est. ~$360K+ down, ~$25K/mo all-in (unverified estimate). Ryan asked price.
+
 ## Backlog (in rough priority)
 
 1. Watch the Routine's output quality — discovery was rebuilt 9/9 to read
