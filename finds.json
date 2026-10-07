@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-06T19:53:25.661Z",
+  "updatedAt": "2026-10-07T20:14:31.692Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -217,15 +217,15 @@
       "tag": "🌲 Mt. Tabor, Portland",
       "address": "2371 SE 51st Ave",
       "hood": "Mt. Tabor, Portland OR",
-      "price": 780000,
+      "price": 759000,
       "beds": 3,
       "baths": 3,
       "sqft": 2004,
       "status": "Active",
-      "verified": "2026-09-28",
-      "verifiedHow": "Live on Compass's Mt. Tabor inventory and its own Compass listing page today",
+      "verified": "2026-10-07",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/6/2026",
       "dom": "31 days",
-      "why": "3bd/3ba, 2,004 sqft at $780K. Finished basement has a 4th non-conforming bedroom + separate entrance + kitchenette — ADU-adjacent, but unpermitted per the listing itself (flagged, not oversold).",
+      "why": "PRICE CUT $780,000 → $759,000. 3bd/3ba, 2,004 sqft in Mt. Tabor, under the cap (built 1926, 0.1 ac lot); MLS #221028977. Listing mentions an ADU/guest unit — UNVERIFIED until permits or sqft back it.",
       "ask": "Whether the basement space could be permitted as a legal ADU.",
       "links": [
         {
@@ -560,52 +560,6 @@
         }
       ],
       "photo": "https://m1.cbhomes.com/p/283/126214050/3181F3e0bfBB482/m23cc.webp"
-    },
-    {
-      "id": "516-se-54th-ave-pdx",
-      "tag": "🌲 Portland",
-      "address": "516 SE 54th Ave",
-      "hood": "Mt. Tabor, Portland OR",
-      "price": 765000,
-      "beds": 3,
-      "baths": 2,
-      "sqft": 2248,
-      "status": "Active",
-      "verified": "2026-10-02",
-      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
-      "dom": null,
-      "why": "3bd/2ba, 2,248 sf at $765,000 ($340/sf) in Mt. Tabor. No ADU claimed/verified.",
-      "ask": "Verify condition, permits and any extra unit.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/516-se-54th-ave/pid_74059283/"
-        }
-      ],
-      "photo": ""
-    },
-    {
-      "id": "4951-se-salmon-st-pdx",
-      "tag": "🌲 Portland",
-      "address": "4951 SE Salmon St",
-      "hood": "Hawthorne, Portland OR",
-      "price": 729900,
-      "beds": 3,
-      "baths": 2,
-      "sqft": 2692,
-      "status": "Active",
-      "verified": "2026-10-02",
-      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
-      "dom": null,
-      "why": "3bd/2ba, 2,692 sf at $729,900 ($271/sf) in Hawthorne. No ADU claimed/verified.",
-      "ask": "Verify condition, permits and any extra unit.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/4951-se-salmon-st/pid_74044148/"
-        }
-      ],
-      "photo": "https://m1.cbhomes.com/p/283/424311765/e530E99280004B8/m23cc.webp"
     },
     {
       "id": "1324-se-51st-ave-pdx",
@@ -1363,15 +1317,15 @@
       "tag": "🌲 Portland",
       "address": "2415 NE 15th Ave",
       "hood": "Irvington, Portland OR",
-      "price": 965000,
+      "price": 950000,
       "beds": 5,
       "baths": 3,
       "sqft": 3082,
       "status": "Active",
-      "verified": "2026-10-03",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/2/2026",
+      "verified": "2026-10-07",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/6/2026",
       "dom": null,
-      "why": "5bd/3ba, 3,082 sqft in Irvington, under the cap; MLS #510367403. Any ADU/guest-unit claim unverified.",
+      "why": "PRICE CUT $965,000 → $950,000. 5bd/3ba, 3,082 sqft in Irvington, under the cap (built 1910, 0.11 ac lot); MLS #510367403. Any ADU/guest-unit claim unverified.",
       "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
       "links": [
         {
@@ -1533,6 +1487,94 @@
           "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/6190-mesa-ave/pid_74116554/"
         }
       ]
+    },
+    {
+      "id": "2813-silver-st-la",
+      "tag": "🌴 Los Angeles",
+      "address": "2813 Silver St",
+      "hood": "Frogtown, Los Angeles",
+      "price": 798000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1310,
+      "status": "Active",
+      "verified": "2026-10-07",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/6/2026",
+      "dom": null,
+      "why": "PRICE CUT $835,000 → $798,000. 3bd/2ba, 1,310 sqft in Frogtown, under the cap (built 1910, 0.1263 ac lot); MLS #P1-28406. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/2813-silver-st/pid_73001473/"
+        }
+      ]
+    },
+    {
+      "id": "152-n-benton-way-la",
+      "tag": "🌴 Los Angeles",
+      "address": "152 N Benton Way",
+      "hood": "Silver Lake, Los Angeles",
+      "price": 1199999,
+      "beds": 6,
+      "baths": 4,
+      "sqft": 2278,
+      "status": "Active",
+      "verified": "2026-10-07",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/7/2026",
+      "dom": null,
+      "why": "6bd/4ba, 2,278 sqft in Silver Lake, under the cap (built 1905, 0.139 ac lot); MLS #26995909. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/152-n-benton-way/pid_74060188/"
+        }
+      ]
+    },
+    {
+      "id": "4230-sw-hewett-blvd-pdx",
+      "tag": "🌲 Portland",
+      "address": "4230 SW Hewett Blvd",
+      "hood": "SW Portland, Portland OR",
+      "price": 499900,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 2250,
+      "status": "Active",
+      "verified": "2026-10-07",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/6/2026",
+      "dom": null,
+      "why": "3bd/2ba, 2,250 sqft in SW Portland, under the cap (built 1968, 0.28 ac lot); MLS #628437116. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/4230-sw-hewett-blvd/pid_74131781/"
+        }
+      ]
+    },
+    {
+      "id": "461-se-72nd-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "461 SE 72nd Ave",
+      "hood": "Mt. Tabor, Portland OR",
+      "price": 849000,
+      "beds": 4,
+      "baths": 3,
+      "sqft": 2407,
+      "status": "Active",
+      "verified": "2026-10-07",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/6/2026",
+      "dom": null,
+      "why": "PRICE CUT $885,000 → $849,000. 4bd/3ba, 2,407 sqft in Mt. Tabor, under the cap (built 1929, 0.09 ac lot); MLS #177910370. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/461-se-72nd-ave/pid_73768074/"
+        }
+      ]
     }
   ],
   "corrections": [
@@ -1607,6 +1649,14 @@
     {
       "date": "2026-10-06",
       "text": "5558 SE Stark St (Mt. Tabor, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-10-07",
+      "text": "4951 SE Salmon St (Hawthorne, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-10-07",
+      "text": "516 SE 54th Ave (Mt. Tabor, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
     }
   ]
 }

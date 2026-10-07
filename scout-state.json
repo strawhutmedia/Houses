@@ -1,9 +1,9 @@
 {
   "studio": {
-    "lastRun": "2026-10-06",
-    "at": "2026-10-06T19:49:48.725Z",
-    "spacesFile": "2026-10-06T19:49:48.654Z",
-    "craigslistFetched": 129,
+    "lastRun": "2026-10-07",
+    "at": "2026-10-07T20:08:33.333Z",
+    "spacesFile": "2026-10-07T20:08:33.257Z",
+    "craigslistFetched": 152,
     "candidates": 0,
     "verified": [],
     "emailed": false,
@@ -14,38 +14,43 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-10-06",
-    "at": "2026-10-06T19:53:26.817Z",
+    "lastRun": "2026-10-07",
+    "at": "2026-10-07T20:14:32.727Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 804,
-        "matches": 2
+        "scanned": 795,
+        "matches": 6
       },
       "Portland": {
-        "scanned": 876,
-        "matches": 3
+        "scanned": 1272,
+        "matches": 5
       }
     },
-    "candidates": 5,
+    "candidates": 11,
     "verified": [
-      "4249 SW Dosch Rd (SW Portland) $699,000",
-      "6626 SE Stark St (Mt. Tabor) $925,000",
-      "3360 SW Fairmount Blvd (SW Portland) $735,000",
-      "6190 Mesa Ave (Highland Park) $999,999"
+      "2813 Silver St (Frogtown) $798,000",
+      "152 N Benton Way (Silver Lake) $1,199,999",
+      "2371 SE 51st Ave (Mt. Tabor) $759,000",
+      "4230 SW Hewett Blvd (SW Portland) $499,900",
+      "461 SE 72nd Ave (Mt. Tabor) $849,000",
+      "2415 NE 15th Ave (Irvington) $950,000"
     ],
     "emailed": true,
     "emailError": null,
     "rejected": [
-      "2204 Tom Mix: CB updated Today (10/6/2026) — can't confirm Active today"
+      "6407 La Riba Way: CB updated Today (10/7/2026) — can't confirm Active today",
+      "6150 Strickland: CB updated Today (10/7/2026) — can't confirm Active today",
+      "6126 NE 12th Ave: CB updated Today (10/7/2026) — can't confirm Active today",
+      "1933 W Kingston Pl: CB updated Today (10/7/2026) — can't confirm Active today"
     ],
-    "unreachable": [],
-    "boardAdded": 3,
-    "boardPriceCuts": 1,
+    "unreachable": [
+      "2271 Hill Dr"
+    ],
+    "boardAdded": 4,
+    "boardPriceCuts": 2,
     "movedToCorrections": [
-      "1740 SE 47th Ave: Pending",
-      "703 SE Tenino St: Pending",
-      "2240 SE 48th Av: Pending",
-      "5558 SE Stark St: Pending"
+      "4951 SE Salmon St: Pending",
+      "516 SE 54th Ave: Pending"
     ],
     "brokenSince": null,
     "ok": true
