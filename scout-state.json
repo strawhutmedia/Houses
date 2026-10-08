@@ -1,12 +1,14 @@
 {
   "studio": {
-    "lastRun": "2026-10-07",
-    "at": "2026-10-07T20:08:33.333Z",
-    "spacesFile": "2026-10-07T20:08:33.257Z",
-    "craigslistFetched": 152,
-    "candidates": 0,
-    "verified": [],
-    "emailed": false,
+    "lastRun": "2026-10-08",
+    "at": "2026-10-08T20:07:02.821Z",
+    "spacesFile": "2026-10-08T20:07:01.715Z",
+    "craigslistFetched": 214,
+    "candidates": 1,
+    "verified": [
+      "Media production studio (Burbank) $2,500"
+    ],
+    "emailed": true,
     "emailError": null,
     "rejected": [],
     "unreachable": [],
@@ -14,44 +16,38 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-10-07",
-    "at": "2026-10-07T20:14:32.727Z",
+    "lastRun": "2026-10-08",
+    "at": "2026-10-08T20:10:28.216Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 795,
+        "scanned": 796,
         "matches": 6
       },
       "Portland": {
-        "scanned": 1272,
-        "matches": 5
+        "scanned": 1258,
+        "matches": 3
       }
     },
-    "candidates": 11,
+    "candidates": 9,
     "verified": [
-      "2813 Silver St (Frogtown) $798,000",
-      "152 N Benton Way (Silver Lake) $1,199,999",
-      "2371 SE 51st Ave (Mt. Tabor) $759,000",
-      "4230 SW Hewett Blvd (SW Portland) $499,900",
-      "461 SE 72nd Ave (Mt. Tabor) $849,000",
-      "2415 NE 15th Ave (Irvington) $950,000"
+      "2213 Selig Dr (Silver Lake) $1,045,000",
+      "6158 Oak Crest Way (Highland Park) $965,000",
+      "5103 E Echo St (Highland Park) $1,175,000",
+      "2271 Hill Dr (Eagle Rock) $999,999",
+      "2734 SW Fern St (West Hills) $895,000",
+      "4126 SE Franklin St (Division) $575,000"
     ],
     "emailed": true,
     "emailError": null,
     "rejected": [
-      "6407 La Riba Way: CB updated Today (10/7/2026) — can't confirm Active today",
-      "6150 Strickland: CB updated Today (10/7/2026) — can't confirm Active today",
-      "6126 NE 12th Ave: CB updated Today (10/7/2026) — can't confirm Active today",
-      "1933 W Kingston Pl: CB updated Today (10/7/2026) — can't confirm Active today"
+      "6205 Vidette St: CB updated Today (10/8/2026) — can't confirm Active today",
+      "2415 Hines Dr: CB updated Today (10/8/2026) — can't confirm Active today",
+      "3860 N Melrose Dr: CB updated Today (10/8/2026) — can't confirm Active today"
     ],
-    "unreachable": [
-      "2271 Hill Dr"
-    ],
-    "boardAdded": 4,
-    "boardPriceCuts": 2,
-    "movedToCorrections": [
-      "4951 SE Salmon St: Pending",
-      "516 SE 54th Ave: Pending"
-    ],
+    "unreachable": [],
+    "boardAdded": 6,
+    "boardPriceCuts": 0,
+    "movedToCorrections": [],
     "brokenSince": null,
     "ok": true
   }

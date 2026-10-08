@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-07T20:14:31.692Z",
+  "updatedAt": "2026-10-08T20:10:27.595Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -1573,6 +1573,138 @@
         {
           "label": "Coldwell Banker listing",
           "url": "https://www.coldwellbankerhomes.com/or/portland/461-se-72nd-ave/pid_73768074/"
+        }
+      ]
+    },
+    {
+      "id": "2213-selig-dr-la",
+      "tag": "🌴 Los Angeles",
+      "address": "2213 Selig Dr",
+      "hood": "Silver Lake, Los Angeles",
+      "price": 1045000,
+      "beds": 3,
+      "baths": 3,
+      "sqft": 1407,
+      "status": "Active",
+      "verified": "2026-10-08",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/8/2026",
+      "dom": null,
+      "why": "PRICE CUT $1,095,000 → $1,045,000. 3bd/3ba, 1,407 sqft in Silver Lake, under the cap (built 2015, 0.0385 ac lot); MLS #26923501. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/2213-selig-dr/pid_73366473/"
+        }
+      ]
+    },
+    {
+      "id": "6158-oak-crest-way-la",
+      "tag": "🌴 Los Angeles",
+      "address": "6158 Oak Crest Way",
+      "hood": "Highland Park, Los Angeles",
+      "price": 965000,
+      "beds": 2,
+      "baths": 2,
+      "sqft": 1372,
+      "status": "Active",
+      "verified": "2026-10-08",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/7/2026",
+      "dom": null,
+      "why": "2bd/2ba, 1,372 sqft in Highland Park, under the cap (built 1913, 0.1495 ac lot); MLS #P1-27413. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/6158-oak-crest-way/pid_71684987/"
+        }
+      ]
+    },
+    {
+      "id": "5103-e-echo-st-la",
+      "tag": "🌴 Los Angeles",
+      "address": "5103 E Echo St",
+      "hood": "Highland Park, Los Angeles",
+      "price": 1175000,
+      "beds": 3,
+      "baths": 4,
+      "sqft": 2163,
+      "status": "Active",
+      "verified": "2026-10-08",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/7/2026",
+      "dom": null,
+      "why": "PRICE CUT $1,199,995 → $1,175,000. 3bd/4ba, 2,163 sqft in Highland Park, under the cap (built 2018, 0.0382 ac lot); MLS #26882249. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/5103-e-echo-st/pid_73268058/"
+        }
+      ]
+    },
+    {
+      "id": "2271-hill-dr-la",
+      "tag": "🌴 Los Angeles",
+      "address": "2271 Hill Dr",
+      "hood": "Eagle Rock, Los Angeles",
+      "price": 999999,
+      "beds": 3,
+      "baths": 3,
+      "sqft": 2065,
+      "status": "Active",
+      "verified": "2026-10-08",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/7/2026",
+      "dom": null,
+      "why": "3bd/3ba, 2,065 sqft in Eagle Rock, under the cap (built 1965); MLS #26997049. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/2271-hill-dr/pid_74130864/"
+        }
+      ]
+    },
+    {
+      "id": "2734-sw-fern-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "2734 SW Fern St",
+      "hood": "West Hills, Portland OR",
+      "price": 895000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 2902,
+      "status": "Active",
+      "verified": "2026-10-08",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/8/2026",
+      "dom": null,
+      "why": "PRICE CUT $945,000 → $895,000. 3bd/2ba, 2,902 sqft in West Hills, under the cap (built 1907, 0.1 ac lot); MLS #125055764. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/2734-sw-fern-st/pid_73596945/"
+        }
+      ]
+    },
+    {
+      "id": "4126-se-franklin-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "4126 SE Franklin St",
+      "hood": "Division, Portland OR",
+      "price": 575000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1495,
+      "status": "Active",
+      "verified": "2026-10-08",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/7/2026",
+      "dom": null,
+      "why": "PRICE CUT $599,000 → $575,000. 3bd/2ba, 1,495 sqft in Division, under the cap (built 2026); MLS #435243029. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/4126-se-franklin-st/pid_73293749/"
         }
       ]
     }
