@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-08T20:10:27.595Z",
+  "updatedAt": "2026-10-09T19:48:09.940Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -378,15 +378,15 @@
       "tag": "📍 Eagle Rock",
       "address": "1808 Chickasaw Ave",
       "hood": "Eagle Rock",
-      "price": 899000,
+      "price": 898000,
       "beds": 2,
       "baths": 2,
       "sqft": 744,
       "status": "Active",
-      "verified": "2026-09-30",
-      "verifiedHow": "Live on its own Compass listing page today",
+      "verified": "2026-10-09",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/8/2026",
       "dom": "33 days",
-      "why": "Reimagined 1924 Eagle Rock bungalow 2bd/2ba on 0.13 ac at $899K — small (744 sf), no ADU.",
+      "why": "PRICE CUT $899,000 → $898,000. 2bd/2ba, 744 sqft in Eagle Rock, under the cap (built 1924, 0.1309 ac lot); MLS #CV26180151. Any ADU/guest-unit claim unverified.",
       "ask": "Only 744 sf — enough space for three buyers?",
       "links": [
         {
@@ -1141,15 +1141,15 @@
       "tag": "🌲 Portland",
       "address": "532 SE Peacock Ln",
       "hood": "Hawthorne, Portland OR",
-      "price": 595000,
+      "price": 565000,
       "beds": 4,
       "baths": 3,
       "sqft": 2847,
       "status": "Active",
-      "verified": "2026-10-03",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/2/2026",
+      "verified": "2026-10-09",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/9/2026",
       "dom": null,
-      "why": "4bd/3ba, 2,847 sqft in Hawthorne, under the cap; MLS #371559944. Any ADU/guest-unit claim unverified.",
+      "why": "PRICE CUT $595,000 → $565,000. 4bd/3ba, 2,847 sqft in Hawthorne, under the cap (built 1924, 0.1 ac lot); MLS #371559944. Any ADU/guest-unit claim unverified.",
       "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
       "links": [
         {
@@ -1705,6 +1705,292 @@
         {
           "label": "Coldwell Banker listing",
           "url": "https://www.coldwellbankerhomes.com/or/portland/4126-se-franklin-st/pid_73293749/"
+        }
+      ]
+    },
+    {
+      "id": "4525-college-view-ave-la",
+      "tag": "🌴 Los Angeles",
+      "address": "4525 College View Ave",
+      "hood": "Eagle Rock, Los Angeles",
+      "price": 999000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1032,
+      "status": "Active",
+      "verified": "2026-10-09",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/9/2026",
+      "dom": null,
+      "why": "3bd/2ba, 1,032 sqft in Eagle Rock, under the cap (built 1924, 0.3446 ac lot); MLS #26997315. Listing mentions an ADU/guest unit — UNVERIFIED until permits or sqft back it.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/4525-college-view-ave/pid_74182150/"
+        }
+      ]
+    },
+    {
+      "id": "4061-sw-flower-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "4061 SW Flower St",
+      "hood": "SW Portland, Portland OR",
+      "price": 650000,
+      "beds": 4,
+      "baths": 2,
+      "sqft": 2472,
+      "status": "Active",
+      "verified": "2026-10-09",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/8/2026",
+      "dom": null,
+      "why": "4bd/2ba, 2,472 sqft in SW Portland, under the cap (built 1927, 0.32 ac lot); MLS #144332151. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/4061-sw-flower-st/pid_74177292/"
+        }
+      ]
+    },
+    {
+      "id": "3851-n-riley-ln-la",
+      "tag": "🌴 Los Angeles",
+      "address": "3851 N Riley Ln",
+      "hood": "Glassell Park, Los Angeles",
+      "price": 999000,
+      "beds": 2,
+      "baths": 3,
+      "sqft": 1642,
+      "status": "Active",
+      "verified": "2026-10-09",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/8/2026",
+      "dom": null,
+      "why": "PRICE CUT $1,099,995 → $999,000. 2bd/3ba, 1,642 sqft in Glassell Park, under the cap (built 2025, 0.03 ac lot); MLS #26836579. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/3851-n-riley-ln/pid_71464348/"
+        }
+      ]
+    },
+    {
+      "id": "3639-roderick-rd-la",
+      "tag": "🌴 Los Angeles",
+      "address": "3639 Roderick Rd",
+      "hood": "Glassell Park, Los Angeles",
+      "price": 1129000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1719,
+      "status": "Active",
+      "verified": "2026-10-09",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/9/2026",
+      "dom": null,
+      "why": "3bd/2ba, 1,719 sqft in Glassell Park, under the cap (built 1964, 0.1261 ac lot); MLS #26998461. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/3639-roderick-rd/pid_74172639/"
+        }
+      ]
+    },
+    {
+      "id": "2205-ne-mason-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "2205 NE Mason St",
+      "hood": "Alberta, Portland OR",
+      "price": 779000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 2430,
+      "status": "Active",
+      "verified": "2026-10-09",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/8/2026",
+      "dom": null,
+      "why": "3bd/2ba, 2,430 sqft in Alberta, under the cap (built 1939, 0.09 ac lot); MLS #362472107. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/2205-ne-mason-st/pid_74172324/"
+        }
+      ]
+    },
+    {
+      "id": "2041-ne-mason-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "2041 NE Mason St",
+      "hood": "Alberta, Portland OR",
+      "price": 925000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 2217,
+      "status": "Active",
+      "verified": "2026-10-09",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/9/2026",
+      "dom": null,
+      "why": "3bd/2ba, 2,217 sqft in Alberta, under the cap (built 1926, 0.12 ac lot); MLS #650708399. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/2041-ne-mason-st/pid_74178832/"
+        }
+      ]
+    },
+    {
+      "id": "4134-n-haight-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "4134 N Haight Ave",
+      "hood": "Mississippi, Portland OR",
+      "price": 649000,
+      "beds": 2,
+      "baths": 2,
+      "sqft": 2186,
+      "status": "Active",
+      "verified": "2026-10-09",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/8/2026",
+      "dom": null,
+      "why": "2bd/2ba, 2,186 sqft in Mississippi, under the cap (built 1907, 0.12 ac lot); MLS #462842113. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/4134-n-haight-ave/pid_74177303/"
+        }
+      ]
+    },
+    {
+      "id": "922-se-66th-pl-pdx",
+      "tag": "🌲 Portland",
+      "address": "922 SE 66th Pl",
+      "hood": "Mt. Tabor, Portland OR",
+      "price": 735000,
+      "beds": 4,
+      "baths": 2,
+      "sqft": 3298,
+      "status": "Active",
+      "verified": "2026-10-09",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/9/2026",
+      "dom": null,
+      "why": "PRICE CUT $775,000 → $735,000. 4bd/2ba, 3,298 sqft in Mt. Tabor, under the cap (built 1911, 0.12 ac lot); MLS #794039707. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/922-se-66th-pl/pid_73930116/"
+        }
+      ]
+    },
+    {
+      "id": "5355-se-stark-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "5355 SE Stark St",
+      "hood": "Mt. Tabor, Portland OR",
+      "price": 599000,
+      "beds": 3,
+      "baths": 3,
+      "sqft": 1757,
+      "status": "Active",
+      "verified": "2026-10-09",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/9/2026",
+      "dom": null,
+      "why": "PRICE CUT $619,000 → $599,000. 3bd/3ba, 1,757 sqft in Mt. Tabor, under the cap (built 2026, 0.035 ac lot); MLS #146152771. Listing mentions an ADU/guest unit — UNVERIFIED until permits or sqft back it.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/5355-se-stark-st/pid_72025325/"
+        }
+      ]
+    },
+    {
+      "id": "8535-se-15th-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "8535 SE 15th Ave",
+      "hood": "Sellwood, Portland OR",
+      "price": 799000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1993,
+      "status": "Active",
+      "verified": "2026-10-09",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/8/2026",
+      "dom": null,
+      "why": "3bd/2ba, 1,993 sqft in Sellwood, under the cap (built 1906, 0.12 ac lot); MLS #190844316. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/8535-se-15th-ave/pid_74178804/"
+        }
+      ]
+    },
+    {
+      "id": "1902-se-80th-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "1902 SE 80th Ave",
+      "hood": "Mt. Tabor, Portland OR",
+      "price": 749000,
+      "beds": 4,
+      "baths": 2,
+      "sqft": 2792,
+      "status": "Active",
+      "verified": "2026-10-09",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/9/2026",
+      "dom": null,
+      "why": "4bd/2ba, 2,792 sqft in Mt. Tabor, under the cap (built 1955, 0.43 ac lot); MLS #607301610. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/1902-se-80th-ave/pid_74184608/"
+        }
+      ]
+    },
+    {
+      "id": "2213-se-60th-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "2213 SE 60th Ave",
+      "hood": "Mt. Tabor, Portland OR",
+      "price": 950000,
+      "beds": 5,
+      "baths": 4,
+      "sqft": 2724,
+      "status": "Active",
+      "verified": "2026-10-09",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/9/2026",
+      "dom": null,
+      "why": "5bd/4ba, 2,724 sqft in Mt. Tabor, under the cap (built 2015, 0.09 ac lot); MLS #335562602. Listing mentions an ADU/guest unit — UNVERIFIED until permits or sqft back it.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/2213-se-60th-ave/pid_74184588/"
+        }
+      ]
+    },
+    {
+      "id": "2727-ne-hancock-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "2727 NE Hancock St",
+      "hood": "Irvington, Portland OR",
+      "price": 875000,
+      "beds": 4,
+      "baths": 2,
+      "sqft": 3376,
+      "status": "Active",
+      "verified": "2026-10-09",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/8/2026",
+      "dom": null,
+      "why": "4bd/2ba, 3,376 sqft in Irvington, under the cap (built 1911, 0.14 ac lot); MLS #424600693. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/2727-ne-hancock-st/pid_74178817/"
         }
       ]
     }

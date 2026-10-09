@@ -1,14 +1,12 @@
 {
   "studio": {
-    "lastRun": "2026-10-08",
-    "at": "2026-10-08T20:07:02.821Z",
-    "spacesFile": "2026-10-08T20:07:01.715Z",
-    "craigslistFetched": 214,
-    "candidates": 1,
-    "verified": [
-      "Media production studio (Burbank) $2,500"
-    ],
-    "emailed": true,
+    "lastRun": "2026-10-09",
+    "at": "2026-10-09T19:44:27.936Z",
+    "spacesFile": "2026-10-09T19:44:27.865Z",
+    "craigslistFetched": 220,
+    "candidates": 0,
+    "verified": [],
+    "emailed": false,
     "emailError": null,
     "rejected": [],
     "unreachable": [],
@@ -16,37 +14,47 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-10-08",
-    "at": "2026-10-08T20:10:28.216Z",
+    "lastRun": "2026-10-09",
+    "at": "2026-10-09T19:48:11.487Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 796,
-        "matches": 6
+        "scanned": 801,
+        "matches": 4
       },
       "Portland": {
-        "scanned": 1258,
-        "matches": 3
+        "scanned": 1273,
+        "matches": 15
       }
     },
-    "candidates": 9,
+    "candidates": 19,
     "verified": [
-      "2213 Selig Dr (Silver Lake) $1,045,000",
-      "6158 Oak Crest Way (Highland Park) $965,000",
-      "5103 E Echo St (Highland Park) $1,175,000",
-      "2271 Hill Dr (Eagle Rock) $999,999",
-      "2734 SW Fern St (West Hills) $895,000",
-      "4126 SE Franklin St (Division) $575,000"
+      "4525 College View Ave (Eagle Rock) $999,000",
+      "4061 SW Flower St (SW Portland) $650,000",
+      "1808 Chickasaw Ave (Eagle Rock) $898,000",
+      "3851 N Riley Ln (Glassell Park) $999,000",
+      "3639 Roderick Rd (Glassell Park) $1,129,000",
+      "2205 NE Mason St (Alberta) $779,000",
+      "2041 NE Mason St (Alberta) $925,000",
+      "4134 N Haight Ave (Mississippi) $649,000",
+      "922 SE 66th Pl (Mt. Tabor) $735,000",
+      "5355 SE Stark St (Mt. Tabor) $599,000",
+      "532 SE Peacock Ln (Hawthorne) $565,000",
+      "8535 SE 15th Ave (Sellwood) $799,000",
+      "1902 SE 80th Ave (Mt. Tabor) $749,000",
+      "2213 SE 60th Ave (Mt. Tabor) $950,000",
+      "2727 NE Hancock St (Irvington) $875,000"
     ],
     "emailed": true,
     "emailError": null,
     "rejected": [
-      "6205 Vidette St: CB updated Today (10/8/2026) — can't confirm Active today",
-      "2415 Hines Dr: CB updated Today (10/8/2026) — can't confirm Active today",
-      "3860 N Melrose Dr: CB updated Today (10/8/2026) — can't confirm Active today"
+      "2211 SW Martha St: CB updated Today (10/9/2026) — can't confirm Active today",
+      "2535 SW Patton Ct: CB updated Today (10/9/2026) — can't confirm Active today",
+      "2433 N Emerson St: CB updated Today (10/9/2026) — can't confirm Active today",
+      "26 SE 69th Ave: CB updated Today (10/9/2026) — can't confirm Active today"
     ],
     "unreachable": [],
-    "boardAdded": 6,
-    "boardPriceCuts": 0,
+    "boardAdded": 13,
+    "boardPriceCuts": 2,
     "movedToCorrections": [],
     "brokenSince": null,
     "ok": true
