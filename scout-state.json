@@ -1,9 +1,9 @@
 {
   "studio": {
-    "lastRun": "2026-10-09",
-    "at": "2026-10-09T19:44:27.936Z",
-    "spacesFile": "2026-10-09T19:44:27.865Z",
-    "craigslistFetched": 220,
+    "lastRun": "2026-10-10",
+    "at": "2026-10-10T18:50:19.984Z",
+    "spacesFile": "2026-10-10T18:50:19.922Z",
+    "craigslistFetched": 144,
     "candidates": 0,
     "verified": [],
     "emailed": false,
@@ -14,47 +14,38 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-10-09",
-    "at": "2026-10-09T19:48:11.487Z",
+    "lastRun": "2026-10-10",
+    "at": "2026-10-10T18:54:14.420Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 801,
-        "matches": 4
+        "scanned": 800,
+        "matches": 0
       },
       "Portland": {
-        "scanned": 1273,
-        "matches": 15
+        "scanned": 1267,
+        "matches": 10
       }
     },
-    "candidates": 19,
+    "candidates": 10,
     "verified": [
-      "4525 College View Ave (Eagle Rock) $999,000",
-      "4061 SW Flower St (SW Portland) $650,000",
-      "1808 Chickasaw Ave (Eagle Rock) $898,000",
-      "3851 N Riley Ln (Glassell Park) $999,000",
-      "3639 Roderick Rd (Glassell Park) $1,129,000",
-      "2205 NE Mason St (Alberta) $779,000",
-      "2041 NE Mason St (Alberta) $925,000",
-      "4134 N Haight Ave (Mississippi) $649,000",
-      "922 SE 66th Pl (Mt. Tabor) $735,000",
-      "5355 SE Stark St (Mt. Tabor) $599,000",
-      "532 SE Peacock Ln (Hawthorne) $565,000",
-      "8535 SE 15th Ave (Sellwood) $799,000",
-      "1902 SE 80th Ave (Mt. Tabor) $749,000",
-      "2213 SE 60th Ave (Mt. Tabor) $950,000",
-      "2727 NE Hancock St (Irvington) $875,000"
+      "3826 SW Council Crest Dr (SW Portland) $575,000",
+      "2226 SW Iowa St (SW Portland) $599,900",
+      "5616 SW 42nd Ave (SW Portland) $899,000",
+      "5857 NE 24th Ave (Alberta) $675,000",
+      "1326 SW 12th Ave (West Hills) $699,999",
+      "1617 SW Broadway Dr (West Hills) $519,900",
+      "2323 SE 70th Ave (Mt. Tabor) $479,000",
+      "2635 SE Market St (Division) $875,000",
+      "2822 SE 29th Ave (Division) $599,900"
     ],
     "emailed": true,
     "emailError": null,
     "rejected": [
-      "2211 SW Martha St: CB updated Today (10/9/2026) — can't confirm Active today",
-      "2535 SW Patton Ct: CB updated Today (10/9/2026) — can't confirm Active today",
-      "2433 N Emerson St: CB updated Today (10/9/2026) — can't confirm Active today",
-      "26 SE 69th Ave: CB updated Today (10/9/2026) — can't confirm Active today"
+      "2121 SE 50th Ave: CB updated Today (10/10/2026) — can't confirm Active today"
     ],
     "unreachable": [],
-    "boardAdded": 13,
-    "boardPriceCuts": 2,
+    "boardAdded": 8,
+    "boardPriceCuts": 1,
     "movedToCorrections": [],
     "brokenSince": null,
     "ok": true

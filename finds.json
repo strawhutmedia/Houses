@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-09T19:48:09.940Z",
+  "updatedAt": "2026-10-10T18:54:12.994Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -1185,15 +1185,15 @@
       "tag": "🌲 Portland",
       "address": "2822 SE 29th Ave",
       "hood": "Division, Portland OR",
-      "price": 639900,
+      "price": 599900,
       "beds": 4,
       "baths": 2,
       "sqft": 1960,
       "status": "Active",
-      "verified": "2026-10-03",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/1/2026",
+      "verified": "2026-10-10",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/9/2026",
       "dom": null,
-      "why": "4bd/2ba, 1,960 sqft in Division, under the cap; MLS #160443822. Any ADU/guest-unit claim unverified.",
+      "why": "PRICE CUT $639,900 → $599,900. 4bd/2ba, 1,960 sqft in Division, under the cap (built 1910, 0.06 ac lot); MLS #160443822. Any ADU/guest-unit claim unverified.",
       "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
       "links": [
         {
@@ -1991,6 +1991,182 @@
         {
           "label": "Coldwell Banker listing",
           "url": "https://www.coldwellbankerhomes.com/or/portland/2727-ne-hancock-st/pid_74178817/"
+        }
+      ]
+    },
+    {
+      "id": "3826-sw-council-crest-dr-pdx",
+      "tag": "🌲 Portland",
+      "address": "3826 SW Council Crest Dr",
+      "hood": "SW Portland, Portland OR",
+      "price": 575000,
+      "beds": 2,
+      "baths": 2,
+      "sqft": 1624,
+      "status": "Active",
+      "verified": "2026-10-10",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/9/2026",
+      "dom": null,
+      "why": "2bd/2ba, 1,624 sqft in SW Portland, under the cap (built 1923, 0.12 ac lot); MLS #635733186. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/3826-sw-council-crest-dr/pid_74201218/"
+        }
+      ]
+    },
+    {
+      "id": "2226-sw-iowa-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "2226 SW Iowa St",
+      "hood": "SW Portland, Portland OR",
+      "price": 599900,
+      "beds": 4,
+      "baths": 2,
+      "sqft": 2032,
+      "status": "Active",
+      "verified": "2026-10-10",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/9/2026",
+      "dom": null,
+      "why": "PRICE CUT $624,900 → $599,900. 4bd/2ba, 2,032 sqft in SW Portland, under the cap (built 1930, 0.17 ac lot); MLS #209501703. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/2226-sw-iowa-st/pid_73644580/"
+        }
+      ]
+    },
+    {
+      "id": "5616-sw-42nd-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "5616 SW 42nd Ave",
+      "hood": "SW Portland, Portland OR",
+      "price": 899000,
+      "beds": 4,
+      "baths": 3,
+      "sqft": 3760,
+      "status": "Active",
+      "verified": "2026-10-10",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/10/2026",
+      "dom": null,
+      "why": "PRICE CUT $945,000 → $899,000. 4bd/3ba, 3,760 sqft in SW Portland, under the cap (built 1936, 0.39 ac lot); MLS #344467832. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/5616-sw-42nd-ave/pid_73650123/"
+        }
+      ]
+    },
+    {
+      "id": "5857-ne-24th-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "5857 NE 24th Ave",
+      "hood": "Alberta, Portland OR",
+      "price": 675000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 2237,
+      "status": "Active",
+      "verified": "2026-10-10",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/10/2026",
+      "dom": null,
+      "why": "3bd/2ba, 2,237 sqft in Alberta, under the cap (built 1939, 0.12 ac lot); MLS #547391495. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/5857-ne-24th-ave/pid_74200174/"
+        }
+      ]
+    },
+    {
+      "id": "1326-sw-12th-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "1326 SW 12th Ave",
+      "hood": "West Hills, Portland OR",
+      "price": 699999,
+      "beds": 8,
+      "baths": 3,
+      "sqft": 3376,
+      "status": "Active",
+      "verified": "2026-10-10",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/10/2026",
+      "dom": null,
+      "why": "PRICE CUT $724,999 → $699,999. 8bd/3ba, 3,376 sqft in West Hills, under the cap (built 1890, 0.12 ac lot); MLS #533802502. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/1326-sw-12th-ave/pid_72436851/"
+        }
+      ]
+    },
+    {
+      "id": "1617-sw-broadway-dr-pdx",
+      "tag": "🌲 Portland",
+      "address": "1617 SW Broadway Dr",
+      "hood": "West Hills, Portland OR",
+      "price": 519900,
+      "beds": 2,
+      "baths": 2,
+      "sqft": 1622,
+      "status": "Active",
+      "verified": "2026-10-10",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/9/2026",
+      "dom": null,
+      "why": "PRICE CUT $525,000 → $519,900. 2bd/2ba, 1,622 sqft in West Hills, under the cap (built 1907, 0.1 ac lot); MLS #368736793. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/1617-sw-broadway-dr/pid_74028749/"
+        }
+      ]
+    },
+    {
+      "id": "2323-se-70th-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "2323 SE 70th Ave",
+      "hood": "Mt. Tabor, Portland OR",
+      "price": 479000,
+      "beds": 2,
+      "baths": 2,
+      "sqft": 1896,
+      "status": "Active",
+      "verified": "2026-10-10",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/10/2026",
+      "dom": null,
+      "why": "PRICE CUT $510,000 → $479,000. 2bd/2ba, 1,896 sqft in Mt. Tabor, under the cap (built 1943, 0.1 ac lot); MLS #561705276. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/2323-se-70th-ave/pid_73013005/"
+        }
+      ]
+    },
+    {
+      "id": "2635-se-market-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "2635 SE Market St",
+      "hood": "Division, Portland OR",
+      "price": 875000,
+      "beds": 4,
+      "baths": 2,
+      "sqft": 2753,
+      "status": "Active",
+      "verified": "2026-10-10",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/9/2026",
+      "dom": null,
+      "why": "4bd/2ba, 2,753 sqft in Division, under the cap (built 1930, 0.12 ac lot); MLS #582958135. Any ADU/guest-unit claim unverified.",
+      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/2635-se-market-st/pid_73669656/"
         }
       ]
     }
