@@ -1,8 +1,8 @@
 {
   "studio": {
-    "lastRun": "2026-10-10",
-    "at": "2026-10-10T18:50:19.984Z",
-    "spacesFile": "2026-10-10T18:50:19.922Z",
+    "lastRun": "2026-10-11",
+    "at": "2026-10-11T19:09:41.926Z",
+    "spacesFile": "2026-10-11T19:09:41.866Z",
     "craigslistFetched": 144,
     "candidates": 0,
     "verified": [],
@@ -14,37 +14,28 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-10-10",
-    "at": "2026-10-10T18:54:14.420Z",
+    "lastRun": "2026-10-11",
+    "at": "2026-10-11T19:13:04.785Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 800,
-        "matches": 0
+        "scanned": 799,
+        "matches": 1
       },
       "Portland": {
-        "scanned": 1267,
-        "matches": 10
+        "scanned": 1260,
+        "matches": 1
       }
     },
-    "candidates": 10,
+    "candidates": 2,
     "verified": [
-      "3826 SW Council Crest Dr (SW Portland) $575,000",
-      "2226 SW Iowa St (SW Portland) $599,900",
-      "5616 SW 42nd Ave (SW Portland) $899,000",
-      "5857 NE 24th Ave (Alberta) $675,000",
-      "1326 SW 12th Ave (West Hills) $699,999",
-      "1617 SW Broadway Dr (West Hills) $519,900",
-      "2323 SE 70th Ave (Mt. Tabor) $479,000",
-      "2635 SE Market St (Division) $875,000",
-      "2822 SE 29th Ave (Division) $599,900"
+      "152 N Benton Way (Silver Lake) $1,199,000",
+      "1516 SE 43rd Ave (Hawthorne) $529,900"
     ],
     "emailed": true,
     "emailError": null,
-    "rejected": [
-      "2121 SE 50th Ave: CB updated Today (10/10/2026) — can't confirm Active today"
-    ],
+    "rejected": [],
     "unreachable": [],
-    "boardAdded": 8,
+    "boardAdded": 1,
     "boardPriceCuts": 1,
     "movedToCorrections": [],
     "brokenSince": null,
