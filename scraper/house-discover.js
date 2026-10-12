@@ -118,9 +118,9 @@ function boardIndex() {
 const SEEN = path.join(__dirname, "..", "houses-seen.json");
 const readSeen = () => { try { return JSON.parse(fs.readFileSync(SEEN, "utf8")).pids || {}; } catch { return {}; } };
 
-async function discover() {
-  const board = boardIndex();
-  const seen = readSeen();
+async function discover({ ignoreSeen = false } = {}) {
+  const board = ignoreSeen ? new Map() : boardIndex();
+  const seen = ignoreSeen ? {} : readSeen();
   const out = [];
   const stats = {};
   for (const [city, cfg] of Object.entries(CITIES)) {

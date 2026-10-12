@@ -73,16 +73,102 @@ function parseCbDetail(html) {
   if (!html) return null;
   const field = (k) => (html.match(new RegExp(`${k}:\\s*</strong>\\s*([^<]+)`, "i")) || [])[1];
   const ld = (k) => (html.match(new RegExp(`"name":\\s*"${k}",\\s*"value":\\s*"([^"]*)"`)) || [])[1];
-  const remarks = ((html.match(/<div[^>]*class="[^"]*(?:remarks|description)[^"]*"[^>]*>([\s\S]*?)<\/div>/i) || [])[1] || "").replace(/<[^>]+>/g, " ");
+  const remarks = decode(((html.match(/<div[^>]*class="[^"]*(?:remarks|description)[^"]*"[^>]*>([\s\S]*?)<\/div>/i) || [])[1] || "")
+    .replace(/<[^>]+>/g, " ")).replace(/\s+/g, " ").trim();
   return {
     status: (field("Status") || "").trim() || null,
     updated: (field("Updated") || "").trim() || null,
     yearBuilt: +ld("Year Built") || null,
     lotAcres: +ld("Lot Size \\(Acres\\)") || null,
     photo: (html.match(/property="og:image" content="([^"]+)"/) || html.match(/og:image" content="([^"]+)"/) || [])[1] || null,
-    aduMention: /\b(ADU|accessory dwelling|guest (house|unit|apartment|suite)|in-?law|granny flat|casita)\b/i.test(remarks),
+    remarks,
   };
 }
+const decode = (t) => t.replace(/&#(\d+);/g, (_, n) => String.fromCharCode(+n)).replace(/&amp;/g, "&").replace(/&quot;/g, '"')
+  .replace(/&#39;|&apos;/g, "'").replace(/&nbsp;/g, " ").replace(/&lt;/g, "<").replace(/&gt;/g, ">");
+
+// ── ADU: Ryan's hard requirement (10/12) ─────────────────────────────────
+// A house only alerts if its listing DESCRIPTION describes a real, separate
+// second unit — read sentence by sentence, never keyword-matched. "ADU
+// potential", "room for an ADU", a "bonus room", or a converted garage with no
+// kitchen/bath is NOT an ADU (3060 Silver Lake's 300 sf "bonus space" taught
+// that; 5140 Miriam's "guest apartment" was a shed).
+// Strong terms name a dwelling outright; weak ones ("guest suite") are often
+// just a spare room, so they need a kitchen, rent, or a detached structure.
+const STRONG = /\b(J?ADUs?|accessory dwelling( units?)?|guest ?house|back ?house|back tender( house)?|second (unit|dwelling)|2nd unit|granny flat|casita|in-?law unit|duplex|legal (rental )?unit|rental unit|income unit|bonus unit|separate apartment|basement apartment|(lower[- ]level|rear|back|downstairs|upstairs|basement) (unit|apartment)|two (separate |move-in[- ]ready )?(units|living areas|residences))\b/gi;
+const WEAK = /\b(guest (unit|cottage|quarters|apartment|suite)|rear (house|unit|cottage|studio|dwelling)|back (cottage|unit|studio)|detached (studio|unit|cottage)|in-?law (suite|apartment|quarters)|studio apartment|separate (living )?quarters|separate living (area|space)s?|(own|private|separate) (entrance|entry))\b/gi;
+// Hypothetical if one of these sits just BEFORE the unit word…
+const HYPO_BEFORE = /(potential|possib\w*|future|proposed|plans? (for|to)\b|approved plans|planned|ideal for|perfect for|great for|room for|space for|opportunit\w*|investigat\w*|addition of|could|would|can be|to build|to add|build(ing)? an?|add(ing)? an?|conver\w*|serve as|serves as|function(s)? as|use as|used as|flex (space|room))\W+(\w+\W+){0,14}$/i;
+// …or straight after it ("ADU potential"), or the unit isn't built yet.
+const HYPO_AFTER = /^\W*(potential|conversion|opportunit|possib)/i;
+const UNBUILT = /\b(unfinished|can be finished|to be finished|not yet (built|finished)|under construction)\b/i;
+const PERMIT = /\b(permitted|fully permitted|legal(ly)?( permitted)?|certificate of occupancy|C of O|city[- ]approved|finaled|signed off)\b/i;
+const DETACHED = /\b(detached\W+(\S+\W+){0,2}(J?ADU|unit|guest|studio|cottage|casita|apartment|dwelling|structure)|back ?house|back tender|rear (house|unit|cottage)|separate (structure|residence|building)|two (separate )?(homes|houses|residences)|guest ?house|casita|standalone|stand-alone)\b/i;
+const ATTACHED = /\b(attached|lower[- ]level|basement|upstairs|downstairs|below the main|above the garage|over the garage)\b/i;
+const OWN_DOOR = /\b(own|separate|private) (entrance|entry|access)\b/i;
+const KITCHEN = /\bkitchen(ette)?\b/i, BATH = /\b(bath(room)?s?|shower)\b/i;
+const RENTED = /\b(income[- ]producing|currently (rented|leased|occupied)|tenant|airbnb|generat\w* \$|\$[\d,]{3,}\s*(\/|per |a )?\s*(mo|month|year|annual))/i;
+
+function unitHits(sentence) {
+  const hits = [];
+  for (const [re, strong] of [[STRONG, true], [WEAK, false]]) {
+    re.lastIndex = 0; let m;
+    while ((m = re.exec(sentence))) {
+      const before = sentence.slice(Math.max(0, m.index - 90), m.index), after = sentence.slice(m.index + m[0].length, m.index + m[0].length + 25);
+      hits.push({ strong, at: m.index, hypo: HYPO_BEFORE.test(before) || HYPO_AFTER.test(after) });
+    }
+  }
+  return hits;
+}
+
+function aduVerdict(remarks) {
+  const text = String(remarks || "");
+  if (!text) return { ok: false, reason: "no description on the live page" };
+  const sents = text.split(/(?<=[.!?])\s*(?=[A-Z])/);
+  let potential = false, weak = false, bare = false;
+  const found = [];
+  for (let i = 0; i < sents.length; i++) {
+    const s = sents[i], hits = unitHits(s);
+    if (!hits.length) continue;
+    const real = hits.filter((h) => !h.hypo);
+    if (!real.length || UNBUILT.test(s)) { potential = true; continue; }
+    // The next sentence counts only while it's still about the unit.
+    const next = sents[i + 1] || "";
+    const follows = unitHits(next).length || /^(It|Its|With|Inside|This (unit|space|ADU|cottage|studio|suite)|The (unit|ADU|space|suite|apartment|studio|cottage|casita|guest|back|rear|front|second|other|lower|upper))\b/.test(next);
+    const ctx = s + " " + (follows ? next : "");
+    // Features only count from the unit's own clause on — "renovated kitchen,
+    // while a guest apartment…" is the MAIN house's kitchen (5140 Miriam).
+    const first = Math.min(...real.map((h) => h.at));
+    const lead = ctx.slice(Math.max(0, first - 60), first), cut = Math.max(lead.lastIndexOf(","), lead.lastIndexOf(";"));
+    const unitCtx = (cut >= 0 ? lead.slice(cut + 1) : lead) + ctx.slice(first);
+    const f = {
+      strong: real.some((h) => h.strong), kitchen: KITCHEN.test(unitCtx), bath: BATH.test(unitCtx), rented: RENTED.test(unitCtx),
+      permit: PERMIT.test(ctx), detached: DETACHED.test(ctx), attached: ATTACHED.test(ctx), door: OWN_DOOR.test(ctx), ctx: ctx.trim(),
+    };
+    if (!f.strong && !(f.kitchen || f.rented || f.detached)) { weak = true; continue; }   // a "guest suite" that's really a spare room
+    f.duplex = /\bduplex\b|\blegal addresses\b|\btwo (separate |move-in[- ]ready )?units\b/i.test(ctx);
+    f.twoHomes = /\btwo (separate )?(living areas|residences|homes|houses)\b/i.test(ctx);
+    // "bonus ADU" with nothing said about it isn't evidence of a unit.
+    if (!["kitchen", "bath", "door", "detached", "rented", "permit", "duplex", "twoHomes"].some((k) => f[k])) { bare = true; continue; }
+    found.push(f);
+  }
+  if (!found.length) {
+    if (bare) return { ok: false, reason: "names an ADU but describes nothing about it (no kitchen/bath/entrance/permit)" };
+    if (weak) return { ok: false, reason: "a guest suite/flex room, not a unit (no kitchen, rent or separate structure)" };
+    if (potential) return { ok: false, reason: "ADU is only potential/planned/unfinished" };
+    return { ok: false, reason: "no ADU/second unit in description" };
+  }
+  const any = (k) => found.some((f) => f[k]);
+  const detached = any("detached");
+  const duplex = any("duplex");
+  const sep = detached ? "Detached" : duplex ? "Duplex — second" : any("attached") ? (any("door") ? "Attached, own entrance" : "Attached") : any("door") ? "Own entrance" : "Detached/attached not stated";
+  const facts = [any("permit") ? "permitted" : "permits not stated", any("kitchen") ? "kitchen" : null, any("bath") ? "bath" : null, any("rented") ? "rented now" : null].filter(Boolean);
+  const score = (f) => ["kitchen", "bath", "detached", "door", "rented", "permit"].filter((k) => f[k]).length;
+  const best = found.slice().sort((x, y) => score(y) - score(x))[0].ctx;
+  const evidence = best.length > 280 ? best.slice(0, 277) + "…" : best;
+  return { ok: true, detached, tier: `${sep} ADU (${facts.join(", ")})`, evidence };
+}
+
 const GONE = /pending|contingent|under contract|contract signed|sold|closed|withdrawn|expired|cancel|off market|leased/i;
 
 function houseWhy(c, d) {
@@ -95,8 +181,30 @@ function houseWhy(c, d) {
   if (d.lotAcres) extra.push(`${d.lotAcres} ac lot`);
   if (extra.length) s += ` (${extra.join(", ")})`;
   s += c.mls ? `; MLS #${c.mls}.` : ".";
-  s += d.aduMention ? " Listing mentions an ADU/guest unit — UNVERIFIED until permits or sqft back it." : " Any ADU/guest-unit claim unverified.";
+  const a = d.adu || aduVerdict(d.remarks);
+  s += a.ok ? ` ${a.tier}: "${a.evidence}"` : " No separate ADU described.";
+  if (a.ok && /permits not stated/.test(a.tier)) s += " Confirm permits before offering.";
   return s;
+}
+
+// ── second live source: Compass (its search pages bot-block, but address
+// lookup + listing pages still answer). Used when CB's page is >2 days old.
+async function compassStatus(address, cityState) {
+  try {
+    const r = await fetch("https://www.compass.com/api/v3/omnisuggest/autocomplete", {
+      method: "POST", headers: { "Content-Type": "application/json", "User-Agent": UA },
+      body: JSON.stringify({ q: `${address}, ${cityState}`, infoFields: [2], listingTypes: [2] }),
+    });
+    if (!r.ok) return null;
+    const j = await r.json();
+    const key = (a) => String(a || "").toLowerCase().replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim().split(" ").slice(0, 2).join(" ");
+    const item = (j.categories || []).flatMap((c) => c.items || []).find((it) => it.redirectUrl && key(it.text) === key(address));
+    if (!item) return null;
+    const html = await curl(`https://www.compass.com${item.redirectUrl}`);
+    // The subject listing's own record carries its current price right after its status.
+    const m = html.match(/"localizedStatus":"([^"]+)","price":\{"lastKnown":(\d+)/);
+    return m ? { status: m[1], price: +m[2], url: `https://www.compass.com${item.redirectUrl}` } : null;
+  } catch { return null; }
 }
 
 // ── talking to strawhutmedia.com ─────────────────────────────────────────
@@ -137,8 +245,20 @@ async function runHouse({ dry, today, state }) {
     if (!d || !d.status) { unreachable.push(c); return; }                                  // retry tomorrow, not marked
     if (!/^active$/i.test(d.status)) { rejected.push({ ...c, reason: `status ${d.status}` }); return; }
     const age = daysSince(d.updated, today);
-    if (age == null || age > FRESH_DAYS) { rejected.push({ ...c, reason: `CB updated ${d.updated || "?"} — can't confirm Active today` }); return; }
-    verified.push({ ...c, detail: d });
+    if (!d.remarks) { unreachable.push(c); return; }                                     // description didn't load — retry tomorrow
+    const adu = aduVerdict(d.remarks);                                                     // Ryan 10/12: separate ADU required
+    if (!adu.ok) { rejected.push({ ...c, reason: `no separate ADU — ${adu.reason}` }); return; }
+    let how = `Coldwell Banker live listing page: Status ${d.status}, Updated ${d.updated}`;
+    if (age == null || age > FRESH_DAYS) {
+      // CB page is stale (it can lag the MLS by days) → confirm on Compass today.
+      const cp = await compassStatus(c.address, c.city === "Portland" ? "Portland, OR" : "Los Angeles, CA");
+      // Stale + unconfirmable ≠ rejected: re-check tomorrow (marking it seen hid 3060 Silver Lake forever).
+      if (!cp) { unreachable.push({ ...c, reason: `CB updated ${d.updated || "?"}; Compass lookup failed` }); return; }
+      if (!/^active$/i.test(cp.status)) { rejected.push({ ...c, reason: `Compass live page says ${cp.status}` }); return; }
+      how = `Compass live listing page: ${cp.status} at ${money(cp.price)} (CB page last updated ${d.updated})`;
+      d.compassUrl = cp.url;
+    }
+    verified.push({ ...c, detail: { ...d, adu, how } });
   });
 
   // Board: add verified finds (a price cut on a board house updates it in place).
@@ -148,7 +268,7 @@ async function runHouse({ dry, today, state }) {
   for (const v of verified) {
     const why = houseWhy(v, v.detail);
     const existing = finds.finds.find((f) => hd.addrKey(f.address) === hd.addrKey(v.address));
-    const how = `Coldwell Banker live listing page: Status ${v.detail.status}, Updated ${v.detail.updated}`;
+    const how = v.detail.how;
     if (existing) {
       if (v.price < (existing.price || Infinity)) cuts++;
       Object.assign(existing, { price: v.price, status: "Active", verified: today, verifiedHow: how, why });
@@ -161,8 +281,8 @@ async function runHouse({ dry, today, state }) {
       address: v.address, hood: v.city === "Portland" ? `${v.hood}, Portland OR` : `${v.hood}, Los Angeles`,
       price: v.price, beds: v.beds, baths: v.baths, sqft: v.sqft, status: "Active",
       verified: today, verifiedHow: how, dom: null, why,
-      ask: "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
-      links: [{ label: "Coldwell Banker listing", url: v.url }],
+      ask: "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      links: [{ label: "Coldwell Banker listing", url: v.url }, ...(v.detail.compassUrl ? [{ label: "Compass listing", url: v.detail.compassUrl }] : [])],
     });
   }
   // Board hygiene: a find whose live CB page now says pending/sold leaves the
@@ -186,7 +306,7 @@ async function runHouse({ dry, today, state }) {
     const la = verified.filter((v) => v.city !== "Portland").length, pdx = verified.length - la;
     const cutsTxt = verified.filter((v) => v.wasPrice && v.price < v.wasPrice).map((v) => `${v.address} cut to ${money(v.price)}`);
     const intro = [cutsTxt.length ? `Price cut: ${cutsTxt.join("; ")}.` : null,
-      `${verified.length} verified ${verified.length === 1 ? "match" : "matches"} today (${la} Los Angeles, ${pdx} Portland) — each confirmed Active on its live listing page today.`,
+      `${verified.length} ${verified.length === 1 ? "house" : "houses"} with a separate ADU today (${la} Los Angeles, ${pdx} Portland) — each confirmed Active on its live listing page today.`,
       moved.length ? `${moved.length} board ${moved.length === 1 ? "house is" : "houses are"} now pending/sold and moved to corrections.` : null,
     ].filter(Boolean).join(" ");
     const payload = { intro, houses: verified.map((v) => ({
@@ -309,4 +429,4 @@ async function main() {
 }
 
 if (require.main === module) main().catch((e) => { console.error(e); process.exit(1); });
-module.exports = { parseCbDetail, daysSince, houseWhy, studioWhy, ptNow, GONE, POST_GONE };
+module.exports = { parseCbDetail, aduVerdict, compassStatus, daysSince, houseWhy, studioWhy, ptNow, GONE, POST_GONE };

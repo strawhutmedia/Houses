@@ -1,7 +1,7 @@
 # EquityScout — project handoff & state
 
 Read this first. It is the source of truth for where the project stands and how
-Ryan (the owner) works. Last full update: **2026-10-03**.
+Ryan (the owner) works. Last full update: **2026-10-12**.
 
 ## What this is
 
@@ -76,6 +76,22 @@ Routines trig_01DSFmTc3Mw891sxqUgTcL27 (house) + trig_01WJR3NFNxeGT4GWifSQK1s7 (
 DISABLED once the workflow's first real run was verified. The history below is kept for
 the rules it records; `routines/*.md` are superseded.
 
+### House scout = ADU-only (10/12, Ryan's hard requirement)
+`aduVerdict()` in `scraper/scout-alerts.js` READS the listing description
+sentence by sentence (never keyword-matching): a house alerts only if it
+describes a real second unit — detached ADU/back house, legal duplex, permitted
+or rented apartment, or a unit with own entrance + kitchen + bath. Rejected:
+"ADU potential"/"room for"/"ideal for"/plans/unfinished, bonus rooms/flex
+suites with no kitchen, bare "bonus ADU" with no details, features belonging to
+the MAIN house (Miriam). The email/board "why" quotes the exact sentence + a tier
+label (Detached / Attached, own entrance / Duplex; permitted vs permits not
+stated). Pinned by real-sentence tests in `test/scout.test.js`.
+Also 10/12: stale CB page (>2 days) is now confirmed on **Compass** (POST
+`/api/v3/omnisuggest/autocomplete` → `/listing/<id>/view`, subject status =
+`"localizedStatus":"X","price":{"lastKnown"`) instead of being marked seen —
+the old code hid stale-but-active houses forever (how 3060 was lost). 10/12 full
+scan: 28 of 206 in-budget listings have a real separate unit.
+
 ## (Superseded 10-03) The daily house-alert Routine
 
 Trigger `trig_01DSFmTc3Mw891sxqUgTcL27` ("House alert — LA (NELA) + Portland"),
@@ -112,7 +128,9 @@ Its rules (full prompt in `routines/house-alert.md`):
 ## Ryan's house hunt — human context that matters
 
 - Buying with wife **Maggie** and best friend **Steve**; they can pool
-  **~$180K** down "no problem"; split **50/50** (Tillotsons | Steve).
+  **~$180K** down "no problem". **Split now 2/3 Tillotsons, 1/3 Steve (10/12)**
+  (was 50/50). Plan: house WITH A SEPARATE ADU — Steve lives in the ADU; Ryan &
+  Maggie either live in the main house or rent it out.
 - Settled plan after much debate: **buy together, everyone qualifying on the
   loan, joint pre-approval with a mortgage broker** (next real-world step —
   bring 2 yrs tax returns for Ryan, W-2s for Maggie/Steve). Ryan repeatedly
