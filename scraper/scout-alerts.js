@@ -102,6 +102,11 @@ function finance(price, city) {
   const total = pi + price * (city === "Portland" ? 0.011 : 0.012) / 12 + (city === "Portland" ? 150 : 250);
   return { down, us: down * 2 / 3, steve: down / 3, pi, total, usMo: total * 2 / 3, steveMo: total / 3 };
 }
+// Shape the site's green money box expects (site src/houseAlert.js moneyBox).
+function moneyFor(price, city) {
+  const m = finance(price, city);
+  return { down: m.down, us: m.us, steve: m.steve, monthly: m.total, usMo: m.usMo, steveMo: m.steveMo };
+}
 function pageFacts(x = {}) {
   const f = [];
   if (x["Year Built"]) f.push(`built ${x["Year Built"]}`);
@@ -215,10 +220,6 @@ function houseWhy(c, d) {
   s += c.mls ? `; MLS #${c.mls}.` : ".";
   const a = d.adu || aduVerdict(d.remarks);
   s += a.ok ? ` ${a.tier}: "${a.evidence}"` : " No separate ADU described.";
-  if (c.price) {
-    const m = finance(c.price, c.city);
-    s += ` 💰 20% down ${money(m.down)} → you + Maggie ${money(m.us)} · Steve ${money(m.steve)}. Est. monthly ≈ ${money(m.total)} (P&I ${money(m.pi)} @ ${RATE * 100}% + tax + ins) → you + Maggie ${money(m.usMo)} · Steve ${money(m.steveMo)}.`;
-  }
   const facts = pageFacts(d.fields);
   if (facts.length) s += ` 📋 ${facts.join(" · ")}.`;
   if (a.ok && /permits not stated/.test(a.tier)) s += " Confirm permits before offering.";
@@ -346,10 +347,12 @@ async function runHouse({ dry, today, state }) {
     const intro = [cutsTxt.length ? `Price cut: ${cutsTxt.join("; ")}.` : null,
       `${verified.length} ${verified.length === 1 ? "house" : "houses"} with a separate ADU today (${la} Los Angeles, ${pdx} Portland) — each confirmed Active on its live listing page today.`,
       moved.length ? `${moved.length} board ${moved.length === 1 ? "house is" : "houses are"} now pending/sold and moved to corrections.` : null,
+      `💰 Green box on each house: 20% down split 2/3 you + Maggie / 1/3 Steve; monthly is an estimate at ${RATE * 100}% 30-yr fixed + property tax + insurance (no closing costs, HOA or rent income).`,
     ].filter(Boolean).join(" ");
     const payload = { intro, houses: verified.map((v) => ({
       address: v.address, price: v.price, wasPrice: v.wasPrice && v.price < v.wasPrice ? v.wasPrice : null, beds: v.beds, baths: v.baths, sqft: v.sqft,
       city: v.city === "Portland" ? "Portland" : "Los Angeles", hood: v.hood, why: houseWhy(v, v.detail), url: v.url, photo: v.photo || v.detail.photo,
+      money: moneyFor(v.price, v.city),
     })) };
     if (dry) console.log("[dry-run] would email:", JSON.stringify(payload).slice(0, 2000));
     else { const r = await postAlert("/api/houses/alert", payload); emailed = r.ok; emailError = r.error || null; }

@@ -101,6 +101,10 @@ cuts); (b) shows 💰 money math via `finance()`: 20% down split **2/3 Ryan+Magg
 LA neighborhood priority (site PR #185 order): Silver Lake, Echo Park, Los Feliz,
 Highland Park, Atwater, Eagle Rock, Glassell Park. One-off catch-up email sent
 10/12 with all 28 live ADU houses (9 LA / 19 PDX) in this format.
+Ryan missed the inline money text, so (site PR #186) money now renders as a GREEN
+BOX per house from a `money` field {down, us, steve, monthly, usMo, steveMo}
+(`moneyFor()` in scout-alerts.js); resent 10/12 as "💰 28 ADU houses — your 20%
+down & monthly split on every one".
 
 ## (Superseded 10-03) The daily house-alert Routine
 
