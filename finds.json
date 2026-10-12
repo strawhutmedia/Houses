@@ -562,30 +562,6 @@
       "photo": "https://m1.cbhomes.com/p/283/126214050/3181F3e0bfBB482/m23cc.webp"
     },
     {
-      "id": "1324-se-51st-ave-pdx",
-      "tag": "🌲 Portland",
-      "address": "1324 SE 51st Ave",
-      "hood": "Hawthorne, Portland OR",
-      "price": 775000,
-      "beds": 5,
-      "baths": 3,
-      "sqft": 2594,
-      "status": "Active",
-      "verified": "2026-10-02",
-      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
-      "dom": null,
-      "why": "5bd/3ba, 2,594 sf at $775,000 ($299/sf) in Hawthorne. Price cut from $789,000. No ADU claimed/verified.",
-      "ask": "Verify condition, permits and any extra unit.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/1324-se-51st-ave/pid_73063316/"
-        }
-      ],
-      "photo": "https://m.cbhomes.com/p/283/416460359/aDA0D472e545401/m23cc.webp",
-      "wasPrice": 789000
-    },
-    {
       "id": "2817-ne-weidler-st-pdx",
       "tag": "🌲 Portland",
       "address": "2817 NE Weidler St",
@@ -693,28 +669,6 @@
         {
           "label": "Coldwell Banker listing",
           "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/6160-york-blvd/pid_73628265/"
-        }
-      ]
-    },
-    {
-      "id": "4835-ruth-ave-la",
-      "tag": "🌴 Los Angeles",
-      "address": "4835 Ruth Ave",
-      "hood": "Eagle Rock, Los Angeles",
-      "price": 999998,
-      "beds": 4,
-      "baths": 2,
-      "sqft": 1969,
-      "status": "Active",
-      "verified": "2026-10-03",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated Today (10/2/2026)",
-      "dom": null,
-      "why": "4bd/2ba, 1,969 sqft in Eagle Rock, under the cap; MLS #GD26212813. Any ADU/guest-unit claim unverified.",
-      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/4835-ruth-ave/pid_74069341/"
         }
       ]
     },
@@ -873,28 +827,6 @@
       ]
     },
     {
-      "id": "3250-sw-donner-way-ct-pdx",
-      "tag": "🌲 Portland",
-      "address": "3250 SW Donner Way Ct",
-      "hood": "SW Portland, Portland OR",
-      "price": 959000,
-      "beds": 5,
-      "baths": 3,
-      "sqft": 3316,
-      "status": "Active",
-      "verified": "2026-10-03",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/2/2026",
-      "dom": null,
-      "why": "5bd/3ba, 3,316 sqft in SW Portland, under the cap; MLS #391891899. Any ADU/guest-unit claim unverified.",
-      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/3250-sw-donner-way-ct/pid_67456867/"
-        }
-      ]
-    },
-    {
       "id": "2352-sw-market-st-dr-pdx",
       "tag": "🌲 Portland",
       "address": "2352 SW Market St Dr",
@@ -1049,28 +981,6 @@
       ]
     },
     {
-      "id": "4249-se-stark-st-pdx",
-      "tag": "🌲 Portland",
-      "address": "4249 SE Stark St",
-      "hood": "Laurelhurst, Portland OR",
-      "price": 995000,
-      "beds": 5,
-      "baths": 3,
-      "sqft": 3777,
-      "status": "Active",
-      "verified": "2026-10-03",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/1/2026",
-      "dom": null,
-      "why": "5bd/3ba, 3,777 sqft in Laurelhurst, under the cap; MLS #704054326. Any ADU/guest-unit claim unverified.",
-      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/4249-se-stark-st/pid_73993963/"
-        }
-      ]
-    },
-    {
       "id": "6626-se-stark-st-pdx",
       "tag": "🌲 Portland",
       "address": "6626 SE Stark St",
@@ -1111,28 +1021,6 @@
         {
           "label": "Coldwell Banker listing",
           "url": "https://www.coldwellbankerhomes.com/or/portland/4222-n-montana-ave/pid_72792197/"
-        }
-      ]
-    },
-    {
-      "id": "1524-se-24th-ave-pdx",
-      "tag": "🌲 Portland",
-      "address": "1524 SE 24th Ave",
-      "hood": "Division, Portland OR",
-      "price": 899000,
-      "beds": 4,
-      "baths": 2,
-      "sqft": 3102,
-      "status": "Active",
-      "verified": "2026-10-03",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated Today (10/2/2026)",
-      "dom": null,
-      "why": "4bd/2ba, 3,102 sqft in Division, under the cap; MLS #440851455. Any ADU/guest-unit claim unverified.",
-      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/1524-se-24th-ave/pid_74078713/"
         }
       ]
     },
@@ -1379,28 +1267,6 @@
       ]
     },
     {
-      "id": "401-del-norte-st-la",
-      "tag": "🌴 Los Angeles",
-      "address": "401 Del Norte St",
-      "hood": "Mt. Washington, Los Angeles",
-      "price": 899999,
-      "beds": 3,
-      "baths": 3,
-      "sqft": 1504,
-      "status": "Active",
-      "verified": "2026-10-05",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/5/2026",
-      "dom": null,
-      "why": "3bd/3ba, 1,504 sqft in Mt. Washington, under the cap (built 1924, 0.0515 ac lot); MLS #26992437. Any ADU/guest-unit claim unverified.",
-      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/401-del-norte-st/pid_73908582/"
-        }
-      ]
-    },
-    {
       "id": "1048-dexter-st-la",
       "tag": "🌴 Los Angeles",
       "address": "1048 Dexter St",
@@ -1463,28 +1329,6 @@
         {
           "label": "Coldwell Banker listing",
           "url": "https://www.coldwellbankerhomes.com/or/portland/3360-sw-fairmount-blvd/pid_73328383/"
-        }
-      ]
-    },
-    {
-      "id": "6190-mesa-ave-la",
-      "tag": "🌴 Los Angeles",
-      "address": "6190 Mesa Ave",
-      "hood": "Highland Park, Los Angeles",
-      "price": 999999,
-      "beds": 4,
-      "baths": 3,
-      "sqft": 1433,
-      "status": "Active",
-      "verified": "2026-10-06",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/6/2026",
-      "dom": null,
-      "why": "4bd/3ba, 1,433 sqft in Highland Park, under the cap (built 1923, 0.1722 ac lot); MLS #26996787. Listing mentions an ADU/guest unit — UNVERIFIED until permits or sqft back it.",
-      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/6190-mesa-ave/pid_74116554/"
         }
       ]
     },
@@ -1951,28 +1795,6 @@
       ]
     },
     {
-      "id": "2213-se-60th-ave-pdx",
-      "tag": "🌲 Portland",
-      "address": "2213 SE 60th Ave",
-      "hood": "Mt. Tabor, Portland OR",
-      "price": 950000,
-      "beds": 5,
-      "baths": 4,
-      "sqft": 2724,
-      "status": "Active",
-      "verified": "2026-10-09",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/9/2026",
-      "dom": null,
-      "why": "5bd/4ba, 2,724 sqft in Mt. Tabor, under the cap (built 2015, 0.09 ac lot); MLS #335562602. Listing mentions an ADU/guest unit — UNVERIFIED until permits or sqft back it.",
-      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/2213-se-60th-ave/pid_74184588/"
-        }
-      ]
-    },
-    {
       "id": "2727-ne-hancock-st-pdx",
       "tag": "🌲 Portland",
       "address": "2727 NE Hancock St",
@@ -2013,28 +1835,6 @@
         {
           "label": "Coldwell Banker listing",
           "url": "https://www.coldwellbankerhomes.com/or/portland/3826-sw-council-crest-dr/pid_74201218/"
-        }
-      ]
-    },
-    {
-      "id": "2226-sw-iowa-st-pdx",
-      "tag": "🌲 Portland",
-      "address": "2226 SW Iowa St",
-      "hood": "SW Portland, Portland OR",
-      "price": 599900,
-      "beds": 4,
-      "baths": 2,
-      "sqft": 2032,
-      "status": "Active",
-      "verified": "2026-10-10",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/9/2026",
-      "dom": null,
-      "why": "PRICE CUT $624,900 → $599,900. 4bd/2ba, 2,032 sqft in SW Portland, under the cap (built 1930, 0.17 ac lot); MLS #209501703. Any ADU/guest-unit claim unverified.",
-      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/2226-sw-iowa-st/pid_73644580/"
         }
       ]
     },

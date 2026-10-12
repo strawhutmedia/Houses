@@ -164,9 +164,10 @@ function aduVerdict(remarks) {
   const sep = detached ? "Detached" : duplex ? "Duplex — second" : any("attached") ? (any("door") ? "Attached, own entrance" : "Attached") : any("door") ? "Own entrance" : "Detached/attached not stated";
   const facts = [any("permit") ? "permitted" : "permits not stated", any("kitchen") ? "kitchen" : null, any("bath") ? "bath" : null, any("rented") ? "rented now" : null].filter(Boolean);
   const score = (f) => ["kitchen", "bath", "detached", "door", "rented", "permit"].filter((k) => f[k]).length;
-  const best = found.slice().sort((x, y) => score(y) - score(x))[0].ctx;
+  // Quote the most specific sentence (most facts, then the shortest — headlines lose).
+  const best = found.slice().sort((x, y) => score(y) - score(x) || x.ctx.length - y.ctx.length)[0].ctx;
   const evidence = best.length > 280 ? best.slice(0, 277) + "…" : best;
-  return { ok: true, detached, tier: `${sep} ADU (${facts.join(", ")})`, evidence };
+  return { ok: true, detached, tier: duplex && !detached ? `Duplex, 2nd unit (${facts.join(", ")})` : `${sep} ADU (${facts.join(", ")})`, evidence };
 }
 
 const GONE = /pending|contingent|under contract|contract signed|sold|closed|withdrawn|expired|cancel|off market|leased/i;

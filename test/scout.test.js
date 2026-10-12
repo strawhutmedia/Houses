@@ -62,7 +62,7 @@ test("ADU: real separate units pass, with the sentence quoted", () => {
     assert.ok(v.evidence && v.evidence.length > 20, name);
   }
   assert.match(aduVerdict(yes["6190 Mesa (detached 1+1)"]).tier, /^Detached/);
-  assert.match(aduVerdict(yes["1524 SE 24th (legal duplex)"]).tier, /^Duplex/);
+  assert.match(aduVerdict(yes["1524 SE 24th (legal duplex)"]).tier, /^Duplex, 2nd unit/);
   assert.match(aduVerdict(yes["2226 SW Iowa (permitted apartment)"]).tier, /permitted/);
 });
 test("ADU: potential / bonus rooms / bare mentions are rejected", () => {
