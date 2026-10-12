@@ -105,6 +105,14 @@ Ryan missed the inline money text, so (site PR #186) money now renders as a GREE
 BOX per house from a `money` field {down, us, steve, monthly, usMo, steveMo}
 (`moneyFor()` in scout-alerts.js); resent 10/12 as "💰 28 ADU houses — your 20%
 down & monthly split on every one".
+Ryan then said the card was an unreadable blob → site PR #187: STACKED card
+(full-width photo, address, big price, beds·baths·sqft, green money box, "THE ADU"
+tier + italic quote, "DETAILS" bullets, ⚠️ note, "View live listing" button).
+Daily payload now sends structured `adu {tier, quote}`, `facts[]`, `note`, `money`
+(`houseCard()` + `moneyFor()` in scout-alerts.js) — NOT `why` (site renders `why`
+only as a legacy fallback; `houseWhy()` still feeds finds.json). Resent 10/12
+~16:10Z as "🏡 28 ADU houses — easy-to-read version". Open Q to Ryan: clear
+non-ADU houses off the board?
 
 ## (Superseded 10-03) The daily house-alert Routine
 

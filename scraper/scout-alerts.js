@@ -107,18 +107,30 @@ function moneyFor(price, city) {
   const m = finance(price, city);
   return { down: m.down, us: m.us, steve: m.steve, monthly: m.total, usMo: m.usMo, steveMo: m.steveMo };
 }
+// Readable one-per-line facts for the email's "Details" list.
 function pageFacts(x = {}) {
   const f = [];
-  if (x["Year Built"]) f.push(`built ${x["Year Built"]}`);
-  if (x["Lot Size (Sq. Ft.)"]) f.push(`${x["Lot Size (Sq. Ft.)"]} sf lot`);
-  const park = x["Garage Description"] || x["Parking"]; if (park) f.push(`parking: ${park.slice(0, 50)}`);
-  if (x["Cooling Type"] && !/none|see remarks/i.test(x["Cooling Type"])) f.push(`cooling: ${x["Cooling Type"].slice(0, 30)}`);
-  if (x["View"] && !/none/i.test(x["View"])) f.push(`view: ${x["View"].slice(0, 40)}`);
-  if (/yes/i.test(x["Pool"] || "")) f.push("pool");
-  if (x["Property Condition"]) f.push(x["Property Condition"].slice(0, 30));
-  if (x["Added to Site"]) f.push(`listed ${x["Added to Site"].replace(/\(s\)/, "s")}`);
+  if (x["Year Built"]) f.push(`Built ${x["Year Built"]}`);
+  if (x["Lot Size (Sq. Ft.)"]) f.push(`Lot: ${x["Lot Size (Sq. Ft.)"]} sq ft`);
+  const park = x["Garage Description"] || x["Parking"]; if (park) f.push(`Parking: ${park.slice(0, 50)}`);
+  if (x["Cooling Type"] && !/none|see remarks/i.test(x["Cooling Type"])) f.push(`Cooling: ${x["Cooling Type"].slice(0, 30)}`);
+  if (x["View"] && !/none/i.test(x["View"])) f.push(`View: ${x["View"].slice(0, 40)}`);
+  if (/yes/i.test(x["Pool"] || "")) f.push("Pool");
+  if (x["Property Condition"]) f.push(`Condition: ${x["Property Condition"].slice(0, 30)}`);
+  if (x["Added to Site"]) f.push(`On market: ${x["Added to Site"].replace(/\(s\)/, "s").replace(/ ago$/, "")}`);
   if (x._priceCuts) f.push(`${x._priceCuts} price cut${x._priceCuts > 1 ? "s" : ""}`);
   return f;
+}
+// Structured card fields for the site's stacked email card (site src/houseAlert.js).
+function houseCard(c, d) {
+  const a = d.adu || aduVerdict(d.remarks);
+  const facts = pageFacts(d.fields);
+  if (c.mls) facts.push(`MLS #${c.mls}`);
+  return {
+    adu: a.ok ? { tier: a.tier, quote: a.evidence } : null,
+    facts,
+    note: a.ok && /permits not stated/.test(a.tier) ? "Permits for the ADU aren't stated — confirm before making an offer." : null,
+  };
 }
 const decode = (t) => t.replace(/&#(\d+);/g, (_, n) => String.fromCharCode(+n)).replace(/&amp;/g, "&").replace(/&quot;/g, '"')
   .replace(/&#39;|&apos;/g, "'").replace(/&nbsp;/g, " ").replace(/&lt;/g, "<").replace(/&gt;/g, ">");
@@ -351,8 +363,8 @@ async function runHouse({ dry, today, state }) {
     ].filter(Boolean).join(" ");
     const payload = { intro, houses: verified.map((v) => ({
       address: v.address, price: v.price, wasPrice: v.wasPrice && v.price < v.wasPrice ? v.wasPrice : null, beds: v.beds, baths: v.baths, sqft: v.sqft,
-      city: v.city === "Portland" ? "Portland" : "Los Angeles", hood: v.hood, why: houseWhy(v, v.detail), url: v.url, photo: v.photo || v.detail.photo,
-      money: moneyFor(v.price, v.city),
+      city: v.city === "Portland" ? "Portland" : "Los Angeles", hood: v.hood, url: v.url, photo: v.photo || v.detail.photo,
+      money: moneyFor(v.price, v.city), ...houseCard(v, v.detail),
     })) };
     if (dry) console.log("[dry-run] would email:", JSON.stringify(payload).slice(0, 2000));
     else { const r = await postAlert("/api/houses/alert", payload); emailed = r.ok; emailError = r.error || null; }
@@ -470,4 +482,4 @@ async function main() {
 }
 
 if (require.main === module) main().catch((e) => { console.error(e); process.exit(1); });
-module.exports = { parseCbDetail, aduVerdict, compassStatus, daysSince, houseWhy, studioWhy, ptNow, GONE, POST_GONE };
+module.exports = { parseCbDetail, aduVerdict, houseCard, pageFacts, compassStatus, daysSince, houseWhy, studioWhy, ptNow, GONE, POST_GONE };
