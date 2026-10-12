@@ -82,7 +82,38 @@ function parseCbDetail(html) {
     lotAcres: +ld("Lot Size \\(Acres\\)") || null,
     photo: (html.match(/property="og:image" content="([^"]+)"/) || html.match(/og:image" content="([^"]+)"/) || [])[1] || null,
     remarks,
+    fields: pageFields(html),
   };
+}
+// Every "Label: value" fact on the page (70+ on a typical CB listing) + price history.
+function pageFields(html) {
+  const t = html.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, "");
+  const o = {};
+  for (const m of t.matchAll(/<strong>\s*([^<:]{2,40}):\s*<\/strong>\s*([^<]{1,160})/g)) { const k = m[1].trim(); if (!(k in o)) o[k] = decode(m[2]).trim(); }
+  const hist = t.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").match(/Date Details Price Change Source (.{0,400})/);
+  o._priceCuts = hist ? (hist[1].match(/Price Reduced \$[\d,]+/g) || []).length : 0;
+  return o;
+}
+// Ryan + Maggie own 2/3, Steve 1/3 (10/12). 20% down; monthly is an estimate.
+const RATE = 0.0625;
+function finance(price, city) {
+  const down = price * 0.2, loan = price - down, r = RATE / 12, n = 360;
+  const pi = loan * r / (1 - Math.pow(1 + r, -n));
+  const total = pi + price * (city === "Portland" ? 0.011 : 0.012) / 12 + (city === "Portland" ? 150 : 250);
+  return { down, us: down * 2 / 3, steve: down / 3, pi, total, usMo: total * 2 / 3, steveMo: total / 3 };
+}
+function pageFacts(x = {}) {
+  const f = [];
+  if (x["Year Built"]) f.push(`built ${x["Year Built"]}`);
+  if (x["Lot Size (Sq. Ft.)"]) f.push(`${x["Lot Size (Sq. Ft.)"]} sf lot`);
+  const park = x["Garage Description"] || x["Parking"]; if (park) f.push(`parking: ${park.slice(0, 50)}`);
+  if (x["Cooling Type"] && !/none|see remarks/i.test(x["Cooling Type"])) f.push(`cooling: ${x["Cooling Type"].slice(0, 30)}`);
+  if (x["View"] && !/none/i.test(x["View"])) f.push(`view: ${x["View"].slice(0, 40)}`);
+  if (/yes/i.test(x["Pool"] || "")) f.push("pool");
+  if (x["Property Condition"]) f.push(x["Property Condition"].slice(0, 30));
+  if (x["Added to Site"]) f.push(`listed ${x["Added to Site"].replace(/\(s\)/, "s")}`);
+  if (x._priceCuts) f.push(`${x._priceCuts} price cut${x._priceCuts > 1 ? "s" : ""}`);
+  return f;
 }
 const decode = (t) => t.replace(/&#(\d+);/g, (_, n) => String.fromCharCode(+n)).replace(/&amp;/g, "&").replace(/&quot;/g, '"')
   .replace(/&#39;|&apos;/g, "'").replace(/&nbsp;/g, " ").replace(/&lt;/g, "<").replace(/&gt;/g, ">");
@@ -184,6 +215,12 @@ function houseWhy(c, d) {
   s += c.mls ? `; MLS #${c.mls}.` : ".";
   const a = d.adu || aduVerdict(d.remarks);
   s += a.ok ? ` ${a.tier}: "${a.evidence}"` : " No separate ADU described.";
+  if (c.price) {
+    const m = finance(c.price, c.city);
+    s += ` 💰 20% down ${money(m.down)} → you + Maggie ${money(m.us)} · Steve ${money(m.steve)}. Est. monthly ≈ ${money(m.total)} (P&I ${money(m.pi)} @ ${RATE * 100}% + tax + ins) → you + Maggie ${money(m.usMo)} · Steve ${money(m.steveMo)}.`;
+  }
+  const facts = pageFacts(d.fields);
+  if (facts.length) s += ` 📋 ${facts.join(" · ")}.`;
   if (a.ok && /permits not stated/.test(a.tier)) s += " Confirm permits before offering.";
   return s;
 }

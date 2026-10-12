@@ -92,6 +92,16 @@ Also 10/12: stale CB page (>2 days) is now confirmed on **Compass** (POST
 the old code hid stale-but-active houses forever (how 3060 was lost). 10/12 full
 scan: 28 of 206 in-budget listings have a real separate unit.
 
+**10/12 later (Ryan):** every house email now (a) reads the WHOLE CB page —
+`pageFields()` pulls all 70+ "Label: value" facts + price-cut count, surfaced as
+a 📋 line (year built, lot, parking, cooling, view, pool, condition, days listed,
+cuts); (b) shows 💰 money math via `finance()`: 20% down split **2/3 Ryan+Maggie /
+1/3 Steve**, est. monthly at **6.25% 30-yr** + tax (1.2% LA / 1.1% PDX) + ins
+($250 LA / $150 PDX), split 2/3–1/3 (estimate; excludes closing costs/HOA/rent).
+LA neighborhood priority (site PR #185 order): Silver Lake, Echo Park, Los Feliz,
+Highland Park, Atwater, Eagle Rock, Glassell Park. One-off catch-up email sent
+10/12 with all 28 live ADU houses (9 LA / 19 PDX) in this format.
+
 ## (Superseded 10-03) The daily house-alert Routine
 
 Trigger `trig_01DSFmTc3Mw891sxqUgTcL27` ("House alert — LA (NELA) + Portland"),
