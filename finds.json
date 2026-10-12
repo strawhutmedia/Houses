@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-11T19:13:03.790Z",
+  "updatedAt": "2026-10-12T15:34:25.765Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -1989,6 +1989,722 @@
         {
           "label": "Coldwell Banker listing",
           "url": "https://www.coldwellbankerhomes.com/or/portland/1516-se-43rd-ave/pid_73048595/"
+        }
+      ]
+    },
+    {
+      "id": "6190-mesa-ave-la",
+      "tag": "🌴 Los Angeles",
+      "address": "6190 Mesa Ave",
+      "hood": "Highland Park, Los Angeles",
+      "price": 999999,
+      "beds": 4,
+      "baths": 3,
+      "sqft": 1433,
+      "status": "Active",
+      "verified": "2026-10-12",
+      "verifiedHow": "Compass live listing page: Active at $999,999 (CB page last updated 10/6/2026)",
+      "dom": null,
+      "why": "4bd/3ba, 1,433 sqft in Highland Park, under the cap (built 1923, 0.1722 ac lot); MLS #26996787. Detached ADU (permits not stated, bath): \"The front residence is a thoughtfully updated 3-bedroom, 2-bath Craftsman with a bright, functional floor plan, while the detached 1-bedroom, 1-bath ADU provides incredible flexibility for rental income, extended family, guests, or a private home office.\" Confirm permits before offering.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/6190-mesa-ave/pid_74116554/"
+        },
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/listing/2210063253437821977/view"
+        }
+      ]
+    },
+    {
+      "id": "6309-meridian-st-la",
+      "tag": "🌴 Los Angeles",
+      "address": "6309 Meridian St",
+      "hood": "Highland Park, Los Angeles",
+      "price": 1199000,
+      "beds": 4,
+      "baths": 2,
+      "sqft": 2036,
+      "status": "Active",
+      "verified": "2026-10-12",
+      "verifiedHow": "Compass live listing page: Active at $1,199,000 (CB page last updated 9/22/2026)",
+      "dom": null,
+      "why": "4bd/2ba, 2,036 sqft in Highland Park, under the cap (built 1932, 0.1226 ac lot); MLS #26991043. Duplex, 2nd unit (permits not stated): \"This fully occupied charming Spanish-style duplex is set in the heart of Highland Park, one of LAs most sought after neighborhoods.\" Confirm permits before offering.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/6309-meridian-st/pid_73851444/"
+        },
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/listing/2199647778499919537/view"
+        }
+      ]
+    },
+    {
+      "id": "2626-crestmoore-pl-la",
+      "tag": "🌴 Los Angeles",
+      "address": "2626 Crestmoore Pl",
+      "hood": "Glassell Park, Los Angeles",
+      "price": 1100000,
+      "beds": 2,
+      "baths": 2,
+      "sqft": 1440,
+      "status": "Active",
+      "verified": "2026-10-12",
+      "verifiedHow": "Compass live listing page: Active at $1,100,000 (CB page last updated 8/28/2026)",
+      "dom": null,
+      "why": "2bd/2ba, 1,440 sqft in Glassell Park, under the cap (built 1924, 0.1123 ac lot); MLS #26906241. Duplex, 2nd unit (permits not stated): \"Bank-Owned Duplex in the scenic hills of Glassell Park.\" Confirm permits before offering.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/2626-crestmoore-pl/pid_73319820/"
+        },
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/listing/2182202755046426041/view"
+        }
+      ]
+    },
+    {
+      "id": "3666-roderick-rd-la",
+      "tag": "🌴 Los Angeles",
+      "address": "3666 Roderick Rd",
+      "hood": "Glassell Park, Los Angeles",
+      "price": 999999,
+      "beds": 4,
+      "baths": 2,
+      "sqft": 2140,
+      "status": "Active",
+      "verified": "2026-10-12",
+      "verifiedHow": "Compass live listing page: Active at $999,999 (CB page last updated 9/30/2026)",
+      "dom": null,
+      "why": "4bd/2ba, 2,140 sqft in Glassell Park, under the cap (built 1946, 0.1052 ac lot); MLS #26994031. Attached, own entrance ADU (permits not stated, kitchen): \"The lower level is reachable from inside the home or through its own private entrance. It currently has a kitchenette and is ready for a fresh vision, shaped around whatever the next owner imagines (please note the lower level is virtually staged).\" Confirm permits before offering.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/3666-roderick-rd/pid_74020341/"
+        },
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/listing/2206087863760223017/view"
+        }
+      ]
+    },
+    {
+      "id": "401-del-norte-st-la",
+      "tag": "🌴 Los Angeles",
+      "address": "401 Del Norte St",
+      "hood": "Mt. Washington, Los Angeles",
+      "price": 899999,
+      "beds": 3,
+      "baths": 3,
+      "sqft": 1504,
+      "status": "Active",
+      "verified": "2026-10-12",
+      "verifiedHow": "Compass live listing page: Active at $899,999 (CB page last updated 10/8/2026)",
+      "dom": null,
+      "why": "3bd/3ba, 1,504 sqft in Mt. Washington, under the cap (built 1924, 0.0515 ac lot); MLS #26998547. Duplex, 2nd unit (permits not stated): \"Welcome to this beautifully updated Spanish-style DUPLEX situated on a desirable corner lot in the hills of Mount Washington.\" Confirm permits before offering.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/401-del-norte-st/pid_74181778/"
+        },
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/listing/2212084913176102561/view"
+        }
+      ]
+    },
+    {
+      "id": "4835-ruth-ave-la",
+      "tag": "🌴 Los Angeles",
+      "address": "4835 Ruth Ave",
+      "hood": "Eagle Rock, Los Angeles",
+      "price": 999998,
+      "beds": 4,
+      "baths": 2,
+      "sqft": 1969,
+      "status": "Active",
+      "verified": "2026-10-12",
+      "verifiedHow": "Compass live listing page: Active at $999,998 (CB page last updated 10/9/2026)",
+      "dom": null,
+      "why": "4bd/2ba, 1,969 sqft in Eagle Rock, under the cap (built 1923, 0.1551 ac lot); MLS #GD26212813. Detached/attached not stated ADU (permits not stated, bath): \"This unique property features two separate living areas. The front living area has two bedrooms, one bathroom, a spacious living room, a dining area, an office, a lovely private garden area, and a spacious two-car garage with laundry.\" Confirm permits before offering.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/4835-ruth-ave/pid_74069341/"
+        },
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/listing/2207437467266332201/view"
+        }
+      ]
+    },
+    {
+      "id": "1445-n-mariposa-ave-la",
+      "tag": "🌴 Los Angeles",
+      "address": "1445 N Mariposa Ave",
+      "hood": "Los Feliz, Los Angeles",
+      "price": 965000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1800,
+      "status": "Active",
+      "verified": "2026-10-12",
+      "verifiedHow": "Compass live listing page: Active at $965,000 (CB page last updated 9/30/2026)",
+      "dom": null,
+      "why": "3bd/2ba, 1,800 sqft in Los Feliz, under the cap; MLS #26867117. Detached/attached not stated ADU (permitted): \"3+2 with BONUS VACANT UNIT! 1+1 Fully Renovated Legal Rental Unit!\"",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/1445-n-mariposa-ave/pid_72827658/"
+        },
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/listing/2162345877086321073/view"
+        }
+      ]
+    },
+    {
+      "id": "3800-sw-humphrey-blvd-pdx",
+      "tag": "🌲 Portland",
+      "address": "3800 SW Humphrey Blvd",
+      "hood": "West Hills, Portland OR",
+      "price": 949000,
+      "beds": 3,
+      "baths": 3,
+      "sqft": 2714,
+      "status": "Active",
+      "verified": "2026-10-12",
+      "verifiedHow": "Compass live listing page: Active at $949,000 (CB page last updated 6/16/2026)",
+      "dom": null,
+      "why": "3bd/3ba, 2,714 sqft in West Hills, under the cap (built 1959, 0.37 ac lot); MLS #566454471. Attached, own entrance ADU (permits not stated, kitchen, bath): \"The lower level has a large bedroom and full bath with its own entry and deck as well as a full kitchen, making it teen friendly or giving it the potential to be an in-law quarters or separate apartment.\" Confirm permits before offering.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/3800-sw-humphrey-blvd/pid_69110117/"
+        },
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/listing/2016874454506248665/view"
+        }
+      ]
+    },
+    {
+      "id": "1558-n-kenmore-la",
+      "tag": "🌴 Los Angeles",
+      "address": "1558 N Kenmore",
+      "hood": "Los Feliz, Los Angeles",
+      "price": 1095000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1589,
+      "status": "Active",
+      "verified": "2026-10-12",
+      "verifiedHow": "Compass live listing page: Active at $1,095,000 (CB page last updated 9/17/2026)",
+      "dom": null,
+      "why": "3bd/2ba, 1,589 sqft in Los Feliz, under the cap (built 1912, 0.1562 ac lot); MLS #OC26145813. Detached/attached not stated ADU (permitted, bath): \"The permitted ADU features approximately 430 square feet with 1 bedroom and 1 bathroom, complete with a stove, dishwasher, refrigerator, and wall-mounted heating and air conditioning unit.\"",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/1558-n-kenmore/pid_72342071/"
+        },
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/listing/2143568596453049729/view"
+        }
+      ]
+    },
+    {
+      "id": "2226-sw-iowa-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "2226 SW Iowa St",
+      "hood": "SW Portland, Portland OR",
+      "price": 599900,
+      "beds": 4,
+      "baths": 2,
+      "sqft": 2032,
+      "status": "Active",
+      "verified": "2026-10-12",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/11/2026",
+      "dom": null,
+      "why": "4bd/2ba, 2,032 sqft in SW Portland, under the cap (built 1930, 0.17 ac lot); MLS #209501703. Attached, own entrance ADU (permitted): \"Updated Hillsdale home with a permitted separate apartment that can help offset your housing costs and/or provide additional living space.\"",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/2226-sw-iowa-st/pid_73644580/"
+        }
+      ]
+    },
+    {
+      "id": "3250-sw-donner-way-ct-pdx",
+      "tag": "🌲 Portland",
+      "address": "3250 SW Donner Way Ct",
+      "hood": "SW Portland, Portland OR",
+      "price": 959000,
+      "beds": 5,
+      "baths": 3,
+      "sqft": 3316,
+      "status": "Active",
+      "verified": "2026-10-12",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/12/2026",
+      "dom": null,
+      "why": "5bd/3ba, 3,316 sqft in SW Portland, under the cap (built 1941, 0.15 ac lot); MLS #391891899. Attached, own entrance ADU (permits not stated, kitchen, bath): \"A separate private basement apartment/guest quarters with its own entry, kitchen, full bath, & sep. laundry hook up provides exceptional versatility for multigenerational living, long-term visitors or renters (potential rental income w/visiting doctors or nurses).\" Confirm permits before offering.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/3250-sw-donner-way-ct/pid_67456867/"
+        }
+      ]
+    },
+    {
+      "id": "2640-roseview-la",
+      "tag": "🌴 Los Angeles",
+      "address": "2640 Roseview",
+      "hood": "Mt. Washington, Los Angeles",
+      "price": 999000,
+      "beds": 3,
+      "baths": 3,
+      "sqft": 1778,
+      "status": "Active",
+      "verified": "2026-10-12",
+      "verifiedHow": "Compass live listing page: Active at $999,000 (CB page last updated 9/24/2026)",
+      "dom": null,
+      "why": "3bd/3ba, 1,778 sqft in Mt. Washington, under the cap (built 1910, 0.146 ac lot); MLS #CV26201069. Attached ADU (permits not stated, bath): \"The main residence features 2 bedrooms and 2 bathrooms, complemented by a fully attached 1-bedroom, 1-bathroom ADU-an incredible opportunity for multigenerational living, guests, or additional income potential.\" Confirm permits before offering.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/2640-roseview/pid_73722642/"
+        },
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/listing/2194492337263522001/view"
+        }
+      ]
+    },
+    {
+      "id": "1500-sw-davenport-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "1500 SW Davenport St",
+      "hood": "West Hills, Portland OR",
+      "price": 920000,
+      "beds": 4,
+      "baths": 3,
+      "sqft": 2958,
+      "status": "Active",
+      "verified": "2026-10-12",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/11/2026",
+      "dom": null,
+      "why": "4bd/3ba, 2,958 sqft in West Hills, under the cap (built 1910, 0.14 ac lot); MLS #552602456. Detached/attached not stated ADU (permits not stated, rented now): \"A thoughtfully renovated ADU offers excellent flexibility and income potential, generating $2,270/month and over $18K in 2024.\" Confirm permits before offering.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/1500-sw-davenport-st/pid_71529161/"
+        }
+      ]
+    },
+    {
+      "id": "5816-s-corbett-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "5816 S Corbett Ave",
+      "hood": "SW Portland, Portland OR",
+      "price": 889000,
+      "beds": 4,
+      "baths": 4,
+      "sqft": 3182,
+      "status": "Active",
+      "verified": "2026-10-12",
+      "verifiedHow": "Compass live listing page: Active at $889,000 (CB page last updated 9/27/2026)",
+      "dom": null,
+      "why": "4bd/4ba, 3,182 sqft in SW Portland, under the cap (built 1905); MLS #173844905. Detached/attached not stated ADU (permitted, rented now): \"The detached extra deep garage with above ADU was permitted & built in 2017 with long term Airbnb history earning $25,000 annually. All ADU items and included in the purchase.\"",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/5816-s-corbett-ave/pid_70886536/"
+        },
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/listing/2091048399567010009/view"
+        }
+      ]
+    },
+    {
+      "id": "6026-sw-18th-dr-pdx",
+      "tag": "🌲 Portland",
+      "address": "6026 SW 18th Dr",
+      "hood": "SW Portland, Portland OR",
+      "price": 829900,
+      "beds": 4,
+      "baths": 4,
+      "sqft": 2985,
+      "status": "Active",
+      "verified": "2026-10-12",
+      "verifiedHow": "Compass live listing page: Active at $829,900 (CB page last updated 9/10/2026)",
+      "dom": null,
+      "why": "4bd/4ba, 2,985 sqft in SW Portland, under the cap (built 2025, 0.05 ac lot); MLS #250602363. Own entrance ADU (permits not stated): \"It features 4 bedrooms (one on the main living area with a full bath adjoining), a covered deck with a sweeping territorial view, and an ADU with separate entrance, ideal for guests, rental income, or extended family living.\" Confirm permits before offering.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/6026-sw-18th-dr/pid_65963946/"
+        },
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/listing/1866881635689330601/view"
+        }
+      ]
+    },
+    {
+      "id": "3412-sw-13th-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "3412 SW 13th Ave",
+      "hood": "SW Portland, Portland OR",
+      "price": 825000,
+      "beds": 6,
+      "baths": 4,
+      "sqft": 4781,
+      "status": "Active",
+      "verified": "2026-10-12",
+      "verifiedHow": "Compass live listing page: Active at $825,000 (CB page last updated 4/20/2026)",
+      "dom": null,
+      "why": "6bd/4ba, 4,781 sqft in SW Portland, under the cap (built 1950, 0.12 ac lot); MLS #151773110. Attached, own entrance ADU (permits not stated, kitchen, bath): \"The lower level unit has a separate entrance, full kitchen, dining area, laundry room, spacious living room with a fireplace, two bedrooms, and one full bathroom.\" Confirm permits before offering.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/3412-sw-13th-ave/pid_63551260/"
+        },
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/listing/1771333215836061097/view"
+        }
+      ]
+    },
+    {
+      "id": "2622-sw-davenport-ct-pdx",
+      "tag": "🌲 Portland",
+      "address": "2622 SW Davenport Ct",
+      "hood": "West Hills, Portland OR",
+      "price": 799000,
+      "beds": 3,
+      "baths": 3,
+      "sqft": 3488,
+      "status": "Active",
+      "verified": "2026-10-12",
+      "verifiedHow": "Compass live listing page: Active at $799,000 (CB page last updated 9/23/2026)",
+      "dom": null,
+      "why": "3bd/3ba, 3,488 sqft in West Hills, under the cap (built 1962, 0.14 ac lot); MLS #273417999. Attached, own entrance ADU (permits not stated, kitchen, bath): \"A flexible floor plan includes a main-level bedroom and full bath, while the lower level offers a private entrance, kitchenette, bedroom, and full bathroom-ideal for guests, multigenerational living, or extended stays.\" Confirm permits before offering.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/2622-sw-davenport-ct/pid_70377050/"
+        },
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/listing/2072641995476235329/view"
+        }
+      ]
+    },
+    {
+      "id": "6105-ne-13th-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "6105 NE 13th Ave",
+      "hood": "Alberta, Portland OR",
+      "price": 600000,
+      "beds": 3,
+      "baths": 3,
+      "sqft": 2203,
+      "status": "Active",
+      "verified": "2026-10-12",
+      "verifiedHow": "Compass live listing page: Active at $600,000 (CB page last updated 10/8/2026)",
+      "dom": null,
+      "why": "3bd/3ba, 2,203 sqft in Alberta, under the cap (built 1907, 0.12 ac lot); MLS #787988260. Attached ADU (permits not stated, rented now): \"Fantastic location, old Portland charm and awesome income potential from the separate apartment (ADU) over the garage. 3 bedroom property includes segregated 300 square foot studio apartment over the garage, which is currently rented on a month-to-month agreement.\" Confirm permits before offering.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/6105-ne-13th-ave/pid_72303741/"
+        },
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/listing/2140798682477626193/view"
+        }
+      ]
+    },
+    {
+      "id": "2213-se-60th-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "2213 SE 60th Ave",
+      "hood": "Mt. Tabor, Portland OR",
+      "price": 950000,
+      "beds": 5,
+      "baths": 4,
+      "sqft": 2724,
+      "status": "Active",
+      "verified": "2026-10-12",
+      "verifiedHow": "Compass live listing page: Active at $950,000 (CB page last updated 10/9/2026)",
+      "dom": null,
+      "why": "5bd/4ba, 2,724 sqft in Mt. Tabor, under the cap (built 2015, 0.09 ac lot); MLS #335562602. Own entrance ADU (permits not stated, kitchen, bath): \"With its own entrance, full kitchen, living room, bedroom with walk-in closet, laundry, and backyard access, it lives like a home of its own.\" Confirm permits before offering.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/2213-se-60th-ave/pid_74184588/"
+        },
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/listing/2212000288252941913/view"
+        }
+      ]
+    },
+    {
+      "id": "4249-se-stark-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "4249 SE Stark St",
+      "hood": "Laurelhurst, Portland OR",
+      "price": 995000,
+      "beds": 5,
+      "baths": 3,
+      "sqft": 3777,
+      "status": "Active",
+      "verified": "2026-10-12",
+      "verifiedHow": "Compass live listing page: Active at $995,000 (CB page last updated 10/9/2026)",
+      "dom": null,
+      "why": "5bd/3ba, 3,777 sqft in Laurelhurst, under the cap (built 1923, 0.16 ac lot); MLS #704054326. Detached ADU (permitted, kitchen, bath): \"Downstairs, a permitted apartment with own entrance, kitchen, bath, and living space creates options for guests, extended family, rental income, or room to spread out.\"",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/4249-se-stark-st/pid_73993963/"
+        },
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/listing/2211721252095978953/view"
+        }
+      ]
+    },
+    {
+      "id": "1324-se-51st-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "1324 SE 51st Ave",
+      "hood": "Hawthorne, Portland OR",
+      "price": 775000,
+      "beds": 5,
+      "baths": 3,
+      "sqft": 2594,
+      "status": "Active",
+      "verified": "2026-10-12",
+      "verifiedHow": "Compass live listing page: Active at $775,000 (CB page last updated 10/1/2026)",
+      "dom": null,
+      "why": "5bd/3ba, 2,594 sqft in Hawthorne, under the cap (built 1910, 0.08 ac lot); MLS #416460359. Attached ADU (permits not stated, kitchen, bath): \"The lower level has been turned into separate living quarters, boasting 2 bedrooms, a bathroom and a kitchenette.\" Confirm permits before offering.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/1324-se-51st-ave/pid_73063316/"
+        },
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/listing/2171566479005705665/view"
+        }
+      ]
+    },
+    {
+      "id": "1524-se-24th-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "1524 SE 24th Ave",
+      "hood": "Division, Portland OR",
+      "price": 899000,
+      "beds": 4,
+      "baths": 2,
+      "sqft": 3102,
+      "status": "Active",
+      "verified": "2026-10-12",
+      "verifiedHow": "Compass live listing page: Active at $899,000 (CB page last updated 10/2/2026)",
+      "dom": null,
+      "why": "4bd/2ba, 3,102 sqft in Division, under the cap (built 1949, 0.1 ac lot); MLS #440851455. Duplex, 2nd unit (permitted): \"A rare side-by side legal duplex that lives like a home. Built in 1949, this distinctive mid-century duplex offers something increasingly hard to find: two move-in ready units, each with its own backyard, basement, attached garage and additional off-street parking.\"",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/1524-se-24th-ave/pid_74078713/"
+        },
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/listing/2207573834826633089/view"
+        }
+      ]
+    },
+    {
+      "id": "3910-se-32-ave-se-pdx",
+      "tag": "🌲 Portland",
+      "address": "3910 SE 32 Ave SE",
+      "hood": "Division, Portland OR",
+      "price": 724900,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 2599,
+      "status": "Active",
+      "verified": "2026-10-12",
+      "verifiedHow": "Compass live listing page: Active at $724,900 (CB page last updated 9/5/2026)",
+      "dom": null,
+      "why": "3bd/2ba, 2,599 sqft in Division, under the cap (built 1911, 0.12 ac lot); MLS #254953813. Attached, own entrance ADU (permits not stated, bath): \"Upstairs you will find a light-filled 1-bedroom, 1-bath ADU that also offers hardwood floors and its own washer and dryer, plus ample storage. Recent improvements include mini splits, backyard landscaping, paver patio/driveway, fencing, and a clean basement with separate entra…\" Confirm permits before offering.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/3910-se-32-ave-se/pid_72515773/"
+        },
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/listing/2146878744140252697/view"
+        }
+      ]
+    },
+    {
+      "id": "1411-sw-hall-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "1411 SW Hall St",
+      "hood": "West Hills, Portland OR",
+      "price": 699900,
+      "beds": 5,
+      "baths": 3,
+      "sqft": 2270,
+      "status": "Active",
+      "verified": "2026-10-12",
+      "verifiedHow": "Compass live listing page: Active at $699,900 (CB page last updated 8/22/2026)",
+      "dom": null,
+      "why": "5bd/3ba, 2,270 sqft in West Hills, under the cap (built 1912, 0.05 ac lot); MLS #121796080. Detached/attached not stated ADU (permits not stated, bath): \"Enjoy a beautifully updated ADU with a loft and one and half bathrooms- ideal for rental income, guests, or a private workspace. With its unbeatable location and flexible living options, this home offers the perfect balance of comfort, convenience, and charm in the heart of it…\" Confirm permits before offering.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/1411-sw-hall-st/pid_71029326/"
+        },
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/listing/2096607505646096025/view"
+        }
+      ]
+    },
+    {
+      "id": "1808-ne-wasco-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "1808 NE Wasco St",
+      "hood": "Irvington, Portland OR",
+      "price": 699000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 2998,
+      "status": "Active",
+      "verified": "2026-10-12",
+      "verifiedHow": "Compass live listing page: Active at $699,000 (CB page last updated 9/17/2026)",
+      "dom": null,
+      "why": "3bd/2ba, 2,998 sqft in Irvington, under the cap (built 1904, 0.11 ac lot); MLS #548359675. Duplex, 2nd unit (permitted): \"While classified as a legal duplex (main floor and upper floor units), converting to a single residence can be as simple as removing two interior doors.\"",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/1808-ne-wasco-st/pid_73780795/"
+        },
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/listing/2196558751542778465/view"
+        }
+      ]
+    },
+    {
+      "id": "2885-ne-couch-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "2885 NE Couch St",
+      "hood": "Laurelhurst, Portland OR",
+      "price": 799000,
+      "beds": 3,
+      "baths": 3,
+      "sqft": 1872,
+      "status": "Active",
+      "verified": "2026-10-12",
+      "verifiedHow": "Compass live listing page: Active at $799,000 (CB page last updated 8/4/2026)",
+      "dom": null,
+      "why": "3bd/3ba, 1,872 sqft in Laurelhurst, under the cap (built 2020, 0.04 ac lot); MLS #191848891. Attached, own entrance ADU (permits not stated, bath): \"The attached 1 bed, 1 bath ADU has a private entrance-ideal for rental income, guest quarters, or flexible living.\" Confirm permits before offering.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/2885-ne-couch-st/pid_71111337/"
+        },
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/listing/2100112785809790681/view"
+        }
+      ]
+    },
+    {
+      "id": "6901-se-oaks-park-way-pdx",
+      "tag": "🌲 Portland",
+      "address": "6901 SE Oaks Park Way",
+      "hood": "Sellwood, Portland OR",
+      "price": 995000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 2000,
+      "status": "Active",
+      "verified": "2026-10-12",
+      "verifiedHow": "Compass live listing page: Active at $699,000 (CB page last updated 8/25/2026)",
+      "dom": null,
+      "why": "3bd/2ba, 2,000 sqft in Sellwood, under the cap (built 1978); MLS #606117187. Detached ADU (permits not stated, kitchen, bath, rented now): \"The approx. 650 SF ADU back tender house includes one bedroom, one full bathroom, a full kitchen with dining area, laundry area, and separate living room.\" Confirm permits before offering.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/6901-se-oaks-park-way-16/pid_71922854/"
+        },
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/listing/2128714126716120657/view"
+        }
+      ]
+    },
+    {
+      "id": "2246-nw-glisan-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "2246 NW Glisan St",
+      "hood": "West Hills, Portland OR",
+      "price": 950000,
+      "beds": 5,
+      "baths": 4,
+      "sqft": 4972,
+      "status": "Active",
+      "verified": "2026-10-12",
+      "verifiedHow": "Compass live listing page: Active at $950,000 (CB page last updated 9/26/2026)",
+      "dom": null,
+      "why": "5bd/4ba, 4,972 sqft in West Hills, under the cap (built 1912); MLS #697411782. Duplex, 2nd unit (permits not stated): \"Preserve the existing duplex configuration or explore the potential to create one spacious residence in an exceptional Northwest Portland location.\" Confirm permits before offering.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/2246-nw-glisan-st/pid_73959196/"
+        },
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/listing/2203217290519467497/view"
         }
       ]
     }

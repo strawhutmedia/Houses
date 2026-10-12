@@ -1,9 +1,9 @@
 {
   "studio": {
-    "lastRun": "2026-10-11",
-    "at": "2026-10-11T19:09:41.926Z",
-    "spacesFile": "2026-10-11T19:09:41.866Z",
-    "craigslistFetched": 144,
+    "lastRun": "2026-10-12",
+    "at": "2026-10-12T15:29:34.666Z",
+    "spacesFile": "2026-10-12T15:29:34.580Z",
+    "craigslistFetched": 146,
     "candidates": 0,
     "verified": [],
     "emailed": false,
@@ -14,29 +14,55 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-10-11",
-    "at": "2026-10-11T19:13:04.785Z",
+    "lastRun": "2026-10-12",
+    "at": "2026-10-12T15:34:27.159Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 799,
-        "matches": 1
+        "scanned": 803,
+        "matches": 9
       },
       "Portland": {
-        "scanned": 1260,
-        "matches": 1
+        "scanned": 1259,
+        "matches": 19
       }
     },
-    "candidates": 2,
+    "candidates": 28,
     "verified": [
-      "152 N Benton Way (Silver Lake) $1,199,000",
-      "1516 SE 43rd Ave (Hawthorne) $529,900"
+      "6190 Mesa Ave (Highland Park) $999,999",
+      "6309 Meridian St (Highland Park) $1,199,000",
+      "2626 Crestmoore Pl (Glassell Park) $1,100,000",
+      "3666 Roderick Rd (Glassell Park) $999,999",
+      "401 Del Norte St (Mt. Washington) $899,999",
+      "4835 Ruth Ave (Eagle Rock) $999,998",
+      "1445 N Mariposa Ave (Los Feliz) $965,000",
+      "3800 SW Humphrey Blvd (West Hills) $949,000",
+      "1558 N Kenmore (Los Feliz) $1,095,000",
+      "2226 SW Iowa St (SW Portland) $599,900",
+      "3250 SW Donner Way Ct (SW Portland) $959,000",
+      "2640 Roseview (Mt. Washington) $999,000",
+      "1500 SW Davenport St (West Hills) $920,000",
+      "5816 S Corbett Ave (SW Portland) $889,000",
+      "6026 SW 18th Dr (SW Portland) $829,900",
+      "3412 SW 13th Ave (SW Portland) $825,000",
+      "2622 SW Davenport Ct (West Hills) $799,000",
+      "6105 NE 13th Ave (Alberta) $600,000",
+      "2213 SE 60th Ave (Mt. Tabor) $950,000",
+      "4249 SE Stark St (Laurelhurst) $995,000",
+      "1324 SE 51st Ave (Hawthorne) $775,000",
+      "1524 SE 24th Ave (Division) $899,000",
+      "3910 SE 32 Ave SE (Division) $724,900",
+      "1411 SW Hall St (West Hills) $699,900",
+      "1808 NE Wasco St (Irvington) $699,000",
+      "2885 NE Couch St (Laurelhurst) $799,000",
+      "6901 SE Oaks Park Way (Sellwood) $995,000",
+      "2246 NW Glisan St (West Hills) $950,000"
     ],
     "emailed": true,
     "emailError": null,
     "rejected": [],
     "unreachable": [],
-    "boardAdded": 1,
-    "boardPriceCuts": 1,
+    "boardAdded": 28,
+    "boardPriceCuts": 0,
     "movedToCorrections": [],
     "brokenSince": null,
     "ok": true
