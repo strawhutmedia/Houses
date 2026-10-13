@@ -1,69 +1,60 @@
 {
   "studio": {
-    "lastRun": "2026-10-12",
-    "at": "2026-10-12T15:29:34.666Z",
-    "spacesFile": "2026-10-12T15:29:34.580Z",
-    "craigslistFetched": 146,
-    "candidates": 0,
+    "lastRun": "2026-10-13",
+    "at": "2026-10-13T20:21:07.146Z",
+    "spacesFile": "2026-10-13T20:21:06.966Z",
+    "craigslistFetched": 198,
+    "candidates": 1,
     "verified": [],
     "emailed": false,
     "emailError": null,
-    "rejected": [],
+    "rejected": [
+      "Spa Rooms for Rent: size not stated"
+    ],
     "unreachable": [],
     "brokenSince": null,
     "ok": true
   },
   "house": {
-    "lastRun": "2026-10-12",
-    "at": "2026-10-12T15:34:27.159Z",
+    "lastRun": "2026-10-13",
+    "at": "2026-10-13T20:24:36.736Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 803,
-        "matches": 9
+        "scanned": 819,
+        "matches": 4
       },
       "Portland": {
-        "scanned": 1259,
-        "matches": 19
+        "scanned": 1256,
+        "matches": 6
       }
     },
-    "candidates": 28,
+    "candidates": 10,
     "verified": [
-      "6190 Mesa Ave (Highland Park) $999,999",
-      "6309 Meridian St (Highland Park) $1,199,000",
-      "2626 Crestmoore Pl (Glassell Park) $1,100,000",
-      "3666 Roderick Rd (Glassell Park) $999,999",
-      "401 Del Norte St (Mt. Washington) $899,999",
-      "4835 Ruth Ave (Eagle Rock) $999,998",
-      "1445 N Mariposa Ave (Los Feliz) $965,000",
-      "3800 SW Humphrey Blvd (West Hills) $949,000",
-      "1558 N Kenmore (Los Feliz) $1,095,000",
-      "2226 SW Iowa St (SW Portland) $599,900",
-      "3250 SW Donner Way Ct (SW Portland) $959,000",
-      "2640 Roseview (Mt. Washington) $999,000",
-      "1500 SW Davenport St (West Hills) $920,000",
-      "5816 S Corbett Ave (SW Portland) $889,000",
-      "6026 SW 18th Dr (SW Portland) $829,900",
-      "3412 SW 13th Ave (SW Portland) $825,000",
-      "2622 SW Davenport Ct (West Hills) $799,000",
-      "6105 NE 13th Ave (Alberta) $600,000",
-      "2213 SE 60th Ave (Mt. Tabor) $950,000",
-      "4249 SE Stark St (Laurelhurst) $995,000",
-      "1324 SE 51st Ave (Hawthorne) $775,000",
-      "1524 SE 24th Ave (Division) $899,000",
-      "3910 SE 32 Ave SE (Division) $724,900",
-      "1411 SW Hall St (West Hills) $699,900",
-      "1808 NE Wasco St (Irvington) $699,000",
-      "2885 NE Couch St (Laurelhurst) $799,000",
-      "6901 SE Oaks Park Way (Sellwood) $995,000",
-      "2246 NW Glisan St (West Hills) $950,000"
+      "2640 Roseview (Mt. Washington) $975,000"
     ],
     "emailed": true,
     "emailError": null,
-    "rejected": [],
+    "rejected": [
+      "550 Marie Ave: no separate ADU — no ADU/second unit in description",
+      "5535 SW 53rd Ave: no separate ADU — no ADU/second unit in description",
+      "294 NW MacLeay Blvd: no separate ADU — no ADU/second unit in description",
+      "1120 N Ave 56: no separate ADU — no ADU/second unit in description",
+      "4054 N Missouri Ave: no separate ADU — no ADU/second unit in description",
+      "1510 Morton Terrace: no separate ADU — ADU is only potential/planned/unfinished",
+      "4726 SW Patton Rd: no separate ADU — no ADU/second unit in description",
+      "4021 SW Council Crest Dr: no separate ADU — a guest suite/flex room, not a unit (no kitchen, rent or separate structure)",
+      "3919 SW Hillside Dr: no separate ADU — no ADU/second unit in description"
+    ],
     "unreachable": [],
-    "boardAdded": 28,
-    "boardPriceCuts": 0,
-    "movedToCorrections": [],
+    "boardAdded": 0,
+    "boardPriceCuts": 1,
+    "movedToCorrections": [
+      "4061 SW Flower St: Pending",
+      "2041 NE Mason St: Pending",
+      "4134 N Haight Ave: Pending",
+      "1902 SE 80th Ave: Pending",
+      "2727 NE Hancock St: Pending"
+    ],
     "brokenSince": null,
     "ok": true
   }
