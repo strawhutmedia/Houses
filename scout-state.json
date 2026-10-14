@@ -1,59 +1,49 @@
 {
   "studio": {
-    "lastRun": "2026-10-13",
-    "at": "2026-10-13T20:21:07.146Z",
-    "spacesFile": "2026-10-13T20:21:06.966Z",
-    "craigslistFetched": 198,
-    "candidates": 1,
+    "lastRun": "2026-10-14",
+    "at": "2026-10-14T18:52:53.828Z",
+    "spacesFile": "2026-10-14T18:52:53.756Z",
+    "craigslistFetched": 164,
+    "candidates": 0,
     "verified": [],
     "emailed": false,
     "emailError": null,
-    "rejected": [
-      "Spa Rooms for Rent: size not stated"
-    ],
+    "rejected": [],
     "unreachable": [],
     "brokenSince": null,
     "ok": true
   },
   "house": {
-    "lastRun": "2026-10-13",
-    "at": "2026-10-13T20:24:36.736Z",
+    "lastRun": "2026-10-14",
+    "at": "2026-10-14T18:55:59.951Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 819,
-        "matches": 4
+        "scanned": 826,
+        "matches": 2
       },
       "Portland": {
-        "scanned": 1256,
-        "matches": 6
+        "scanned": 1253,
+        "matches": 5
       }
     },
-    "candidates": 10,
-    "verified": [
-      "2640 Roseview (Mt. Washington) $975,000"
-    ],
-    "emailed": true,
+    "candidates": 7,
+    "verified": [],
+    "emailed": false,
     "emailError": null,
     "rejected": [
-      "550 Marie Ave: no separate ADU — no ADU/second unit in description",
-      "5535 SW 53rd Ave: no separate ADU — no ADU/second unit in description",
-      "294 NW MacLeay Blvd: no separate ADU — no ADU/second unit in description",
-      "1120 N Ave 56: no separate ADU — no ADU/second unit in description",
-      "4054 N Missouri Ave: no separate ADU — no ADU/second unit in description",
-      "1510 Morton Terrace: no separate ADU — ADU is only potential/planned/unfinished",
-      "4726 SW Patton Rd: no separate ADU — no ADU/second unit in description",
-      "4021 SW Council Crest Dr: no separate ADU — a guest suite/flex room, not a unit (no kitchen, rent or separate structure)",
-      "3919 SW Hillside Dr: no separate ADU — no ADU/second unit in description"
+      "3621 Division: no separate ADU — no ADU/second unit in description",
+      "545 SE Peacock Ln: no separate ADU — a guest suite/flex room, not a unit (no kitchen, rent or separate structure)",
+      "3921 SW Sweetbriar Dr: no separate ADU — no ADU/second unit in description",
+      "2055 N Wygant St: no separate ADU — no ADU/second unit in description",
+      "152 N Benton Way: no separate ADU — no ADU/second unit in description",
+      "7231 SE Clay St: no separate ADU — ADU is only potential/planned/unfinished",
+      "428 SE 30th Pl: no separate ADU — no ADU/second unit in description"
     ],
     "unreachable": [],
     "boardAdded": 0,
-    "boardPriceCuts": 1,
+    "boardPriceCuts": 0,
     "movedToCorrections": [
-      "4061 SW Flower St: Pending",
-      "2041 NE Mason St: Pending",
-      "4134 N Haight Ave: Pending",
-      "1902 SE 80th Ave: Pending",
-      "2727 NE Hancock St: Pending"
+      "8535 SE 15th Ave: Pending"
     ],
     "brokenSince": null,
     "ok": true

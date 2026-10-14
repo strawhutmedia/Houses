@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-13T20:24:35.049Z",
+  "updatedAt": "2026-10-14T18:55:59.948Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -1685,28 +1685,6 @@
       ]
     },
     {
-      "id": "8535-se-15th-ave-pdx",
-      "tag": "🌲 Portland",
-      "address": "8535 SE 15th Ave",
-      "hood": "Sellwood, Portland OR",
-      "price": 799000,
-      "beds": 3,
-      "baths": 2,
-      "sqft": 1993,
-      "status": "Active",
-      "verified": "2026-10-09",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/8/2026",
-      "dom": null,
-      "why": "3bd/2ba, 1,993 sqft in Sellwood, under the cap (built 1906, 0.12 ac lot); MLS #190844316. Any ADU/guest-unit claim unverified.",
-      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/8535-se-15th-ave/pid_74178804/"
-        }
-      ]
-    },
-    {
       "id": "3826-sw-council-crest-dr-pdx",
       "tag": "🌲 Portland",
       "address": "3826 SW Council Crest Dr",
@@ -2699,6 +2677,10 @@
     {
       "date": "2026-10-13",
       "text": "2727 NE Hancock St (Irvington, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-10-14",
+      "text": "8535 SE 15th Ave (Sellwood, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
     }
   ]
 }
