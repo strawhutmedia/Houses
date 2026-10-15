@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-14T18:55:59.948Z",
+  "updatedAt": "2026-10-15T18:41:01.242Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -1729,28 +1729,6 @@
       ]
     },
     {
-      "id": "5857-ne-24th-ave-pdx",
-      "tag": "🌲 Portland",
-      "address": "5857 NE 24th Ave",
-      "hood": "Alberta, Portland OR",
-      "price": 675000,
-      "beds": 3,
-      "baths": 2,
-      "sqft": 2237,
-      "status": "Active",
-      "verified": "2026-10-10",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/10/2026",
-      "dom": null,
-      "why": "3bd/2ba, 2,237 sqft in Alberta, under the cap (built 1939, 0.12 ac lot); MLS #547391495. Any ADU/guest-unit claim unverified.",
-      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/5857-ne-24th-ave/pid_74200174/"
-        }
-      ]
-    },
-    {
       "id": "1326-sw-12th-ave-pdx",
       "tag": "🌲 Portland",
       "address": "1326 SW 12th Ave",
@@ -1813,28 +1791,6 @@
         {
           "label": "Coldwell Banker listing",
           "url": "https://www.coldwellbankerhomes.com/or/portland/2323-se-70th-ave/pid_73013005/"
-        }
-      ]
-    },
-    {
-      "id": "2635-se-market-st-pdx",
-      "tag": "🌲 Portland",
-      "address": "2635 SE Market St",
-      "hood": "Division, Portland OR",
-      "price": 875000,
-      "beds": 4,
-      "baths": 2,
-      "sqft": 2753,
-      "status": "Active",
-      "verified": "2026-10-10",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/9/2026",
-      "dom": null,
-      "why": "4bd/2ba, 2,753 sqft in Division, under the cap (built 1930, 0.12 ac lot); MLS #582958135. Any ADU/guest-unit claim unverified.",
-      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/2635-se-market-st/pid_73669656/"
         }
       ]
     },
@@ -2425,15 +2381,15 @@
       "tag": "🌲 Portland",
       "address": "3910 SE 32 Ave SE",
       "hood": "Division, Portland OR",
-      "price": 724900,
+      "price": 699000,
       "beds": 3,
       "baths": 2,
       "sqft": 2599,
       "status": "Active",
-      "verified": "2026-10-12",
-      "verifiedHow": "Compass live listing page: Active at $724,900 (CB page last updated 9/5/2026)",
+      "verified": "2026-10-15",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/14/2026",
       "dom": null,
-      "why": "3bd/2ba, 2,599 sqft in Division, under the cap (built 1911, 0.12 ac lot); MLS #254953813. Attached, own entrance ADU (permits not stated, bath): \"Upstairs you will find a light-filled 1-bedroom, 1-bath ADU that also offers hardwood floors and its own washer and dryer, plus ample storage. Recent improvements include mini splits, backyard landscaping, paver patio/driveway, fencing, and a clean basement with separate entra…\" Confirm permits before offering.",
+      "why": "PRICE CUT $724,900 → $699,000. 3bd/2ba, 2,599 sqft in Division, under the cap (built 1911, 0.12 ac lot); MLS #254953813. Attached, own entrance ADU (permits not stated, bath): \"Upstairs you will find a light-filled 1-bedroom, 1-bath ADU that also offers hardwood floors and its own washer and dryer, plus ample storage. Recent improvements include mini splits, backyard landscaping, paver patio/driveway, fencing, and a clean basement with separate entra…\" 📋 Built 1911 · Lot: 5,227 sq ft · Cooling: Mini Split · Condition: Updated/Remodeled · On market: 97 days · 3 price cuts. Confirm permits before offering.",
       "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
       "links": [
         {
@@ -2681,6 +2637,14 @@
     {
       "date": "2026-10-14",
       "text": "8535 SE 15th Ave (Sellwood, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-10-15",
+      "text": "5857 NE 24th Ave (Alberta, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-10-15",
+      "text": "2635 SE Market St (Division, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
     }
   ]
 }

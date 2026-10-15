@@ -1,12 +1,14 @@
 {
   "studio": {
-    "lastRun": "2026-10-14",
-    "at": "2026-10-14T18:52:53.828Z",
-    "spacesFile": "2026-10-14T18:52:53.756Z",
-    "craigslistFetched": 164,
-    "candidates": 0,
-    "verified": [],
-    "emailed": false,
+    "lastRun": "2026-10-15",
+    "at": "2026-10-15T18:38:20.926Z",
+    "spacesFile": "2026-10-15T18:38:19.324Z",
+    "craigslistFetched": 120,
+    "candidates": 1,
+    "verified": [
+      "Small Warehouse Space in Burbank (Burbank) $3,200"
+    ],
+    "emailed": true,
     "emailError": null,
     "rejected": [],
     "unreachable": [],
@@ -14,36 +16,41 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-10-14",
-    "at": "2026-10-14T18:55:59.951Z",
+    "lastRun": "2026-10-15",
+    "at": "2026-10-15T18:41:02.175Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 826,
+        "scanned": 816,
         "matches": 2
       },
       "Portland": {
         "scanned": 1253,
-        "matches": 5
+        "matches": 8
       }
     },
-    "candidates": 7,
-    "verified": [],
-    "emailed": false,
+    "candidates": 10,
+    "verified": [
+      "3910 SE 32 Ave SE (Division) $699,000"
+    ],
+    "emailed": true,
     "emailError": null,
     "rejected": [
-      "3621 Division: no separate ADU — no ADU/second unit in description",
-      "545 SE Peacock Ln: no separate ADU — a guest suite/flex room, not a unit (no kitchen, rent or separate structure)",
-      "3921 SW Sweetbriar Dr: no separate ADU — no ADU/second unit in description",
-      "2055 N Wygant St: no separate ADU — no ADU/second unit in description",
+      "4163 SW Council Crest Dr: no separate ADU — no ADU/second unit in description",
+      "2824 SW Illinois St: no separate ADU — no ADU/second unit in description",
+      "2213 Selig Dr: no separate ADU — no ADU/second unit in description",
       "152 N Benton Way: no separate ADU — no ADU/second unit in description",
-      "7231 SE Clay St: no separate ADU — ADU is only potential/planned/unfinished",
-      "428 SE 30th Pl: no separate ADU — no ADU/second unit in description"
+      "716 N Alberta St: no separate ADU — a guest suite/flex room, not a unit (no kitchen, rent or separate structure)",
+      "811 SW 58th Ave: no separate ADU — no ADU/second unit in description",
+      "1622 SE Harney St: no separate ADU — a guest suite/flex room, not a unit (no kitchen, rent or separate structure)",
+      "2237 NE Clackamas St: no separate ADU — no ADU/second unit in description",
+      "1915 SE 38th Ave: no separate ADU — no ADU/second unit in description"
     ],
     "unreachable": [],
     "boardAdded": 0,
-    "boardPriceCuts": 0,
+    "boardPriceCuts": 1,
     "movedToCorrections": [
-      "8535 SE 15th Ave: Pending"
+      "5857 NE 24th Ave: Pending",
+      "2635 SE Market St: Pending"
     ],
     "brokenSince": null,
     "ok": true
