@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15T18:41:01.242Z",
+  "updatedAt": "2026-10-16T18:24:46.276Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -585,28 +585,6 @@
       "photo": "https://m1.cbhomes.com/p/283/493296673/6553Df393D644Ad/m23cc.webp"
     },
     {
-      "id": "309-stowe-terrace-la",
-      "tag": "🌴 Los Angeles",
-      "address": "309 Stowe Terrace",
-      "hood": "Highland Park, Los Angeles",
-      "price": 849000,
-      "beds": 2,
-      "baths": 2,
-      "sqft": 876,
-      "status": "Active",
-      "verified": "2026-10-03",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated Today (10/2/2026)",
-      "dom": null,
-      "why": "2bd/2ba, 876 sqft in Highland Park, under the cap; MLS #26990325. Any ADU/guest-unit claim unverified.",
-      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/309-stowe-terrace/pid_74082570/"
-        }
-      ]
-    },
-    {
       "id": "4820-buchanan-st-la",
       "tag": "🌴 Los Angeles",
       "address": "4820 Buchanan St",
@@ -1131,28 +1109,6 @@
         {
           "label": "Coldwell Banker listing",
           "url": "https://www.coldwellbankerhomes.com/or/portland/2804-ne-25th-ave/pid_73768596/"
-        }
-      ]
-    },
-    {
-      "id": "3219-se-28th-ave-pdx",
-      "tag": "🌲 Portland",
-      "address": "3219 SE 28th Ave",
-      "hood": "Division, Portland OR",
-      "price": 347777,
-      "beds": 2,
-      "baths": 2,
-      "sqft": 800,
-      "status": "Active",
-      "verified": "2026-10-03",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/2/2026",
-      "dom": null,
-      "why": "2bd/2ba, 800 sqft in Division, under the cap; MLS #703735753. Any ADU/guest-unit claim unverified.",
-      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/3219-se-28th-ave/pid_65109872/"
         }
       ]
     },
@@ -2531,6 +2487,32 @@
           "url": "https://www.compass.com/listing/2203217290519467497/view"
         }
       ]
+    },
+    {
+      "id": "2728-queen-la",
+      "tag": "🌴 Los Angeles",
+      "address": "2728 Queen",
+      "hood": "Frogtown, Los Angeles",
+      "price": 999000,
+      "beds": 2,
+      "baths": 2,
+      "sqft": 920,
+      "status": "Active",
+      "verified": "2026-10-16",
+      "verifiedHow": "Compass live listing page: Active at $999,000 (CB page last updated Today (10/16/2026))",
+      "dom": null,
+      "why": "2bd/2ba, 920 sqft in Frogtown, under the cap (built 1930, 0.125 ac lot); MLS #SR26223992. Duplex, 2nd unit (permits not stated): \"Currently, property offers two units, (1) is 2728 Queen a 1bd + 1 ba and (2) 1926 Blake 1bd and 1 ba.\" 📋 Built 1930 · Lot: 5,444 sq ft · On market: Today. Confirm permits before offering.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/2728-queen/pid_74288622/"
+        },
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/listing/2216934310965775081/view"
+        }
+      ]
     }
   ],
   "corrections": [
@@ -2645,6 +2627,14 @@
     {
       "date": "2026-10-15",
       "text": "2635 SE Market St (Division, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-10-16",
+      "text": "309 Stowe Terrace (Highland Park, Los Angeles) is now Under Contract per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-10-16",
+      "text": "3219 SE 28th Ave (Division, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
     }
   ]
 }

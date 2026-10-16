@@ -1,12 +1,12 @@
 {
   "studio": {
-    "lastRun": "2026-10-15",
-    "at": "2026-10-15T18:38:20.926Z",
-    "spacesFile": "2026-10-15T18:38:19.324Z",
-    "craigslistFetched": 120,
+    "lastRun": "2026-10-16",
+    "at": "2026-10-16T18:20:46.345Z",
+    "spacesFile": "2026-10-16T18:20:44.763Z",
+    "craigslistFetched": 125,
     "candidates": 1,
     "verified": [
-      "Small Warehouse Space in Burbank (Burbank) $3,200"
+      "$2,000 / 1500ft2 - Prime $2,000 / 1500sq ft - Office Space(Los Angele) (Silver Lake) $2,000"
     ],
     "emailed": true,
     "emailError": null,
@@ -16,41 +16,49 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-10-15",
-    "at": "2026-10-15T18:41:02.175Z",
+    "lastRun": "2026-10-16",
+    "at": "2026-10-16T18:24:47.129Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 816,
-        "matches": 2
+        "scanned": 834,
+        "matches": 6
       },
       "Portland": {
-        "scanned": 1253,
-        "matches": 8
+        "scanned": 1265,
+        "matches": 12
       }
     },
-    "candidates": 10,
+    "candidates": 18,
     "verified": [
-      "3910 SE 32 Ave SE (Division) $699,000"
+      "2728 Queen (Frogtown) $999,000"
     ],
     "emailed": true,
     "emailError": null,
     "rejected": [
-      "4163 SW Council Crest Dr: no separate ADU — no ADU/second unit in description",
-      "2824 SW Illinois St: no separate ADU — no ADU/second unit in description",
-      "2213 Selig Dr: no separate ADU — no ADU/second unit in description",
-      "152 N Benton Way: no separate ADU — no ADU/second unit in description",
-      "716 N Alberta St: no separate ADU — a guest suite/flex room, not a unit (no kitchen, rent or separate structure)",
-      "811 SW 58th Ave: no separate ADU — no ADU/second unit in description",
-      "1622 SE Harney St: no separate ADU — a guest suite/flex room, not a unit (no kitchen, rent or separate structure)",
-      "2237 NE Clackamas St: no separate ADU — no ADU/second unit in description",
-      "1915 SE 38th Ave: no separate ADU — no ADU/second unit in description"
+      "1930 Blake: no separate ADU — no ADU/second unit in description",
+      "6107 Meridian St: no separate ADU — a guest suite/flex room, not a unit (no kitchen, rent or separate structure)",
+      "3929 Division St: no separate ADU — no ADU/second unit in description",
+      "4961 N Maywood Ave: no separate ADU — no ADU/second unit in description",
+      "3030 N Coolidge Ave: no separate ADU — no ADU/second unit in description",
+      "5834 SW 59th Ct: no separate ADU — no ADU/second unit in description",
+      "1625 SW Westwood Dr: no separate ADU — no ADU/second unit in description",
+      "2723 SW Carolina St: no separate ADU — no ADU/second unit in description",
+      "2439 SW Idaho St: no separate ADU — no ADU/second unit in description",
+      "427 N Skidmore St: no separate ADU — no ADU/second unit in description",
+      "1915 SE 21st Ave: no separate ADU — no ADU/second unit in description",
+      "2333 SE 40th Ave: no separate ADU — ADU is only potential/planned/unfinished",
+      "2021 N Sumner St: no separate ADU — ADU is only potential/planned/unfinished",
+      "10 SE Cesar E Chavez Blvd: no separate ADU — no ADU/second unit in description",
+      "532 SE Peacock Ln: no separate ADU — no ADU/second unit in description",
+      "3104 SE Francis St: no separate ADU — ADU is only potential/planned/unfinished",
+      "3414 NE 26th Ave: no separate ADU — no ADU/second unit in description"
     ],
     "unreachable": [],
-    "boardAdded": 0,
-    "boardPriceCuts": 1,
+    "boardAdded": 1,
+    "boardPriceCuts": 0,
     "movedToCorrections": [
-      "5857 NE 24th Ave: Pending",
-      "2635 SE Market St: Pending"
+      "309 Stowe Terrace: Under Contract",
+      "3219 SE 28th Ave: Pending"
     ],
     "brokenSince": null,
     "ok": true
