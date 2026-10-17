@@ -1,14 +1,12 @@
 {
   "studio": {
-    "lastRun": "2026-10-16",
-    "at": "2026-10-16T18:20:46.345Z",
-    "spacesFile": "2026-10-16T18:20:44.763Z",
-    "craigslistFetched": 125,
-    "candidates": 1,
-    "verified": [
-      "$2,000 / 1500ft2 - Prime $2,000 / 1500sq ft - Office Space(Los Angele) (Silver Lake) $2,000"
-    ],
-    "emailed": true,
+    "lastRun": "2026-10-17",
+    "at": "2026-10-17T17:32:07.230Z",
+    "spacesFile": "2026-10-17T17:32:07.157Z",
+    "craigslistFetched": 134,
+    "candidates": 0,
+    "verified": [],
+    "emailed": false,
     "emailError": null,
     "rejected": [],
     "unreachable": [],
@@ -16,49 +14,44 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-10-16",
-    "at": "2026-10-16T18:24:47.129Z",
+    "lastRun": "2026-10-17",
+    "at": "2026-10-17T17:35:00.647Z",
     "scanned": {
       "Los Angeles": {
         "scanned": 834,
-        "matches": 6
+        "matches": 3
       },
       "Portland": {
-        "scanned": 1265,
-        "matches": 12
+        "scanned": 1254,
+        "matches": 11
       }
     },
-    "candidates": 18,
+    "candidates": 14,
     "verified": [
-      "2728 Queen (Frogtown) $999,000"
+      "6026 SW 18th Dr (SW Portland) $807,900",
+      "5538 NE 15th Ave (Alberta) $659,000",
+      "4249 SE Stark St (Laurelhurst) $965,000"
     ],
     "emailed": true,
     "emailError": null,
     "rejected": [
-      "1930 Blake: no separate ADU — no ADU/second unit in description",
-      "6107 Meridian St: no separate ADU — a guest suite/flex room, not a unit (no kitchen, rent or separate structure)",
-      "3929 Division St: no separate ADU — no ADU/second unit in description",
-      "4961 N Maywood Ave: no separate ADU — no ADU/second unit in description",
-      "3030 N Coolidge Ave: no separate ADU — no ADU/second unit in description",
-      "5834 SW 59th Ct: no separate ADU — no ADU/second unit in description",
-      "1625 SW Westwood Dr: no separate ADU — no ADU/second unit in description",
-      "2723 SW Carolina St: no separate ADU — no ADU/second unit in description",
-      "2439 SW Idaho St: no separate ADU — no ADU/second unit in description",
-      "427 N Skidmore St: no separate ADU — no ADU/second unit in description",
-      "1915 SE 21st Ave: no separate ADU — no ADU/second unit in description",
-      "2333 SE 40th Ave: no separate ADU — ADU is only potential/planned/unfinished",
-      "2021 N Sumner St: no separate ADU — ADU is only potential/planned/unfinished",
-      "10 SE Cesar E Chavez Blvd: no separate ADU — no ADU/second unit in description",
-      "532 SE Peacock Ln: no separate ADU — no ADU/second unit in description",
-      "3104 SE Francis St: no separate ADU — ADU is only potential/planned/unfinished",
-      "3414 NE 26th Ave: no separate ADU — no ADU/second unit in description"
+      "3507 Garden Ave: no separate ADU — ADU is only potential/planned/unfinished",
+      "2206 Avon St: no separate ADU — no ADU/second unit in description",
+      "4803 SW Stonebrook Ct: no separate ADU — a guest suite/flex room, not a unit (no kitchen, rent or separate structure)",
+      "4535 SW 54th Pl: no separate ADU — no ADU/second unit in description",
+      "1615 SW Ford St Dr: no separate ADU — ADU is only potential/planned/unfinished",
+      "137 E Ave 43: no separate ADU — ADU is only potential/planned/unfinished",
+      "6028 SW 18th Dr: no separate ADU — ADU is only potential/planned/unfinished",
+      "5357 SE Stark St: no separate ADU — no ADU/second unit in description",
+      "5355 SE Stark St: no separate ADU — ADU is only potential/planned/unfinished",
+      "223 N Ivy St: no separate ADU — no ADU/second unit in description",
+      "3217 SE 28th Ave: no separate ADU — no ADU/second unit in description"
     ],
     "unreachable": [],
     "boardAdded": 1,
-    "boardPriceCuts": 0,
+    "boardPriceCuts": 2,
     "movedToCorrections": [
-      "309 Stowe Terrace: Under Contract",
-      "3219 SE 28th Ave: Pending"
+      "2930 NE 24th Ave: Pending"
     ],
     "brokenSince": null,
     "ok": true

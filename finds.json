@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16T18:24:46.276Z",
+  "updatedAt": "2026-10-17T17:34:59.489Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -1113,28 +1113,6 @@
       ]
     },
     {
-      "id": "2930-ne-24th-ave-pdx",
-      "tag": "🌲 Portland",
-      "address": "2930 NE 24th Ave",
-      "hood": "Irvington, Portland OR",
-      "price": 899000,
-      "beds": 4,
-      "baths": 2,
-      "sqft": 3217,
-      "status": "Active",
-      "verified": "2026-10-03",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/2/2026",
-      "dom": null,
-      "why": "4bd/2ba, 3,217 sqft in Irvington, under the cap; MLS #598077072. Any ADU/guest-unit claim unverified.",
-      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/2930-ne-24th-ave/pid_73614453/"
-        }
-      ]
-    },
-    {
       "id": "2223-ne-16th-ave-pdx",
       "tag": "🌲 Portland",
       "address": "2223 NE 16th Ave",
@@ -2129,15 +2107,15 @@
       "tag": "🌲 Portland",
       "address": "6026 SW 18th Dr",
       "hood": "SW Portland, Portland OR",
-      "price": 829900,
+      "price": 807900,
       "beds": 4,
       "baths": 4,
       "sqft": 2985,
       "status": "Active",
-      "verified": "2026-10-12",
-      "verifiedHow": "Compass live listing page: Active at $829,900 (CB page last updated 9/10/2026)",
+      "verified": "2026-10-17",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/17/2026",
       "dom": null,
-      "why": "4bd/4ba, 2,985 sqft in SW Portland, under the cap (built 2025, 0.05 ac lot); MLS #250602363. Own entrance ADU (permits not stated): \"It features 4 bedrooms (one on the main living area with a full bath adjoining), a covered deck with a sweeping territorial view, and an ADU with separate entrance, ideal for guests, rental income, or extended family living.\" Confirm permits before offering.",
+      "why": "PRICE CUT $829,900 → $807,900. 4bd/4ba, 2,985 sqft in SW Portland, under the cap (built 2025, 0.05 ac lot); MLS #250602363. Own entrance ADU (permits not stated): \"It features 4 bedrooms (one on the main living area with a full bath adjoining), a covered deck with a sweeping territorial view, and an ADU with separate entrance, ideal for guests, rental income, or extended family living.\" 📋 Built 2025 · Lot: 2,178 sq ft · Cooling: Central Air · Condition: New Construction · On market: 485 days · 9 price cuts. Confirm permits before offering.",
       "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
       "links": [
         {
@@ -2259,15 +2237,15 @@
       "tag": "🌲 Portland",
       "address": "4249 SE Stark St",
       "hood": "Laurelhurst, Portland OR",
-      "price": 995000,
+      "price": 965000,
       "beds": 5,
       "baths": 3,
       "sqft": 3777,
       "status": "Active",
-      "verified": "2026-10-12",
-      "verifiedHow": "Compass live listing page: Active at $995,000 (CB page last updated 10/9/2026)",
+      "verified": "2026-10-17",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/16/2026",
       "dom": null,
-      "why": "5bd/3ba, 3,777 sqft in Laurelhurst, under the cap (built 1923, 0.16 ac lot); MLS #704054326. Detached ADU (permitted, kitchen, bath): \"Downstairs, a permitted apartment with own entrance, kitchen, bath, and living space creates options for guests, extended family, rental income, or room to spread out.\"",
+      "why": "PRICE CUT $995,000 → $965,000. 5bd/3ba, 3,777 sqft in Laurelhurst, under the cap (built 1923, 0.16 ac lot); MLS #704054326. Detached ADU (permitted, kitchen, bath): \"Downstairs, a permitted apartment with own entrance, kitchen, bath, and living space creates options for guests, extended family, rental income, or bedroom/fmly rm.\" 📋 Built 1923 · Lot: 6,969 sq ft · Cooling: Central Air · Condition: Resale · On market: 19 days · 1 price cut.",
       "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
       "links": [
         {
@@ -2513,6 +2491,28 @@
           "url": "https://www.compass.com/listing/2216934310965775081/view"
         }
       ]
+    },
+    {
+      "id": "5538-ne-15th-ave-pdx",
+      "tag": "🌲 Portland",
+      "address": "5538 NE 15th Ave",
+      "hood": "Alberta, Portland OR",
+      "price": 659000,
+      "beds": 4,
+      "baths": 2,
+      "sqft": 2482,
+      "status": "Active",
+      "verified": "2026-10-17",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/16/2026",
+      "dom": null,
+      "why": "4bd/2ba, 2,482 sqft in Alberta, under the cap (built 1912, 0.1 ac lot); MLS #454468326. Attached ADU (permits not stated, kitchen, bath): \"Downstairs is the fully finished studio apartment with a separate exterior entrance. The space includes a full kitchen, dining area, living room, king size bed nook and full bathroom with clawfoot tub/shower.\" 📋 Built 1912 · Lot: 4,356 sq ft · Condition: Resale · On market: 1 days. Confirm permits before offering.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/5538-ne-15th-ave/pid_74321247/"
+        }
+      ]
     }
   ],
   "corrections": [
@@ -2635,6 +2635,10 @@
     {
       "date": "2026-10-16",
       "text": "3219 SE 28th Ave (Division, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-10-17",
+      "text": "2930 NE 24th Ave (Irvington, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
     }
   ]
 }
