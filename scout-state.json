@@ -1,9 +1,9 @@
 {
   "studio": {
-    "lastRun": "2026-10-17",
-    "at": "2026-10-17T17:32:07.230Z",
-    "spacesFile": "2026-10-17T17:32:07.157Z",
-    "craigslistFetched": 134,
+    "lastRun": "2026-10-18",
+    "at": "2026-10-18T17:33:09.091Z",
+    "spacesFile": "2026-10-18T17:33:09.030Z",
+    "craigslistFetched": 127,
     "candidates": 0,
     "verified": [],
     "emailed": false,
@@ -14,45 +14,29 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-10-17",
-    "at": "2026-10-17T17:35:00.647Z",
+    "lastRun": "2026-10-18",
+    "at": "2026-10-18T17:37:29.008Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 834,
-        "matches": 3
+        "scanned": 831,
+        "matches": 0
       },
       "Portland": {
-        "scanned": 1254,
-        "matches": 11
+        "scanned": 1255,
+        "matches": 1
       }
     },
-    "candidates": 14,
-    "verified": [
-      "6026 SW 18th Dr (SW Portland) $807,900",
-      "5538 NE 15th Ave (Alberta) $659,000",
-      "4249 SE Stark St (Laurelhurst) $965,000"
-    ],
-    "emailed": true,
+    "candidates": 1,
+    "verified": [],
+    "emailed": false,
     "emailError": null,
     "rejected": [
-      "3507 Garden Ave: no separate ADU — ADU is only potential/planned/unfinished",
-      "2206 Avon St: no separate ADU — no ADU/second unit in description",
-      "4803 SW Stonebrook Ct: no separate ADU — a guest suite/flex room, not a unit (no kitchen, rent or separate structure)",
-      "4535 SW 54th Pl: no separate ADU — no ADU/second unit in description",
-      "1615 SW Ford St Dr: no separate ADU — ADU is only potential/planned/unfinished",
-      "137 E Ave 43: no separate ADU — ADU is only potential/planned/unfinished",
-      "6028 SW 18th Dr: no separate ADU — ADU is only potential/planned/unfinished",
-      "5357 SE Stark St: no separate ADU — no ADU/second unit in description",
-      "5355 SE Stark St: no separate ADU — ADU is only potential/planned/unfinished",
-      "223 N Ivy St: no separate ADU — no ADU/second unit in description",
-      "3217 SE 28th Ave: no separate ADU — no ADU/second unit in description"
+      "3002 NE 7th Ave: no separate ADU — no ADU/second unit in description"
     ],
     "unreachable": [],
-    "boardAdded": 1,
-    "boardPriceCuts": 2,
-    "movedToCorrections": [
-      "2930 NE 24th Ave: Pending"
-    ],
+    "boardAdded": 0,
+    "boardPriceCuts": 0,
+    "movedToCorrections": [],
     "brokenSince": null,
     "ok": true
   }
