@@ -1,9 +1,9 @@
 {
   "studio": {
-    "lastRun": "2026-10-18",
-    "at": "2026-10-18T17:33:09.091Z",
-    "spacesFile": "2026-10-18T17:33:09.030Z",
-    "craigslistFetched": 127,
+    "lastRun": "2026-10-19",
+    "at": "2026-10-19T20:11:14.306Z",
+    "spacesFile": "2026-10-19T20:11:14.232Z",
+    "craigslistFetched": 130,
     "candidates": 0,
     "verified": [],
     "emailed": false,
@@ -14,24 +14,27 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-10-18",
-    "at": "2026-10-18T17:37:29.008Z",
+    "lastRun": "2026-10-19",
+    "at": "2026-10-19T20:14:43.058Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 831,
-        "matches": 0
+        "scanned": 832,
+        "matches": 1
       },
       "Portland": {
-        "scanned": 1255,
-        "matches": 1
+        "scanned": 1252,
+        "matches": 3
       }
     },
-    "candidates": 1,
+    "candidates": 4,
     "verified": [],
     "emailed": false,
     "emailError": null,
     "rejected": [
-      "3002 NE 7th Ave: no separate ADU — no ADU/second unit in description"
+      "2300 SW Seymour Dr: no separate ADU — no ADU/second unit in description",
+      "3826 SW Council Crest Dr: no separate ADU — no ADU/second unit in description",
+      "1847 Silent Era Dr: no separate ADU — no ADU/second unit in description",
+      "1932 SW Highland Rd: no separate ADU — no ADU/second unit in description"
     ],
     "unreachable": [],
     "boardAdded": 0,
