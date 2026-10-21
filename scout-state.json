@@ -1,12 +1,14 @@
 {
   "studio": {
-    "lastRun": "2026-10-20",
-    "at": "2026-10-20T18:43:45.411Z",
-    "spacesFile": "2026-10-20T18:43:45.357Z",
-    "craigslistFetched": 136,
-    "candidates": 0,
-    "verified": [],
-    "emailed": false,
+    "lastRun": "2026-10-21",
+    "at": "2026-10-21T18:54:42.546Z",
+    "spacesFile": "2026-10-21T18:54:41.107Z",
+    "craigslistFetched": 144,
+    "candidates": 1,
+    "verified": [
+      "Unique Modern Creative Office Space (Burbank) $3,300"
+    ],
+    "emailed": true,
     "emailError": null,
     "rejected": [],
     "unreachable": [],
@@ -14,36 +16,40 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-10-20",
-    "at": "2026-10-20T18:47:45.062Z",
+    "lastRun": "2026-10-21",
+    "at": "2026-10-21T19:03:58.654Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 836,
-        "matches": 5
+        "scanned": 834,
+        "matches": 3
       },
       "Portland": {
-        "scanned": 1247,
-        "matches": 3
+        "scanned": 1163,
+        "matches": 2
       }
     },
-    "candidates": 8,
+    "candidates": 5,
     "verified": [],
     "emailed": false,
     "emailError": null,
     "rejected": [
-      "152 N Benton Way: no separate ADU — no ADU/second unit in description",
-      "344 S Ave 57: no separate ADU — no ADU/second unit in description",
-      "3863 Cazador: no separate ADU — ADU is only potential/planned/unfinished",
-      "2538 SW Sherwood Dr: no separate ADU — no ADU/second unit in description",
-      "414 NW 22nd Ave: no separate ADU — no ADU/second unit in description",
-      "3288 N Canary Way: no separate ADU — no ADU/second unit in description",
-      "2817 NE Weidler St: no separate ADU — no ADU/second unit in description",
-      "2720 Cunard St: no separate ADU — no ADU/second unit in description"
+      "216 S Iowa St: no separate ADU — no ADU/second unit in description",
+      "367 W Ave 42: no separate ADU — names an ADU but describes nothing about it (no kitchen/bath/entrance/permit)",
+      "4227 Barryknoll Dr: no separate ADU — no ADU/second unit in description",
+      "2206 Edendale Ln: no separate ADU — no ADU/second unit in description",
+      "3217 SE 28th Ave: no separate ADU — no ADU/second unit in description"
     ],
     "unreachable": [],
     "boardAdded": 0,
     "boardPriceCuts": 0,
-    "movedToCorrections": [],
+    "movedToCorrections": [
+      "3621 Division: Pending",
+      "2817 NE Weidler St: Pending",
+      "4820 Buchanan St: Under Contract",
+      "4535 SW 54th Pl: Pending",
+      "4054 N Missouri Ave: Pending",
+      "6190 Mesa Ave: Under Contract"
+    ],
     "brokenSince": null,
     "ok": true
   }

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-17T17:34:59.489Z",
+  "updatedAt": "2026-10-21T19:03:58.651Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -420,30 +420,6 @@
       "photo": "https://m.cbhomes.com/p/510/26995369/c660C17Ce3e64df/m23cc.webp"
     },
     {
-      "id": "3621-division",
-      "tag": "📍 Mt. Washington",
-      "address": "3621 Division",
-      "hood": "Mt. Washington",
-      "price": 779000,
-      "beds": 3,
-      "baths": 2,
-      "sqft": 1248,
-      "status": "Active",
-      "verified": "2026-10-02",
-      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
-      "dom": null,
-      "why": "3bd/2ba, 1,248 sf at $779,000 ($624/sf) in Mt. Washington. Price cut from $819,000. No ADU claimed/verified.",
-      "ask": "Verify condition, permits and any extra unit.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/3621-division/pid_73571171/"
-        }
-      ],
-      "photo": "https://m1.cbhomes.com/p/733/IV26193221/8Cd2cEbd8c084aD/m23cc.webp",
-      "wasPrice": 819000
-    },
-    {
       "id": "4403-w-burnside-rd-pdx",
       "tag": "🌲 Portland",
       "address": "4403 W Burnside Rd",
@@ -562,51 +538,6 @@
       "photo": "https://m1.cbhomes.com/p/283/126214050/3181F3e0bfBB482/m23cc.webp"
     },
     {
-      "id": "2817-ne-weidler-st-pdx",
-      "tag": "🌲 Portland",
-      "address": "2817 NE Weidler St",
-      "hood": "Irvington, Portland OR",
-      "price": 600000,
-      "beds": 4,
-      "baths": 3,
-      "sqft": 1554,
-      "status": "Active",
-      "verified": "2026-10-02",
-      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
-      "dom": null,
-      "why": "4bd/3ba, 1,554 sf at $600,000 ($386/sf) in Irvington. No ADU claimed/verified.",
-      "ask": "Verify condition, permits and any extra unit.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/2817-ne-weidler-st/pid_74048665/"
-        }
-      ],
-      "photo": "https://m1.cbhomes.com/p/283/493296673/6553Df393D644Ad/m23cc.webp"
-    },
-    {
-      "id": "4820-buchanan-st-la",
-      "tag": "🌴 Los Angeles",
-      "address": "4820 Buchanan St",
-      "hood": "Highland Park, Los Angeles",
-      "price": 1249000,
-      "beds": 3,
-      "baths": 3,
-      "sqft": 1704,
-      "status": "Active",
-      "verified": "2026-10-03",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/1/2026",
-      "dom": null,
-      "why": "3bd/3ba, 1,704 sqft in Highland Park, under the cap; MLS #26991423. Any ADU/guest-unit claim unverified.",
-      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/4820-buchanan-st/pid_73938445/"
-        }
-      ]
-    },
-    {
       "id": "212-s-ave-57-la",
       "tag": "🌴 Los Angeles",
       "address": "212 S Ave 57",
@@ -713,28 +644,6 @@
         {
           "label": "Coldwell Banker listing",
           "url": "https://www.coldwellbankerhomes.com/or/portland/4321-sw-terlyn-ct/pid_72191682/"
-        }
-      ]
-    },
-    {
-      "id": "4535-sw-54th-pl-pdx",
-      "tag": "🌲 Portland",
-      "address": "4535 SW 54th Pl",
-      "hood": "SW Portland, Portland OR",
-      "price": 495000,
-      "beds": 4,
-      "baths": 3,
-      "sqft": 1676,
-      "status": "Active",
-      "verified": "2026-10-03",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/2/2026",
-      "dom": null,
-      "why": "4bd/3ba, 1,676 sqft in SW Portland, under the cap; MLS #186725573. Any ADU/guest-unit claim unverified.",
-      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/4535-sw-54th-pl/pid_73644572/"
         }
       ]
     },
@@ -911,28 +820,6 @@
         {
           "label": "Coldwell Banker listing",
           "url": "https://www.coldwellbankerhomes.com/or/portland/2136-n-webster-st/pid_69639837/"
-        }
-      ]
-    },
-    {
-      "id": "4054-n-missouri-ave-pdx",
-      "tag": "🌲 Portland",
-      "address": "4054 N Missouri Ave",
-      "hood": "Mississippi, Portland OR",
-      "price": 799000,
-      "beds": 5,
-      "baths": 3,
-      "sqft": 3574,
-      "status": "Active",
-      "verified": "2026-10-03",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/1/2026",
-      "dom": null,
-      "why": "5bd/3ba, 3,574 sqft in Mississippi, under the cap; MLS #679503786. Any ADU/guest-unit claim unverified.",
-      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/4054-n-missouri-ave/pid_72434514/"
         }
       ]
     },
@@ -1747,32 +1634,6 @@
         {
           "label": "Coldwell Banker listing",
           "url": "https://www.coldwellbankerhomes.com/or/portland/1516-se-43rd-ave/pid_73048595/"
-        }
-      ]
-    },
-    {
-      "id": "6190-mesa-ave-la",
-      "tag": "🌴 Los Angeles",
-      "address": "6190 Mesa Ave",
-      "hood": "Highland Park, Los Angeles",
-      "price": 999999,
-      "beds": 4,
-      "baths": 3,
-      "sqft": 1433,
-      "status": "Active",
-      "verified": "2026-10-12",
-      "verifiedHow": "Compass live listing page: Active at $999,999 (CB page last updated 10/6/2026)",
-      "dom": null,
-      "why": "4bd/3ba, 1,433 sqft in Highland Park, under the cap (built 1923, 0.1722 ac lot); MLS #26996787. Detached ADU (permits not stated, bath): \"The front residence is a thoughtfully updated 3-bedroom, 2-bath Craftsman with a bright, functional floor plan, while the detached 1-bedroom, 1-bath ADU provides incredible flexibility for rental income, extended family, guests, or a private home office.\" Confirm permits before offering.",
-      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/6190-mesa-ave/pid_74116554/"
-        },
-        {
-          "label": "Compass listing",
-          "url": "https://www.compass.com/listing/2210063253437821977/view"
         }
       ]
     },
@@ -2639,6 +2500,30 @@
     {
       "date": "2026-10-17",
       "text": "2930 NE 24th Ave (Irvington, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-10-21",
+      "text": "3621 Division (Mt. Washington) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-10-21",
+      "text": "2817 NE Weidler St (Irvington, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-10-21",
+      "text": "4820 Buchanan St (Highland Park, Los Angeles) is now Under Contract per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-10-21",
+      "text": "4535 SW 54th Pl (SW Portland, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-10-21",
+      "text": "4054 N Missouri Ave (Mississippi, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-10-21",
+      "text": "6190 Mesa Ave (Highland Park, Los Angeles) is now Under Contract per its live Coldwell Banker page — removed from the board."
     }
   ]
 }
