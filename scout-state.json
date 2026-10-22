@@ -1,54 +1,54 @@
 {
   "studio": {
-    "lastRun": "2026-10-21",
-    "at": "2026-10-21T18:54:42.546Z",
-    "spacesFile": "2026-10-21T18:54:41.107Z",
-    "craigslistFetched": 144,
-    "candidates": 1,
+    "lastRun": "2026-10-22",
+    "at": "2026-10-22T18:47:44.463Z",
+    "spacesFile": "2026-10-22T18:47:42.892Z",
+    "craigslistFetched": 129,
+    "candidates": 2,
     "verified": [
-      "Unique Modern Creative Office Space (Burbank) $3,300"
+      "Commercial Office Space (Burbank) $2,898"
     ],
     "emailed": true,
     "emailError": null,
-    "rejected": [],
+    "rejected": [
+      "Quiet Private Professional Office –  Silver Lake: size not stated"
+    ],
     "unreachable": [],
     "brokenSince": null,
     "ok": true
   },
   "house": {
-    "lastRun": "2026-10-21",
-    "at": "2026-10-21T19:03:58.654Z",
+    "lastRun": "2026-10-22",
+    "at": "2026-10-22T18:54:35.347Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 834,
-        "matches": 3
+        "scanned": 842,
+        "matches": 6
       },
       "Portland": {
-        "scanned": 1163,
-        "matches": 2
+        "scanned": 839,
+        "matches": 1
       }
     },
-    "candidates": 5,
-    "verified": [],
-    "emailed": false,
+    "candidates": 7,
+    "verified": [
+      "2728 Queen (Frogtown) $859,900"
+    ],
+    "emailed": true,
     "emailError": null,
     "rejected": [
-      "216 S Iowa St: no separate ADU — no ADU/second unit in description",
-      "367 W Ave 42: no separate ADU — names an ADU but describes nothing about it (no kitchen/bath/entrance/permit)",
-      "4227 Barryknoll Dr: no separate ADU — no ADU/second unit in description",
-      "2206 Edendale Ln: no separate ADU — no ADU/second unit in description",
-      "3217 SE 28th Ave: no separate ADU — no ADU/second unit in description"
+      "2679 Thorpe Ave: no separate ADU — no ADU/second unit in description",
+      "1808 Chickasaw Ave: no separate ADU — no ADU/second unit in description",
+      "1617 SW Broadway Dr: no separate ADU — no ADU/second unit in description",
+      "1712 Rotary Dr: no separate ADU — no ADU/second unit in description",
+      "1930 Blake: no separate ADU — no ADU/second unit in description",
+      "405 Isabel: no separate ADU — a guest suite/flex room, not a unit (no kitchen, rent or separate structure)"
     ],
     "unreachable": [],
     "boardAdded": 0,
-    "boardPriceCuts": 0,
+    "boardPriceCuts": 1,
     "movedToCorrections": [
-      "3621 Division: Pending",
-      "2817 NE Weidler St: Pending",
-      "4820 Buchanan St: Under Contract",
-      "4535 SW 54th Pl: Pending",
-      "4054 N Missouri Ave: Pending",
-      "6190 Mesa Ave: Under Contract"
+      "532 SE Peacock Ln: Pending"
     ],
     "brokenSince": null,
     "ok": true
