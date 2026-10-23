@@ -1,54 +1,54 @@
 {
   "studio": {
-    "lastRun": "2026-10-22",
-    "at": "2026-10-22T18:47:44.463Z",
-    "spacesFile": "2026-10-22T18:47:42.892Z",
-    "craigslistFetched": 129,
-    "candidates": 2,
-    "verified": [
-      "Commercial Office Space (Burbank) $2,898"
-    ],
-    "emailed": true,
+    "lastRun": "2026-10-23",
+    "at": "2026-10-23T18:42:34.219Z",
+    "spacesFile": "2026-10-23T18:42:34.160Z",
+    "craigslistFetched": 116,
+    "candidates": 0,
+    "verified": [],
+    "emailed": false,
     "emailError": null,
-    "rejected": [
-      "Quiet Private Professional Office –  Silver Lake: size not stated"
-    ],
+    "rejected": [],
     "unreachable": [],
     "brokenSince": null,
     "ok": true
   },
   "house": {
-    "lastRun": "2026-10-22",
-    "at": "2026-10-22T18:54:35.347Z",
+    "lastRun": "2026-10-23",
+    "at": "2026-10-23T18:46:48.333Z",
     "scanned": {
       "Los Angeles": {
         "scanned": 842,
-        "matches": 6
+        "matches": 0
       },
       "Portland": {
-        "scanned": 839,
-        "matches": 1
+        "scanned": 1235,
+        "matches": 10
       }
     },
-    "candidates": 7,
-    "verified": [
-      "2728 Queen (Frogtown) $859,900"
-    ],
-    "emailed": true,
+    "candidates": 10,
+    "verified": [],
+    "emailed": false,
     "emailError": null,
     "rejected": [
-      "2679 Thorpe Ave: no separate ADU — no ADU/second unit in description",
-      "1808 Chickasaw Ave: no separate ADU — no ADU/second unit in description",
-      "1617 SW Broadway Dr: no separate ADU — no ADU/second unit in description",
-      "1712 Rotary Dr: no separate ADU — no ADU/second unit in description",
-      "1930 Blake: no separate ADU — no ADU/second unit in description",
-      "405 Isabel: no separate ADU — a guest suite/flex room, not a unit (no kitchen, rent or separate structure)"
+      "4230 SW Hewett Blvd: no separate ADU — no ADU/second unit in description",
+      "5321 SW 33rd Dr: no separate ADU — no ADU/second unit in description",
+      "6024 SW 18th Dr: no separate ADU — ADU is only potential/planned/unfinished",
+      "6012 SW 18th Dr: no separate ADU — ADU is only potential/planned/unfinished",
+      "1523 SE 32nd Pl: no separate ADU — ADU is only potential/planned/unfinished",
+      "6310 SE Grant St: no separate ADU — no ADU/second unit in description",
+      "514 NE Going St: no separate ADU — no ADU/second unit in description",
+      "8535 SE 15th Ave: no separate ADU — no ADU/second unit in description",
+      "2415 NE 15th Ave: no separate ADU — no ADU/second unit in description",
+      "1307 NE Hancock St: no separate ADU — no ADU/second unit in description"
     ],
     "unreachable": [],
     "boardAdded": 0,
-    "boardPriceCuts": 1,
+    "boardPriceCuts": 0,
     "movedToCorrections": [
-      "532 SE Peacock Ln: Pending"
+      "6148 Mt Angelus Dr: Pending",
+      "3360 SW Fairmount Blvd: Pending",
+      "5616 SW 42nd Ave: Pending"
     ],
     "brokenSince": null,
     "ok": true
