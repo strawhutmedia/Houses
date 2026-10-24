@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-23T18:46:48.330Z",
+  "updatedAt": "2026-10-24T17:38:49.948Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -1396,28 +1396,6 @@
       ]
     },
     {
-      "id": "922-se-66th-pl-pdx",
-      "tag": "🌲 Portland",
-      "address": "922 SE 66th Pl",
-      "hood": "Mt. Tabor, Portland OR",
-      "price": 735000,
-      "beds": 4,
-      "baths": 2,
-      "sqft": 3298,
-      "status": "Active",
-      "verified": "2026-10-09",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/9/2026",
-      "dom": null,
-      "why": "PRICE CUT $775,000 → $735,000. 4bd/2ba, 3,298 sqft in Mt. Tabor, under the cap (built 1911, 0.12 ac lot); MLS #794039707. Any ADU/guest-unit claim unverified.",
-      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/922-se-66th-pl/pid_73930116/"
-        }
-      ]
-    },
-    {
       "id": "5355-se-stark-st-pdx",
       "tag": "🌲 Portland",
       "address": "5355 SE Stark St",
@@ -1832,15 +1810,15 @@
       "tag": "🌲 Portland",
       "address": "1500 SW Davenport St",
       "hood": "West Hills, Portland OR",
-      "price": 920000,
+      "price": 895000,
       "beds": 4,
       "baths": 3,
       "sqft": 2958,
       "status": "Active",
-      "verified": "2026-10-12",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/11/2026",
+      "verified": "2026-10-24",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/23/2026",
       "dom": null,
-      "why": "4bd/3ba, 2,958 sqft in West Hills, under the cap (built 1910, 0.14 ac lot); MLS #552602456. Detached/attached not stated ADU (permits not stated, rented now): \"A thoughtfully renovated ADU offers excellent flexibility and income potential, generating $2,270/month and over $18K in 2024.\" Confirm permits before offering.",
+      "why": "PRICE CUT $920,000 → $895,000. 4bd/3ba, 2,958 sqft in West Hills, under the cap (built 1910, 0.14 ac lot); MLS #552602456. Detached/attached not stated ADU (permits not stated, rented now): \"A thoughtfully renovated ADU offers excellent flexibility and income potential, generating $2,270/month and over $18K in 2024.\" 📋 Built 1910 · Lot: 6,098 sq ft · Cooling: Central Air · Condition: Updated/Remodeled · On market: 155 days · 2 price cuts. Confirm permits before offering.",
       "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
       "links": [
         {
@@ -2244,15 +2222,15 @@
       "tag": "🌴 Los Angeles",
       "address": "2728 Queen",
       "hood": "Frogtown, Los Angeles",
-      "price": 859900,
+      "price": 775900,
       "beds": 2,
       "baths": 2,
       "sqft": 920,
       "status": "Active",
-      "verified": "2026-10-22",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/22/2026",
+      "verified": "2026-10-24",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/23/2026",
       "dom": null,
-      "why": "PRICE CUT $999,000 → $859,900. 2bd/2ba, 920 sqft in Frogtown, under the cap (built 1930, 0.125 ac lot); MLS #SR26223992. Duplex, 2nd unit (permits not stated): \"Currently, property offers two units, (1) is 2728 Queen a 1bd + 1 ba and (2) 1928 Blake 1bd and 1 ba.\" 📋 Built 1930 · Lot: 5,444 sq ft · On market: 6 days · 1 price cut. Confirm permits before offering.",
+      "why": "PRICE CUT $859,900 → $775,900. 2bd/2ba, 920 sqft in Frogtown, under the cap (built 1930, 0.125 ac lot); MLS #SR26223992. Duplex, 2nd unit (permits not stated): \"Currently, property offers two units, (1) is 2728 Queen a 1bd + 1 ba and (2) 1928 Blake 1bd and 1 ba.\" 📋 Built 1930 · Lot: 5,444 sq ft · On market: 8 days · 2 price cuts. Confirm permits before offering.",
       "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
       "links": [
         {
@@ -2452,6 +2430,10 @@
     {
       "date": "2026-10-23",
       "text": "5616 SW 42nd Ave (SW Portland, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-10-24",
+      "text": "922 SE 66th Pl (Mt. Tabor, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
     }
   ]
 }

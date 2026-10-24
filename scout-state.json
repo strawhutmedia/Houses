@@ -1,9 +1,9 @@
 {
   "studio": {
-    "lastRun": "2026-10-23",
-    "at": "2026-10-23T18:42:34.219Z",
-    "spacesFile": "2026-10-23T18:42:34.160Z",
-    "craigslistFetched": 116,
+    "lastRun": "2026-10-24",
+    "at": "2026-10-24T17:35:13.245Z",
+    "spacesFile": "2026-10-24T17:35:13.172Z",
+    "craigslistFetched": 126,
     "candidates": 0,
     "verified": [],
     "emailed": false,
@@ -14,41 +14,36 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-10-23",
-    "at": "2026-10-23T18:46:48.333Z",
+    "lastRun": "2026-10-24",
+    "at": "2026-10-24T17:38:52.588Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 842,
-        "matches": 0
+        "scanned": 831,
+        "matches": 1
       },
       "Portland": {
-        "scanned": 1235,
-        "matches": 10
+        "scanned": 1232,
+        "matches": 5
       }
     },
-    "candidates": 10,
-    "verified": [],
-    "emailed": false,
+    "candidates": 6,
+    "verified": [
+      "2728 Queen (Frogtown) $775,900",
+      "1500 SW Davenport St (West Hills) $895,000"
+    ],
+    "emailed": true,
     "emailError": null,
     "rejected": [
-      "4230 SW Hewett Blvd: no separate ADU — no ADU/second unit in description",
-      "5321 SW 33rd Dr: no separate ADU — no ADU/second unit in description",
-      "6024 SW 18th Dr: no separate ADU — ADU is only potential/planned/unfinished",
-      "6012 SW 18th Dr: no separate ADU — ADU is only potential/planned/unfinished",
-      "1523 SE 32nd Pl: no separate ADU — ADU is only potential/planned/unfinished",
-      "6310 SE Grant St: no separate ADU — no ADU/second unit in description",
-      "514 NE Going St: no separate ADU — no ADU/second unit in description",
-      "8535 SE 15th Ave: no separate ADU — no ADU/second unit in description",
-      "2415 NE 15th Ave: no separate ADU — no ADU/second unit in description",
-      "1307 NE Hancock St: no separate ADU — no ADU/second unit in description"
+      "428 SE 30th Pl: no separate ADU — no ADU/second unit in description",
+      "2807 NE Brazee St: no separate ADU — no ADU/second unit in description",
+      "2433 N Emerson St: no separate ADU — no ADU/second unit in description",
+      "4222 N Montana Ave: no separate ADU — no ADU/second unit in description"
     ],
     "unreachable": [],
     "boardAdded": 0,
-    "boardPriceCuts": 0,
+    "boardPriceCuts": 2,
     "movedToCorrections": [
-      "6148 Mt Angelus Dr: Pending",
-      "3360 SW Fairmount Blvd: Pending",
-      "5616 SW 42nd Ave: Pending"
+      "922 SE 66th Pl: Pending"
     ],
     "brokenSince": null,
     "ok": true
