@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-24T17:38:49.948Z",
+  "updatedAt": "2026-10-25T17:54:40.979Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -1374,28 +1374,6 @@
       ]
     },
     {
-      "id": "2205-ne-mason-st-pdx",
-      "tag": "🌲 Portland",
-      "address": "2205 NE Mason St",
-      "hood": "Alberta, Portland OR",
-      "price": 779000,
-      "beds": 3,
-      "baths": 2,
-      "sqft": 2430,
-      "status": "Active",
-      "verified": "2026-10-09",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/8/2026",
-      "dom": null,
-      "why": "3bd/2ba, 2,430 sqft in Alberta, under the cap (built 1939, 0.09 ac lot); MLS #362472107. Any ADU/guest-unit claim unverified.",
-      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/2205-ne-mason-st/pid_74172324/"
-        }
-      ]
-    },
-    {
       "id": "5355-se-stark-st-pdx",
       "tag": "🌲 Portland",
       "address": "5355 SE Stark St",
@@ -2434,6 +2412,10 @@
     {
       "date": "2026-10-24",
       "text": "922 SE 66th Pl (Mt. Tabor, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-10-25",
+      "text": "2205 NE Mason St (Alberta, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
     }
   ]
 }
