@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-25T17:54:40.979Z",
+  "updatedAt": "2026-10-26T20:13:42.171Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -1132,28 +1132,6 @@
       ]
     },
     {
-      "id": "4230-sw-hewett-blvd-pdx",
-      "tag": "🌲 Portland",
-      "address": "4230 SW Hewett Blvd",
-      "hood": "SW Portland, Portland OR",
-      "price": 499900,
-      "beds": 3,
-      "baths": 2,
-      "sqft": 2250,
-      "status": "Active",
-      "verified": "2026-10-07",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/6/2026",
-      "dom": null,
-      "why": "3bd/2ba, 2,250 sqft in SW Portland, under the cap (built 1968, 0.28 ac lot); MLS #628437116. Any ADU/guest-unit claim unverified.",
-      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/4230-sw-hewett-blvd/pid_74131781/"
-        }
-      ]
-    },
-    {
       "id": "461-se-72nd-ave-pdx",
       "tag": "🌲 Portland",
       "address": "461 SE 72nd Ave",
@@ -1348,28 +1326,6 @@
         {
           "label": "Coldwell Banker listing",
           "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/3851-n-riley-ln/pid_71464348/"
-        }
-      ]
-    },
-    {
-      "id": "3639-roderick-rd-la",
-      "tag": "🌴 Los Angeles",
-      "address": "3639 Roderick Rd",
-      "hood": "Glassell Park, Los Angeles",
-      "price": 1129000,
-      "beds": 3,
-      "baths": 2,
-      "sqft": 1719,
-      "status": "Active",
-      "verified": "2026-10-09",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/9/2026",
-      "dom": null,
-      "why": "3bd/2ba, 1,719 sqft in Glassell Park, under the cap (built 1964, 0.1261 ac lot); MLS #26998461. Any ADU/guest-unit claim unverified.",
-      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/3639-roderick-rd/pid_74172639/"
         }
       ]
     },
@@ -1940,15 +1896,15 @@
       "tag": "🌲 Portland",
       "address": "2213 SE 60th Ave",
       "hood": "Mt. Tabor, Portland OR",
-      "price": 950000,
+      "price": 925000,
       "beds": 5,
       "baths": 4,
       "sqft": 2724,
       "status": "Active",
-      "verified": "2026-10-12",
-      "verifiedHow": "Compass live listing page: Active at $950,000 (CB page last updated 10/9/2026)",
+      "verified": "2026-10-26",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/26/2026",
       "dom": null,
-      "why": "5bd/4ba, 2,724 sqft in Mt. Tabor, under the cap (built 2015, 0.09 ac lot); MLS #335562602. Own entrance ADU (permits not stated, kitchen, bath): \"With its own entrance, full kitchen, living room, bedroom with walk-in closet, laundry, and backyard access, it lives like a home of its own.\" Confirm permits before offering.",
+      "why": "PRICE CUT $950,000 → $925,000. 5bd/4ba, 2,724 sqft in Mt. Tabor, under the cap (built 2015, 0.09 ac lot); MLS #335562602. Own entrance ADU (permits not stated, kitchen, bath): \"With its own entrance, full kitchen, living room, bedroom with walk-in closet, laundry, and backyard access, it lives like a home of its own.\" 📋 Built 2015 · Lot: 3,920 sq ft · Cooling: Central Air, Mini Split · Condition: Resale · On market: 18 days · 1 price cut. Confirm permits before offering.",
       "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
       "links": [
         {
@@ -2416,6 +2372,14 @@
     {
       "date": "2026-10-25",
       "text": "2205 NE Mason St (Alberta, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-10-26",
+      "text": "4230 SW Hewett Blvd (SW Portland, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-10-26",
+      "text": "3639 Roderick Rd (Glassell Park, Los Angeles) is now Under Contract per its live Coldwell Banker page — removed from the board."
     }
   ]
 }

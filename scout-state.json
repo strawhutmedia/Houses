@@ -1,49 +1,47 @@
 {
   "studio": {
-    "lastRun": "2026-10-25",
-    "at": "2026-10-25T17:51:09.441Z",
-    "spacesFile": "2026-10-25T17:51:08.068Z",
-    "craigslistFetched": 232,
-    "candidates": 4,
-    "verified": [
-      "Small Warehouse Space in Burbank (Burbank) $3,200",
-      "Unique Modern Creative Office Space (Burbank) $3,300"
-    ],
-    "emailed": true,
+    "lastRun": "2026-10-26",
+    "at": "2026-10-26T20:08:43.157Z",
+    "spacesFile": "2026-10-26T20:08:43.084Z",
+    "craigslistFetched": 173,
+    "candidates": 0,
+    "verified": [],
+    "emailed": false,
     "emailError": null,
-    "rejected": [
-      "Quiet Private Professional Office –  Silver Lake: size not stated",
-      "Spa Rooms for Rent: size not stated"
-    ],
+    "rejected": [],
     "unreachable": [],
     "brokenSince": null,
     "ok": true
   },
   "house": {
-    "lastRun": "2026-10-25",
-    "at": "2026-10-25T17:54:40.984Z",
+    "lastRun": "2026-10-26",
+    "at": "2026-10-26T20:13:44.028Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 832,
-        "matches": 1
+        "scanned": 835,
+        "matches": 0
       },
       "Portland": {
-        "scanned": 1231,
-        "matches": 0
+        "scanned": 1233,
+        "matches": 3
       }
     },
-    "candidates": 1,
-    "verified": [],
-    "emailed": false,
+    "candidates": 3,
+    "verified": [
+      "2213 SE 60th Ave (Mt. Tabor) $925,000"
+    ],
+    "emailed": true,
     "emailError": null,
     "rejected": [
-      "338 W Avenue 37: no separate ADU — no ADU/second unit in description"
+      "4200 SW 53rd Ave: no separate ADU — no ADU/second unit in description",
+      "2371 SE 51st Ave: no separate ADU — ADU is only potential/planned/unfinished"
     ],
     "unreachable": [],
     "boardAdded": 0,
-    "boardPriceCuts": 0,
+    "boardPriceCuts": 1,
     "movedToCorrections": [
-      "2205 NE Mason St: Pending"
+      "4230 SW Hewett Blvd: Pending",
+      "3639 Roderick Rd: Under Contract"
     ],
     "brokenSince": null,
     "ok": true
