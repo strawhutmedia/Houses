@@ -1,9 +1,9 @@
 {
   "studio": {
-    "lastRun": "2026-10-26",
-    "at": "2026-10-26T20:08:43.157Z",
-    "spacesFile": "2026-10-26T20:08:43.084Z",
-    "craigslistFetched": 173,
+    "lastRun": "2026-10-27",
+    "at": "2026-10-27T19:38:18.177Z",
+    "spacesFile": "2026-10-27T19:38:18.113Z",
+    "craigslistFetched": 247,
     "candidates": 0,
     "verified": [],
     "emailed": false,
@@ -14,35 +14,31 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-10-26",
-    "at": "2026-10-26T20:13:44.028Z",
+    "lastRun": "2026-10-27",
+    "at": "2026-10-27T19:42:05.498Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 835,
-        "matches": 0
+        "scanned": 831,
+        "matches": 2
       },
       "Portland": {
-        "scanned": 1233,
-        "matches": 3
+        "scanned": 1226,
+        "matches": 1
       }
     },
     "candidates": 3,
-    "verified": [
-      "2213 SE 60th Ave (Mt. Tabor) $925,000"
-    ],
-    "emailed": true,
+    "verified": [],
+    "emailed": false,
     "emailError": null,
     "rejected": [
-      "4200 SW 53rd Ave: no separate ADU — no ADU/second unit in description",
-      "2371 SE 51st Ave: no separate ADU — ADU is only potential/planned/unfinished"
+      "3608 Roseview Ave: no separate ADU — no ADU/second unit in description",
+      "3921 SW Sweetbriar Dr: no separate ADU — no ADU/second unit in description",
+      "4880 Eldred St: no separate ADU — no ADU/second unit in description"
     ],
     "unreachable": [],
     "boardAdded": 0,
-    "boardPriceCuts": 1,
-    "movedToCorrections": [
-      "4230 SW Hewett Blvd: Pending",
-      "3639 Roderick Rd: Under Contract"
-    ],
+    "boardPriceCuts": 0,
+    "movedToCorrections": [],
     "brokenSince": null,
     "ok": true
   }
