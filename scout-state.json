@@ -1,9 +1,9 @@
 {
   "studio": {
-    "lastRun": "2026-10-27",
-    "at": "2026-10-27T19:38:18.177Z",
-    "spacesFile": "2026-10-27T19:38:18.113Z",
-    "craigslistFetched": 247,
+    "lastRun": "2026-10-28",
+    "at": "2026-10-28T19:51:40.265Z",
+    "spacesFile": "2026-10-28T19:51:40.203Z",
+    "craigslistFetched": 163,
     "candidates": 0,
     "verified": [],
     "emailed": false,
@@ -14,29 +14,29 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-10-27",
-    "at": "2026-10-27T19:42:05.498Z",
+    "lastRun": "2026-10-28",
+    "at": "2026-10-28T19:54:58.690Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 831,
-        "matches": 2
+        "scanned": 826,
+        "matches": 0
       },
       "Portland": {
-        "scanned": 1226,
-        "matches": 1
+        "scanned": 1220,
+        "matches": 2
       }
     },
-    "candidates": 3,
-    "verified": [],
-    "emailed": false,
+    "candidates": 2,
+    "verified": [
+      "215 SW Hamilton St (SW Portland) $510,000"
+    ],
+    "emailed": true,
     "emailError": null,
     "rejected": [
-      "3608 Roseview Ave: no separate ADU — no ADU/second unit in description",
-      "3921 SW Sweetbriar Dr: no separate ADU — no ADU/second unit in description",
-      "4880 Eldred St: no separate ADU — no ADU/second unit in description"
+      "2608 NE 7th Ave: no separate ADU — no ADU/second unit in description"
     ],
     "unreachable": [],
-    "boardAdded": 0,
+    "boardAdded": 1,
     "boardPriceCuts": 0,
     "movedToCorrections": [],
     "brokenSince": null,

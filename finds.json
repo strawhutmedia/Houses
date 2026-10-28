@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-26T20:13:42.171Z",
+  "updatedAt": "2026-10-28T19:54:57.658Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -2196,6 +2196,28 @@
         {
           "label": "Coldwell Banker listing",
           "url": "https://www.coldwellbankerhomes.com/or/portland/5538-ne-15th-ave/pid_74321247/"
+        }
+      ]
+    },
+    {
+      "id": "215-sw-hamilton-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "215 SW Hamilton St",
+      "hood": "SW Portland, Portland OR",
+      "price": 510000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 2385,
+      "status": "Active",
+      "verified": "2026-10-28",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/27/2026",
+      "dom": null,
+      "why": "3bd/2ba, 2,385 sqft in SW Portland, under the cap (built 1889, 0.11 ac lot); MLS #701009048. Detached ADU (permitted, bath): \"Buyer to do own due diligence regarding permitted uses and occupancy of the basement and detached studio.\" 📋 Built 1889 · Lot: 4,791 sq ft · Cooling: Central Air · Condition: Resale · On market: 1 days.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/215-sw-hamilton-st/pid_74474998/"
         }
       ]
     }
