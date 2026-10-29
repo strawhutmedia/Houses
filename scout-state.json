@@ -1,9 +1,9 @@
 {
   "studio": {
-    "lastRun": "2026-10-28",
-    "at": "2026-10-28T19:51:40.265Z",
-    "spacesFile": "2026-10-28T19:51:40.203Z",
-    "craigslistFetched": 163,
+    "lastRun": "2026-10-29",
+    "at": "2026-10-29T19:51:40.946Z",
+    "spacesFile": "2026-10-29T19:51:40.893Z",
+    "craigslistFetched": 136,
     "candidates": 0,
     "verified": [],
     "emailed": false,
@@ -14,31 +14,35 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-10-28",
-    "at": "2026-10-28T19:54:58.690Z",
+    "lastRun": "2026-10-29",
+    "at": "2026-10-29T19:54:24.930Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 826,
-        "matches": 0
+        "scanned": 825,
+        "matches": 2
       },
       "Portland": {
-        "scanned": 1220,
-        "matches": 2
+        "scanned": 1215,
+        "matches": 3
       }
     },
-    "candidates": 2,
-    "verified": [
-      "215 SW Hamilton St (SW Portland) $510,000"
-    ],
-    "emailed": true,
+    "candidates": 5,
+    "verified": [],
+    "emailed": false,
     "emailError": null,
     "rejected": [
-      "2608 NE 7th Ave: no separate ADU — no ADU/second unit in description"
+      "1617 Landa St: no separate ADU — no ADU/second unit in description",
+      "7231 SE Clay St: no separate ADU — ADU is only potential/planned/unfinished",
+      "3826 SW Council Crest Dr: no separate ADU — no ADU/second unit in description",
+      "1055 W Mayflower Ct: no separate ADU — no ADU/second unit in description",
+      "6246 SW 37th Ave: no separate ADU — no ADU/second unit in description"
     ],
     "unreachable": [],
-    "boardAdded": 1,
+    "boardAdded": 0,
     "boardPriceCuts": 0,
-    "movedToCorrections": [],
+    "movedToCorrections": [
+      "2415 NE 15th Ave: Pending"
+    ],
     "brokenSince": null,
     "ok": true
   }
