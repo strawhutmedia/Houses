@@ -1,9 +1,9 @@
 {
   "studio": {
-    "lastRun": "2026-10-29",
-    "at": "2026-10-29T19:51:40.946Z",
-    "spacesFile": "2026-10-29T19:51:40.893Z",
-    "craigslistFetched": 136,
+    "lastRun": "2026-10-30",
+    "at": "2026-10-30T19:41:58.291Z",
+    "spacesFile": "2026-10-30T19:41:58.225Z",
+    "craigslistFetched": 119,
     "candidates": 0,
     "verified": [],
     "emailed": false,
@@ -14,35 +14,37 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-10-29",
-    "at": "2026-10-29T19:54:24.930Z",
+    "lastRun": "2026-10-30",
+    "at": "2026-10-30T19:45:26.731Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 825,
-        "matches": 2
+        "scanned": 827,
+        "matches": 1
       },
       "Portland": {
-        "scanned": 1215,
-        "matches": 3
+        "scanned": 1212,
+        "matches": 8
       }
     },
-    "candidates": 5,
+    "candidates": 9,
     "verified": [],
     "emailed": false,
     "emailError": null,
     "rejected": [
-      "1617 Landa St: no separate ADU — no ADU/second unit in description",
-      "7231 SE Clay St: no separate ADU — ADU is only potential/planned/unfinished",
-      "3826 SW Council Crest Dr: no separate ADU — no ADU/second unit in description",
-      "1055 W Mayflower Ct: no separate ADU — no ADU/second unit in description",
-      "6246 SW 37th Ave: no separate ADU — no ADU/second unit in description"
+      "1672 Gail: no separate ADU — no ADU/second unit in description",
+      "1508 SE 59th Ave: no separate ADU — no ADU/second unit in description",
+      "2300 SW Seymour Dr: no separate ADU — no ADU/second unit in description",
+      "5211 SW 19th Dr: no separate ADU — ADU is only potential/planned/unfinished",
+      "3502 SW Illinois St: no separate ADU — no ADU/second unit in description",
+      "1342 SE Lexington St: no separate ADU — no ADU/second unit in description",
+      "4055 NE 9th Ave: no separate ADU — ADU is only potential/planned/unfinished",
+      "4744 SW Shattuck Rd: no separate ADU — no ADU/second unit in description",
+      "428 SE 30th Pl: no separate ADU — no ADU/second unit in description"
     ],
     "unreachable": [],
     "boardAdded": 0,
     "boardPriceCuts": 0,
-    "movedToCorrections": [
-      "2415 NE 15th Ave: Pending"
-    ],
+    "movedToCorrections": [],
     "brokenSince": null,
     "ok": true
   }
