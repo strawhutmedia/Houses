@@ -1,9 +1,9 @@
 {
   "studio": {
-    "lastRun": "2026-10-30",
-    "at": "2026-10-30T19:41:58.291Z",
-    "spacesFile": "2026-10-30T19:41:58.225Z",
-    "craigslistFetched": 119,
+    "lastRun": "2026-10-31",
+    "at": "2026-10-31T18:45:18.046Z",
+    "spacesFile": "2026-10-31T18:45:17.986Z",
+    "craigslistFetched": 113,
     "candidates": 0,
     "verified": [],
     "emailed": false,
@@ -14,35 +14,33 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-10-30",
-    "at": "2026-10-30T19:45:26.731Z",
+    "lastRun": "2026-10-31",
+    "at": "2026-10-31T18:47:45.839Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 827,
-        "matches": 1
+        "scanned": 821,
+        "matches": 0
       },
       "Portland": {
-        "scanned": 1212,
-        "matches": 8
+        "scanned": 1207,
+        "matches": 6
       }
     },
-    "candidates": 9,
-    "verified": [],
-    "emailed": false,
+    "candidates": 6,
+    "verified": [
+      "2525 NE Tillamook St (Irvington) $995,000"
+    ],
+    "emailed": true,
     "emailError": null,
     "rejected": [
-      "1672 Gail: no separate ADU — no ADU/second unit in description",
-      "1508 SE 59th Ave: no separate ADU — no ADU/second unit in description",
-      "2300 SW Seymour Dr: no separate ADU — no ADU/second unit in description",
-      "5211 SW 19th Dr: no separate ADU — ADU is only potential/planned/unfinished",
-      "3502 SW Illinois St: no separate ADU — no ADU/second unit in description",
-      "1342 SE Lexington St: no separate ADU — no ADU/second unit in description",
-      "4055 NE 9th Ave: no separate ADU — ADU is only potential/planned/unfinished",
-      "4744 SW Shattuck Rd: no separate ADU — no ADU/second unit in description",
-      "428 SE 30th Pl: no separate ADU — no ADU/second unit in description"
+      "4307 NE 24th Ave: no separate ADU — no ADU/second unit in description",
+      "2333 NW Irving St: no separate ADU — no ADU/second unit in description",
+      "3804 N Colonial Ave: no separate ADU — ADU is only potential/planned/unfinished",
+      "4920 SW 31st Dr: no separate ADU — no ADU/second unit in description",
+      "5355 SE Stark St: no separate ADU — ADU is only potential/planned/unfinished"
     ],
     "unreachable": [],
-    "boardAdded": 0,
+    "boardAdded": 1,
     "boardPriceCuts": 0,
     "movedToCorrections": [],
     "brokenSince": null,
