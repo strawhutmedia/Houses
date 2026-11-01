@@ -1,9 +1,9 @@
 {
   "studio": {
-    "lastRun": "2026-10-31",
-    "at": "2026-10-31T18:45:18.046Z",
-    "spacesFile": "2026-10-31T18:45:17.986Z",
-    "craigslistFetched": 113,
+    "lastRun": "2026-11-01",
+    "at": "2026-11-01T19:11:43.139Z",
+    "spacesFile": "2026-11-01T19:11:43.095Z",
+    "craigslistFetched": 129,
     "candidates": 0,
     "verified": [],
     "emailed": false,
@@ -14,33 +14,25 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-10-31",
-    "at": "2026-10-31T18:47:45.839Z",
+    "lastRun": "2026-11-01",
+    "at": "2026-11-01T19:14:31.567Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 821,
+        "scanned": 811,
         "matches": 0
       },
       "Portland": {
-        "scanned": 1207,
-        "matches": 6
+        "scanned": 1203,
+        "matches": 0
       }
     },
-    "candidates": 6,
-    "verified": [
-      "2525 NE Tillamook St (Irvington) $995,000"
-    ],
-    "emailed": true,
+    "candidates": 0,
+    "verified": [],
+    "emailed": false,
     "emailError": null,
-    "rejected": [
-      "4307 NE 24th Ave: no separate ADU — no ADU/second unit in description",
-      "2333 NW Irving St: no separate ADU — no ADU/second unit in description",
-      "3804 N Colonial Ave: no separate ADU — ADU is only potential/planned/unfinished",
-      "4920 SW 31st Dr: no separate ADU — no ADU/second unit in description",
-      "5355 SE Stark St: no separate ADU — ADU is only potential/planned/unfinished"
-    ],
+    "rejected": [],
     "unreachable": [],
-    "boardAdded": 1,
+    "boardAdded": 0,
     "boardPriceCuts": 0,
     "movedToCorrections": [],
     "brokenSince": null,
