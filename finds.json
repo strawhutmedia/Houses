@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-31T18:47:44.604Z",
+  "updatedAt": "2026-11-02T22:56:17.662Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -1926,15 +1926,15 @@
       "tag": "🌲 Portland",
       "address": "1324 SE 51st Ave",
       "hood": "Hawthorne, Portland OR",
-      "price": 775000,
+      "price": 759000,
       "beds": 5,
       "baths": 3,
       "sqft": 2594,
       "status": "Active",
-      "verified": "2026-10-12",
-      "verifiedHow": "Compass live listing page: Active at $775,000 (CB page last updated 10/1/2026)",
+      "verified": "2026-11-02",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 11/2/2026",
       "dom": null,
-      "why": "5bd/3ba, 2,594 sqft in Hawthorne, under the cap (built 1910, 0.08 ac lot); MLS #416460359. Attached ADU (permits not stated, kitchen, bath): \"The lower level has been turned into separate living quarters, boasting 2 bedrooms, a bathroom and a kitchenette.\" Confirm permits before offering.",
+      "why": "PRICE CUT $775,000 → $759,000. 5bd/3ba, 2,594 sqft in Hawthorne, under the cap (built 1910, 0.08 ac lot); MLS #416460359. Attached ADU (permits not stated, kitchen, bath): \"The lower level has been turned into separate living quarters, boasting 2 bedrooms, a bathroom and a kitchenette.\" 📋 Built 1910 · Lot: 3,484 sq ft · Condition: Resale · On market: 81 days · 4 price cuts. Confirm permits before offering.",
       "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
       "links": [
         {
@@ -2218,6 +2218,32 @@
         {
           "label": "Coldwell Banker listing",
           "url": "https://www.coldwellbankerhomes.com/or/portland/2525-ne-tillamook-st/pid_72741788/"
+        }
+      ]
+    },
+    {
+      "id": "3558-sw-dakota-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "3558 SW Dakota St",
+      "hood": "SW Portland, Portland OR",
+      "price": 760000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 2154,
+      "status": "Active",
+      "verified": "2026-11-02",
+      "verifiedHow": "Compass live listing page: Active at $760,000 (CB page last updated Today (11/2/2026))",
+      "dom": null,
+      "why": "3bd/2ba, 2,154 sqft in SW Portland, under the cap (built 1922, 0.2 ac lot); MLS #457753513. Attached, own entrance ADU (permits not stated): \"Detached one car garage with room on the lot for added RV parking or ADU. Large unfinished basement boasts a dog wash area and large storage space with separate entrance.\" 📋 Built 1922 · Lot: 8,712 sq ft · Cooling: Central Air · Condition: Resale · On market: Today. Confirm permits before offering.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/3558-sw-dakota-st/pid_74549865/"
+        },
+        {
+          "label": "Compass listing",
+          "url": "https://www.compass.com/listing/2221379722609681209/view"
         }
       ]
     }

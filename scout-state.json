@@ -1,39 +1,48 @@
 {
   "studio": {
-    "lastRun": "2026-11-01",
-    "at": "2026-11-01T19:11:43.139Z",
-    "spacesFile": "2026-11-01T19:11:43.095Z",
-    "craigslistFetched": 129,
-    "candidates": 0,
+    "lastRun": "2026-11-02",
+    "at": "2026-11-02T22:53:20.595Z",
+    "spacesFile": "2026-11-02T22:53:20.133Z",
+    "craigslistFetched": 136,
+    "candidates": 2,
     "verified": [],
     "emailed": false,
     "emailError": null,
-    "rejected": [],
+    "rejected": [
+      "Fully Equipped Private Recording Studio – 24/7 Access – Burbank: size not stated",
+      "Private Recording Studio – Fully Equipped – 24/7 Access: size not stated"
+    ],
     "unreachable": [],
     "brokenSince": null,
     "ok": true
   },
   "house": {
-    "lastRun": "2026-11-01",
-    "at": "2026-11-01T19:14:31.567Z",
+    "lastRun": "2026-11-02",
+    "at": "2026-11-02T22:56:19.131Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 811,
+        "scanned": 807,
         "matches": 0
       },
       "Portland": {
-        "scanned": 1203,
-        "matches": 0
+        "scanned": 1189,
+        "matches": 4
       }
     },
-    "candidates": 0,
-    "verified": [],
-    "emailed": false,
+    "candidates": 4,
+    "verified": [
+      "1324 SE 51st Ave (Hawthorne) $759,000",
+      "3558 SW Dakota St (SW Portland) $760,000"
+    ],
+    "emailed": true,
     "emailError": null,
-    "rejected": [],
+    "rejected": [
+      "5834 SW 59th Ct: no separate ADU — no ADU/second unit in description",
+      "2824 SW Illinois St: no separate ADU — no ADU/second unit in description"
+    ],
     "unreachable": [],
-    "boardAdded": 0,
-    "boardPriceCuts": 0,
+    "boardAdded": 1,
+    "boardPriceCuts": 1,
     "movedToCorrections": [],
     "brokenSince": null,
     "ok": true
