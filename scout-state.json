@@ -1,49 +1,47 @@
 {
   "studio": {
-    "lastRun": "2026-11-02",
-    "at": "2026-11-02T22:53:20.595Z",
-    "spacesFile": "2026-11-02T22:53:20.133Z",
-    "craigslistFetched": 136,
-    "candidates": 2,
+    "lastRun": "2026-11-03",
+    "at": "2026-11-03T20:38:25.596Z",
+    "spacesFile": "2026-11-03T20:38:25.541Z",
+    "craigslistFetched": 162,
+    "candidates": 0,
     "verified": [],
     "emailed": false,
     "emailError": null,
-    "rejected": [
-      "Fully Equipped Private Recording Studio – 24/7 Access – Burbank: size not stated",
-      "Private Recording Studio – Fully Equipped – 24/7 Access: size not stated"
-    ],
+    "rejected": [],
     "unreachable": [],
     "brokenSince": null,
     "ok": true
   },
   "house": {
-    "lastRun": "2026-11-02",
-    "at": "2026-11-02T22:56:19.131Z",
+    "lastRun": "2026-11-03",
+    "at": "2026-11-03T20:41:10.165Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 807,
+        "scanned": 811,
         "matches": 0
       },
       "Portland": {
-        "scanned": 1189,
+        "scanned": 1181,
         "matches": 4
       }
     },
     "candidates": 4,
-    "verified": [
-      "1324 SE 51st Ave (Hawthorne) $759,000",
-      "3558 SW Dakota St (SW Portland) $760,000"
-    ],
-    "emailed": true,
+    "verified": [],
+    "emailed": false,
     "emailError": null,
     "rejected": [
-      "5834 SW 59th Ct: no separate ADU — no ADU/second unit in description",
-      "2824 SW Illinois St: no separate ADU — no ADU/second unit in description"
+      "3219 SE 22nd Ave: no separate ADU — no ADU/second unit in description",
+      "3219 SE 22nd Ave: no separate ADU — no ADU/second unit in description",
+      "1915 SE 21st Ave: no separate ADU — no ADU/second unit in description",
+      "2345 NE Ridgewood Dr: no separate ADU — no ADU/second unit in description"
     ],
     "unreachable": [],
-    "boardAdded": 1,
-    "boardPriceCuts": 1,
-    "movedToCorrections": [],
+    "boardAdded": 0,
+    "boardPriceCuts": 0,
+    "movedToCorrections": [
+      "2822 SE 29th Ave: Pending"
+    ],
     "brokenSince": null,
     "ok": true
   }

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-02T22:56:17.662Z",
+  "updatedAt": "2026-11-03T20:41:10.162Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -908,28 +908,6 @@
         {
           "label": "Coldwell Banker listing",
           "url": "https://www.coldwellbankerhomes.com/or/portland/4128-se-franklin-st/pid_74066613/"
-        }
-      ]
-    },
-    {
-      "id": "2822-se-29th-ave-pdx",
-      "tag": "🌲 Portland",
-      "address": "2822 SE 29th Ave",
-      "hood": "Division, Portland OR",
-      "price": 599900,
-      "beds": 4,
-      "baths": 2,
-      "sqft": 1960,
-      "status": "Active",
-      "verified": "2026-10-10",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/9/2026",
-      "dom": null,
-      "why": "PRICE CUT $639,900 → $599,900. 4bd/2ba, 1,960 sqft in Division, under the cap (built 1910, 0.06 ac lot); MLS #160443822. Any ADU/guest-unit claim unverified.",
-      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/2822-se-29th-ave/pid_71077579/"
         }
       ]
     },
@@ -2432,6 +2410,10 @@
     {
       "date": "2026-10-29",
       "text": "2415 NE 15th Ave (Irvington, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-11-03",
+      "text": "2822 SE 29th Ave (Division, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
     }
   ]
 }
