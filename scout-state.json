@@ -1,9 +1,9 @@
 {
   "studio": {
-    "lastRun": "2026-11-03",
-    "at": "2026-11-03T20:38:25.596Z",
-    "spacesFile": "2026-11-03T20:38:25.541Z",
-    "craigslistFetched": 162,
+    "lastRun": "2026-11-04",
+    "at": "2026-11-04T20:55:41.464Z",
+    "spacesFile": "2026-11-04T20:55:41.393Z",
+    "craigslistFetched": 262,
     "candidates": 0,
     "verified": [],
     "emailed": false,
@@ -14,33 +14,38 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-11-03",
-    "at": "2026-11-03T20:41:10.165Z",
+    "lastRun": "2026-11-04",
+    "at": "2026-11-04T21:00:52.983Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 811,
-        "matches": 0
+        "scanned": 801,
+        "matches": 5
       },
       "Portland": {
-        "scanned": 1181,
-        "matches": 4
+        "scanned": 1182,
+        "matches": 3
       }
     },
-    "candidates": 4,
+    "candidates": 8,
     "verified": [],
     "emailed": false,
     "emailError": null,
     "rejected": [
-      "3219 SE 22nd Ave: no separate ADU — no ADU/second unit in description",
-      "3219 SE 22nd Ave: no separate ADU — no ADU/second unit in description",
-      "1915 SE 21st Ave: no separate ADU — no ADU/second unit in description",
-      "2345 NE Ridgewood Dr: no separate ADU — no ADU/second unit in description"
+      "2630 Maceo St: no separate ADU — no ADU/second unit in description",
+      "4787 Rock Row Drive: no separate ADU — no ADU/second unit in description",
+      "2222 Dorris: no separate ADU — no ADU/second unit in description",
+      "4668 Cleland Ave: no separate ADU — no ADU/second unit in description",
+      "6242 Roy St: no separate ADU — no ADU/second unit in description",
+      "2433 N Emerson St: no separate ADU — no ADU/second unit in description",
+      "2632 NW Thurman St: no separate ADU — no ADU/second unit in description",
+      "5825 SW Sheridan Ct: no separate ADU — no ADU/second unit in description"
     ],
     "unreachable": [],
     "boardAdded": 0,
     "boardPriceCuts": 0,
     "movedToCorrections": [
-      "2822 SE 29th Ave: Pending"
+      "2813 Silver St: Pending",
+      "215 SW Hamilton St: Pending"
     ],
     "brokenSince": null,
     "ok": true

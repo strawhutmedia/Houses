@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-03T20:41:10.162Z",
+  "updatedAt": "2026-11-04T21:00:52.980Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -1040,28 +1040,6 @@
         {
           "label": "Coldwell Banker listing",
           "url": "https://www.coldwellbankerhomes.com/or/portland/4249-sw-dosch-rd/pid_74113614/"
-        }
-      ]
-    },
-    {
-      "id": "2813-silver-st-la",
-      "tag": "🌴 Los Angeles",
-      "address": "2813 Silver St",
-      "hood": "Frogtown, Los Angeles",
-      "price": 798000,
-      "beds": 3,
-      "baths": 2,
-      "sqft": 1310,
-      "status": "Active",
-      "verified": "2026-10-07",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/6/2026",
-      "dom": null,
-      "why": "PRICE CUT $835,000 → $798,000. 3bd/2ba, 1,310 sqft in Frogtown, under the cap (built 1910, 0.1263 ac lot); MLS #P1-28406. Any ADU/guest-unit claim unverified.",
-      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/2813-silver-st/pid_73001473/"
         }
       ]
     },
@@ -2156,28 +2134,6 @@
       ]
     },
     {
-      "id": "215-sw-hamilton-st-pdx",
-      "tag": "🌲 Portland",
-      "address": "215 SW Hamilton St",
-      "hood": "SW Portland, Portland OR",
-      "price": 510000,
-      "beds": 3,
-      "baths": 2,
-      "sqft": 2385,
-      "status": "Active",
-      "verified": "2026-10-28",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/27/2026",
-      "dom": null,
-      "why": "3bd/2ba, 2,385 sqft in SW Portland, under the cap (built 1889, 0.11 ac lot); MLS #701009048. Detached ADU (permitted, bath): \"Buyer to do own due diligence regarding permitted uses and occupancy of the basement and detached studio.\" 📋 Built 1889 · Lot: 4,791 sq ft · Cooling: Central Air · Condition: Resale · On market: 1 days.",
-      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/215-sw-hamilton-st/pid_74474998/"
-        }
-      ]
-    },
-    {
       "id": "2525-ne-tillamook-st-pdx",
       "tag": "🌲 Portland",
       "address": "2525 NE Tillamook St",
@@ -2414,6 +2370,14 @@
     {
       "date": "2026-11-03",
       "text": "2822 SE 29th Ave (Division, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-11-04",
+      "text": "2813 Silver St (Frogtown, Los Angeles) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-11-04",
+      "text": "215 SW Hamilton St (SW Portland, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
     }
   ]
 }
