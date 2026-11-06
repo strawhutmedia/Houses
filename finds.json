@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-05T21:16:09.582Z",
+  "updatedAt": "2026-11-06T20:37:38.157Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -2174,6 +2174,28 @@
         {
           "label": "Coldwell Banker listing",
           "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/6190-mesa-ave/pid_74116554/"
+        }
+      ]
+    },
+    {
+      "id": "3464-nw-savier-st-pdx",
+      "tag": "🌲 Portland",
+      "address": "3464 NW Savier St",
+      "hood": "West Hills, Portland OR",
+      "price": 994900,
+      "beds": 4,
+      "baths": 3,
+      "sqft": 2609,
+      "status": "Active",
+      "verified": "2026-11-06",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 11/5/2026",
+      "dom": null,
+      "why": "PRICE CUT $999,900 → $994,900. 4bd/3ba, 2,609 sqft in West Hills, under the cap (built 2004, 0.12 ac lot); MLS #436036266. Detached ADU (permits not stated, kitchen, bath): \"Downstairs - the perfect standalone guest quarters with all the essentials including a full kitchen, full bathroom and tons of storage. It even has some luxurious extras, like high ceilings, a separate entrance with a fabulous front porch, and mini splits to keep it comfortabl…\" 📋 Built 2004 · Lot: 5,227 sq ft · Cooling: Central Air, Mini Split · Condition: Updated/Remodeled · On market: 43 days · 1 price cut. Confirm permits before offering.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/or/portland/3464-nw-savier-st/pid_73923262/"
         }
       ]
     }
