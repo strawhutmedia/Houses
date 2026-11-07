@@ -1,9 +1,9 @@
 {
   "studio": {
-    "lastRun": "2026-11-06",
-    "at": "2026-11-06T20:33:47.924Z",
-    "spacesFile": "2026-11-06T20:33:47.859Z",
-    "craigslistFetched": 109,
+    "lastRun": "2026-11-07",
+    "at": "2026-11-07T19:02:17.452Z",
+    "spacesFile": "2026-11-07T19:02:17.403Z",
+    "craigslistFetched": 260,
     "candidates": 0,
     "verified": [],
     "emailed": false,
@@ -14,39 +14,28 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-11-06",
-    "at": "2026-11-06T20:37:39.284Z",
+    "lastRun": "2026-11-07",
+    "at": "2026-11-07T19:04:45.596Z",
     "scanned": {
       "Los Angeles": {
         "scanned": 818,
-        "matches": 4
+        "matches": 1
       },
       "Portland": {
-        "scanned": 988,
-        "matches": 8
+        "scanned": 1162,
+        "matches": 1
       }
     },
-    "candidates": 12,
-    "verified": [
-      "3464 NW Savier St (West Hills) $994,900"
-    ],
-    "emailed": true,
+    "candidates": 2,
+    "verified": [],
+    "emailed": false,
     "emailError": null,
     "rejected": [
-      "6234 Roy St: no separate ADU — names an ADU but describes nothing about it (no kitchen/bath/entrance/permit)",
-      "1400 N Ave 46: no separate ADU — no ADU/second unit in description",
-      "2564 NW Savier St: no separate ADU — no ADU/second unit in description",
-      "1933 W Kingston Pl: no separate ADU — no ADU/second unit in description",
-      "212 S Ave 57: no separate ADU — no ADU/second unit in description",
-      "3018 SW Flower Terrace: no separate ADU — no ADU/second unit in description",
-      "5631 SW Seymour Ct: no separate ADU — no ADU/second unit in description",
-      "4103 N Longview Ave: no separate ADU — no ADU/second unit in description",
-      "4920 SW 31st Dr: no separate ADU — no ADU/second unit in description",
-      "5939 SE Ash St: no separate ADU — no ADU/second unit in description",
-      "904 SE 70th Ave: no separate ADU — no ADU/second unit in description"
+      "3863 Cazador: no separate ADU — ADU is only potential/planned/unfinished",
+      "3818 SE Morrison St: no separate ADU — no ADU/second unit in description"
     ],
     "unreachable": [],
-    "boardAdded": 1,
+    "boardAdded": 0,
     "boardPriceCuts": 0,
     "movedToCorrections": [],
     "brokenSince": null,
