@@ -1,9 +1,9 @@
 {
   "studio": {
-    "lastRun": "2026-11-07",
-    "at": "2026-11-07T19:02:17.452Z",
-    "spacesFile": "2026-11-07T19:02:17.403Z",
-    "craigslistFetched": 260,
+    "lastRun": "2026-11-08",
+    "at": "2026-11-08T19:07:39.298Z",
+    "spacesFile": "2026-11-08T19:07:39.225Z",
+    "craigslistFetched": 259,
     "candidates": 0,
     "verified": [],
     "emailed": false,
@@ -14,11 +14,11 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-11-07",
-    "at": "2026-11-07T19:04:45.596Z",
+    "lastRun": "2026-11-08",
+    "at": "2026-11-08T19:10:43.908Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 818,
+        "scanned": 819,
         "matches": 1
       },
       "Portland": {
@@ -31,8 +31,8 @@
     "emailed": false,
     "emailError": null,
     "rejected": [
-      "3863 Cazador: no separate ADU — ADU is only potential/planned/unfinished",
-      "3818 SE Morrison St: no separate ADU — no ADU/second unit in description"
+      "1705 SE Cesar E Chavez Blvd: no separate ADU — no ADU/second unit in description",
+      "6164 Mesa Ave: no separate ADU — no ADU/second unit in description"
     ],
     "unreachable": [],
     "boardAdded": 0,
