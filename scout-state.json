@@ -1,9 +1,9 @@
 {
   "studio": {
-    "lastRun": "2026-11-08",
-    "at": "2026-11-08T19:07:39.298Z",
-    "spacesFile": "2026-11-08T19:07:39.225Z",
-    "craigslistFetched": 259,
+    "lastRun": "2026-11-09",
+    "at": "2026-11-09T23:33:57.627Z",
+    "spacesFile": "2026-11-09T23:33:57.563Z",
+    "craigslistFetched": 263,
     "candidates": 0,
     "verified": [],
     "emailed": false,
@@ -14,30 +14,31 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-11-08",
-    "at": "2026-11-08T19:10:43.908Z",
+    "lastRun": "2026-11-09",
+    "at": "2026-11-09T23:36:16.860Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 819,
+        "scanned": 814,
         "matches": 1
       },
       "Portland": {
-        "scanned": 1162,
-        "matches": 1
+        "scanned": 1151,
+        "matches": 0
       }
     },
-    "candidates": 2,
+    "candidates": 1,
     "verified": [],
     "emailed": false,
     "emailError": null,
     "rejected": [
-      "1705 SE Cesar E Chavez Blvd: no separate ADU — no ADU/second unit in description",
-      "6164 Mesa Ave: no separate ADU — no ADU/second unit in description"
+      "4100 Camino Real: no separate ADU — no ADU/second unit in description"
     ],
     "unreachable": [],
     "boardAdded": 0,
     "boardPriceCuts": 0,
-    "movedToCorrections": [],
+    "movedToCorrections": [
+      "1727 SW Westwood Dr: Sold"
+    ],
     "brokenSince": null,
     "ok": true
   }
