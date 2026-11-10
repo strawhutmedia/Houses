@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-09T23:36:16.857Z",
+  "updatedAt": "2026-11-10T21:03:10.532Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -441,30 +441,6 @@
         }
       ],
       "photo": "https://m.cbhomes.com/p/283/773583278/7082C03D3798467/m23cc.webp"
-    },
-    {
-      "id": "3320-sw-44th-ave-pdx",
-      "tag": "🌲 Portland",
-      "address": "3320 SW 44th Ave",
-      "hood": "SW Portland, Portland OR",
-      "price": 895000,
-      "beds": 4,
-      "baths": 2,
-      "sqft": 3104,
-      "status": "Active",
-      "verified": "2026-10-02",
-      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
-      "dom": null,
-      "why": "4bd/2ba, 3,104 sf at $895,000 ($288/sf) in SW Portland. Price cut from $935,000. No ADU claimed/verified.",
-      "ask": "Verify condition, permits and any extra unit.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/3320-sw-44th-ave/pid_73731151/"
-        }
-      ],
-      "photo": "https://m1.cbhomes.com/p/283/754955496/bec9a40A5EA94C1/m23cc.webp",
-      "wasPrice": 935000
     },
     {
       "id": "5825-sw-sheridan-ct-pdx",
@@ -1348,32 +1324,6 @@
         {
           "label": "Coldwell Banker listing",
           "url": "https://www.coldwellbankerhomes.com/or/portland/1516-se-43rd-ave/pid_73048595/"
-        }
-      ]
-    },
-    {
-      "id": "6309-meridian-st-la",
-      "tag": "🌴 Los Angeles",
-      "address": "6309 Meridian St",
-      "hood": "Highland Park, Los Angeles",
-      "price": 1199000,
-      "beds": 4,
-      "baths": 2,
-      "sqft": 2036,
-      "status": "Active",
-      "verified": "2026-10-12",
-      "verifiedHow": "Compass live listing page: Active at $1,199,000 (CB page last updated 9/22/2026)",
-      "dom": null,
-      "why": "4bd/2ba, 2,036 sqft in Highland Park, under the cap (built 1932, 0.1226 ac lot); MLS #26991043. Duplex, 2nd unit (permits not stated): \"This fully occupied charming Spanish-style duplex is set in the heart of Highland Park, one of LAs most sought after neighborhoods.\" Confirm permits before offering.",
-      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/6309-meridian-st/pid_73851444/"
-        },
-        {
-          "label": "Compass listing",
-          "url": "https://www.compass.com/listing/2199647778499919537/view"
         }
       ]
     },
@@ -2386,6 +2336,14 @@
     {
       "date": "2026-11-09",
       "text": "1727 SW Westwood Dr (SW Portland, Portland OR) is now Sold per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-11-10",
+      "text": "3320 SW 44th Ave (SW Portland, Portland OR) is now Sold per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-11-10",
+      "text": "6309 Meridian St (Highland Park, Los Angeles) is now Under Contract per its live Coldwell Banker page — removed from the board."
     }
   ]
 }

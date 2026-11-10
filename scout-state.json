@@ -1,9 +1,9 @@
 {
   "studio": {
-    "lastRun": "2026-11-09",
-    "at": "2026-11-09T23:33:57.627Z",
-    "spacesFile": "2026-11-09T23:33:57.563Z",
-    "craigslistFetched": 263,
+    "lastRun": "2026-11-10",
+    "at": "2026-11-10T20:59:38.305Z",
+    "spacesFile": "2026-11-10T20:59:38.243Z",
+    "craigslistFetched": 265,
     "candidates": 0,
     "verified": [],
     "emailed": false,
@@ -14,16 +14,16 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-11-09",
-    "at": "2026-11-09T23:36:16.860Z",
+    "lastRun": "2026-11-10",
+    "at": "2026-11-10T21:03:10.535Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 814,
-        "matches": 1
+        "scanned": 813,
+        "matches": 0
       },
       "Portland": {
-        "scanned": 1151,
-        "matches": 0
+        "scanned": 1138,
+        "matches": 1
       }
     },
     "candidates": 1,
@@ -31,13 +31,14 @@
     "emailed": false,
     "emailError": null,
     "rejected": [
-      "4100 Camino Real: no separate ADU — no ADU/second unit in description"
+      "2982 NW Santanita Terrace: no separate ADU — no ADU/second unit in description"
     ],
     "unreachable": [],
     "boardAdded": 0,
     "boardPriceCuts": 0,
     "movedToCorrections": [
-      "1727 SW Westwood Dr: Sold"
+      "3320 SW 44th Ave: Sold",
+      "6309 Meridian St: Under Contract"
     ],
     "brokenSince": null,
     "ok": true
