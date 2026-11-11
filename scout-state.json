@@ -1,9 +1,9 @@
 {
   "studio": {
-    "lastRun": "2026-11-10",
-    "at": "2026-11-10T20:59:38.305Z",
-    "spacesFile": "2026-11-10T20:59:38.243Z",
-    "craigslistFetched": 265,
+    "lastRun": "2026-11-11",
+    "at": "2026-11-11T21:32:07.200Z",
+    "spacesFile": "2026-11-11T21:32:07.138Z",
+    "craigslistFetched": 268,
     "candidates": 0,
     "verified": [],
     "emailed": false,
@@ -14,15 +14,15 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-11-10",
-    "at": "2026-11-10T21:03:10.535Z",
+    "lastRun": "2026-11-11",
+    "at": "2026-11-11T21:34:51.690Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 813,
+        "scanned": 812,
         "matches": 0
       },
       "Portland": {
-        "scanned": 1138,
+        "scanned": 1134,
         "matches": 1
       }
     },
@@ -31,15 +31,12 @@
     "emailed": false,
     "emailError": null,
     "rejected": [
-      "2982 NW Santanita Terrace: no separate ADU — no ADU/second unit in description"
+      "2345 NE Ridgewood Dr: no separate ADU — no ADU/second unit in description"
     ],
     "unreachable": [],
     "boardAdded": 0,
     "boardPriceCuts": 0,
-    "movedToCorrections": [
-      "3320 SW 44th Ave: Sold",
-      "6309 Meridian St: Under Contract"
-    ],
+    "movedToCorrections": [],
     "brokenSince": null,
     "ok": true
   }
