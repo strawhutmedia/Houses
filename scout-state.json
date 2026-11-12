@@ -1,9 +1,9 @@
 {
   "studio": {
-    "lastRun": "2026-11-11",
-    "at": "2026-11-11T21:32:07.200Z",
-    "spacesFile": "2026-11-11T21:32:07.138Z",
-    "craigslistFetched": 268,
+    "lastRun": "2026-11-12",
+    "at": "2026-11-12T21:35:30.578Z",
+    "spacesFile": "2026-11-12T21:35:30.513Z",
+    "craigslistFetched": 264,
     "candidates": 0,
     "verified": [],
     "emailed": false,
@@ -14,24 +14,28 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-11-11",
-    "at": "2026-11-11T21:34:51.690Z",
+    "lastRun": "2026-11-12",
+    "at": "2026-11-12T21:37:55.368Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 812,
+        "scanned": 814,
         "matches": 0
       },
       "Portland": {
-        "scanned": 1134,
-        "matches": 1
+        "scanned": 1144,
+        "matches": 5
       }
     },
-    "candidates": 1,
+    "candidates": 5,
     "verified": [],
     "emailed": false,
     "emailError": null,
     "rejected": [
-      "2345 NE Ridgewood Dr: no separate ADU — no ADU/second unit in description"
+      "1705 SE Cesar E Chavez Blvd: no separate ADU — no ADU/second unit in description",
+      "6316 SE Morrison St: no separate ADU — no ADU/second unit in description",
+      "3735 SE Taylor St: no separate ADU — no ADU/second unit in description",
+      "4920 SW 31st Dr: no separate ADU — no ADU/second unit in description",
+      "5535 SW 53rd Ave: no separate ADU — no ADU/second unit in description"
     ],
     "unreachable": [],
     "boardAdded": 0,
