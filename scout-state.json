@@ -1,9 +1,9 @@
 {
   "studio": {
-    "lastRun": "2026-11-12",
-    "at": "2026-11-12T21:35:30.578Z",
-    "spacesFile": "2026-11-12T21:35:30.513Z",
-    "craigslistFetched": 264,
+    "lastRun": "2026-11-13",
+    "at": "2026-11-13T20:58:51.966Z",
+    "spacesFile": "2026-11-13T20:58:51.903Z",
+    "craigslistFetched": 262,
     "candidates": 0,
     "verified": [],
     "emailed": false,
@@ -14,28 +14,30 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-11-12",
-    "at": "2026-11-12T21:37:55.368Z",
+    "lastRun": "2026-11-13",
+    "at": "2026-11-13T21:01:51.343Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 814,
-        "matches": 0
+        "scanned": 815,
+        "matches": 4
       },
       "Portland": {
-        "scanned": 1144,
-        "matches": 5
+        "scanned": 1147,
+        "matches": 3
       }
     },
-    "candidates": 5,
+    "candidates": 7,
     "verified": [],
     "emailed": false,
     "emailError": null,
     "rejected": [
-      "1705 SE Cesar E Chavez Blvd: no separate ADU — no ADU/second unit in description",
-      "6316 SE Morrison St: no separate ADU — no ADU/second unit in description",
-      "3735 SE Taylor St: no separate ADU — no ADU/second unit in description",
-      "4920 SW 31st Dr: no separate ADU — no ADU/second unit in description",
-      "5535 SW 53rd Ave: no separate ADU — no ADU/second unit in description"
+      "4265 Yosemite Way: no separate ADU — a guest suite/flex room, not a unit (no kitchen, rent or separate structure)",
+      "405 Isabel: no separate ADU — a guest suite/flex room, not a unit (no kitchen, rent or separate structure)",
+      "4719 Wiota St: no separate ADU — no ADU/second unit in description",
+      "6107 Meridian St: no separate ADU — a guest suite/flex room, not a unit (no kitchen, rent or separate structure)",
+      "2414 SE 28th Pl: no separate ADU — no ADU/second unit in description",
+      "8110 SE Madison St: no separate ADU — no ADU/second unit in description",
+      "4015 SE 31st Ave: no separate ADU — no ADU/second unit in description"
     ],
     "unreachable": [],
     "boardAdded": 0,
