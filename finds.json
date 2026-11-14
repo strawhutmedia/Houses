@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-10T21:03:10.532Z",
+  "updatedAt": "2026-11-14T19:30:44.388Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -512,28 +512,6 @@
         }
       ],
       "photo": "https://m1.cbhomes.com/p/283/126214050/3181F3e0bfBB482/m23cc.webp"
-    },
-    {
-      "id": "212-s-ave-57-la",
-      "tag": "🌴 Los Angeles",
-      "address": "212 S Ave 57",
-      "hood": "Highland Park, Los Angeles",
-      "price": 1249000,
-      "beds": 3,
-      "baths": 2,
-      "sqft": 1258,
-      "status": "Active",
-      "verified": "2026-10-03",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/2/2026",
-      "dom": null,
-      "why": "3bd/2ba, 1,258 sqft in Highland Park, under the cap; MLS #P1-29040. Any ADU/guest-unit claim unverified.",
-      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/212-s-ave-57/pid_74020467/"
-        }
-      ]
     },
     {
       "id": "6160-york-blvd-la",
@@ -1762,15 +1740,15 @@
       "tag": "🌲 Portland",
       "address": "4249 SE Stark St",
       "hood": "Laurelhurst, Portland OR",
-      "price": 945000,
+      "price": 899900,
       "beds": 5,
       "baths": 3,
       "sqft": 3777,
       "status": "Active",
-      "verified": "2026-11-05",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 11/5/2026",
+      "verified": "2026-11-14",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 11/13/2026",
       "dom": null,
-      "why": "PRICE CUT $965,000 → $945,000. 5bd/3ba, 3,777 sqft in Laurelhurst, under the cap (built 1923, 0.16 ac lot); MLS #704054326. Detached ADU (permitted, kitchen, bath): \"Downstairs, a permitted apartment with own entrance, kitchen, bath, and living space creates options for extended family, rental income, or bedroom/fmly rm.\" 📋 Built 1923 · Lot: 6,969 sq ft · Cooling: Central Air · Condition: Resale · On market: 38 days · 2 price cuts.",
+      "why": "PRICE CUT $945,000 → $899,900. 5bd/3ba, 3,777 sqft in Laurelhurst, under the cap (built 1923, 0.16 ac lot); MLS #704054326. Detached ADU (permitted, kitchen, bath): \"Lower apartment: own entrance, kitchen,full bath and living space. Detached ADU: 1 bedroom, 1 bath,stylishly finished for rental income or a work studio.\" 📋 Built 1923 · Lot: 6,969 sq ft · Cooling: Central Air · Condition: Resale · On market: 47 days · 3 price cuts.",
       "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
       "links": [
         {
@@ -2344,6 +2322,10 @@
     {
       "date": "2026-11-10",
       "text": "6309 Meridian St (Highland Park, Los Angeles) is now Under Contract per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-11-14",
+      "text": "212 S Ave 57 (Highland Park, Los Angeles) is now Pending per its live Coldwell Banker page — removed from the board."
     }
   ]
 }

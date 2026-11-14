@@ -1,12 +1,15 @@
 {
   "studio": {
-    "lastRun": "2026-11-13",
-    "at": "2026-11-13T20:58:51.966Z",
-    "spacesFile": "2026-11-13T20:58:51.903Z",
-    "craigslistFetched": 262,
-    "candidates": 0,
-    "verified": [],
-    "emailed": false,
+    "lastRun": "2026-11-14",
+    "at": "2026-11-14T19:28:26.420Z",
+    "spacesFile": "2026-11-14T19:28:25.170Z",
+    "craigslistFetched": 139,
+    "candidates": 2,
+    "verified": [
+      "Prime$1,600 / 1,500 sq ft (3 rooms)Office Space (Silver Lake) $1,600",
+      "Small Warehouse Space in Burbank (Burbank) $3,200"
+    ],
+    "emailed": true,
     "emailError": null,
     "rejected": [],
     "unreachable": [],
@@ -14,35 +17,39 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-11-13",
-    "at": "2026-11-13T21:01:51.343Z",
+    "lastRun": "2026-11-14",
+    "at": "2026-11-14T19:30:45.005Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 815,
-        "matches": 4
+        "scanned": 812,
+        "matches": 2
       },
       "Portland": {
-        "scanned": 1147,
-        "matches": 3
+        "scanned": 1148,
+        "matches": 6
       }
     },
-    "candidates": 7,
-    "verified": [],
-    "emailed": false,
+    "candidates": 8,
+    "verified": [
+      "4249 SE Stark St (Laurelhurst) $899,900"
+    ],
+    "emailed": true,
     "emailError": null,
     "rejected": [
-      "4265 Yosemite Way: no separate ADU — a guest suite/flex room, not a unit (no kitchen, rent or separate structure)",
-      "405 Isabel: no separate ADU — a guest suite/flex room, not a unit (no kitchen, rent or separate structure)",
-      "4719 Wiota St: no separate ADU — no ADU/second unit in description",
-      "6107 Meridian St: no separate ADU — a guest suite/flex room, not a unit (no kitchen, rent or separate structure)",
-      "2414 SE 28th Pl: no separate ADU — no ADU/second unit in description",
-      "8110 SE Madison St: no separate ADU — no ADU/second unit in description",
-      "4015 SE 31st Ave: no separate ADU — no ADU/second unit in description"
+      "826 San Pascual Ave: no separate ADU — no ADU/second unit in description",
+      "2200 Lyric Ave: no separate ADU — no ADU/second unit in description",
+      "5007 N Concord Ave: no separate ADU — ADU is only potential/planned/unfinished",
+      "2300 SW Seymour Dr: no separate ADU — no ADU/second unit in description",
+      "136 SE 63rd Ave: no separate ADU — no ADU/second unit in description",
+      "4145 SW Council Crest Dr: no separate ADU — no ADU/second unit in description",
+      "3229 SW Sunset Blvd: no separate ADU — no ADU/second unit in description"
     ],
     "unreachable": [],
     "boardAdded": 0,
-    "boardPriceCuts": 0,
-    "movedToCorrections": [],
+    "boardPriceCuts": 1,
+    "movedToCorrections": [
+      "212 S Ave 57: Pending"
+    ],
     "brokenSince": null,
     "ok": true
   }
