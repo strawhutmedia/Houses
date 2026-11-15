@@ -1,15 +1,12 @@
 {
   "studio": {
-    "lastRun": "2026-11-14",
-    "at": "2026-11-14T19:28:26.420Z",
-    "spacesFile": "2026-11-14T19:28:25.170Z",
-    "craigslistFetched": 139,
-    "candidates": 2,
-    "verified": [
-      "Prime$1,600 / 1,500 sq ft (3 rooms)Office Space (Silver Lake) $1,600",
-      "Small Warehouse Space in Burbank (Burbank) $3,200"
-    ],
-    "emailed": true,
+    "lastRun": "2026-11-15",
+    "at": "2026-11-15T19:57:17.042Z",
+    "spacesFile": "2026-11-15T19:57:16.977Z",
+    "craigslistFetched": 136,
+    "candidates": 0,
+    "verified": [],
+    "emailed": false,
     "emailError": null,
     "rejected": [],
     "unreachable": [],
@@ -17,38 +14,32 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-11-14",
-    "at": "2026-11-14T19:30:45.005Z",
+    "lastRun": "2026-11-15",
+    "at": "2026-11-15T19:59:41.363Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 812,
-        "matches": 2
+        "scanned": 814,
+        "matches": 0
       },
       "Portland": {
-        "scanned": 1148,
-        "matches": 6
+        "scanned": 1150,
+        "matches": 2
       }
     },
-    "candidates": 8,
+    "candidates": 2,
     "verified": [
-      "4249 SE Stark St (Laurelhurst) $899,900"
+      "2213 SE 60th Ave (Mt. Tabor) $900,000",
+      "5816 S Corbett Ave (SW Portland) $849,900"
     ],
     "emailed": true,
     "emailError": null,
-    "rejected": [
-      "826 San Pascual Ave: no separate ADU — no ADU/second unit in description",
-      "2200 Lyric Ave: no separate ADU — no ADU/second unit in description",
-      "5007 N Concord Ave: no separate ADU — ADU is only potential/planned/unfinished",
-      "2300 SW Seymour Dr: no separate ADU — no ADU/second unit in description",
-      "136 SE 63rd Ave: no separate ADU — no ADU/second unit in description",
-      "4145 SW Council Crest Dr: no separate ADU — no ADU/second unit in description",
-      "3229 SW Sunset Blvd: no separate ADU — no ADU/second unit in description"
-    ],
+    "rejected": [],
     "unreachable": [],
     "boardAdded": 0,
-    "boardPriceCuts": 1,
+    "boardPriceCuts": 2,
     "movedToCorrections": [
-      "212 S Ave 57: Pending"
+      "4920 SW 31st Dr: Pending",
+      "2323 SE 70th Ave: Pending"
     ],
     "brokenSince": null,
     "ok": true

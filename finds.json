@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-14T19:30:44.388Z",
+  "updatedAt": "2026-11-15T19:59:40.068Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -465,30 +465,6 @@
       ],
       "photo": "https://m.cbhomes.com/p/283/670211688/67B5a8b5873f4d7/m23cc.webp",
       "wasPrice": 990000
-    },
-    {
-      "id": "4920-sw-31st-dr-pdx",
-      "tag": "🌲 Portland",
-      "address": "4920 SW 31st Dr",
-      "hood": "SW Portland, Portland OR",
-      "price": 715000,
-      "beds": 4,
-      "baths": 2,
-      "sqft": 2290,
-      "status": "Active",
-      "verified": "2026-10-02",
-      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
-      "dom": null,
-      "why": "4bd/2ba, 2,290 sf at $715,000 ($312/sf) in SW Portland. Price cut from $729,000. No ADU claimed/verified.",
-      "ask": "Verify condition, permits and any extra unit.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/4920-sw-31st-dr/pid_72563676/"
-        }
-      ],
-      "photo": "https://m1.cbhomes.com/p/283/567517485/D40511E40f07484/m23cc.webp",
-      "wasPrice": 729000
     },
     {
       "id": "514-ne-going-st-pdx",
@@ -1262,28 +1238,6 @@
       ]
     },
     {
-      "id": "2323-se-70th-ave-pdx",
-      "tag": "🌲 Portland",
-      "address": "2323 SE 70th Ave",
-      "hood": "Mt. Tabor, Portland OR",
-      "price": 479000,
-      "beds": 2,
-      "baths": 2,
-      "sqft": 1896,
-      "status": "Active",
-      "verified": "2026-10-10",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/10/2026",
-      "dom": null,
-      "why": "PRICE CUT $510,000 → $479,000. 2bd/2ba, 1,896 sqft in Mt. Tabor, under the cap (built 1943, 0.1 ac lot); MLS #561705276. Any ADU/guest-unit claim unverified.",
-      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/2323-se-70th-ave/pid_73013005/"
-        }
-      ]
-    },
-    {
       "id": "1516-se-43rd-ave-pdx",
       "tag": "🌲 Portland",
       "address": "1516 SE 43rd Ave",
@@ -1584,15 +1538,15 @@
       "tag": "🌲 Portland",
       "address": "5816 S Corbett Ave",
       "hood": "SW Portland, Portland OR",
-      "price": 889000,
+      "price": 849900,
       "beds": 4,
       "baths": 4,
       "sqft": 3182,
       "status": "Active",
-      "verified": "2026-10-12",
-      "verifiedHow": "Compass live listing page: Active at $889,000 (CB page last updated 9/27/2026)",
+      "verified": "2026-11-15",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 11/14/2026",
       "dom": null,
-      "why": "4bd/4ba, 3,182 sqft in SW Portland, under the cap (built 1905); MLS #173844905. Detached/attached not stated ADU (permitted, rented now): \"The detached extra deep garage with above ADU was permitted & built in 2017 with long term Airbnb history earning $25,000 annually. All ADU items and included in the purchase.\"",
+      "why": "PRICE CUT $889,000 → $849,900. 4bd/4ba, 3,182 sqft in SW Portland, under the cap (built 1905); MLS #173844905. Detached/attached not stated ADU (permitted, rented now): \"The detached extra deep garage with above ADU was permitted & built in 2017 with long term Airbnb history earning $25,000 annually. All ADU items and included in the purchase.\" 📋 Built 1905 · Cooling: Mini Split · Condition: Updated/Remodeled · On market: 205 days · 2 price cuts.",
       "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
       "links": [
         {
@@ -1714,15 +1668,15 @@
       "tag": "🌲 Portland",
       "address": "2213 SE 60th Ave",
       "hood": "Mt. Tabor, Portland OR",
-      "price": 925000,
+      "price": 900000,
       "beds": 5,
       "baths": 4,
       "sqft": 2724,
       "status": "Active",
-      "verified": "2026-10-26",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/26/2026",
+      "verified": "2026-11-15",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 11/14/2026",
       "dom": null,
-      "why": "PRICE CUT $950,000 → $925,000. 5bd/4ba, 2,724 sqft in Mt. Tabor, under the cap (built 2015, 0.09 ac lot); MLS #335562602. Own entrance ADU (permits not stated, kitchen, bath): \"With its own entrance, full kitchen, living room, bedroom with walk-in closet, laundry, and backyard access, it lives like a home of its own.\" 📋 Built 2015 · Lot: 3,920 sq ft · Cooling: Central Air, Mini Split · Condition: Resale · On market: 18 days · 1 price cut. Confirm permits before offering.",
+      "why": "PRICE CUT $925,000 → $900,000. 5bd/4ba, 2,724 sqft in Mt. Tabor, under the cap (built 2015, 0.09 ac lot); MLS #335562602. Own entrance ADU (permits not stated, kitchen, bath): \"With its own entrance, full kitchen, living room, bedroom with walk-in closet, laundry, and backyard access, it lives like a home of its own.\" 📋 Built 2015 · Lot: 3,920 sq ft · Cooling: Central Air, Mini Split · Condition: Resale · On market: 38 days · 2 price cuts. Confirm permits before offering.",
       "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
       "links": [
         {
@@ -2326,6 +2280,14 @@
     {
       "date": "2026-11-14",
       "text": "212 S Ave 57 (Highland Park, Los Angeles) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-11-15",
+      "text": "4920 SW 31st Dr (SW Portland, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-11-15",
+      "text": "2323 SE 70th Ave (Mt. Tabor, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
     }
   ]
 }
