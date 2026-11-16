@@ -89,3 +89,12 @@ test("studio candidates: area, rent cap, size, not coworking", () => {
   assert.deepStrictEqual(out.map((x) => [x.id, x.area]), [["a", "Atwater Village"]]);
   assert.deepStrictEqual(candidates([base], ["a"]), []);
 });
+
+test("2–4 unit buildings count as the separate unit; 5+ do not (11/16 Bellevue fourplex)", () => {
+  const { multiUnit } = require("../scraper/scout-alerts.js");
+  const four = multiUnit("Multi-Family", { "Units in Complex": "4" }, "A rare investment opportunity in prime Silver Lake, this fourplex is set on a large corner lot. All units offer separate entrances.");
+  assert.ok(four.ok); assert.match(four.tier, /^Fourplex — 4/);
+  assert.ok(!multiUnit("Multi-Family", { "Units in Complex": "6" }, "").ok);
+  assert.ok(multiUnit("Duplex", {}, "Two units.").ok);
+  assert.equal(multiUnit("Single Family", {}, "x"), null);
+});

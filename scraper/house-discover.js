@@ -65,6 +65,7 @@ function hoodFor(hoods, lat, lng) {
   }
   return best && best.name;
 }
+const HOME_TYPES = /single family|duplex|triplex|quadruplex|fourplex|multi-family/i;
 const text = (h) => h.replace(/<[^>]+>/g, " ").replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/\s+/g, " ").trim();
 const num = (s) => (s == null ? null : +String(s).replace(/[^0-9.]/g, "") || null);
 // "941 Fortune Way" / "941 FORTUNE WY." → "941 fortune" (number + first word)
@@ -128,8 +129,10 @@ async function discover({ ignoreSeen = false } = {}) {
     for (const zip of cfg.zips) for (const c of await scrapeZip(cfg.state, zip)) all.set(c.pid, c);
     stats[city] = { scanned: all.size };
     for (const c of all.values()) {
-      if (!/single family/i.test(c.summary) || !/\bactive\b/i.test(c.summary)) continue;
-      if (!c.price || c.price >= cfg.cap) continue;
+      // 11/16: 2–4 unit buildings count too — they ARE the separate unit (Ryan
+      // missed a fourplex on Bellevue because only "Single Family" was read).
+      if (!HOME_TYPES.test(c.summary) || !/\bactive\b/i.test(c.summary)) continue;
+      if (!c.price || c.price > cfg.cap) continue;
       const baths = (c.baths || 0) + (c.halfBaths && !c.baths ? 0.5 * c.halfBaths : 0);
       if (baths < 1.5) continue;
       const hood = hoodFor(cfg.hoods, c.lat, c.lng);
@@ -140,7 +143,7 @@ async function discover({ ignoreSeen = false } = {}) {
       if (seenPrice !== undefined && !(c.price < seenPrice)) continue;   // already alerted/rejected, no price drop
       out.push({
         pid: c.pid, address: c.address, price: c.price, wasPrice: prior ?? seenPrice ?? null, beds: c.beds, baths: c.baths, sqft: c.sqft,
-        city, hood, url: c.url, photo: c.photo, mls: (c.summary.match(/MLS #\s*(\S+)/) || [])[1] || null,
+        type: (c.summary.match(HOME_TYPES) || [])[0] || null, city, hood, url: c.url, photo: c.photo, mls: (c.summary.match(/MLS #\s*(\S+)/) || [])[1] || null,
       });
     }
     stats[city].matches = out.filter((x) => x.city === city).length;

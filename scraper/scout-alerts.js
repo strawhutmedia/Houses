@@ -218,6 +218,24 @@ function aduVerdict(remarks) {
   return { ok: true, detached, tier: duplex && !detached ? `Duplex, 2nd unit (${facts.join(", ")})` : `${sep} ADU (${facts.join(", ")})`, evidence };
 }
 
+// 2–4 unit buildings (11/16): every unit is separate by definition, so the
+// building itself satisfies the ADU rule. 5+ units = commercial loan → skip.
+const UNIT_WORDS = { duplex: 2, triplex: 3, quadruplex: 4, fourplex: 4 };
+function multiUnit(type, fields = {}, remarks = "") {
+  if (!/duplex|triplex|quadruplex|fourplex|multi-family/i.test(type || "")) return null;
+  let units = +String(fields["Units in Complex"] || fields["Number of Units"] || "").replace(/[^0-9]/g, "") || null;
+  const named = (`${type} ${remarks}`.match(/\b(duplex|triplex|quadruplex|fourplex)\b/i) || [])[1];
+  if (!units && named) units = UNIT_WORDS[named.toLowerCase()];
+  if (!units) return { ok: false, reason: "multi-family listing doesn't say how many units" };
+  if (units < 2) return null;
+  if (units > 4) return { ok: false, reason: `${units} units — 5+ is a commercial loan, not a home loan` };
+  const label = { 2: "Duplex", 3: "Triplex", 4: "Fourplex" }[units];
+  const sentences = String(remarks).split(/(?<=[.!?])\s+/);
+  const evidence = sentences.find((t) => /\bunits?\b|duplex|triplex|fourplex|separate entrance/i.test(t)) || sentences[0] || "";
+  return { ok: true, detached: false, tier: `${label} — ${units} separate units (live in one, Steve in another, rent the rest)`,
+    evidence: evidence.length > 280 ? evidence.slice(0, 277) + "…" : evidence };
+}
+
 const GONE = /pending|contingent|under contract|contract signed|sold|closed|withdrawn|expired|cancel|off market|leased/i;
 
 function houseWhy(c, d) {
@@ -297,7 +315,7 @@ async function runHouse({ dry, today, state }) {
     if (!/^active$/i.test(d.status)) { rejected.push({ ...c, reason: `status ${d.status}` }); return; }
     const age = daysSince(d.updated, today);
     if (!d.remarks) { unreachable.push(c); return; }                                     // description didn't load — retry tomorrow
-    const adu = aduVerdict(d.remarks);                                                     // Ryan 10/12: separate ADU required
+    const adu = multiUnit(c.type || (d.fields || {}).Type, d.fields, d.remarks) || aduVerdict(d.remarks); // Ryan 10/12: separate unit required
     if (!adu.ok) { rejected.push({ ...c, reason: `no separate ADU — ${adu.reason}` }); return; }
     let how = `Coldwell Banker live listing page: Status ${d.status}, Updated ${d.updated}`;
     if (age == null || age > FRESH_DAYS) {
@@ -482,4 +500,4 @@ async function main() {
 }
 
 if (require.main === module) main().catch((e) => { console.error(e); process.exit(1); });
-module.exports = { parseCbDetail, aduVerdict, houseCard, pageFacts, compassStatus, daysSince, houseWhy, studioWhy, ptNow, GONE, POST_GONE };
+module.exports = { parseCbDetail, aduVerdict, multiUnit, houseCard, pageFacts, compassStatus, daysSince, houseWhy, studioWhy, ptNow, GONE, POST_GONE };

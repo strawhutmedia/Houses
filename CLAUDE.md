@@ -1,7 +1,7 @@
 # EquityScout — project handoff & state
 
 Read this first. It is the source of truth for where the project stands and how
-Ryan (the owner) works. Last full update: **2026-10-12**.
+Ryan (the owner) works. Last full update: **2026-11-16**.
 
 ## What this is
 
@@ -113,6 +113,19 @@ Daily payload now sends structured `adu {tier, quote}`, `facts[]`, `note`, `mone
 only as a legacy fallback; `houseWhy()` still feeds finds.json). Resent 10/12
 ~16:10Z as "🏡 28 ADU houses — easy-to-read version". Open Q to Ryan: clear
 non-ADU houses off the board?
+
+### 11/16: LA drought fixed — multi-family was never scanned
+Ryan: "only Portland emails lately" + missed a fourplex on Bellevue. Cause: discovery
+kept ONLY "Single Family" (CB types in LA ZIPs: ~200 Multi-Family + Duplex/Triplex
+skipped entirely) and price had to be < cap (3601 Bellevue was exactly $1.25M). LA
+had ~3 emailed houses in a month. Fix: `HOME_TYPES` in house-discover.js includes
+duplex/triplex/fourplex/multi-family, cap inclusive; `multiUnit()` in scout-alerts.js
+= 2–4 units passes the ADU rule (every unit separate), 5+ rejected (commercial loan).
+Dry run: LA matches 0 → 50, 8 verified. 3601 Bellevue (fourplex, $1.25M, 2 duplexes,
+Silver Lake) was **Under Contract 11/10** — never emailed; backup offer only.
+KNOWN GAP: Compass detail pages now return empty 202 from this container (maybe CI too)
+→ stale-CB candidates (Updated >2 days) go "unreachable" daily; check scout-state.
+Also: GitHub cron fires hours late (runs at ~20–23Z, not 14:40Z) → emails arrive afternoon.
 
 ## (Superseded 10-03) The daily house-alert Routine
 
