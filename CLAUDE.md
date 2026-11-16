@@ -123,8 +123,11 @@ duplex/triplex/fourplex/multi-family, cap inclusive; `multiUnit()` in scout-aler
 = 2–4 units passes the ADU rule (every unit separate), 5+ rejected (commercial loan).
 Dry run: LA matches 0 → 50, 8 verified. 3601 Bellevue (fourplex, $1.25M, 2 duplexes,
 Silver Lake) was **Under Contract 11/10** — never emailed; backup offer only.
-KNOWN GAP: Compass detail pages now return empty 202 from this container (maybe CI too)
-→ stale-CB candidates (Updated >2 days) go "unreachable" daily; check scout-state.
+Real run 11/16 23:44Z: emailed 8 LA (Tipton, Corralitas, India, W Ave 30, Tularosa,
+Park View, Avon, Talmadge). KNOWN GAP: Compass detail pages now return empty 202 (CI too)
+→ 33 LA candidates whose CB page is >2 days old stay "unreachable" every day. Redfin/
+Movoto/Realtor block; Estately search doesn't resolve addresses. ASKED Ryan 11/16: allow
+"CB page says Active today, last updated N days ago — confirm with agent" emails?
 Also: GitHub cron fires hours late (runs at ~20–23Z, not 14:40Z) → emails arrive afternoon.
 
 ## (Superseded 10-03) The daily house-alert Routine
