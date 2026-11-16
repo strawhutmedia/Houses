@@ -1,12 +1,14 @@
 {
   "studio": {
-    "lastRun": "2026-11-15",
-    "at": "2026-11-15T19:57:17.042Z",
-    "spacesFile": "2026-11-15T19:57:16.977Z",
-    "craigslistFetched": 136,
-    "candidates": 0,
-    "verified": [],
-    "emailed": false,
+    "lastRun": "2026-11-16",
+    "at": "2026-11-16T23:30:22.173Z",
+    "spacesFile": "2026-11-16T23:30:20.454Z",
+    "craigslistFetched": 162,
+    "candidates": 1,
+    "verified": [
+      "Commercial Office Space (Burbank) $2,898"
+    ],
+    "emailed": true,
     "emailError": null,
     "rejected": [],
     "unreachable": [],
@@ -14,33 +16,30 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-11-15",
-    "at": "2026-11-15T19:59:41.363Z",
+    "lastRun": "2026-11-16",
+    "at": "2026-11-16T23:34:32.557Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 814,
-        "matches": 0
+        "scanned": 811,
+        "matches": 1
       },
       "Portland": {
-        "scanned": 1150,
-        "matches": 2
+        "scanned": 1146,
+        "matches": 1
       }
     },
     "candidates": 2,
-    "verified": [
-      "2213 SE 60th Ave (Mt. Tabor) $900,000",
-      "5816 S Corbett Ave (SW Portland) $849,900"
-    ],
-    "emailed": true,
+    "verified": [],
+    "emailed": false,
     "emailError": null,
-    "rejected": [],
+    "rejected": [
+      "1705 SE Cesar E Chavez Blvd: no separate ADU — no ADU/second unit in description",
+      "5233 Irvington: no separate ADU — no ADU/second unit in description"
+    ],
     "unreachable": [],
     "boardAdded": 0,
-    "boardPriceCuts": 2,
-    "movedToCorrections": [
-      "4920 SW 31st Dr: Pending",
-      "2323 SE 70th Ave: Pending"
-    ],
+    "boardPriceCuts": 0,
+    "movedToCorrections": [],
     "brokenSince": null,
     "ok": true
   }
