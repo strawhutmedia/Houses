@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T19:59:40.068Z",
+  "updatedAt": "2026-11-16T23:44:04.059Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -2056,6 +2056,182 @@
         {
           "label": "Coldwell Banker listing",
           "url": "https://www.coldwellbankerhomes.com/or/portland/3464-nw-savier-st/pid_73923262/"
+        }
+      ]
+    },
+    {
+      "id": "5903-tipton-way-la",
+      "tag": "🌴 Los Angeles",
+      "address": "5903 Tipton Way",
+      "hood": "Highland Park, Los Angeles",
+      "price": 1099900,
+      "beds": 3,
+      "baths": 3,
+      "sqft": 1225,
+      "status": "Active",
+      "verified": "2026-11-16",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 11/15/2026",
+      "dom": null,
+      "why": "3bd/3ba, 1,225 sqft in Highland Park, under the cap (built 1937, 0.1606 ac lot); MLS #IV26243826. Duplex — 2 separate units (live in one, Steve in another, rent the rest): \"Located in the Highland Park borderline with Eagle Rock, 5903 Tipton Way offers a distinctive two-unit residential setup on an approximately 6,994-square-foot lot.\" 📋 Built 1937 · Lot: 6,996 sq ft · Cooling: Central Air · On market: 2 days.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/5903-tipton-way/pid_74766597/"
+        }
+      ]
+    },
+    {
+      "id": "2611-corralitas-dr-la",
+      "tag": "🌴 Los Angeles",
+      "address": "2611 Corralitas Dr",
+      "hood": "Frogtown, Los Angeles",
+      "price": 1250000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 2285,
+      "status": "Active",
+      "verified": "2026-11-16",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 11/15/2026",
+      "dom": null,
+      "why": "3bd/2ba, 2,285 sqft in Frogtown, under the cap (built 1990, 0.2124 ac lot); MLS #SR26241264. Detached/attached not stated ADU (permits not stated, kitchen): \"Light and bright throughout, the home features a generous and versatile floor plan with two separate living areas, two dining spaces, and a large kitchen, providing plenty of room for everyday living and entertaining.\" 📋 Built 1990 · Lot: 9,254 sq ft · Parking: Garage · Cooling: Central Air · On market: 2 days. Confirm permits before offering.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/2611-corralitas-dr/pid_74772028/"
+        }
+      ]
+    },
+    {
+      "id": "2106-india-st-la",
+      "tag": "🌴 Los Angeles",
+      "address": "2106 India St",
+      "hood": "Frogtown, Los Angeles",
+      "price": 1095000,
+      "beds": null,
+      "baths": 2,
+      "sqft": null,
+      "status": "Active",
+      "verified": "2026-11-16",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 11/16/2026",
+      "dom": null,
+      "why": "?bd/2ba in Frogtown, under the cap (built 1907, 0.1101 ac lot); MLS #26867289. Duplex — 2 separate units (live in one, Steve in another, rent the rest): \"Ideally located near Atwater Village, Frogtown, Los Feliz, and Echo Park, this rare, gated Craftsman duplex offers a unique blend of privacy, character, and urban convenience.\" 📋 Built 1907 · Parking: Driveway, Garage - 2 Car · Cooling: Wall Unit(s) · Condition: Updated/Remodeled · On market: 105 days · 2 price cuts.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/2106-india-st/pid_72849529/"
+        }
+      ]
+    },
+    {
+      "id": "2214-w-ave-30-la",
+      "tag": "🌴 Los Angeles",
+      "address": "2214 W Ave 30",
+      "hood": "Frogtown, Los Angeles",
+      "price": 795000,
+      "beds": null,
+      "baths": 5,
+      "sqft": null,
+      "status": "Active",
+      "verified": "2026-11-16",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 11/16/2026",
+      "dom": null,
+      "why": "?bd/5ba in Frogtown, under the cap (built 1938, 0.105 ac lot); MLS #26106217. Duplex — 2 separate units (live in one, Steve in another, rent the rest): \"Discover a standout two-unit duplex in a highly desirable rental pocket of Los Angeles, prized for its outstanding location and everyday convenience.Each residence features a private entry, separate street address, and its own driveway.\" 📋 Built 1938 · Parking: Other · Cooling: Other · On market: 13 days · 2 price cuts.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/2214-w-ave-30/pid_74590273/"
+        }
+      ]
+    },
+    {
+      "id": "706-tularosa-dr-la",
+      "tag": "🌴 Los Angeles",
+      "address": "706 Tularosa Dr",
+      "hood": "Silver Lake, Los Angeles",
+      "price": 1099000,
+      "beds": null,
+      "baths": 2,
+      "sqft": null,
+      "status": "Active",
+      "verified": "2026-11-16",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 11/14/2026",
+      "dom": null,
+      "why": "?bd/2ba in Silver Lake, under the cap (built 1912, 0.18 ac lot); MLS #26108288. Duplex — 2 separate units (live in one, Steve in another, rent the rest): \"Discover a unique opportunity to own a private and secluded duplex in the heart of Silver Lake, featuring two separate homes on one expansive lot.\" 📋 Built 1912 · Parking: Garage - 2 Car · Cooling: Central · Condition: Updated/Remodeled · On market: 2 days.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/706-tularosa-dr/pid_74770311/"
+        }
+      ]
+    },
+    {
+      "id": "216-218-n-park-view-st-la",
+      "tag": "🌴 Los Angeles",
+      "address": "216 - 218 N Park View St",
+      "hood": "Echo Park, Los Angeles",
+      "price": 999999,
+      "beds": 4,
+      "baths": 2,
+      "sqft": 1435,
+      "status": "Active",
+      "verified": "2026-11-16",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 11/16/2026",
+      "dom": null,
+      "why": "4bd/2ba, 1,435 sqft in Echo Park, under the cap (built 1925, 0.1837 ac lot); MLS #SR26240238. Duplex — 2 separate units (live in one, Steve in another, rent the rest): \"gated lot, this extensively renovated duplex offers two VACANT 2-bedroom, 1-bath residences, with approximately 1,435 sq.\" 📋 Built 1925 · Lot: 8,002 sq ft · Parking: Concrete, Gated, On-Site, No Driveway, Side-by-Sid · Cooling: Wall/Window Unit(s) · Condition: Turnkey · On market: 7 days · 1 price cut.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/216-218-n-park-view-st/pid_74681423/"
+        }
+      ]
+    },
+    {
+      "id": "2206-avon-st-la",
+      "tag": "🌴 Los Angeles",
+      "address": "2206 Avon St",
+      "hood": "Frogtown, Los Angeles",
+      "price": 1225000,
+      "beds": null,
+      "baths": 3,
+      "sqft": null,
+      "status": "Active",
+      "verified": "2026-11-16",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 11/14/2026",
+      "dom": null,
+      "why": "?bd/3ba in Frogtown, under the cap (built 1926, 0.1665 ac lot); MLS #26998783. Triplex — 3 separate units (live in one, Steve in another, rent the rest): \"Three charming Craftsman bungalows in prime Echo Park including a lovely 2 bedroom, 1 bathroom bungalow with private wraparound yard delivered vacant!\" 📋 Built 1926 · Parking: None · Cooling: Wall/Window · On market: 31 days.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/2206-avon-st/pid_74307936/"
+        }
+      ]
+    },
+    {
+      "id": "1325-talmadge-st-la",
+      "tag": "🌴 Los Angeles",
+      "address": "1325 Talmadge St",
+      "hood": "Los Feliz, Los Angeles",
+      "price": 1199000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1413,
+      "status": "Active",
+      "verified": "2026-11-16",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 11/15/2026",
+      "dom": null,
+      "why": "3bd/2ba, 1,413 sqft in Los Feliz, under the cap (built 1918, 0.1435 ac lot); MLS #PW26198337. Duplex — 2 separate units (live in one, Steve in another, rent the rest): \"Welcome to 1325 Talmadge Street, a beautifully reimagined and completely turnkey duplex in the highly desirable Los Feliz area of Los Angeles.\" 📋 Built 1918 · Lot: 6,253 sq ft · Parking: Concrete, Driveway Up Slope From Street, Street · Cooling: Ductless · Condition: Turnkey, Updated/Remodeled · On market: 63 days · 2 price cuts.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/1325-talmadge-st/pid_73713543/"
         }
       ]
     }
