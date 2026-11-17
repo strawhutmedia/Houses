@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-16T23:44:04.059Z",
+  "updatedAt": "2026-11-17T22:41:17.710Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -1124,28 +1124,6 @@
         {
           "label": "Coldwell Banker listing",
           "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/4525-college-view-ave/pid_74182150/"
-        }
-      ]
-    },
-    {
-      "id": "3851-n-riley-ln-la",
-      "tag": "🌴 Los Angeles",
-      "address": "3851 N Riley Ln",
-      "hood": "Glassell Park, Los Angeles",
-      "price": 999000,
-      "beds": 2,
-      "baths": 3,
-      "sqft": 1642,
-      "status": "Active",
-      "verified": "2026-10-09",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/8/2026",
-      "dom": null,
-      "why": "PRICE CUT $1,099,995 → $999,000. 2bd/3ba, 1,642 sqft in Glassell Park, under the cap (built 2025, 0.03 ac lot); MLS #26836579. Any ADU/guest-unit claim unverified.",
-      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/3851-n-riley-ln/pid_71464348/"
         }
       ]
     },
@@ -2464,6 +2442,10 @@
     {
       "date": "2026-11-15",
       "text": "2323 SE 70th Ave (Mt. Tabor, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-11-17",
+      "text": "3851 N Riley Ln (Glassell Park, Los Angeles) is now Pending per its live Coldwell Banker page — removed from the board."
     }
   ]
 }

@@ -1,12 +1,14 @@
 {
   "studio": {
-    "lastRun": "2026-11-16",
-    "at": "2026-11-16T23:40:40.750Z",
-    "spacesFile": "2026-11-16T23:40:40.696Z",
-    "craigslistFetched": 162,
-    "candidates": 0,
-    "verified": [],
-    "emailed": false,
+    "lastRun": "2026-11-17",
+    "at": "2026-11-17T22:38:13.436Z",
+    "spacesFile": "2026-11-17T22:38:11.943Z",
+    "craigslistFetched": 164,
+    "candidates": 1,
+    "verified": [
+      "Creative Office/Retail in Historic Seeley Building (Atwater Village) $2,495"
+    ],
+    "emailed": true,
     "emailError": null,
     "rejected": [],
     "unreachable": [],
@@ -14,79 +16,66 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-11-16",
-    "at": "2026-11-16T23:44:04.938Z",
+    "lastRun": "2026-11-17",
+    "at": "2026-11-17T22:41:17.711Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 811,
-        "matches": 49
+        "scanned": 812,
+        "matches": 34
       },
       "Portland": {
         "scanned": 1146,
-        "matches": 0
+        "matches": 1
       }
     },
-    "candidates": 49,
-    "verified": [
-      "5903 Tipton Way (Highland Park) $1,099,900",
-      "2611 Corralitas Dr (Frogtown) $1,250,000",
-      "2106 India St (Frogtown) $1,095,000",
-      "2214 W Ave 30 (Frogtown) $795,000",
-      "706 Tularosa Dr (Silver Lake) $1,099,000",
-      "216 - 218 N Park View St (Echo Park) $999,999",
-      "2206 Avon St (Frogtown) $1,225,000",
-      "1325 Talmadge St (Los Feliz) $1,199,000"
-    ],
-    "emailed": true,
+    "candidates": 35,
+    "verified": [],
+    "emailed": false,
     "emailError": null,
     "rejected": [
-      "138 San Pascual Ave: no separate ADU — 5 units — 5+ is a commercial loan, not a home loan",
-      "6899 Pollard St: no separate ADU — no ADU/second unit in description",
-      "114 W Ave 45: no separate ADU — 6 units — 5+ is a commercial loan, not a home loan",
-      "334 N Occidental Blvd: no separate ADU — no ADU/second unit in description",
-      "723 E Kensington: no separate ADU — ADU is only potential/planned/unfinished",
-      "1727 Bellevue Ave: no separate ADU — 6 units — 5+ is a commercial loan, not a home loan",
-      "333 N Union Ave: no separate ADU — 9 units — 5+ is a commercial loan, not a home loan",
-      "1923 Mayview Dr: no separate ADU — no ADU/second unit in description"
+      "2313 N Sumner St: no separate ADU — no ADU/second unit in description"
     ],
     "unreachable": [
-      "5009 Stratford Rd",
-      "6035 Mesa",
       "276 Thorne St",
+      "5009 Stratford Rd",
       "2660 Newell St",
+      "6035 Mesa",
       "2142 Baxter St",
       "4047 W Ave 40",
+      "2675 Thorpe Ave",
       "3619 Fletcher Dr",
       "634 Romulo St",
       "3064 Isabel",
-      "3428 Maceo",
-      "2675 Thorpe Ave",
-      "3300 Chapman St",
       "4254 Verdugo Rd",
+      "3300 Chapman St",
+      "3428 Maceo",
       "456 Ulysses St",
       "1709 Campus Rd",
       "1444 Hazelwood Ave",
+      "2117 Montana St",
       "1447 Westerly Terrace",
       "1617 Landa St",
       "3125 Berkeley Cir",
-      "2221 Elsinore",
       "1535 Parmer Ave",
-      "1560 Morton Ave",
+      "2221 Elsinore",
       "337 N Occidental",
+      "1560 Morton Ave",
       "3538 London",
       "1465 W Temple St",
       "1458 Silver Lake Blvd",
-      "1632 Echo Park Ave",
       "1131 Echo Park Ave",
+      "1632 Echo Park Ave",
       "214 N Alvarado St",
+      "1804 Echo Park Ave",
       "3911 De Longpre",
       "1443 N Mariposa",
-      "1744 N Berendo St",
-      "1804 Echo Park Ave"
+      "1744 N Berendo St"
     ],
-    "boardAdded": 8,
+    "boardAdded": 0,
     "boardPriceCuts": 0,
-    "movedToCorrections": [],
+    "movedToCorrections": [
+      "3851 N Riley Ln: Pending"
+    ],
     "brokenSince": null,
     "ok": true
   }
