@@ -309,7 +309,7 @@ async function runHouse({ dry, today, state }) {
   const { candidates, stats } = await hd.discover();
   const broken = Object.entries(stats).filter(([, s]) => !s.scanned).map(([city]) => city);
   const verified = [], rejected = [], unreachable = [];
-  await mapLimit(candidates, 6, async (c) => {
+  await mapLimit(candidates, 2, async (c) => {  // gentle on CB — our one unblocked source
     const d = parseCbDetail(await curl(c.url));
     if (!d || !d.status) { unreachable.push(c); return; }                                  // retry tomorrow, not marked
     if (!/^active$/i.test(d.status)) { rejected.push({ ...c, reason: `status ${d.status}` }); return; }

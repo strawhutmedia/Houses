@@ -128,6 +128,10 @@ Park View, Avon, Talmadge). KNOWN GAP: Compass detail pages now return empty 202
 → 33 LA candidates whose CB page is >2 days old stay "unreachable" every day. Redfin/
 Movoto/Realtor block; Estately search doesn't resolve addresses. ASKED Ryan 11/16: allow
 "CB page says Active today, last updated N days ago — confirm with agent" emails?
+11/17 Ryan: "don't do stuff to get blocked." Blocks are site-wide anti-bot on cloud/
+datacenter IPs (Compass 202s from BOTH this container and GitHub's runners; Zillow/Redfin
+blocked from day one), not a ban for our volume. Still: CB detail fetches cut 6→2 concurrent.
+Never hammer CB — it's the only working source. No probing new sites without reason.
 Also: GitHub cron fires hours late (runs at ~20–23Z, not 14:40Z) → emails arrive afternoon.
 
 ## (Superseded 10-03) The daily house-alert Routine
