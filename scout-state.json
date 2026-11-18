@@ -1,12 +1,13 @@
 {
   "studio": {
-    "lastRun": "2026-11-17",
-    "at": "2026-11-17T22:38:13.436Z",
-    "spacesFile": "2026-11-17T22:38:11.943Z",
-    "craigslistFetched": 164,
-    "candidates": 1,
+    "lastRun": "2026-11-18",
+    "at": "2026-11-18T22:19:54.519Z",
+    "spacesFile": "2026-11-18T22:19:53.171Z",
+    "craigslistFetched": 263,
+    "candidates": 2,
     "verified": [
-      "Creative Office/Retail in Historic Seeley Building (Atwater Village) $2,495"
+      "Creative Office/Retail in Historic Seeley Building (Atwater Village) $2,495",
+      "Small Warehouse Space in Burbank (Burbank) $3,200"
     ],
     "emailed": true,
     "emailError": null,
@@ -16,66 +17,67 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-11-17",
-    "at": "2026-11-17T22:41:17.711Z",
+    "lastRun": "2026-11-18",
+    "at": "2026-11-18T22:29:26.259Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 812,
+        "scanned": 811,
         "matches": 34
       },
       "Portland": {
-        "scanned": 1146,
-        "matches": 1
+        "scanned": 917,
+        "matches": 3
       }
     },
-    "candidates": 35,
-    "verified": [],
-    "emailed": false,
+    "candidates": 37,
+    "verified": [
+      "3538 London (Silver Lake) $1,199,000"
+    ],
+    "emailed": true,
     "emailError": null,
     "rejected": [
-      "2313 N Sumner St: no separate ADU — no ADU/second unit in description"
+      "1726 Bridgeport: no separate ADU — ADU is only potential/planned/unfinished",
+      "819 Rosemont: no separate ADU — ADU is only potential/planned/unfinished",
+      "5705 SW Seymour St: no separate ADU — no ADU/second unit in description",
+      "1617 SW Broadway Dr: no separate ADU — no ADU/second unit in description"
     ],
     "unreachable": [
-      "276 Thorne St",
       "5009 Stratford Rd",
+      "276 Thorne St",
       "2660 Newell St",
-      "6035 Mesa",
       "2142 Baxter St",
       "4047 W Ave 40",
       "2675 Thorpe Ave",
       "3619 Fletcher Dr",
-      "634 Romulo St",
+      "6035 Mesa",
       "3064 Isabel",
       "4254 Verdugo Rd",
-      "3300 Chapman St",
+      "634 Romulo St",
       "3428 Maceo",
+      "3300 Chapman St",
       "456 Ulysses St",
       "1709 Campus Rd",
       "1444 Hazelwood Ave",
-      "2117 Montana St",
       "1447 Westerly Terrace",
       "1617 Landa St",
-      "3125 Berkeley Cir",
+      "2117 Montana St",
       "1535 Parmer Ave",
       "2221 Elsinore",
       "337 N Occidental",
       "1560 Morton Ave",
-      "3538 London",
       "1465 W Temple St",
       "1458 Silver Lake Blvd",
       "1131 Echo Park Ave",
-      "1632 Echo Park Ave",
       "214 N Alvarado St",
-      "1804 Echo Park Ave",
       "3911 De Longpre",
+      "1804 Echo Park Ave",
+      "1744 N Berendo St",
       "1443 N Mariposa",
-      "1744 N Berendo St"
+      "1835 NE Skidmore St"
     ],
-    "boardAdded": 0,
+    "boardAdded": 1,
     "boardPriceCuts": 0,
-    "movedToCorrections": [
-      "3851 N Riley Ln: Pending"
-    ],
+    "movedToCorrections": [],
     "brokenSince": null,
     "ok": true
   }
