@@ -1,83 +1,82 @@
 {
   "studio": {
-    "lastRun": "2026-11-18",
-    "at": "2026-11-18T22:19:54.519Z",
-    "spacesFile": "2026-11-18T22:19:53.171Z",
-    "craigslistFetched": 263,
-    "candidates": 2,
-    "verified": [
-      "Creative Office/Retail in Historic Seeley Building (Atwater Village) $2,495",
-      "Small Warehouse Space in Burbank (Burbank) $3,200"
-    ],
-    "emailed": true,
+    "lastRun": "2026-11-19",
+    "at": "2026-11-19T22:26:05.816Z",
+    "spacesFile": "2026-11-19T22:26:05.700Z",
+    "craigslistFetched": 138,
+    "candidates": 1,
+    "verified": [],
+    "emailed": false,
     "emailError": null,
-    "rejected": [],
+    "rejected": [
+      "Workspace with a Small Office: size not stated"
+    ],
     "unreachable": [],
     "brokenSince": null,
     "ok": true
   },
   "house": {
-    "lastRun": "2026-11-18",
-    "at": "2026-11-18T22:29:26.259Z",
+    "lastRun": "2026-11-19",
+    "at": "2026-11-19T22:31:47.191Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 811,
-        "matches": 34
+        "scanned": 717,
+        "matches": 31
       },
       "Portland": {
-        "scanned": 917,
-        "matches": 3
+        "scanned": 1096,
+        "matches": 4
       }
     },
-    "candidates": 37,
+    "candidates": 35,
     "verified": [
-      "3538 London (Silver Lake) $1,199,000"
+      "218 N Park View St (Echo Park) $999,999",
+      "2117 Montana St (Echo Park) $1,150,000"
     ],
     "emailed": true,
     "emailError": null,
     "rejected": [
-      "1726 Bridgeport: no separate ADU — ADU is only potential/planned/unfinished",
-      "819 Rosemont: no separate ADU — ADU is only potential/planned/unfinished",
-      "5705 SW Seymour St: no separate ADU — no ADU/second unit in description",
-      "1617 SW Broadway Dr: no separate ADU — no ADU/second unit in description"
+      "1008 Dexter St: no separate ADU — no ADU/second unit in description",
+      "1422 Prism: no separate ADU — no ADU/second unit in description",
+      "360 SW Hamilton St: no separate ADU — no ADU/second unit in description",
+      "1835 NE Skidmore St: no separate ADU — no ADU/second unit in description",
+      "5326 SE Stark St: no separate ADU — ADU is only potential/planned/unfinished",
+      "3217 SE 28th Ave: no separate ADU — no ADU/second unit in description"
     ],
     "unreachable": [
       "5009 Stratford Rd",
-      "276 Thorne St",
       "2660 Newell St",
       "2142 Baxter St",
       "4047 W Ave 40",
       "2675 Thorpe Ave",
       "3619 Fletcher Dr",
-      "6035 Mesa",
+      "634 Romulo St",
       "3064 Isabel",
       "4254 Verdugo Rd",
-      "634 Romulo St",
       "3428 Maceo",
-      "3300 Chapman St",
       "456 Ulysses St",
       "1709 Campus Rd",
       "1444 Hazelwood Ave",
       "1447 Westerly Terrace",
       "1617 Landa St",
-      "2117 Montana St",
       "1535 Parmer Ave",
-      "2221 Elsinore",
-      "337 N Occidental",
       "1560 Morton Ave",
+      "337 N Occidental",
       "1465 W Temple St",
       "1458 Silver Lake Blvd",
       "1131 Echo Park Ave",
       "214 N Alvarado St",
-      "3911 De Longpre",
       "1804 Echo Park Ave",
-      "1744 N Berendo St",
+      "3911 De Longpre",
       "1443 N Mariposa",
-      "1835 NE Skidmore St"
+      "1744 N Berendo St",
+      "3300 Chapman St"
     ],
-    "boardAdded": 1,
+    "boardAdded": 2,
     "boardPriceCuts": 0,
-    "movedToCorrections": [],
+    "movedToCorrections": [
+      "1510 Morton Terrace: Under Contract"
+    ],
     "brokenSince": null,
     "ok": true
   }
