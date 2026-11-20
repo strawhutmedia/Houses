@@ -1,50 +1,52 @@
 {
   "studio": {
-    "lastRun": "2026-11-19",
-    "at": "2026-11-19T22:26:05.816Z",
-    "spacesFile": "2026-11-19T22:26:05.700Z",
-    "craigslistFetched": 138,
-    "candidates": 1,
+    "lastRun": "2026-11-20",
+    "at": "2026-11-20T21:57:28.241Z",
+    "spacesFile": "2026-11-20T21:57:28.173Z",
+    "craigslistFetched": 129,
+    "candidates": 0,
     "verified": [],
     "emailed": false,
     "emailError": null,
-    "rejected": [
-      "Workspace with a Small Office: size not stated"
-    ],
+    "rejected": [],
     "unreachable": [],
     "brokenSince": null,
     "ok": true
   },
   "house": {
-    "lastRun": "2026-11-19",
-    "at": "2026-11-19T22:31:47.191Z",
+    "lastRun": "2026-11-20",
+    "at": "2026-11-20T22:00:21.786Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 717,
-        "matches": 31
+        "scanned": 797,
+        "matches": 32
       },
       "Portland": {
-        "scanned": 1096,
-        "matches": 4
+        "scanned": 1124,
+        "matches": 7
       }
     },
-    "candidates": 35,
+    "candidates": 39,
     "verified": [
-      "218 N Park View St (Echo Park) $999,999",
-      "2117 Montana St (Echo Park) $1,150,000"
+      "2213 SE 60th Ave (Mt. Tabor) $875,000"
     ],
     "emailed": true,
     "emailError": null,
     "rejected": [
-      "1008 Dexter St: no separate ADU — no ADU/second unit in description",
-      "1422 Prism: no separate ADU — no ADU/second unit in description",
-      "360 SW Hamilton St: no separate ADU — no ADU/second unit in description",
-      "1835 NE Skidmore St: no separate ADU — no ADU/second unit in description",
-      "5326 SE Stark St: no separate ADU — ADU is only potential/planned/unfinished",
-      "3217 SE 28th Ave: no separate ADU — no ADU/second unit in description"
+      "5233 Irvington: no separate ADU — no ADU/second unit in description",
+      "5943 Benner: no separate ADU — no ADU/second unit in description",
+      "3523 SW Jerald Ct: no separate ADU — no ADU/second unit in description",
+      "21 S Bancroft St: no separate ADU — a guest suite/flex room, not a unit (no kitchen, rent or separate structure)",
+      "4103 N Longview Ave: no separate ADU — no ADU/second unit in description",
+      "3306 SW Fairmount Blvd: no separate ADU — no ADU/second unit in description",
+      "6134 SE Lincoln St: no separate ADU — no ADU/second unit in description",
+      "1705 SE Cesar E Chavez Blvd: no separate ADU — no ADU/second unit in description"
     ],
     "unreachable": [
+      "5224 Glen Ellen Pl",
       "5009 Stratford Rd",
+      "276 Thorne St",
+      "6035 Mesa",
       "2660 Newell St",
       "2142 Baxter St",
       "4047 W Ave 40",
@@ -54,6 +56,7 @@
       "3064 Isabel",
       "4254 Verdugo Rd",
       "3428 Maceo",
+      "3300 Chapman St",
       "456 Ulysses St",
       "1709 Campus Rd",
       "1444 Hazelwood Ave",
@@ -69,13 +72,14 @@
       "1804 Echo Park Ave",
       "3911 De Longpre",
       "1443 N Mariposa",
-      "1744 N Berendo St",
-      "3300 Chapman St"
+      "1744 N Berendo St"
     ],
-    "boardAdded": 2,
-    "boardPriceCuts": 0,
+    "boardAdded": 0,
+    "boardPriceCuts": 1,
     "movedToCorrections": [
-      "1510 Morton Terrace: Under Contract"
+      "826 San Pascual Ave: Pending",
+      "3666 Roderick Rd: Under Contract",
+      "401 Del Norte St: Pending"
     ],
     "brokenSince": null,
     "ok": true

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-19T22:31:46.049Z",
+  "updatedAt": "2026-11-20T22:00:20.724Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -395,29 +395,6 @@
         }
       ],
       "photo": "https://www.compass.com/m/aa7cf09dbdbcf0ffdde3e0dddfd2d1bfebe6a9739ffd735328a38f0dfedcf644/origin.webp"
-    },
-    {
-      "id": "826-san-pascual-ave",
-      "tag": "📍 Highland Park",
-      "address": "826 San Pascual Ave",
-      "hood": "Highland Park",
-      "price": 1100000,
-      "beds": 3,
-      "baths": 2,
-      "sqft": 1430,
-      "status": "Active",
-      "verified": "2026-10-02",
-      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
-      "dom": null,
-      "why": "3bd/2ba, 1,430 sf at $1,100,000 ($769/sf) in Highland Park. No ADU claimed/verified.",
-      "ask": "Verify condition, permits and any extra unit.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/826-san-pascual-ave/pid_74044473/"
-        }
-      ],
-      "photo": "https://m.cbhomes.com/p/510/26995369/c660C17Ce3e64df/m23cc.webp"
     },
     {
       "id": "4403-w-burnside-rd-pdx",
@@ -1264,58 +1241,6 @@
       ]
     },
     {
-      "id": "3666-roderick-rd-la",
-      "tag": "🌴 Los Angeles",
-      "address": "3666 Roderick Rd",
-      "hood": "Glassell Park, Los Angeles",
-      "price": 999999,
-      "beds": 4,
-      "baths": 2,
-      "sqft": 2140,
-      "status": "Active",
-      "verified": "2026-10-12",
-      "verifiedHow": "Compass live listing page: Active at $999,999 (CB page last updated 9/30/2026)",
-      "dom": null,
-      "why": "4bd/2ba, 2,140 sqft in Glassell Park, under the cap (built 1946, 0.1052 ac lot); MLS #26994031. Attached, own entrance ADU (permits not stated, kitchen): \"The lower level is reachable from inside the home or through its own private entrance. It currently has a kitchenette and is ready for a fresh vision, shaped around whatever the next owner imagines (please note the lower level is virtually staged).\" Confirm permits before offering.",
-      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/3666-roderick-rd/pid_74020341/"
-        },
-        {
-          "label": "Compass listing",
-          "url": "https://www.compass.com/listing/2206087863760223017/view"
-        }
-      ]
-    },
-    {
-      "id": "401-del-norte-st-la",
-      "tag": "🌴 Los Angeles",
-      "address": "401 Del Norte St",
-      "hood": "Mt. Washington, Los Angeles",
-      "price": 899999,
-      "beds": 3,
-      "baths": 3,
-      "sqft": 1504,
-      "status": "Active",
-      "verified": "2026-10-12",
-      "verifiedHow": "Compass live listing page: Active at $899,999 (CB page last updated 10/8/2026)",
-      "dom": null,
-      "why": "3bd/3ba, 1,504 sqft in Mt. Washington, under the cap (built 1924, 0.0515 ac lot); MLS #26998547. Duplex, 2nd unit (permits not stated): \"Welcome to this beautifully updated Spanish-style DUPLEX situated on a desirable corner lot in the hills of Mount Washington.\" Confirm permits before offering.",
-      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/401-del-norte-st/pid_74181778/"
-        },
-        {
-          "label": "Compass listing",
-          "url": "https://www.compass.com/listing/2212084913176102561/view"
-        }
-      ]
-    },
-    {
       "id": "4835-ruth-ave-la",
       "tag": "🌴 Los Angeles",
       "address": "4835 Ruth Ave",
@@ -1646,15 +1571,15 @@
       "tag": "🌲 Portland",
       "address": "2213 SE 60th Ave",
       "hood": "Mt. Tabor, Portland OR",
-      "price": 900000,
+      "price": 875000,
       "beds": 5,
       "baths": 4,
       "sqft": 2724,
       "status": "Active",
-      "verified": "2026-11-15",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 11/14/2026",
+      "verified": "2026-11-20",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 11/20/2026",
       "dom": null,
-      "why": "PRICE CUT $925,000 → $900,000. 5bd/4ba, 2,724 sqft in Mt. Tabor, under the cap (built 2015, 0.09 ac lot); MLS #335562602. Own entrance ADU (permits not stated, kitchen, bath): \"With its own entrance, full kitchen, living room, bedroom with walk-in closet, laundry, and backyard access, it lives like a home of its own.\" 📋 Built 2015 · Lot: 3,920 sq ft · Cooling: Central Air, Mini Split · Condition: Resale · On market: 38 days · 2 price cuts. Confirm permits before offering.",
+      "why": "PRICE CUT $900,000 → $875,000. 5bd/4ba, 2,724 sqft in Mt. Tabor, under the cap (built 2015, 0.09 ac lot); MLS #335562602. Own entrance ADU (permits not stated, kitchen, bath): \"With its own entrance, full kitchen, living room, bedroom with walk-in closet, laundry, and backyard access, it lives like a home of its own.\" 📋 Built 2015 · Lot: 3,920 sq ft · Cooling: Central Air, Mini Split · Condition: Resale · On market: 43 days · 3 price cuts. Confirm permits before offering.",
       "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
       "links": [
         {
@@ -2494,6 +2419,18 @@
     {
       "date": "2026-11-19",
       "text": "1510 Morton Terrace (Echo Park, Los Angeles) is now Under Contract per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-11-20",
+      "text": "826 San Pascual Ave (Highland Park) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-11-20",
+      "text": "3666 Roderick Rd (Glassell Park, Los Angeles) is now Under Contract per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-11-20",
+      "text": "401 Del Norte St (Mt. Washington, Los Angeles) is now Pending per its live Coldwell Banker page — removed from the board."
     }
   ]
 }
