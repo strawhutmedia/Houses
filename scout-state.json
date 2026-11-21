@@ -1,9 +1,9 @@
 {
   "studio": {
-    "lastRun": "2026-11-20",
-    "at": "2026-11-20T21:57:28.241Z",
-    "spacesFile": "2026-11-20T21:57:28.173Z",
-    "craigslistFetched": 129,
+    "lastRun": "2026-11-21",
+    "at": "2026-11-21T20:39:47.168Z",
+    "spacesFile": "2026-11-21T20:39:47.110Z",
+    "craigslistFetched": 123,
     "candidates": 0,
     "verified": [],
     "emailed": false,
@@ -14,57 +14,55 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-11-20",
-    "at": "2026-11-20T22:00:21.786Z",
+    "lastRun": "2026-11-21",
+    "at": "2026-11-21T20:42:26.219Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 797,
-        "matches": 32
+        "scanned": 798,
+        "matches": 31
       },
       "Portland": {
-        "scanned": 1124,
-        "matches": 7
+        "scanned": 1114,
+        "matches": 6
       }
     },
-    "candidates": 39,
+    "candidates": 37,
     "verified": [
-      "2213 SE 60th Ave (Mt. Tabor) $875,000"
+      "747 Robinson St (Silver Lake) $1,195,000",
+      "6615 SE 16th Ave (Sellwood) $689,000"
     ],
     "emailed": true,
     "emailError": null,
     "rejected": [
-      "5233 Irvington: no separate ADU — no ADU/second unit in description",
-      "5943 Benner: no separate ADU — no ADU/second unit in description",
-      "3523 SW Jerald Ct: no separate ADU — no ADU/second unit in description",
-      "21 S Bancroft St: no separate ADU — a guest suite/flex room, not a unit (no kitchen, rent or separate structure)",
-      "4103 N Longview Ave: no separate ADU — no ADU/second unit in description",
-      "3306 SW Fairmount Blvd: no separate ADU — no ADU/second unit in description",
-      "6134 SE Lincoln St: no separate ADU — no ADU/second unit in description",
-      "1705 SE Cesar E Chavez Blvd: no separate ADU — no ADU/second unit in description"
+      "5923 SW 46th Ave: no separate ADU — no ADU/second unit in description",
+      "21 S Bancroft St: no separate ADU — no ADU/second unit in description",
+      "1299 SW Cardinell Dr: no separate ADU — no ADU/second unit in description",
+      "4128 SE Franklin St: no separate ADU — no ADU/second unit in description",
+      "4126 SE Franklin St: no separate ADU — no ADU/second unit in description"
     ],
     "unreachable": [
       "5224 Glen Ellen Pl",
       "5009 Stratford Rd",
       "276 Thorne St",
       "6035 Mesa",
-      "2660 Newell St",
       "2142 Baxter St",
-      "4047 W Ave 40",
+      "2660 Newell St",
       "2675 Thorpe Ave",
+      "4047 W Ave 40",
       "3619 Fletcher Dr",
       "634 Romulo St",
       "3064 Isabel",
       "4254 Verdugo Rd",
-      "3428 Maceo",
       "3300 Chapman St",
+      "3428 Maceo",
       "456 Ulysses St",
       "1709 Campus Rd",
       "1444 Hazelwood Ave",
       "1447 Westerly Terrace",
       "1617 Landa St",
       "1535 Parmer Ave",
-      "1560 Morton Ave",
       "337 N Occidental",
+      "1560 Morton Ave",
       "1465 W Temple St",
       "1458 Silver Lake Blvd",
       "1131 Echo Park Ave",
@@ -74,13 +72,9 @@
       "1443 N Mariposa",
       "1744 N Berendo St"
     ],
-    "boardAdded": 0,
-    "boardPriceCuts": 1,
-    "movedToCorrections": [
-      "826 San Pascual Ave: Pending",
-      "3666 Roderick Rd: Under Contract",
-      "401 Del Norte St: Pending"
-    ],
+    "boardAdded": 2,
+    "boardPriceCuts": 0,
+    "movedToCorrections": [],
     "brokenSince": null,
     "ok": true
   }
