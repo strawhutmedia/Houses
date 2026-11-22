@@ -99,13 +99,13 @@ test("2–4 unit buildings count as the separate unit; 5+ do not (11/16 Bellevue
   assert.equal(multiUnit("Single Family", {}, "x"), null);
 });
 
-test("money: Steve 1/3; Maggie's dad's $60K + $1,000/mo come out of the 2/3 (11/22)", () => {
+test("money: Steve 1/4; Maggie's dad's $60K + $1,000/mo come out of the 3/4 (11/22)", () => {
   const { moneyFor } = require("../scraper/scout-alerts.js");
   const m = moneyFor(900000, "Los Angeles");
   assert.equal(m.down, 180000);
-  assert.deepEqual(m.downSplit.map(([w, a]) => [w, Math.round(a)]), [["You + Maggie", 60000], ["Maggie's dad", 60000], ["Steve", 60000]]);
+  assert.deepEqual(m.downSplit.map(([w, a]) => [w, Math.round(a)]), [["You + Maggie", 75000], ["Maggie's dad", 60000], ["Steve", 45000]]);
   const mo = Object.fromEntries(m.moSplit);
-  assert.ok(Math.abs(mo["You + Maggie"] - (m.monthly * 2 / 3 - 1000)) < 1e-6);
+  assert.ok(Math.abs(mo["You + Maggie"] - (m.monthly * 3 / 4 - 1000)) < 1e-6);
   assert.equal(mo["Maggie's dad"], 1000);
-  assert.ok(Math.abs(mo.Steve - m.monthly / 3) < 1e-6);
+  assert.ok(Math.abs(mo.Steve - m.monthly / 4) < 1e-6);
 });

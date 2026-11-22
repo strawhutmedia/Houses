@@ -176,7 +176,7 @@ Its rules (full prompt in `routines/house-alert.md`):
 - **11/22 plan change:** Ryan, Maggie + baby **Ele Lenora** in the main house; **Maggie's
   dad** in the back unit, "maybe" **$60K toward the down + $1,000/mo rent**. Steve "still
   interested" (role unclear). Email money box (site PR #296, `moneyFor()`): down =
-  Steve still pays 1/3; dad's $60K down + $1K/mo come OUT OF Ryan+Maggie's 2/3
+  **Split now 3/4 Ryan+Maggie / 1/4 Steve (11/22, `US_SHARE`)**; dad's $60K down + $1K/mo come OUT OF Ryan+Maggie's 3/4 (dad owns nothing → gift letter)
   (Ryan corrected 11/22: "in addition… so we all pay less… part of me and Mags' payment").
   Box shows three names: You + Maggie / Maggie's dad / Steve. Constants `DAD_DOWN`/`DAD_RENT` in scout-alerts.js.
   Lender note: dad's $60K needs a gift letter if he's not on title (a true gift), or he goes

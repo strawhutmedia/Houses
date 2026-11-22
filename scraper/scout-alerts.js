@@ -94,16 +94,17 @@ function pageFields(html) {
   o._priceCuts = hist ? (hist[1].match(/Price Reduced \$[\d,]+/g) || []).length : 0;
   return o;
 }
-// Ryan + Maggie own 2/3, Steve 1/3 (10/12). 20% down; monthly is an estimate.
+// Ownership: Ryan + Maggie US_SHARE, Steve the rest (3/4–1/4 since 11/22; was 2/3–1/3). 20% down; monthly is an estimate.
+const US_SHARE = 3 / 4;
 const RATE = 0.0625;
 function finance(price, city) {
   const down = price * 0.2, loan = price - down, r = RATE / 12, n = 360;
   const pi = loan * r / (1 - Math.pow(1 + r, -n));
   const total = pi + price * (city === "Portland" ? 0.011 : 0.012) / 12 + (city === "Portland" ? 150 : 250);
-  return { down, us: down * 2 / 3, steve: down / 3, pi, total, usMo: total * 2 / 3, steveMo: total / 3 };
+  return { down, us: down * US_SHARE, steve: down * (1 - US_SHARE), pi, total, usMo: total * US_SHARE, steveMo: total * (1 - US_SHARE) };
 }
-// 11/22 (Ryan): Steve still pays 1/3. Maggie's dad's DAD_DOWN + DAD_RENT/mo go
-// toward Ryan + Maggie's 2/3 share — the dad helps the Tillotsons, Steve is unchanged.
+// 11/22 (Ryan): Steve pays his 1/4. Maggie's dad's DAD_DOWN + DAD_RENT/mo go
+// toward Ryan + Maggie's 3/4 share (he's not an owner) — the dad helps the Tillotsons, Steve is unchanged.
 const DAD_DOWN = 60000, DAD_RENT = 1000;
 const usd = (n) => "$" + Math.round(n).toLocaleString("en-US");
 // Shape the site's green money box expects (site src/houseAlert.js moneyBox).
@@ -387,7 +388,7 @@ async function runHouse({ dry, today, state }) {
     const intro = [cutsTxt.length ? `Price cut: ${cutsTxt.join("; ")}.` : null,
       `${verified.length} ${verified.length === 1 ? "house" : "houses"} with a separate ADU today (${la} Los Angeles, ${pdx} Portland) — each confirmed Active on its live listing page today.`,
       moved.length ? `${moved.length} board ${moved.length === 1 ? "house is" : "houses are"} now pending/sold and moved to corrections.` : null,
-      `💰 Green box on each house: 20% down and monthly split 2/3 you + Maggie / 1/3 Steve, with Maggie's dad's ${usd(DAD_DOWN)} down and ${usd(DAD_RENT)}/mo coming out of your 2/3; monthly is an estimate at ${RATE * 100}% 30-yr fixed + property tax + insurance (no closing costs, HOA or rent income).`,
+      `💰 Green box on each house: 20% down and monthly split 3/4 you + Maggie / 1/4 Steve, with Maggie's dad's ${usd(DAD_DOWN)} down and ${usd(DAD_RENT)}/mo coming out of your 3/4; monthly is an estimate at ${RATE * 100}% 30-yr fixed + property tax + insurance (no closing costs, HOA or rent income).`,
     ].filter(Boolean).join(" ");
     const payload = { intro, houses: verified.map((v) => ({
       address: v.address, price: v.price, wasPrice: v.wasPrice && v.price < v.wasPrice ? v.wasPrice : null, beds: v.beds, baths: v.baths, sqft: v.sqft,
