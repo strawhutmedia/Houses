@@ -173,6 +173,13 @@ Its rules (full prompt in `routines/house-alert.md`):
   **~$180K** down "no problem". **Split now 2/3 Tillotsons, 1/3 Steve (10/12)**
   (was 50/50). Plan: house WITH A SEPARATE ADU — Steve lives in the ADU; Ryan &
   Maggie either live in the main house or rent it out.
+- **11/22 plan change:** Ryan, Maggie + baby **Ele Lenora** in the main house; **Maggie's
+  dad** in the back unit, "maybe" **$60K toward the down + $1,000/mo rent**. Steve "still
+  interested" (role unclear). Email money box (site PR #296, `moneyFor()`): down =
+  dad $60K + you+Maggie rest; monthly = dad $1K + you+Maggie rest; Steve 2/3–1/3 shown as
+  a small "old plan" line. Constants `DAD_DOWN`/`DAD_RENT` in scout-alerts.js.
+  Lender note: dad's $60K needs a gift letter if he's not on title (a true gift), or he goes
+  on title/disclosed if it buys equity — never a disguised gift.
 - Settled plan after much debate: **buy together, everyone qualifying on the
   loan, joint pre-approval with a mortgage broker** (next real-world step —
   bring 2 yrs tax returns for Ryan, W-2s for Maggie/Steve). Ryan repeatedly

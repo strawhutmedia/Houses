@@ -102,10 +102,22 @@ function finance(price, city) {
   const total = pi + price * (city === "Portland" ? 0.011 : 0.012) / 12 + (city === "Portland" ? 150 : 250);
   return { down, us: down * 2 / 3, steve: down / 3, pi, total, usMo: total * 2 / 3, steveMo: total / 3 };
 }
+// 11/22 plan: Maggie's dad lives in the back unit, puts DAD_DOWN toward the
+// down payment and pays DAD_RENT a month; Ryan + Maggie cover the rest. The
+// old Steve 2/3–1/3 split rides along as the box's comparison line.
+const DAD_DOWN = 60000, DAD_RENT = 1000;
+const usd = (n) => "$" + Math.round(n).toLocaleString("en-US");
 // Shape the site's green money box expects (site src/houseAlert.js moneyBox).
 function moneyFor(price, city) {
   const m = finance(price, city);
-  return { down: m.down, us: m.us, steve: m.steve, monthly: m.total, usMo: m.usMo, steveMo: m.steveMo };
+  const dadDown = Math.min(DAD_DOWN, m.down);
+  return {
+    down: m.down, monthly: m.total,
+    downSplit: [["Maggie's dad", dadDown], ["You + Maggie", m.down - dadDown]],
+    moSplit: [["Maggie's dad (rent)", DAD_RENT], ["You + Maggie", m.total - DAD_RENT]],
+    alt: `Old plan with Steve (2/3 · 1/3): down ${usd(m.us)} you + Maggie · ${usd(m.steve)} Steve; monthly ${usd(m.usMo)} · ${usd(m.steveMo)}.`,
+    us: m.us, steve: m.steve, usMo: m.usMo, steveMo: m.steveMo,
+  };
 }
 // Readable one-per-line facts for the email's "Details" list.
 function pageFacts(x = {}) {
@@ -377,7 +389,7 @@ async function runHouse({ dry, today, state }) {
     const intro = [cutsTxt.length ? `Price cut: ${cutsTxt.join("; ")}.` : null,
       `${verified.length} ${verified.length === 1 ? "house" : "houses"} with a separate ADU today (${la} Los Angeles, ${pdx} Portland) — each confirmed Active on its live listing page today.`,
       moved.length ? `${moved.length} board ${moved.length === 1 ? "house is" : "houses are"} now pending/sold and moved to corrections.` : null,
-      `💰 Green box on each house: 20% down split 2/3 you + Maggie / 1/3 Steve; monthly is an estimate at ${RATE * 100}% 30-yr fixed + property tax + insurance (no closing costs, HOA or rent income).`,
+      `💰 Green box on each house: 20% down with Maggie's dad putting in ${usd(DAD_DOWN)} and paying ${usd(DAD_RENT)}/mo rent for the back unit, you + Maggie covering the rest (the old Steve 2/3–1/3 split is underneath); monthly is an estimate at ${RATE * 100}% 30-yr fixed + property tax + insurance (no closing costs, HOA or rent income).`,
     ].filter(Boolean).join(" ");
     const payload = { intro, houses: verified.map((v) => ({
       address: v.address, price: v.price, wasPrice: v.wasPrice && v.price < v.wasPrice ? v.wasPrice : null, beds: v.beds, baths: v.baths, sqft: v.sqft,
@@ -500,4 +512,4 @@ async function main() {
 }
 
 if (require.main === module) main().catch((e) => { console.error(e); process.exit(1); });
-module.exports = { parseCbDetail, aduVerdict, multiUnit, houseCard, pageFacts, compassStatus, daysSince, houseWhy, studioWhy, ptNow, GONE, POST_GONE };
+module.exports = { moneyFor, parseCbDetail, aduVerdict, multiUnit, houseCard, pageFacts, compassStatus, daysSince, houseWhy, studioWhy, ptNow, GONE, POST_GONE };
