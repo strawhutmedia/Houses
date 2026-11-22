@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21T20:42:24.959Z",
+  "updatedAt": "2026-11-22T20:52:57.797Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -2223,6 +2223,50 @@
         {
           "label": "Coldwell Banker listing",
           "url": "https://www.coldwellbankerhomes.com/or/portland/6615-se-16th-ave/pid_74856313/"
+        }
+      ]
+    },
+    {
+      "id": "6139-buena-vista-terrace-la",
+      "tag": "🌴 Los Angeles",
+      "address": "6139 Buena Vista Terrace",
+      "hood": "Eagle Rock, Los Angeles",
+      "price": 1200000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1344,
+      "status": "Active",
+      "verified": "2026-11-22",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 11/22/2026",
+      "dom": null,
+      "why": "3bd/2ba, 1,344 sqft in Eagle Rock, under the cap (built 1909, 0.3228 ac lot); MLS #PF26099167. Detached/attached not stated ADU (permits not stated, rented now): \"Expand the living space, add income-producing ADUs, build a pool, or simply hold a rare piece of Los Angeles real estate that only grows in value.\" 📋 Built 1909 · Lot: 14,060 sq ft · Parking: Garage, Concrete, Gravel, Garage Faces Rear, Garag · Cooling: Electric, Wall/Window Unit(s) · Condition: Turnkey · On market: 160 days. Confirm permits before offering.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/6139-buena-vista-terrace/pid_71996677/"
+        }
+      ]
+    },
+    {
+      "id": "4047-w-ave-40-la",
+      "tag": "🌴 Los Angeles",
+      "address": "4047 W Ave 40",
+      "hood": "Glassell Park, Los Angeles",
+      "price": 1125000,
+      "beds": 4,
+      "baths": 2,
+      "sqft": 1866,
+      "status": "Active",
+      "verified": "2026-11-22",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 11/21/2026",
+      "dom": null,
+      "why": "4bd/2ba, 1,866 sqft in Glassell Park, under the cap (built 1929, 0.1195 ac lot); MLS #SR26239724. Duplex — 2 separate units (live in one, Steve in another, rent the rest): \"This Duplex is in 'Move In' Condition.\" 📋 Built 1929 · Lot: 5,206 sq ft · Parking: Carport, Driveway, Garage (Two Doors) · Cooling: Evaporative Cooling · On market: 15 days.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/4047-w-ave-40/pid_74661915/"
         }
       ]
     }
