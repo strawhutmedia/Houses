@@ -178,7 +178,11 @@ Its rules (full prompt in `routines/house-alert.md`):
   interested" (role unclear). Email money box (site PR #296, `moneyFor()`): down =
   **Split now 3/4 Ryan+Maggie / 1/4 Steve (11/22, `US_SHARE`)**; dad's $60K down + $1K/mo come OUT OF Ryan+Maggie's 3/4 (dad owns nothing → gift letter)
   (Ryan corrected 11/22: "in addition… so we all pay less… part of me and Mags' payment").
-  Box shows three names: You + Maggie / Maggie's dad / Steve. Constants `DAD_DOWN`/`DAD_RENT` in scout-alerts.js.
+  Box shows three names: You + Maggie / Maggie's dad / Steve.
+  11/23 Ryan: their monthly (Ryan+Maggie share, after dad's $1K) must be < $6K, ideally < $5K,
+  really < $4K → `monthlyVerdict()` puts ✅/👍/⚠️/❌ in the box's `alt` line. At $1.25M cap their
+  share ≈ $4,740 (all emails < $5K); < $4K ≈ price ≤ ~$1.08M. The DOWN payment binds first:
+  ~$240K total (pool $180K + dad $60K) = 20% of ~$1.2M. 753 Micheltorena ($2.625M, Tracy Do) = out of reach. Constants `DAD_DOWN`/`DAD_RENT` in scout-alerts.js.
   Lender note: dad's $60K needs a gift letter if he's not on title (a true gift), or he goes
   on title/disclosed if it buys equity — never a disguised gift.
 - Settled plan after much debate: **buy together, everyone qualifying on the

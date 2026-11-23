@@ -107,6 +107,15 @@ function finance(price, city) {
 // toward Ryan + Maggie's 3/4 share (he's not an owner) — the dad helps the Tillotsons, Steve is unchanged.
 const DAD_DOWN = 60000, DAD_RENT = 1000;
 const usd = (n) => "$" + Math.round(n).toLocaleString("en-US");
+// Ryan 11/23: "our monthly needs to be under $6,000, ideally under $5,000, honestly
+// ideally under $4,000" — read as Ryan + Maggie's share after the dad's rent.
+function monthlyVerdict(ours) {
+  const v = Math.round(ours).toLocaleString("en-US");
+  if (ours < 4000) return `✅ Your share ~$${v}/mo — under your $4,000 ideal.`;
+  if (ours < 5000) return `👍 Your share ~$${v}/mo — under $5,000 (over the $4,000 ideal).`;
+  if (ours < 6000) return `⚠️ Your share ~$${v}/mo — under the $6,000 max, over $5,000.`;
+  return `❌ Your share ~$${v}/mo — over your $6,000 max.`;
+}
 // Shape the site's green money box expects (site src/houseAlert.js moneyBox).
 function moneyFor(price, city) {
   const m = finance(price, city);
@@ -115,6 +124,7 @@ function moneyFor(price, city) {
     down: m.down, monthly: m.total,
     downSplit: [["You + Maggie", m.us - dadDown], ["Maggie's dad", dadDown], ["Steve", m.steve]],
     moSplit: [["You + Maggie", m.usMo - dadMo], ["Maggie's dad", dadMo], ["Steve", m.steveMo]],
+    alt: monthlyVerdict(m.usMo - dadMo),
     us: m.us, steve: m.steve, usMo: m.usMo, steveMo: m.steveMo,
   };
 }

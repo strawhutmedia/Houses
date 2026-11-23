@@ -109,3 +109,10 @@ test("money: Steve 1/4; Maggie's dad's $60K + $1,000/mo come out of the 3/4 (11/
   assert.equal(mo["Maggie's dad"], 1000);
   assert.ok(Math.abs(mo.Steve - m.monthly / 4) < 1e-6);
 });
+
+test("monthly verdict vs Ryan's $4K/$5K/$6K targets (11/23)", () => {
+  const { moneyFor } = require("../scraper/scout-alerts.js");
+  assert.match(moneyFor(1000000, "Los Angeles").alt, /^✅/);
+  assert.match(moneyFor(1250000, "Los Angeles").alt, /^👍/);
+  assert.match(moneyFor(2625000, "Los Angeles").alt, /^❌/);
+});
