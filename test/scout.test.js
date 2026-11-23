@@ -110,9 +110,13 @@ test("money: Steve 1/4; Maggie's dad's $60K + $1,000/mo come out of the 3/4 (11/
   assert.ok(Math.abs(mo.Steve - m.monthly / 4) < 1e-6);
 });
 
-test("monthly verdict vs Ryan's $4K/$5K/$6K targets (11/23)", () => {
+test("money options: 10/20/30/40% down, PMI under 20%, marks vs $4K/$6K, cash check (11/23)", () => {
   const { moneyFor } = require("../scraper/scout-alerts.js");
-  assert.match(moneyFor(1000000, "Los Angeles").alt, /^✅/);
-  assert.match(moneyFor(1250000, "Los Angeles").alt, /^👍/);
-  assert.match(moneyFor(2625000, "Los Angeles").alt, /^❌/);
+  const o = moneyFor(1000000, "Los Angeles").options;
+  assert.deepEqual(o.map((r) => r.pct), [10, 20, 30, 40]);
+  assert.ok(o[0].pmi > 0 && o[1].pmi === 0);
+  assert.ok(o[0].usMo > o[1].usMo && o[1].usMo > o[2].usMo && o[2].usMo > o[3].usMo);
+  assert.equal(o[1].mark, "✅");
+  assert.equal(o[1].cashOk, true); assert.equal(o[3].cashOk, false);
+  assert.equal(moneyFor(2625000, "Los Angeles").options[1].mark, "❌");
 });

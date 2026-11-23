@@ -94,38 +94,45 @@ function pageFields(html) {
   o._priceCuts = hist ? (hist[1].match(/Price Reduced \$[\d,]+/g) || []).length : 0;
   return o;
 }
-// Ownership: Ryan + Maggie US_SHARE, Steve the rest (3/4–1/4 since 11/22; was 2/3–1/3). 20% down; monthly is an estimate.
+// Ownership: Ryan + Maggie US_SHARE, Steve the rest (3/4–1/4 since 11/22; was 2/3–1/3).
+// Monthly is an estimate: 30-yr fixed at RATE + property tax + insurance, + PMI under 20% down.
 const US_SHARE = 3 / 4;
-const RATE = 0.0625;
-function finance(price, city) {
-  const down = price * 0.2, loan = price - down, r = RATE / 12, n = 360;
+const RATE = 0.0625, PMI = 0.006;              // PMI ≈ 0.6%/yr of the loan (rough; depends on credit)
+function finance(price, city, pct = 0.2) {
+  const down = price * pct, loan = price - down, r = RATE / 12, n = 360;
   const pi = loan * r / (1 - Math.pow(1 + r, -n));
-  const total = pi + price * (city === "Portland" ? 0.011 : 0.012) / 12 + (city === "Portland" ? 150 : 250);
-  return { down, us: down * US_SHARE, steve: down * (1 - US_SHARE), pi, total, usMo: total * US_SHARE, steveMo: total * (1 - US_SHARE) };
+  const pmi = pct < 0.2 ? loan * PMI / 12 : 0;
+  const total = pi + pmi + price * (city === "Portland" ? 0.011 : 0.012) / 12 + (city === "Portland" ? 150 : 250);
+  return { down, us: down * US_SHARE, steve: down * (1 - US_SHARE), pi, pmi, total, usMo: total * US_SHARE, steveMo: total * (1 - US_SHARE) };
 }
 // 11/22 (Ryan): Steve pays his 1/4. Maggie's dad's DAD_DOWN + DAD_RENT/mo go
 // toward Ryan + Maggie's 3/4 share (he's not an owner) — the dad helps the Tillotsons, Steve is unchanged.
 const DAD_DOWN = 60000, DAD_RENT = 1000;
+// Cash on hand for the down payment: Ryan + Maggie + Steve pool ~$180K, plus the dad's $60K.
+const CASH = 180000 + DAD_DOWN;
 const usd = (n) => "$" + Math.round(n).toLocaleString("en-US");
-// Ryan 11/23: "our monthly needs to be under $6,000, ideally under $5,000, honestly
-// ideally under $4,000" — read as Ryan + Maggie's share after the dad's rent.
-function monthlyVerdict(ours) {
-  const v = Math.round(ours).toLocaleString("en-US");
-  if (ours < 4000) return `✅ Your share ~$${v}/mo — under your $4,000 ideal.`;
-  if (ours < 5000) return `👍 Your share ~$${v}/mo — under $5,000 (over the $4,000 ideal).`;
-  if (ours < 6000) return `⚠️ Your share ~$${v}/mo — under the $6,000 max, over $5,000.`;
-  return `❌ Your share ~$${v}/mo — over your $6,000 max.`;
-}
-// Shape the site's green money box expects (site src/houseAlert.js moneyBox).
+// Ryan 11/23: Ryan + Maggie's monthly (after the dad's rent) — $4,000 is the deal range,
+// $6,000 the hard cap.
+const DEAL_MO = 4000, CAP_MO = 6000;
+const moMark = (ours) => (ours <= DEAL_MO ? "✅" : ours <= CAP_MO ? "⚠️" : "❌");
+const DOWN_PCTS = [0.1, 0.2, 0.3, 0.4];
+// Shape the site's green money box expects (site src/houseAlert.js moneyBox):
+// one row per down-payment option, plus the 20% split kept for older renderers.
 function moneyFor(price, city) {
-  const m = finance(price, city);
-  const dadDown = Math.min(DAD_DOWN, m.us), dadMo = Math.min(DAD_RENT, m.usMo);
+  const rows = DOWN_PCTS.map((pct) => {
+    const m = finance(price, city, pct);
+    const dad = Math.min(DAD_DOWN, m.us), dadMo = Math.min(DAD_RENT, m.usMo);
+    const ourMo = m.usMo - dadMo;
+    return { pct: Math.round(pct * 100), down: m.down, us: m.us - dad, dad, steve: m.steve, monthly: m.total,
+      usMo: ourMo, dadMo, steveMo: m.steveMo, pmi: m.pmi, mark: moMark(ourMo), cashOk: m.down <= CASH };
+  });
+  const m = rows[1];
   return {
-    down: m.down, monthly: m.total,
-    downSplit: [["You + Maggie", m.us - dadDown], ["Maggie's dad", dadDown], ["Steve", m.steve]],
-    moSplit: [["You + Maggie", m.usMo - dadMo], ["Maggie's dad", dadMo], ["Steve", m.steveMo]],
-    alt: monthlyVerdict(m.usMo - dadMo),
-    us: m.us, steve: m.steve, usMo: m.usMo, steveMo: m.steveMo,
+    down: m.down, monthly: m.monthly, options: rows,
+    downSplit: [["You + Maggie", m.us], ["Maggie's dad", m.dad], ["Steve", m.steve]],
+    moSplit: [["You + Maggie", m.usMo], ["Maggie's dad", m.dadMo], ["Steve", m.steveMo]],
+    alt: `✅ your monthly ≤ ${usd(DEAL_MO)} · ⚠️ ≤ ${usd(CAP_MO)} cap · ❌ over. 💸 = more cash than your ~${usd(CASH)}. Steve pays 1/4 of each; Maggie's dad's ${usd(DAD_DOWN)} + ${usd(DAD_RENT)}/mo come off yours. Under 20% down includes PMI (~${PMI * 100}%/yr).`,
+    us: m.us + m.dad, steve: m.steve, usMo: m.usMo + m.dadMo, steveMo: m.steveMo,
   };
 }
 // Readable one-per-line facts for the email's "Details" list.
@@ -521,4 +528,4 @@ async function main() {
 }
 
 if (require.main === module) main().catch((e) => { console.error(e); process.exit(1); });
-module.exports = { moneyFor, parseCbDetail, aduVerdict, multiUnit, houseCard, pageFacts, compassStatus, daysSince, houseWhy, studioWhy, ptNow, GONE, POST_GONE };
+module.exports = { moneyFor, finance, parseCbDetail, aduVerdict, multiUnit, houseCard, pageFacts, compassStatus, daysSince, houseWhy, studioWhy, ptNow, GONE, POST_GONE };
