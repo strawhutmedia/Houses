@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T01:55:52.716Z",
+  "updatedAt": "2026-11-24T23:41:13.253Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -442,29 +442,6 @@
       ],
       "photo": "https://m.cbhomes.com/p/283/670211688/67B5a8b5873f4d7/m23cc.webp",
       "wasPrice": 990000
-    },
-    {
-      "id": "514-ne-going-st-pdx",
-      "tag": "🌲 Portland",
-      "address": "514 NE Going St",
-      "hood": "Alberta, Portland OR",
-      "price": 675000,
-      "beds": 3,
-      "baths": 2,
-      "sqft": 2105,
-      "status": "Active",
-      "verified": "2026-10-02",
-      "verifiedHow": "Live on Coldwell Banker listing page today: Status Active, Updated 10/1–10/2/2026",
-      "dom": null,
-      "why": "3bd/2ba, 2,105 sf at $675,000 ($321/sf) in Alberta. No ADU claimed/verified.",
-      "ask": "Verify condition, permits and any extra unit.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/514-ne-going-st/pid_74056365/"
-        }
-      ],
-      "photo": "https://m1.cbhomes.com/p/283/126214050/3181F3e0bfBB482/m23cc.webp"
     },
     {
       "id": "6160-york-blvd-la",
@@ -2545,6 +2522,10 @@
     {
       "date": "2026-11-23",
       "text": "1617 SW Broadway Dr (West Hills, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-11-24",
+      "text": "514 NE Going St (Alberta, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
     }
   ]
 }

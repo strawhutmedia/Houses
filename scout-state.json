@@ -1,14 +1,12 @@
 {
   "studio": {
-    "lastRun": "2026-11-23",
-    "at": "2026-11-24T01:53:10.720Z",
-    "spacesFile": "2026-11-24T01:53:09.519Z",
-    "craigslistFetched": 260,
-    "candidates": 1,
-    "verified": [
-      "Unique Modern Creative Office Space (Burbank) $3,300"
-    ],
-    "emailed": true,
+    "lastRun": "2026-11-24",
+    "at": "2026-11-24T23:37:54.637Z",
+    "spacesFile": "2026-11-24T23:37:54.586Z",
+    "craigslistFetched": 261,
+    "candidates": 0,
+    "verified": [],
+    "emailed": false,
     "emailError": null,
     "rejected": [],
     "unreachable": [],
@@ -16,60 +14,56 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-11-23",
-    "at": "2026-11-24T01:55:53.464Z",
+    "lastRun": "2026-11-24",
+    "at": "2026-11-24T23:41:13.255Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 789,
-        "matches": 29
+        "scanned": 786,
+        "matches": 26
       },
       "Portland": {
-        "scanned": 1103,
+        "scanned": 1098,
         "matches": 0
       }
     },
-    "candidates": 29,
-    "verified": [
-      "3911 De Longpre (Los Feliz) $695,000",
-      "1443 N Mariposa (Los Feliz) $965,000"
-    ],
-    "emailed": true,
+    "candidates": 26,
+    "verified": [],
+    "emailed": false,
     "emailError": null,
     "rejected": [
-      "6150 Strickland: no separate ADU — no ADU/second unit in description"
+      "732 Onarga Ave: no separate ADU — no ADU/second unit in description",
+      "1361 W Temple St: no separate ADU — 5 units — 5+ is a commercial loan, not a home loan"
     ],
     "unreachable": [
+      "5009 Stratford Rd",
       "5224 Glen Ellen Pl",
       "276 Thorne St",
-      "5009 Stratford Rd",
-      "2660 Newell St",
       "6035 Mesa",
-      "2142 Baxter St",
-      "2675 Thorpe Ave",
+      "2660 Newell St",
       "3619 Fletcher Dr",
+      "2675 Thorpe Ave",
       "634 Romulo St",
       "3064 Isabel",
       "4254 Verdugo Rd",
       "3428 Maceo",
       "3300 Chapman St",
-      "1709 Campus Rd",
       "456 Ulysses St",
+      "1709 Campus Rd",
       "1444 Hazelwood Ave",
       "1447 Westerly Terrace",
       "1535 Parmer Ave",
-      "337 N Occidental",
       "1560 Morton Ave",
+      "337 N Occidental",
       "1465 W Temple St",
       "1458 Silver Lake Blvd",
-      "1131 Echo Park Ave",
       "214 N Alvarado St",
       "1804 Echo Park Ave",
       "1744 N Berendo St"
     ],
-    "boardAdded": 2,
+    "boardAdded": 0,
     "boardPriceCuts": 0,
     "movedToCorrections": [
-      "1617 SW Broadway Dr: Pending"
+      "514 NE Going St: Pending"
     ],
     "brokenSince": null,
     "ok": true
