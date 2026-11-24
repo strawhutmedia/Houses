@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22T20:52:57.797Z",
+  "updatedAt": "2026-11-24T01:55:52.716Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -1171,28 +1171,6 @@
       ]
     },
     {
-      "id": "1617-sw-broadway-dr-pdx",
-      "tag": "🌲 Portland",
-      "address": "1617 SW Broadway Dr",
-      "hood": "West Hills, Portland OR",
-      "price": 519900,
-      "beds": 2,
-      "baths": 2,
-      "sqft": 1622,
-      "status": "Active",
-      "verified": "2026-10-10",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/9/2026",
-      "dom": null,
-      "why": "PRICE CUT $525,000 → $519,900. 2bd/2ba, 1,622 sqft in West Hills, under the cap (built 1907, 0.1 ac lot); MLS #368736793. Any ADU/guest-unit claim unverified.",
-      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/1617-sw-broadway-dr/pid_74028749/"
-        }
-      ]
-    },
-    {
       "id": "1516-se-43rd-ave-pdx",
       "tag": "🌲 Portland",
       "address": "1516 SE 43rd Ave",
@@ -2269,6 +2247,50 @@
           "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/4047-w-ave-40/pid_74661915/"
         }
       ]
+    },
+    {
+      "id": "3911-de-longpre-la",
+      "tag": "🌴 Los Angeles",
+      "address": "3911 De Longpre",
+      "hood": "Los Feliz, Los Angeles",
+      "price": 695000,
+      "beds": 4,
+      "baths": 3,
+      "sqft": 1896,
+      "status": "Active",
+      "verified": "2026-11-23",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 11/22/2026",
+      "dom": null,
+      "why": "4bd/3ba, 1,896 sqft in Los Feliz, under the cap (built 1924, 0.0735 ac lot); MLS #SR26242022. Duplex — 2 separate units (live in one, Steve in another, rent the rest): \"Attached Studio Guest Unit With Kitchen, Bathroom and Separate Access.\" 📋 Built 1924 · Lot: 3,203 sq ft · On market: 12 days.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/3911-de-longpre/pid_74719650/"
+        }
+      ]
+    },
+    {
+      "id": "1443-n-mariposa-la",
+      "tag": "🌴 Los Angeles",
+      "address": "1443 N Mariposa",
+      "hood": "Los Feliz, Los Angeles",
+      "price": 965000,
+      "beds": null,
+      "baths": 3,
+      "sqft": null,
+      "status": "Active",
+      "verified": "2026-11-23",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 11/23/2026",
+      "dom": null,
+      "why": "?bd/3ba in Los Feliz, under the cap (built 1914, 0.0592 ac lot); MLS #26861117. Duplex — 2 separate units (live in one, Steve in another, rent the rest): \"3+2 with BONUS VACANT UNIT!\" 📋 Built 1914 · Parking: Private · Cooling: Central · Condition: Updated/Remodeled · On market: 130 days · 1 price cut.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/1443-n-mariposa/pid_72560890/"
+        }
+      ]
     }
   ],
   "corrections": [
@@ -2519,6 +2541,10 @@
     {
       "date": "2026-11-20",
       "text": "401 Del Norte St (Mt. Washington, Los Angeles) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-11-23",
+      "text": "1617 SW Broadway Dr (West Hills, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
     }
   ]
 }
