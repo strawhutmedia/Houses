@@ -99,24 +99,19 @@ test("2–4 unit buildings count as the separate unit; 5+ do not (11/16 Bellevue
   assert.equal(multiUnit("Single Family", {}, "x"), null);
 });
 
-test("money: Steve 1/4; Maggie's dad's $60K + $1,000/mo come out of the 3/4 (11/22)", () => {
+test("money: owners only — You + Maggie 3/4, Steve 1/4, dad not shown (11/25)", () => {
   const { moneyFor } = require("../scraper/scout-alerts.js");
   const m = moneyFor(900000, "Los Angeles");
-  assert.equal(m.down, 180000);
-  assert.deepEqual(m.downSplit.map(([w, a]) => [w, Math.round(a)]), [["You + Maggie", 75000], ["Maggie's dad", 60000], ["Steve", 45000]]);
-  const mo = Object.fromEntries(m.moSplit);
-  assert.ok(Math.abs(mo["You + Maggie"] - (m.monthly * 3 / 4 - 1000)) < 1e-6);
-  assert.equal(mo["Maggie's dad"], 1000);
-  assert.ok(Math.abs(mo.Steve - m.monthly / 4) < 1e-6);
+  assert.deepEqual(m.downSplit.map(([w, a]) => [w, Math.round(a)]), [["You + Maggie", 135000], ["Steve", 45000]]);
+  assert.ok(m.options.every((o) => o.dad === undefined && Math.abs(o.usMo - o.monthly * 3 / 4) < 1e-6));
 });
-
 test("money options: 10/20/30/40% down, PMI under 20%, marks vs $4K/$6K, cash check (11/23)", () => {
   const { moneyFor } = require("../scraper/scout-alerts.js");
   const o = moneyFor(1000000, "Los Angeles").options;
   assert.deepEqual(o.map((r) => r.pct), [10, 20, 30, 40]);
   assert.ok(o[0].pmi > 0 && o[1].pmi === 0);
   assert.ok(o[0].usMo > o[1].usMo && o[1].usMo > o[2].usMo && o[2].usMo > o[3].usMo);
-  assert.equal(o[1].mark, "✅");
+  assert.equal(moneyFor(800000, "Los Angeles").options[1].mark, "✅");
   assert.equal(o[1].cashOk, true); assert.equal(o[3].cashOk, false);
   assert.equal(moneyFor(2625000, "Los Angeles").options[1].mark, "❌");
 });

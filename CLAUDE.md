@@ -185,6 +185,10 @@ Its rules (full prompt in `routines/house-alert.md`):
   (house-down-options) renders one block per option. At $1.25M cap their
   share ≈ $4,740 (all emails < $5K); < $4K ≈ price ≤ ~$1.08M. The DOWN payment binds first:
   ~$240K total (pool $180K + dad $60K) = 20% of ~$1.2M. 753 Micheltorena ($2.625M, Tracy Do) = out of reach. Constants `DAD_DOWN`/`DAD_RENT` in scout-alerts.js.
+  **11/25 Ryan: take Maggie's dad OFF the money box** — owners only (You + Maggie 3/4, Steve 1/4,
+  gross; dad's $60K/$1K NOT deducted, "we'll just know"). CASH (~$240K) still counts his $60K for 💸.
+  Site PR #318 shows dad only if a payload sends him; $0 not blank. Ryan asked "are we 2/3–1/3?" —
+  answered: 3/4–1/4 per his 11/22 message; `US_SHARE` is a one-line change if he says 2/3.
   Lender note: dad's $60K needs a gift letter if he's not on title (a true gift), or he goes
   on title/disclosed if it buys equity — never a disguised gift.
 - Settled plan after much debate: **buy together, everyone qualifying on the

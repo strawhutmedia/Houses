@@ -117,22 +117,21 @@ const DEAL_MO = 4000, CAP_MO = 6000;
 const moMark = (ours) => (ours <= DEAL_MO ? "✅" : ours <= CAP_MO ? "⚠️" : "❌");
 const DOWN_PCTS = [0.1, 0.2, 0.3, 0.4];
 // Shape the site's green money box expects (site src/houseAlert.js moneyBox):
-// one row per down-payment option, plus the 20% split kept for older renderers.
+// one row per down-payment option. 11/25 Ryan: "take Maggie's dad off — just say what
+// me and Maggie owe; we'll just know he's contributing $60K" → splits are owners only.
 function moneyFor(price, city) {
   const rows = DOWN_PCTS.map((pct) => {
     const m = finance(price, city, pct);
-    const dad = Math.min(DAD_DOWN, m.us), dadMo = Math.min(DAD_RENT, m.usMo);
-    const ourMo = m.usMo - dadMo;
-    return { pct: Math.round(pct * 100), down: m.down, us: m.us - dad, dad, steve: m.steve, monthly: m.total,
-      usMo: ourMo, dadMo, steveMo: m.steveMo, pmi: m.pmi, mark: moMark(ourMo), cashOk: m.down <= CASH };
+    return { pct: Math.round(pct * 100), down: m.down, us: m.us, steve: m.steve, monthly: m.total,
+      usMo: m.usMo, steveMo: m.steveMo, pmi: m.pmi, mark: moMark(m.usMo), cashOk: m.down <= CASH };
   });
   const m = rows[1];
   return {
     down: m.down, monthly: m.monthly, options: rows,
-    downSplit: [["You + Maggie", m.us], ["Maggie's dad", m.dad], ["Steve", m.steve]],
-    moSplit: [["You + Maggie", m.usMo], ["Maggie's dad", m.dadMo], ["Steve", m.steveMo]],
-    alt: `✅ your monthly ≤ ${usd(DEAL_MO)} · ⚠️ ≤ ${usd(CAP_MO)} cap · ❌ over. 💸 = more cash than your ~${usd(CASH)}. Steve pays 1/4 of each; Maggie's dad's ${usd(DAD_DOWN)} + ${usd(DAD_RENT)}/mo come off yours. Under 20% down includes PMI (~${PMI * 100}%/yr).`,
-    us: m.us + m.dad, steve: m.steve, usMo: m.usMo + m.dadMo, steveMo: m.steveMo,
+    downSplit: [["You + Maggie", m.us], ["Steve", m.steve]],
+    moSplit: [["You + Maggie", m.usMo], ["Steve", m.steveMo]],
+    alt: `Split ${Math.round(US_SHARE * 100)}% you + Maggie / ${Math.round((1 - US_SHARE) * 100)}% Steve. ✅ your monthly ≤ ${usd(DEAL_MO)} · ⚠️ ≤ ${usd(CAP_MO)} cap · ❌ over. 💸 = more cash than your ~${usd(CASH)} (incl. Maggie's dad's ${usd(DAD_DOWN)}, not shown above). Under 20% down includes PMI (~${PMI * 100}%/yr).`,
+    us: m.us, steve: m.steve, usMo: m.usMo, steveMo: m.steveMo,
   };
 }
 // Readable one-per-line facts for the email's "Details" list.
