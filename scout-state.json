@@ -1,9 +1,9 @@
 {
   "studio": {
-    "lastRun": "2026-11-24",
-    "at": "2026-11-24T23:37:54.637Z",
-    "spacesFile": "2026-11-24T23:37:54.586Z",
-    "craigslistFetched": 261,
+    "lastRun": "2026-11-25",
+    "at": "2026-11-25T23:17:48.213Z",
+    "spacesFile": "2026-11-25T23:17:48.143Z",
+    "craigslistFetched": 258,
     "candidates": 0,
     "verified": [],
     "emailed": false,
@@ -14,56 +14,60 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-11-24",
-    "at": "2026-11-24T23:41:13.255Z",
+    "lastRun": "2026-11-25",
+    "at": "2026-11-25T23:21:18.313Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 786,
+        "scanned": 777,
         "matches": 26
       },
       "Portland": {
-        "scanned": 1098,
-        "matches": 0
+        "scanned": 982,
+        "matches": 1
       }
     },
-    "candidates": 26,
-    "verified": [],
-    "emailed": false,
+    "candidates": 27,
+    "verified": [
+      "951 N Ave 49 (Highland Park) $650,000"
+    ],
+    "emailed": true,
     "emailError": null,
     "rejected": [
-      "732 Onarga Ave: no separate ADU — no ADU/second unit in description",
-      "1361 W Temple St: no separate ADU — 5 units — 5+ is a commercial loan, not a home loan"
+      "849 Robinson: no separate ADU — a guest suite/flex room, not a unit (no kitchen, rent or separate structure)",
+      "3018 SW Flower Terrace: no separate ADU — no ADU/second unit in description"
     ],
     "unreachable": [
-      "5009 Stratford Rd",
       "5224 Glen Ellen Pl",
+      "5009 Stratford Rd",
       "276 Thorne St",
       "6035 Mesa",
       "2660 Newell St",
-      "3619 Fletcher Dr",
       "2675 Thorpe Ave",
+      "3619 Fletcher Dr",
       "634 Romulo St",
       "3064 Isabel",
       "4254 Verdugo Rd",
       "3428 Maceo",
       "3300 Chapman St",
-      "456 Ulysses St",
       "1709 Campus Rd",
       "1444 Hazelwood Ave",
-      "1447 Westerly Terrace",
+      "456 Ulysses St",
       "1535 Parmer Ave",
       "1560 Morton Ave",
+      "1447 Westerly Terrace",
       "337 N Occidental",
-      "1465 W Temple St",
       "1458 Silver Lake Blvd",
+      "1465 W Temple St",
       "214 N Alvarado St",
       "1804 Echo Park Ave",
       "1744 N Berendo St"
     ],
-    "boardAdded": 0,
+    "boardAdded": 1,
     "boardPriceCuts": 0,
     "movedToCorrections": [
-      "514 NE Going St: Pending"
+      "4222 N Montana Ave: Pending",
+      "6615 SE 16th Ave: Pending",
+      "6139 Buena Vista Terrace: Pending"
     ],
     "brokenSince": null,
     "ok": true

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T23:41:13.253Z",
+  "updatedAt": "2026-11-25T23:21:17.080Z",
   "rule": "LA: house · 1.5+ baths · under $1.25M · Highland Park, Atwater Village, Frogtown, Eagle Rock, Mt. Washington, Glassell Park, Silver Lake, Echo Park, Los Feliz — plus Portland, OR: house · 1.5+ baths · under $1M · West Hills/SW, Alberta, Mississippi, Overlook, Mt. Tabor, Hawthorne/Division, Sellwood, Irvington, Laurelhurst",
   "finds": [
     {
@@ -726,28 +726,6 @@
         {
           "label": "Coldwell Banker listing",
           "url": "https://www.coldwellbankerhomes.com/or/portland/6626-se-stark-st/pid_73644567/"
-        }
-      ]
-    },
-    {
-      "id": "4222-n-montana-ave-pdx",
-      "tag": "🌲 Portland",
-      "address": "4222 N Montana Ave",
-      "hood": "Mississippi, Portland OR",
-      "price": 575000,
-      "beds": 3,
-      "baths": 2,
-      "sqft": 1914,
-      "status": "Active",
-      "verified": "2026-10-03",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 10/2/2026",
-      "dom": null,
-      "why": "3bd/2ba, 1,914 sqft in Mississippi, under the cap; MLS #396520532. Any ADU/guest-unit claim unverified.",
-      "ask": "Verify permits and any ADU/guest-unit claims; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/4222-n-montana-ave/pid_72792197/"
         }
       ]
     },
@@ -2160,50 +2138,6 @@
       ]
     },
     {
-      "id": "6615-se-16th-ave-pdx",
-      "tag": "🌲 Portland",
-      "address": "6615 SE 16th Ave",
-      "hood": "Sellwood, Portland OR",
-      "price": 689000,
-      "beds": 4,
-      "baths": 2,
-      "sqft": 2083,
-      "status": "Active",
-      "verified": "2026-11-21",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 11/20/2026",
-      "dom": null,
-      "why": "4bd/2ba, 2,083 sqft in Sellwood, under the cap (built 1928, 0.12 ac lot); MLS #604639477. Detached/attached not stated ADU (permits not stated): \"Two separate living areas with a dining room that flows onto the covered side porch, so indoor and outdoor living blend together for entertaining or a quiet morning coffee.\" 📋 Built 1928 · Lot: 5,227 sq ft · Condition: Updated/Remodeled · On market: 1 days. Confirm permits before offering.",
-      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/or/portland/6615-se-16th-ave/pid_74856313/"
-        }
-      ]
-    },
-    {
-      "id": "6139-buena-vista-terrace-la",
-      "tag": "🌴 Los Angeles",
-      "address": "6139 Buena Vista Terrace",
-      "hood": "Eagle Rock, Los Angeles",
-      "price": 1200000,
-      "beds": 3,
-      "baths": 2,
-      "sqft": 1344,
-      "status": "Active",
-      "verified": "2026-11-22",
-      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 11/22/2026",
-      "dom": null,
-      "why": "3bd/2ba, 1,344 sqft in Eagle Rock, under the cap (built 1909, 0.3228 ac lot); MLS #PF26099167. Detached/attached not stated ADU (permits not stated, rented now): \"Expand the living space, add income-producing ADUs, build a pool, or simply hold a rare piece of Los Angeles real estate that only grows in value.\" 📋 Built 1909 · Lot: 14,060 sq ft · Parking: Garage, Concrete, Gravel, Garage Faces Rear, Garag · Cooling: Electric, Wall/Window Unit(s) · Condition: Turnkey · On market: 160 days. Confirm permits before offering.",
-      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
-      "links": [
-        {
-          "label": "Coldwell Banker listing",
-          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/6139-buena-vista-terrace/pid_71996677/"
-        }
-      ]
-    },
-    {
       "id": "4047-w-ave-40-la",
       "tag": "🌴 Los Angeles",
       "address": "4047 W Ave 40",
@@ -2266,6 +2200,28 @@
         {
           "label": "Coldwell Banker listing",
           "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/1443-n-mariposa/pid_72560890/"
+        }
+      ]
+    },
+    {
+      "id": "951-n-ave-49-la",
+      "tag": "🌴 Los Angeles",
+      "address": "951 N Ave 49",
+      "hood": "Highland Park, Los Angeles",
+      "price": 650000,
+      "beds": 3,
+      "baths": 2,
+      "sqft": 1236,
+      "status": "Active",
+      "verified": "2026-11-25",
+      "verifiedHow": "Coldwell Banker live listing page: Status Active, Updated 11/25/2026",
+      "dom": null,
+      "why": "3bd/2ba, 1,236 sqft in Highland Park, under the cap (built 1910, 0.1052 ac lot); MLS #DW26249072. Duplex — 2 separate units (live in one, Steve in another, rent the rest): \"This charming duplex offers a combined total of 3 bedrooms and 2 bathrooms, making it a perfect opportunity for anyone looking for a multi-unit property, whether you're considering living in one unit and renting out the other or expanding your investment portfolio.\" 📋 Built 1910 · Lot: 4,581 sq ft · On market: 1 days.",
+      "ask": "Pull permits for the ADU (LADBS / Portland Maps), confirm its sqft, kitchen, bath and separate entrance in person; check DOM and price history.",
+      "links": [
+        {
+          "label": "Coldwell Banker listing",
+          "url": "https://www.coldwellbankerhomes.com/ca/los-angeles/951-n-ave-49/pid_74895525/"
         }
       ]
     }
@@ -2526,6 +2482,18 @@
     {
       "date": "2026-11-24",
       "text": "514 NE Going St (Alberta, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-11-25",
+      "text": "4222 N Montana Ave (Mississippi, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-11-25",
+      "text": "6615 SE 16th Ave (Sellwood, Portland OR) is now Pending per its live Coldwell Banker page — removed from the board."
+    },
+    {
+      "date": "2026-11-25",
+      "text": "6139 Buena Vista Terrace (Eagle Rock, Los Angeles) is now Pending per its live Coldwell Banker page — removed from the board."
     }
   ]
 }

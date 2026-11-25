@@ -1,12 +1,27 @@
 {
-  "generatedAt": "2026-11-24T23:37:54.586Z",
-  "count": 542,
+  "generatedAt": "2026-11-25T23:17:48.143Z",
+  "count": 539,
   "sources": {
-    "craigslistFetched": 261,
-    "craigslistPriced": 257,
+    "craigslistFetched": 258,
+    "craigslistPriced": 253,
     "cag": 283
   },
   "spaces": [
+    {
+      "id": "cl-7999129224",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "$1 / 2800ft - Turnkey Salon / Barber / Beauty Studio DTLA-Free Rent -",
+      "hood": null,
+      "price": null,
+      "period": "monthly",
+      "sqft": 2800,
+      "lat": 34.042383,
+      "lng": -118.252676,
+      "postedDate": 1794434932,
+      "url": "https://www.craigslist.org/view/d/los-angeles-ft-turnkey-salon-barber/7wi6oDonxt6f8AxeftaqkG",
+      "thumb": "https://images.craigslist.org/00a0a_51937PQcK9w_0i20pr_50x50c.jpg"
+    },
     {
       "id": "cl-7992551853",
       "source": "Craigslist",
@@ -38,19 +53,19 @@
       "thumb": "https://images.craigslist.org/00P0P_4Sf0XmGMgKm_0CI0pO_50x50c.jpg"
     },
     {
-      "id": "cl-7999129224",
+      "id": "cl-8006392860",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "$1 / 2800ft - Turnkey Salon / Barber / Beauty Studio DTLA-Free Rent -",
+      "title": "PRIME DTLA CORNER RETAIL SPACE | LARGE STOREFRONT | FASHION DISTRICT",
       "hood": null,
       "price": null,
       "period": "monthly",
-      "sqft": 2800,
-      "lat": 34.042383,
-      "lng": -118.252676,
-      "postedDate": 1794434932,
-      "url": "https://www.craigslist.org/view/d/los-angeles-ft-turnkey-salon-barber/7wi6oDonxt6f8AxeftaqkG",
-      "thumb": "https://images.craigslist.org/00a0a_51937PQcK9w_0i20pr_50x50c.jpg"
+      "sqft": 5000,
+      "lat": 34.039074,
+      "lng": -118.256447,
+      "postedDate": 1795632687,
+      "url": "https://www.craigslist.org/view/d/los-angeles-prime-dtla-corner-retail/5CC73rpGuPMitMhAzSYitD",
+      "thumb": "https://images.craigslist.org/00V0V_l3DdGOZvXkG_0kE0fu_50x50c.jpg"
     },
     {
       "id": "cl-7989972684",
@@ -83,21 +98,6 @@
       "thumb": "https://images.craigslist.org/01515_kwNzqChmGia_0pO0jm_50x50c.jpg"
     },
     {
-      "id": "cl-7989934071",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "PRIVATE DETACHED WORKSPACE / CREATIVE STUDIO – NORTHRIDGE",
-      "hood": null,
-      "price": 300,
-      "period": "monthly",
-      "sqft": 140,
-      "lat": 34.220904,
-      "lng": -118.50973,
-      "postedDate": 1792987007,
-      "url": "https://www.craigslist.org/view/d/northridge-private-detached-workspace/9yGkSXaEKmkHf3ysZkwTmV",
-      "thumb": "https://images.craigslist.org/00m0m_jq8gzJRHvzT_0f40aW_50x50c.jpg"
-    },
-    {
       "id": "cl-7996935480",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -110,21 +110,6 @@
       "lng": -118.154185,
       "postedDate": 1794080680,
       "url": "https://www.craigslist.org/view/d/pasadena-beautiful-furnished-treatment/gjDZYzAmwmPmham9Kpuk3N",
-      "thumb": ""
-    },
-    {
-      "id": "cl-7991928330",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Studio Work Space ISO Studio-mate",
-      "hood": null,
-      "price": 350,
-      "period": "monthly",
-      "sqft": 500,
-      "lat": 34.03463,
-      "lng": -118.254043,
-      "postedDate": 1793294139,
-      "url": "https://www.craigslist.org/view/d/los-angeles-studio-work-space-iso/frJefCu1Jn1ASz4pakxsb2",
       "thumb": ""
     },
     {
@@ -143,21 +128,6 @@
       "thumb": "https://images.craigslist.org/00V0V_i3MNX8IG8eH_0CI0t2_50x50c.jpg"
     },
     {
-      "id": "cl-7992111438",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Office spaces available for lease 120-462sqft",
-      "hood": null,
-      "price": 400,
-      "period": "monthly",
-      "sqft": 120,
-      "lat": 34.06079,
-      "lng": -118.258278,
-      "postedDate": 1793310096,
-      "url": "https://www.craigslist.org/view/d/los-angeles-office-spaces-available-for/sCKjsHKThC69Cx4mnK3ucs",
-      "thumb": "https://images.craigslist.org/00909_hoHOXa038Ab_0fS08V_50x50c.jpg"
-    },
-    {
       "id": "cl-7999130736",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -173,6 +143,36 @@
       "thumb": "https://images.craigslist.org/00a0a_51937PQcK9w_0i20pr_50x50c.jpg"
     },
     {
+      "id": "cl-7991928330",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Studio Work Space ISO Studio-mate",
+      "hood": null,
+      "price": 350,
+      "period": "monthly",
+      "sqft": 500,
+      "lat": 34.03463,
+      "lng": -118.254043,
+      "postedDate": 1793294139,
+      "url": "https://www.craigslist.org/view/d/los-angeles-studio-work-space-iso/frJefCu1Jn1ASz4pakxsb2",
+      "thumb": ""
+    },
+    {
+      "id": "cl-7992111438",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Office spaces available for lease 120-462sqft",
+      "hood": null,
+      "price": 400,
+      "period": "monthly",
+      "sqft": 120,
+      "lat": 34.06079,
+      "lng": -118.258278,
+      "postedDate": 1793310096,
+      "url": "https://www.craigslist.org/view/d/los-angeles-office-spaces-available-for/sCKjsHKThC69Cx4mnK3ucs",
+      "thumb": "https://images.craigslist.org/00909_hoHOXa038Ab_0fS08V_50x50c.jpg"
+    },
+    {
       "id": "cl-7992754053",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -186,6 +186,21 @@
       "postedDate": 1793409271,
       "url": "https://www.craigslist.org/view/d/long-beach-private-office-window/tPBAvTj8PsmRG5ByG8hyyV",
       "thumb": "https://images.craigslist.org/00F0F_jbqMQBIQMUS_0jm0pO_50x50c.jpg"
+    },
+    {
+      "id": "cl-7994794140",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Private Office Suite with Window",
+      "hood": null,
+      "price": 450,
+      "period": "monthly",
+      "sqft": 90,
+      "lat": 34.172105,
+      "lng": -118.381961,
+      "postedDate": 1793743308,
+      "url": "https://www.craigslist.org/view/d/north-hollywood-private-office-suite/erYfn79u39yETdZr3mwQ2j",
+      "thumb": "https://images.craigslist.org/01616_REcNcIFONf_0gw0co_50x50c.jpg"
     },
     {
       "id": "cl-8000694813",
@@ -278,6 +293,21 @@
       "thumb": "https://images.craigslist.org/00r0r_hEH4eWW1D2R_0CI0lM_50x50c.jpg"
     },
     {
+      "id": "cl-7995394953",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "TWO MONTHS FREE RENT! Office Space Available!",
+      "hood": null,
+      "price": 590,
+      "period": "monthly",
+      "sqft": 300,
+      "lat": 33.996911,
+      "lng": -118.140607,
+      "postedDate": 1793835535,
+      "url": "https://www.craigslist.org/view/d/los-angeles-two-months-free-rent-office/kgvucJTBZuDJABwZ7zTZy4",
+      "thumb": "https://images.craigslist.org/00N0N_dbFAY7VUbp5_1320MM_50x50c.jpg"
+    },
+    {
       "id": "cl-7991347749",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -291,21 +321,6 @@
       "postedDate": 1793206703,
       "url": "https://www.craigslist.org/view/d/north-hollywood-affordable-small-medium/hnuhjGZZg5KtiZ1HXnzGXH",
       "thumb": "https://images.craigslist.org/00F0F_j38hC9yhO1J_0CI0t2_50x50c.jpg"
-    },
-    {
-      "id": "cl-7998080514",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Private Offices from $550/mo - Ventura Blvd, Encino | Rent 1 to 4",
-      "hood": null,
-      "price": 550,
-      "period": "monthly",
-      "sqft": 350,
-      "lat": 34.155443,
-      "lng": -118.479707,
-      "postedDate": 1794268623,
-      "url": "https://www.craigslist.org/view/d/sherman-oaks-private-offices-from-550/q6YwfGpGDky2aqDqxt2t2H",
-      "thumb": "https://images.craigslist.org/00g0g_gEl1q9l2kpz_0bU0pO_50x50c.jpg"
     },
     {
       "id": "cl-7992181020",
@@ -323,49 +338,19 @@
       "thumb": "https://images.craigslist.org/00303_h7JFLcYycB3_0mh0ew_50x50c.jpg"
     },
     {
-      "id": "cl-7994794140",
+      "id": "cl-7998080514",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "Private Office Suite with Window",
+      "title": "Private Offices from $550/mo - Ventura Blvd, Encino | Rent 1 to 4",
       "hood": null,
-      "price": 450,
+      "price": 550,
       "period": "monthly",
-      "sqft": 90,
-      "lat": 34.172105,
-      "lng": -118.381961,
-      "postedDate": 1793743308,
-      "url": "https://www.craigslist.org/view/d/north-hollywood-private-office-suite/erYfn79u39yETdZr3mwQ2j",
-      "thumb": "https://images.craigslist.org/01616_REcNcIFONf_0gw0co_50x50c.jpg"
-    },
-    {
-      "id": "cl-7995394953",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "TWO MONTHS FREE RENT! Office Space Available!",
-      "hood": null,
-      "price": 590,
-      "period": "monthly",
-      "sqft": 300,
-      "lat": 33.996911,
-      "lng": -118.140607,
-      "postedDate": 1793835535,
-      "url": "https://www.craigslist.org/view/d/los-angeles-two-months-free-rent-office/kgvucJTBZuDJABwZ7zTZy4",
-      "thumb": "https://images.craigslist.org/00N0N_dbFAY7VUbp5_1320MM_50x50c.jpg"
-    },
-    {
-      "id": "cl-7998527742",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Furnished Office for Rent  - Immidiate Move in Available",
-      "hood": null,
-      "price": 625,
-      "period": "monthly",
-      "sqft": 240,
-      "lat": 34.172003,
-      "lng": -118.431846,
-      "postedDate": 1794343425,
-      "url": "https://www.craigslist.org/view/d/van-nuys-furnished-office-for-rent/4Qim7d8w35eFVA1G3VRN3b",
-      "thumb": "https://images.craigslist.org/00q0q_2lp7K3YgsAH_0t20CI_50x50c.jpg"
+      "sqft": 350,
+      "lat": 34.155443,
+      "lng": -118.479707,
+      "postedDate": 1794268623,
+      "url": "https://www.craigslist.org/view/d/sherman-oaks-private-offices-from-550/q6YwfGpGDky2aqDqxt2t2H",
+      "thumb": "https://images.craigslist.org/00g0g_gEl1q9l2kpz_0bU0pO_50x50c.jpg"
     },
     {
       "id": "cl-8002702239",
@@ -381,21 +366,6 @@
       "postedDate": 1795023720,
       "url": "https://www.craigslist.org/view/d/covina-covina-ca-office-space-for-rent/4cmNE6WRaoBfPHKH2PS1Bz",
       "thumb": "https://images.craigslist.org/01111_1a1msvgNGV1_0lM0t2_50x50c.jpg"
-    },
-    {
-      "id": "cl-7991352816",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Two Upcoming Lockouts in Reseda",
-      "hood": null,
-      "price": 650,
-      "period": "monthly",
-      "sqft": 190,
-      "lat": 34.201103,
-      "lng": -118.53602,
-      "postedDate": 1793207100,
-      "url": "https://www.craigslist.org/view/d/reseda-two-upcoming-lockouts-in-reseda/5xoaqXgBkRYkUR3JweQ72V",
-      "thumb": "https://images.craigslist.org/00y0y_iKe94tCdNaP_0CI0t2_50x50c.jpg"
     },
     {
       "id": "cl-8002935774",
@@ -428,6 +398,36 @@
       "thumb": "https://images.craigslist.org/01010_8hQI8HA2M6B_0CI0t2_50x50c.jpg"
     },
     {
+      "id": "cl-7998527742",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Furnished Office for Rent  - Immidiate Move in Available",
+      "hood": null,
+      "price": 625,
+      "period": "monthly",
+      "sqft": 240,
+      "lat": 34.172003,
+      "lng": -118.431846,
+      "postedDate": 1794343425,
+      "url": "https://www.craigslist.org/view/d/van-nuys-furnished-office-for-rent/4Qim7d8w35eFVA1G3VRN3b",
+      "thumb": "https://images.craigslist.org/00q0q_2lp7K3YgsAH_0t20CI_50x50c.jpg"
+    },
+    {
+      "id": "cl-7991352816",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Two Upcoming Lockouts in Reseda",
+      "hood": null,
+      "price": 650,
+      "period": "monthly",
+      "sqft": 190,
+      "lat": 34.201103,
+      "lng": -118.53602,
+      "postedDate": 1793207100,
+      "url": "https://www.craigslist.org/view/d/reseda-two-upcoming-lockouts-in-reseda/5xoaqXgBkRYkUR3JweQ72V",
+      "thumb": "https://images.craigslist.org/00y0y_iKe94tCdNaP_0CI0t2_50x50c.jpg"
+    },
+    {
       "id": "cl-7998050427",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -441,6 +441,21 @@
       "postedDate": 1794264961,
       "url": "https://www.craigslist.org/view/d/van-nuys-beauty-makeup-cosmetology/fRMxhJiSYSd1BBHX439pQo",
       "thumb": "https://images.craigslist.org/01616_8NDS0Q7Vmo1_07K0ak_50x50c.jpg"
+    },
+    {
+      "id": "cl-8002902786",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Art Studio/Creative Office at the Brewery Arts Colony",
+      "hood": null,
+      "price": 650,
+      "period": "monthly",
+      "sqft": 300,
+      "lat": 34.065175,
+      "lng": -118.218772,
+      "postedDate": 1795041263,
+      "url": "https://www.craigslist.org/view/d/los-angeles-art-studio-creative-office/bvTcshSFyRJ9WUBE9aE61g",
+      "thumb": "https://images.craigslist.org/00i0i_b1uN9oCbc35_0CI0lM_50x50c.jpg"
     },
     {
       "id": "cl-8002910187",
@@ -458,21 +473,6 @@
       "thumb": "https://images.craigslist.org/00K0K_fHKLDkZVlAK_0bi080_50x50c.jpg"
     },
     {
-      "id": "cl-8004958338",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Art Studios, Creative spaces, Offices (month to month)",
-      "hood": null,
-      "price": 650,
-      "period": "monthly",
-      "sqft": 200,
-      "lat": 34.077999,
-      "lng": -118.260207,
-      "postedDate": 1795388554,
-      "url": "https://www.craigslist.org/view/d/los-angeles-art-studios-creative-spaces/9LMxTJrpArL33JEmPnv3c2",
-      "thumb": "https://images.craigslist.org/00g0g_lRgpdkbRgxB_0CI0t2_50x50c.jpg"
-    },
-    {
       "id": "cl-7990833366",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -488,19 +488,19 @@
       "thumb": "https://images.craigslist.org/00808_hE9P1IF4QmH_0r30li_50x50c.jpg"
     },
     {
-      "id": "cl-8002902786",
+      "id": "cl-7994574411",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "Art Studio/Creative Office at the Brewery Arts Colony",
+      "title": "1,200 SQ. FT. GATED & SECURE OUTSIDE LOT, NORTH HOLLYWOOD",
       "hood": null,
-      "price": 650,
+      "price": 700,
       "period": "monthly",
-      "sqft": 300,
-      "lat": 34.065175,
-      "lng": -118.218772,
-      "postedDate": 1795041263,
-      "url": "https://www.craigslist.org/view/d/los-angeles-art-studio-creative-office/bvTcshSFyRJ9WUBE9aE61g",
-      "thumb": "https://images.craigslist.org/00i0i_b1uN9oCbc35_0CI0lM_50x50c.jpg"
+      "sqft": 1200,
+      "lat": 34.207923,
+      "lng": -118.420959,
+      "postedDate": 1793724661,
+      "url": "https://www.craigslist.org/view/d/van-nuys-1200-sq-ft-gated-secure/jg8fkVXFaEHJFGkAc887ux",
+      "thumb": "https://images.craigslist.org/00V0V_9w7LqnabkpY_0t20CI_50x50c.jpg"
     },
     {
       "id": "cl-7991367606",
@@ -533,21 +533,6 @@
       "thumb": "https://images.craigslist.org/00Z0Z_etpDZXi0b0w_0lM0t2_50x50c.jpg"
     },
     {
-      "id": "cl-8000853339",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "private beauty & wellness suite for sublease- 3 days a week",
-      "hood": null,
-      "price": 700,
-      "period": "monthly",
-      "sqft": 900,
-      "lat": 33.906469,
-      "lng": -118.383352,
-      "postedDate": 1794711404,
-      "url": "https://www.craigslist.org/view/d/lawndale-private-beauty-wellness-suite/4Ugoq2TfXQAmdpfA5ks8Su",
-      "thumb": "https://images.craigslist.org/00u0u_cgVMKubC6Jk_1zy264_50x50c.jpg"
-    },
-    {
       "id": "cl-8000332566",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -563,34 +548,19 @@
       "thumb": "https://images.craigslist.org/00B0B_6cV71ZiFxRi_0CI0t2_50x50c.jpg"
     },
     {
-      "id": "cl-7994574411",
+      "id": "cl-8000853339",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "1,200 SQ. FT. GATED & SECURE OUTSIDE LOT, NORTH HOLLYWOOD",
+      "title": "private beauty & wellness suite for sublease- 3 days a week",
       "hood": null,
       "price": 700,
       "period": "monthly",
-      "sqft": 1200,
-      "lat": 34.207923,
-      "lng": -118.420959,
-      "postedDate": 1793724661,
-      "url": "https://www.craigslist.org/view/d/van-nuys-1200-sq-ft-gated-secure/jg8fkVXFaEHJFGkAc887ux",
-      "thumb": "https://images.craigslist.org/00V0V_9w7LqnabkpY_0t20CI_50x50c.jpg"
-    },
-    {
-      "id": "cl-7994795283",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Office in North Hollywood Adj | Electricity Included | Available Now!",
-      "hood": null,
-      "price": 734,
-      "period": "monthly",
-      "sqft": 269,
-      "lat": 34.190219,
-      "lng": -118.466202,
-      "postedDate": 1793743443,
-      "url": "https://www.craigslist.org/view/d/van-nuys-office-in-north-hollywood-adj/c1Ja1KazDPb5DTXUomW3ya",
-      "thumb": "https://images.craigslist.org/00e0e_6SQmQPhlKgU_0q80hq_50x50c.jpg"
+      "sqft": 900,
+      "lat": 33.906469,
+      "lng": -118.383352,
+      "postedDate": 1794711404,
+      "url": "https://www.craigslist.org/view/d/lawndale-private-beauty-wellness-suite/4Ugoq2TfXQAmdpfA5ks8Su",
+      "thumb": "https://images.craigslist.org/00u0u_cgVMKubC6Jk_1zy264_50x50c.jpg"
     },
     {
       "id": "cl-8000182092",
@@ -608,19 +578,19 @@
       "thumb": ""
     },
     {
-      "id": "cl-7995178860",
+      "id": "cl-7994795283",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "Total Remodeled 2 office spaces.",
+      "title": "Office in North Hollywood Adj | Electricity Included | Available Now!",
       "hood": null,
-      "price": 800,
+      "price": 734,
       "period": "monthly",
-      "sqft": null,
-      "lat": 34.232283,
-      "lng": -118.437652,
-      "postedDate": 1793814725,
-      "url": "https://www.craigslist.org/view/d/panorama-city-total-remodeled-office/8RnQFZ2cqKzfhU3NFNvXJJ",
-      "thumb": "https://images.craigslist.org/00w0w_aEkcIJDzoKj_0cE09u_50x50c.jpg"
+      "sqft": 269,
+      "lat": 34.190219,
+      "lng": -118.466202,
+      "postedDate": 1793743443,
+      "url": "https://www.craigslist.org/view/d/van-nuys-office-in-north-hollywood-adj/c1Ja1KazDPb5DTXUomW3ya",
+      "thumb": "https://images.craigslist.org/00e0e_6SQmQPhlKgU_0q80hq_50x50c.jpg"
     },
     {
       "id": "cl-7995181659",
@@ -653,6 +623,21 @@
       "thumb": "https://images.craigslist.org/01717_5jY6mUUqojV_0t20CI_50x50c.jpg"
     },
     {
+      "id": "cl-7995178860",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Total Remodeled 2 office spaces.",
+      "hood": null,
+      "price": 800,
+      "period": "monthly",
+      "sqft": null,
+      "lat": 34.232283,
+      "lng": -118.437652,
+      "postedDate": 1793814725,
+      "url": "https://www.craigslist.org/view/d/panorama-city-total-remodeled-office/8RnQFZ2cqKzfhU3NFNvXJJ",
+      "thumb": "https://images.craigslist.org/00w0w_aEkcIJDzoKj_0cE09u_50x50c.jpg"
+    },
+    {
       "id": "cl-7998025101",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -666,21 +651,6 @@
       "postedDate": 1794262474,
       "url": "https://www.craigslist.org/view/d/lancaster-westside-private-office-for/7V345xUoNviJmwsmaSnMSV",
       "thumb": "https://images.craigslist.org/00808_7IJIDsCOJUR_0hT0CI_50x50c.jpg"
-    },
-    {
-      "id": "cl-8006023077",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Wellness Center Offices in Santa Monica - $850 & $1,900 (2nd St)",
-      "hood": null,
-      "price": 850,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.015007,
-      "lng": -118.49691,
-      "postedDate": 1795561140,
-      "url": "https://www.craigslist.org/view/d/santa-monica-wellness-center-offices-in/o3B4Y45fFjQLEUwYqxG7Lb",
-      "thumb": "https://images.craigslist.org/00y0y_9rjZjbJIWDX_0gl0t2_50x50c.jpg"
     },
     {
       "id": "cl-7992523452",
@@ -698,6 +668,21 @@
       "thumb": "https://images.craigslist.org/00x0x_lzgakl5fNiF_0lL0t2_50x50c.jpg"
     },
     {
+      "id": "cl-8006023077",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Wellness Center Offices in Santa Monica - $850 & $1,900 (2nd St)",
+      "hood": null,
+      "price": 850,
+      "period": "monthly",
+      "sqft": null,
+      "lat": 34.015007,
+      "lng": -118.49691,
+      "postedDate": 1795561140,
+      "url": "https://www.craigslist.org/view/d/santa-monica-wellness-center-offices-in/o3B4Y45fFjQLEUwYqxG7Lb",
+      "thumb": "https://images.craigslist.org/00y0y_9rjZjbJIWDX_0gl0t2_50x50c.jpg"
+    },
+    {
       "id": "cl-7994146518",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -711,21 +696,6 @@
       "postedDate": 1793648935,
       "url": "https://www.craigslist.org/view/d/long-beach-2nd-floor-office-spaces/nrkWDgFHdkNmBTeENkAfy2",
       "thumb": "https://images.craigslist.org/00d0d_bBluBMiGOwA_0gH0bk_50x50c.jpg"
-    },
-    {
-      "id": "cl-7995614061",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "SOACE  FOR RENT INSIDE  BARBERSHOP",
-      "hood": null,
-      "price": 850,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.048199,
-      "lng": -118.334291,
-      "postedDate": 1793890927,
-      "url": "https://www.craigslist.org/view/d/los-angeles-soace-for-rent-inside/6Z3vx1kJcbWrBxRpyhxTSd",
-      "thumb": ""
     },
     {
       "id": "cl-7996131348",
@@ -743,19 +713,19 @@
       "thumb": "https://images.craigslist.org/00b0b_eCckln88DOmz_0CI0t2_50x50c.jpg"
     },
     {
-      "id": "cl-7997842155",
+      "id": "cl-7995614061",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "NON-Residential - Office Space for Lease - Professional Business",
+      "title": "SOACE  FOR RENT INSIDE  BARBERSHOP",
       "hood": null,
       "price": 850,
       "period": "monthly",
-      "sqft": 285,
-      "lat": 34.133791,
-      "lng": -117.865487,
-      "postedDate": 1794246867,
-      "url": "https://www.craigslist.org/view/d/glendora-non-residential-office-space/vJET5pkRKcvx1FRaRLiGt4",
-      "thumb": "https://images.craigslist.org/00q0q_lhs2k38k4Ea_05q06B_50x50c.jpg"
+      "sqft": null,
+      "lat": 34.048199,
+      "lng": -118.334291,
+      "postedDate": 1793890927,
+      "url": "https://www.craigslist.org/view/d/los-angeles-soace-for-rent-inside/6Z3vx1kJcbWrBxRpyhxTSd",
+      "thumb": ""
     },
     {
       "id": "cl-7998025845",
@@ -771,6 +741,21 @@
       "postedDate": 1794262537,
       "url": "https://www.craigslist.org/view/d/lancaster-westside-private-office-for/pbz6ySdKmpyZML1K2oU328",
       "thumb": "https://images.craigslist.org/00808_7IJIDsCOJUR_0hT0CI_50x50c.jpg"
+    },
+    {
+      "id": "cl-7997842155",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "NON-Residential - Office Space for Lease - Professional Business",
+      "hood": null,
+      "price": 850,
+      "period": "monthly",
+      "sqft": 285,
+      "lat": 34.133791,
+      "lng": -117.865487,
+      "postedDate": 1794246867,
+      "url": "https://www.craigslist.org/view/d/glendora-non-residential-office-space/vJET5pkRKcvx1FRaRLiGt4",
+      "thumb": "https://images.craigslist.org/00q0q_lhs2k38k4Ea_05q06B_50x50c.jpg"
     },
     {
       "id": "cl-7992537087",
@@ -818,6 +803,21 @@
       "thumb": "https://images.craigslist.org/01616_gsymK1HqXps_0lM0t2_50x50c.jpg"
     },
     {
+      "id": "cl-8004852888",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Executive Workspace - offices for rent",
+      "hood": null,
+      "price": 900,
+      "period": "monthly",
+      "sqft": 250,
+      "lat": 34.15726,
+      "lng": -118.812957,
+      "postedDate": 1795375943,
+      "url": "https://www.craigslist.org/view/d/westlake-village-executive-workspace/byJn4MZVBdAWVGYmhVAeYL",
+      "thumb": "https://images.craigslist.org/00U0U_cPy2xMT64fM_0jm0cW_50x50c.jpg"
+    },
+    {
       "id": "cl-8000322372",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -848,19 +848,19 @@
       "thumb": ""
     },
     {
-      "id": "cl-8004852888",
+      "id": "cl-8004531678",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "Executive Workspace - offices for rent",
+      "title": "OFFICE SPACE/ COMMERICIAL FOR LEASE- W. HIGH TRAFFIC.  Arleta/ Woodman",
       "hood": null,
-      "price": 900,
+      "price": 925,
       "period": "monthly",
-      "sqft": 250,
-      "lat": 34.15726,
-      "lng": -118.812957,
-      "postedDate": 1795375943,
-      "url": "https://www.craigslist.org/view/d/westlake-village-executive-workspace/byJn4MZVBdAWVGYmhVAeYL",
-      "thumb": "https://images.craigslist.org/00U0U_cPy2xMT64fM_0jm0cW_50x50c.jpg"
+      "sqft": 300,
+      "lat": 34.233003,
+      "lng": -118.438212,
+      "postedDate": 1795304451,
+      "url": "https://www.craigslist.org/view/d/panorama-city-office-space-commericial/mpinnwp7hwVWoUfqQhLwXx",
+      "thumb": ""
     },
     {
       "id": "cl-8003977980",
@@ -878,21 +878,6 @@
       "thumb": "https://images.craigslist.org/00p0p_iAqtpDD0sjx_0jm0pO_50x50c.jpg"
     },
     {
-      "id": "cl-8004531678",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "OFFICE SPACE/ COMMERICIAL FOR LEASE- W. HIGH TRAFFIC.  Arleta/ Woodman",
-      "hood": null,
-      "price": 925,
-      "period": "monthly",
-      "sqft": 300,
-      "lat": 34.233003,
-      "lng": -118.438212,
-      "postedDate": 1795304451,
-      "url": "https://www.craigslist.org/view/d/panorama-city-office-space-commericial/mpinnwp7hwVWoUfqQhLwXx",
-      "thumb": ""
-    },
-    {
       "id": "cl-8002868016",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -908,36 +893,6 @@
       "thumb": "https://images.craigslist.org/00r0r_MA2iHXoUSE_0jl0la_50x50c.jpg"
     },
     {
-      "id": "cl-8000315736",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Retail Storage Office Flex Space  Outlet Cheap space Commercial HP",
-      "hood": null,
-      "price": 999,
-      "period": "monthly",
-      "sqft": 675,
-      "lat": 33.989077,
-      "lng": -118.202568,
-      "postedDate": 1794617172,
-      "url": "https://www.craigslist.org/view/d/maywood-retail-storage-office-flex/ieTGZB2oMxpdNpFYUqFmur",
-      "thumb": "https://images.craigslist.org/00L0L_gmHUdCTDgS1_0lN0CI_50x50c.jpg"
-    },
-    {
-      "id": "cl-8005605051",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Shared Open Plan office in Inglewood",
-      "hood": null,
-      "price": 1000,
-      "period": "monthly",
-      "sqft": 300,
-      "lat": 33.955001,
-      "lng": -118.355594,
-      "postedDate": 1795492155,
-      "url": "https://www.craigslist.org/view/d/inglewood-shared-open-plan-office-in/fTK4JZyuZ3C3UmnT5xHVMu",
-      "thumb": "https://images.craigslist.org/00M0M_2qIINVs3G6W_07K0ak_50x50c.jpg"
-    },
-    {
       "id": "cl-8003756052",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -951,6 +906,21 @@
       "postedDate": 1795193218,
       "url": "https://www.craigslist.org/view/d/tujunga-office-space-for-rent-utilities/btgxA5XRkpHr3mDdVVUBix",
       "thumb": "https://images.craigslist.org/00505_3Nf2GHxeF5N_0t20CI_50x50c.jpg"
+    },
+    {
+      "id": "cl-8000315736",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Retail Storage Office Flex Space  Outlet Cheap space Commercial HP",
+      "hood": null,
+      "price": 999,
+      "period": "monthly",
+      "sqft": 675,
+      "lat": 33.989077,
+      "lng": -118.202568,
+      "postedDate": 1794617172,
+      "url": "https://www.craigslist.org/view/d/maywood-retail-storage-office-flex/ieTGZB2oMxpdNpFYUqFmur",
+      "thumb": "https://images.craigslist.org/00L0L_gmHUdCTDgS1_0lN0CI_50x50c.jpg"
     },
     {
       "id": "cl-7999797426",
@@ -983,6 +953,21 @@
       "thumb": "https://images.craigslist.org/00t0t_b7pscEP0NWK_0kE0fu_50x50c.jpg"
     },
     {
+      "id": "cl-8005605051",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Shared Open Plan office in Inglewood",
+      "hood": null,
+      "price": 1000,
+      "period": "monthly",
+      "sqft": 300,
+      "lat": 33.955001,
+      "lng": -118.355594,
+      "postedDate": 1795492155,
+      "url": "https://www.craigslist.org/view/d/inglewood-shared-open-plan-office-in/fTK4JZyuZ3C3UmnT5xHVMu",
+      "thumb": "https://images.craigslist.org/00M0M_2qIINVs3G6W_07K0ak_50x50c.jpg"
+    },
+    {
       "id": "cl-7998624318",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -998,21 +983,6 @@
       "thumb": "https://images.craigslist.org/00k0k_bERmd4SD600_0CI0t2_50x50c.jpg"
     },
     {
-      "id": "cl-7998738846",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Private Beauty Room for Rent – Encino",
-      "hood": null,
-      "price": 1150,
-      "period": "monthly",
-      "sqft": 200,
-      "lat": 34.166399,
-      "lng": -118.529695,
-      "postedDate": 1794374976,
-      "url": "https://www.craigslist.org/view/d/encino-private-beauty-room-for-rent/uKaSZYZDNKLZrRuEnVci6C",
-      "thumb": "https://images.craigslist.org/00y0y_altgoowbk7p_0lM0CI_50x50c.jpg"
-    },
-    {
       "id": "cl-7999799577",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -1026,6 +996,21 @@
       "postedDate": 1794537877,
       "url": "https://www.craigslist.org/view/d/mission-hills-general-office-space/ma7YsiNNNDSx5tWMBEbSXe",
       "thumb": "https://images.craigslist.org/00c0c_4yB0u7pdCbd_0ak07K_50x50c.jpg"
+    },
+    {
+      "id": "cl-7998738846",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Private Beauty Room for Rent – Encino",
+      "hood": null,
+      "price": 1150,
+      "period": "monthly",
+      "sqft": 200,
+      "lat": 34.166399,
+      "lng": -118.529695,
+      "postedDate": 1794374976,
+      "url": "https://www.craigslist.org/view/d/encino-private-beauty-room-for-rent/uKaSZYZDNKLZrRuEnVci6C",
+      "thumb": "https://images.craigslist.org/00y0y_altgoowbk7p_0lM0CI_50x50c.jpg"
     },
     {
       "id": "cl-7991600472",
@@ -1058,21 +1043,6 @@
       "thumb": "https://images.craigslist.org/01717_5xTjqGWTEyM_0CI0sR_50x50c.jpg"
     },
     {
-      "id": "cl-7998655065",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "BEAUTIFUL SMALL OFFICE FOR RENT IN HISTORIC BUILDING",
-      "hood": null,
-      "price": 1200,
-      "period": "monthly",
-      "sqft": 95,
-      "lat": 34.074724,
-      "lng": -118.323902,
-      "postedDate": 1794357123,
-      "url": "https://www.craigslist.org/view/d/los-angeles-beautiful-small-office-for/9mUCiU4BexrQ6rUb1NZjQg",
-      "thumb": "https://images.craigslist.org/01717_eyQnLTG3Klw_0CI0t2_50x50c.jpg"
-    },
-    {
       "id": "cl-7989987069",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -1086,66 +1056,6 @@
       "postedDate": 1793013247,
       "url": "https://www.craigslist.org/view/d/glendale-sublease-opportunity-cell/5S9a1t2c1Hmi9FeieNy28k",
       "thumb": "https://images.craigslist.org/01616_97ThXsZnNvx_0CI0C7_50x50c.jpg"
-    },
-    {
-      "id": "cl-8005621896",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "🌿 Join Our Collective – Private Suite + Rent price REDUCED!",
-      "hood": null,
-      "price": 1200,
-      "period": "monthly",
-      "sqft": 225,
-      "lat": 33.988281,
-      "lng": -118.397668,
-      "postedDate": 1795497060,
-      "url": "https://www.craigslist.org/view/d/culver-city-join-our-collective-private/6Ge2Br5ehVajgXyzPKj4m1",
-      "thumb": "https://images.craigslist.org/00u0u_fD1qsChuxdT_0kO0es_50x50c.jpg"
-    },
-    {
-      "id": "cl-7993712277",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "✨ PRIVATE BEAUTY & WELLNESS ROOMS FOR RENT — CULVER CITY ✨",
-      "hood": null,
-      "price": 1200,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.002912,
-      "lng": -118.407114,
-      "postedDate": 1793574778,
-      "url": "https://www.craigslist.org/view/d/culver-city-private-beauty-wellness/eQc66xbUzSjXameVYofihv",
-      "thumb": "https://images.craigslist.org/00g0g_j5Z8QpN7x3t_0g80c6_50x50c.jpg"
-    },
-    {
-      "id": "cl-7994140023",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Quiet Therapy Offices in Beautiful Wellness Complex in Pasadena",
-      "hood": null,
-      "price": 1200,
-      "period": "monthly",
-      "sqft": 175,
-      "lat": 34.140707,
-      "lng": -118.145902,
-      "postedDate": 1793648444,
-      "url": "https://www.craigslist.org/view/d/pasadena-quiet-therapy-offices-in/q9E8VPP3yEcR6qAcA9qgTX",
-      "thumb": "https://images.craigslist.org/00101_67x94YwqYCX_0x20m2_50x50c.jpg"
-    },
-    {
-      "id": "cl-8005056309",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "$1,200 Office in Santa Monica (near Main St)",
-      "hood": null,
-      "price": 1200,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.002081,
-      "lng": -118.481197,
-      "postedDate": 1795406967,
-      "url": "https://www.craigslist.org/view/d/santa-monica-1200-office-in-santa/14FFEN3Zog3fXD3ZK3Ls3G",
-      "thumb": ""
     },
     {
       "id": "cl-8004956409",
@@ -1163,6 +1073,81 @@
       "thumb": "https://images.craigslist.org/00C0C_7FCO47F5Usc_0xO0j1_50x50c.jpg"
     },
     {
+      "id": "cl-7994140023",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Quiet Therapy Offices in Beautiful Wellness Complex in Pasadena",
+      "hood": null,
+      "price": 1200,
+      "period": "monthly",
+      "sqft": 175,
+      "lat": 34.140707,
+      "lng": -118.145902,
+      "postedDate": 1793648444,
+      "url": "https://www.craigslist.org/view/d/pasadena-quiet-therapy-offices-in/q9E8VPP3yEcR6qAcA9qgTX",
+      "thumb": "https://images.craigslist.org/00101_67x94YwqYCX_0x20m2_50x50c.jpg"
+    },
+    {
+      "id": "cl-7993712277",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "✨ PRIVATE BEAUTY & WELLNESS ROOMS FOR RENT — CULVER CITY ✨",
+      "hood": null,
+      "price": 1200,
+      "period": "monthly",
+      "sqft": null,
+      "lat": 34.002912,
+      "lng": -118.407114,
+      "postedDate": 1793574778,
+      "url": "https://www.craigslist.org/view/d/culver-city-private-beauty-wellness/eQc66xbUzSjXameVYofihv",
+      "thumb": "https://images.craigslist.org/00g0g_j5Z8QpN7x3t_0g80c6_50x50c.jpg"
+    },
+    {
+      "id": "cl-8005056309",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "$1,200 Office in Santa Monica (near Main St)",
+      "hood": null,
+      "price": 1200,
+      "period": "monthly",
+      "sqft": null,
+      "lat": 34.002081,
+      "lng": -118.481197,
+      "postedDate": 1795406967,
+      "url": "https://www.craigslist.org/view/d/santa-monica-1200-office-in-santa/14FFEN3Zog3fXD3ZK3Ls3G",
+      "thumb": ""
+    },
+    {
+      "id": "cl-7998655065",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "BEAUTIFUL SMALL OFFICE FOR RENT IN HISTORIC BUILDING",
+      "hood": null,
+      "price": 1200,
+      "period": "monthly",
+      "sqft": 95,
+      "lat": 34.074724,
+      "lng": -118.323902,
+      "postedDate": 1794357123,
+      "url": "https://www.craigslist.org/view/d/los-angeles-beautiful-small-office-for/9mUCiU4BexrQ6rUb1NZjQg",
+      "thumb": "https://images.craigslist.org/01717_eyQnLTG3Klw_0CI0t2_50x50c.jpg"
+    },
+    {
+      "id": "cl-8005621896",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "🌿 Join Our Collective – Private Suite + Rent price REDUCED!",
+      "hood": null,
+      "price": 1200,
+      "period": "monthly",
+      "sqft": 225,
+      "lat": 33.988281,
+      "lng": -118.397668,
+      "postedDate": 1795497060,
+      "url": "https://www.craigslist.org/view/d/culver-city-join-our-collective-private/6Ge2Br5ehVajgXyzPKj4m1",
+      "thumb": "https://images.craigslist.org/00u0u_fD1qsChuxdT_0kO0es_50x50c.jpg"
+    },
+    {
       "id": "cl-7990946298",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -1176,6 +1161,21 @@
       "postedDate": 1793135202,
       "url": "https://www.craigslist.org/view/d/sherman-oaks-sherman-oaks-office-space/4DFzssCkApivZedQsJY7ok",
       "thumb": "https://images.craigslist.org/00K0K_gYeYOPSQ4ky_0gw078_50x50c.jpg"
+    },
+    {
+      "id": "cl-7995385299",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "650 S Grand St Los Angeles multiple office,studio,fashion suites,",
+      "hood": null,
+      "price": 1300,
+      "period": "monthly",
+      "sqft": 1000,
+      "lat": 34.073604,
+      "lng": -118.204893,
+      "postedDate": 1793834237,
+      "url": "https://www.craigslist.org/view/d/los-angeles-650-grand-st-los-angeles/wKYV9bKLhhxeGCi6XJXhWH",
+      "thumb": "https://images.craigslist.org/00j0j_KY2P6RkD8K_0800ak_50x50c.jpg"
     },
     {
       "id": "cl-8001920346",
@@ -1223,19 +1223,19 @@
       "thumb": "https://images.craigslist.org/00n0n_gQDMF6vtz1N_0ew0aT_50x50c.jpg"
     },
     {
-      "id": "cl-7995385299",
+      "id": "cl-7997498277",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "650 S Grand St Los Angeles multiple office,studio,fashion suites,",
+      "title": "For Lease, a lucrative mall space in South El Monte",
       "hood": null,
       "price": 1300,
       "period": "monthly",
-      "sqft": 1000,
-      "lat": 34.073604,
-      "lng": -118.204893,
-      "postedDate": 1793834237,
-      "url": "https://www.craigslist.org/view/d/los-angeles-650-grand-st-los-angeles/wKYV9bKLhhxeGCi6XJXhWH",
-      "thumb": "https://images.craigslist.org/00j0j_KY2P6RkD8K_0800ak_50x50c.jpg"
+      "sqft": 700,
+      "lat": 34.062709,
+      "lng": -118.065402,
+      "postedDate": 1794179334,
+      "url": "https://www.craigslist.org/view/d/rosemead-for-lease-lucrative-mall-space/rAJ4S6F9ZWdhs5PsKWvEUa",
+      "thumb": "https://images.craigslist.org/00r0r_8tMFUl6KiaP_06c048_50x50c.jpg"
     },
     {
       "id": "cl-7990834089",
@@ -1253,21 +1253,6 @@
       "thumb": "https://images.craigslist.org/00P0P_3Rm7gEJ0h9y_0CI0hp_50x50c.jpg"
     },
     {
-      "id": "cl-7997498277",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "For Lease, a lucrative mall space in South El Monte",
-      "hood": null,
-      "price": 1300,
-      "period": "monthly",
-      "sqft": 700,
-      "lat": 34.062709,
-      "lng": -118.065402,
-      "postedDate": 1794179334,
-      "url": "https://www.craigslist.org/view/d/rosemead-for-lease-lucrative-mall-space/rAJ4S6F9ZWdhs5PsKWvEUa",
-      "thumb": "https://images.craigslist.org/00r0r_8tMFUl6KiaP_06c048_50x50c.jpg"
-    },
-    {
       "id": "cl-8004824673",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -1283,19 +1268,34 @@
       "thumb": "https://images.craigslist.org/01212_irHrEnXWofd_03u02k_50x50c.jpg"
     },
     {
-      "id": "cl-7993560006",
+      "id": "cl-7999128123",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "COMMERCIAL OFFICE SPACE AVAILABLE",
+      "title": "$1 / 2800 ft - $1 / 2800ft - Turnkey Salon / Barber / Beauty Studio DT",
       "hood": null,
-      "price": 1320,
+      "price": 1378,
       "period": "monthly",
-      "sqft": 480,
-      "lat": 34.147418,
-      "lng": -118.612545,
-      "postedDate": 1793556944,
-      "url": "https://www.craigslist.org/view/d/woodland-hills-commercial-office-space/4i4Y2cRJPjCfb9fEURsqvT",
-      "thumb": "https://images.craigslist.org/00p0p_l33ruzHtNne_0CI0t2_50x50c.jpg"
+      "sqft": 1148,
+      "lat": 34.051624,
+      "lng": -118.274547,
+      "postedDate": 1794434810,
+      "url": "https://www.craigslist.org/view/d/los-angeles-ft-ft-turnkey-salon-barber/qNsyebn49f9XtYT9fDmJ6m",
+      "thumb": "https://images.craigslist.org/00a0a_51937PQcK9w_0i20pr_50x50c.jpg"
+    },
+    {
+      "id": "cl-7993974600",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Beautiful 455 Sq. Ft. Office Space for Rent – Downtown LA Jewelry Dist",
+      "hood": null,
+      "price": 1350,
+      "period": "monthly",
+      "sqft": 455,
+      "lat": 34.045921,
+      "lng": -118.254493,
+      "postedDate": 1793635625,
+      "url": "https://www.craigslist.org/view/d/los-angeles-beautiful-455-sq-ft-office/gwyidYH2xb3zn6gyqG3bLK",
+      "thumb": "https://images.craigslist.org/00X0X_HRVSodNpUv_0CI0t2_50x50c.jpg"
     },
     {
       "id": "cl-7998626727",
@@ -1313,6 +1313,21 @@
       "thumb": "https://images.craigslist.org/00w0w_b0LQ16qzLLT_0ax04n_50x50c.jpg"
     },
     {
+      "id": "cl-7993560006",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "COMMERCIAL OFFICE SPACE AVAILABLE",
+      "hood": null,
+      "price": 1320,
+      "period": "monthly",
+      "sqft": 480,
+      "lat": 34.147418,
+      "lng": -118.612545,
+      "postedDate": 1793556944,
+      "url": "https://www.craigslist.org/view/d/woodland-hills-commercial-office-space/4i4Y2cRJPjCfb9fEURsqvT",
+      "thumb": "https://images.craigslist.org/00p0p_l33ruzHtNne_0CI0t2_50x50c.jpg"
+    },
+    {
       "id": "cl-7995422829",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -1326,21 +1341,6 @@
       "postedDate": 1793839341,
       "url": "https://www.craigslist.org/view/d/los-angeles-office-space-in-film/gGDKKiEXnVSSDYyieNxCW1",
       "thumb": "https://images.craigslist.org/00S0S_hqsfE9Xz10L_0CI0t2_50x50c.jpg"
-    },
-    {
-      "id": "cl-7993974600",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Beautiful 455 Sq. Ft. Office Space for Rent – Downtown LA Jewelry Dist",
-      "hood": null,
-      "price": 1350,
-      "period": "monthly",
-      "sqft": 455,
-      "lat": 34.045921,
-      "lng": -118.254493,
-      "postedDate": 1793635625,
-      "url": "https://www.craigslist.org/view/d/los-angeles-beautiful-455-sq-ft-office/gwyidYH2xb3zn6gyqG3bLK",
-      "thumb": "https://images.craigslist.org/00X0X_HRVSodNpUv_0CI0t2_50x50c.jpg"
     },
     {
       "id": "cl-8005592034",
@@ -1373,19 +1373,19 @@
       "thumb": "https://images.craigslist.org/00d0d_9Qbmw0Twv61_0hr08f_50x50c.jpg"
     },
     {
-      "id": "cl-7999128123",
+      "id": "cl-7993646535",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "$1 / 2800 ft - $1 / 2800ft - Turnkey Salon / Barber / Beauty Studio DT",
+      "title": "Venice office for lease",
       "hood": null,
-      "price": 1378,
+      "price": 1400,
       "period": "monthly",
-      "sqft": 1148,
-      "lat": 34.051624,
-      "lng": -118.274547,
-      "postedDate": 1794434810,
-      "url": "https://www.craigslist.org/view/d/los-angeles-ft-ft-turnkey-salon-barber/qNsyebn49f9XtYT9fDmJ6m",
-      "thumb": "https://images.craigslist.org/00a0a_51937PQcK9w_0i20pr_50x50c.jpg"
+      "sqft": 280,
+      "lat": 33.996245,
+      "lng": -118.47753,
+      "postedDate": 1793566325,
+      "url": "https://www.craigslist.org/view/d/venice-venice-office-for-lease/nLHuuihxrsYDSzjXDVCHEs",
+      "thumb": "https://images.craigslist.org/00n0n_2B8oGVWcvQD_07K0ak_50x50c.jpg"
     },
     {
       "id": "cl-7995265023",
@@ -1403,21 +1403,6 @@
       "thumb": "https://images.craigslist.org/00M0M_55HmqbyLSWf_0pO0jm_50x50c.jpg"
     },
     {
-      "id": "cl-7993646535",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Venice office for lease",
-      "hood": null,
-      "price": 1400,
-      "period": "monthly",
-      "sqft": 280,
-      "lat": 33.996245,
-      "lng": -118.47753,
-      "postedDate": 1793566325,
-      "url": "https://www.craigslist.org/view/d/venice-venice-office-for-lease/nLHuuihxrsYDSzjXDVCHEs",
-      "thumb": "https://images.craigslist.org/00n0n_2B8oGVWcvQD_07K0ak_50x50c.jpg"
-    },
-    {
       "id": "cl-7999053507",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -1431,21 +1416,6 @@
       "postedDate": 1794427696,
       "url": "https://www.craigslist.org/view/d/north-hollywood-new-rooms-pod-casts/cbSyFuWDEhyTDtzUaKWe3y",
       "thumb": "https://images.craigslist.org/00d0d_UNjplYh4uC_0mj0eS_50x50c.jpg"
-    },
-    {
-      "id": "cl-7994834730",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "PRIME MID-CITY OFFICE SPACE",
-      "hood": null,
-      "price": 1450,
-      "period": "monthly",
-      "sqft": 595,
-      "lat": 34.04031,
-      "lng": -118.347297,
-      "postedDate": 1793747605,
-      "url": "https://www.craigslist.org/view/d/los-angeles-prime-mid-city-office-space/cs3s1RKV9YaU7Ba9iLVUiF",
-      "thumb": "https://images.craigslist.org/00z0z_53M4SofGDMo_0oM0gw_50x50c.jpg"
     },
     {
       "id": "cl-8003893458",
@@ -1463,19 +1433,19 @@
       "thumb": "https://images.craigslist.org/00909_b49ECK5aA5G_0ew0aT_50x50c.jpg"
     },
     {
-      "id": "cl-7994684934",
+      "id": "cl-7994834730",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "Retail/Office/wholesale church",
+      "title": "PRIME MID-CITY OFFICE SPACE",
       "hood": null,
-      "price": 1499,
+      "price": 1450,
       "period": "monthly",
-      "sqft": null,
-      "lat": 33.960714,
-      "lng": -118.278208,
-      "postedDate": 1793733393,
-      "url": "https://www.craigslist.org/view/d/los-angeles-retail-office-wholesale/2F11m4d4xBHuHj22J2u3Kv",
-      "thumb": "https://images.craigslist.org/00G0G_idtRTA4NE5i_0pN0CI_50x50c.jpg"
+      "sqft": 595,
+      "lat": 34.04031,
+      "lng": -118.347297,
+      "postedDate": 1793747605,
+      "url": "https://www.craigslist.org/view/d/los-angeles-prime-mid-city-office-space/cs3s1RKV9YaU7Ba9iLVUiF",
+      "thumb": "https://images.craigslist.org/00z0z_53M4SofGDMo_0oM0gw_50x50c.jpg"
     },
     {
       "id": "cl-7994660004",
@@ -1493,49 +1463,19 @@
       "thumb": "https://images.craigslist.org/01515_cHAf3fR18Nf_0t20CI_50x50c.jpg"
     },
     {
-      "id": "cl-7990845351",
+      "id": "cl-7994684934",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "Creative Studio/ Office-Open Floor Plan, Private RestRoom,NaturalLight",
+      "title": "Retail/Office/wholesale church",
       "hood": null,
-      "price": 1595,
+      "price": 1499,
       "period": "monthly",
-      "sqft": 900,
-      "lat": 34.042711,
-      "lng": -118.223703,
-      "postedDate": 1793126319,
-      "url": "https://www.craigslist.org/view/d/los-angeles-creative-studio-office-open/pcpRZpMcShq28iA2Fw2Qom",
-      "thumb": "https://images.craigslist.org/00505_5kvDaU8tXDR_0CI0t2_50x50c.jpg"
-    },
-    {
-      "id": "cl-7994106372",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Private Office Space Available on Wilshire (Wilshire/Fairfax)",
-      "hood": null,
-      "price": 1560,
-      "period": "monthly",
-      "sqft": 560,
-      "lat": 34.06288,
-      "lng": -118.364186,
-      "postedDate": 1793645685,
-      "url": "https://www.craigslist.org/view/d/los-angeles-private-office-space/9Me49PQoHiQxng2zwsFiXn",
-      "thumb": ""
-    },
-    {
-      "id": "cl-7989867057",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Retail storefront available",
-      "hood": null,
-      "price": 1500,
-      "period": "monthly",
-      "sqft": 1500,
-      "lat": 34.0658,
-      "lng": -118.085296,
-      "postedDate": 1792972461,
-      "url": "https://www.craigslist.org/view/d/rosemead-retail-storefront-available/az7TKaQuVgz6hP5pdmGiv6",
-      "thumb": ""
+      "sqft": null,
+      "lat": 33.960714,
+      "lng": -118.278208,
+      "postedDate": 1793733393,
+      "url": "https://www.craigslist.org/view/d/los-angeles-retail-office-wholesale/2F11m4d4xBHuHj22J2u3Kv",
+      "thumb": "https://images.craigslist.org/00G0G_idtRTA4NE5i_0pN0CI_50x50c.jpg"
     },
     {
       "id": "cl-8005238265",
@@ -1553,19 +1493,19 @@
       "thumb": "https://images.craigslist.org/00R0R_frB1E5rPeOi_09G07g_50x50c.jpg"
     },
     {
-      "id": "cl-7993294806",
+      "id": "cl-7990845351",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "Store Front on Las Tunas",
+      "title": "Creative Studio/ Office-Open Floor Plan, Private RestRoom,NaturalLight",
       "hood": null,
-      "price": 1500,
+      "price": 1595,
       "period": "monthly",
-      "sqft": 1000,
-      "lat": 34.106986,
-      "lng": -118.059109,
-      "postedDate": 1793506087,
-      "url": "https://www.craigslist.org/view/d/temple-city-store-front-on-las-tunas/jeXyCykjnM6rBJTRj2uVMA",
-      "thumb": ""
+      "sqft": 900,
+      "lat": 34.042711,
+      "lng": -118.223703,
+      "postedDate": 1793126319,
+      "url": "https://www.craigslist.org/view/d/los-angeles-creative-studio-office-open/pcpRZpMcShq28iA2Fw2Qom",
+      "thumb": "https://images.craigslist.org/00505_5kvDaU8tXDR_0CI0t2_50x50c.jpg"
     },
     {
       "id": "cl-7998513273",
@@ -1583,6 +1523,21 @@
       "thumb": "https://images.craigslist.org/00x0x_3TBphlPvNIS_0ac0dg_50x50c.jpg"
     },
     {
+      "id": "cl-7994106372",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Private Office Space Available on Wilshire (Wilshire/Fairfax)",
+      "hood": null,
+      "price": 1560,
+      "period": "monthly",
+      "sqft": 560,
+      "lat": 34.06288,
+      "lng": -118.364186,
+      "postedDate": 1793645685,
+      "url": "https://www.craigslist.org/view/d/los-angeles-private-office-space/9Me49PQoHiQxng2zwsFiXn",
+      "thumb": ""
+    },
+    {
       "id": "cl-8005432251",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -1596,6 +1551,21 @@
       "postedDate": 1795468093,
       "url": "https://www.craigslist.org/view/d/san-pedro-commercial-unit-prime/1uPnATtYuG9LtRV1uTPGxp",
       "thumb": "https://images.craigslist.org/00D0D_erbSDmN1Dtn_0c604h_50x50c.jpg"
+    },
+    {
+      "id": "cl-7993294806",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Store Front on Las Tunas",
+      "hood": null,
+      "price": 1500,
+      "period": "monthly",
+      "sqft": 1000,
+      "lat": 34.106986,
+      "lng": -118.059109,
+      "postedDate": 1793506087,
+      "url": "https://www.craigslist.org/view/d/temple-city-store-front-on-las-tunas/jeXyCykjnM6rBJTRj2uVMA",
+      "thumb": ""
     },
     {
       "id": "cl-8003370480",
@@ -1628,36 +1598,6 @@
       "thumb": "https://images.craigslist.org/00z0z_lbtOKRzkgGO_0qe0t2_50x50c.jpg"
     },
     {
-      "id": "cl-7992005517",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "SUBLEASE Prime Medical Space Available",
-      "hood": null,
-      "price": 1750,
-      "period": "monthly",
-      "sqft": 250,
-      "lat": 34.067108,
-      "lng": -118.388734,
-      "postedDate": 1793300265,
-      "url": "https://www.craigslist.org/view/d/beverly-hills-sublease-prime-medical/voEFkAEy8FdE7WxcWW23ps",
-      "thumb": "https://images.craigslist.org/00t0t_9F857oO8vPT_0k00dl_50x50c.jpg"
-    },
-    {
-      "id": "cl-8001226002",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "$1,750 / 200 SF – Medical, Therapy & Wellness Office Near Cedars-Sinai",
-      "hood": null,
-      "price": 1750,
-      "period": "monthly",
-      "sqft": 200,
-      "lat": 34.076523,
-      "lng": -118.376604,
-      "postedDate": 1794783647,
-      "url": "https://www.craigslist.org/view/d/los-angeles-sf-medical-therapy-wellness/n3fCSHuHGqq3qa6SB56NZ3",
-      "thumb": "https://images.craigslist.org/00202_jdg8KLLhIrJ_0jm0jm_50x50c.jpg"
-    },
-    {
       "id": "cl-7991026527",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -1686,6 +1626,36 @@
       "postedDate": 1793379241,
       "url": "https://www.craigslist.org/view/d/inglewood-2nd-gen-deli-market-for-lease/rXmhMcVcqiFXrKUAiTtkxw",
       "thumb": "https://images.craigslist.org/00E0E_vJ0MpITEG2_0uI0ee_50x50c.jpg"
+    },
+    {
+      "id": "cl-8001226002",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "$1,750 / 200 SF – Medical, Therapy & Wellness Office Near Cedars-Sinai",
+      "hood": null,
+      "price": 1750,
+      "period": "monthly",
+      "sqft": 200,
+      "lat": 34.076523,
+      "lng": -118.376604,
+      "postedDate": 1794783647,
+      "url": "https://www.craigslist.org/view/d/los-angeles-sf-medical-therapy-wellness/n3fCSHuHGqq3qa6SB56NZ3",
+      "thumb": "https://images.craigslist.org/00202_jdg8KLLhIrJ_0jm0jm_50x50c.jpg"
+    },
+    {
+      "id": "cl-7992005517",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "SUBLEASE Prime Medical Space Available",
+      "hood": null,
+      "price": 1750,
+      "period": "monthly",
+      "sqft": 250,
+      "lat": 34.067108,
+      "lng": -118.388734,
+      "postedDate": 1793300265,
+      "url": "https://www.craigslist.org/view/d/beverly-hills-sublease-prime-medical/voEFkAEy8FdE7WxcWW23ps",
+      "thumb": "https://images.craigslist.org/00t0t_9F857oO8vPT_0k00dl_50x50c.jpg"
     },
     {
       "id": "cl-8004478899",
@@ -1748,21 +1718,6 @@
       "thumb": "https://images.craigslist.org/00T0T_bsyogmPkqL6_0hT0CI_50x50c.jpg"
     },
     {
-      "id": "cl-7994591850",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Commercial Retail / Creative Space for Lease – Highland Park",
-      "hood": null,
-      "price": 1850,
-      "period": "monthly",
-      "sqft": 500,
-      "lat": 34.114547,
-      "lng": -118.185345,
-      "postedDate": 1793725989,
-      "url": "https://www.craigslist.org/view/d/los-angeles-commercial-retail-creative/vTK4uyAARadQevve9q3zuX",
-      "thumb": ""
-    },
-    {
       "id": "cl-7996413672",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -1778,19 +1733,19 @@
       "thumb": "https://images.craigslist.org/00s0s_747Hu0TLZRS_0t20CI_50x50c.jpg"
     },
     {
-      "id": "cl-8003565354",
+      "id": "cl-7994591850",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "Van Nuys Meeting Hall for lease $1,850.00",
+      "title": "Commercial Retail / Creative Space for Lease – Highland Park",
       "hood": null,
       "price": 1850,
       "period": "monthly",
-      "sqft": 800,
-      "lat": 34.190704,
-      "lng": -118.448908,
-      "postedDate": 1795146740,
-      "url": "https://www.craigslist.org/view/d/van-nuys-van-nuys-meeting-hall-for/uwsPMySMiyjPdWmt3utVmq",
-      "thumb": "https://images.craigslist.org/00f0f_1x29J4P91BA_0CI0t2_50x50c.jpg"
+      "sqft": 500,
+      "lat": 34.114547,
+      "lng": -118.185345,
+      "postedDate": 1793725989,
+      "url": "https://www.craigslist.org/view/d/los-angeles-commercial-retail-creative/vTK4uyAARadQevve9q3zuX",
+      "thumb": ""
     },
     {
       "id": "cl-8003902749",
@@ -1808,34 +1763,19 @@
       "thumb": "https://images.craigslist.org/00z0z_jk66XuOKFZ4_0CI0t2_50x50c.jpg"
     },
     {
-      "id": "cl-7995407199",
+      "id": "cl-8003565354",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "1050 sqft industrial space available",
+      "title": "Van Nuys Meeting Hall for lease $1,850.00",
       "hood": null,
-      "price": 1965,
+      "price": 1850,
       "period": "monthly",
-      "sqft": 1050,
-      "lat": 34.213674,
-      "lng": -118.454823,
-      "postedDate": 1793837158,
-      "url": "https://www.craigslist.org/view/d/panorama-city-1050-sqft-industrial/uYB3jMy81TFeXq4JQhanyQ",
-      "thumb": "https://images.craigslist.org/00k0k_1AvWRAGze9_0ww0oo_50x50c.jpg"
-    },
-    {
-      "id": "cl-7994104311",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Private Office Space Available on Wilshire (Wilshire/Fairfax)",
-      "hood": null,
-      "price": 1975,
-      "period": "monthly",
-      "sqft": 655,
-      "lat": 34.062918,
-      "lng": -118.363818,
-      "postedDate": 1793645484,
-      "url": "https://www.craigslist.org/view/d/los-angeles-private-office-space/1kfAQhSMfX5NEusaWdL6qG",
-      "thumb": "https://images.craigslist.org/01212_4vebndBMSC5_07K0ak_50x50c.jpg"
+      "sqft": 800,
+      "lat": 34.190704,
+      "lng": -118.448908,
+      "postedDate": 1795146740,
+      "url": "https://www.craigslist.org/view/d/van-nuys-van-nuys-meeting-hall-for/uwsPMySMiyjPdWmt3utVmq",
+      "thumb": "https://images.craigslist.org/00f0f_1x29J4P91BA_0CI0t2_50x50c.jpg"
     },
     {
       "id": "cl-8004109881",
@@ -1853,19 +1793,49 @@
       "thumb": "https://images.craigslist.org/00k0k_ajZaejsbxVg_0jm0aT_50x50c.jpg"
     },
     {
-      "id": "cl-8005236633",
+      "id": "cl-7995407199",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "Ready Retail Office Space In Prime Westlake Location",
+      "title": "1050 sqft industrial space available",
+      "hood": null,
+      "price": 1965,
+      "period": "monthly",
+      "sqft": 1050,
+      "lat": 34.213674,
+      "lng": -118.454823,
+      "postedDate": 1793837158,
+      "url": "https://www.craigslist.org/view/d/panorama-city-1050-sqft-industrial/uYB3jMy81TFeXq4JQhanyQ",
+      "thumb": "https://images.craigslist.org/00k0k_1AvWRAGze9_0ww0oo_50x50c.jpg"
+    },
+    {
+      "id": "cl-8006331744",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Office facing Foothill Blvd at a prime location",
       "hood": null,
       "price": 1995,
       "period": "monthly",
-      "sqft": 1189,
-      "lat": 34.062733,
-      "lng": -118.271774,
-      "postedDate": 1795452094,
-      "url": "https://www.craigslist.org/view/d/los-angeles-ready-retail-office-space/kBJQkrpvHT8JJqN6Gan6M6",
-      "thumb": "https://images.craigslist.org/00m0m_lVw8OiLiRte_09G07g_50x50c.jpg"
+      "sqft": 1250,
+      "lat": 34.150904,
+      "lng": -118.021953,
+      "postedDate": 1795627345,
+      "url": "https://www.craigslist.org/view/d/arcadia-office-facing-foothill-blvd-at/gwDjqbBym1J6td85xiYq1o",
+      "thumb": "https://images.craigslist.org/00M0M_4Ny7so6IBPq_0CI0pO_50x50c.jpg"
+    },
+    {
+      "id": "cl-7994104311",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Private Office Space Available on Wilshire (Wilshire/Fairfax)",
+      "hood": null,
+      "price": 1975,
+      "period": "monthly",
+      "sqft": 655,
+      "lat": 34.062918,
+      "lng": -118.363818,
+      "postedDate": 1793645484,
+      "url": "https://www.craigslist.org/view/d/los-angeles-private-office-space/1kfAQhSMfX5NEusaWdL6qG",
+      "thumb": "https://images.craigslist.org/01212_4vebndBMSC5_07K0ak_50x50c.jpg"
     },
     {
       "id": "cl-7990287054",
@@ -1881,6 +1851,21 @@
       "postedDate": 1793042078,
       "url": "https://www.craigslist.org/view/d/el-monte-retail-office-commercial-space/3FQcJgk6ts1jt266n1A1Vn",
       "thumb": "https://images.craigslist.org/00G0G_fPQAKx3QpL7_0qY0fb_50x50c.jpg"
+    },
+    {
+      "id": "cl-8005236633",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Ready Retail Office Space In Prime Westlake Location",
+      "hood": null,
+      "price": 1995,
+      "period": "monthly",
+      "sqft": 1189,
+      "lat": 34.062733,
+      "lng": -118.271774,
+      "postedDate": 1795452094,
+      "url": "https://www.craigslist.org/view/d/los-angeles-ready-retail-office-space/kBJQkrpvHT8JJqN6Gan6M6",
+      "thumb": "https://images.craigslist.org/00m0m_lVw8OiLiRte_09G07g_50x50c.jpg"
     },
     {
       "id": "cl-7990170252",
@@ -1943,19 +1928,19 @@
       "thumb": "https://images.craigslist.org/00K0K_2yDA9IM8H9B_0CI0lC_50x50c.jpg"
     },
     {
-      "id": "cl-8005926240",
+      "id": "cl-7996247457",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "2398 - City of Industry Warehouse | 670-8,157 sq ft | Flexible Term",
+      "title": "Small office or Retail space For Lease La Crescenta storefront",
       "hood": null,
-      "price": 2003,
+      "price": 2000,
       "period": "monthly",
-      "sqft": 670,
-      "lat": 33.981799,
-      "lng": -117.896906,
-      "postedDate": 1795550621,
-      "url": "https://www.craigslist.org/view/d/rowland-heights-city-of-industry/7C6nkDqfj5iH8EaP9JP967",
-      "thumb": "https://images.craigslist.org/00i0i_6mYvMWqxGfC_0c507k_50x50c.jpg"
+      "sqft": 500,
+      "lat": 34.212776,
+      "lng": -118.242322,
+      "postedDate": 1793983755,
+      "url": "https://www.craigslist.org/view/d/verdugo-city-small-office-or-retail/vBgZmwn8k6gaDNiBbhCLa8",
+      "thumb": "https://images.craigslist.org/01111_c6Q4FRYCCgI_0x20oM_50x50c.jpg"
     },
     {
       "id": "cl-7997789829",
@@ -1973,6 +1958,21 @@
       "thumb": ""
     },
     {
+      "id": "cl-8005926240",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "2398 - City of Industry Warehouse | 670-8,157 sq ft | Flexible Term",
+      "hood": null,
+      "price": 2003,
+      "period": "monthly",
+      "sqft": 670,
+      "lat": 33.981799,
+      "lng": -117.896906,
+      "postedDate": 1795550621,
+      "url": "https://www.craigslist.org/view/d/rowland-heights-city-of-industry/7C6nkDqfj5iH8EaP9JP967",
+      "thumb": "https://images.craigslist.org/00i0i_6mYvMWqxGfC_0c507k_50x50c.jpg"
+    },
+    {
       "id": "cl-8002275090",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -1988,21 +1988,6 @@
       "thumb": ""
     },
     {
-      "id": "cl-7995187371",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Ground-Level Studio - Concrete Floors + Utilities Included",
-      "hood": null,
-      "price": 2200,
-      "period": "monthly",
-      "sqft": 1053,
-      "lat": 34.083336,
-      "lng": -118.214783,
-      "postedDate": 1793815455,
-      "url": "https://www.craigslist.org/view/d/los-angeles-ground-level-studio/6D1HL2vLQ5WfeFAa6S8cgh",
-      "thumb": "https://images.craigslist.org/00I0I_i3J4BK7Ryfm_0CI0lM_50x50c.jpg"
-    },
-    {
       "id": "cl-7990858797",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -2016,6 +2001,21 @@
       "postedDate": 1793127333,
       "url": "https://www.craigslist.org/view/d/chatsworth-commercial-unit-roll-up/4LJybVDKNDJ5k2eqyb6syU",
       "thumb": ""
+    },
+    {
+      "id": "cl-7991533938",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Frogtown Creative Office / Retail - Bright Corner Storefront",
+      "hood": null,
+      "price": 2200,
+      "period": "monthly",
+      "sqft": 486,
+      "lat": 34.096293,
+      "lng": -118.242377,
+      "postedDate": 1793222508,
+      "url": "https://www.craigslist.org/view/d/los-angeles-frogtown-creative-office/gU36er5kjw3P6YqiATg67j",
+      "thumb": "https://images.craigslist.org/00909_9XKCcvw7GzD_07c05n_50x50c.jpg"
     },
     {
       "id": "cl-7998199011",
@@ -2061,6 +2061,21 @@
       "postedDate": 1793221646,
       "url": "https://www.craigslist.org/view/d/palmdale-flex-semi-industrial-warehouse/8EkQfHWueyAS891jrqFDzn",
       "thumb": "https://images.craigslist.org/00909_Sd1RfJ8tHW_0gw075_50x50c.jpg"
+    },
+    {
+      "id": "cl-7995187371",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Ground-Level Studio - Concrete Floors + Utilities Included",
+      "hood": null,
+      "price": 2200,
+      "period": "monthly",
+      "sqft": 1053,
+      "lat": 34.083336,
+      "lng": -118.214783,
+      "postedDate": 1793815455,
+      "url": "https://www.craigslist.org/view/d/los-angeles-ground-level-studio/6D1HL2vLQ5WfeFAa6S8cgh",
+      "thumb": "https://images.craigslist.org/00I0I_i3J4BK7Ryfm_0CI0lM_50x50c.jpg"
     },
     {
       "id": "cl-7993291680",
@@ -2138,34 +2153,19 @@
       "thumb": "https://images.craigslist.org/00t0t_g94IjU3tYgx_0fu0bC_50x50c.jpg"
     },
     {
-      "id": "cl-7990451271",
+      "id": "cl-7998636081",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "Historic Industrial Space in Downtown LA – Perfect for Creative Indust",
+      "title": "PRIME RETAIL / OFFICE",
       "hood": null,
-      "price": 2395,
+      "price": 2400,
       "period": "monthly",
-      "sqft": 1250,
-      "lat": 34.039876,
-      "lng": -118.275189,
-      "postedDate": 1793058798,
-      "url": "https://www.craigslist.org/view/d/los-angeles-historic-industrial-space/j6X4bnfduPWZYH9Pev4RhX",
-      "thumb": "https://images.craigslist.org/01616_8gomFuKVWPP_0t20t2_50x50c.jpg"
-    },
-    {
-      "id": "cl-7991533938",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Frogtown Creative Office / Retail - Bright Corner Storefront",
-      "hood": null,
-      "price": 2200,
-      "period": "monthly",
-      "sqft": 486,
-      "lat": 34.096293,
-      "lng": -118.242377,
-      "postedDate": 1793222508,
-      "url": "https://www.craigslist.org/view/d/los-angeles-frogtown-creative-office/gU36er5kjw3P6YqiATg67j",
-      "thumb": "https://images.craigslist.org/00909_9XKCcvw7GzD_07c05n_50x50c.jpg"
+      "sqft": 950,
+      "lat": 34.172501,
+      "lng": -118.553697,
+      "postedDate": 1794354708,
+      "url": "https://www.craigslist.org/view/d/tarzana-prime-retail-office/4V3roC8RVT5GE3nmhkubCe",
+      "thumb": ""
     },
     {
       "id": "cl-8003895009",
@@ -2183,21 +2183,6 @@
       "thumb": "https://images.craigslist.org/00505_bvxBjGDBWJr_0ew0aT_50x50c.jpg"
     },
     {
-      "id": "cl-7998636081",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "PRIME RETAIL / OFFICE",
-      "hood": null,
-      "price": 2400,
-      "period": "monthly",
-      "sqft": 950,
-      "lat": 34.172501,
-      "lng": -118.553697,
-      "postedDate": 1794354708,
-      "url": "https://www.craigslist.org/view/d/tarzana-prime-retail-office/4V3roC8RVT5GE3nmhkubCe",
-      "thumb": ""
-    },
-    {
       "id": "cl-8003339136",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -2211,36 +2196,6 @@
       "postedDate": 1795116965,
       "url": "https://www.craigslist.org/view/d/los-angeles-800-sq-ft-retail-space/v4tUC7CdzbS8sozvmCtxD3",
       "thumb": "https://images.craigslist.org/00x0x_koBXYVScPNF_0gg0cc_50x50c.jpg"
-    },
-    {
-      "id": "cl-8002949358",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Corner unit! Huge Open Office + Private Restroom + Large Warehouse",
-      "hood": null,
-      "price": 2434,
-      "period": "monthly",
-      "sqft": 1531,
-      "lat": 34.094552,
-      "lng": -117.772276,
-      "postedDate": 1795047074,
-      "url": "https://www.craigslist.org/view/d/pomona-corner-unit-huge-open-office/aum8FH2ixnXRCweiJptjiv",
-      "thumb": "https://images.craigslist.org/01717_6tmYq4Sh7qq_05a03h_50x50c.jpg"
-    },
-    {
-      "id": "cl-8001663177",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "1,746 sqft. Warehouse Space",
-      "hood": null,
-      "price": 2445,
-      "period": "monthly",
-      "sqft": 1746,
-      "lat": 34.117303,
-      "lng": -117.816883,
-      "postedDate": 1794858683,
-      "url": "https://www.craigslist.org/view/d/san-dimas-1746-sqft-warehouse-space/tucwbnjj9a6QWz2C1NvXWM",
-      "thumb": "https://images.craigslist.org/00x0x_9BHB1940NVy_0CI0t2_50x50c.jpg"
     },
     {
       "id": "cl-8004009084",
@@ -2273,19 +2228,34 @@
       "thumb": "https://images.craigslist.org/00m0m_iVGfiokKchT_0fu0bC_50x50c.jpg"
     },
     {
-      "id": "cl-8002154499",
+      "id": "cl-8002949358",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "Creative Office/Retail in Historic Seeley Building",
+      "title": "Corner unit! Huge Open Office + Private Restroom + Large Warehouse",
       "hood": null,
-      "price": 2495,
+      "price": 2434,
       "period": "monthly",
-      "sqft": 945,
-      "lat": 34.123775,
-      "lng": -118.25519,
-      "postedDate": 1794938313,
-      "url": "https://www.craigslist.org/view/d/los-angeles-creative-office-retail-in/kPfRQrZe8EWAn3nPLwKNHr",
-      "thumb": ""
+      "sqft": 1531,
+      "lat": 34.094552,
+      "lng": -117.772276,
+      "postedDate": 1795047074,
+      "url": "https://www.craigslist.org/view/d/pomona-corner-unit-huge-open-office/aum8FH2ixnXRCweiJptjiv",
+      "thumb": "https://images.craigslist.org/01717_6tmYq4Sh7qq_05a03h_50x50c.jpg"
+    },
+    {
+      "id": "cl-8001663177",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "1,746 sqft. Warehouse Space",
+      "hood": null,
+      "price": 2445,
+      "period": "monthly",
+      "sqft": 1746,
+      "lat": 34.117303,
+      "lng": -117.816883,
+      "postedDate": 1794858683,
+      "url": "https://www.craigslist.org/view/d/san-dimas-1746-sqft-warehouse-space/tucwbnjj9a6QWz2C1NvXWM",
+      "thumb": "https://images.craigslist.org/00x0x_9BHB1940NVy_0CI0t2_50x50c.jpg"
     },
     {
       "id": "cl-7991523918",
@@ -2318,6 +2288,21 @@
       "thumb": ""
     },
     {
+      "id": "cl-8002154499",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Creative Office/Retail in Historic Seeley Building",
+      "hood": null,
+      "price": 2495,
+      "period": "monthly",
+      "sqft": 945,
+      "lat": 34.123775,
+      "lng": -118.25519,
+      "postedDate": 1794938313,
+      "url": "https://www.craigslist.org/view/d/los-angeles-creative-office-retail-in/kPfRQrZe8EWAn3nPLwKNHr",
+      "thumb": ""
+    },
+    {
       "id": "cl-7991023743",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -2333,34 +2318,19 @@
       "thumb": "https://images.craigslist.org/00F0F_8CuUVeiaPuK_0t20CI_50x50c.jpg"
     },
     {
-      "id": "cl-7996906974",
+      "id": "cl-7999800549",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "CHURCH FOR RENT-IGLESIA DE RENTA*SPECIAL MOVE-IN***NO DEPOSIT***",
+      "title": "900 Sq Ft Commercial Storage / Flex Space - Roll-Up Door, Offic",
       "hood": null,
       "price": 2500,
       "period": "monthly",
-      "sqft": 6000,
-      "lat": 34.040112,
-      "lng": -118.29266,
-      "postedDate": 1794078015,
-      "url": "https://www.craigslist.org/view/d/los-angeles-church-for-rent-iglesia-de/5tfr79gXgE7nA9Q7itsUzS",
-      "thumb": "https://images.craigslist.org/01717_jQsQL5WJCw7_0CI0lM_50x50c.jpg"
-    },
-    {
-      "id": "cl-7996648581",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Lancaster Blvd Retail/Office/Medical Space for Lease: FREE MONTHS",
-      "hood": null,
-      "price": 2500,
-      "period": "monthly",
-      "sqft": 2080,
-      "lat": 34.69818,
-      "lng": -118.137902,
-      "postedDate": 1794032232,
-      "url": "https://www.craigslist.org/view/d/lancaster-lancaster-blvd-retail-office/dj3XCb2TVYkTu8DME4hCDd",
-      "thumb": "https://images.craigslist.org/00000_hNw5zsR2bW8_0dX0cD_50x50c.jpg"
+      "sqft": 900,
+      "lat": 33.930791,
+      "lng": -118.220001,
+      "postedDate": 1794538124,
+      "url": "https://www.craigslist.org/view/d/lynwood-900-sq-ft-commercial-storage/efYxWpqoJDKK4sJMDuPguM",
+      "thumb": ""
     },
     {
       "id": "cl-8000240379",
@@ -2378,19 +2348,49 @@
       "thumb": "https://images.craigslist.org/00A0A_63jaZBfmGMi_0CI0pO_50x50c.jpg"
     },
     {
-      "id": "cl-7999800549",
+      "id": "cl-7996648581",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "900 Sq Ft Commercial Storage / Flex Space - Roll-Up Door, Offic",
+      "title": "Lancaster Blvd Retail/Office/Medical Space for Lease: FREE MONTHS",
       "hood": null,
       "price": 2500,
       "period": "monthly",
-      "sqft": 900,
-      "lat": 33.930791,
-      "lng": -118.220001,
-      "postedDate": 1794538124,
-      "url": "https://www.craigslist.org/view/d/lynwood-900-sq-ft-commercial-storage/efYxWpqoJDKK4sJMDuPguM",
-      "thumb": ""
+      "sqft": 2080,
+      "lat": 34.69818,
+      "lng": -118.137902,
+      "postedDate": 1794032232,
+      "url": "https://www.craigslist.org/view/d/lancaster-lancaster-blvd-retail-office/dj3XCb2TVYkTu8DME4hCDd",
+      "thumb": "https://images.craigslist.org/00000_hNw5zsR2bW8_0dX0cD_50x50c.jpg"
+    },
+    {
+      "id": "cl-7996906974",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "CHURCH FOR RENT-IGLESIA DE RENTA*SPECIAL MOVE-IN***NO DEPOSIT***",
+      "hood": null,
+      "price": 2500,
+      "period": "monthly",
+      "sqft": 6000,
+      "lat": 34.040112,
+      "lng": -118.29266,
+      "postedDate": 1794078015,
+      "url": "https://www.craigslist.org/view/d/los-angeles-church-for-rent-iglesia-de/5tfr79gXgE7nA9Q7itsUzS",
+      "thumb": "https://images.craigslist.org/01717_jQsQL5WJCw7_0CI0lM_50x50c.jpg"
+    },
+    {
+      "id": "cl-8002269645",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Retail/Office Lease Opportunity",
+      "hood": null,
+      "price": 2500,
+      "period": "monthly",
+      "sqft": 1400,
+      "lat": 33.892781,
+      "lng": -118.1601,
+      "postedDate": 1794947835,
+      "url": "https://www.craigslist.org/view/d/paramount-retail-office-lease/o7n4JJWdrVZmz5JNTw8oGV",
+      "thumb": "https://images.craigslist.org/00t0t_7cfBy0XQk5Q_0CI0pM_50x50c.jpg"
     },
     {
       "id": "cl-8001655656",
@@ -2423,21 +2423,6 @@
       "thumb": ""
     },
     {
-      "id": "cl-8002269645",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Retail/Office Lease Opportunity",
-      "hood": null,
-      "price": 2500,
-      "period": "monthly",
-      "sqft": 1400,
-      "lat": 33.892781,
-      "lng": -118.1601,
-      "postedDate": 1794947835,
-      "url": "https://www.craigslist.org/view/d/paramount-retail-office-lease/o7n4JJWdrVZmz5JNTw8oGV",
-      "thumb": "https://images.craigslist.org/00t0t_7cfBy0XQk5Q_0CI0pM_50x50c.jpg"
-    },
-    {
       "id": "cl-8003500236",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -2451,21 +2436,6 @@
       "postedDate": 1795134440,
       "url": "https://www.craigslist.org/view/d/santa-monica-phillips-chapel-cme-church/rsSsuSYkNJdw2Ae56mVHB2",
       "thumb": "https://images.craigslist.org/00v0v_8LYpyhppACh_0CI0t2_50x50c.jpg"
-    },
-    {
-      "id": "cl-8004603834",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Commercial Space for Lease",
-      "hood": null,
-      "price": 2500,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 33.920843,
-      "lng": -118.18697,
-      "postedDate": 1795318796,
-      "url": "https://www.craigslist.org/view/d/lynwood-commercial-space-for-lease/2obQtiTd7pkdcck8Z8Sjrn",
-      "thumb": "https://images.craigslist.org/00X0X_2e1Q19QTbt6_0CI0t2_50x50c.jpg"
     },
     {
       "id": "cl-7993408935",
@@ -2498,6 +2468,21 @@
       "thumb": "https://images.craigslist.org/00S0S_6pZmIrd6H9g_0ji0b7_50x50c.jpg"
     },
     {
+      "id": "cl-8004603834",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Commercial Space for Lease",
+      "hood": null,
+      "price": 2500,
+      "period": "monthly",
+      "sqft": null,
+      "lat": 33.920843,
+      "lng": -118.18697,
+      "postedDate": 1795318796,
+      "url": "https://www.craigslist.org/view/d/lynwood-commercial-space-for-lease/2obQtiTd7pkdcck8Z8Sjrn",
+      "thumb": "https://images.craigslist.org/00X0X_2e1Q19QTbt6_0CI0t2_50x50c.jpg"
+    },
+    {
       "id": "cl-8000794701",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -2511,6 +2496,21 @@
       "postedDate": 1794700548,
       "url": "https://www.craigslist.org/view/d/los-angeles-store-retail-pacific-blvd/xpYfN13aJmAMfFrKYoZ8pV",
       "thumb": "https://images.craigslist.org/00X0X_hzBXpchU7AO_0lN0CI_50x50c.jpg"
+    },
+    {
+      "id": "cl-8003497884",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Creative offices and studio space for lease in Arcadia",
+      "hood": null,
+      "price": 2600,
+      "period": "monthly",
+      "sqft": 916,
+      "lat": 34.10155,
+      "lng": -118.008497,
+      "postedDate": 1795134060,
+      "url": "https://www.craigslist.org/view/d/el-monte-creative-offices-and-studio/bfA4mQKjLWPNcP1nKjdLzy",
+      "thumb": "https://images.craigslist.org/00E0E_akCvHZyrmFY_0go0cW_50x50c.jpg"
     },
     {
       "id": "cl-7997261544",
@@ -2541,21 +2541,6 @@
       "postedDate": 1794948401,
       "url": "https://www.craigslist.org/view/d/los-angeles-retail-storefront-available/mhTkBr4cm68RfUhRRxU8bL",
       "thumb": "https://images.craigslist.org/00T0T_irDGZFfu2ZP_0kE0bD_50x50c.jpg"
-    },
-    {
-      "id": "cl-8003497884",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Creative offices and studio space for lease in Arcadia",
-      "hood": null,
-      "price": 2600,
-      "period": "monthly",
-      "sqft": 916,
-      "lat": 34.10155,
-      "lng": -118.008497,
-      "postedDate": 1795134060,
-      "url": "https://www.craigslist.org/view/d/el-monte-creative-offices-and-studio/bfA4mQKjLWPNcP1nKjdLzy",
-      "thumb": "https://images.craigslist.org/00E0E_akCvHZyrmFY_0go0cW_50x50c.jpg"
     },
     {
       "id": "cl-7999682496",
@@ -2603,6 +2588,21 @@
       "thumb": "https://images.craigslist.org/00g0g_fll1DFxPSPq_0x20oM_50x50c.jpg"
     },
     {
+      "id": "cl-8005727352",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "2400 SQ. FT. FOR LEASE IN PALMDALE",
+      "hood": null,
+      "price": 2800,
+      "period": "monthly",
+      "sqft": 2400,
+      "lat": 34.568987,
+      "lng": -118.117384,
+      "postedDate": 1795532782,
+      "url": "https://www.craigslist.org/view/d/palmdale-2400-sq-ft-for-lease-in/uKif5YPfrvZJ7rQLo1zLSD",
+      "thumb": "https://images.craigslist.org/01515_iaWNyypxjb1_0uY0ne_50x50c.jpg"
+    },
+    {
       "id": "cl-7995444873",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -2631,21 +2631,6 @@
       "postedDate": 1793841151,
       "url": "https://www.craigslist.org/view/d/van-nuys-commercial-space-for-rent-van/9nPJcdjw3toBpnDneNPZG3",
       "thumb": "https://images.craigslist.org/01616_cEYndtFgMHr_0CI0t2_50x50c.jpg"
-    },
-    {
-      "id": "cl-8005727352",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "2400 SQ. FT. FOR LEASE IN PALMDALE",
-      "hood": null,
-      "price": 2800,
-      "period": "monthly",
-      "sqft": 2400,
-      "lat": 34.568987,
-      "lng": -118.117384,
-      "postedDate": 1795532782,
-      "url": "https://www.craigslist.org/view/d/palmdale-2400-sq-ft-for-lease-in/uKif5YPfrvZJ7rQLo1zLSD",
-      "thumb": "https://images.craigslist.org/01515_iaWNyypxjb1_0uY0ne_50x50c.jpg"
     },
     {
       "id": "cl-7990760472",
@@ -2693,36 +2678,6 @@
       "thumb": "https://images.craigslist.org/00K0K_1zpGzAZjc7i_0ne0hq_50x50c.jpg"
     },
     {
-      "id": "cl-7999623993",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Beach Office Steps From the Sand | 520 SF | AC + Parking",
-      "hood": null,
-      "price": 2900,
-      "period": "monthly",
-      "sqft": 520,
-      "lat": 33.958679,
-      "lng": -118.448607,
-      "postedDate": 1794515113,
-      "url": "https://www.craigslist.org/view/d/playa-del-rey-beach-office-steps-from/cTG2fHnEGdPUuM48KacEQ3",
-      "thumb": "https://images.craigslist.org/00S0S_f42KFrOSlzm_0CI0t2_50x50c.jpg"
-    },
-    {
-      "id": "cl-7990356660",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "RETAIL STOREFRONT FOR LEASE | 1,200 SF | $2,950 | KOREATOWN",
-      "hood": null,
-      "price": 2950,
-      "period": "monthly",
-      "sqft": 1200,
-      "lat": 34.047329,
-      "lng": -118.309108,
-      "postedDate": 1793048244,
-      "url": "https://www.craigslist.org/view/d/los-angeles-retail-storefront-for-lease/kPcGaR1xa7fKr5zMbcmunq",
-      "thumb": "https://images.craigslist.org/01515_4QVsmhf0ZeL_0gw0oM_50x50c.jpg"
-    },
-    {
       "id": "cl-8003453313",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -2753,6 +2708,36 @@
       "thumb": ""
     },
     {
+      "id": "cl-7990356660",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "RETAIL STOREFRONT FOR LEASE | 1,200 SF | $2,950 | KOREATOWN",
+      "hood": null,
+      "price": 2950,
+      "period": "monthly",
+      "sqft": 1200,
+      "lat": 34.047329,
+      "lng": -118.309108,
+      "postedDate": 1793048244,
+      "url": "https://www.craigslist.org/view/d/los-angeles-retail-storefront-for-lease/kPcGaR1xa7fKr5zMbcmunq",
+      "thumb": "https://images.craigslist.org/01515_4QVsmhf0ZeL_0gw0oM_50x50c.jpg"
+    },
+    {
+      "id": "cl-7999623993",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Beach Office Steps From the Sand | 520 SF | AC + Parking",
+      "hood": null,
+      "price": 2900,
+      "period": "monthly",
+      "sqft": 520,
+      "lat": 33.958679,
+      "lng": -118.448607,
+      "postedDate": 1794515113,
+      "url": "https://www.craigslist.org/view/d/playa-del-rey-beach-office-steps-from/cTG2fHnEGdPUuM48KacEQ3",
+      "thumb": "https://images.craigslist.org/00S0S_f42KFrOSlzm_0CI0t2_50x50c.jpg"
+    },
+    {
       "id": "cl-8000257083",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -2766,21 +2751,6 @@
       "postedDate": 1794609553,
       "url": "https://www.craigslist.org/view/d/west-covina-downtown-covina-officeall/amqep1kwWZim11dPxV8pvK",
       "thumb": "https://images.craigslist.org/01717_5xTjqGWTEyM_0CI0sR_50x50c.jpg"
-    },
-    {
-      "id": "cl-7992435852",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "3532 Broadway 2,160 SF of Retail Space Available in Los Angeles",
-      "hood": null,
-      "price": 3000,
-      "period": "monthly",
-      "sqft": 2160,
-      "lat": 34.073604,
-      "lng": -118.202912,
-      "postedDate": 1793376924,
-      "url": "https://www.craigslist.org/view/d/los-angeles-3532-broadway-2160-sf-of/8jT5nnXSWNqGgJkw9wHsmU",
-      "thumb": "https://images.craigslist.org/00m0m_3zui7Dr5eVu_0hw0nm_50x50c.jpg"
     },
     {
       "id": "cl-7990172022",
@@ -2798,6 +2768,21 @@
       "thumb": "https://images.craigslist.org/00c0c_bBmDlSKo12y_0CI0t2_50x50c.jpg"
     },
     {
+      "id": "cl-7992435852",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "3532 Broadway 2,160 SF of Retail Space Available in Los Angeles",
+      "hood": null,
+      "price": 3000,
+      "period": "monthly",
+      "sqft": 2160,
+      "lat": 34.073604,
+      "lng": -118.202912,
+      "postedDate": 1793376924,
+      "url": "https://www.craigslist.org/view/d/los-angeles-3532-broadway-2160-sf-of/8jT5nnXSWNqGgJkw9wHsmU",
+      "thumb": "https://images.craigslist.org/00m0m_3zui7Dr5eVu_0hw0nm_50x50c.jpg"
+    },
+    {
       "id": "cl-8000858901",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -2811,21 +2796,6 @@
       "postedDate": 1794712850,
       "url": "https://www.craigslist.org/view/d/los-angeles-boutique-retail-space-lots/n8eveg2wAVnJ7UZoJKGwRb",
       "thumb": "https://images.craigslist.org/00W0W_1eplBHh6Umu_0es0jh_50x50c.jpg"
-    },
-    {
-      "id": "cl-7989712176",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Studio City Office Space for Lease – Ventura Blvd (Prime Location)",
-      "hood": null,
-      "price": 3024,
-      "period": "monthly",
-      "sqft": 1008,
-      "lat": 34.140314,
-      "lng": -118.376781,
-      "postedDate": 1792952638,
-      "url": "https://www.craigslist.org/view/d/studio-city-studio-city-office-space/v6rdRBGNpmE5PThqUsyVwm",
-      "thumb": "https://images.craigslist.org/00n0n_1gSHaUVGa1n_0nm0hw_50x50c.jpg"
     },
     {
       "id": "cl-8004149940",
@@ -2903,19 +2873,19 @@
       "thumb": "https://images.craigslist.org/00w0w_bYb51ajAbqz_05a03u_50x50c.jpg"
     },
     {
-      "id": "cl-7994819943",
+      "id": "cl-7996361181",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "RETAIL CORNER STOREFRONT SPACE FOR LEASE | PICO & WILTON",
+      "title": "Commercial Space For Rent",
       "hood": null,
-      "price": 3250,
+      "price": 3500,
       "period": "monthly",
-      "sqft": 1360,
-      "lat": 34.04741,
-      "lng": -118.314612,
-      "postedDate": 1793745849,
-      "url": "https://www.craigslist.org/view/d/los-angeles-retail-corner-storefront/3pRf48WzbcU9C6xSDDKGNt",
-      "thumb": "https://images.craigslist.org/01414_kdYzYVNE8Sz_0jm0t2_50x50c.jpg"
+      "sqft": 2500,
+      "lat": 33.99673,
+      "lng": -118.112125,
+      "postedDate": 1793992014,
+      "url": "https://www.craigslist.org/view/d/montebello-commercial-space-for-rent/ohfARMyjaT1aTnWpsV5KZd",
+      "thumb": "https://images.craigslist.org/00w0w_hJeqWsd92NX_0CI0t2_50x50c.jpg"
     },
     {
       "id": "cl-8000753214",
@@ -2948,34 +2918,34 @@
       "thumb": "https://images.craigslist.org/00W0W_lEjJC1UezBA_0jm0ew_50x50c.jpg"
     },
     {
-      "id": "cl-7996361181",
+      "id": "cl-7994819943",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "Commercial Space For Rent",
+      "title": "RETAIL CORNER STOREFRONT SPACE FOR LEASE | PICO & WILTON",
       "hood": null,
-      "price": 3500,
+      "price": 3250,
       "period": "monthly",
-      "sqft": 2500,
-      "lat": 33.99673,
-      "lng": -118.112125,
-      "postedDate": 1793992014,
-      "url": "https://www.craigslist.org/view/d/montebello-commercial-space-for-rent/ohfARMyjaT1aTnWpsV5KZd",
-      "thumb": "https://images.craigslist.org/00w0w_hJeqWsd92NX_0CI0t2_50x50c.jpg"
+      "sqft": 1360,
+      "lat": 34.04741,
+      "lng": -118.314612,
+      "postedDate": 1793745849,
+      "url": "https://www.craigslist.org/view/d/los-angeles-retail-corner-storefront/3pRf48WzbcU9C6xSDDKGNt",
+      "thumb": "https://images.craigslist.org/01414_kdYzYVNE8Sz_0jm0t2_50x50c.jpg"
     },
     {
-      "id": "cl-8001460446",
+      "id": "cl-8001801231",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "Office/Warehouse",
+      "title": "Commercial Space - East LA - $3,500/month",
       "hood": null,
       "price": 3500,
       "period": "monthly",
-      "sqft": 1920,
-      "lat": 34.143999,
-      "lng": -118.001394,
-      "postedDate": 1794842566,
-      "url": "https://www.craigslist.org/view/d/monrovia-office-warehouse/rdwdAQiqunskCX58bVbTXq",
-      "thumb": "https://images.craigslist.org/01313_mj1ZyjSTdN_0CI0t2_50x50c.jpg"
+      "sqft": 1057,
+      "lat": 34.045098,
+      "lng": -118.185904,
+      "postedDate": 1794872451,
+      "url": "https://www.craigslist.org/view/d/los-angeles-commercial-space-east-la/eA7MnEpJqXRfNjVqBErwCA",
+      "thumb": ""
     },
     {
       "id": "cl-8000860689",
@@ -2993,19 +2963,19 @@
       "thumb": "https://images.craigslist.org/00P0P_5DgypMOe3wc_0MM132_50x50c.jpg"
     },
     {
-      "id": "cl-8001801231",
+      "id": "cl-8001460446",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "Commercial Space - East LA - $3,500/month",
+      "title": "Office/Warehouse",
       "hood": null,
       "price": 3500,
       "period": "monthly",
-      "sqft": 1057,
-      "lat": 34.045098,
-      "lng": -118.185904,
-      "postedDate": 1794872451,
-      "url": "https://www.craigslist.org/view/d/los-angeles-commercial-space-east-la/eA7MnEpJqXRfNjVqBErwCA",
-      "thumb": ""
+      "sqft": 1920,
+      "lat": 34.143999,
+      "lng": -118.001394,
+      "postedDate": 1794842566,
+      "url": "https://www.craigslist.org/view/d/monrovia-office-warehouse/rdwdAQiqunskCX58bVbTXq",
+      "thumb": "https://images.craigslist.org/01313_mj1ZyjSTdN_0CI0t2_50x50c.jpg"
     },
     {
       "id": "cl-8004536409",
@@ -3053,36 +3023,6 @@
       "thumb": "https://images.craigslist.org/00C0C_gwqg9BbszS1_0et08B_50x50c.jpg"
     },
     {
-      "id": "cl-7991630196",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Culver City, 1,000 SF Office, 4 Furnished Rooms Month-to-Month, $3,650",
-      "hood": null,
-      "price": 3648,
-      "period": "monthly",
-      "sqft": 1000,
-      "lat": 33.988913,
-      "lng": -118.382505,
-      "postedDate": 1793234186,
-      "url": "https://www.craigslist.org/view/d/los-angeles-culver-city-1000-sf-office/1pu5fzpRin1waRfa5kq3fv",
-      "thumb": "https://images.craigslist.org/01313_hZoWJukgdU5_0jm0pO_50x50c.jpg"
-    },
-    {
-      "id": "cl-7997337621",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Topanga near Roscoe blvd Front Store",
-      "hood": null,
-      "price": 3750,
-      "period": "monthly",
-      "sqft": 1300,
-      "lat": 34.222164,
-      "lng": -118.605758,
-      "postedDate": 1794160382,
-      "url": "https://www.craigslist.org/view/d/canoga-park-topanga-near-roscoe-blvd/mwA2fzKegUaH5oUej7JHPU",
-      "thumb": "https://images.craigslist.org/00k0k_kpGK7fIGaJN_0CI0t2_50x50c.jpg"
-    },
-    {
       "id": "cl-7990347099",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -3113,6 +3053,36 @@
       "thumb": "https://images.craigslist.org/00R0R_b6CpRtsrzcj_0ew0aT_50x50c.jpg"
     },
     {
+      "id": "cl-7991630196",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Culver City, 1,000 SF Office, 4 Furnished Rooms Month-to-Month, $3,650",
+      "hood": null,
+      "price": 3648,
+      "period": "monthly",
+      "sqft": 1000,
+      "lat": 33.988913,
+      "lng": -118.382505,
+      "postedDate": 1793234186,
+      "url": "https://www.craigslist.org/view/d/los-angeles-culver-city-1000-sf-office/1pu5fzpRin1waRfa5kq3fv",
+      "thumb": "https://images.craigslist.org/01313_hZoWJukgdU5_0jm0pO_50x50c.jpg"
+    },
+    {
+      "id": "cl-7997337621",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Topanga near Roscoe blvd Front Store",
+      "hood": null,
+      "price": 3750,
+      "period": "monthly",
+      "sqft": 1300,
+      "lat": 34.222164,
+      "lng": -118.605758,
+      "postedDate": 1794160382,
+      "url": "https://www.craigslist.org/view/d/canoga-park-topanga-near-roscoe-blvd/mwA2fzKegUaH5oUej7JHPU",
+      "thumb": "https://images.craigslist.org/00k0k_kpGK7fIGaJN_0CI0t2_50x50c.jpg"
+    },
+    {
       "id": "cl-7991004771",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -3126,21 +3096,6 @@
       "postedDate": 1793141354,
       "url": "https://www.craigslist.org/view/d/long-beach-fully-furnished-beautiful/dy6taV6Q7pyvWpdwQvKphK",
       "thumb": "https://images.craigslist.org/00K0K_2ACoGyAg1vK_0ak07K_50x50c.jpg"
-    },
-    {
-      "id": "cl-7999736058",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "1850 sq. ft. Commercial space with attached Garage Space",
-      "hood": null,
-      "price": 3800,
-      "period": "monthly",
-      "sqft": 1850,
-      "lat": 34.170531,
-      "lng": -118.361621,
-      "postedDate": 1794527259,
-      "url": "https://www.craigslist.org/view/d/north-hollywood-1850-sq-ft-commercial/6ZzqFSZnJXEPLUjM682KQz",
-      "thumb": "https://images.craigslist.org/00e0e_fPnRmF7k8lm_0ak07K_50x50c.jpg"
     },
     {
       "id": "cl-7994514408",
@@ -3173,49 +3128,19 @@
       "thumb": "https://images.craigslist.org/00T0T_lK4S6yLxoJd_0ww0oo_50x50c.jpg"
     },
     {
-      "id": "cl-8003891853",
+      "id": "cl-7999736058",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "Divisible Commercial Office Space in the Heart of Cerritos!*LEASING SP",
+      "title": "1850 sq. ft. Commercial space with attached Garage Space",
       "hood": null,
-      "price": 3995,
+      "price": 3800,
       "period": "monthly",
-      "sqft": 1222,
-      "lat": 33.858415,
-      "lng": -118.090898,
-      "postedDate": 1795204136,
-      "url": "https://www.craigslist.org/view/d/artesia-divisible-commercial-office/1sZGkmYQXarmAURK2ouZG1",
-      "thumb": "https://images.craigslist.org/00d0d_3unfviq5NH3_0ew0aT_50x50c.jpg"
-    },
-    {
-      "id": "cl-8000319876",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Truck Parking Dispatch Contractor Office Park Storage Warehouse Land",
-      "hood": null,
-      "price": 3999,
-      "period": "monthly",
-      "sqft": 10000,
-      "lat": 33.976899,
-      "lng": -118.21609,
-      "postedDate": 1794617865,
-      "url": "https://www.craigslist.org/view/d/huntington-park-truck-parking-dispatch/vGrrP5QQKQdazLKkSJsZk7",
-      "thumb": "https://images.craigslist.org/00m0m_6j0kcpGZJWR_0t20CI_50x50c.jpg"
-    },
-    {
-      "id": "cl-7992700227",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Recording Studios, Two Offices, Lobby, Kitchette, Bathroom",
-      "hood": null,
-      "price": 4000,
-      "period": "monthly",
-      "sqft": 1100,
-      "lat": 34.034904,
-      "lng": -118.450957,
-      "postedDate": 1793401755,
-      "url": "https://www.craigslist.org/view/d/los-angeles-recording-studios-two/gvypFK6pd5JHGRCLvwn1ZN",
-      "thumb": "https://images.craigslist.org/00C0C_ivZrpBdO7bQ_0fI0aq_50x50c.jpg"
+      "sqft": 1850,
+      "lat": 34.170531,
+      "lng": -118.361621,
+      "postedDate": 1794527259,
+      "url": "https://www.craigslist.org/view/d/north-hollywood-1850-sq-ft-commercial/6ZzqFSZnJXEPLUjM682KQz",
+      "thumb": "https://images.craigslist.org/00e0e_fPnRmF7k8lm_0ak07K_50x50c.jpg"
     },
     {
       "id": "cl-7998756438",
@@ -3248,6 +3173,51 @@
       "thumb": "https://images.craigslist.org/00d0d_bg69l25RQHw_0CI0t2_50x50c.jpg"
     },
     {
+      "id": "cl-8000319876",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Truck Parking Dispatch Contractor Office Park Storage Warehouse Land",
+      "hood": null,
+      "price": 3999,
+      "period": "monthly",
+      "sqft": 10000,
+      "lat": 33.976899,
+      "lng": -118.21609,
+      "postedDate": 1794617865,
+      "url": "https://www.craigslist.org/view/d/huntington-park-truck-parking-dispatch/vGrrP5QQKQdazLKkSJsZk7",
+      "thumb": "https://images.craigslist.org/00m0m_6j0kcpGZJWR_0t20CI_50x50c.jpg"
+    },
+    {
+      "id": "cl-8003891853",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Divisible Commercial Office Space in the Heart of Cerritos!*LEASING SP",
+      "hood": null,
+      "price": 3995,
+      "period": "monthly",
+      "sqft": 1222,
+      "lat": 33.858415,
+      "lng": -118.090898,
+      "postedDate": 1795204136,
+      "url": "https://www.craigslist.org/view/d/artesia-divisible-commercial-office/1sZGkmYQXarmAURK2ouZG1",
+      "thumb": "https://images.craigslist.org/00d0d_3unfviq5NH3_0ew0aT_50x50c.jpg"
+    },
+    {
+      "id": "cl-7992700227",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Recording Studios, Two Offices, Lobby, Kitchette, Bathroom",
+      "hood": null,
+      "price": 4000,
+      "period": "monthly",
+      "sqft": 1100,
+      "lat": 34.034904,
+      "lng": -118.450957,
+      "postedDate": 1793401755,
+      "url": "https://www.craigslist.org/view/d/los-angeles-recording-studios-two/gvypFK6pd5JHGRCLvwn1ZN",
+      "thumb": "https://images.craigslist.org/00C0C_ivZrpBdO7bQ_0fI0aq_50x50c.jpg"
+    },
+    {
       "id": "cl-8004040395",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -3261,36 +3231,6 @@
       "postedDate": 1795220281,
       "url": "https://www.craigslist.org/view/d/los-angeles-1926-vintage-building/eHoGbGqSLFowk9dFd8JdHR",
       "thumb": "https://images.craigslist.org/00i0i_kz2hEfvIKdz_1YC2g8_50x50c.jpg"
-    },
-    {
-      "id": "cl-8000037198",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Open Floor Plan Commercial Space on Ventura Blvd!",
-      "hood": null,
-      "price": 4500,
-      "period": "monthly",
-      "sqft": 1674,
-      "lat": 34.168325,
-      "lng": -118.535037,
-      "postedDate": 1794590765,
-      "url": "https://www.craigslist.org/view/d/tarzana-open-floor-plan-commercial/uBye8Ke1zS7ZxJtd96zdQf",
-      "thumb": "https://images.craigslist.org/00D0D_jDlIpWRgfwx_0jm0ew_50x50c.jpg"
-    },
-    {
-      "id": "cl-8004348522",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Creative Offices for Lease",
-      "hood": null,
-      "price": 4500,
-      "period": "monthly",
-      "sqft": 1825,
-      "lat": 34.051057,
-      "lng": -118.384239,
-      "postedDate": 1795284498,
-      "url": "https://www.craigslist.org/view/d/los-angeles-creative-offices-for-lease/1bqGVVZJca8ca7o7CSpNRc",
-      "thumb": "https://images.craigslist.org/01212_7yPFTKNKWVW_0fG0ah_50x50c.jpg"
     },
     {
       "id": "cl-8000345103",
@@ -3308,19 +3248,34 @@
       "thumb": "https://images.craigslist.org/00p0p_9y0YZE1jZMY_0oc0g8_50x50c.jpg"
     },
     {
-      "id": "cl-7989852159",
+      "id": "cl-8000037198",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "1000 Sq foot Office/Retail Space",
+      "title": "Open Floor Plan Commercial Space on Ventura Blvd!",
       "hood": null,
-      "price": 4600,
+      "price": 4500,
       "period": "monthly",
-      "sqft": 1000,
-      "lat": 34.06301,
-      "lng": -118.383612,
-      "postedDate": 1792969967,
-      "url": "https://www.craigslist.org/view/d/beverly-hills-1000-sq-foot-office/ar1zyrZqBgZJF8X6mNW6qv",
-      "thumb": "https://images.craigslist.org/01414_9LXMbmoHYTo_0CI0t2_50x50c.jpg"
+      "sqft": 1674,
+      "lat": 34.168325,
+      "lng": -118.535037,
+      "postedDate": 1794590765,
+      "url": "https://www.craigslist.org/view/d/tarzana-open-floor-plan-commercial/uBye8Ke1zS7ZxJtd96zdQf",
+      "thumb": "https://images.craigslist.org/00D0D_jDlIpWRgfwx_0jm0ew_50x50c.jpg"
+    },
+    {
+      "id": "cl-8005978632",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "2354- Whittier Private Warehouse | 2,500-2,500 sq ft | Flexible Term",
+      "hood": null,
+      "price": 4775,
+      "period": "monthly",
+      "sqft": 2500,
+      "lat": 33.9693,
+      "lng": -118.0337,
+      "postedDate": 1795555980,
+      "url": "https://www.craigslist.org/view/d/whittier-whittier-private-warehouse-sq/9d9dQW6SGHoWGzyrpPnXGG",
+      "thumb": "https://images.craigslist.org/00Q0Q_eLzPXIt3wqt_0hw0nm_50x50c.jpg"
     },
     {
       "id": "cl-7990409052",
@@ -3336,6 +3291,21 @@
       "postedDate": 1793053509,
       "url": "https://www.craigslist.org/view/d/santa-fe-springs-3000-sq-ft-industrial/uNpMG62v739iK6Xb6bwQB5",
       "thumb": "https://images.craigslist.org/01414_kUk8X7UJDZY_0CI0lM_50x50c.jpg"
+    },
+    {
+      "id": "cl-8004348522",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Creative Offices for Lease",
+      "hood": null,
+      "price": 4500,
+      "period": "monthly",
+      "sqft": 1825,
+      "lat": 34.051057,
+      "lng": -118.384239,
+      "postedDate": 1795284498,
+      "url": "https://www.craigslist.org/view/d/los-angeles-creative-offices-for-lease/1bqGVVZJca8ca7o7CSpNRc",
+      "thumb": "https://images.craigslist.org/01212_7yPFTKNKWVW_0fG0ah_50x50c.jpg"
     },
     {
       "id": "cl-7991029344",
@@ -3398,36 +3368,6 @@
       "thumb": "https://images.craigslist.org/01616_9fXA3pS5iZE_0hq0hq_50x50c.jpg"
     },
     {
-      "id": "cl-7990320879",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Office Sublease- keep deposit and furniture",
-      "hood": null,
-      "price": 5000,
-      "period": "monthly",
-      "sqft": 1600,
-      "lat": 33.98,
-      "lng": -117.902998,
-      "postedDate": 1793045085,
-      "url": "https://www.craigslist.org/view/d/rowland-heights-office-sublease-keep/f5EDe9d1744JpZM5wkuff3",
-      "thumb": "https://images.craigslist.org/00000_6okeNvh647t_0CI0ou_50x50c.jpg"
-    },
-    {
-      "id": "cl-7995445557",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Office/commercial space in Reseda",
-      "hood": null,
-      "price": 5000,
-      "period": "monthly",
-      "sqft": null,
-      "lat": 34.2007,
-      "lng": -118.539094,
-      "postedDate": 1793842312,
-      "url": "https://www.craigslist.org/view/d/valencia-office-commercial-space-in/5Yorv3asZe1QjDXfsYYDoD",
-      "thumb": "https://images.craigslist.org/00Z0Z_lDzxdXo56Rd_0CI0t2_50x50c.jpg"
-    },
-    {
       "id": "cl-7994907759",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -3458,19 +3398,34 @@
       "thumb": "https://images.craigslist.org/00Y0Y_4OI87xFtrDM_0CI0lM_50x50c.jpg"
     },
     {
-      "id": "cl-8005939887",
+      "id": "cl-7995445557",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "2355 - Lynwood Warehouse | 2,500-10,000 sq ft | Flexible Term",
+      "title": "Office/commercial space in Reseda",
       "hood": null,
-      "price": 5175,
+      "price": 5000,
       "period": "monthly",
-      "sqft": 2500,
-      "lat": 33.924101,
-      "lng": -118.2013,
-      "postedDate": 1795552024,
-      "url": "https://www.craigslist.org/view/d/lynwood-lynwood-warehouse-sq-ft/f88P55AAZDCHmTiuVqDPCx",
-      "thumb": "https://images.craigslist.org/00c0c_lgdsO0chX6u_0hn08k_50x50c.jpg"
+      "sqft": null,
+      "lat": 34.2007,
+      "lng": -118.539094,
+      "postedDate": 1793842312,
+      "url": "https://www.craigslist.org/view/d/valencia-office-commercial-space-in/5Yorv3asZe1QjDXfsYYDoD",
+      "thumb": "https://images.craigslist.org/00Z0Z_lDzxdXo56Rd_0CI0t2_50x50c.jpg"
+    },
+    {
+      "id": "cl-7990320879",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Office Sublease- keep deposit and furniture",
+      "hood": null,
+      "price": 5000,
+      "period": "monthly",
+      "sqft": 1600,
+      "lat": 33.98,
+      "lng": -117.902998,
+      "postedDate": 1793045085,
+      "url": "https://www.craigslist.org/view/d/rowland-heights-office-sublease-keep/f5EDe9d1744JpZM5wkuff3",
+      "thumb": "https://images.craigslist.org/00000_6okeNvh647t_0CI0ou_50x50c.jpg"
     },
     {
       "id": "cl-8003977098",
@@ -3486,6 +3441,21 @@
       "postedDate": 1795212753,
       "url": "https://www.craigslist.org/view/d/pacoima-industrial-space-for-lease/cDQAPZz7gQRQY4epDUrHzv",
       "thumb": "https://images.craigslist.org/00Y0Y_dxFjrWb0tn0_0qH07n_50x50c.jpg"
+    },
+    {
+      "id": "cl-8005939887",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "2355 - Lynwood Warehouse | 2,500-10,000 sq ft | Flexible Term",
+      "hood": null,
+      "price": 5175,
+      "period": "monthly",
+      "sqft": 2500,
+      "lat": 33.924101,
+      "lng": -118.2013,
+      "postedDate": 1795552024,
+      "url": "https://www.craigslist.org/view/d/lynwood-lynwood-warehouse-sq-ft/f88P55AAZDCHmTiuVqDPCx",
+      "thumb": "https://images.craigslist.org/00c0c_lgdsO0chX6u_0hn08k_50x50c.jpg"
     },
     {
       "id": "cl-7996261563",
@@ -3533,21 +3503,6 @@
       "thumb": "https://images.craigslist.org/00O0O_anIWThsvU9O_0lM0t2_50x50c.jpg"
     },
     {
-      "id": "cl-7996518378",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "6,500 SF Industrial Warehouse for Lease – Downtown Los Angeles",
-      "hood": null,
-      "price": 5785,
-      "period": "monthly",
-      "sqft": 6500,
-      "lat": 34.023979,
-      "lng": -118.244152,
-      "postedDate": 1794006722,
-      "url": "https://www.craigslist.org/view/d/los-angeles-6500-sf-industrial/wdcyB7kv9TfpefiHzNFP7F",
-      "thumb": "https://images.craigslist.org/00G0G_46BTpVmNiC7_0x20oM_50x50c.jpg"
-    },
-    {
       "id": "cl-7992465999",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -3576,6 +3531,21 @@
       "postedDate": 1793205460,
       "url": "https://www.craigslist.org/view/d/canyon-country-mechanic-shop-body-shop/dERuthiFPnFJVGV5kx5cyx",
       "thumb": "https://images.craigslist.org/00C0C_cRPqWkozK9A_0oH0cO_50x50c.jpg"
+    },
+    {
+      "id": "cl-7996518378",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "6,500 SF Industrial Warehouse for Lease – Downtown Los Angeles",
+      "hood": null,
+      "price": 5785,
+      "period": "monthly",
+      "sqft": 6500,
+      "lat": 34.023979,
+      "lng": -118.244152,
+      "postedDate": 1794006722,
+      "url": "https://www.craigslist.org/view/d/los-angeles-6500-sf-industrial/wdcyB7kv9TfpefiHzNFP7F",
+      "thumb": "https://images.craigslist.org/00G0G_46BTpVmNiC7_0x20oM_50x50c.jpg"
     },
     {
       "id": "cl-7991473485",
@@ -3653,6 +3623,21 @@
       "thumb": "https://images.craigslist.org/00T0T_50V5DiyAUf_0CI0t2_50x50c.jpg"
     },
     {
+      "id": "cl-7990329663",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Ready-to-Run Waterjet Shop for Rent - OMAX 6120 Included - Alhambra",
+      "hood": null,
+      "price": 7000,
+      "period": "monthly",
+      "sqft": 3250,
+      "lat": 34.085307,
+      "lng": -118.154199,
+      "postedDate": 1793045654,
+      "url": "https://www.craigslist.org/view/d/alhambra-ready-to-run-waterjet-shop-for/aGnHR53gYvtn8ugYsk4MyE",
+      "thumb": "https://images.craigslist.org/00j0j_aOvFgZmOxzr_0CI0t2_50x50c.jpg"
+    },
+    {
       "id": "cl-8001629346",
       "source": "Craigslist",
       "region": "Los Angeles",
@@ -3666,21 +3651,6 @@
       "postedDate": 1794855988,
       "url": "https://www.craigslist.org/view/d/inglewood-great-bldg-available-auto/6h7Zq94NRrNBaBrV2zEoGZ",
       "thumb": "https://images.craigslist.org/00000_a8a7YVdVQK_0t20CI_50x50c.jpg"
-    },
-    {
-      "id": "cl-8005494546",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Rare Find: Beautifully Brick and Bow Truss Creative Industrial Loft",
-      "hood": null,
-      "price": 6730,
-      "period": "monthly",
-      "sqft": 4077,
-      "lat": 34.169602,
-      "lng": -118.368243,
-      "postedDate": 1795474287,
-      "url": "https://www.craigslist.org/view/d/north-hollywood-rare-find-beautifully/itg145uxojntJtWrksSyYr",
-      "thumb": "https://images.craigslist.org/00D0D_4WitJBN5Heo_0ew0aT_50x50c.jpg"
     },
     {
       "id": "cl-7999116939",
@@ -3698,19 +3668,19 @@
       "thumb": ""
     },
     {
-      "id": "cl-7990329663",
+      "id": "cl-8005494546",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "Ready-to-Run Waterjet Shop for Rent - OMAX 6120 Included - Alhambra",
+      "title": "Rare Find: Beautifully Brick and Bow Truss Creative Industrial Loft",
       "hood": null,
-      "price": 7000,
+      "price": 6730,
       "period": "monthly",
-      "sqft": 3250,
-      "lat": 34.085307,
-      "lng": -118.154199,
-      "postedDate": 1793045654,
-      "url": "https://www.craigslist.org/view/d/alhambra-ready-to-run-waterjet-shop-for/aGnHR53gYvtn8ugYsk4MyE",
-      "thumb": "https://images.craigslist.org/00j0j_aOvFgZmOxzr_0CI0t2_50x50c.jpg"
+      "sqft": 4077,
+      "lat": 34.169602,
+      "lng": -118.368243,
+      "postedDate": 1795474287,
+      "url": "https://www.craigslist.org/view/d/north-hollywood-rare-find-beautifully/itg145uxojntJtWrksSyYr",
+      "thumb": "https://images.craigslist.org/00D0D_4WitJBN5Heo_0ew0aT_50x50c.jpg"
     },
     {
       "id": "cl-8000117709",
@@ -3773,19 +3743,19 @@
       "thumb": "https://images.craigslist.org/00j0j_4pAzXTXX0WJ_0ww0oo_50x50c.jpg"
     },
     {
-      "id": "cl-8003919933",
+      "id": "cl-7992213165",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "LARGE MODERN WAREHOUSE / OFFICE SPACE FOR RENT!",
+      "title": "🔥 Plug & Play Pasadena Office (3,000 SF)",
       "hood": null,
-      "price": 8995,
+      "price": 9999,
       "period": "monthly",
-      "sqft": 3970,
-      "lat": 34.1379,
-      "lng": -118.259903,
-      "postedDate": 1795206863,
-      "url": "https://www.craigslist.org/view/d/glendale-large-modern-warehouse-office/xbXRC5vhyHfT93j5qYhPs9",
-      "thumb": "https://images.craigslist.org/00101_kbVmnymCOGJ_0hw0nm_50x50c.jpg"
+      "sqft": 2998,
+      "lat": 34.1436,
+      "lng": -118.149798,
+      "postedDate": 1793324375,
+      "url": "https://www.craigslist.org/view/d/pasadena-plug-play-pasadena-office-3000/1rd8mcLbLwU3H8Gjy7v3YT",
+      "thumb": "https://images.craigslist.org/01717_hjGp0nUrsK2_0t20CI_50x50c.jpg"
     },
     {
       "id": "cl-7996310640",
@@ -3803,79 +3773,19 @@
       "thumb": "https://images.craigslist.org/00X0X_irmmw0XtEsP_0wg0oc_50x50c.jpg"
     },
     {
-      "id": "cl-7992213165",
+      "id": "cl-8003919933",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "🔥 Plug & Play Pasadena Office (3,000 SF)",
+      "title": "LARGE MODERN WAREHOUSE / OFFICE SPACE FOR RENT!",
       "hood": null,
-      "price": 9999,
+      "price": 8995,
       "period": "monthly",
-      "sqft": 2998,
-      "lat": 34.1436,
-      "lng": -118.149798,
-      "postedDate": 1793324375,
-      "url": "https://www.craigslist.org/view/d/pasadena-plug-play-pasadena-office-3000/1rd8mcLbLwU3H8Gjy7v3YT",
-      "thumb": "https://images.craigslist.org/01717_hjGp0nUrsK2_0t20CI_50x50c.jpg"
-    },
-    {
-      "id": "cl-8000316453",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Retail Storage Warehouse Distribution Outlet Cheap space Office DOCK",
-      "hood": null,
-      "price": 8999,
-      "period": "monthly",
-      "sqft": 18000,
-      "lat": 33.953413,
-      "lng": -118.19641,
-      "postedDate": 1794617303,
-      "url": "https://www.craigslist.org/view/d/south-gate-retail-storage-warehouse/uXemJWznb5ZFNJWB5PkegU",
-      "thumb": "https://images.craigslist.org/00c0c_jZajIyB6rbB_0CI0lN_50x50c.jpg"
-    },
-    {
-      "id": "cl-7990469349",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "2055 Pontius Ave., Los Angeles 90025 - Industrial Warehouse M1Zone",
-      "hood": null,
-      "price": 10000,
-      "period": "monthly",
-      "sqft": 4700,
-      "lat": 34.041881,
-      "lng": -118.440152,
-      "postedDate": 1793060920,
-      "url": "https://www.craigslist.org/view/d/los-angeles-2055-pontius-ave-los/ocPLWhrgLuYxJErb2dPD9f",
-      "thumb": "https://images.craigslist.org/01717_kpmpIJFdd4E_0wU0oG_50x50c.jpg"
-    },
-    {
-      "id": "cl-7996543806",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "Retail / Built out Fully Equipped Restaurant Space with Parking Lot",
-      "hood": null,
-      "price": 14000,
-      "period": "monthly",
-      "sqft": 1558,
-      "lat": 34.034214,
-      "lng": -118.479576,
-      "postedDate": 1794009911,
-      "url": "https://www.craigslist.org/view/d/santa-monica-retail-built-out-fully/phkbHkuqotBm9SkenVSmXi",
-      "thumb": "https://images.craigslist.org/00X0X_gvT6Uxza457_0CI0lN_50x50c.jpg"
-    },
-    {
-      "id": "cl-7998619236",
-      "source": "Craigslist",
-      "region": "Los Angeles",
-      "title": "10,800 SF Commercial Warehouse w/ Private Office & Drive Bays",
-      "hood": null,
-      "price": 15660,
-      "period": "monthly",
-      "sqft": 10800,
-      "lat": 34.055609,
-      "lng": -118.056521,
-      "postedDate": 1794352422,
-      "url": "https://www.craigslist.org/view/d/south-el-monte-sf-commercial-warehouse/mCmEy7r76vWixRC2piif9R",
-      "thumb": "https://images.craigslist.org/00f0f_3R7YXL0AELD_0CI0lJ_50x50c.jpg"
+      "sqft": 3970,
+      "lat": 34.1379,
+      "lng": -118.259903,
+      "postedDate": 1795206863,
+      "url": "https://www.craigslist.org/view/d/glendale-large-modern-warehouse-office/xbXRC5vhyHfT93j5qYhPs9",
+      "thumb": "https://images.craigslist.org/00101_kbVmnymCOGJ_0hw0nm_50x50c.jpg"
     },
     {
       "id": "cl-8003207838",
@@ -3893,19 +3803,49 @@
       "thumb": ""
     },
     {
-      "id": "cl-8000740638",
+      "id": "cl-8000316453",
       "source": "Craigslist",
       "region": "Los Angeles",
-      "title": "Contractor Yard with Warehouses, Offices, Trucking, MFG, Auto, Trailer",
+      "title": "Retail Storage Warehouse Distribution Outlet Cheap space Office DOCK",
       "hood": null,
-      "price": 28000,
+      "price": 8999,
       "period": "monthly",
-      "sqft": 7000,
-      "lat": 34.116005,
-      "lng": -117.934089,
-      "postedDate": 1794693081,
-      "url": "https://www.craigslist.org/view/d/azusa-contractor-yard-with-warehouses/sxF9iJB2tMfdRh4nVrjgpy",
-      "thumb": "https://images.craigslist.org/00X0X_5gTFV5RQtki_0bQ07Z_50x50c.jpg"
+      "sqft": 18000,
+      "lat": 33.953413,
+      "lng": -118.19641,
+      "postedDate": 1794617303,
+      "url": "https://www.craigslist.org/view/d/south-gate-retail-storage-warehouse/uXemJWznb5ZFNJWB5PkegU",
+      "thumb": "https://images.craigslist.org/00c0c_jZajIyB6rbB_0CI0lN_50x50c.jpg"
+    },
+    {
+      "id": "cl-7998619236",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "10,800 SF Commercial Warehouse w/ Private Office & Drive Bays",
+      "hood": null,
+      "price": 15660,
+      "period": "monthly",
+      "sqft": 10800,
+      "lat": 34.055609,
+      "lng": -118.056521,
+      "postedDate": 1794352422,
+      "url": "https://www.craigslist.org/view/d/south-el-monte-sf-commercial-warehouse/mCmEy7r76vWixRC2piif9R",
+      "thumb": "https://images.craigslist.org/00f0f_3R7YXL0AELD_0CI0lJ_50x50c.jpg"
+    },
+    {
+      "id": "cl-7996543806",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Retail / Built out Fully Equipped Restaurant Space with Parking Lot",
+      "hood": null,
+      "price": 14000,
+      "period": "monthly",
+      "sqft": 1558,
+      "lat": 34.034214,
+      "lng": -118.479576,
+      "postedDate": 1794009911,
+      "url": "https://www.craigslist.org/view/d/santa-monica-retail-built-out-fully/phkbHkuqotBm9SkenVSmXi",
+      "thumb": "https://images.craigslist.org/00X0X_gvT6Uxza457_0CI0lN_50x50c.jpg"
     },
     {
       "id": "cl-8002391526",
@@ -3921,6 +3861,21 @@
       "postedDate": 1794960813,
       "url": "https://www.craigslist.org/view/d/los-angeles-small-recording-studio-for/7xnkH69ncLiQX1uhgcLeF1",
       "thumb": ""
+    },
+    {
+      "id": "cl-8000740638",
+      "source": "Craigslist",
+      "region": "Los Angeles",
+      "title": "Contractor Yard with Warehouses, Offices, Trucking, MFG, Auto, Trailer",
+      "hood": null,
+      "price": 28000,
+      "period": "monthly",
+      "sqft": 7000,
+      "lat": 34.116005,
+      "lng": -117.934089,
+      "postedDate": 1794693081,
+      "url": "https://www.craigslist.org/view/d/azusa-contractor-yard-with-warehouses/sxF9iJB2tMfdRh4nVrjgpy",
+      "thumb": "https://images.craigslist.org/00X0X_5gTFV5RQtki_0bQ07Z_50x50c.jpg"
     },
     {
       "id": "cag-921-westwood-blvd",
