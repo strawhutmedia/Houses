@@ -176,7 +176,7 @@ Its rules (full prompt in `routines/house-alert.md`):
 - **11/22 plan change:** Ryan, Maggie + baby **Ele Lenora** in the main house; **Maggie's
   dad** in the back unit, "maybe" **$60K toward the down + $1,000/mo rent**. Steve "still
   interested" (role unclear). Email money box (site PR #296, `moneyFor()`): down =
-  **Split now 3/4 Ryan+Maggie / 1/4 Steve (11/22, `US_SHARE`)**; dad's $60K down + $1K/mo come OUT OF Ryan+Maggie's 3/4 (dad owns nothing → gift letter)
+  **Split = THIRDS: 2/3 Ryan+Maggie / 1/3 Steve (`US_SHARE`; briefly 3/4–1/4 11/22–11/25)**; dad's $60K down + $1K/mo come OUT OF Ryan+Maggie's 3/4 (dad owns nothing → gift letter)
   (Ryan corrected 11/22: "in addition… so we all pay less… part of me and Mags' payment").
   Box shows three names: You + Maggie / Maggie's dad / Steve.
   11/23 Ryan: "$4,000 is my deal range, $6,000 the cap" (Ryan+Maggie share after dad's $1K) and
@@ -185,10 +185,10 @@ Its rules (full prompt in `routines/house-alert.md`):
   (house-down-options) renders one block per option. At $1.25M cap their
   share ≈ $4,740 (all emails < $5K); < $4K ≈ price ≤ ~$1.08M. The DOWN payment binds first:
   ~$240K total (pool $180K + dad $60K) = 20% of ~$1.2M. 753 Micheltorena ($2.625M, Tracy Do) = out of reach. Constants `DAD_DOWN`/`DAD_RENT` in scout-alerts.js.
-  **11/25 Ryan: take Maggie's dad OFF the money box** — owners only (You + Maggie 3/4, Steve 1/4,
+  **11/25 Ryan: take Maggie's dad OFF the money box** — owners only (You + Maggie 2/3, Steve 1/3 — **Ryan 11/25: "ALWAYS thirds, there are 3 of us"**,
   gross; dad's $60K/$1K NOT deducted, "we'll just know"). CASH (~$240K) still counts his $60K for 💸.
   Site PR #318 shows dad only if a payload sends him; $0 not blank. Ryan asked "are we 2/3–1/3?" —
-  answered: 3/4–1/4 per his 11/22 message; `US_SHARE` is a one-line change if he says 2/3.
+  he then said always thirds → `US_SHARE = 2/3`. Don't change the split again without him saying so.
   Lender note: dad's $60K needs a gift letter if he's not on title (a true gift), or he goes
   on title/disclosed if it buys equity — never a disguised gift.
 - Settled plan after much debate: **buy together, everyone qualifying on the

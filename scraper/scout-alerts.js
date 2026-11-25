@@ -96,7 +96,7 @@ function pageFields(html) {
 }
 // Ownership: Ryan + Maggie US_SHARE, Steve the rest (3/4–1/4 since 11/22; was 2/3–1/3).
 // Monthly is an estimate: 30-yr fixed at RATE + property tax + insurance, + PMI under 20% down.
-const US_SHARE = 3 / 4;
+const US_SHARE = 2 / 3;              // Ryan 11/25: "always thirds because there are 3 of us"
 const RATE = 0.0625, PMI = 0.006;              // PMI ≈ 0.6%/yr of the loan (rough; depends on credit)
 function finance(price, city, pct = 0.2) {
   const down = price * pct, loan = price - down, r = RATE / 12, n = 360;
@@ -130,7 +130,7 @@ function moneyFor(price, city) {
     down: m.down, monthly: m.monthly, options: rows,
     downSplit: [["You + Maggie", m.us], ["Steve", m.steve]],
     moSplit: [["You + Maggie", m.usMo], ["Steve", m.steveMo]],
-    alt: `Split ${Math.round(US_SHARE * 100)}% you + Maggie / ${Math.round((1 - US_SHARE) * 100)}% Steve. ✅ your monthly ≤ ${usd(DEAL_MO)} · ⚠️ ≤ ${usd(CAP_MO)} cap · ❌ over. 💸 = more cash than your ~${usd(CASH)} (incl. Maggie's dad's ${usd(DAD_DOWN)}, not shown above). Under 20% down includes PMI (~${PMI * 100}%/yr).`,
+    alt: `Split in thirds: 2/3 you + Maggie, 1/3 Steve. ✅ your monthly ≤ ${usd(DEAL_MO)} · ⚠️ ≤ ${usd(CAP_MO)} cap · ❌ over. 💸 = more cash than your ~${usd(CASH)} (incl. Maggie's dad's ${usd(DAD_DOWN)}, not shown above). Under 20% down includes PMI (~${PMI * 100}%/yr).`,
     us: m.us, steve: m.steve, usMo: m.usMo, steveMo: m.steveMo,
   };
 }

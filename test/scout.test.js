@@ -99,11 +99,11 @@ test("2–4 unit buildings count as the separate unit; 5+ do not (11/16 Bellevue
   assert.equal(multiUnit("Single Family", {}, "x"), null);
 });
 
-test("money: owners only — You + Maggie 3/4, Steve 1/4, dad not shown (11/25)", () => {
+test("money: owners only — thirds: You + Maggie 2/3, Steve 1/3, dad not shown (11/25)", () => {
   const { moneyFor } = require("../scraper/scout-alerts.js");
   const m = moneyFor(900000, "Los Angeles");
-  assert.deepEqual(m.downSplit.map(([w, a]) => [w, Math.round(a)]), [["You + Maggie", 135000], ["Steve", 45000]]);
-  assert.ok(m.options.every((o) => o.dad === undefined && Math.abs(o.usMo - o.monthly * 3 / 4) < 1e-6));
+  assert.deepEqual(m.downSplit.map(([w, a]) => [w, Math.round(a)]), [["You + Maggie", 120000], ["Steve", 60000]]);
+  assert.ok(m.options.every((o) => o.dad === undefined && Math.abs(o.usMo - o.monthly * 2 / 3) < 1e-6));
 });
 test("money options: 10/20/30/40% down, PMI under 20%, marks vs $4K/$6K, cash check (11/23)", () => {
   const { moneyFor } = require("../scraper/scout-alerts.js");
