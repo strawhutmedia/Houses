@@ -97,7 +97,22 @@ function pageFields(html) {
 // Ownership: Ryan + Maggie US_SHARE, Steve the rest (3/4–1/4 since 11/22; was 2/3–1/3).
 // Monthly is an estimate: 30-yr fixed at RATE + property tax + insurance, + PMI under 20% down.
 const US_SHARE = 2 / 3;              // Ryan 11/25: "always thirds because there are 3 of us"
-const RATE = 0.0625, PMI = 0.006;              // PMI ≈ 0.6%/yr of the loan (rough; depends on credit)
+// RATE = this week's Freddie Mac 30-yr average (FRED MORTGAGE30US, no key), loaded by
+// loadRate() before any email is built (Ryan 11/26: "are these using current rates?").
+// The fallback is the last value seen (7.21% on 11/25/2026) if FRED doesn't answer.
+let RATE = 0.0721, RATE_ASOF = "2026-11-25 (fallback)";
+const PMI = 0.006;                             // PMI ≈ 0.6%/yr of the loan (rough; depends on credit)
+async function loadRate() {
+  try {
+    // Plain curl (no browser user-agent — FRED rejects the one CB needs).
+    const csv = await new Promise((resolve) => require("child_process").execFile("curl",
+      ["-sSL", "-m", "20", "https://fred.stlouisfed.org/graph/fredgraph.csv?id=MORTGAGE30US"], (e, out) => resolve(e ? "" : out)));
+    const last = String(csv || "").trim().split("\n").pop().split(",");
+    const pct = parseFloat(last[1]);
+    if (/^\d{4}-\d\d-\d\d$/.test(last[0]) && pct > 2 && pct < 15) { RATE = pct / 100; RATE_ASOF = last[0]; }
+  } catch {}
+  return { rate: RATE, asOf: RATE_ASOF };
+}
 function finance(price, city, pct = 0.2) {
   const down = price * pct, loan = price - down, r = RATE / 12, n = 360;
   const pi = loan * r / (1 - Math.pow(1 + r, -n));
@@ -130,7 +145,7 @@ function moneyFor(price, city) {
     down: m.down, monthly: m.monthly, options: rows,
     downSplit: [["You + Maggie", m.us], ["Steve", m.steve]],
     moSplit: [["You + Maggie", m.usMo], ["Steve", m.steveMo]],
-    alt: `Split in thirds: 2/3 you + Maggie, 1/3 Steve. ✅ your monthly ≤ ${usd(DEAL_MO)} · ⚠️ ≤ ${usd(CAP_MO)} cap · ❌ over. 💸 = more cash than your ~${usd(CASH)} (incl. Maggie's dad's ${usd(DAD_DOWN)}, not shown above). Under 20% down includes PMI (~${PMI * 100}%/yr).`,
+    alt: `Split in thirds: 2/3 you + Maggie, 1/3 Steve. ✅ your monthly ≤ ${usd(DEAL_MO)} · ⚠️ ≤ ${usd(CAP_MO)} cap · ❌ over. 💸 = more cash than your ~${usd(CASH)} (incl. Maggie's dad's ${usd(DAD_DOWN)}, not shown above). Monthly uses ${(RATE * 100).toFixed(2)}% 30-yr fixed (Freddie Mac weekly avg, ${RATE_ASOF}) + tax + insurance; under 20% down adds PMI (~${PMI * 100}%/yr). Your actual rate depends on credit and lender.`,
     us: m.us, steve: m.steve, usMo: m.usMo, steveMo: m.steveMo,
   };
 }
@@ -332,6 +347,7 @@ async function postAlert(endpoint, payload) {
 
 // ── HOUSE ────────────────────────────────────────────────────────────────
 async function runHouse({ dry, today, state }) {
+  await loadRate();
   const hd = require("./house-discover");
   const { candidates, stats } = await hd.discover();
   const broken = Object.entries(stats).filter(([, s]) => !s.scanned).map(([city]) => city);
@@ -404,7 +420,7 @@ async function runHouse({ dry, today, state }) {
     const intro = [cutsTxt.length ? `Price cut: ${cutsTxt.join("; ")}.` : null,
       `${verified.length} ${verified.length === 1 ? "house" : "houses"} with a separate ADU today (${la} Los Angeles, ${pdx} Portland) — each confirmed Active on its live listing page today.`,
       moved.length ? `${moved.length} board ${moved.length === 1 ? "house is" : "houses are"} now pending/sold and moved to corrections.` : null,
-      `💰 Green box on each house: 20% down and monthly split 3/4 you + Maggie / 1/4 Steve, with Maggie's dad's ${usd(DAD_DOWN)} down and ${usd(DAD_RENT)}/mo coming out of your 3/4; monthly is an estimate at ${RATE * 100}% 30-yr fixed + property tax + insurance (no closing costs, HOA or rent income).`,
+      `💰 Green box on each house: 10/20/30/40% down options, split in thirds (2/3 you + Maggie, 1/3 Steve); monthly is an estimate at this week's ${(RATE * 100).toFixed(2)}% 30-yr average + property tax + insurance (no closing costs, HOA or rent income).`,
     ].filter(Boolean).join(" ");
     const payload = { intro, houses: verified.map((v) => ({
       address: v.address, price: v.price, wasPrice: v.wasPrice && v.price < v.wasPrice ? v.wasPrice : null, beds: v.beds, baths: v.baths, sqft: v.sqft,
@@ -515,6 +531,7 @@ async function runStudio({ dry, today, state }) {
 // (every LA board house with a separate unit verified in the last 30 days). Each is
 // re-read on its LIVE CB page (iron rule: must say Active today) before it's emailed.
 async function runResend(arg, { dry }) {
+  await loadRate();
   const finds = readJson(FINDS, { finds: [] });
   const cbUrl = (x) => ((x.links || []).find((l) => /coldwellbankerhomes\.com/.test(l.url)) || {}).url;
   const norm = (t) => String(t || "").toLowerCase().replace(/[^a-z0-9]/g, "");
@@ -580,4 +597,4 @@ async function main() {
 }
 
 if (require.main === module) main().catch((e) => { console.error(e); process.exit(1); });
-module.exports = { moneyFor, finance, parseCbDetail, aduVerdict, multiUnit, houseCard, pageFacts, compassStatus, daysSince, houseWhy, studioWhy, ptNow, GONE, POST_GONE };
+module.exports = { loadRate, moneyFor, finance, parseCbDetail, aduVerdict, multiUnit, houseCard, pageFacts, compassStatus, daysSince, houseWhy, studioWhy, ptNow, GONE, POST_GONE };

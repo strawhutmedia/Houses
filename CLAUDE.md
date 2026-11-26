@@ -192,6 +192,10 @@ Its rules (full prompt in `routines/house-alert.md`):
   gross; dad's $60K/$1K NOT deducted, "we'll just know"). CASH (~$240K) still counts his $60K for 💸.
   Site PR #318 shows dad only if a payload sends him; $0 not blank. Ryan asked "are we 2/3–1/3?" —
   he then said always thirds → `US_SHARE = 2/3`. Don't change the split again without him saying so.
+  **11/26 RATE is live:** `loadRate()` pulls Freddie Mac 30-yr avg from FRED (MORTGAGE30US CSV, plain
+  curl — browser UA is rejected) before every house email/resend; fallback = last seen (7.21% 11/25).
+  Old fixed 6.25% understated monthly ~$500–650 on $1M. At 7.21%, 20% down, thirds: $650K → you+M
+  ~$2,955 ✅; $1M → ~$4,457 ⚠️; $1.25M → ~$5,530 ⚠️.
   Lender note: dad's $60K needs a gift letter if he's not on title (a true gift), or he goes
   on title/disclosed if it buys equity — never a disguised gift.
 - Settled plan after much debate: **buy together, everyone qualifying on the
