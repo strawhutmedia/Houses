@@ -115,3 +115,10 @@ test("money options: 10/20/30/40% down, PMI under 20%, marks vs $4K/$6K, cash ch
   assert.equal(o[1].cashOk, true); assert.equal(o[3].cashOk, false);
   assert.equal(moneyFor(2625000, "Los Angeles").options[1].mark, "❌");
 });
+
+test("each option also shows a bank-statement-loan monthly at a higher rate (11/26)", () => {
+  const { moneyFor } = require("../scraper/scout-alerts.js");
+  const o = moneyFor(1000000, "Los Angeles").options[1];
+  assert.ok(o.alt && o.alt.monthly > o.monthly && /Bank-statement/.test(o.alt.label));
+  assert.ok(Math.abs(o.alt.usMo - o.alt.monthly * 2 / 3) < 1e-6);
+});

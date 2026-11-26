@@ -196,6 +196,13 @@ Its rules (full prompt in `routines/house-alert.md`):
   curl — browser UA is rejected) before every house email/resend; fallback = last seen (7.21% 11/25).
   Old fixed 6.25% understated monthly ~$500–650 on $1M. At 7.21%, 20% down, thirds: $650K → you+M
   ~$2,955 ✅; $1M → ~$4,457 ⚠️; $1.25M → ~$5,530 ⚠️.
+  **11/26 loan reality (from Ryan's 2024 return via Gmail — figures NOT recorded here; repo is public):**
+  taxable household income after write-offs is far below the business's real cash flow, no W-2s →
+  a standard loan on returns is unlikely; likely paths = bank-statement (non-QM) loan, Steve's W-2 as
+  main qualifier, or show more profit going forward. 2025 return NOT in Gmail (Dropbox/portal) — ask
+  Kolene. Partnership (1065, K-1s): lenders use K-1 ordinary income + 1065 add-backs, not draws;
+  retained company cash can count as reserves/down (lender cash-flow test). Emails now show a second
+  monthly line per option at RATE + 1.75 pts (`BANK_STMT_PREMIUM`; site PR #319).
   Lender note: dad's $60K needs a gift letter if he's not on title (a true gift), or he goes
   on title/disclosed if it buys equity — never a disguised gift.
 - Settled plan after much debate: **buy together, everyone qualifying on the

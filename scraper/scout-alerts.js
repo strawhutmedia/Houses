@@ -113,8 +113,11 @@ async function loadRate() {
   } catch {}
   return { rate: RATE, asOf: RATE_ASOF };
 }
-function finance(price, city, pct = 0.2) {
-  const down = price * pct, loan = price - down, r = RATE / 12, n = 360;
+// Bank-statement (non-QM) loans for self-employed borrowers run ~1.75 pts over the
+// standard average (Ryan 11/26: show both until the broker says which he qualifies for).
+const BANK_STMT_PREMIUM = 0.0175;
+function finance(price, city, pct = 0.2, rate = RATE) {
+  const down = price * pct, loan = price - down, r = rate / 12, n = 360;
   const pi = loan * r / (1 - Math.pow(1 + r, -n));
   const pmi = pct < 0.2 ? loan * PMI / 12 : 0;
   const total = pi + pmi + price * (city === "Portland" ? 0.011 : 0.012) / 12 + (city === "Portland" ? 150 : 250);
@@ -137,15 +140,17 @@ const DOWN_PCTS = [0.1, 0.2, 0.3, 0.4];
 function moneyFor(price, city) {
   const rows = DOWN_PCTS.map((pct) => {
     const m = finance(price, city, pct);
+    const b = finance(price, city, pct, RATE + BANK_STMT_PREMIUM);
     return { pct: Math.round(pct * 100), down: m.down, us: m.us, steve: m.steve, monthly: m.total,
-      usMo: m.usMo, steveMo: m.steveMo, pmi: m.pmi, mark: moMark(m.usMo), cashOk: m.down <= CASH };
+      usMo: m.usMo, steveMo: m.steveMo, pmi: m.pmi, mark: moMark(m.usMo), cashOk: m.down <= CASH,
+      alt: { label: `Bank-statement loan ~${((RATE + BANK_STMT_PREMIUM) * 100).toFixed(2)}%`, monthly: b.total, usMo: b.usMo, steveMo: b.steveMo, mark: moMark(b.usMo) } };
   });
   const m = rows[1];
   return {
     down: m.down, monthly: m.monthly, options: rows,
     downSplit: [["You + Maggie", m.us], ["Steve", m.steve]],
     moSplit: [["You + Maggie", m.usMo], ["Steve", m.steveMo]],
-    alt: `Split in thirds: 2/3 you + Maggie, 1/3 Steve. ✅ your monthly ≤ ${usd(DEAL_MO)} · ⚠️ ≤ ${usd(CAP_MO)} cap · ❌ over. 💸 = more cash than your ~${usd(CASH)} (incl. Maggie's dad's ${usd(DAD_DOWN)}, not shown above). Monthly uses ${(RATE * 100).toFixed(2)}% 30-yr fixed (Freddie Mac weekly avg, ${RATE_ASOF}) + tax + insurance; under 20% down adds PMI (~${PMI * 100}%/yr). Your actual rate depends on credit and lender.`,
+    alt: `Split in thirds: 2/3 you + Maggie, 1/3 Steve. ✅ your monthly ≤ ${usd(DEAL_MO)} · ⚠️ ≤ ${usd(CAP_MO)} cap · ❌ over. 💸 = more cash than your ~${usd(CASH)} (incl. Maggie's dad's ${usd(DAD_DOWN)}, not shown above). Monthly uses ${(RATE * 100).toFixed(2)}% 30-yr fixed (Freddie Mac weekly avg, ${RATE_ASOF}) + tax + insurance; the second line is a self-employed bank-statement loan at ~${((RATE + BANK_STMT_PREMIUM) * 100).toFixed(2)}%; under 20% down adds PMI (~${PMI * 100}%/yr). Your actual rate depends on credit and lender.`,
     us: m.us, steve: m.steve, usMo: m.usMo, steveMo: m.steveMo,
   };
 }
