@@ -511,29 +511,52 @@ async function runStudio({ dry, today, state }) {
 }
 
 // ── entry ────────────────────────────────────────────────────────────────
-// Re-send one house on request (Ryan, 11/26: "resend that email for that Highland Park
-// house"). Looks it up on the board by address or CB URL, re-reads the LIVE CB page
-// (iron rule: must say Active today), rebuilds the card with today's money math, emails it.
+// Re-send board houses on request (Ryan, 11/26). Arg = one address / CB URL, or "LA"
+// (every LA board house with a separate unit verified in the last 30 days). Each is
+// re-read on its LIVE CB page (iron rule: must say Active today) before it's emailed.
 async function runResend(arg, { dry }) {
   const finds = readJson(FINDS, { finds: [] });
-  const key = String(arg || "").toLowerCase().replace(/[^a-z0-9]/g, "");
   const cbUrl = (x) => ((x.links || []).find((l) => /coldwellbankerhomes\.com/.test(l.url)) || {}).url;
-  const rec = finds.finds.find((x) => cbUrl(x) === arg || String(x.address).toLowerCase().replace(/[^a-z0-9]/g, "") === key);
-  const url = rec && cbUrl(rec);
-  if (!url) return { ok: false, error: `not on the board with a CB link: ${arg}` };
-  const d = parseCbDetail(await curl(url));
-  if (!d || !/^active$/i.test(d.status || "")) return { ok: false, error: `live page says ${d && d.status || "nothing"} — not resent` };
-  const city = /portland/i.test(`${rec.tag} ${rec.hood}`) ? "Portland" : "Los Angeles";
-  const hood = String(rec.hood || "").replace(/,.*$/, "");
-  const mls = (String(rec.why || "").match(/MLS #(\S+?)\./) || [])[1] || null;
-  const c = { address: rec.address, price: rec.price, beds: rec.beds, baths: rec.baths, sqft: rec.sqft, city, hood, mls, type: (d.fields || {}).Type };
-  d.adu = multiUnit(c.type, d.fields, d.remarks) || aduVerdict(d.remarks);
-  const age = daysSince(d.updated, ptNow().day);
-  const card = { ...c, url, photo: d.photo, money: moneyFor(c.price, city), ...houseCard(c, d) };
-  if (age != null && age > FRESH_DAYS) card.note = [card.note, `Coldwell Banker shows Active today but last updated ${d.updated} — confirm with the agent.`].filter(Boolean).join(" ");
-  const payload = { subject: `🏡 ${rec.address} (${hood}) — ${money(rec.price)}`,
-    intro: `As requested: ${rec.address}, re-checked live today (Coldwell Banker: ${d.status}, updated ${d.updated}). Money box is split in thirds — 2/3 you + Maggie, 1/3 Steve.`, houses: [card] };
-  if (dry) { console.log("[dry-run] would email:", JSON.stringify(payload).slice(0, 1500)); return { ok: true, dry: true }; }
+  const norm = (t) => String(t || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  const isPdx = (x) => /portland/i.test(`${x.tag} ${x.hood}`);
+  const today = ptNow().day;
+  let recs;
+  if (/^la$/i.test(String(arg).trim())) {
+    recs = finds.finds.filter((x) => !isPdx(x) && /ADU|Duplex|Triplex|Fourplex/.test(x.why || "") &&
+      daysSince(String(x.verified || "").replace(/^(\d{4})-(\d\d)-(\d\d)$/, "$2/$3/$1"), today) <= 30);
+  } else {
+    recs = finds.finds.filter((x) => cbUrl(x) === arg || norm(x.address) === norm(arg));
+  }
+  const seenUrl = new Set();
+  recs = recs.filter((x) => { const u = cbUrl(x); if (!u || seenUrl.has(u)) return false; seenUrl.add(u); return true; });
+  if (!recs.length) return { ok: false, error: `nothing on the board matches: ${arg}` };
+  const cards = [], dropped = [];
+  for (const rec of recs) {                                   // one at a time — gentle on CB
+    const url = cbUrl(rec);
+    const d = parseCbDetail(await curl(url));
+    if (!d || !/^active$/i.test(d.status || "")) { dropped.push(`${rec.address}: ${d && d.status || "page didn't load"}`); continue; }
+    const city = isPdx(rec) ? "Portland" : "Los Angeles";
+    const hood = String(rec.hood || "").replace(/,.*$/, "");
+    const mls = (String(rec.why || "").match(/MLS #(\S+?)\./) || [])[1] || null;
+    const c = { address: rec.address, price: rec.price, beds: rec.beds, baths: rec.baths, sqft: rec.sqft, city, hood, mls, type: (d.fields || {}).Type };
+    d.adu = multiUnit(c.type, d.fields, d.remarks) || aduVerdict(d.remarks);
+    const card = { ...c, url, photo: d.photo, money: moneyFor(c.price, city), ...houseCard(c, d) };
+    const age = daysSince(d.updated, today);
+    if (age != null && age > FRESH_DAYS) card.note = [card.note, `Coldwell Banker shows Active today but last updated ${d.updated} — confirm with the agent.`].filter(Boolean).join(" ");
+    cards.push(card);
+    await new Promise((r) => setTimeout(r, 800));
+  }
+  console.log(`resend: ${cards.length} live, ${dropped.length} dropped`, dropped);
+  if (!cards.length) return { ok: false, error: `none still Active: ${dropped.join("; ")}` };
+  const one = cards.length === 1 ? cards[0] : null;
+  const payload = {
+    subject: one ? `🏡 ${one.address} (${one.hood}) — ${money(one.price)}` : `🏡 ${cards.length} LA houses with a separate unit — re-checked live today`,
+    intro: [one ? `As requested: ${one.address}, re-checked live today.` : `As requested: the recent LA houses with a separate unit, each re-checked live today.`,
+      dropped.length ? `Left out (couldn't confirm Active today): ${dropped.join("; ")}.` : null,
+      `Money box is split in thirds — 2/3 you + Maggie, 1/3 Steve.`].filter(Boolean).join(" "),
+    houses: cards,
+  };
+  if (dry) { console.log("[dry-run] would email:", payload.subject, cards.map((c) => `${c.address} ${c.hood} ${c.price}`)); return { ok: true, dry: true }; }
   return postAlert("/api/houses/alert", payload);
 }
 
