@@ -1,9 +1,9 @@
 {
   "studio": {
-    "lastRun": "2026-11-25",
-    "at": "2026-11-25T23:17:48.213Z",
-    "spacesFile": "2026-11-25T23:17:48.143Z",
-    "craigslistFetched": 258,
+    "lastRun": "2026-11-26",
+    "at": "2026-11-26T23:17:05.483Z",
+    "spacesFile": "2026-11-26T23:17:05.421Z",
+    "craigslistFetched": 253,
     "candidates": 0,
     "verified": [],
     "emailed": false,
@@ -14,61 +14,57 @@
     "ok": true
   },
   "house": {
-    "lastRun": "2026-11-25",
-    "at": "2026-11-25T23:21:18.313Z",
+    "lastRun": "2026-11-26",
+    "at": "2026-11-26T23:19:50.531Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 777,
-        "matches": 26
+        "scanned": 769,
+        "matches": 25
       },
       "Portland": {
-        "scanned": 982,
-        "matches": 1
+        "scanned": 1078,
+        "matches": 3
       }
     },
-    "candidates": 27,
-    "verified": [
-      "951 N Ave 49 (Highland Park) $650,000"
-    ],
-    "emailed": true,
+    "candidates": 28,
+    "verified": [],
+    "emailed": false,
     "emailError": null,
     "rejected": [
-      "849 Robinson: no separate ADU — a guest suite/flex room, not a unit (no kitchen, rent or separate structure)",
-      "3018 SW Flower Terrace: no separate ADU — no ADU/second unit in description"
+      "406 N Avenue 64: no separate ADU — no ADU/second unit in description",
+      "3360 SW Fairmount Blvd: no separate ADU — no ADU/second unit in description",
+      "2205 SE Tacoma St: no separate ADU — no ADU/second unit in description",
+      "2832 NE 9th Ave: no separate ADU — ADU is only potential/planned/unfinished"
     ],
     "unreachable": [
       "5224 Glen Ellen Pl",
       "5009 Stratford Rd",
       "276 Thorne St",
-      "6035 Mesa",
       "2660 Newell St",
+      "6035 Mesa",
       "2675 Thorpe Ave",
-      "3619 Fletcher Dr",
       "634 Romulo St",
+      "3619 Fletcher Dr",
       "3064 Isabel",
-      "4254 Verdugo Rd",
       "3428 Maceo",
+      "4254 Verdugo Rd",
       "3300 Chapman St",
       "1709 Campus Rd",
-      "1444 Hazelwood Ave",
       "456 Ulysses St",
+      "1444 Hazelwood Ave",
+      "1447 Westerly Terrace",
       "1535 Parmer Ave",
       "1560 Morton Ave",
-      "1447 Westerly Terrace",
       "337 N Occidental",
-      "1458 Silver Lake Blvd",
       "1465 W Temple St",
-      "214 N Alvarado St",
+      "1458 Silver Lake Blvd",
       "1804 Echo Park Ave",
+      "214 N Alvarado St",
       "1744 N Berendo St"
     ],
-    "boardAdded": 1,
+    "boardAdded": 0,
     "boardPriceCuts": 0,
-    "movedToCorrections": [
-      "4222 N Montana Ave: Pending",
-      "6615 SE 16th Ave: Pending",
-      "6139 Buena Vista Terrace: Pending"
-    ],
+    "movedToCorrections": [],
     "brokenSince": null,
     "ok": true
   }
