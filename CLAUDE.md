@@ -69,6 +69,9 @@ OIDC token minted for this workflow on main (site `src/githubOidc.js`). A source
 (scanned, verified, each reject + reason, email ok) is committed to **`scout-state.json`**
 — read that first. Manual: Actions → "Daily scouts" → Run workflow (dry_run defaults ON).
 Self-test: `node --test test/scout.test.js` (runs in the workflow first).
+**Resend one house (11/26):** Actions → Daily scouts → Run workflow with `resend` = board address
+(or CB URL), dry_run OFF → `scout-alerts.js resend` re-verifies the live CB page and emails that one
+card via OIDC (no token needed; the old newsletter token is NOT in any session anymore).
 Found 10/3: the studio Routine had been failing since 9/30 (email blocked by a classifier,
 push refused) — Ryan got no studio alerts. Also fixed then: Craigslist writes size as
 `1000ft<sup>2</sup>`, which the parser missed (posts read "size unknown").

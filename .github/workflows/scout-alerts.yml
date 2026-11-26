@@ -31,6 +31,10 @@ on:
         description: "Run even if it already ran today"
         type: boolean
         default: false
+      resend:
+        description: "Re-send ONE board house by address or CB URL (re-verified live first). Leave blank for the daily run."
+        type: string
+        default: ""
 
 permissions:
   contents: write   # commit finds.json + seen-lists
@@ -57,8 +61,15 @@ jobs:
       - name: Self-test (parsers + verification rules)
         run: node --test test/scout.test.js
 
+      - name: Re-send one house
+        if: ${{ inputs.resend != '' }}
+        env:
+          RESEND: ${{ inputs.resend }}
+        run: node scraper/scout-alerts.js resend $FLAGS
+
       - name: Due today?
         id: gate
+        if: ${{ !inputs.resend }}
         run: node scraper/scout-alerts.js gate $FLAGS >> "$GITHUB_OUTPUT"
 
       - name: Scrape studio spaces (Craigslist + brokers)

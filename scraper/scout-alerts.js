@@ -511,12 +511,42 @@ async function runStudio({ dry, today, state }) {
 }
 
 // ── entry ────────────────────────────────────────────────────────────────
+// Re-send one house on request (Ryan, 11/26: "resend that email for that Highland Park
+// house"). Looks it up on the board by address or CB URL, re-reads the LIVE CB page
+// (iron rule: must say Active today), rebuilds the card with today's money math, emails it.
+async function runResend(arg, { dry }) {
+  const finds = readJson(FINDS, { finds: [] });
+  const key = String(arg || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  const cbUrl = (x) => ((x.links || []).find((l) => /coldwellbankerhomes\.com/.test(l.url)) || {}).url;
+  const rec = finds.finds.find((x) => cbUrl(x) === arg || String(x.address).toLowerCase().replace(/[^a-z0-9]/g, "") === key);
+  const url = rec && cbUrl(rec);
+  if (!url) return { ok: false, error: `not on the board with a CB link: ${arg}` };
+  const d = parseCbDetail(await curl(url));
+  if (!d || !/^active$/i.test(d.status || "")) return { ok: false, error: `live page says ${d && d.status || "nothing"} — not resent` };
+  const city = /portland/i.test(`${rec.tag} ${rec.hood}`) ? "Portland" : "Los Angeles";
+  const hood = String(rec.hood || "").replace(/,.*$/, "");
+  const mls = (String(rec.why || "").match(/MLS #(\S+?)\./) || [])[1] || null;
+  const c = { address: rec.address, price: rec.price, beds: rec.beds, baths: rec.baths, sqft: rec.sqft, city, hood, mls, type: (d.fields || {}).Type };
+  d.adu = multiUnit(c.type, d.fields, d.remarks) || aduVerdict(d.remarks);
+  const age = daysSince(d.updated, ptNow().day);
+  const card = { ...c, url, photo: d.photo, money: moneyFor(c.price, city), ...houseCard(c, d) };
+  if (age != null && age > FRESH_DAYS) card.note = [card.note, `Coldwell Banker shows Active today but last updated ${d.updated} — confirm with the agent.`].filter(Boolean).join(" ");
+  const payload = { subject: `🏡 ${rec.address} (${hood}) — ${money(rec.price)}`,
+    intro: `As requested: ${rec.address}, re-checked live today (Coldwell Banker: ${d.status}, updated ${d.updated}). Money box is split in thirds — 2/3 you + Maggie, 1/3 Steve.`, houses: [card] };
+  if (dry) { console.log("[dry-run] would email:", JSON.stringify(payload).slice(0, 1500)); return { ok: true, dry: true }; }
+  return postAlert("/api/houses/alert", payload);
+}
+
 async function main() {
   const [kind] = process.argv.slice(2);
   const dry = process.argv.includes("--dry-run"), force = process.argv.includes("--force");
   const { day: today, hour } = ptNow();
   const state = readJson(STATE, {});
   const due = (k) => force || (hour >= RUN_FROM_HOUR && state[k]?.lastRun !== today);
+  if (kind === "resend") {
+    const r = await runResend(process.env.RESEND || process.argv[3], { dry });
+    console.log(JSON.stringify(r)); if (!r.ok) process.exit(1); return;
+  }
   if (kind === "gate") { console.log(`house=${due("house") ? 1 : 0}`); console.log(`studio=${due("studio") ? 1 : 0}`); return; }
   if (kind !== "house" && kind !== "studio") { console.error("usage: scout-alerts.js gate|house|studio [--dry-run] [--force]"); process.exit(2); }
   if (!due(kind)) { console.log(`${kind}: already ran today (${today}) or before ${RUN_FROM_HOUR} AM PT — nothing to do`); return; }
