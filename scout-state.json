@@ -1,66 +1,70 @@
 {
   "studio": {
-    "lastRun": "2026-11-26",
-    "at": "2026-11-26T23:17:05.483Z",
-    "spacesFile": "2026-11-26T23:17:05.421Z",
-    "craigslistFetched": 253,
-    "candidates": 0,
-    "verified": [],
-    "emailed": false,
+    "lastRun": "2026-11-27",
+    "at": "2026-11-27T22:55:40.763Z",
+    "spacesFile": "2026-11-27T22:55:39.188Z",
+    "craigslistFetched": 130,
+    "candidates": 4,
+    "verified": [
+      "Commercial Office Space (Burbank) $3,187",
+      "Prime$1,600 / 1,500 sq ft (3 rooms)Office Space (Los Angeles) (Silver Lake) $1,600",
+      "Unique Modern Creative Office Space (Burbank) $3,300"
+    ],
+    "emailed": true,
     "emailError": null,
-    "rejected": [],
+    "rejected": [
+      "Art Studios, Creative spaces, Offices (month to month): size not stated"
+    ],
     "unreachable": [],
     "brokenSince": null,
     "ok": true
   },
   "house": {
-    "lastRun": "2026-11-26",
-    "at": "2026-11-26T23:19:50.531Z",
+    "lastRun": "2026-11-27",
+    "at": "2026-11-27T22:59:01.474Z",
     "scanned": {
       "Los Angeles": {
-        "scanned": 769,
-        "matches": 25
+        "scanned": 765,
+        "matches": 24
       },
       "Portland": {
-        "scanned": 1078,
-        "matches": 3
+        "scanned": 1080,
+        "matches": 2
       }
     },
-    "candidates": 28,
+    "candidates": 26,
     "verified": [],
     "emailed": false,
     "emailError": null,
     "rejected": [
-      "406 N Avenue 64: no separate ADU — no ADU/second unit in description",
-      "3360 SW Fairmount Blvd: no separate ADU — no ADU/second unit in description",
-      "2205 SE Tacoma St: no separate ADU — no ADU/second unit in description",
-      "2832 NE 9th Ave: no separate ADU — ADU is only potential/planned/unfinished"
+      "2833 NE 8th Ave: no separate ADU — ADU is only potential/planned/unfinished",
+      "6609 SW Capitol Hwy: no separate ADU — no ADU/second unit in description"
     ],
     "unreachable": [
       "5224 Glen Ellen Pl",
-      "5009 Stratford Rd",
       "276 Thorne St",
+      "5009 Stratford Rd",
       "2660 Newell St",
       "6035 Mesa",
       "2675 Thorpe Ave",
-      "634 Romulo St",
       "3619 Fletcher Dr",
+      "634 Romulo St",
       "3064 Isabel",
       "3428 Maceo",
       "4254 Verdugo Rd",
       "3300 Chapman St",
-      "1709 Campus Rd",
       "456 Ulysses St",
-      "1444 Hazelwood Ave",
+      "1709 Campus Rd",
       "1447 Westerly Terrace",
+      "1444 Hazelwood Ave",
       "1535 Parmer Ave",
       "1560 Morton Ave",
       "337 N Occidental",
       "1465 W Temple St",
       "1458 Silver Lake Blvd",
-      "1804 Echo Park Ave",
       "214 N Alvarado St",
-      "1744 N Berendo St"
+      "1744 N Berendo St",
+      "1804 Echo Park Ave"
     ],
     "boardAdded": 0,
     "boardPriceCuts": 0,
